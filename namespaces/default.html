@@ -95,7 +95,6 @@
                             <li><a href="../packages/WooCommerce-Tracks.html"><abbr title="\WooCommerce\Tracks">Tracks</abbr></a></li>
                             <li><a href="../packages/WooCommerce-Functions.html"><abbr title="\WooCommerce\Functions">Functions</abbr></a></li>
                             <li><a href="../packages/WooCommerce-WooCommerce.html"><abbr title="\WooCommerce\WooCommerce">WooCommerce</abbr></a></li>
-                            <li><a href="../packages/WooCommerce-Blocks.html"><abbr title="\WooCommerce\Blocks">Blocks</abbr></a></li>
                             <li><a href="../packages/WooCommerce-Templates.html"><abbr title="\WooCommerce\Templates">Templates</abbr></a></li>
                             <li><a href="../packages/WooCommerce-Uninstaller.html"><abbr title="\WooCommerce\Uninstaller">Uninstaller</abbr></a></li>
                     </ul>
@@ -240,12 +239,6 @@
                             <li><a href="../packages/WooCommerceWCCOM-SiteREST.html"><abbr title="\WooCommerceWCCOM\SiteREST">SiteREST</abbr></a></li>
                     </ul>
             <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceWidgets.html"><abbr title="\WooCommerceWidgets">WooCommerceWidgets</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceBlocks.html"><abbr title="\WooCommerceBlocks">WooCommerceBlocks</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/AutomatticWooCommerceBlocks.html"><abbr title="\AutomatticWooCommerceBlocks">AutomatticWooCommerceBlocks</abbr></a></h2>
         <ul class="phpdocumentor-list">
                     </ul>
             <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/AutomatticWooCommerceRestApi.html"><abbr title="\AutomatticWooCommerceRestApi">AutomatticWooCommerceRestApi</abbr></a></h2>
@@ -5418,27 +5411,6 @@ Note this relies on composer.json version, not plugin version.</td>
                     <tr>
                 <th class="phpdocumentor-heading"><a href="../namespaces/default.html#function_woocommerce_admin_check_build_files"><abbr title="\woocommerce_admin_check_build_files()">woocommerce_admin_check_build_files()</abbr></a></th>
                 <td class="phpdocumentor-cell">Returns true if build file exists.</td>
-                <td class="phpdocumentor-cell"><a href=""><abbr title=""></abbr></a></td>
-            </tr>
-                    <tr>
-                <th class="phpdocumentor-heading"><a href="../namespaces/default.html#function_should_display_compatibility_notices"><abbr title="\should_display_compatibility_notices()">should_display_compatibility_notices()</abbr></a></th>
-                <td class="phpdocumentor-cell">Whether notices must be displayed in the current page (plugins and WooCommerce pages).</td>
-                <td class="phpdocumentor-cell"><a href=""><abbr title=""></abbr></a></td>
-            </tr>
-                    <tr>
-                <th class="phpdocumentor-heading"><a href="../namespaces/default.html#function_woocommerce_blocks_admin_unsupported_wp_notice"><abbr title="\woocommerce_blocks_admin_unsupported_wp_notice()">woocommerce_blocks_admin_unsupported_wp_notice()</abbr></a></th>
-                <td class="phpdocumentor-cell">Outputs for an admin notice about running WooCommerce Blocks on outdated WordPress.</td>
-                <td class="phpdocumentor-cell"><a href=""><abbr title=""></abbr></a></td>
-            </tr>
-                    <tr>
-                <th class="phpdocumentor-heading"><a href="../namespaces/default.html#function_woocommerce_blocks_get_i18n_data_json"><abbr title="\woocommerce_blocks_get_i18n_data_json()">woocommerce_blocks_get_i18n_data_json()</abbr></a></th>
-                <td class="phpdocumentor-cell">Pre-filters script translations for the given file, script handle and text domain.</td>
-                <td class="phpdocumentor-cell"><a href=""><abbr title=""></abbr></a></td>
-            </tr>
-                    <tr>
-                <th class="phpdocumentor-heading"><a href="../namespaces/default.html#function_woocommerce_blocks_get_php_translation_from_core"><abbr title="\woocommerce_blocks_get_php_translation_from_core()">woocommerce_blocks_get_php_translation_from_core()</abbr></a></th>
-                <td class="phpdocumentor-cell">Filter translations so we can retrieve translations from Core when the original and the translated
-texts are the same (which happens when translations are missing).</td>
                 <td class="phpdocumentor-cell"><a href=""><abbr title=""></abbr></a></td>
             </tr>
                     <tr>
@@ -44877,216 +44849,6 @@ composer json.</p></section>
         <span class="phpdocumentor-signature__response_type">bool</span>
             
 </article>
-                            <a id="function_should_display_compatibility_notices"></a>
-<article
-        class="
-            phpdocumentor-element
-            phpdocumentor-function
-            phpdocumentor-function--
-                    "
->
-    <h4 class="phpdocumentor-function__name">should_display_compatibility_notices()</h4>
-
-    <aside class="phpdocumentor-element-found-in">
-        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-blocks/woocommerce-gutenberg-products-block.php"><a href="../files/woocommerce-packages-woocommerce-blocks-woocommerce-gutenberg-products-block.html"><abbr title="woocommerce/packages/woocommerce-blocks/woocommerce-gutenberg-products-block.php">woocommerce-gutenberg-products-block.php</abbr></a></abbr>
-        :
-        <span class="phpdocumentor-element-found-in__line">31</span>
-    </aside>
-
-        <p class="phpdocumentor-summary">Whether notices must be displayed in the current page (plugins and WooCommerce pages).</p>
-        <code class="phpdocumentor-signature phpdocumentor-code ">
-        <span class="phpdocumentor-signature__visibility"></span>
-                                <span class="phpdocumentor-signature__name">should_display_compatibility_notices</span>(
-                )
-        : <span class="phpdocumentor-signature__response_type">mixed</span>
-    </code>
-
-    
-    
-                <h5 class="phpdocumentor-tag-list__heading">Tags</h5>
-        <dl class="phpdocumentor-tag-list">
-                                                <dt class="phpdocumentor-tag-list__entry">
-                        <span class="phpdocumentor-tag__name">since</span>
-                    </dt>
-                    <dd class="phpdocumentor-tag-list__definition"><section class="phpdocumentor-description"></section></dd>
-                                    </dl>
-    
-            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-        <span class="phpdocumentor-signature__response_type">mixed</span>
-            
-</article>
-                            <a id="function_woocommerce_blocks_admin_unsupported_wp_notice"></a>
-<article
-        class="
-            phpdocumentor-element
-            phpdocumentor-function
-            phpdocumentor-function--
-                    "
->
-    <h4 class="phpdocumentor-function__name">woocommerce_blocks_admin_unsupported_wp_notice()</h4>
-
-    <aside class="phpdocumentor-element-found-in">
-        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-blocks/woocommerce-gutenberg-products-block.php"><a href="../files/woocommerce-packages-woocommerce-blocks-woocommerce-gutenberg-products-block.html"><abbr title="woocommerce/packages/woocommerce-blocks/woocommerce-gutenberg-products-block.php">woocommerce-gutenberg-products-block.php</abbr></a></abbr>
-        :
-        <span class="phpdocumentor-element-found-in__line">54</span>
-    </aside>
-
-        <p class="phpdocumentor-summary">Outputs for an admin notice about running WooCommerce Blocks on outdated WordPress.</p>
-        <code class="phpdocumentor-signature phpdocumentor-code ">
-        <span class="phpdocumentor-signature__visibility"></span>
-                                <span class="phpdocumentor-signature__name">woocommerce_blocks_admin_unsupported_wp_notice</span>(
-                )
-        : <span class="phpdocumentor-signature__response_type">mixed</span>
-    </code>
-
-    
-    
-                <h5 class="phpdocumentor-tag-list__heading">Tags</h5>
-        <dl class="phpdocumentor-tag-list">
-                                                <dt class="phpdocumentor-tag-list__entry">
-                        <span class="phpdocumentor-tag__name">since</span>
-                    </dt>
-                    <dd class="phpdocumentor-tag-list__definition"><section class="phpdocumentor-description"></section></dd>
-                                    </dl>
-    
-            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-        <span class="phpdocumentor-signature__response_type">mixed</span>
-            
-</article>
-                            <a id="function_woocommerce_blocks_get_i18n_data_json"></a>
-<article
-        class="
-            phpdocumentor-element
-            phpdocumentor-function
-            phpdocumentor-function--
-                    "
->
-    <h4 class="phpdocumentor-function__name">woocommerce_blocks_get_i18n_data_json()</h4>
-
-    <aside class="phpdocumentor-element-found-in">
-        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-blocks/woocommerce-gutenberg-products-block.php"><a href="../files/woocommerce-packages-woocommerce-blocks-woocommerce-gutenberg-products-block.html"><abbr title="woocommerce/packages/woocommerce-blocks/woocommerce-gutenberg-products-block.php">woocommerce-gutenberg-products-block.php</abbr></a></abbr>
-        :
-        <span class="phpdocumentor-element-found-in__line">126</span>
-    </aside>
-
-        <p class="phpdocumentor-summary">Pre-filters script translations for the given file, script handle and text domain.</p>
-        <code class="phpdocumentor-signature phpdocumentor-code ">
-        <span class="phpdocumentor-signature__visibility"></span>
-                                <span class="phpdocumentor-signature__name">woocommerce_blocks_get_i18n_data_json</span>(
-                    <span class="phpdocumentor-signature__argument">
-                            <span class="phpdocumentor-signature__argument__name">$translations</span> :
-                <span class="phpdocumentor-signature__argument__return-type">string|false|null</span>
-                            </span>
-                    <span class="phpdocumentor-signature__argument">
-            ,                 <span class="phpdocumentor-signature__argument__name">$file</span> :
-                <span class="phpdocumentor-signature__argument__return-type">string|false</span>
-                            </span>
-                    <span class="phpdocumentor-signature__argument">
-            ,                 <span class="phpdocumentor-signature__argument__name">$handle</span> :
-                <span class="phpdocumentor-signature__argument__return-type">string</span>
-                            </span>
-                    <span class="phpdocumentor-signature__argument">
-            ,                 <span class="phpdocumentor-signature__argument__name">$domain</span> :
-                <span class="phpdocumentor-signature__argument__return-type">string</span>
-                            </span>
-                )
-        : <span class="phpdocumentor-signature__response_type">string</span>
-    </code>
-
-    
-            <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
-        <dl class="phpdocumentor-argument-list">
-                            <dt class="phpdocumentor-argument-list__entry">
-                    <span class="phpdocumentor-signature__argument__name">$translations</span>
-                    : <span class="phpdocumentor-signature__argument__return-type">string|false|null</span>
-                                    </dt>
-                <dd class="phpdocumentor-argument-list__definition"><section class="phpdocumentor-description"><p>JSON-encoded translation data. Default null.</p></section></dd>
-                            <dt class="phpdocumentor-argument-list__entry">
-                    <span class="phpdocumentor-signature__argument__name">$file</span>
-                    : <span class="phpdocumentor-signature__argument__return-type">string|false</span>
-                                    </dt>
-                <dd class="phpdocumentor-argument-list__definition"><section class="phpdocumentor-description"><p>Path to the translation file to load. False if there isn't one.</p></section></dd>
-                            <dt class="phpdocumentor-argument-list__entry">
-                    <span class="phpdocumentor-signature__argument__name">$handle</span>
-                    : <span class="phpdocumentor-signature__argument__return-type">string</span>
-                                    </dt>
-                <dd class="phpdocumentor-argument-list__definition"><section class="phpdocumentor-description"><p>Name of the script to register a translation domain to.</p></section></dd>
-                            <dt class="phpdocumentor-argument-list__entry">
-                    <span class="phpdocumentor-signature__argument__name">$domain</span>
-                    : <span class="phpdocumentor-signature__argument__return-type">string</span>
-                                    </dt>
-                <dd class="phpdocumentor-argument-list__definition"><section class="phpdocumentor-description"><p>The text domain.</p></section></dd>
-                    </dl>
-    
-        
-            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-        <span class="phpdocumentor-signature__response_type">string</span>
-                    &mdash; <span class="phpdocumentor-description"><p>JSON translations.</p></span>
-            
-</article>
-                            <a id="function_woocommerce_blocks_get_php_translation_from_core"></a>
-<article
-        class="
-            phpdocumentor-element
-            phpdocumentor-function
-            phpdocumentor-function--
-                    "
->
-    <h4 class="phpdocumentor-function__name">woocommerce_blocks_get_php_translation_from_core()</h4>
-
-    <aside class="phpdocumentor-element-found-in">
-        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-blocks/woocommerce-gutenberg-products-block.php"><a href="../files/woocommerce-packages-woocommerce-blocks-woocommerce-gutenberg-products-block.html"><abbr title="woocommerce/packages/woocommerce-blocks/woocommerce-gutenberg-products-block.php">woocommerce-gutenberg-products-block.php</abbr></a></abbr>
-        :
-        <span class="phpdocumentor-element-found-in__line">196</span>
-    </aside>
-
-        <p class="phpdocumentor-summary">Filter translations so we can retrieve translations from Core when the original and the translated
-texts are the same (which happens when translations are missing).</p>
-        <code class="phpdocumentor-signature phpdocumentor-code ">
-        <span class="phpdocumentor-signature__visibility"></span>
-                                <span class="phpdocumentor-signature__name">woocommerce_blocks_get_php_translation_from_core</span>(
-                    <span class="phpdocumentor-signature__argument">
-                            <span class="phpdocumentor-signature__argument__name">$translation</span> :
-                <span class="phpdocumentor-signature__argument__return-type">string</span>
-                            </span>
-                    <span class="phpdocumentor-signature__argument">
-            ,                 <span class="phpdocumentor-signature__argument__name">$text</span> :
-                <span class="phpdocumentor-signature__argument__return-type">string</span>
-                            </span>
-                    <span class="phpdocumentor-signature__argument">
-            ,                 <span class="phpdocumentor-signature__argument__name">$domain</span> :
-                <span class="phpdocumentor-signature__argument__return-type">string</span>
-                            </span>
-                )
-        : <span class="phpdocumentor-signature__response_type">string</span>
-    </code>
-
-    
-            <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
-        <dl class="phpdocumentor-argument-list">
-                            <dt class="phpdocumentor-argument-list__entry">
-                    <span class="phpdocumentor-signature__argument__name">$translation</span>
-                    : <span class="phpdocumentor-signature__argument__return-type">string</span>
-                                    </dt>
-                <dd class="phpdocumentor-argument-list__definition"><section class="phpdocumentor-description"><p>Translated text based on WC Blocks translations.</p></section></dd>
-                            <dt class="phpdocumentor-argument-list__entry">
-                    <span class="phpdocumentor-signature__argument__name">$text</span>
-                    : <span class="phpdocumentor-signature__argument__return-type">string</span>
-                                    </dt>
-                <dd class="phpdocumentor-argument-list__definition"><section class="phpdocumentor-description"><p>Text to translate.</p></section></dd>
-                            <dt class="phpdocumentor-argument-list__entry">
-                    <span class="phpdocumentor-signature__argument__name">$domain</span>
-                    : <span class="phpdocumentor-signature__argument__return-type">string</span>
-                                    </dt>
-                <dd class="phpdocumentor-argument-list__definition"><section class="phpdocumentor-description"><p>The text domain.</p></section></dd>
-                    </dl>
-    
-        
-            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-        <span class="phpdocumentor-signature__response_type">string</span>
-                    &mdash; <span class="phpdocumentor-description"><p>WC Blocks translation. In case it's the same as $text, Core translation.</p></span>
-            
-</article>
                             <a id="function_WC"></a>
 <article
         class="
@@ -45165,7 +44927,7 @@ texts are the same (which happens when translations are missing).</p>
 <a href="#" class="to-top">Back to the top</a>
 <footer class="phpdocumentor phpdocumentor-footer">
     <div class="phpdocumentor-section">
-        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on August 18th, 2020 at 04:19 pm.</span>
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on August 18th, 2020 at 04:36 pm.</span>
     </div>
 </footer>
 </body>
