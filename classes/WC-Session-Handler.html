@@ -1,0 +1,1707 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>WooCommerce Code Reference</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/template.css">
+    <link rel="shortcut icon" href="../images/favicon.png"/>
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
+        <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.4.6/fuse.min.js"></script>
+    <script src="../js/search.js"></script>
+    <script defer src="../js/searchIndex.js"></script>
+    </head>
+<body>
+<header class="phpdocumentor-top-header">
+    <section class="phpdocumentor-section">
+        <div class="site-branding">
+            <a class="site-logo" href="../index.html"><img width="180" src="../images/logo.svg" alt="WooCommerce" /></a>
+        </div>
+        <nav class="main-navigation">
+            <ul>
+                <li><a href="../hooks/hooks.html">Hooks Reference</a></li>
+                                    <li><a href="../graphs/classes.html">Class Diagram</a></li>
+                                <li><a href="https://docs.woocommerce.com/">Documentation</a></li>
+                <li><a href="https://woocommerce.github.io/woocommerce-rest-api-docs/">REST API Docs</a></li>
+            </ul>
+        </nav>
+    </section>
+</header>
+<header class="phpdocumentor-header">
+    <section class="phpdocumentor-section">
+        <h1 class="phpdocumentor-title">WooCommerce Code Reference</h1>
+    </section>
+
+    <section class="phpdocumentor-section">
+        <div data-search-form class="phpdocumentor-search">
+            <label class="phpdocumentor-label">
+                <span class="visually-hidden">Search</span>
+                <input type="search" class="phpdocumentor-field phpdocumentor-search__field" placeholder="Loading..." disabled />
+            </label>
+        </div>
+        <div data-search-results class="phpdocumentor-search-results phpdocumentor-search-results--hidden">
+
+            <h2>Search results</h2>
+            <ul class="phpdocumentor-search-results__entries">
+
+            </ul>
+        </div>
+    </section>
+</header>
+<main class="phpdocumentor">
+    <div class="phpdocumentor-section">
+        <aside class="three phpdocumentor-columns phpdocumentor-sidebar">
+    
+    <h1 class="phpdocumentor-sidebar__category-header">Namespaces</h1>
+            <h2 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/default.html"><abbr title="\">Global</abbr></a></h2>
+                    <h3 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h3>
+            <ul class="phpdocumentor-list">
+                                    <li><a href="../namespaces/automattic-woocommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                            </ul>
+            
+        <h1 class="phpdocumentor-sidebar__category-header">Packages</h1>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceClasses.html"><abbr title="\WooCommerceClasses">WooCommerceClasses</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAbstracts.html"><abbr title="\WooCommerceAbstracts">WooCommerceAbstracts</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                            <li><a href="../packages/WooCommerce-Abstracts.html"><abbr title="\WooCommerce\Abstracts">Abstracts</abbr></a></li>
+                            <li><a href="../packages/WooCommerce-Admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                            <li><a href="../packages/WooCommerce-Views.html"><abbr title="\WooCommerce\Views">Views</abbr></a></li>
+                            <li><a href="../packages/WooCommerce-admin.html"><abbr title="\WooCommerce\admin">admin</abbr></a></li>
+                            <li><a href="../packages/WooCommerce-Classes.html"><abbr title="\WooCommerce\Classes">Classes</abbr></a></li>
+                            <li><a href="../packages/WooCommerce-Reports.html"><abbr title="\WooCommerce\Reports">Reports</abbr></a></li>
+                            <li><a href="../packages/WooCommerce-CLI.html"><abbr title="\WooCommerce\CLI">CLI</abbr></a></li>
+                            <li><a href="../packages/WooCommerce-l10n.html"><abbr title="\WooCommerce\l10n">l10n</abbr></a></li>
+                            <li><a href="../packages/WooCommerce-Cli.html"><abbr title="\WooCommerce\Cli">Cli</abbr></a></li>
+                            <li><a href="../packages/WooCommerce-DataStores.html"><abbr title="\WooCommerce\DataStores">DataStores</abbr></a></li>
+                            <li><a href="../packages/WooCommerce-DataStore.html"><abbr title="\WooCommerce\DataStore">DataStore</abbr></a></li>
+                            <li><a href="../packages/WooCommerce-Emails.html"><abbr title="\WooCommerce\Emails">Emails</abbr></a></li>
+                            <li><a href="../packages/WooCommerce-Gateways.html"><abbr title="\WooCommerce\Gateways">Gateways</abbr></a></li>
+                            <li><a href="../packages/WooCommerce-Integrations.html"><abbr title="\WooCommerce\Integrations">Integrations</abbr></a></li>
+                            <li><a href="../packages/WooCommerce-LogHandlers.html"><abbr title="\WooCommerce\LogHandlers">LogHandlers</abbr></a></li>
+                            <li><a href="../packages/WooCommerce-PaymentTokens.html"><abbr title="\WooCommerce\PaymentTokens">PaymentTokens</abbr></a></li>
+                            <li><a href="../packages/WooCommerce-Shipping.html"><abbr title="\WooCommerce\Shipping">Shipping</abbr></a></li>
+                            <li><a href="../packages/WooCommerce-Tracks.html"><abbr title="\WooCommerce\Tracks">Tracks</abbr></a></li>
+                            <li><a href="../packages/WooCommerce-Functions.html"><abbr title="\WooCommerce\Functions">Functions</abbr></a></li>
+                            <li><a href="../packages/WooCommerce-WooCommerce.html"><abbr title="\WooCommerce\WooCommerce">WooCommerce</abbr></a></li>
+                            <li><a href="../packages/WooCommerce-Blocks.html"><abbr title="\WooCommerce\Blocks">Blocks</abbr></a></li>
+                            <li><a href="../packages/WooCommerce-Uninstaller.html"><abbr title="\WooCommerce\Uninstaller">Uninstaller</abbr></a></li>
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdmin.html"><abbr title="\WooCommerceAdmin">WooCommerceAdmin</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdminCustomize.html"><abbr title="\WooCommerceAdminCustomize">WooCommerceAdminCustomize</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdminMetaBoxes.html"><abbr title="\WooCommerceAdminMetaBoxes">WooCommerceAdminMetaBoxes</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceadmin.html"><abbr title="\WooCommerceadmin">WooCommerceadmin</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdminReports.html"><abbr title="\WooCommerceAdminReports">WooCommerceAdminReports</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdminSystemStatus.html"><abbr title="\WooCommerceAdminSystemStatus">WooCommerceAdminSystemStatus</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/Default.html"><abbr title="\Default">Default</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceHelper.html"><abbr title="\WooCommerceHelper">WooCommerceHelper</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdminImporters.html"><abbr title="\WooCommerceAdminImporters">WooCommerceAdminImporters</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceTemplates.html"><abbr title="\WooCommerceTemplates">WooCommerceTemplates</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdminReporting.html"><abbr title="\WooCommerceAdminReporting">WooCommerceAdminReporting</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdminShipping.html"><abbr title="\WooCommerceAdminShipping">WooCommerceAdminShipping</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdminSettings.html"><abbr title="\WooCommerceAdminSettings">WooCommerceAdminSettings</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdminWebhooksViews.html"><abbr title="\WooCommerceAdminWebhooksViews">WooCommerceAdminWebhooksViews</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/Settings.html"><abbr title="\Settings">Settings</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdminExport.html"><abbr title="\WooCommerceAdminExport">WooCommerceAdminExport</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdminLogs.html"><abbr title="\WooCommerceAdminLogs">WooCommerceAdminLogs</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceViews.html"><abbr title="\WooCommerceViews">WooCommerceViews</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/admin.html"><abbr title="\admin">admin</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdminFunctions.html"><abbr title="\WooCommerceAdminFunctions">WooCommerceAdminFunctions</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAPI.html"><abbr title="\WooCommerceAPI">WooCommerceAPI</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceClassesProducts.html"><abbr title="\WooCommerceClassesProducts">WooCommerceClassesProducts</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceClassesEmails.html"><abbr title="\WooCommerceClassesEmails">WooCommerceClassesEmails</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceClassesEmbed.html"><abbr title="\WooCommerceClassesEmbed">WooCommerceClassesEmbed</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceClassesIntegrations.html"><abbr title="\WooCommerceClassesIntegrations">WooCommerceClassesIntegrations</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceClassesPayment.html"><abbr title="\WooCommerceClassesPayment">WooCommerceClassesPayment</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceClassesData.html"><abbr title="\WooCommerceClassesData">WooCommerceClassesData</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                            <li><a href="../packages/WooCommerceClassesData-Store.html"><abbr title="\WooCommerceClassesData\Store">Store</abbr></a></li>
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceClassesShipping.html"><abbr title="\WooCommerceClassesShipping">WooCommerceClassesShipping</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceWebhooks.html"><abbr title="\WooCommerceWebhooks">WooCommerceWebhooks</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/data.html"><abbr title="\data">data</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                            <li><a href="../packages/data-stores.html"><abbr title="\data\stores">stores</abbr></a></li>
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceExport.html"><abbr title="\WooCommerceExport">WooCommerceExport</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommercePayPal.html"><abbr title="\WooCommercePayPal">WooCommercePayPal</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceImport.html"><abbr title="\WooCommerceImport">WooCommerceImport</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceIntegrations.html"><abbr title="\WooCommerceIntegrations">WooCommerceIntegrations</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceInterfaces.html"><abbr title="\WooCommerceInterfaces">WooCommerceInterfaces</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceInterface.html"><abbr title="\WooCommerceInterface">WooCommerceInterface</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceClassesLog.html"><abbr title="\WooCommerceClassesLog">WooCommerceClassesLog</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                            <li><a href="../packages/WooCommerceClassesLog-Handlers.html"><abbr title="\WooCommerceClassesLog\Handlers">Handlers</abbr></a></li>
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommercePaymentTokens.html"><abbr title="\WooCommercePaymentTokens">WooCommercePaymentTokens</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceShortcodesCart.html"><abbr title="\WooCommerceShortcodesCart">WooCommerceShortcodesCart</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceShortcodesCheckout.html"><abbr title="\WooCommerceShortcodesCheckout">WooCommerceShortcodesCheckout</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceShortcodesMy.html"><abbr title="\WooCommerceShortcodesMy">WooCommerceShortcodesMy</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                            <li><a href="../packages/WooCommerceShortcodesMy-Account.html"><abbr title="\WooCommerceShortcodesMy\Account">Account</abbr></a></li>
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceShortcodesOrder.html"><abbr title="\WooCommerceShortcodesOrder">WooCommerceShortcodesOrder</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                            <li><a href="../packages/WooCommerceShortcodesOrder-Tracking.html"><abbr title="\WooCommerceShortcodesOrder\Tracking">Tracking</abbr></a></li>
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceShortcodes.html"><abbr title="\WooCommerceShortcodes">WooCommerceShortcodes</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceTraits.html"><abbr title="\WooCommerceTraits">WooCommerceTraits</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceClassesWalkers.html"><abbr title="\WooCommerceClassesWalkers">WooCommerceClassesWalkers</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceFunctions.html"><abbr title="\WooCommerceFunctions">WooCommerceFunctions</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceWCCOM.html"><abbr title="\WooCommerceWCCOM">WooCommerceWCCOM</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                            <li><a href="../packages/WooCommerceWCCOM-SiteREST.html"><abbr title="\WooCommerceWCCOM\SiteREST">SiteREST</abbr></a></li>
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceWidgets.html"><abbr title="\WooCommerceWidgets">WooCommerceWidgets</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceAdmin.html"><abbr title="\WoocommerceAdmin">WoocommerceAdmin</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WC.html"><abbr title="\WC">WC</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                            <li><a href="../packages/WC-Admin.html"><abbr title="\WC\Admin">Admin</abbr></a></li>
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdminTemplatesEmailsHTML.html"><abbr title="\WooCommerceAdminTemplatesEmailsHTML">WooCommerceAdminTemplatesEmailsHTML</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdminAPI.html"><abbr title="\WooCommerceAdminAPI">WooCommerceAdminAPI</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdminClasses.html"><abbr title="\WooCommerceAdminClasses">WooCommerceAdminClasses</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdminInterface.html"><abbr title="\WooCommerceAdminInterface">WooCommerceAdminInterface</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/Automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                            <li><a href="../packages/Automattic-WooCommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/AutomatticWooCommerceWCAdmin.html"><abbr title="\AutomatticWooCommerceWCAdmin">AutomatticWooCommerceWCAdmin</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceBlocks.html"><abbr title="\WooCommerceBlocks">WooCommerceBlocks</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/AutomatticWooCommerceBlocks.html"><abbr title="\AutomatticWooCommerceBlocks">AutomatticWooCommerceBlocks</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/AutomatticWooCommerceRestApi.html"><abbr title="\AutomatticWooCommerceRestApi">AutomatticWooCommerceRestApi</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/AutomatticWooCommerceUtilities.html"><abbr title="\AutomatticWooCommerceUtilities">AutomatticWooCommerceUtilities</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/AutomatticWooCommerce.html"><abbr title="\AutomatticWooCommerce">AutomatticWooCommerce</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceTemplatesAuth.html"><abbr title="\WooCommerceTemplatesAuth">WooCommerceTemplatesAuth</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceTemplatesEmails.html"><abbr title="\WooCommerceTemplatesEmails">WooCommerceTemplatesEmails</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceTemplatesEmailsHTML.html"><abbr title="\WooCommerceTemplatesEmailsHTML">WooCommerceTemplatesEmailsHTML</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceTemplatesEmailsPlain.html"><abbr title="\WooCommerceTemplatesEmailsPlain">WooCommerceTemplatesEmailsPlain</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+        
+    <h1 class="phpdocumentor-sidebar__category-header">Reports</h1>
+    <h2 class="phpdocumentor-sidebar__root-package"><a href="../reports/deprecated.html">Deprecated</a></h2>
+    <h2 class="phpdocumentor-sidebar__root-package"><a href="../reports/errors.html">Errors</a></h2>
+    <h2 class="phpdocumentor-sidebar__root-package"><a href="../reports/markers.html">Markers</a></h2>
+</aside>
+
+        <div class="nine phpdocumentor-columns phpdocumentor-content">
+            <ul class="phpdocumentor-breadcrumbs">
+    <li><a href="../index.html">Home</a></li>
+                </ul>
+
+    <article class="phpdocumentor-element phpdocumentor-class">
+        <h2 class="phpdocumentor-content__title">
+            WC_Session_Handler
+                            <span class="phpdocumentor-class__extends">
+                    extends <a href="../classes/WC-Session.html"><abbr title="\WC_Session">WC_Session</abbr></a>
+                </span>
+                                        <div class="phpdocumentor-element__package">
+                    in
+                    <ul class="phpdocumentor-breadcrumbs">
+                                                    <li><a href="../packages/WooCommerceClasses.html">WooCommerceClasses</a></li>
+                                            </ul>
+                </div>
+                                            </h2>
+        <aside class="phpdocumentor-element-found-in">
+            <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-session-handler.php"><a href="../files/woocommerce-includes-class-wc-session-handler.html"><abbr title="woocommerce/includes/class-wc-session-handler.php">class-wc-session-handler.php</abbr></a></abbr>
+            :
+            <span class="phpdocumentor-element-found-in__line">20</span>
+        </aside>
+
+        <p class="phpdocumentor-class__summary">Session handler class.</p>
+        <section class="phpdocumentor-class__description"></section>
+
+        <h3>Table of Contents</h3>
+        <table class="phpdocumentor-table_of_contents">
+                                        <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/WC-Session-Handler.html#property__cookie">$_cookie</a></th>
+                    <td class="phpdocumentor-cell">Cookie name used for the session.</td>
+                    <td class="phpdocumentor-cell">string</td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/WC-Session-Handler.html#property__session_expiring">$_session_expiring</a></th>
+                    <td class="phpdocumentor-cell">Stores session expiry.</td>
+                    <td class="phpdocumentor-cell">string</td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/WC-Session-Handler.html#property__session_expiration">$_session_expiration</a></th>
+                    <td class="phpdocumentor-cell">Stores session due to expire timestamp.</td>
+                    <td class="phpdocumentor-cell">string</td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/WC-Session-Handler.html#property__has_cookie">$_has_cookie</a></th>
+                    <td class="phpdocumentor-cell">True when the cookie exists.</td>
+                    <td class="phpdocumentor-cell">bool</td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/WC-Session-Handler.html#property__table">$_table</a></th>
+                    <td class="phpdocumentor-cell">Table name for session data.</td>
+                    <td class="phpdocumentor-cell">string</td>
+                </tr>
+                                                    <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/WC-Session.html#property__customer_id">$_customer_id</a></th>
+                    <td class="phpdocumentor-cell">Customer ID.</td>
+                    <td class="phpdocumentor-cell">int</td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/WC-Session.html#property__data">$_data</a></th>
+                    <td class="phpdocumentor-cell">Session Data.</td>
+                    <td class="phpdocumentor-cell">array</td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/WC-Session.html#property__dirty">$_dirty</a></th>
+                    <td class="phpdocumentor-cell">Dirty when the session needs saving.</td>
+                    <td class="phpdocumentor-cell">bool</td>
+                </tr>
+                                        <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/WC-Session-Handler.html#method___construct">__construct()</a></th>
+                    <td class="phpdocumentor-cell">Constructor for the session class.</td>
+                    <td class="phpdocumentor-cell">mixed</td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/WC-Session-Handler.html#method_init">init()</a></th>
+                    <td class="phpdocumentor-cell">Init hooks and session data.</td>
+                    <td class="phpdocumentor-cell">mixed</td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/WC-Session-Handler.html#method_init_session_cookie">init_session_cookie()</a></th>
+                    <td class="phpdocumentor-cell">Setup cookie and customer ID.</td>
+                    <td class="phpdocumentor-cell">mixed</td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/WC-Session-Handler.html#method_set_customer_session_cookie">set_customer_session_cookie()</a></th>
+                    <td class="phpdocumentor-cell">Sets the session cookie on-demand (usually after adding an item to the cart).</td>
+                    <td class="phpdocumentor-cell">mixed</td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/WC-Session-Handler.html#method_use_secure_cookie">use_secure_cookie()</a></th>
+                    <td class="phpdocumentor-cell">Should the session cookie be secure?</td>
+                    <td class="phpdocumentor-cell">bool</td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/WC-Session-Handler.html#method_has_session">has_session()</a></th>
+                    <td class="phpdocumentor-cell">Return true if the current user has an active session, i.e. a cookie to retrieve values.</td>
+                    <td class="phpdocumentor-cell">bool</td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/WC-Session-Handler.html#method_set_session_expiration">set_session_expiration()</a></th>
+                    <td class="phpdocumentor-cell">Set session expiration.</td>
+                    <td class="phpdocumentor-cell">mixed</td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/WC-Session-Handler.html#method_generate_customer_id">generate_customer_id()</a></th>
+                    <td class="phpdocumentor-cell">Generate a unique customer ID for guests, or return user ID if logged in.</td>
+                    <td class="phpdocumentor-cell">string</td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/WC-Session-Handler.html#method_get_session_cookie">get_session_cookie()</a></th>
+                    <td class="phpdocumentor-cell">Get the session cookie, if set. Otherwise return false.</td>
+                    <td class="phpdocumentor-cell">bool|array</td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/WC-Session-Handler.html#method_get_session_data">get_session_data()</a></th>
+                    <td class="phpdocumentor-cell">Get session data.</td>
+                    <td class="phpdocumentor-cell">array</td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/WC-Session-Handler.html#method_get_cache_prefix">get_cache_prefix()</a></th>
+                    <td class="phpdocumentor-cell">Gets a cache prefix. This is used in session names so the entire cache can be invalidated with 1 function call.</td>
+                    <td class="phpdocumentor-cell">string</td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/WC-Session-Handler.html#method_save_data">save_data()</a></th>
+                    <td class="phpdocumentor-cell">Save data and delete guest session.</td>
+                    <td class="phpdocumentor-cell">mixed</td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/WC-Session-Handler.html#method_destroy_session">destroy_session()</a></th>
+                    <td class="phpdocumentor-cell">Destroy all session data.</td>
+                    <td class="phpdocumentor-cell">mixed</td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/WC-Session-Handler.html#method_forget_session">forget_session()</a></th>
+                    <td class="phpdocumentor-cell">Forget all session data without destroying it.</td>
+                    <td class="phpdocumentor-cell">mixed</td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/WC-Session-Handler.html#method_nonce_user_logged_out">nonce_user_logged_out()</a></th>
+                    <td class="phpdocumentor-cell">When a user is logged out, ensure they have a unique nonce by using the customer/session ID.</td>
+                    <td class="phpdocumentor-cell">string</td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/WC-Session-Handler.html#method_cleanup_sessions">cleanup_sessions()</a></th>
+                    <td class="phpdocumentor-cell">Cleanup session data from the database and clear caches.</td>
+                    <td class="phpdocumentor-cell">mixed</td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/WC-Session-Handler.html#method_get_session">get_session()</a></th>
+                    <td class="phpdocumentor-cell">Returns the session.</td>
+                    <td class="phpdocumentor-cell">string|array</td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/WC-Session-Handler.html#method_delete_session">delete_session()</a></th>
+                    <td class="phpdocumentor-cell">Delete the session from the cache and database.</td>
+                    <td class="phpdocumentor-cell">mixed</td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/WC-Session-Handler.html#method_update_session_timestamp">update_session_timestamp()</a></th>
+                    <td class="phpdocumentor-cell">Update the session expiry timestamp.</td>
+                    <td class="phpdocumentor-cell">mixed</td>
+                </tr>
+                                                    <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/WC-Session.html#method_init">init()</a></th>
+                    <td class="phpdocumentor-cell">Init hooks and session data. Extended by child classes.</td>
+                    <td class="phpdocumentor-cell">mixed</td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/WC-Session.html#method_cleanup_sessions">cleanup_sessions()</a></th>
+                    <td class="phpdocumentor-cell">Cleanup session data. Extended by child classes.</td>
+                    <td class="phpdocumentor-cell">mixed</td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/WC-Session.html#method___get">__get()</a></th>
+                    <td class="phpdocumentor-cell">Magic get method.</td>
+                    <td class="phpdocumentor-cell">mixed</td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/WC-Session.html#method___set">__set()</a></th>
+                    <td class="phpdocumentor-cell">Magic set method.</td>
+                    <td class="phpdocumentor-cell">mixed</td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/WC-Session.html#method___isset">__isset()</a></th>
+                    <td class="phpdocumentor-cell">Magic isset method.</td>
+                    <td class="phpdocumentor-cell">bool</td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/WC-Session.html#method___unset">__unset()</a></th>
+                    <td class="phpdocumentor-cell">Magic unset method.</td>
+                    <td class="phpdocumentor-cell">mixed</td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/WC-Session.html#method_get">get()</a></th>
+                    <td class="phpdocumentor-cell">Get a session variable.</td>
+                    <td class="phpdocumentor-cell">array|string</td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/WC-Session.html#method_set">set()</a></th>
+                    <td class="phpdocumentor-cell">Set a session variable.</td>
+                    <td class="phpdocumentor-cell">mixed</td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/WC-Session.html#method_get_customer_id">get_customer_id()</a></th>
+                    <td class="phpdocumentor-cell">Get customer ID.</td>
+                    <td class="phpdocumentor-cell">int</td>
+                </tr>
+                    </table>
+
+        
+                    <section>
+                <h3 class="phpdocumentor-properties__header">Properties</h3>
+                                    <a id="property__cookie"></a>
+<article
+        class="
+            phpdocumentor-property
+            phpdocumentor-property--protected
+                                "
+>
+    <h4 class="phpdocumentor-property__name">$_cookie</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-session-handler.php"><a href="../files/woocommerce-includes-class-wc-session-handler.html"><abbr title="woocommerce/includes/class-wc-session-handler.php">class-wc-session-handler.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">27</span>
+    </aside>
+            <p class="phpdocumentor-summary">Cookie name used for the session.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">protected</span>
+                <span class="phpdocumentor-signature__type">string</span>
+        <span class="phpdocumentor-signature__name">$_cookie</span>
+            </code>
+    </article>
+                                    <a id="property__session_expiring"></a>
+<article
+        class="
+            phpdocumentor-property
+            phpdocumentor-property--protected
+                                "
+>
+    <h4 class="phpdocumentor-property__name">$_session_expiring</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-session-handler.php"><a href="../files/woocommerce-includes-class-wc-session-handler.html"><abbr title="woocommerce/includes/class-wc-session-handler.php">class-wc-session-handler.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">34</span>
+    </aside>
+            <p class="phpdocumentor-summary">Stores session expiry.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">protected</span>
+                <span class="phpdocumentor-signature__type">string</span>
+        <span class="phpdocumentor-signature__name">$_session_expiring</span>
+            </code>
+    </article>
+                                    <a id="property__session_expiration"></a>
+<article
+        class="
+            phpdocumentor-property
+            phpdocumentor-property--protected
+                                "
+>
+    <h4 class="phpdocumentor-property__name">$_session_expiration</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-session-handler.php"><a href="../files/woocommerce-includes-class-wc-session-handler.html"><abbr title="woocommerce/includes/class-wc-session-handler.php">class-wc-session-handler.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">41</span>
+    </aside>
+            <p class="phpdocumentor-summary">Stores session due to expire timestamp.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">protected</span>
+                <span class="phpdocumentor-signature__type">string</span>
+        <span class="phpdocumentor-signature__name">$_session_expiration</span>
+            </code>
+    </article>
+                                    <a id="property__has_cookie"></a>
+<article
+        class="
+            phpdocumentor-property
+            phpdocumentor-property--protected
+                                "
+>
+    <h4 class="phpdocumentor-property__name">$_has_cookie</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-session-handler.php"><a href="../files/woocommerce-includes-class-wc-session-handler.html"><abbr title="woocommerce/includes/class-wc-session-handler.php">class-wc-session-handler.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">48</span>
+    </aside>
+            <p class="phpdocumentor-summary">True when the cookie exists.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">protected</span>
+                <span class="phpdocumentor-signature__type">bool</span>
+        <span class="phpdocumentor-signature__name">$_has_cookie</span>
+         = <span class="phpdocumentor-signature__default-value">\false</span>    </code>
+    </article>
+                                    <a id="property__table"></a>
+<article
+        class="
+            phpdocumentor-property
+            phpdocumentor-property--protected
+                                "
+>
+    <h4 class="phpdocumentor-property__name">$_table</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-session-handler.php"><a href="../files/woocommerce-includes-class-wc-session-handler.html"><abbr title="woocommerce/includes/class-wc-session-handler.php">class-wc-session-handler.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">55</span>
+    </aside>
+            <p class="phpdocumentor-summary">Table name for session data.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">protected</span>
+                <span class="phpdocumentor-signature__type">string</span>
+        <span class="phpdocumentor-signature__name">$_table</span>
+            </code>
+    </article>
+                                                                    <a id="property__customer_id"></a>
+<article
+        class="
+            phpdocumentor-property
+            phpdocumentor-property--protected
+                                "
+>
+    <h4 class="phpdocumentor-property__name">$_customer_id</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/abstracts/abstract-wc-session.php"><a href="../files/woocommerce-includes-abstracts-abstract-wc-session.html"><abbr title="woocommerce/includes/abstracts/abstract-wc-session.php">abstract-wc-session.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">24</span>
+    </aside>
+            <p class="phpdocumentor-summary">Customer ID.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">protected</span>
+                <span class="phpdocumentor-signature__type">int</span>
+        <span class="phpdocumentor-signature__name">$_customer_id</span>
+            </code>
+    </article>
+                                    <a id="property__data"></a>
+<article
+        class="
+            phpdocumentor-property
+            phpdocumentor-property--protected
+                                "
+>
+    <h4 class="phpdocumentor-property__name">$_data</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/abstracts/abstract-wc-session.php"><a href="../files/woocommerce-includes-abstracts-abstract-wc-session.html"><abbr title="woocommerce/includes/abstracts/abstract-wc-session.php">abstract-wc-session.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">31</span>
+    </aside>
+            <p class="phpdocumentor-summary">Session Data.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">protected</span>
+                <span class="phpdocumentor-signature__type">array</span>
+        <span class="phpdocumentor-signature__name">$_data</span>
+         = <span class="phpdocumentor-signature__default-value">array()</span>    </code>
+    </article>
+                                    <a id="property__dirty"></a>
+<article
+        class="
+            phpdocumentor-property
+            phpdocumentor-property--protected
+                                "
+>
+    <h4 class="phpdocumentor-property__name">$_dirty</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/abstracts/abstract-wc-session.php"><a href="../files/woocommerce-includes-abstracts-abstract-wc-session.html"><abbr title="woocommerce/includes/abstracts/abstract-wc-session.php">abstract-wc-session.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">38</span>
+    </aside>
+            <p class="phpdocumentor-summary">Dirty when the session needs saving.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">protected</span>
+                <span class="phpdocumentor-signature__type">bool</span>
+        <span class="phpdocumentor-signature__name">$_dirty</span>
+         = <span class="phpdocumentor-signature__default-value">\false</span>    </code>
+    </article>
+                            </section>
+        
+                    <section>
+                <h3 class="phpdocumentor-methods__header">Methods</h3>
+                                    <a id="method___construct"></a>
+<article
+        class="
+            phpdocumentor-method
+            phpdocumentor-method--public
+                                                        "
+>
+    <h4 class="phpdocumentor-method__name">__construct()</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-session-handler.php"><a href="../files/woocommerce-includes-class-wc-session-handler.html"><abbr title="woocommerce/includes/class-wc-session-handler.php">class-wc-session-handler.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">60</span>
+    </aside>
+        <p class="phpdocumentor-summary">Constructor for the session class.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">public</span>
+                                <span class="phpdocumentor-signature__name">__construct</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">mixed</span>
+    </code>
+
+    
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">mixed</span>
+            
+</article>
+                                    <a id="method_init"></a>
+<article
+        class="
+            phpdocumentor-method
+            phpdocumentor-method--public
+                                                        "
+>
+    <h4 class="phpdocumentor-method__name">init()</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-session-handler.php"><a href="../files/woocommerce-includes-class-wc-session-handler.html"><abbr title="woocommerce/includes/class-wc-session-handler.php">class-wc-session-handler.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">70</span>
+    </aside>
+        <p class="phpdocumentor-summary">Init hooks and session data.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">public</span>
+                                <span class="phpdocumentor-signature__name">init</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">mixed</span>
+    </code>
+
+    
+    
+                <h5 class="phpdocumentor-tag-list__heading">Tags</h5>
+        <dl class="phpdocumentor-tag-list">
+                                                <dt class="phpdocumentor-tag-list__entry">
+                        <span class="phpdocumentor-tag__name">since</span>
+                    </dt>
+                    <dd class="phpdocumentor-tag-list__definition"><section class="phpdocumentor-description"></section></dd>
+                                    </dl>
+    
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">mixed</span>
+            
+</article>
+                                    <a id="method_init_session_cookie"></a>
+<article
+        class="
+            phpdocumentor-method
+            phpdocumentor-method--public
+                                                        "
+>
+    <h4 class="phpdocumentor-method__name">init_session_cookie()</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-session-handler.php"><a href="../files/woocommerce-includes-class-wc-session-handler.html"><abbr title="woocommerce/includes/class-wc-session-handler.php">class-wc-session-handler.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">87</span>
+    </aside>
+        <p class="phpdocumentor-summary">Setup cookie and customer ID.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">public</span>
+                                <span class="phpdocumentor-signature__name">init_session_cookie</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">mixed</span>
+    </code>
+
+    
+    
+                <h5 class="phpdocumentor-tag-list__heading">Tags</h5>
+        <dl class="phpdocumentor-tag-list">
+                                                <dt class="phpdocumentor-tag-list__entry">
+                        <span class="phpdocumentor-tag__name">since</span>
+                    </dt>
+                    <dd class="phpdocumentor-tag-list__definition"><section class="phpdocumentor-description"></section></dd>
+                                    </dl>
+    
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">mixed</span>
+            
+</article>
+                                    <a id="method_set_customer_session_cookie"></a>
+<article
+        class="
+            phpdocumentor-method
+            phpdocumentor-method--public
+                                                        "
+>
+    <h4 class="phpdocumentor-method__name">set_customer_session_cookie()</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-session-handler.php"><a href="../files/woocommerce-includes-class-wc-session-handler.html"><abbr title="woocommerce/includes/class-wc-session-handler.php">class-wc-session-handler.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">127</span>
+    </aside>
+        <p class="phpdocumentor-summary">Sets the session cookie on-demand (usually after adding an item to the cart).</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">public</span>
+                                <span class="phpdocumentor-signature__name">set_customer_session_cookie</span>(
+                    <span class="phpdocumentor-signature__argument">
+                            <span class="phpdocumentor-signature__argument__name">$set</span> :
+                <span class="phpdocumentor-signature__argument__return-type">bool</span>
+                            </span>
+                )
+        : <span class="phpdocumentor-signature__response_type">mixed</span>
+    </code>
+
+        <section class="phpdocumentor-description"><p>Since the cookie name (as of 2.1) is prepended with wp, cache systems like batcache will not cache pages when set.</p>
+<p>Warning: Cookies will only be set if this is called before the headers are sent.</p></section>
+    
+            <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+        <dl class="phpdocumentor-argument-list">
+                            <dt class="phpdocumentor-argument-list__entry">
+                    <span class="phpdocumentor-signature__argument__name">$set</span>
+                    : <span class="phpdocumentor-signature__argument__return-type">bool</span>
+                                    </dt>
+                <dd class="phpdocumentor-argument-list__definition"><section class="phpdocumentor-description"><p>Should the session cookie be set.</p></section></dd>
+                    </dl>
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">mixed</span>
+            
+</article>
+                                    <a id="method_use_secure_cookie"></a>
+<article
+        class="
+            phpdocumentor-method
+            phpdocumentor-method--protected
+                                                        "
+>
+    <h4 class="phpdocumentor-method__name">use_secure_cookie()</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-session-handler.php"><a href="../files/woocommerce-includes-class-wc-session-handler.html"><abbr title="woocommerce/includes/class-wc-session-handler.php">class-wc-session-handler.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">146</span>
+    </aside>
+        <p class="phpdocumentor-summary">Should the session cookie be secure?</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">protected</span>
+                                <span class="phpdocumentor-signature__name">use_secure_cookie</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">bool</span>
+    </code>
+
+    
+    
+                <h5 class="phpdocumentor-tag-list__heading">Tags</h5>
+        <dl class="phpdocumentor-tag-list">
+                                                <dt class="phpdocumentor-tag-list__entry">
+                        <span class="phpdocumentor-tag__name">since</span>
+                    </dt>
+                    <dd class="phpdocumentor-tag-list__definition"><section class="phpdocumentor-description"></section></dd>
+                                    </dl>
+    
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">bool</span>
+            
+</article>
+                                    <a id="method_has_session"></a>
+<article
+        class="
+            phpdocumentor-method
+            phpdocumentor-method--public
+                                                        "
+>
+    <h4 class="phpdocumentor-method__name">has_session()</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-session-handler.php"><a href="../files/woocommerce-includes-class-wc-session-handler.html"><abbr title="woocommerce/includes/class-wc-session-handler.php">class-wc-session-handler.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">155</span>
+    </aside>
+        <p class="phpdocumentor-summary">Return true if the current user has an active session, i.e. a cookie to retrieve values.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">public</span>
+                                <span class="phpdocumentor-signature__name">has_session</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">bool</span>
+    </code>
+
+    
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">bool</span>
+            
+</article>
+                                    <a id="method_set_session_expiration"></a>
+<article
+        class="
+            phpdocumentor-method
+            phpdocumentor-method--public
+                                                        "
+>
+    <h4 class="phpdocumentor-method__name">set_session_expiration()</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-session-handler.php"><a href="../files/woocommerce-includes-class-wc-session-handler.html"><abbr title="woocommerce/includes/class-wc-session-handler.php">class-wc-session-handler.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">162</span>
+    </aside>
+        <p class="phpdocumentor-summary">Set session expiration.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">public</span>
+                                <span class="phpdocumentor-signature__name">set_session_expiration</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">mixed</span>
+    </code>
+
+    
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">mixed</span>
+            
+</article>
+                                    <a id="method_generate_customer_id"></a>
+<article
+        class="
+            phpdocumentor-method
+            phpdocumentor-method--public
+                                                        "
+>
+    <h4 class="phpdocumentor-method__name">generate_customer_id()</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-session-handler.php"><a href="../files/woocommerce-includes-class-wc-session-handler.html"><abbr title="woocommerce/includes/class-wc-session-handler.php">class-wc-session-handler.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">174</span>
+    </aside>
+        <p class="phpdocumentor-summary">Generate a unique customer ID for guests, or return user ID if logged in.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">public</span>
+                                <span class="phpdocumentor-signature__name">generate_customer_id</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">string</span>
+    </code>
+
+        <section class="phpdocumentor-description"><p>Uses Portable PHP password hashing framework to generate a unique cryptographically strong ID.</p></section>
+    
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">string</span>
+            
+</article>
+                                    <a id="method_get_session_cookie"></a>
+<article
+        class="
+            phpdocumentor-method
+            phpdocumentor-method--public
+                                                        "
+>
+    <h4 class="phpdocumentor-method__name">get_session_cookie()</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-session-handler.php"><a href="../files/woocommerce-includes-class-wc-session-handler.html"><abbr title="woocommerce/includes/class-wc-session-handler.php">class-wc-session-handler.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">197</span>
+    </aside>
+        <p class="phpdocumentor-summary">Get the session cookie, if set. Otherwise return false.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">public</span>
+                                <span class="phpdocumentor-signature__name">get_session_cookie</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">bool|array</span>
+    </code>
+
+        <section class="phpdocumentor-description"><p>Session cookies without a customer ID are invalid.</p></section>
+    
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">bool|array</span>
+            
+</article>
+                                    <a id="method_get_session_data"></a>
+<article
+        class="
+            phpdocumentor-method
+            phpdocumentor-method--public
+                                                        "
+>
+    <h4 class="phpdocumentor-method__name">get_session_data()</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-session-handler.php"><a href="../files/woocommerce-includes-class-wc-session-handler.html"><abbr title="woocommerce/includes/class-wc-session-handler.php">class-wc-session-handler.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">226</span>
+    </aside>
+        <p class="phpdocumentor-summary">Get session data.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">public</span>
+                                <span class="phpdocumentor-signature__name">get_session_data</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">array</span>
+    </code>
+
+    
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">array</span>
+            
+</article>
+                                    <a id="method_get_cache_prefix"></a>
+<article
+        class="
+            phpdocumentor-method
+            phpdocumentor-method--private
+                                                        "
+>
+    <h4 class="phpdocumentor-method__name">get_cache_prefix()</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-session-handler.php"><a href="../files/woocommerce-includes-class-wc-session-handler.html"><abbr title="woocommerce/includes/class-wc-session-handler.php">class-wc-session-handler.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">235</span>
+    </aside>
+        <p class="phpdocumentor-summary">Gets a cache prefix. This is used in session names so the entire cache can be invalidated with 1 function call.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">private</span>
+                                <span class="phpdocumentor-signature__name">get_cache_prefix</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">string</span>
+    </code>
+
+    
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">string</span>
+            
+</article>
+                                    <a id="method_save_data"></a>
+<article
+        class="
+            phpdocumentor-method
+            phpdocumentor-method--public
+                                                        "
+>
+    <h4 class="phpdocumentor-method__name">save_data()</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-session-handler.php"><a href="../files/woocommerce-includes-class-wc-session-handler.html"><abbr title="woocommerce/includes/class-wc-session-handler.php">class-wc-session-handler.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">244</span>
+    </aside>
+        <p class="phpdocumentor-summary">Save data and delete guest session.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">public</span>
+                                <span class="phpdocumentor-signature__name">save_data</span>(
+                    <span class="phpdocumentor-signature__argument">
+                            <span class="phpdocumentor-signature__argument__name">$old_session_key</span> :
+                <span class="phpdocumentor-signature__argument__return-type">int</span>
+                            </span>
+                )
+        : <span class="phpdocumentor-signature__response_type">mixed</span>
+    </code>
+
+    
+            <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+        <dl class="phpdocumentor-argument-list">
+                            <dt class="phpdocumentor-argument-list__entry">
+                    <span class="phpdocumentor-signature__argument__name">$old_session_key</span>
+                    : <span class="phpdocumentor-signature__argument__return-type">int</span>
+                                    </dt>
+                <dd class="phpdocumentor-argument-list__definition"><section class="phpdocumentor-description"><p>session ID before user logs in.</p></section></dd>
+                    </dl>
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">mixed</span>
+            
+</article>
+                                    <a id="method_destroy_session"></a>
+<article
+        class="
+            phpdocumentor-method
+            phpdocumentor-method--public
+                                                        "
+>
+    <h4 class="phpdocumentor-method__name">destroy_session()</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-session-handler.php"><a href="../files/woocommerce-includes-class-wc-session-handler.html"><abbr title="woocommerce/includes/class-wc-session-handler.php">class-wc-session-handler.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">270</span>
+    </aside>
+        <p class="phpdocumentor-summary">Destroy all session data.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">public</span>
+                                <span class="phpdocumentor-signature__name">destroy_session</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">mixed</span>
+    </code>
+
+    
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">mixed</span>
+            
+</article>
+                                    <a id="method_forget_session"></a>
+<article
+        class="
+            phpdocumentor-method
+            phpdocumentor-method--public
+                                                        "
+>
+    <h4 class="phpdocumentor-method__name">forget_session()</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-session-handler.php"><a href="../files/woocommerce-includes-class-wc-session-handler.html"><abbr title="woocommerce/includes/class-wc-session-handler.php">class-wc-session-handler.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">278</span>
+    </aside>
+        <p class="phpdocumentor-summary">Forget all session data without destroying it.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">public</span>
+                                <span class="phpdocumentor-signature__name">forget_session</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">mixed</span>
+    </code>
+
+    
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">mixed</span>
+            
+</article>
+                                    <a id="method_nonce_user_logged_out"></a>
+<article
+        class="
+            phpdocumentor-method
+            phpdocumentor-method--public
+                                                        "
+>
+    <h4 class="phpdocumentor-method__name">nonce_user_logged_out()</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-session-handler.php"><a href="../files/woocommerce-includes-class-wc-session-handler.html"><abbr title="woocommerce/includes/class-wc-session-handler.php">class-wc-session-handler.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">294</span>
+    </aside>
+        <p class="phpdocumentor-summary">When a user is logged out, ensure they have a unique nonce by using the customer/session ID.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">public</span>
+                                <span class="phpdocumentor-signature__name">nonce_user_logged_out</span>(
+                    <span class="phpdocumentor-signature__argument">
+                            <span class="phpdocumentor-signature__argument__name">$uid</span> :
+                <span class="phpdocumentor-signature__argument__return-type">int</span>
+                            </span>
+                )
+        : <span class="phpdocumentor-signature__response_type">string</span>
+    </code>
+
+    
+            <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+        <dl class="phpdocumentor-argument-list">
+                            <dt class="phpdocumentor-argument-list__entry">
+                    <span class="phpdocumentor-signature__argument__name">$uid</span>
+                    : <span class="phpdocumentor-signature__argument__return-type">int</span>
+                                    </dt>
+                <dd class="phpdocumentor-argument-list__definition"><section class="phpdocumentor-description"><p>User ID.</p></section></dd>
+                    </dl>
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">string</span>
+            
+</article>
+                                    <a id="method_cleanup_sessions"></a>
+<article
+        class="
+            phpdocumentor-method
+            phpdocumentor-method--public
+                                                        "
+>
+    <h4 class="phpdocumentor-method__name">cleanup_sessions()</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-session-handler.php"><a href="../files/woocommerce-includes-class-wc-session-handler.html"><abbr title="woocommerce/includes/class-wc-session-handler.php">class-wc-session-handler.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">301</span>
+    </aside>
+        <p class="phpdocumentor-summary">Cleanup session data from the database and clear caches.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">public</span>
+                                <span class="phpdocumentor-signature__name">cleanup_sessions</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">mixed</span>
+    </code>
+
+    
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">mixed</span>
+            
+</article>
+                                    <a id="method_get_session"></a>
+<article
+        class="
+            phpdocumentor-method
+            phpdocumentor-method--public
+                                                        "
+>
+    <h4 class="phpdocumentor-method__name">get_session()</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-session-handler.php"><a href="../files/woocommerce-includes-class-wc-session-handler.html"><abbr title="woocommerce/includes/class-wc-session-handler.php">class-wc-session-handler.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">318</span>
+    </aside>
+        <p class="phpdocumentor-summary">Returns the session.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">public</span>
+                                <span class="phpdocumentor-signature__name">get_session</span>(
+                    <span class="phpdocumentor-signature__argument">
+                            <span class="phpdocumentor-signature__argument__name">$customer_id</span> :
+                <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </span>
+                    <span class="phpdocumentor-signature__argument">
+            [,                 <span class="phpdocumentor-signature__argument__name">$default</span> :
+                <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">false</span> ]            </span>
+                )
+        : <span class="phpdocumentor-signature__response_type">string|array</span>
+    </code>
+
+    
+            <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+        <dl class="phpdocumentor-argument-list">
+                            <dt class="phpdocumentor-argument-list__entry">
+                    <span class="phpdocumentor-signature__argument__name">$customer_id</span>
+                    : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                                    </dt>
+                <dd class="phpdocumentor-argument-list__definition"><section class="phpdocumentor-description"><p>Custo ID.</p></section></dd>
+                            <dt class="phpdocumentor-argument-list__entry">
+                    <span class="phpdocumentor-signature__argument__name">$default</span>
+                    : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                     = <span class="phpdocumentor-signature__argument__default-value">false</span>                </dt>
+                <dd class="phpdocumentor-argument-list__definition"><section class="phpdocumentor-description"><p>Default session value.</p></section></dd>
+                    </dl>
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">string|array</span>
+            
+</article>
+                                    <a id="method_delete_session"></a>
+<article
+        class="
+            phpdocumentor-method
+            phpdocumentor-method--public
+                                                        "
+>
+    <h4 class="phpdocumentor-method__name">delete_session()</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-session-handler.php"><a href="../files/woocommerce-includes-class-wc-session-handler.html"><abbr title="woocommerce/includes/class-wc-session-handler.php">class-wc-session-handler.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">349</span>
+    </aside>
+        <p class="phpdocumentor-summary">Delete the session from the cache and database.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">public</span>
+                                <span class="phpdocumentor-signature__name">delete_session</span>(
+                    <span class="phpdocumentor-signature__argument">
+                            <span class="phpdocumentor-signature__argument__name">$customer_id</span> :
+                <span class="phpdocumentor-signature__argument__return-type">int</span>
+                            </span>
+                )
+        : <span class="phpdocumentor-signature__response_type">mixed</span>
+    </code>
+
+    
+            <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+        <dl class="phpdocumentor-argument-list">
+                            <dt class="phpdocumentor-argument-list__entry">
+                    <span class="phpdocumentor-signature__argument__name">$customer_id</span>
+                    : <span class="phpdocumentor-signature__argument__return-type">int</span>
+                                    </dt>
+                <dd class="phpdocumentor-argument-list__definition"><section class="phpdocumentor-description"><p>Customer ID.</p></section></dd>
+                    </dl>
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">mixed</span>
+            
+</article>
+                                    <a id="method_update_session_timestamp"></a>
+<article
+        class="
+            phpdocumentor-method
+            phpdocumentor-method--public
+                                                        "
+>
+    <h4 class="phpdocumentor-method__name">update_session_timestamp()</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-session-handler.php"><a href="../files/woocommerce-includes-class-wc-session-handler.html"><abbr title="woocommerce/includes/class-wc-session-handler.php">class-wc-session-handler.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">368</span>
+    </aside>
+        <p class="phpdocumentor-summary">Update the session expiry timestamp.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">public</span>
+                                <span class="phpdocumentor-signature__name">update_session_timestamp</span>(
+                    <span class="phpdocumentor-signature__argument">
+                            <span class="phpdocumentor-signature__argument__name">$customer_id</span> :
+                <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </span>
+                    <span class="phpdocumentor-signature__argument">
+            ,                 <span class="phpdocumentor-signature__argument__name">$timestamp</span> :
+                <span class="phpdocumentor-signature__argument__return-type">int</span>
+                            </span>
+                )
+        : <span class="phpdocumentor-signature__response_type">mixed</span>
+    </code>
+
+    
+            <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+        <dl class="phpdocumentor-argument-list">
+                            <dt class="phpdocumentor-argument-list__entry">
+                    <span class="phpdocumentor-signature__argument__name">$customer_id</span>
+                    : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                                    </dt>
+                <dd class="phpdocumentor-argument-list__definition"><section class="phpdocumentor-description"><p>Customer ID.</p></section></dd>
+                            <dt class="phpdocumentor-argument-list__entry">
+                    <span class="phpdocumentor-signature__argument__name">$timestamp</span>
+                    : <span class="phpdocumentor-signature__argument__return-type">int</span>
+                                    </dt>
+                <dd class="phpdocumentor-argument-list__definition"><section class="phpdocumentor-description"><p>Timestamp to expire the cookie.</p></section></dd>
+                    </dl>
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">mixed</span>
+            
+</article>
+                                                                    <a id="method_init"></a>
+<article
+        class="
+            phpdocumentor-method
+            phpdocumentor-method--public
+                                                        "
+>
+    <h4 class="phpdocumentor-method__name">init()</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/abstracts/abstract-wc-session.php"><a href="../files/woocommerce-includes-abstracts-abstract-wc-session.html"><abbr title="woocommerce/includes/abstracts/abstract-wc-session.php">abstract-wc-session.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">45</span>
+    </aside>
+        <p class="phpdocumentor-summary">Init hooks and session data. Extended by child classes.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">public</span>
+                                <span class="phpdocumentor-signature__name">init</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">mixed</span>
+    </code>
+
+    
+    
+                <h5 class="phpdocumentor-tag-list__heading">Tags</h5>
+        <dl class="phpdocumentor-tag-list">
+                                                <dt class="phpdocumentor-tag-list__entry">
+                        <span class="phpdocumentor-tag__name">since</span>
+                    </dt>
+                    <dd class="phpdocumentor-tag-list__definition"><section class="phpdocumentor-description"></section></dd>
+                                    </dl>
+    
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">mixed</span>
+            
+</article>
+                                    <a id="method_cleanup_sessions"></a>
+<article
+        class="
+            phpdocumentor-method
+            phpdocumentor-method--public
+                                                        "
+>
+    <h4 class="phpdocumentor-method__name">cleanup_sessions()</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/abstracts/abstract-wc-session.php"><a href="../files/woocommerce-includes-abstracts-abstract-wc-session.html"><abbr title="woocommerce/includes/abstracts/abstract-wc-session.php">abstract-wc-session.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">50</span>
+    </aside>
+        <p class="phpdocumentor-summary">Cleanup session data. Extended by child classes.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">public</span>
+                                <span class="phpdocumentor-signature__name">cleanup_sessions</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">mixed</span>
+    </code>
+
+    
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">mixed</span>
+            
+</article>
+                                    <a id="method___get"></a>
+<article
+        class="
+            phpdocumentor-method
+            phpdocumentor-method--public
+                                                        "
+>
+    <h4 class="phpdocumentor-method__name">__get()</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/abstracts/abstract-wc-session.php"><a href="../files/woocommerce-includes-abstracts-abstract-wc-session.html"><abbr title="woocommerce/includes/abstracts/abstract-wc-session.php">abstract-wc-session.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">58</span>
+    </aside>
+        <p class="phpdocumentor-summary">Magic get method.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">public</span>
+                                <span class="phpdocumentor-signature__name">__get</span>(
+                    <span class="phpdocumentor-signature__argument">
+                            <span class="phpdocumentor-signature__argument__name">$key</span> :
+                <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                            </span>
+                )
+        : <span class="phpdocumentor-signature__response_type">mixed</span>
+    </code>
+
+    
+            <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+        <dl class="phpdocumentor-argument-list">
+                            <dt class="phpdocumentor-argument-list__entry">
+                    <span class="phpdocumentor-signature__argument__name">$key</span>
+                    : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                                    </dt>
+                <dd class="phpdocumentor-argument-list__definition"><section class="phpdocumentor-description"><p>Key to get.</p></section></dd>
+                    </dl>
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">mixed</span>
+            
+</article>
+                                    <a id="method___set"></a>
+<article
+        class="
+            phpdocumentor-method
+            phpdocumentor-method--public
+                                                        "
+>
+    <h4 class="phpdocumentor-method__name">__set()</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/abstracts/abstract-wc-session.php"><a href="../files/woocommerce-includes-abstracts-abstract-wc-session.html"><abbr title="woocommerce/includes/abstracts/abstract-wc-session.php">abstract-wc-session.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">68</span>
+    </aside>
+        <p class="phpdocumentor-summary">Magic set method.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">public</span>
+                                <span class="phpdocumentor-signature__name">__set</span>(
+                    <span class="phpdocumentor-signature__argument">
+                            <span class="phpdocumentor-signature__argument__name">$key</span> :
+                <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                            </span>
+                    <span class="phpdocumentor-signature__argument">
+            ,                 <span class="phpdocumentor-signature__argument__name">$value</span> :
+                <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                            </span>
+                )
+        : <span class="phpdocumentor-signature__response_type">mixed</span>
+    </code>
+
+    
+            <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+        <dl class="phpdocumentor-argument-list">
+                            <dt class="phpdocumentor-argument-list__entry">
+                    <span class="phpdocumentor-signature__argument__name">$key</span>
+                    : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                                    </dt>
+                <dd class="phpdocumentor-argument-list__definition"><section class="phpdocumentor-description"><p>Key to set.</p></section></dd>
+                            <dt class="phpdocumentor-argument-list__entry">
+                    <span class="phpdocumentor-signature__argument__name">$value</span>
+                    : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                                    </dt>
+                <dd class="phpdocumentor-argument-list__definition"><section class="phpdocumentor-description"><p>Value to set.</p></section></dd>
+                    </dl>
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">mixed</span>
+            
+</article>
+                                    <a id="method___isset"></a>
+<article
+        class="
+            phpdocumentor-method
+            phpdocumentor-method--public
+                                                        "
+>
+    <h4 class="phpdocumentor-method__name">__isset()</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/abstracts/abstract-wc-session.php"><a href="../files/woocommerce-includes-abstracts-abstract-wc-session.html"><abbr title="woocommerce/includes/abstracts/abstract-wc-session.php">abstract-wc-session.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">78</span>
+    </aside>
+        <p class="phpdocumentor-summary">Magic isset method.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">public</span>
+                                <span class="phpdocumentor-signature__name">__isset</span>(
+                    <span class="phpdocumentor-signature__argument">
+                            <span class="phpdocumentor-signature__argument__name">$key</span> :
+                <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                            </span>
+                )
+        : <span class="phpdocumentor-signature__response_type">bool</span>
+    </code>
+
+    
+            <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+        <dl class="phpdocumentor-argument-list">
+                            <dt class="phpdocumentor-argument-list__entry">
+                    <span class="phpdocumentor-signature__argument__name">$key</span>
+                    : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                                    </dt>
+                <dd class="phpdocumentor-argument-list__definition"><section class="phpdocumentor-description"><p>Key to check.</p></section></dd>
+                    </dl>
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">bool</span>
+            
+</article>
+                                    <a id="method___unset"></a>
+<article
+        class="
+            phpdocumentor-method
+            phpdocumentor-method--public
+                                                        "
+>
+    <h4 class="phpdocumentor-method__name">__unset()</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/abstracts/abstract-wc-session.php"><a href="../files/woocommerce-includes-abstracts-abstract-wc-session.html"><abbr title="woocommerce/includes/abstracts/abstract-wc-session.php">abstract-wc-session.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">87</span>
+    </aside>
+        <p class="phpdocumentor-summary">Magic unset method.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">public</span>
+                                <span class="phpdocumentor-signature__name">__unset</span>(
+                    <span class="phpdocumentor-signature__argument">
+                            <span class="phpdocumentor-signature__argument__name">$key</span> :
+                <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                            </span>
+                )
+        : <span class="phpdocumentor-signature__response_type">mixed</span>
+    </code>
+
+    
+            <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+        <dl class="phpdocumentor-argument-list">
+                            <dt class="phpdocumentor-argument-list__entry">
+                    <span class="phpdocumentor-signature__argument__name">$key</span>
+                    : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                                    </dt>
+                <dd class="phpdocumentor-argument-list__definition"><section class="phpdocumentor-description"><p>Key to unset.</p></section></dd>
+                    </dl>
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">mixed</span>
+            
+</article>
+                                    <a id="method_get"></a>
+<article
+        class="
+            phpdocumentor-method
+            phpdocumentor-method--public
+                                                        "
+>
+    <h4 class="phpdocumentor-method__name">get()</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/abstracts/abstract-wc-session.php"><a href="../files/woocommerce-includes-abstracts-abstract-wc-session.html"><abbr title="woocommerce/includes/abstracts/abstract-wc-session.php">abstract-wc-session.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">101</span>
+    </aside>
+        <p class="phpdocumentor-summary">Get a session variable.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">public</span>
+                                <span class="phpdocumentor-signature__name">get</span>(
+                    <span class="phpdocumentor-signature__argument">
+                            <span class="phpdocumentor-signature__argument__name">$key</span> :
+                <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </span>
+                    <span class="phpdocumentor-signature__argument">
+            [,                 <span class="phpdocumentor-signature__argument__name">$default</span> :
+                <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">null</span> ]            </span>
+                )
+        : <span class="phpdocumentor-signature__response_type">array|string</span>
+    </code>
+
+    
+            <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+        <dl class="phpdocumentor-argument-list">
+                            <dt class="phpdocumentor-argument-list__entry">
+                    <span class="phpdocumentor-signature__argument__name">$key</span>
+                    : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                                    </dt>
+                <dd class="phpdocumentor-argument-list__definition"><section class="phpdocumentor-description"><p>Key to get.</p></section></dd>
+                            <dt class="phpdocumentor-argument-list__entry">
+                    <span class="phpdocumentor-signature__argument__name">$default</span>
+                    : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                     = <span class="phpdocumentor-signature__argument__default-value">null</span>                </dt>
+                <dd class="phpdocumentor-argument-list__definition"><section class="phpdocumentor-description"><p>used if the session variable isn't set.</p></section></dd>
+                    </dl>
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">array|string</span>
+                    &mdash; <span class="phpdocumentor-description"><p>value of session variable</p></span>
+            
+</article>
+                                    <a id="method_set"></a>
+<article
+        class="
+            phpdocumentor-method
+            phpdocumentor-method--public
+                                                        "
+>
+    <h4 class="phpdocumentor-method__name">set()</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/abstracts/abstract-wc-session.php"><a href="../files/woocommerce-includes-abstracts-abstract-wc-session.html"><abbr title="woocommerce/includes/abstracts/abstract-wc-session.php">abstract-wc-session.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">112</span>
+    </aside>
+        <p class="phpdocumentor-summary">Set a session variable.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">public</span>
+                                <span class="phpdocumentor-signature__name">set</span>(
+                    <span class="phpdocumentor-signature__argument">
+                            <span class="phpdocumentor-signature__argument__name">$key</span> :
+                <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </span>
+                    <span class="phpdocumentor-signature__argument">
+            ,                 <span class="phpdocumentor-signature__argument__name">$value</span> :
+                <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                            </span>
+                )
+        : <span class="phpdocumentor-signature__response_type">mixed</span>
+    </code>
+
+    
+            <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+        <dl class="phpdocumentor-argument-list">
+                            <dt class="phpdocumentor-argument-list__entry">
+                    <span class="phpdocumentor-signature__argument__name">$key</span>
+                    : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                                    </dt>
+                <dd class="phpdocumentor-argument-list__definition"><section class="phpdocumentor-description"><p>Key to set.</p></section></dd>
+                            <dt class="phpdocumentor-argument-list__entry">
+                    <span class="phpdocumentor-signature__argument__name">$value</span>
+                    : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                                    </dt>
+                <dd class="phpdocumentor-argument-list__definition"><section class="phpdocumentor-description"><p>Value to set.</p></section></dd>
+                    </dl>
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">mixed</span>
+            
+</article>
+                                    <a id="method_get_customer_id"></a>
+<article
+        class="
+            phpdocumentor-method
+            phpdocumentor-method--public
+                                                        "
+>
+    <h4 class="phpdocumentor-method__name">get_customer_id()</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/abstracts/abstract-wc-session.php"><a href="../files/woocommerce-includes-abstracts-abstract-wc-session.html"><abbr title="woocommerce/includes/abstracts/abstract-wc-session.php">abstract-wc-session.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">124</span>
+    </aside>
+        <p class="phpdocumentor-summary">Get customer ID.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">public</span>
+                                <span class="phpdocumentor-signature__name">get_customer_id</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">int</span>
+    </code>
+
+    
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">int</span>
+            
+</article>
+                            </section>
+            </article>
+        </div>
+    </div>
+</main>
+<a href="#" class="to-top">Back to the top</a>
+<footer class="phpdocumentor phpdocumentor-footer">
+    <div class="phpdocumentor-section">
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on August 18th, 2020 at 11:59 am.</span>
+    </div>
+</footer>
+</body>
+</html>

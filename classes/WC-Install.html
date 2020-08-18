@@ -1,0 +1,2158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>WooCommerce Code Reference</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/template.css">
+    <link rel="shortcut icon" href="../images/favicon.png"/>
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
+        <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.4.6/fuse.min.js"></script>
+    <script src="../js/search.js"></script>
+    <script defer src="../js/searchIndex.js"></script>
+    </head>
+<body>
+<header class="phpdocumentor-top-header">
+    <section class="phpdocumentor-section">
+        <div class="site-branding">
+            <a class="site-logo" href="../index.html"><img width="180" src="../images/logo.svg" alt="WooCommerce" /></a>
+        </div>
+        <nav class="main-navigation">
+            <ul>
+                <li><a href="../hooks/hooks.html">Hooks Reference</a></li>
+                                    <li><a href="../graphs/classes.html">Class Diagram</a></li>
+                                <li><a href="https://docs.woocommerce.com/">Documentation</a></li>
+                <li><a href="https://woocommerce.github.io/woocommerce-rest-api-docs/">REST API Docs</a></li>
+            </ul>
+        </nav>
+    </section>
+</header>
+<header class="phpdocumentor-header">
+    <section class="phpdocumentor-section">
+        <h1 class="phpdocumentor-title">WooCommerce Code Reference</h1>
+    </section>
+
+    <section class="phpdocumentor-section">
+        <div data-search-form class="phpdocumentor-search">
+            <label class="phpdocumentor-label">
+                <span class="visually-hidden">Search</span>
+                <input type="search" class="phpdocumentor-field phpdocumentor-search__field" placeholder="Loading..." disabled />
+            </label>
+        </div>
+        <div data-search-results class="phpdocumentor-search-results phpdocumentor-search-results--hidden">
+
+            <h2>Search results</h2>
+            <ul class="phpdocumentor-search-results__entries">
+
+            </ul>
+        </div>
+    </section>
+</header>
+<main class="phpdocumentor">
+    <div class="phpdocumentor-section">
+        <aside class="three phpdocumentor-columns phpdocumentor-sidebar">
+    
+    <h1 class="phpdocumentor-sidebar__category-header">Namespaces</h1>
+            <h2 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/default.html"><abbr title="\">Global</abbr></a></h2>
+                    <h3 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h3>
+            <ul class="phpdocumentor-list">
+                                    <li><a href="../namespaces/automattic-woocommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                            </ul>
+            
+        <h1 class="phpdocumentor-sidebar__category-header">Packages</h1>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceClasses.html"><abbr title="\WooCommerceClasses">WooCommerceClasses</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAbstracts.html"><abbr title="\WooCommerceAbstracts">WooCommerceAbstracts</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                            <li><a href="../packages/WooCommerce-Abstracts.html"><abbr title="\WooCommerce\Abstracts">Abstracts</abbr></a></li>
+                            <li><a href="../packages/WooCommerce-Admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                            <li><a href="../packages/WooCommerce-Views.html"><abbr title="\WooCommerce\Views">Views</abbr></a></li>
+                            <li><a href="../packages/WooCommerce-admin.html"><abbr title="\WooCommerce\admin">admin</abbr></a></li>
+                            <li><a href="../packages/WooCommerce-Classes.html"><abbr title="\WooCommerce\Classes">Classes</abbr></a></li>
+                            <li><a href="../packages/WooCommerce-Reports.html"><abbr title="\WooCommerce\Reports">Reports</abbr></a></li>
+                            <li><a href="../packages/WooCommerce-CLI.html"><abbr title="\WooCommerce\CLI">CLI</abbr></a></li>
+                            <li><a href="../packages/WooCommerce-l10n.html"><abbr title="\WooCommerce\l10n">l10n</abbr></a></li>
+                            <li><a href="../packages/WooCommerce-Cli.html"><abbr title="\WooCommerce\Cli">Cli</abbr></a></li>
+                            <li><a href="../packages/WooCommerce-DataStores.html"><abbr title="\WooCommerce\DataStores">DataStores</abbr></a></li>
+                            <li><a href="../packages/WooCommerce-DataStore.html"><abbr title="\WooCommerce\DataStore">DataStore</abbr></a></li>
+                            <li><a href="../packages/WooCommerce-Emails.html"><abbr title="\WooCommerce\Emails">Emails</abbr></a></li>
+                            <li><a href="../packages/WooCommerce-Gateways.html"><abbr title="\WooCommerce\Gateways">Gateways</abbr></a></li>
+                            <li><a href="../packages/WooCommerce-Integrations.html"><abbr title="\WooCommerce\Integrations">Integrations</abbr></a></li>
+                            <li><a href="../packages/WooCommerce-LogHandlers.html"><abbr title="\WooCommerce\LogHandlers">LogHandlers</abbr></a></li>
+                            <li><a href="../packages/WooCommerce-PaymentTokens.html"><abbr title="\WooCommerce\PaymentTokens">PaymentTokens</abbr></a></li>
+                            <li><a href="../packages/WooCommerce-Shipping.html"><abbr title="\WooCommerce\Shipping">Shipping</abbr></a></li>
+                            <li><a href="../packages/WooCommerce-Tracks.html"><abbr title="\WooCommerce\Tracks">Tracks</abbr></a></li>
+                            <li><a href="../packages/WooCommerce-Functions.html"><abbr title="\WooCommerce\Functions">Functions</abbr></a></li>
+                            <li><a href="../packages/WooCommerce-WooCommerce.html"><abbr title="\WooCommerce\WooCommerce">WooCommerce</abbr></a></li>
+                            <li><a href="../packages/WooCommerce-Blocks.html"><abbr title="\WooCommerce\Blocks">Blocks</abbr></a></li>
+                            <li><a href="../packages/WooCommerce-Uninstaller.html"><abbr title="\WooCommerce\Uninstaller">Uninstaller</abbr></a></li>
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdmin.html"><abbr title="\WooCommerceAdmin">WooCommerceAdmin</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdminCustomize.html"><abbr title="\WooCommerceAdminCustomize">WooCommerceAdminCustomize</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdminMetaBoxes.html"><abbr title="\WooCommerceAdminMetaBoxes">WooCommerceAdminMetaBoxes</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceadmin.html"><abbr title="\WooCommerceadmin">WooCommerceadmin</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdminReports.html"><abbr title="\WooCommerceAdminReports">WooCommerceAdminReports</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdminSystemStatus.html"><abbr title="\WooCommerceAdminSystemStatus">WooCommerceAdminSystemStatus</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/Default.html"><abbr title="\Default">Default</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceHelper.html"><abbr title="\WooCommerceHelper">WooCommerceHelper</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdminImporters.html"><abbr title="\WooCommerceAdminImporters">WooCommerceAdminImporters</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceTemplates.html"><abbr title="\WooCommerceTemplates">WooCommerceTemplates</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdminReporting.html"><abbr title="\WooCommerceAdminReporting">WooCommerceAdminReporting</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdminShipping.html"><abbr title="\WooCommerceAdminShipping">WooCommerceAdminShipping</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdminSettings.html"><abbr title="\WooCommerceAdminSettings">WooCommerceAdminSettings</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdminWebhooksViews.html"><abbr title="\WooCommerceAdminWebhooksViews">WooCommerceAdminWebhooksViews</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/Settings.html"><abbr title="\Settings">Settings</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdminExport.html"><abbr title="\WooCommerceAdminExport">WooCommerceAdminExport</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdminLogs.html"><abbr title="\WooCommerceAdminLogs">WooCommerceAdminLogs</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceViews.html"><abbr title="\WooCommerceViews">WooCommerceViews</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/admin.html"><abbr title="\admin">admin</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdminFunctions.html"><abbr title="\WooCommerceAdminFunctions">WooCommerceAdminFunctions</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAPI.html"><abbr title="\WooCommerceAPI">WooCommerceAPI</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceClassesProducts.html"><abbr title="\WooCommerceClassesProducts">WooCommerceClassesProducts</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceClassesEmails.html"><abbr title="\WooCommerceClassesEmails">WooCommerceClassesEmails</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceClassesEmbed.html"><abbr title="\WooCommerceClassesEmbed">WooCommerceClassesEmbed</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceClassesIntegrations.html"><abbr title="\WooCommerceClassesIntegrations">WooCommerceClassesIntegrations</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceClassesPayment.html"><abbr title="\WooCommerceClassesPayment">WooCommerceClassesPayment</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceClassesData.html"><abbr title="\WooCommerceClassesData">WooCommerceClassesData</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                            <li><a href="../packages/WooCommerceClassesData-Store.html"><abbr title="\WooCommerceClassesData\Store">Store</abbr></a></li>
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceClassesShipping.html"><abbr title="\WooCommerceClassesShipping">WooCommerceClassesShipping</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceWebhooks.html"><abbr title="\WooCommerceWebhooks">WooCommerceWebhooks</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/data.html"><abbr title="\data">data</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                            <li><a href="../packages/data-stores.html"><abbr title="\data\stores">stores</abbr></a></li>
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceExport.html"><abbr title="\WooCommerceExport">WooCommerceExport</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommercePayPal.html"><abbr title="\WooCommercePayPal">WooCommercePayPal</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceImport.html"><abbr title="\WooCommerceImport">WooCommerceImport</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceIntegrations.html"><abbr title="\WooCommerceIntegrations">WooCommerceIntegrations</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceInterfaces.html"><abbr title="\WooCommerceInterfaces">WooCommerceInterfaces</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceInterface.html"><abbr title="\WooCommerceInterface">WooCommerceInterface</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceClassesLog.html"><abbr title="\WooCommerceClassesLog">WooCommerceClassesLog</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                            <li><a href="../packages/WooCommerceClassesLog-Handlers.html"><abbr title="\WooCommerceClassesLog\Handlers">Handlers</abbr></a></li>
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommercePaymentTokens.html"><abbr title="\WooCommercePaymentTokens">WooCommercePaymentTokens</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceShortcodesCart.html"><abbr title="\WooCommerceShortcodesCart">WooCommerceShortcodesCart</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceShortcodesCheckout.html"><abbr title="\WooCommerceShortcodesCheckout">WooCommerceShortcodesCheckout</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceShortcodesMy.html"><abbr title="\WooCommerceShortcodesMy">WooCommerceShortcodesMy</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                            <li><a href="../packages/WooCommerceShortcodesMy-Account.html"><abbr title="\WooCommerceShortcodesMy\Account">Account</abbr></a></li>
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceShortcodesOrder.html"><abbr title="\WooCommerceShortcodesOrder">WooCommerceShortcodesOrder</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                            <li><a href="../packages/WooCommerceShortcodesOrder-Tracking.html"><abbr title="\WooCommerceShortcodesOrder\Tracking">Tracking</abbr></a></li>
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceShortcodes.html"><abbr title="\WooCommerceShortcodes">WooCommerceShortcodes</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceTraits.html"><abbr title="\WooCommerceTraits">WooCommerceTraits</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceClassesWalkers.html"><abbr title="\WooCommerceClassesWalkers">WooCommerceClassesWalkers</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceFunctions.html"><abbr title="\WooCommerceFunctions">WooCommerceFunctions</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceWCCOM.html"><abbr title="\WooCommerceWCCOM">WooCommerceWCCOM</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                            <li><a href="../packages/WooCommerceWCCOM-SiteREST.html"><abbr title="\WooCommerceWCCOM\SiteREST">SiteREST</abbr></a></li>
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceWidgets.html"><abbr title="\WooCommerceWidgets">WooCommerceWidgets</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceAdmin.html"><abbr title="\WoocommerceAdmin">WoocommerceAdmin</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WC.html"><abbr title="\WC">WC</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                            <li><a href="../packages/WC-Admin.html"><abbr title="\WC\Admin">Admin</abbr></a></li>
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdminTemplatesEmailsHTML.html"><abbr title="\WooCommerceAdminTemplatesEmailsHTML">WooCommerceAdminTemplatesEmailsHTML</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdminAPI.html"><abbr title="\WooCommerceAdminAPI">WooCommerceAdminAPI</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdminClasses.html"><abbr title="\WooCommerceAdminClasses">WooCommerceAdminClasses</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdminInterface.html"><abbr title="\WooCommerceAdminInterface">WooCommerceAdminInterface</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/Automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                            <li><a href="../packages/Automattic-WooCommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/AutomatticWooCommerceWCAdmin.html"><abbr title="\AutomatticWooCommerceWCAdmin">AutomatticWooCommerceWCAdmin</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceBlocks.html"><abbr title="\WooCommerceBlocks">WooCommerceBlocks</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/AutomatticWooCommerceBlocks.html"><abbr title="\AutomatticWooCommerceBlocks">AutomatticWooCommerceBlocks</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/AutomatticWooCommerceRestApi.html"><abbr title="\AutomatticWooCommerceRestApi">AutomatticWooCommerceRestApi</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/AutomatticWooCommerceUtilities.html"><abbr title="\AutomatticWooCommerceUtilities">AutomatticWooCommerceUtilities</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/AutomatticWooCommerce.html"><abbr title="\AutomatticWooCommerce">AutomatticWooCommerce</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceTemplatesAuth.html"><abbr title="\WooCommerceTemplatesAuth">WooCommerceTemplatesAuth</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceTemplatesEmails.html"><abbr title="\WooCommerceTemplatesEmails">WooCommerceTemplatesEmails</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceTemplatesEmailsHTML.html"><abbr title="\WooCommerceTemplatesEmailsHTML">WooCommerceTemplatesEmailsHTML</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceTemplatesEmailsPlain.html"><abbr title="\WooCommerceTemplatesEmailsPlain">WooCommerceTemplatesEmailsPlain</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+        
+    <h1 class="phpdocumentor-sidebar__category-header">Reports</h1>
+    <h2 class="phpdocumentor-sidebar__root-package"><a href="../reports/deprecated.html">Deprecated</a></h2>
+    <h2 class="phpdocumentor-sidebar__root-package"><a href="../reports/errors.html">Errors</a></h2>
+    <h2 class="phpdocumentor-sidebar__root-package"><a href="../reports/markers.html">Markers</a></h2>
+</aside>
+
+        <div class="nine phpdocumentor-columns phpdocumentor-content">
+            <ul class="phpdocumentor-breadcrumbs">
+    <li><a href="../index.html">Home</a></li>
+                </ul>
+
+    <article class="phpdocumentor-element phpdocumentor-class">
+        <h2 class="phpdocumentor-content__title">
+            WC_Install
+                                        <div class="phpdocumentor-element__package">
+                    in
+                    <ul class="phpdocumentor-breadcrumbs">
+                                                    <li><a href="../packages/WooCommerceClasses.html">WooCommerceClasses</a></li>
+                                            </ul>
+                </div>
+                                            </h2>
+        <aside class="phpdocumentor-element-found-in">
+            <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-install.php"><a href="../files/woocommerce-includes-class-wc-install.html"><abbr title="woocommerce/includes/class-wc-install.php">class-wc-install.php</abbr></a></abbr>
+            :
+            <span class="phpdocumentor-element-found-in__line">16</span>
+        </aside>
+
+        <p class="phpdocumentor-class__summary">WC_Install Class.</p>
+        <section class="phpdocumentor-class__description"></section>
+
+        <h3>Table of Contents</h3>
+        <table class="phpdocumentor-table_of_contents">
+                                        <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/WC-Install.html#property_db_updates">$db_updates</a></th>
+                    <td class="phpdocumentor-cell">DB updates and callbacks that need to be run per version.</td>
+                    <td class="phpdocumentor-cell">array</td>
+                </tr>
+                                                                <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/WC-Install.html#method_init">init()</a></th>
+                    <td class="phpdocumentor-cell">Hook in tabs.</td>
+                    <td class="phpdocumentor-cell">mixed</td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/WC-Install.html#method_check_version">check_version()</a></th>
+                    <td class="phpdocumentor-cell">Check WooCommerce version and run the updater is required.</td>
+                    <td class="phpdocumentor-cell">mixed</td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/WC-Install.html#method_manual_database_update">manual_database_update()</a></th>
+                    <td class="phpdocumentor-cell">Performan manual database update when triggered by WooCommerce System Tools.</td>
+                    <td class="phpdocumentor-cell">mixed</td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/WC-Install.html#method_wc_admin_db_update_notice">wc_admin_db_update_notice()</a></th>
+                    <td class="phpdocumentor-cell">Add WC Admin based db update notice.</td>
+                    <td class="phpdocumentor-cell">mixed</td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/WC-Install.html#method_run_manual_database_update">run_manual_database_update()</a></th>
+                    <td class="phpdocumentor-cell">Run manual database update.</td>
+                    <td class="phpdocumentor-cell">mixed</td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/WC-Install.html#method_run_update_callback">run_update_callback()</a></th>
+                    <td class="phpdocumentor-cell">Run an update callback when triggered by ActionScheduler.</td>
+                    <td class="phpdocumentor-cell">mixed</td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/WC-Install.html#method_run_update_callback_start">run_update_callback_start()</a></th>
+                    <td class="phpdocumentor-cell">Triggered when a callback will run.</td>
+                    <td class="phpdocumentor-cell">mixed</td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/WC-Install.html#method_run_update_callback_end">run_update_callback_end()</a></th>
+                    <td class="phpdocumentor-cell">Triggered when a callback has ran.</td>
+                    <td class="phpdocumentor-cell">mixed</td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/WC-Install.html#method_install_actions">install_actions()</a></th>
+                    <td class="phpdocumentor-cell">Install actions when a update button is clicked within the admin area.</td>
+                    <td class="phpdocumentor-cell">mixed</td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/WC-Install.html#method_install">install()</a></th>
+                    <td class="phpdocumentor-cell">Install WC.</td>
+                    <td class="phpdocumentor-cell">mixed</td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/WC-Install.html#method_verify_base_tables">verify_base_tables()</a></th>
+                    <td class="phpdocumentor-cell">Check if all the base tables are present.</td>
+                    <td class="phpdocumentor-cell">array</td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/WC-Install.html#method_maybe_enable_homescreen">maybe_enable_homescreen()</a></th>
+                    <td class="phpdocumentor-cell">Check if the homepage should be enabled and set the appropriate option if thats the case.</td>
+                    <td class="phpdocumentor-cell">mixed</td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/WC-Install.html#method_remove_admin_notices">remove_admin_notices()</a></th>
+                    <td class="phpdocumentor-cell">Reset any notices added to admin.</td>
+                    <td class="phpdocumentor-cell">mixed</td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/WC-Install.html#method_setup_environment">setup_environment()</a></th>
+                    <td class="phpdocumentor-cell">Setup WC environment - post types, taxonomies, endpoints.</td>
+                    <td class="phpdocumentor-cell">mixed</td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/WC-Install.html#method_is_new_install">is_new_install()</a></th>
+                    <td class="phpdocumentor-cell">Is this a brand new WC install?</td>
+                    <td class="phpdocumentor-cell">bool</td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/WC-Install.html#method_needs_db_update">needs_db_update()</a></th>
+                    <td class="phpdocumentor-cell">Is a DB update needed?</td>
+                    <td class="phpdocumentor-cell">bool</td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/WC-Install.html#method_maybe_enable_setup_wizard">maybe_enable_setup_wizard()</a></th>
+                    <td class="phpdocumentor-cell">See if we need the wizard or not.</td>
+                    <td class="phpdocumentor-cell">mixed</td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/WC-Install.html#method_maybe_update_db_version">maybe_update_db_version()</a></th>
+                    <td class="phpdocumentor-cell">See if we need to show or run database updates during install.</td>
+                    <td class="phpdocumentor-cell">mixed</td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/WC-Install.html#method_update_wc_version">update_wc_version()</a></th>
+                    <td class="phpdocumentor-cell">Update WC version to current.</td>
+                    <td class="phpdocumentor-cell">mixed</td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/WC-Install.html#method_get_db_update_callbacks">get_db_update_callbacks()</a></th>
+                    <td class="phpdocumentor-cell">Get list of DB update callbacks.</td>
+                    <td class="phpdocumentor-cell">array</td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/WC-Install.html#method_update">update()</a></th>
+                    <td class="phpdocumentor-cell">Push all needed DB updates to the queue for processing.</td>
+                    <td class="phpdocumentor-cell">mixed</td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/WC-Install.html#method_update_db_version">update_db_version()</a></th>
+                    <td class="phpdocumentor-cell">Update DB version to current.</td>
+                    <td class="phpdocumentor-cell">mixed</td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/WC-Install.html#method_cron_schedules">cron_schedules()</a></th>
+                    <td class="phpdocumentor-cell">Add more cron schedules.</td>
+                    <td class="phpdocumentor-cell">array</td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/WC-Install.html#method_create_cron_jobs">create_cron_jobs()</a></th>
+                    <td class="phpdocumentor-cell">Create cron jobs (clear them first).</td>
+                    <td class="phpdocumentor-cell">mixed</td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/WC-Install.html#method_create_pages">create_pages()</a></th>
+                    <td class="phpdocumentor-cell">Create pages that the plugin relies on, storing page IDs in variables.</td>
+                    <td class="phpdocumentor-cell">mixed</td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/WC-Install.html#method_create_options">create_options()</a></th>
+                    <td class="phpdocumentor-cell">Default options.</td>
+                    <td class="phpdocumentor-cell">mixed</td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/WC-Install.html#method_create_terms">create_terms()</a></th>
+                    <td class="phpdocumentor-cell">Add the default terms for WC taxonomies - product types and order statuses. Modify this at your own risk.</td>
+                    <td class="phpdocumentor-cell">mixed</td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/WC-Install.html#method_create_tables">create_tables()</a></th>
+                    <td class="phpdocumentor-cell">Set up the database tables which the plugin needs to function.</td>
+                    <td class="phpdocumentor-cell">mixed</td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/WC-Install.html#method_get_schema">get_schema()</a></th>
+                    <td class="phpdocumentor-cell">Get Table schema.</td>
+                    <td class="phpdocumentor-cell">string</td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/WC-Install.html#method_get_tables">get_tables()</a></th>
+                    <td class="phpdocumentor-cell">Return a list of WooCommerce tables. Used to make sure all WC tables are dropped when uninstalling the plugin
+in a single site or multi site environment.</td>
+                    <td class="phpdocumentor-cell">array</td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/WC-Install.html#method_drop_tables">drop_tables()</a></th>
+                    <td class="phpdocumentor-cell">Drop WooCommerce tables.</td>
+                    <td class="phpdocumentor-cell">void</td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/WC-Install.html#method_wpmu_drop_tables">wpmu_drop_tables()</a></th>
+                    <td class="phpdocumentor-cell">Uninstall tables when MU blog is deleted.</td>
+                    <td class="phpdocumentor-cell">string[]</td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/WC-Install.html#method_create_roles">create_roles()</a></th>
+                    <td class="phpdocumentor-cell">Create roles and capabilities.</td>
+                    <td class="phpdocumentor-cell">mixed</td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/WC-Install.html#method_get_core_capabilities">get_core_capabilities()</a></th>
+                    <td class="phpdocumentor-cell">Get capabilities for WooCommerce - these are assigned to admin/shop manager during installation or reset.</td>
+                    <td class="phpdocumentor-cell">array</td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/WC-Install.html#method_remove_roles">remove_roles()</a></th>
+                    <td class="phpdocumentor-cell">Remove WooCommerce roles.</td>
+                    <td class="phpdocumentor-cell">mixed</td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/WC-Install.html#method_create_files">create_files()</a></th>
+                    <td class="phpdocumentor-cell">Create files/directories.</td>
+                    <td class="phpdocumentor-cell">mixed</td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/WC-Install.html#method_create_placeholder_image">create_placeholder_image()</a></th>
+                    <td class="phpdocumentor-cell">Create a placeholder image in the media library.</td>
+                    <td class="phpdocumentor-cell">mixed</td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/WC-Install.html#method_plugin_action_links">plugin_action_links()</a></th>
+                    <td class="phpdocumentor-cell">Show action links on the plugin screen.</td>
+                    <td class="phpdocumentor-cell">array</td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/WC-Install.html#method_plugin_row_meta">plugin_row_meta()</a></th>
+                    <td class="phpdocumentor-cell">Show row meta on the plugin screen.</td>
+                    <td class="phpdocumentor-cell">array</td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/WC-Install.html#method_associate_plugin_file">associate_plugin_file()</a></th>
+                    <td class="phpdocumentor-cell">Get slug from path and associate it with the path.</td>
+                    <td class="phpdocumentor-cell">mixed</td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/WC-Install.html#method_background_installer">background_installer()</a></th>
+                    <td class="phpdocumentor-cell">Install a plugin from .org in the background via a cron job (used by
+installer - opt in).</td>
+                    <td class="phpdocumentor-cell">mixed</td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/WC-Install.html#method_remove_mailchimps_redirect">remove_mailchimps_redirect()</a></th>
+                    <td class="phpdocumentor-cell">Removes redirect added during MailChimp plugin&#039;s activation.</td>
+                    <td class="phpdocumentor-cell">mixed</td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/WC-Install.html#method_theme_background_installer">theme_background_installer()</a></th>
+                    <td class="phpdocumentor-cell">Install a theme from .org in the background via a cron job (used by installer - opt in).</td>
+                    <td class="phpdocumentor-cell">mixed</td>
+                </tr>
+                                            </table>
+
+        
+                    <section>
+                <h3 class="phpdocumentor-properties__header">Properties</h3>
+                                    <a id="property_db_updates"></a>
+<article
+        class="
+            phpdocumentor-property
+            phpdocumentor-property--private
+            phpdocumentor-property--static                    "
+>
+    <h4 class="phpdocumentor-property__name">$db_updates</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-install.php"><a href="../files/woocommerce-includes-class-wc-install.html"><abbr title="woocommerce/includes/class-wc-install.php">class-wc-install.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">23</span>
+    </aside>
+            <p class="phpdocumentor-summary">DB updates and callbacks that need to be run per version.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">private</span>
+        <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__type">array</span>
+        <span class="phpdocumentor-signature__name">$db_updates</span>
+         = <span class="phpdocumentor-signature__default-value">array(&#039;2.0.0&#039; =&gt; array(&#039;wc_update_200_file_paths&#039;, &#039;wc_update_200_permalinks&#039;, &#039;wc_update_200_subcat_display&#039;, &#039;wc_update_200_taxrates&#039;, &#039;wc_update_200_line_items&#039;, &#039;wc_update_200_images&#039;, &#039;wc_update_200_db_version&#039;), &#039;2.0.9&#039; =&gt; array(&#039;wc_update_209_brazillian_state&#039;, &#039;wc_update_209_db_version&#039;), &#039;2.1.0&#039; =&gt; array(&#039;wc_update_210_remove_pages&#039;, &#039;wc_update_210_file_paths&#039;, &#039;wc_update_210_db_version&#039;), &#039;2.2.0&#039; =&gt; array(&#039;wc_update_220_shipping&#039;, &#039;wc_update_220_order_status&#039;, &#039;wc_update_220_variations&#039;, &#039;wc_update_220_attributes&#039;, &#039;wc_update_220_db_version&#039;), &#039;2.3.0&#039; =&gt; array(&#039;wc_update_230_options&#039;, &#039;wc_update_230_db_version&#039;), &#039;2.4.0&#039; =&gt; array(&#039;wc_update_240_options&#039;, &#039;wc_update_240_shipping_methods&#039;, &#039;wc_update_240_api_keys&#039;, &#039;wc_update_240_refunds&#039;, &#039;wc_update_240_db_version&#039;), &#039;2.4.1&#039; =&gt; array(&#039;wc_update_241_variations&#039;, &#039;wc_update_241_db_version&#039;), &#039;2.5.0&#039; =&gt; array(&#039;wc_update_250_currency&#039;, &#039;wc_update_250_db_version&#039;), &#039;2.6.0&#039; =&gt; array(&#039;wc_update_260_options&#039;, &#039;wc_update_260_termmeta&#039;, &#039;wc_update_260_zones&#039;, &#039;wc_update_260_zone_methods&#039;, &#039;wc_update_260_refunds&#039;, &#039;wc_update_260_db_version&#039;), &#039;3.0.0&#039; =&gt; array(&#039;wc_update_300_grouped_products&#039;, &#039;wc_update_300_settings&#039;, &#039;wc_update_300_product_visibility&#039;, &#039;wc_update_300_db_version&#039;), &#039;3.1.0&#039; =&gt; array(&#039;wc_update_310_downloadable_products&#039;, &#039;wc_update_310_old_comments&#039;, &#039;wc_update_310_db_version&#039;), &#039;3.1.2&#039; =&gt; array(&#039;wc_update_312_shop_manager_capabilities&#039;, &#039;wc_update_312_db_version&#039;), &#039;3.2.0&#039; =&gt; array(&#039;wc_update_320_mexican_states&#039;, &#039;wc_update_320_db_version&#039;), &#039;3.3.0&#039; =&gt; array(&#039;wc_update_330_image_options&#039;, &#039;wc_update_330_webhooks&#039;, &#039;wc_update_330_product_stock_status&#039;, &#039;wc_update_330_set_default_product_cat&#039;, &#039;wc_update_330_clear_transients&#039;, &#039;wc_update_330_set_paypal_sandbox_credentials&#039;, &#039;wc_update_330_db_version&#039;), &#039;3.4.0&#039; =&gt; array(&#039;wc_update_340_states&#039;, &#039;wc_update_340_state&#039;, &#039;wc_update_340_last_active&#039;, &#039;wc_update_340_db_version&#039;), &#039;3.4.3&#039; =&gt; array(&#039;wc_update_343_cleanup_foreign_keys&#039;, &#039;wc_update_343_db_version&#039;), &#039;3.4.4&#039; =&gt; array(&#039;wc_update_344_recreate_roles&#039;, &#039;wc_update_344_db_version&#039;), &#039;3.5.0&#039; =&gt; array(&#039;wc_update_350_reviews_comment_type&#039;, &#039;wc_update_350_db_version&#039;), &#039;3.5.2&#039; =&gt; array(&#039;wc_update_352_drop_download_log_fk&#039;), &#039;3.5.4&#039; =&gt; array(&#039;wc_update_354_modify_shop_manager_caps&#039;, &#039;wc_update_354_db_version&#039;), &#039;3.6.0&#039; =&gt; array(&#039;wc_update_360_product_lookup_tables&#039;, &#039;wc_update_360_term_meta&#039;, &#039;wc_update_360_downloadable_product_permissions_index&#039;, &#039;wc_update_360_db_version&#039;), &#039;3.7.0&#039; =&gt; array(&#039;wc_update_370_tax_rate_classes&#039;, &#039;wc_update_370_mro_std_currency&#039;, &#039;wc_update_370_db_version&#039;), &#039;3.9.0&#039; =&gt; array(&#039;wc_update_390_move_maxmind_database&#039;, &#039;wc_update_390_change_geolocation_database_update_cron&#039;, &#039;wc_update_390_db_version&#039;), &#039;4.0.0&#039; =&gt; array(&#039;wc_update_product_lookup_tables&#039;, &#039;wc_update_400_increase_size_of_column&#039;, &#039;wc_update_400_reset_action_scheduler_migration_status&#039;, &#039;wc_update_400_db_version&#039;))</span>    </code>
+    </article>
+                                                            </section>
+        
+                    <section>
+                <h3 class="phpdocumentor-methods__header">Methods</h3>
+                                    <a id="method_init"></a>
+<article
+        class="
+            phpdocumentor-method
+            phpdocumentor-method--public
+                                    phpdocumentor-element--static                    "
+>
+    <h4 class="phpdocumentor-method__name">init()</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-install.php"><a href="../files/woocommerce-includes-class-wc-install.html"><abbr title="woocommerce/includes/class-wc-install.php">class-wc-install.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">156</span>
+    </aside>
+        <p class="phpdocumentor-summary">Hook in tabs.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">public</span>
+                        <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">init</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">mixed</span>
+    </code>
+
+    
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">mixed</span>
+            
+</article>
+                                    <a id="method_check_version"></a>
+<article
+        class="
+            phpdocumentor-method
+            phpdocumentor-method--public
+                                    phpdocumentor-element--static                    "
+>
+    <h4 class="phpdocumentor-method__name">check_version()</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-install.php"><a href="../files/woocommerce-includes-class-wc-install.html"><abbr title="woocommerce/includes/class-wc-install.php">class-wc-install.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">173</span>
+    </aside>
+        <p class="phpdocumentor-summary">Check WooCommerce version and run the updater is required.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">public</span>
+                        <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">check_version</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">mixed</span>
+    </code>
+
+        <section class="phpdocumentor-description"><p>This check is done on all requests and runs if the versions do not match.</p></section>
+    
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">mixed</span>
+            
+</article>
+                                    <a id="method_manual_database_update"></a>
+<article
+        class="
+            phpdocumentor-method
+            phpdocumentor-method--public
+                                    phpdocumentor-element--static                    "
+>
+    <h4 class="phpdocumentor-method__name">manual_database_update()</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-install.php"><a href="../files/woocommerce-includes-class-wc-install.html"><abbr title="woocommerce/includes/class-wc-install.php">class-wc-install.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">185</span>
+    </aside>
+        <p class="phpdocumentor-summary">Performan manual database update when triggered by WooCommerce System Tools.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">public</span>
+                        <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">manual_database_update</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">mixed</span>
+    </code>
+
+    
+    
+                <h5 class="phpdocumentor-tag-list__heading">Tags</h5>
+        <dl class="phpdocumentor-tag-list">
+                                                <dt class="phpdocumentor-tag-list__entry">
+                        <span class="phpdocumentor-tag__name">since</span>
+                    </dt>
+                    <dd class="phpdocumentor-tag-list__definition"><section class="phpdocumentor-description"></section></dd>
+                                    </dl>
+    
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">mixed</span>
+            
+</article>
+                                    <a id="method_wc_admin_db_update_notice"></a>
+<article
+        class="
+            phpdocumentor-method
+            phpdocumentor-method--public
+                                    phpdocumentor-element--static                    "
+>
+    <h4 class="phpdocumentor-method__name">wc_admin_db_update_notice()</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-install.php"><a href="../files/woocommerce-includes-class-wc-install.html"><abbr title="woocommerce/includes/class-wc-install.php">class-wc-install.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">196</span>
+    </aside>
+        <p class="phpdocumentor-summary">Add WC Admin based db update notice.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">public</span>
+                        <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">wc_admin_db_update_notice</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">mixed</span>
+    </code>
+
+    
+    
+                <h5 class="phpdocumentor-tag-list__heading">Tags</h5>
+        <dl class="phpdocumentor-tag-list">
+                                                <dt class="phpdocumentor-tag-list__entry">
+                        <span class="phpdocumentor-tag__name">since</span>
+                    </dt>
+                    <dd class="phpdocumentor-tag-list__definition"><section class="phpdocumentor-description"></section></dd>
+                                    </dl>
+    
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">mixed</span>
+            
+</article>
+                                    <a id="method_run_manual_database_update"></a>
+<article
+        class="
+            phpdocumentor-method
+            phpdocumentor-method--public
+                                    phpdocumentor-element--static                    "
+>
+    <h4 class="phpdocumentor-method__name">run_manual_database_update()</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-install.php"><a href="../files/woocommerce-includes-class-wc-install.html"><abbr title="woocommerce/includes/class-wc-install.php">class-wc-install.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">208</span>
+    </aside>
+        <p class="phpdocumentor-summary">Run manual database update.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">public</span>
+                        <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">run_manual_database_update</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">mixed</span>
+    </code>
+
+    
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">mixed</span>
+            
+</article>
+                                    <a id="method_run_update_callback"></a>
+<article
+        class="
+            phpdocumentor-method
+            phpdocumentor-method--public
+                                    phpdocumentor-element--static                    "
+>
+    <h4 class="phpdocumentor-method__name">run_update_callback()</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-install.php"><a href="../files/woocommerce-includes-class-wc-install.html"><abbr title="woocommerce/includes/class-wc-install.php">class-wc-install.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">218</span>
+    </aside>
+        <p class="phpdocumentor-summary">Run an update callback when triggered by ActionScheduler.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">public</span>
+                        <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">run_update_callback</span>(
+                    <span class="phpdocumentor-signature__argument">
+                            <span class="phpdocumentor-signature__argument__name">$callback</span> :
+                <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </span>
+                )
+        : <span class="phpdocumentor-signature__response_type">mixed</span>
+    </code>
+
+    
+            <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+        <dl class="phpdocumentor-argument-list">
+                            <dt class="phpdocumentor-argument-list__entry">
+                    <span class="phpdocumentor-signature__argument__name">$callback</span>
+                    : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                                    </dt>
+                <dd class="phpdocumentor-argument-list__definition"><section class="phpdocumentor-description"><p>Callback name.</p></section></dd>
+                    </dl>
+    
+                <h5 class="phpdocumentor-tag-list__heading">Tags</h5>
+        <dl class="phpdocumentor-tag-list">
+                                                <dt class="phpdocumentor-tag-list__entry">
+                        <span class="phpdocumentor-tag__name">since</span>
+                    </dt>
+                    <dd class="phpdocumentor-tag-list__definition"><section class="phpdocumentor-description"></section></dd>
+                                    </dl>
+    
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">mixed</span>
+            
+</article>
+                                    <a id="method_run_update_callback_start"></a>
+<article
+        class="
+            phpdocumentor-method
+            phpdocumentor-method--protected
+                                    phpdocumentor-element--static                    "
+>
+    <h4 class="phpdocumentor-method__name">run_update_callback_start()</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-install.php"><a href="../files/woocommerce-includes-class-wc-install.html"><abbr title="woocommerce/includes/class-wc-install.php">class-wc-install.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">234</span>
+    </aside>
+        <p class="phpdocumentor-summary">Triggered when a callback will run.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">protected</span>
+                        <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">run_update_callback_start</span>(
+                    <span class="phpdocumentor-signature__argument">
+                            <span class="phpdocumentor-signature__argument__name">$callback</span> :
+                <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </span>
+                )
+        : <span class="phpdocumentor-signature__response_type">mixed</span>
+    </code>
+
+    
+            <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+        <dl class="phpdocumentor-argument-list">
+                            <dt class="phpdocumentor-argument-list__entry">
+                    <span class="phpdocumentor-signature__argument__name">$callback</span>
+                    : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                                    </dt>
+                <dd class="phpdocumentor-argument-list__definition"><section class="phpdocumentor-description"><p>Callback name.</p></section></dd>
+                    </dl>
+    
+                <h5 class="phpdocumentor-tag-list__heading">Tags</h5>
+        <dl class="phpdocumentor-tag-list">
+                                                <dt class="phpdocumentor-tag-list__entry">
+                        <span class="phpdocumentor-tag__name">since</span>
+                    </dt>
+                    <dd class="phpdocumentor-tag-list__definition"><section class="phpdocumentor-description"></section></dd>
+                                    </dl>
+    
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">mixed</span>
+            
+</article>
+                                    <a id="method_run_update_callback_end"></a>
+<article
+        class="
+            phpdocumentor-method
+            phpdocumentor-method--protected
+                                    phpdocumentor-element--static                    "
+>
+    <h4 class="phpdocumentor-method__name">run_update_callback_end()</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-install.php"><a href="../files/woocommerce-includes-class-wc-install.html"><abbr title="woocommerce/includes/class-wc-install.php">class-wc-install.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">245</span>
+    </aside>
+        <p class="phpdocumentor-summary">Triggered when a callback has ran.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">protected</span>
+                        <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">run_update_callback_end</span>(
+                    <span class="phpdocumentor-signature__argument">
+                            <span class="phpdocumentor-signature__argument__name">$callback</span> :
+                <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </span>
+                    <span class="phpdocumentor-signature__argument">
+            ,                 <span class="phpdocumentor-signature__argument__name">$result</span> :
+                <span class="phpdocumentor-signature__argument__return-type">bool</span>
+                            </span>
+                )
+        : <span class="phpdocumentor-signature__response_type">mixed</span>
+    </code>
+
+    
+            <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+        <dl class="phpdocumentor-argument-list">
+                            <dt class="phpdocumentor-argument-list__entry">
+                    <span class="phpdocumentor-signature__argument__name">$callback</span>
+                    : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                                    </dt>
+                <dd class="phpdocumentor-argument-list__definition"><section class="phpdocumentor-description"><p>Callback name.</p></section></dd>
+                            <dt class="phpdocumentor-argument-list__entry">
+                    <span class="phpdocumentor-signature__argument__name">$result</span>
+                    : <span class="phpdocumentor-signature__argument__return-type">bool</span>
+                                    </dt>
+                <dd class="phpdocumentor-argument-list__definition"><section class="phpdocumentor-description"><p>Return value from callback. Non-false need to run again.</p></section></dd>
+                    </dl>
+    
+                <h5 class="phpdocumentor-tag-list__heading">Tags</h5>
+        <dl class="phpdocumentor-tag-list">
+                                                <dt class="phpdocumentor-tag-list__entry">
+                        <span class="phpdocumentor-tag__name">since</span>
+                    </dt>
+                    <dd class="phpdocumentor-tag-list__definition"><section class="phpdocumentor-description"></section></dd>
+                                    </dl>
+    
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">mixed</span>
+            
+</article>
+                                    <a id="method_install_actions"></a>
+<article
+        class="
+            phpdocumentor-method
+            phpdocumentor-method--public
+                                    phpdocumentor-element--static                    "
+>
+    <h4 class="phpdocumentor-method__name">install_actions()</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-install.php"><a href="../files/woocommerce-includes-class-wc-install.html"><abbr title="woocommerce/includes/class-wc-install.php">class-wc-install.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">262</span>
+    </aside>
+        <p class="phpdocumentor-summary">Install actions when a update button is clicked within the admin area.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">public</span>
+                        <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">install_actions</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">mixed</span>
+    </code>
+
+        <section class="phpdocumentor-description"><p>This function is hooked into admin_init to affect admin only.</p></section>
+    
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">mixed</span>
+            
+</article>
+                                    <a id="method_install"></a>
+<article
+        class="
+            phpdocumentor-method
+            phpdocumentor-method--public
+                                    phpdocumentor-element--static                    "
+>
+    <h4 class="phpdocumentor-method__name">install()</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-install.php"><a href="../files/woocommerce-includes-class-wc-install.html"><abbr title="woocommerce/includes/class-wc-install.php">class-wc-install.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">273</span>
+    </aside>
+        <p class="phpdocumentor-summary">Install WC.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">public</span>
+                        <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">install</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">mixed</span>
+    </code>
+
+    
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">mixed</span>
+            
+</article>
+                                    <a id="method_verify_base_tables"></a>
+<article
+        class="
+            phpdocumentor-method
+            phpdocumentor-method--public
+                                    phpdocumentor-element--static                    "
+>
+    <h4 class="phpdocumentor-method__name">verify_base_tables()</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-install.php"><a href="../files/woocommerce-includes-class-wc-install.html"><abbr title="woocommerce/includes/class-wc-install.php">class-wc-install.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">316</span>
+    </aside>
+        <p class="phpdocumentor-summary">Check if all the base tables are present.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">public</span>
+                        <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">verify_base_tables</span>(
+                    <span class="phpdocumentor-signature__argument">
+            [                <span class="phpdocumentor-signature__argument__name">$modify_notice</span> :
+                <span class="phpdocumentor-signature__argument__return-type">bool</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">true</span> ]            </span>
+                    <span class="phpdocumentor-signature__argument">
+            [,                 <span class="phpdocumentor-signature__argument__name">$execute</span> :
+                <span class="phpdocumentor-signature__argument__return-type">bool</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">false</span> ]            </span>
+                )
+        : <span class="phpdocumentor-signature__response_type">array</span>
+    </code>
+
+    
+            <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+        <dl class="phpdocumentor-argument-list">
+                            <dt class="phpdocumentor-argument-list__entry">
+                    <span class="phpdocumentor-signature__argument__name">$modify_notice</span>
+                    : <span class="phpdocumentor-signature__argument__return-type">bool</span>
+                     = <span class="phpdocumentor-signature__argument__default-value">true</span>                </dt>
+                <dd class="phpdocumentor-argument-list__definition"><section class="phpdocumentor-description"><p>Whether to modify notice based on if all tables are present.</p></section></dd>
+                            <dt class="phpdocumentor-argument-list__entry">
+                    <span class="phpdocumentor-signature__argument__name">$execute</span>
+                    : <span class="phpdocumentor-signature__argument__return-type">bool</span>
+                     = <span class="phpdocumentor-signature__argument__default-value">false</span>                </dt>
+                <dd class="phpdocumentor-argument-list__definition"><section class="phpdocumentor-description"><p>Whether to execute get_schema queries as well.</p></section></dd>
+                    </dl>
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">array</span>
+                    &mdash; <span class="phpdocumentor-description"><p>List of querues.</p></span>
+            
+</article>
+                                    <a id="method_maybe_enable_homescreen"></a>
+<article
+        class="
+            phpdocumentor-method
+            phpdocumentor-method--private
+                                    phpdocumentor-element--static                    "
+>
+    <h4 class="phpdocumentor-method__name">maybe_enable_homescreen()</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-install.php"><a href="../files/woocommerce-includes-class-wc-install.html"><abbr title="woocommerce/includes/class-wc-install.php">class-wc-install.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">350</span>
+    </aside>
+        <p class="phpdocumentor-summary">Check if the homepage should be enabled and set the appropriate option if thats the case.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">private</span>
+                        <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">maybe_enable_homescreen</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">mixed</span>
+    </code>
+
+    
+    
+                <h5 class="phpdocumentor-tag-list__heading">Tags</h5>
+        <dl class="phpdocumentor-tag-list">
+                                                <dt class="phpdocumentor-tag-list__entry">
+                        <span class="phpdocumentor-tag__name">since</span>
+                    </dt>
+                    <dd class="phpdocumentor-tag-list__definition"><section class="phpdocumentor-description"></section></dd>
+                                    </dl>
+    
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">mixed</span>
+            
+</article>
+                                    <a id="method_remove_admin_notices"></a>
+<article
+        class="
+            phpdocumentor-method
+            phpdocumentor-method--private
+                                    phpdocumentor-element--static                    "
+>
+    <h4 class="phpdocumentor-method__name">remove_admin_notices()</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-install.php"><a href="../files/woocommerce-includes-class-wc-install.html"><abbr title="woocommerce/includes/class-wc-install.php">class-wc-install.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">361</span>
+    </aside>
+        <p class="phpdocumentor-summary">Reset any notices added to admin.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">private</span>
+                        <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">remove_admin_notices</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">mixed</span>
+    </code>
+
+    
+    
+                <h5 class="phpdocumentor-tag-list__heading">Tags</h5>
+        <dl class="phpdocumentor-tag-list">
+                                                <dt class="phpdocumentor-tag-list__entry">
+                        <span class="phpdocumentor-tag__name">since</span>
+                    </dt>
+                    <dd class="phpdocumentor-tag-list__definition"><section class="phpdocumentor-description"></section></dd>
+                                    </dl>
+    
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">mixed</span>
+            
+</article>
+                                    <a id="method_setup_environment"></a>
+<article
+        class="
+            phpdocumentor-method
+            phpdocumentor-method--private
+                                    phpdocumentor-element--static                    "
+>
+    <h4 class="phpdocumentor-method__name">setup_environment()</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-install.php"><a href="../files/woocommerce-includes-class-wc-install.html"><abbr title="woocommerce/includes/class-wc-install.php">class-wc-install.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">371</span>
+    </aside>
+        <p class="phpdocumentor-summary">Setup WC environment - post types, taxonomies, endpoints.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">private</span>
+                        <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">setup_environment</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">mixed</span>
+    </code>
+
+    
+    
+                <h5 class="phpdocumentor-tag-list__heading">Tags</h5>
+        <dl class="phpdocumentor-tag-list">
+                                                <dt class="phpdocumentor-tag-list__entry">
+                        <span class="phpdocumentor-tag__name">since</span>
+                    </dt>
+                    <dd class="phpdocumentor-tag-list__definition"><section class="phpdocumentor-description"></section></dd>
+                                    </dl>
+    
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">mixed</span>
+            
+</article>
+                                    <a id="method_is_new_install"></a>
+<article
+        class="
+            phpdocumentor-method
+            phpdocumentor-method--public
+                                    phpdocumentor-element--static                    "
+>
+    <h4 class="phpdocumentor-method__name">is_new_install()</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-install.php"><a href="../files/woocommerce-includes-class-wc-install.html"><abbr title="woocommerce/includes/class-wc-install.php">class-wc-install.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">388</span>
+    </aside>
+        <p class="phpdocumentor-summary">Is this a brand new WC install?</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">public</span>
+                        <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">is_new_install</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">bool</span>
+    </code>
+
+        <section class="phpdocumentor-description"><p>A brand new install has no version yet. Also treat empty installs as 'new'.</p></section>
+    
+    
+                <h5 class="phpdocumentor-tag-list__heading">Tags</h5>
+        <dl class="phpdocumentor-tag-list">
+                                                <dt class="phpdocumentor-tag-list__entry">
+                        <span class="phpdocumentor-tag__name">since</span>
+                    </dt>
+                    <dd class="phpdocumentor-tag-list__definition"><section class="phpdocumentor-description"></section></dd>
+                                    </dl>
+    
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">bool</span>
+            
+</article>
+                                    <a id="method_needs_db_update"></a>
+<article
+        class="
+            phpdocumentor-method
+            phpdocumentor-method--public
+                                    phpdocumentor-element--static                    "
+>
+    <h4 class="phpdocumentor-method__name">needs_db_update()</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-install.php"><a href="../files/woocommerce-includes-class-wc-install.html"><abbr title="woocommerce/includes/class-wc-install.php">class-wc-install.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">400</span>
+    </aside>
+        <p class="phpdocumentor-summary">Is a DB update needed?</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">public</span>
+                        <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">needs_db_update</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">bool</span>
+    </code>
+
+    
+    
+                <h5 class="phpdocumentor-tag-list__heading">Tags</h5>
+        <dl class="phpdocumentor-tag-list">
+                                                <dt class="phpdocumentor-tag-list__entry">
+                        <span class="phpdocumentor-tag__name">since</span>
+                    </dt>
+                    <dd class="phpdocumentor-tag-list__definition"><section class="phpdocumentor-description"></section></dd>
+                                    </dl>
+    
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">bool</span>
+            
+</article>
+                                    <a id="method_maybe_enable_setup_wizard"></a>
+<article
+        class="
+            phpdocumentor-method
+            phpdocumentor-method--private
+                                    phpdocumentor-element--static                    "
+>
+    <h4 class="phpdocumentor-method__name">maybe_enable_setup_wizard()</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-install.php"><a href="../files/woocommerce-includes-class-wc-install.html"><abbr title="woocommerce/includes/class-wc-install.php">class-wc-install.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">414</span>
+    </aside>
+        <p class="phpdocumentor-summary">See if we need the wizard or not.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">private</span>
+                        <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">maybe_enable_setup_wizard</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">mixed</span>
+    </code>
+
+    
+    
+                <h5 class="phpdocumentor-tag-list__heading">Tags</h5>
+        <dl class="phpdocumentor-tag-list">
+                                                <dt class="phpdocumentor-tag-list__entry">
+                        <span class="phpdocumentor-tag__name">since</span>
+                    </dt>
+                    <dd class="phpdocumentor-tag-list__definition"><section class="phpdocumentor-description"></section></dd>
+                                    </dl>
+    
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">mixed</span>
+            
+</article>
+                                    <a id="method_maybe_update_db_version"></a>
+<article
+        class="
+            phpdocumentor-method
+            phpdocumentor-method--private
+                                    phpdocumentor-element--static                    "
+>
+    <h4 class="phpdocumentor-method__name">maybe_update_db_version()</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-install.php"><a href="../files/woocommerce-includes-class-wc-install.html"><abbr title="woocommerce/includes/class-wc-install.php">class-wc-install.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">426</span>
+    </aside>
+        <p class="phpdocumentor-summary">See if we need to show or run database updates during install.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">private</span>
+                        <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">maybe_update_db_version</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">mixed</span>
+    </code>
+
+    
+    
+                <h5 class="phpdocumentor-tag-list__heading">Tags</h5>
+        <dl class="phpdocumentor-tag-list">
+                                                <dt class="phpdocumentor-tag-list__entry">
+                        <span class="phpdocumentor-tag__name">since</span>
+                    </dt>
+                    <dd class="phpdocumentor-tag-list__definition"><section class="phpdocumentor-description"></section></dd>
+                                    </dl>
+    
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">mixed</span>
+            
+</article>
+                                    <a id="method_update_wc_version"></a>
+<article
+        class="
+            phpdocumentor-method
+            phpdocumentor-method--private
+                                    phpdocumentor-element--static                    "
+>
+    <h4 class="phpdocumentor-method__name">update_wc_version()</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-install.php"><a href="../files/woocommerce-includes-class-wc-install.html"><abbr title="woocommerce/includes/class-wc-install.php">class-wc-install.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">441</span>
+    </aside>
+        <p class="phpdocumentor-summary">Update WC version to current.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">private</span>
+                        <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">update_wc_version</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">mixed</span>
+    </code>
+
+    
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">mixed</span>
+            
+</article>
+                                    <a id="method_get_db_update_callbacks"></a>
+<article
+        class="
+            phpdocumentor-method
+            phpdocumentor-method--public
+                                    phpdocumentor-element--static                    "
+>
+    <h4 class="phpdocumentor-method__name">get_db_update_callbacks()</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-install.php"><a href="../files/woocommerce-includes-class-wc-install.html"><abbr title="woocommerce/includes/class-wc-install.php">class-wc-install.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">452</span>
+    </aside>
+        <p class="phpdocumentor-summary">Get list of DB update callbacks.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">public</span>
+                        <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">get_db_update_callbacks</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">array</span>
+    </code>
+
+    
+    
+                <h5 class="phpdocumentor-tag-list__heading">Tags</h5>
+        <dl class="phpdocumentor-tag-list">
+                                                <dt class="phpdocumentor-tag-list__entry">
+                        <span class="phpdocumentor-tag__name">since</span>
+                    </dt>
+                    <dd class="phpdocumentor-tag-list__definition"><section class="phpdocumentor-description"></section></dd>
+                                    </dl>
+    
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">array</span>
+            
+</article>
+                                    <a id="method_update"></a>
+<article
+        class="
+            phpdocumentor-method
+            phpdocumentor-method--private
+                                    phpdocumentor-element--static                    "
+>
+    <h4 class="phpdocumentor-method__name">update()</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-install.php"><a href="../files/woocommerce-includes-class-wc-install.html"><abbr title="woocommerce/includes/class-wc-install.php">class-wc-install.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">459</span>
+    </aside>
+        <p class="phpdocumentor-summary">Push all needed DB updates to the queue for processing.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">private</span>
+                        <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">update</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">mixed</span>
+    </code>
+
+    
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">mixed</span>
+            
+</article>
+                                    <a id="method_update_db_version"></a>
+<article
+        class="
+            phpdocumentor-method
+            phpdocumentor-method--public
+                                    phpdocumentor-element--static                    "
+>
+    <h4 class="phpdocumentor-method__name">update_db_version()</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-install.php"><a href="../files/woocommerce-includes-class-wc-install.html"><abbr title="woocommerce/includes/class-wc-install.php">class-wc-install.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">485</span>
+    </aside>
+        <p class="phpdocumentor-summary">Update DB version to current.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">public</span>
+                        <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">update_db_version</span>(
+                    <span class="phpdocumentor-signature__argument">
+            [                <span class="phpdocumentor-signature__argument__name">$version</span> :
+                <span class="phpdocumentor-signature__argument__return-type">string|null</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">null</span> ]            </span>
+                )
+        : <span class="phpdocumentor-signature__response_type">mixed</span>
+    </code>
+
+    
+            <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+        <dl class="phpdocumentor-argument-list">
+                            <dt class="phpdocumentor-argument-list__entry">
+                    <span class="phpdocumentor-signature__argument__name">$version</span>
+                    : <span class="phpdocumentor-signature__argument__return-type">string|null</span>
+                     = <span class="phpdocumentor-signature__argument__default-value">null</span>                </dt>
+                <dd class="phpdocumentor-argument-list__definition"><section class="phpdocumentor-description"><p>New WooCommerce DB version or null.</p></section></dd>
+                    </dl>
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">mixed</span>
+            
+</article>
+                                    <a id="method_cron_schedules"></a>
+<article
+        class="
+            phpdocumentor-method
+            phpdocumentor-method--public
+                                    phpdocumentor-element--static                    "
+>
+    <h4 class="phpdocumentor-method__name">cron_schedules()</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-install.php"><a href="../files/woocommerce-includes-class-wc-install.html"><abbr title="woocommerce/includes/class-wc-install.php">class-wc-install.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">497</span>
+    </aside>
+        <p class="phpdocumentor-summary">Add more cron schedules.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">public</span>
+                        <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">cron_schedules</span>(
+                    <span class="phpdocumentor-signature__argument">
+                            <span class="phpdocumentor-signature__argument__name">$schedules</span> :
+                <span class="phpdocumentor-signature__argument__return-type">array</span>
+                            </span>
+                )
+        : <span class="phpdocumentor-signature__response_type">array</span>
+    </code>
+
+    
+            <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+        <dl class="phpdocumentor-argument-list">
+                            <dt class="phpdocumentor-argument-list__entry">
+                    <span class="phpdocumentor-signature__argument__name">$schedules</span>
+                    : <span class="phpdocumentor-signature__argument__return-type">array</span>
+                                    </dt>
+                <dd class="phpdocumentor-argument-list__definition"><section class="phpdocumentor-description"><p>List of WP scheduled cron jobs.</p></section></dd>
+                    </dl>
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">array</span>
+            
+</article>
+                                    <a id="method_create_cron_jobs"></a>
+<article
+        class="
+            phpdocumentor-method
+            phpdocumentor-method--private
+                                    phpdocumentor-element--static                    "
+>
+    <h4 class="phpdocumentor-method__name">create_cron_jobs()</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-install.php"><a href="../files/woocommerce-includes-class-wc-install.html"><abbr title="woocommerce/includes/class-wc-install.php">class-wc-install.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">512</span>
+    </aside>
+        <p class="phpdocumentor-summary">Create cron jobs (clear them first).</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">private</span>
+                        <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">create_cron_jobs</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">mixed</span>
+    </code>
+
+    
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">mixed</span>
+            
+</article>
+                                    <a id="method_create_pages"></a>
+<article
+        class="
+            phpdocumentor-method
+            phpdocumentor-method--public
+                                    phpdocumentor-element--static                    "
+>
+    <h4 class="phpdocumentor-method__name">create_pages()</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-install.php"><a href="../files/woocommerce-includes-class-wc-install.html"><abbr title="woocommerce/includes/class-wc-install.php">class-wc-install.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">545</span>
+    </aside>
+        <p class="phpdocumentor-summary">Create pages that the plugin relies on, storing page IDs in variables.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">public</span>
+                        <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">create_pages</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">mixed</span>
+    </code>
+
+    
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">mixed</span>
+            
+</article>
+                                    <a id="method_create_options"></a>
+<article
+        class="
+            phpdocumentor-method
+            phpdocumentor-method--private
+                                    phpdocumentor-element--static                    "
+>
+    <h4 class="phpdocumentor-method__name">create_options()</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-install.php"><a href="../files/woocommerce-includes-class-wc-install.html"><abbr title="woocommerce/includes/class-wc-install.php">class-wc-install.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">584</span>
+    </aside>
+        <p class="phpdocumentor-summary">Default options.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">private</span>
+                        <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">create_options</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">mixed</span>
+    </code>
+
+        <section class="phpdocumentor-description"><p>Sets up the default options used on the settings page.</p></section>
+    
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">mixed</span>
+            
+</article>
+                                    <a id="method_create_terms"></a>
+<article
+        class="
+            phpdocumentor-method
+            phpdocumentor-method--public
+                                    phpdocumentor-element--static                    "
+>
+    <h4 class="phpdocumentor-method__name">create_terms()</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-install.php"><a href="../files/woocommerce-includes-class-wc-install.html"><abbr title="woocommerce/includes/class-wc-install.php">class-wc-install.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">620</span>
+    </aside>
+        <p class="phpdocumentor-summary">Add the default terms for WC taxonomies - product types and order statuses. Modify this at your own risk.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">public</span>
+                        <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">create_terms</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">mixed</span>
+    </code>
+
+    
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">mixed</span>
+            
+</article>
+                                    <a id="method_create_tables"></a>
+<article
+        class="
+            phpdocumentor-method
+            phpdocumentor-method--private
+                                    phpdocumentor-element--static                    "
+>
+    <h4 class="phpdocumentor-method__name">create_tables()</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-install.php"><a href="../files/woocommerce-includes-class-wc-install.html"><abbr title="woocommerce/includes/class-wc-install.php">class-wc-install.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">689</span>
+    </aside>
+        <p class="phpdocumentor-summary">Set up the database tables which the plugin needs to function.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">private</span>
+                        <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">create_tables</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">mixed</span>
+    </code>
+
+        <section class="phpdocumentor-description"><p>WARNING: If you are modifying this method, make sure that its safe to call regardless of the state of database.</p>
+<p>This is called from <code class="prettyprint">install</code> method and is executed in-sync when WC is installed or updated. This can also be called optionally from <code class="prettyprint">verify_base_tables</code>.</p>
+<p>TODO: Add all crucial tables that we have created from workers in the past.</p>
+<p>Tables:
+woocommerce_attribute_taxonomies - Table for storing attribute taxonomies - these are user defined
+woocommerce_downloadable_product_permissions - Table for storing user and guest download permissions.
+KEY(order_id, product_id, download_id) used for organizing downloads on the My Account page
+woocommerce_order_items - Order line items are stored in a table to make them easily queryable for reports
+woocommerce_order_itemmeta - Order line item meta is stored in a table for storing extra data.
+woocommerce_tax_rates - Tax Rates are stored inside 2 tables making tax queries simple and efficient.
+woocommerce_tax_rate_locations - Each rate can be applied to more than one postcode/city hence the second table.</p></section>
+    
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">mixed</span>
+            
+</article>
+                                    <a id="method_get_schema"></a>
+<article
+        class="
+            phpdocumentor-method
+            phpdocumentor-method--private
+                                    phpdocumentor-element--static                    "
+>
+    <h4 class="phpdocumentor-method__name">get_schema()</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-install.php"><a href="../files/woocommerce-includes-class-wc-install.html"><abbr title="woocommerce/includes/class-wc-install.php">class-wc-install.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">785</span>
+    </aside>
+        <p class="phpdocumentor-summary">Get Table schema.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">private</span>
+                        <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">get_schema</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">string</span>
+    </code>
+
+        <section class="phpdocumentor-description"><p>See <a href="https://github.com/woocommerce/woocommerce/wiki/Database-Description/">https://github.com/woocommerce/woocommerce/wiki/Database-Description/</a></p>
+<p>A note on indexes; Indexes have a maximum size of 767 bytes. Historically, we haven't need to be concerned about that.
+As of WordPress 4.2, however, we moved to utf8mb4, which uses 4 bytes per character. This means that an index which
+used to have room for floor(767/3) = 255 characters, now only has room for floor(767/4) = 191 characters.</p>
+<p>Changing indexes may cause duplicate index notices in logs due to <a href="https://core.trac.wordpress.org/ticket/34870">https://core.trac.wordpress.org/ticket/34870</a> but dropping
+indexes first causes too much load on some servers/larger DB.</p>
+<p>When adding or removing a table, make sure to update the list of tables in WC_Install::get_tables().</p></section>
+    
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">string</span>
+            
+</article>
+                                    <a id="method_get_tables"></a>
+<article
+        class="
+            phpdocumentor-method
+            phpdocumentor-method--public
+                                    phpdocumentor-element--static                    "
+>
+    <h4 class="phpdocumentor-method__name">get_tables()</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-install.php"><a href="../files/woocommerce-includes-class-wc-install.html"><abbr title="woocommerce/includes/class-wc-install.php">class-wc-install.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">1024</span>
+    </aside>
+        <p class="phpdocumentor-summary">Return a list of WooCommerce tables. Used to make sure all WC tables are dropped when uninstalling the plugin
+in a single site or multi site environment.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">public</span>
+                        <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">get_tables</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">array</span>
+    </code>
+
+    
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">array</span>
+                    &mdash; <span class="phpdocumentor-description"><p>WC tables.</p></span>
+            
+</article>
+                                    <a id="method_drop_tables"></a>
+<article
+        class="
+            phpdocumentor-method
+            phpdocumentor-method--public
+                                    phpdocumentor-element--static                    "
+>
+    <h4 class="phpdocumentor-method__name">drop_tables()</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-install.php"><a href="../files/woocommerce-includes-class-wc-install.html"><abbr title="woocommerce/includes/class-wc-install.php">class-wc-install.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">1066</span>
+    </aside>
+        <p class="phpdocumentor-summary">Drop WooCommerce tables.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">public</span>
+                        <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">drop_tables</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">void</span>
+    </code>
+
+    
+    
+        
+    
+</article>
+                                    <a id="method_wpmu_drop_tables"></a>
+<article
+        class="
+            phpdocumentor-method
+            phpdocumentor-method--public
+                                    phpdocumentor-element--static                    "
+>
+    <h4 class="phpdocumentor-method__name">wpmu_drop_tables()</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-install.php"><a href="../files/woocommerce-includes-class-wc-install.html"><abbr title="woocommerce/includes/class-wc-install.php">class-wc-install.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">1083</span>
+    </aside>
+        <p class="phpdocumentor-summary">Uninstall tables when MU blog is deleted.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">public</span>
+                        <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">wpmu_drop_tables</span>(
+                    <span class="phpdocumentor-signature__argument">
+                            <span class="phpdocumentor-signature__argument__name">$tables</span> :
+                <span class="phpdocumentor-signature__argument__return-type">array</span>
+                            </span>
+                )
+        : <span class="phpdocumentor-signature__response_type">string[]</span>
+    </code>
+
+    
+            <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+        <dl class="phpdocumentor-argument-list">
+                            <dt class="phpdocumentor-argument-list__entry">
+                    <span class="phpdocumentor-signature__argument__name">$tables</span>
+                    : <span class="phpdocumentor-signature__argument__return-type">array</span>
+                                    </dt>
+                <dd class="phpdocumentor-argument-list__definition"><section class="phpdocumentor-description"><p>List of tables that will be deleted by WP.</p></section></dd>
+                    </dl>
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">string[]</span>
+            
+</article>
+                                    <a id="method_create_roles"></a>
+<article
+        class="
+            phpdocumentor-method
+            phpdocumentor-method--public
+                                    phpdocumentor-element--static                    "
+>
+    <h4 class="phpdocumentor-method__name">create_roles()</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-install.php"><a href="../files/woocommerce-includes-class-wc-install.html"><abbr title="woocommerce/includes/class-wc-install.php">class-wc-install.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">1090</span>
+    </aside>
+        <p class="phpdocumentor-summary">Create roles and capabilities.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">public</span>
+                        <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">create_roles</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">mixed</span>
+    </code>
+
+    
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">mixed</span>
+            
+</article>
+                                    <a id="method_get_core_capabilities"></a>
+<article
+        class="
+            phpdocumentor-method
+            phpdocumentor-method--private
+                                    phpdocumentor-element--static                    "
+>
+    <h4 class="phpdocumentor-method__name">get_core_capabilities()</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-install.php"><a href="../files/woocommerce-includes-class-wc-install.html"><abbr title="woocommerce/includes/class-wc-install.php">class-wc-install.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">1178</span>
+    </aside>
+        <p class="phpdocumentor-summary">Get capabilities for WooCommerce - these are assigned to admin/shop manager during installation or reset.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">private</span>
+                        <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">get_core_capabilities</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">array</span>
+    </code>
+
+    
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">array</span>
+            
+</article>
+                                    <a id="method_remove_roles"></a>
+<article
+        class="
+            phpdocumentor-method
+            phpdocumentor-method--public
+                                    phpdocumentor-element--static                    "
+>
+    <h4 class="phpdocumentor-method__name">remove_roles()</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-install.php"><a href="../files/woocommerce-includes-class-wc-install.html"><abbr title="woocommerce/includes/class-wc-install.php">class-wc-install.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">1220</span>
+    </aside>
+        <p class="phpdocumentor-summary">Remove WooCommerce roles.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">public</span>
+                        <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">remove_roles</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">mixed</span>
+    </code>
+
+    
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">mixed</span>
+            
+</article>
+                                    <a id="method_create_files"></a>
+<article
+        class="
+            phpdocumentor-method
+            phpdocumentor-method--private
+                                    phpdocumentor-element--static                    "
+>
+    <h4 class="phpdocumentor-method__name">create_files()</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-install.php"><a href="../files/woocommerce-includes-class-wc-install.html"><abbr title="woocommerce/includes/class-wc-install.php">class-wc-install.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">1247</span>
+    </aside>
+        <p class="phpdocumentor-summary">Create files/directories.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">private</span>
+                        <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">create_files</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">mixed</span>
+    </code>
+
+    
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">mixed</span>
+            
+</article>
+                                    <a id="method_create_placeholder_image"></a>
+<article
+        class="
+            phpdocumentor-method
+            phpdocumentor-method--private
+                                    phpdocumentor-element--static                    "
+>
+    <h4 class="phpdocumentor-method__name">create_placeholder_image()</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-install.php"><a href="../files/woocommerce-includes-class-wc-install.html"><abbr title="woocommerce/includes/class-wc-install.php">class-wc-install.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">1299</span>
+    </aside>
+        <p class="phpdocumentor-summary">Create a placeholder image in the media library.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">private</span>
+                        <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">create_placeholder_image</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">mixed</span>
+    </code>
+
+    
+    
+                <h5 class="phpdocumentor-tag-list__heading">Tags</h5>
+        <dl class="phpdocumentor-tag-list">
+                                                <dt class="phpdocumentor-tag-list__entry">
+                        <span class="phpdocumentor-tag__name">since</span>
+                    </dt>
+                    <dd class="phpdocumentor-tag-list__definition"><section class="phpdocumentor-description"></section></dd>
+                                    </dl>
+    
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">mixed</span>
+            
+</article>
+                                    <a id="method_plugin_action_links"></a>
+<article
+        class="
+            phpdocumentor-method
+            phpdocumentor-method--public
+                                    phpdocumentor-element--static                    "
+>
+    <h4 class="phpdocumentor-method__name">plugin_action_links()</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-install.php"><a href="../files/woocommerce-includes-class-wc-install.html"><abbr title="woocommerce/includes/class-wc-install.php">class-wc-install.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">1351</span>
+    </aside>
+        <p class="phpdocumentor-summary">Show action links on the plugin screen.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">public</span>
+                        <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">plugin_action_links</span>(
+                    <span class="phpdocumentor-signature__argument">
+                            <span class="phpdocumentor-signature__argument__name">$links</span> :
+                <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                            </span>
+                )
+        : <span class="phpdocumentor-signature__response_type">array</span>
+    </code>
+
+    
+            <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+        <dl class="phpdocumentor-argument-list">
+                            <dt class="phpdocumentor-argument-list__entry">
+                    <span class="phpdocumentor-signature__argument__name">$links</span>
+                    : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                                    </dt>
+                <dd class="phpdocumentor-argument-list__definition"><section class="phpdocumentor-description"><p>Plugin Action links.</p></section></dd>
+                    </dl>
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">array</span>
+            
+</article>
+                                    <a id="method_plugin_row_meta"></a>
+<article
+        class="
+            phpdocumentor-method
+            phpdocumentor-method--public
+                                    phpdocumentor-element--static                    "
+>
+    <h4 class="phpdocumentor-method__name">plugin_row_meta()</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-install.php"><a href="../files/woocommerce-includes-class-wc-install.html"><abbr title="woocommerce/includes/class-wc-install.php">class-wc-install.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">1367</span>
+    </aside>
+        <p class="phpdocumentor-summary">Show row meta on the plugin screen.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">public</span>
+                        <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">plugin_row_meta</span>(
+                    <span class="phpdocumentor-signature__argument">
+                            <span class="phpdocumentor-signature__argument__name">$links</span> :
+                <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                            </span>
+                    <span class="phpdocumentor-signature__argument">
+            ,                 <span class="phpdocumentor-signature__argument__name">$file</span> :
+                <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                            </span>
+                )
+        : <span class="phpdocumentor-signature__response_type">array</span>
+    </code>
+
+    
+            <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+        <dl class="phpdocumentor-argument-list">
+                            <dt class="phpdocumentor-argument-list__entry">
+                    <span class="phpdocumentor-signature__argument__name">$links</span>
+                    : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                                    </dt>
+                <dd class="phpdocumentor-argument-list__definition"><section class="phpdocumentor-description"><p>Plugin Row Meta.</p></section></dd>
+                            <dt class="phpdocumentor-argument-list__entry">
+                    <span class="phpdocumentor-signature__argument__name">$file</span>
+                    : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                                    </dt>
+                <dd class="phpdocumentor-argument-list__definition"><section class="phpdocumentor-description"><p>Plugin Base file.</p></section></dd>
+                    </dl>
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">array</span>
+            
+</article>
+                                    <a id="method_associate_plugin_file"></a>
+<article
+        class="
+            phpdocumentor-method
+            phpdocumentor-method--private
+                                    phpdocumentor-element--static                    "
+>
+    <h4 class="phpdocumentor-method__name">associate_plugin_file()</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-install.php"><a href="../files/woocommerce-includes-class-wc-install.html"><abbr title="woocommerce/includes/class-wc-install.php">class-wc-install.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">1387</span>
+    </aside>
+        <p class="phpdocumentor-summary">Get slug from path and associate it with the path.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">private</span>
+                        <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">associate_plugin_file</span>(
+                    <span class="phpdocumentor-signature__argument">
+                            <span class="phpdocumentor-signature__argument__name">$plugins</span> :
+                <span class="phpdocumentor-signature__argument__return-type">array</span>
+                            </span>
+                    <span class="phpdocumentor-signature__argument">
+            ,                 <span class="phpdocumentor-signature__argument__name">$key</span> :
+                <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </span>
+                )
+        : <span class="phpdocumentor-signature__response_type">mixed</span>
+    </code>
+
+    
+            <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+        <dl class="phpdocumentor-argument-list">
+                            <dt class="phpdocumentor-argument-list__entry">
+                    <span class="phpdocumentor-signature__argument__name">$plugins</span>
+                    : <span class="phpdocumentor-signature__argument__return-type">array</span>
+                                    </dt>
+                <dd class="phpdocumentor-argument-list__definition"><section class="phpdocumentor-description"><p>Associative array of plugin files to paths.</p></section></dd>
+                            <dt class="phpdocumentor-argument-list__entry">
+                    <span class="phpdocumentor-signature__argument__name">$key</span>
+                    : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                                    </dt>
+                <dd class="phpdocumentor-argument-list__definition"><section class="phpdocumentor-description"><p>Plugin relative path. Example: woocommerce/woocommerce.php.</p></section></dd>
+                    </dl>
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">mixed</span>
+            
+</article>
+                                    <a id="method_background_installer"></a>
+<article
+        class="
+            phpdocumentor-method
+            phpdocumentor-method--public
+                                    phpdocumentor-element--static                    "
+>
+    <h4 class="phpdocumentor-method__name">background_installer()</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-install.php"><a href="../files/woocommerce-includes-class-wc-install.html"><abbr title="woocommerce/includes/class-wc-install.php">class-wc-install.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">1404</span>
+    </aside>
+        <p class="phpdocumentor-summary">Install a plugin from .org in the background via a cron job (used by
+installer - opt in).</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">public</span>
+                        <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">background_installer</span>(
+                    <span class="phpdocumentor-signature__argument">
+                            <span class="phpdocumentor-signature__argument__name">$plugin_to_install_id</span> :
+                <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </span>
+                    <span class="phpdocumentor-signature__argument">
+            ,                 <span class="phpdocumentor-signature__argument__name">$plugin_to_install</span> :
+                <span class="phpdocumentor-signature__argument__return-type">array</span>
+                            </span>
+                )
+        : <span class="phpdocumentor-signature__response_type">mixed</span>
+    </code>
+
+    
+            <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+        <dl class="phpdocumentor-argument-list">
+                            <dt class="phpdocumentor-argument-list__entry">
+                    <span class="phpdocumentor-signature__argument__name">$plugin_to_install_id</span>
+                    : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                                    </dt>
+                <dd class="phpdocumentor-argument-list__definition"><section class="phpdocumentor-description"><p>Plugin ID.</p></section></dd>
+                            <dt class="phpdocumentor-argument-list__entry">
+                    <span class="phpdocumentor-signature__argument__name">$plugin_to_install</span>
+                    : <span class="phpdocumentor-signature__argument__return-type">array</span>
+                                    </dt>
+                <dd class="phpdocumentor-argument-list__definition"><section class="phpdocumentor-description"><p>Plugin information.</p></section></dd>
+                    </dl>
+    
+                <h5 class="phpdocumentor-tag-list__heading">Tags</h5>
+        <dl class="phpdocumentor-tag-list">
+                                                <dt class="phpdocumentor-tag-list__entry">
+                        <span class="phpdocumentor-tag__name">throws</span>
+                    </dt>
+                    <dd class="phpdocumentor-tag-list__definition"><section class="phpdocumentor-description"><p>If unable to proceed with plugin installation.</p></section></dd>
+                                                                <dt class="phpdocumentor-tag-list__entry">
+                        <span class="phpdocumentor-tag__name">since</span>
+                    </dt>
+                    <dd class="phpdocumentor-tag-list__definition"><section class="phpdocumentor-description"></section></dd>
+                                    </dl>
+    
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">mixed</span>
+            
+</article>
+                                    <a id="method_remove_mailchimps_redirect"></a>
+<article
+        class="
+            phpdocumentor-method
+            phpdocumentor-method--public
+                                    phpdocumentor-element--static                    "
+>
+    <h4 class="phpdocumentor-method__name">remove_mailchimps_redirect()</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-install.php"><a href="../files/woocommerce-includes-class-wc-install.html"><abbr title="woocommerce/includes/class-wc-install.php">class-wc-install.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">1547</span>
+    </aside>
+        <p class="phpdocumentor-summary">Removes redirect added during MailChimp plugin&#039;s activation.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">public</span>
+                        <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">remove_mailchimps_redirect</span>(
+                    <span class="phpdocumentor-signature__argument">
+                            <span class="phpdocumentor-signature__argument__name">$option</span> :
+                <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </span>
+                    <span class="phpdocumentor-signature__argument">
+            ,                 <span class="phpdocumentor-signature__argument__name">$value</span> :
+                <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </span>
+                )
+        : <span class="phpdocumentor-signature__response_type">mixed</span>
+    </code>
+
+    
+            <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+        <dl class="phpdocumentor-argument-list">
+                            <dt class="phpdocumentor-argument-list__entry">
+                    <span class="phpdocumentor-signature__argument__name">$option</span>
+                    : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                                    </dt>
+                <dd class="phpdocumentor-argument-list__definition"><section class="phpdocumentor-description"><p>Option name.</p></section></dd>
+                            <dt class="phpdocumentor-argument-list__entry">
+                    <span class="phpdocumentor-signature__argument__name">$value</span>
+                    : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                                    </dt>
+                <dd class="phpdocumentor-argument-list__definition"><section class="phpdocumentor-description"><p>Option value.</p></section></dd>
+                    </dl>
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">mixed</span>
+            
+</article>
+                                    <a id="method_theme_background_installer"></a>
+<article
+        class="
+            phpdocumentor-method
+            phpdocumentor-method--public
+                                    phpdocumentor-element--static                    "
+>
+    <h4 class="phpdocumentor-method__name">theme_background_installer()</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-install.php"><a href="../files/woocommerce-includes-class-wc-install.html"><abbr title="woocommerce/includes/class-wc-install.php">class-wc-install.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">1563</span>
+    </aside>
+        <p class="phpdocumentor-summary">Install a theme from .org in the background via a cron job (used by installer - opt in).</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">public</span>
+                        <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">theme_background_installer</span>(
+                    <span class="phpdocumentor-signature__argument">
+                            <span class="phpdocumentor-signature__argument__name">$theme_slug</span> :
+                <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </span>
+                )
+        : <span class="phpdocumentor-signature__response_type">mixed</span>
+    </code>
+
+    
+            <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+        <dl class="phpdocumentor-argument-list">
+                            <dt class="phpdocumentor-argument-list__entry">
+                    <span class="phpdocumentor-signature__argument__name">$theme_slug</span>
+                    : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                                    </dt>
+                <dd class="phpdocumentor-argument-list__definition"><section class="phpdocumentor-description"><p>Theme slug.</p></section></dd>
+                    </dl>
+    
+                <h5 class="phpdocumentor-tag-list__heading">Tags</h5>
+        <dl class="phpdocumentor-tag-list">
+                                                <dt class="phpdocumentor-tag-list__entry">
+                        <span class="phpdocumentor-tag__name">throws</span>
+                    </dt>
+                    <dd class="phpdocumentor-tag-list__definition"><section class="phpdocumentor-description"><p>If unable to proceed with theme installation.</p></section></dd>
+                                                                <dt class="phpdocumentor-tag-list__entry">
+                        <span class="phpdocumentor-tag__name">since</span>
+                    </dt>
+                    <dd class="phpdocumentor-tag-list__definition"><section class="phpdocumentor-description"></section></dd>
+                                    </dl>
+    
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">mixed</span>
+            
+</article>
+                                                            </section>
+            </article>
+        </div>
+    </div>
+</main>
+<a href="#" class="to-top">Back to the top</a>
+<footer class="phpdocumentor phpdocumentor-footer">
+    <div class="phpdocumentor-section">
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on August 18th, 2020 at 11:59 am.</span>
+    </div>
+</footer>
+</body>
+</html>

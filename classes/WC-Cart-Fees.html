@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>WooCommerce Code Reference</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/template.css">
+    <link rel="shortcut icon" href="../images/favicon.png"/>
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
+        <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.4.6/fuse.min.js"></script>
+    <script src="../js/search.js"></script>
+    <script defer src="../js/searchIndex.js"></script>
+    </head>
+<body>
+<header class="phpdocumentor-top-header">
+    <section class="phpdocumentor-section">
+        <div class="site-branding">
+            <a class="site-logo" href="../index.html"><img width="180" src="../images/logo.svg" alt="WooCommerce" /></a>
+        </div>
+        <nav class="main-navigation">
+            <ul>
+                <li><a href="../hooks/hooks.html">Hooks Reference</a></li>
+                                    <li><a href="../graphs/classes.html">Class Diagram</a></li>
+                                <li><a href="https://docs.woocommerce.com/">Documentation</a></li>
+                <li><a href="https://woocommerce.github.io/woocommerce-rest-api-docs/">REST API Docs</a></li>
+            </ul>
+        </nav>
+    </section>
+</header>
+<header class="phpdocumentor-header">
+    <section class="phpdocumentor-section">
+        <h1 class="phpdocumentor-title">WooCommerce Code Reference</h1>
+    </section>
+
+    <section class="phpdocumentor-section">
+        <div data-search-form class="phpdocumentor-search">
+            <label class="phpdocumentor-label">
+                <span class="visually-hidden">Search</span>
+                <input type="search" class="phpdocumentor-field phpdocumentor-search__field" placeholder="Loading..." disabled />
+            </label>
+        </div>
+        <div data-search-results class="phpdocumentor-search-results phpdocumentor-search-results--hidden">
+
+            <h2>Search results</h2>
+            <ul class="phpdocumentor-search-results__entries">
+
+            </ul>
+        </div>
+    </section>
+</header>
+<main class="phpdocumentor">
+    <div class="phpdocumentor-section">
+        <aside class="three phpdocumentor-columns phpdocumentor-sidebar">
+    
+    <h1 class="phpdocumentor-sidebar__category-header">Namespaces</h1>
+            <h2 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/default.html"><abbr title="\">Global</abbr></a></h2>
+                    <h3 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h3>
+            <ul class="phpdocumentor-list">
+                                    <li><a href="../namespaces/automattic-woocommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                            </ul>
+            
+        <h1 class="phpdocumentor-sidebar__category-header">Packages</h1>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceClasses.html"><abbr title="\WooCommerceClasses">WooCommerceClasses</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAbstracts.html"><abbr title="\WooCommerceAbstracts">WooCommerceAbstracts</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                            <li><a href="../packages/WooCommerce-Abstracts.html"><abbr title="\WooCommerce\Abstracts">Abstracts</abbr></a></li>
+                            <li><a href="../packages/WooCommerce-Admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                            <li><a href="../packages/WooCommerce-Views.html"><abbr title="\WooCommerce\Views">Views</abbr></a></li>
+                            <li><a href="../packages/WooCommerce-admin.html"><abbr title="\WooCommerce\admin">admin</abbr></a></li>
+                            <li><a href="../packages/WooCommerce-Classes.html"><abbr title="\WooCommerce\Classes">Classes</abbr></a></li>
+                            <li><a href="../packages/WooCommerce-Reports.html"><abbr title="\WooCommerce\Reports">Reports</abbr></a></li>
+                            <li><a href="../packages/WooCommerce-CLI.html"><abbr title="\WooCommerce\CLI">CLI</abbr></a></li>
+                            <li><a href="../packages/WooCommerce-l10n.html"><abbr title="\WooCommerce\l10n">l10n</abbr></a></li>
+                            <li><a href="../packages/WooCommerce-Cli.html"><abbr title="\WooCommerce\Cli">Cli</abbr></a></li>
+                            <li><a href="../packages/WooCommerce-DataStores.html"><abbr title="\WooCommerce\DataStores">DataStores</abbr></a></li>
+                            <li><a href="../packages/WooCommerce-DataStore.html"><abbr title="\WooCommerce\DataStore">DataStore</abbr></a></li>
+                            <li><a href="../packages/WooCommerce-Emails.html"><abbr title="\WooCommerce\Emails">Emails</abbr></a></li>
+                            <li><a href="../packages/WooCommerce-Gateways.html"><abbr title="\WooCommerce\Gateways">Gateways</abbr></a></li>
+                            <li><a href="../packages/WooCommerce-Integrations.html"><abbr title="\WooCommerce\Integrations">Integrations</abbr></a></li>
+                            <li><a href="../packages/WooCommerce-LogHandlers.html"><abbr title="\WooCommerce\LogHandlers">LogHandlers</abbr></a></li>
+                            <li><a href="../packages/WooCommerce-PaymentTokens.html"><abbr title="\WooCommerce\PaymentTokens">PaymentTokens</abbr></a></li>
+                            <li><a href="../packages/WooCommerce-Shipping.html"><abbr title="\WooCommerce\Shipping">Shipping</abbr></a></li>
+                            <li><a href="../packages/WooCommerce-Tracks.html"><abbr title="\WooCommerce\Tracks">Tracks</abbr></a></li>
+                            <li><a href="../packages/WooCommerce-Functions.html"><abbr title="\WooCommerce\Functions">Functions</abbr></a></li>
+                            <li><a href="../packages/WooCommerce-WooCommerce.html"><abbr title="\WooCommerce\WooCommerce">WooCommerce</abbr></a></li>
+                            <li><a href="../packages/WooCommerce-Blocks.html"><abbr title="\WooCommerce\Blocks">Blocks</abbr></a></li>
+                            <li><a href="../packages/WooCommerce-Uninstaller.html"><abbr title="\WooCommerce\Uninstaller">Uninstaller</abbr></a></li>
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdmin.html"><abbr title="\WooCommerceAdmin">WooCommerceAdmin</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdminCustomize.html"><abbr title="\WooCommerceAdminCustomize">WooCommerceAdminCustomize</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdminMetaBoxes.html"><abbr title="\WooCommerceAdminMetaBoxes">WooCommerceAdminMetaBoxes</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceadmin.html"><abbr title="\WooCommerceadmin">WooCommerceadmin</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdminReports.html"><abbr title="\WooCommerceAdminReports">WooCommerceAdminReports</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdminSystemStatus.html"><abbr title="\WooCommerceAdminSystemStatus">WooCommerceAdminSystemStatus</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/Default.html"><abbr title="\Default">Default</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceHelper.html"><abbr title="\WooCommerceHelper">WooCommerceHelper</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdminImporters.html"><abbr title="\WooCommerceAdminImporters">WooCommerceAdminImporters</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceTemplates.html"><abbr title="\WooCommerceTemplates">WooCommerceTemplates</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdminReporting.html"><abbr title="\WooCommerceAdminReporting">WooCommerceAdminReporting</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdminShipping.html"><abbr title="\WooCommerceAdminShipping">WooCommerceAdminShipping</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdminSettings.html"><abbr title="\WooCommerceAdminSettings">WooCommerceAdminSettings</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdminWebhooksViews.html"><abbr title="\WooCommerceAdminWebhooksViews">WooCommerceAdminWebhooksViews</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/Settings.html"><abbr title="\Settings">Settings</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdminExport.html"><abbr title="\WooCommerceAdminExport">WooCommerceAdminExport</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdminLogs.html"><abbr title="\WooCommerceAdminLogs">WooCommerceAdminLogs</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceViews.html"><abbr title="\WooCommerceViews">WooCommerceViews</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/admin.html"><abbr title="\admin">admin</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdminFunctions.html"><abbr title="\WooCommerceAdminFunctions">WooCommerceAdminFunctions</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAPI.html"><abbr title="\WooCommerceAPI">WooCommerceAPI</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceClassesProducts.html"><abbr title="\WooCommerceClassesProducts">WooCommerceClassesProducts</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceClassesEmails.html"><abbr title="\WooCommerceClassesEmails">WooCommerceClassesEmails</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceClassesEmbed.html"><abbr title="\WooCommerceClassesEmbed">WooCommerceClassesEmbed</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceClassesIntegrations.html"><abbr title="\WooCommerceClassesIntegrations">WooCommerceClassesIntegrations</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceClassesPayment.html"><abbr title="\WooCommerceClassesPayment">WooCommerceClassesPayment</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceClassesData.html"><abbr title="\WooCommerceClassesData">WooCommerceClassesData</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                            <li><a href="../packages/WooCommerceClassesData-Store.html"><abbr title="\WooCommerceClassesData\Store">Store</abbr></a></li>
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceClassesShipping.html"><abbr title="\WooCommerceClassesShipping">WooCommerceClassesShipping</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceWebhooks.html"><abbr title="\WooCommerceWebhooks">WooCommerceWebhooks</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/data.html"><abbr title="\data">data</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                            <li><a href="../packages/data-stores.html"><abbr title="\data\stores">stores</abbr></a></li>
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceExport.html"><abbr title="\WooCommerceExport">WooCommerceExport</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommercePayPal.html"><abbr title="\WooCommercePayPal">WooCommercePayPal</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceImport.html"><abbr title="\WooCommerceImport">WooCommerceImport</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceIntegrations.html"><abbr title="\WooCommerceIntegrations">WooCommerceIntegrations</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceInterfaces.html"><abbr title="\WooCommerceInterfaces">WooCommerceInterfaces</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceInterface.html"><abbr title="\WooCommerceInterface">WooCommerceInterface</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceClassesLog.html"><abbr title="\WooCommerceClassesLog">WooCommerceClassesLog</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                            <li><a href="../packages/WooCommerceClassesLog-Handlers.html"><abbr title="\WooCommerceClassesLog\Handlers">Handlers</abbr></a></li>
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommercePaymentTokens.html"><abbr title="\WooCommercePaymentTokens">WooCommercePaymentTokens</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceShortcodesCart.html"><abbr title="\WooCommerceShortcodesCart">WooCommerceShortcodesCart</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceShortcodesCheckout.html"><abbr title="\WooCommerceShortcodesCheckout">WooCommerceShortcodesCheckout</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceShortcodesMy.html"><abbr title="\WooCommerceShortcodesMy">WooCommerceShortcodesMy</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                            <li><a href="../packages/WooCommerceShortcodesMy-Account.html"><abbr title="\WooCommerceShortcodesMy\Account">Account</abbr></a></li>
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceShortcodesOrder.html"><abbr title="\WooCommerceShortcodesOrder">WooCommerceShortcodesOrder</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                            <li><a href="../packages/WooCommerceShortcodesOrder-Tracking.html"><abbr title="\WooCommerceShortcodesOrder\Tracking">Tracking</abbr></a></li>
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceShortcodes.html"><abbr title="\WooCommerceShortcodes">WooCommerceShortcodes</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceTraits.html"><abbr title="\WooCommerceTraits">WooCommerceTraits</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceClassesWalkers.html"><abbr title="\WooCommerceClassesWalkers">WooCommerceClassesWalkers</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceFunctions.html"><abbr title="\WooCommerceFunctions">WooCommerceFunctions</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceWCCOM.html"><abbr title="\WooCommerceWCCOM">WooCommerceWCCOM</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                            <li><a href="../packages/WooCommerceWCCOM-SiteREST.html"><abbr title="\WooCommerceWCCOM\SiteREST">SiteREST</abbr></a></li>
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceWidgets.html"><abbr title="\WooCommerceWidgets">WooCommerceWidgets</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceAdmin.html"><abbr title="\WoocommerceAdmin">WoocommerceAdmin</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WC.html"><abbr title="\WC">WC</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                            <li><a href="../packages/WC-Admin.html"><abbr title="\WC\Admin">Admin</abbr></a></li>
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdminTemplatesEmailsHTML.html"><abbr title="\WooCommerceAdminTemplatesEmailsHTML">WooCommerceAdminTemplatesEmailsHTML</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdminAPI.html"><abbr title="\WooCommerceAdminAPI">WooCommerceAdminAPI</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdminClasses.html"><abbr title="\WooCommerceAdminClasses">WooCommerceAdminClasses</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdminInterface.html"><abbr title="\WooCommerceAdminInterface">WooCommerceAdminInterface</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/Automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                            <li><a href="../packages/Automattic-WooCommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/AutomatticWooCommerceWCAdmin.html"><abbr title="\AutomatticWooCommerceWCAdmin">AutomatticWooCommerceWCAdmin</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceBlocks.html"><abbr title="\WooCommerceBlocks">WooCommerceBlocks</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/AutomatticWooCommerceBlocks.html"><abbr title="\AutomatticWooCommerceBlocks">AutomatticWooCommerceBlocks</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/AutomatticWooCommerceRestApi.html"><abbr title="\AutomatticWooCommerceRestApi">AutomatticWooCommerceRestApi</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/AutomatticWooCommerceUtilities.html"><abbr title="\AutomatticWooCommerceUtilities">AutomatticWooCommerceUtilities</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/AutomatticWooCommerce.html"><abbr title="\AutomatticWooCommerce">AutomatticWooCommerce</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceTemplatesAuth.html"><abbr title="\WooCommerceTemplatesAuth">WooCommerceTemplatesAuth</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceTemplatesEmails.html"><abbr title="\WooCommerceTemplatesEmails">WooCommerceTemplatesEmails</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceTemplatesEmailsHTML.html"><abbr title="\WooCommerceTemplatesEmailsHTML">WooCommerceTemplatesEmailsHTML</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceTemplatesEmailsPlain.html"><abbr title="\WooCommerceTemplatesEmailsPlain">WooCommerceTemplatesEmailsPlain</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+        
+    <h1 class="phpdocumentor-sidebar__category-header">Reports</h1>
+    <h2 class="phpdocumentor-sidebar__root-package"><a href="../reports/deprecated.html">Deprecated</a></h2>
+    <h2 class="phpdocumentor-sidebar__root-package"><a href="../reports/errors.html">Errors</a></h2>
+    <h2 class="phpdocumentor-sidebar__root-package"><a href="../reports/markers.html">Markers</a></h2>
+</aside>
+
+        <div class="nine phpdocumentor-columns phpdocumentor-content">
+            <ul class="phpdocumentor-breadcrumbs">
+    <li><a href="../index.html">Home</a></li>
+                </ul>
+
+    <article class="phpdocumentor-element phpdocumentor-class">
+        <h2 class="phpdocumentor-content__title">
+            WC_Cart_Fees
+                                        <div class="phpdocumentor-element__package">
+                    in
+                    <ul class="phpdocumentor-breadcrumbs">
+                                                    <li><a href="../packages/WooCommerceClasses.html">WooCommerceClasses</a></li>
+                                            </ul>
+                </div>
+                                            </h2>
+        <aside class="phpdocumentor-element-found-in">
+            <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-cart-fees.php"><a href="../files/woocommerce-includes-class-wc-cart-fees.html"><abbr title="woocommerce/includes/class-wc-cart-fees.php">class-wc-cart-fees.php</abbr></a></abbr>
+            :
+            <span class="phpdocumentor-element-found-in__line">20</span>
+        </aside>
+
+        <p class="phpdocumentor-class__summary">WC_Cart_Fees class.</p>
+        <section class="phpdocumentor-class__description"></section>
+
+        <h3>Table of Contents</h3>
+        <table class="phpdocumentor-table_of_contents">
+                                        <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/WC-Cart-Fees.html#property_fees">$fees</a></th>
+                    <td class="phpdocumentor-cell">An array of fee objects.</td>
+                    <td class="phpdocumentor-cell">object[]</td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/WC-Cart-Fees.html#property_cart">$cart</a></th>
+                    <td class="phpdocumentor-cell">Reference to cart object.</td>
+                    <td class="phpdocumentor-cell"><a href="../classes/WC-Cart.html"><abbr title="\WC_Cart">WC_Cart</abbr></a></td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/WC-Cart-Fees.html#property_default_fee_props">$default_fee_props</a></th>
+                    <td class="phpdocumentor-cell">New fees are made out of these props.</td>
+                    <td class="phpdocumentor-cell">array</td>
+                </tr>
+                                                                <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/WC-Cart-Fees.html#method___construct">__construct()</a></th>
+                    <td class="phpdocumentor-cell">Constructor. Reference to the cart.</td>
+                    <td class="phpdocumentor-cell">mixed</td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/WC-Cart-Fees.html#method_init">init()</a></th>
+                    <td class="phpdocumentor-cell">Register methods for this object on the appropriate WordPress hooks.</td>
+                    <td class="phpdocumentor-cell">mixed</td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/WC-Cart-Fees.html#method_add_fee">add_fee()</a></th>
+                    <td class="phpdocumentor-cell">Add a fee. Fee IDs must be unique.</td>
+                    <td class="phpdocumentor-cell">object</td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/WC-Cart-Fees.html#method_get_fees">get_fees()</a></th>
+                    <td class="phpdocumentor-cell">Get fees.</td>
+                    <td class="phpdocumentor-cell">array</td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/WC-Cart-Fees.html#method_set_fees">set_fees()</a></th>
+                    <td class="phpdocumentor-cell">Set fees.</td>
+                    <td class="phpdocumentor-cell">mixed</td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/WC-Cart-Fees.html#method_remove_all_fees">remove_all_fees()</a></th>
+                    <td class="phpdocumentor-cell">Remove all fees.</td>
+                    <td class="phpdocumentor-cell">mixed</td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/WC-Cart-Fees.html#method_sort_fees_callback">sort_fees_callback()</a></th>
+                    <td class="phpdocumentor-cell">Sort fees by amount.</td>
+                    <td class="phpdocumentor-cell">int</td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/WC-Cart-Fees.html#method_generate_id">generate_id()</a></th>
+                    <td class="phpdocumentor-cell">Generate a unique ID for the fee being added.</td>
+                    <td class="phpdocumentor-cell">string</td>
+                </tr>
+                                            </table>
+
+        
+                    <section>
+                <h3 class="phpdocumentor-properties__header">Properties</h3>
+                                    <a id="property_fees"></a>
+<article
+        class="
+            phpdocumentor-property
+            phpdocumentor-property--private
+                                "
+>
+    <h4 class="phpdocumentor-property__name">$fees</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-cart-fees.php"><a href="../files/woocommerce-includes-class-wc-cart-fees.html"><abbr title="woocommerce/includes/class-wc-cart-fees.php">class-wc-cart-fees.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">27</span>
+    </aside>
+            <p class="phpdocumentor-summary">An array of fee objects.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">private</span>
+                <span class="phpdocumentor-signature__type">object[]</span>
+        <span class="phpdocumentor-signature__name">$fees</span>
+         = <span class="phpdocumentor-signature__default-value">array()</span>    </code>
+    </article>
+                                    <a id="property_cart"></a>
+<article
+        class="
+            phpdocumentor-property
+            phpdocumentor-property--private
+                                "
+>
+    <h4 class="phpdocumentor-property__name">$cart</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-cart-fees.php"><a href="../files/woocommerce-includes-class-wc-cart-fees.html"><abbr title="woocommerce/includes/class-wc-cart-fees.php">class-wc-cart-fees.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">35</span>
+    </aside>
+            <p class="phpdocumentor-summary">Reference to cart object.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">private</span>
+                <span class="phpdocumentor-signature__type"><a href="../classes/WC-Cart.html"><abbr title="\WC_Cart">WC_Cart</abbr></a></span>
+        <span class="phpdocumentor-signature__name">$cart</span>
+            </code>
+    </article>
+                                    <a id="property_default_fee_props"></a>
+<article
+        class="
+            phpdocumentor-property
+            phpdocumentor-property--private
+                                "
+>
+    <h4 class="phpdocumentor-property__name">$default_fee_props</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-cart-fees.php"><a href="../files/woocommerce-includes-class-wc-cart-fees.html"><abbr title="woocommerce/includes/class-wc-cart-fees.php">class-wc-cart-fees.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">42</span>
+    </aside>
+            <p class="phpdocumentor-summary">New fees are made out of these props.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">private</span>
+                <span class="phpdocumentor-signature__type">array</span>
+        <span class="phpdocumentor-signature__name">$default_fee_props</span>
+         = <span class="phpdocumentor-signature__default-value">array(&#039;id&#039; =&gt; &#039;&#039;, &#039;name&#039; =&gt; &#039;&#039;, &#039;tax_class&#039; =&gt; &#039;&#039;, &#039;taxable&#039; =&gt; \false, &#039;amount&#039; =&gt; 0, &#039;total&#039; =&gt; 0)</span>    </code>
+    </article>
+                                                            </section>
+        
+                    <section>
+                <h3 class="phpdocumentor-methods__header">Methods</h3>
+                                    <a id="method___construct"></a>
+<article
+        class="
+            phpdocumentor-method
+            phpdocumentor-method--public
+                                                        "
+>
+    <h4 class="phpdocumentor-method__name">__construct()</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-cart-fees.php"><a href="../files/woocommerce-includes-class-wc-cart-fees.html"><abbr title="woocommerce/includes/class-wc-cart-fees.php">class-wc-cart-fees.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">58</span>
+    </aside>
+        <p class="phpdocumentor-summary">Constructor. Reference to the cart.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">public</span>
+                                <span class="phpdocumentor-signature__name">__construct</span>(
+                    <span class="phpdocumentor-signature__argument">
+                            <span class="phpdocumentor-signature__argument__reference-operator">&amp;</span><span class="phpdocumentor-signature__argument__name">$cart</span> :
+                <span class="phpdocumentor-signature__argument__return-type"><a href="../classes/WC-Cart.html"><abbr title="\WC_Cart">WC_Cart</abbr></a></span>
+                            </span>
+                )
+        : <span class="phpdocumentor-signature__response_type">mixed</span>
+    </code>
+
+    
+            <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+        <dl class="phpdocumentor-argument-list">
+                            <dt class="phpdocumentor-argument-list__entry">
+                    <span class="phpdocumentor-signature__argument__name">$cart</span>
+                    : <span class="phpdocumentor-signature__argument__return-type"><a href="../classes/WC-Cart.html"><abbr title="\WC_Cart">WC_Cart</abbr></a></span>
+                                    </dt>
+                <dd class="phpdocumentor-argument-list__definition"><section class="phpdocumentor-description"><p>Cart object.</p></section></dd>
+                    </dl>
+    
+                <h5 class="phpdocumentor-tag-list__heading">Tags</h5>
+        <dl class="phpdocumentor-tag-list">
+                                                <dt class="phpdocumentor-tag-list__entry">
+                        <span class="phpdocumentor-tag__name">since</span>
+                    </dt>
+                    <dd class="phpdocumentor-tag-list__definition"><section class="phpdocumentor-description"></section></dd>
+                                                                <dt class="phpdocumentor-tag-list__entry">
+                        <span class="phpdocumentor-tag__name">throws</span>
+                    </dt>
+                    <dd class="phpdocumentor-tag-list__definition"><section class="phpdocumentor-description"><p>If missing WC_Cart object.</p></section></dd>
+                                    </dl>
+    
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">mixed</span>
+            
+</article>
+                                    <a id="method_init"></a>
+<article
+        class="
+            phpdocumentor-method
+            phpdocumentor-method--public
+                                                        "
+>
+    <h4 class="phpdocumentor-method__name">init()</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-cart-fees.php"><a href="../files/woocommerce-includes-class-wc-cart-fees.html"><abbr title="woocommerce/includes/class-wc-cart-fees.php">class-wc-cart-fees.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">69</span>
+    </aside>
+        <p class="phpdocumentor-summary">Register methods for this object on the appropriate WordPress hooks.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">public</span>
+                                <span class="phpdocumentor-signature__name">init</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">mixed</span>
+    </code>
+
+    
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">mixed</span>
+            
+</article>
+                                    <a id="method_add_fee"></a>
+<article
+        class="
+            phpdocumentor-method
+            phpdocumentor-method--public
+                                                        "
+>
+    <h4 class="phpdocumentor-method__name">add_fee()</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-cart-fees.php"><a href="../files/woocommerce-includes-class-wc-cart-fees.html"><abbr title="woocommerce/includes/class-wc-cart-fees.php">class-wc-cart-fees.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">78</span>
+    </aside>
+        <p class="phpdocumentor-summary">Add a fee. Fee IDs must be unique.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">public</span>
+                                <span class="phpdocumentor-signature__name">add_fee</span>(
+                    <span class="phpdocumentor-signature__argument">
+            [                <span class="phpdocumentor-signature__argument__name">$args</span> :
+                <span class="phpdocumentor-signature__argument__return-type">array</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">array()</span> ]            </span>
+                )
+        : <span class="phpdocumentor-signature__response_type">object</span>
+    </code>
+
+    
+            <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+        <dl class="phpdocumentor-argument-list">
+                            <dt class="phpdocumentor-argument-list__entry">
+                    <span class="phpdocumentor-signature__argument__name">$args</span>
+                    : <span class="phpdocumentor-signature__argument__return-type">array</span>
+                     = <span class="phpdocumentor-signature__argument__default-value">array()</span>                </dt>
+                <dd class="phpdocumentor-argument-list__definition"><section class="phpdocumentor-description"><p>Array of fee properties.</p></section></dd>
+                    </dl>
+    
+                <h5 class="phpdocumentor-tag-list__heading">Tags</h5>
+        <dl class="phpdocumentor-tag-list">
+                                                <dt class="phpdocumentor-tag-list__entry">
+                        <span class="phpdocumentor-tag__name">since</span>
+                    </dt>
+                    <dd class="phpdocumentor-tag-list__definition"><section class="phpdocumentor-description"></section></dd>
+                                    </dl>
+    
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">object</span>
+                    &mdash; <span class="phpdocumentor-description"><p>Either a fee object if added, or a WP_Error if it failed.</p></span>
+            
+</article>
+                                    <a id="method_get_fees"></a>
+<article
+        class="
+            phpdocumentor-method
+            phpdocumentor-method--public
+                                                        "
+>
+    <h4 class="phpdocumentor-method__name">get_fees()</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-cart-fees.php"><a href="../files/woocommerce-includes-class-wc-cart-fees.html"><abbr title="woocommerce/includes/class-wc-cart-fees.php">class-wc-cart-fees.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">103</span>
+    </aside>
+        <p class="phpdocumentor-summary">Get fees.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">public</span>
+                                <span class="phpdocumentor-signature__name">get_fees</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">array</span>
+    </code>
+
+    
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">array</span>
+            
+</article>
+                                    <a id="method_set_fees"></a>
+<article
+        class="
+            phpdocumentor-method
+            phpdocumentor-method--public
+                                                        "
+>
+    <h4 class="phpdocumentor-method__name">set_fees()</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-cart-fees.php"><a href="../files/woocommerce-includes-class-wc-cart-fees.html"><abbr title="woocommerce/includes/class-wc-cart-fees.php">class-wc-cart-fees.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">114</span>
+    </aside>
+        <p class="phpdocumentor-summary">Set fees.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">public</span>
+                                <span class="phpdocumentor-signature__name">set_fees</span>(
+                    <span class="phpdocumentor-signature__argument">
+            [                <span class="phpdocumentor-signature__argument__name">$raw_fees</span> :
+                <span class="phpdocumentor-signature__argument__return-type">object[]</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">array()</span> ]            </span>
+                )
+        : <span class="phpdocumentor-signature__response_type">mixed</span>
+    </code>
+
+    
+            <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+        <dl class="phpdocumentor-argument-list">
+                            <dt class="phpdocumentor-argument-list__entry">
+                    <span class="phpdocumentor-signature__argument__name">$raw_fees</span>
+                    : <span class="phpdocumentor-signature__argument__return-type">object[]</span>
+                     = <span class="phpdocumentor-signature__argument__default-value">array()</span>                </dt>
+                <dd class="phpdocumentor-argument-list__definition"><section class="phpdocumentor-description"><p>Array of fees.</p></section></dd>
+                    </dl>
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">mixed</span>
+            
+</article>
+                                    <a id="method_remove_all_fees"></a>
+<article
+        class="
+            phpdocumentor-method
+            phpdocumentor-method--public
+                                                        "
+>
+    <h4 class="phpdocumentor-method__name">remove_all_fees()</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-cart-fees.php"><a href="../files/woocommerce-includes-class-wc-cart-fees.html"><abbr title="woocommerce/includes/class-wc-cart-fees.php">class-wc-cart-fees.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">127</span>
+    </aside>
+        <p class="phpdocumentor-summary">Remove all fees.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">public</span>
+                                <span class="phpdocumentor-signature__name">remove_all_fees</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">mixed</span>
+    </code>
+
+    
+    
+                <h5 class="phpdocumentor-tag-list__heading">Tags</h5>
+        <dl class="phpdocumentor-tag-list">
+                                                <dt class="phpdocumentor-tag-list__entry">
+                        <span class="phpdocumentor-tag__name">since</span>
+                    </dt>
+                    <dd class="phpdocumentor-tag-list__definition"><section class="phpdocumentor-description"></section></dd>
+                                    </dl>
+    
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">mixed</span>
+            
+</article>
+                                    <a id="method_sort_fees_callback"></a>
+<article
+        class="
+            phpdocumentor-method
+            phpdocumentor-method--protected
+                                                        "
+>
+    <h4 class="phpdocumentor-method__name">sort_fees_callback()</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-cart-fees.php"><a href="../files/woocommerce-includes-class-wc-cart-fees.html"><abbr title="woocommerce/includes/class-wc-cart-fees.php">class-wc-cart-fees.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">138</span>
+    </aside>
+        <p class="phpdocumentor-summary">Sort fees by amount.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">protected</span>
+                                <span class="phpdocumentor-signature__name">sort_fees_callback</span>(
+                    <span class="phpdocumentor-signature__argument">
+                            <span class="phpdocumentor-signature__argument__name">$a</span> :
+                <span class="phpdocumentor-signature__argument__return-type"><abbr title="\stdClass">stdClass</abbr></span>
+                            </span>
+                    <span class="phpdocumentor-signature__argument">
+            ,                 <span class="phpdocumentor-signature__argument__name">$b</span> :
+                <span class="phpdocumentor-signature__argument__return-type"><abbr title="\stdClass">stdClass</abbr></span>
+                            </span>
+                )
+        : <span class="phpdocumentor-signature__response_type">int</span>
+    </code>
+
+    
+            <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+        <dl class="phpdocumentor-argument-list">
+                            <dt class="phpdocumentor-argument-list__entry">
+                    <span class="phpdocumentor-signature__argument__name">$a</span>
+                    : <span class="phpdocumentor-signature__argument__return-type"><abbr title="\stdClass">stdClass</abbr></span>
+                                    </dt>
+                <dd class="phpdocumentor-argument-list__definition"><section class="phpdocumentor-description"><p>Fee object.</p></section></dd>
+                            <dt class="phpdocumentor-argument-list__entry">
+                    <span class="phpdocumentor-signature__argument__name">$b</span>
+                    : <span class="phpdocumentor-signature__argument__return-type"><abbr title="\stdClass">stdClass</abbr></span>
+                                    </dt>
+                <dd class="phpdocumentor-argument-list__definition"><section class="phpdocumentor-description"><p>Fee object.</p></section></dd>
+                    </dl>
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">int</span>
+            
+</article>
+                                    <a id="method_generate_id"></a>
+<article
+        class="
+            phpdocumentor-method
+            phpdocumentor-method--private
+                                                        "
+>
+    <h4 class="phpdocumentor-method__name">generate_id()</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-cart-fees.php"><a href="../files/woocommerce-includes-class-wc-cart-fees.html"><abbr title="woocommerce/includes/class-wc-cart-fees.php">class-wc-cart-fees.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">156</span>
+    </aside>
+        <p class="phpdocumentor-summary">Generate a unique ID for the fee being added.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">private</span>
+                                <span class="phpdocumentor-signature__name">generate_id</span>(
+                    <span class="phpdocumentor-signature__argument">
+                            <span class="phpdocumentor-signature__argument__name">$fee</span> :
+                <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </span>
+                )
+        : <span class="phpdocumentor-signature__response_type">string</span>
+    </code>
+
+    
+            <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+        <dl class="phpdocumentor-argument-list">
+                            <dt class="phpdocumentor-argument-list__entry">
+                    <span class="phpdocumentor-signature__argument__name">$fee</span>
+                    : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                                    </dt>
+                <dd class="phpdocumentor-argument-list__definition"><section class="phpdocumentor-description"><p>Fee object.</p></section></dd>
+                    </dl>
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">string</span>
+                    &mdash; <span class="phpdocumentor-description"><p>fee key.</p></span>
+            
+</article>
+                                                            </section>
+            </article>
+        </div>
+    </div>
+</main>
+<a href="#" class="to-top">Back to the top</a>
+<footer class="phpdocumentor phpdocumentor-footer">
+    <div class="phpdocumentor-section">
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on August 18th, 2020 at 11:59 am.</span>
+    </div>
+</footer>
+</body>
+</html>
