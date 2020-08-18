@@ -1,0 +1,3167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>WooCommerce Code Reference</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/template.css">
+    <link rel="shortcut icon" href="../images/favicon.png"/>
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
+        <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.4.6/fuse.min.js"></script>
+    <script src="../js/search.js"></script>
+    <script defer src="../js/searchIndex.js"></script>
+    </head>
+<body>
+<header class="phpdocumentor-top-header">
+    <section class="phpdocumentor-section">
+        <div class="site-branding">
+            <a class="site-logo" href="../index.html"><img width="180" src="../images/logo.svg" alt="WooCommerce" /></a>
+        </div>
+        <nav class="main-navigation">
+            <ul>
+                <li><a href="../hooks/hooks.html">Hooks Reference</a></li>
+                                    <li><a href="../graphs/classes.html">Class Diagram</a></li>
+                                <li><a href="https://docs.woocommerce.com/">Documentation</a></li>
+                <li><a href="https://woocommerce.github.io/woocommerce-rest-api-docs/">REST API Docs</a></li>
+            </ul>
+        </nav>
+    </section>
+</header>
+<header class="phpdocumentor-header">
+    <section class="phpdocumentor-section">
+        <h1 class="phpdocumentor-title">WooCommerce Code Reference</h1>
+    </section>
+
+    <section class="phpdocumentor-section">
+        <div data-search-form class="phpdocumentor-search">
+            <label class="phpdocumentor-label">
+                <span class="visually-hidden">Search</span>
+                <input type="search" class="phpdocumentor-field phpdocumentor-search__field" placeholder="Loading..." disabled />
+            </label>
+        </div>
+        <div data-search-results class="phpdocumentor-search-results phpdocumentor-search-results--hidden">
+
+            <h2>Search results</h2>
+            <ul class="phpdocumentor-search-results__entries">
+
+            </ul>
+        </div>
+    </section>
+</header>
+<main class="phpdocumentor">
+    <div class="phpdocumentor-section">
+        <aside class="three phpdocumentor-columns phpdocumentor-sidebar">
+    
+    <h1 class="phpdocumentor-sidebar__category-header">Namespaces</h1>
+            <h2 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/default.html"><abbr title="\">Global</abbr></a></h2>
+                    <h3 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h3>
+            <ul class="phpdocumentor-list">
+                                    <li><a href="../namespaces/automattic-woocommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                            </ul>
+            
+        <h1 class="phpdocumentor-sidebar__category-header">Packages</h1>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceClasses.html"><abbr title="\WooCommerceClasses">WooCommerceClasses</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAbstracts.html"><abbr title="\WooCommerceAbstracts">WooCommerceAbstracts</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                            <li><a href="../packages/WooCommerce-Abstracts.html"><abbr title="\WooCommerce\Abstracts">Abstracts</abbr></a></li>
+                            <li><a href="../packages/WooCommerce-Admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                            <li><a href="../packages/WooCommerce-Views.html"><abbr title="\WooCommerce\Views">Views</abbr></a></li>
+                            <li><a href="../packages/WooCommerce-admin.html"><abbr title="\WooCommerce\admin">admin</abbr></a></li>
+                            <li><a href="../packages/WooCommerce-Classes.html"><abbr title="\WooCommerce\Classes">Classes</abbr></a></li>
+                            <li><a href="../packages/WooCommerce-Reports.html"><abbr title="\WooCommerce\Reports">Reports</abbr></a></li>
+                            <li><a href="../packages/WooCommerce-CLI.html"><abbr title="\WooCommerce\CLI">CLI</abbr></a></li>
+                            <li><a href="../packages/WooCommerce-l10n.html"><abbr title="\WooCommerce\l10n">l10n</abbr></a></li>
+                            <li><a href="../packages/WooCommerce-Cli.html"><abbr title="\WooCommerce\Cli">Cli</abbr></a></li>
+                            <li><a href="../packages/WooCommerce-DataStores.html"><abbr title="\WooCommerce\DataStores">DataStores</abbr></a></li>
+                            <li><a href="../packages/WooCommerce-DataStore.html"><abbr title="\WooCommerce\DataStore">DataStore</abbr></a></li>
+                            <li><a href="../packages/WooCommerce-Emails.html"><abbr title="\WooCommerce\Emails">Emails</abbr></a></li>
+                            <li><a href="../packages/WooCommerce-Gateways.html"><abbr title="\WooCommerce\Gateways">Gateways</abbr></a></li>
+                            <li><a href="../packages/WooCommerce-Integrations.html"><abbr title="\WooCommerce\Integrations">Integrations</abbr></a></li>
+                            <li><a href="../packages/WooCommerce-LogHandlers.html"><abbr title="\WooCommerce\LogHandlers">LogHandlers</abbr></a></li>
+                            <li><a href="../packages/WooCommerce-PaymentTokens.html"><abbr title="\WooCommerce\PaymentTokens">PaymentTokens</abbr></a></li>
+                            <li><a href="../packages/WooCommerce-Shipping.html"><abbr title="\WooCommerce\Shipping">Shipping</abbr></a></li>
+                            <li><a href="../packages/WooCommerce-Tracks.html"><abbr title="\WooCommerce\Tracks">Tracks</abbr></a></li>
+                            <li><a href="../packages/WooCommerce-Functions.html"><abbr title="\WooCommerce\Functions">Functions</abbr></a></li>
+                            <li><a href="../packages/WooCommerce-WooCommerce.html"><abbr title="\WooCommerce\WooCommerce">WooCommerce</abbr></a></li>
+                            <li><a href="../packages/WooCommerce-Blocks.html"><abbr title="\WooCommerce\Blocks">Blocks</abbr></a></li>
+                            <li><a href="../packages/WooCommerce-Uninstaller.html"><abbr title="\WooCommerce\Uninstaller">Uninstaller</abbr></a></li>
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdmin.html"><abbr title="\WooCommerceAdmin">WooCommerceAdmin</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdminCustomize.html"><abbr title="\WooCommerceAdminCustomize">WooCommerceAdminCustomize</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdminMetaBoxes.html"><abbr title="\WooCommerceAdminMetaBoxes">WooCommerceAdminMetaBoxes</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceadmin.html"><abbr title="\WooCommerceadmin">WooCommerceadmin</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdminReports.html"><abbr title="\WooCommerceAdminReports">WooCommerceAdminReports</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdminSystemStatus.html"><abbr title="\WooCommerceAdminSystemStatus">WooCommerceAdminSystemStatus</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/Default.html"><abbr title="\Default">Default</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceHelper.html"><abbr title="\WooCommerceHelper">WooCommerceHelper</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdminImporters.html"><abbr title="\WooCommerceAdminImporters">WooCommerceAdminImporters</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceTemplates.html"><abbr title="\WooCommerceTemplates">WooCommerceTemplates</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdminReporting.html"><abbr title="\WooCommerceAdminReporting">WooCommerceAdminReporting</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdminShipping.html"><abbr title="\WooCommerceAdminShipping">WooCommerceAdminShipping</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdminSettings.html"><abbr title="\WooCommerceAdminSettings">WooCommerceAdminSettings</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdminWebhooksViews.html"><abbr title="\WooCommerceAdminWebhooksViews">WooCommerceAdminWebhooksViews</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/Settings.html"><abbr title="\Settings">Settings</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdminExport.html"><abbr title="\WooCommerceAdminExport">WooCommerceAdminExport</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdminLogs.html"><abbr title="\WooCommerceAdminLogs">WooCommerceAdminLogs</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceViews.html"><abbr title="\WooCommerceViews">WooCommerceViews</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/admin.html"><abbr title="\admin">admin</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdminFunctions.html"><abbr title="\WooCommerceAdminFunctions">WooCommerceAdminFunctions</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAPI.html"><abbr title="\WooCommerceAPI">WooCommerceAPI</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceClassesProducts.html"><abbr title="\WooCommerceClassesProducts">WooCommerceClassesProducts</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceClassesEmails.html"><abbr title="\WooCommerceClassesEmails">WooCommerceClassesEmails</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceClassesEmbed.html"><abbr title="\WooCommerceClassesEmbed">WooCommerceClassesEmbed</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceClassesIntegrations.html"><abbr title="\WooCommerceClassesIntegrations">WooCommerceClassesIntegrations</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceClassesPayment.html"><abbr title="\WooCommerceClassesPayment">WooCommerceClassesPayment</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceClassesData.html"><abbr title="\WooCommerceClassesData">WooCommerceClassesData</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                            <li><a href="../packages/WooCommerceClassesData-Store.html"><abbr title="\WooCommerceClassesData\Store">Store</abbr></a></li>
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceClassesShipping.html"><abbr title="\WooCommerceClassesShipping">WooCommerceClassesShipping</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceWebhooks.html"><abbr title="\WooCommerceWebhooks">WooCommerceWebhooks</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/data.html"><abbr title="\data">data</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                            <li><a href="../packages/data-stores.html"><abbr title="\data\stores">stores</abbr></a></li>
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceExport.html"><abbr title="\WooCommerceExport">WooCommerceExport</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommercePayPal.html"><abbr title="\WooCommercePayPal">WooCommercePayPal</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceImport.html"><abbr title="\WooCommerceImport">WooCommerceImport</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceIntegrations.html"><abbr title="\WooCommerceIntegrations">WooCommerceIntegrations</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceInterfaces.html"><abbr title="\WooCommerceInterfaces">WooCommerceInterfaces</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceInterface.html"><abbr title="\WooCommerceInterface">WooCommerceInterface</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceClassesLog.html"><abbr title="\WooCommerceClassesLog">WooCommerceClassesLog</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                            <li><a href="../packages/WooCommerceClassesLog-Handlers.html"><abbr title="\WooCommerceClassesLog\Handlers">Handlers</abbr></a></li>
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommercePaymentTokens.html"><abbr title="\WooCommercePaymentTokens">WooCommercePaymentTokens</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceShortcodesCart.html"><abbr title="\WooCommerceShortcodesCart">WooCommerceShortcodesCart</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceShortcodesCheckout.html"><abbr title="\WooCommerceShortcodesCheckout">WooCommerceShortcodesCheckout</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceShortcodesMy.html"><abbr title="\WooCommerceShortcodesMy">WooCommerceShortcodesMy</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                            <li><a href="../packages/WooCommerceShortcodesMy-Account.html"><abbr title="\WooCommerceShortcodesMy\Account">Account</abbr></a></li>
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceShortcodesOrder.html"><abbr title="\WooCommerceShortcodesOrder">WooCommerceShortcodesOrder</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                            <li><a href="../packages/WooCommerceShortcodesOrder-Tracking.html"><abbr title="\WooCommerceShortcodesOrder\Tracking">Tracking</abbr></a></li>
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceShortcodes.html"><abbr title="\WooCommerceShortcodes">WooCommerceShortcodes</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceTraits.html"><abbr title="\WooCommerceTraits">WooCommerceTraits</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceClassesWalkers.html"><abbr title="\WooCommerceClassesWalkers">WooCommerceClassesWalkers</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceFunctions.html"><abbr title="\WooCommerceFunctions">WooCommerceFunctions</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceWCCOM.html"><abbr title="\WooCommerceWCCOM">WooCommerceWCCOM</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                            <li><a href="../packages/WooCommerceWCCOM-SiteREST.html"><abbr title="\WooCommerceWCCOM\SiteREST">SiteREST</abbr></a></li>
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceWidgets.html"><abbr title="\WooCommerceWidgets">WooCommerceWidgets</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceAdmin.html"><abbr title="\WoocommerceAdmin">WoocommerceAdmin</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WC.html"><abbr title="\WC">WC</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                            <li><a href="../packages/WC-Admin.html"><abbr title="\WC\Admin">Admin</abbr></a></li>
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdminTemplatesEmailsHTML.html"><abbr title="\WooCommerceAdminTemplatesEmailsHTML">WooCommerceAdminTemplatesEmailsHTML</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdminAPI.html"><abbr title="\WooCommerceAdminAPI">WooCommerceAdminAPI</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdminClasses.html"><abbr title="\WooCommerceAdminClasses">WooCommerceAdminClasses</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdminInterface.html"><abbr title="\WooCommerceAdminInterface">WooCommerceAdminInterface</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/Automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                            <li><a href="../packages/Automattic-WooCommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/AutomatticWooCommerceWCAdmin.html"><abbr title="\AutomatticWooCommerceWCAdmin">AutomatticWooCommerceWCAdmin</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceBlocks.html"><abbr title="\WooCommerceBlocks">WooCommerceBlocks</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/AutomatticWooCommerceBlocks.html"><abbr title="\AutomatticWooCommerceBlocks">AutomatticWooCommerceBlocks</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/AutomatticWooCommerceRestApi.html"><abbr title="\AutomatticWooCommerceRestApi">AutomatticWooCommerceRestApi</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/AutomatticWooCommerceUtilities.html"><abbr title="\AutomatticWooCommerceUtilities">AutomatticWooCommerceUtilities</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/AutomatticWooCommerce.html"><abbr title="\AutomatticWooCommerce">AutomatticWooCommerce</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceTemplatesAuth.html"><abbr title="\WooCommerceTemplatesAuth">WooCommerceTemplatesAuth</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceTemplatesEmails.html"><abbr title="\WooCommerceTemplatesEmails">WooCommerceTemplatesEmails</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceTemplatesEmailsHTML.html"><abbr title="\WooCommerceTemplatesEmailsHTML">WooCommerceTemplatesEmailsHTML</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceTemplatesEmailsPlain.html"><abbr title="\WooCommerceTemplatesEmailsPlain">WooCommerceTemplatesEmailsPlain</abbr></a></h2>
+        <ul class="phpdocumentor-list">
+                    </ul>
+        
+    <h1 class="phpdocumentor-sidebar__category-header">Reports</h1>
+    <h2 class="phpdocumentor-sidebar__root-package"><a href="../reports/deprecated.html">Deprecated</a></h2>
+    <h2 class="phpdocumentor-sidebar__root-package"><a href="../reports/errors.html">Errors</a></h2>
+    <h2 class="phpdocumentor-sidebar__root-package"><a href="../reports/markers.html">Markers</a></h2>
+</aside>
+
+        <div class="nine phpdocumentor-columns phpdocumentor-content">
+            <ul class="phpdocumentor-breadcrumbs">
+    <li><a href="../index.html">Home</a></li>
+                </ul>
+
+    <h2>wc-update-functions.php</h2>
+
+    
+        <h3>Table of Contents</h3>
+    <table class="phpdocumentor-table_of_contents">
+                            <tr>
+                <th class="phpdocumentor-heading"><a href="../namespaces/default.html#function_wc_update_200_file_paths"><abbr title="\wc_update_200_file_paths()">wc_update_200_file_paths()</abbr></a></th>
+                <td class="phpdocumentor-cell">Update file paths for 2.0</td>
+                <td class="phpdocumentor-cell"><a href=""><abbr title=""></abbr></a></td>
+            </tr>
+                    <tr>
+                <th class="phpdocumentor-heading"><a href="../namespaces/default.html#function_wc_update_200_permalinks"><abbr title="\wc_update_200_permalinks()">wc_update_200_permalinks()</abbr></a></th>
+                <td class="phpdocumentor-cell">Update permalinks for 2.0</td>
+                <td class="phpdocumentor-cell"><a href=""><abbr title=""></abbr></a></td>
+            </tr>
+                    <tr>
+                <th class="phpdocumentor-heading"><a href="../namespaces/default.html#function_wc_update_200_subcat_display"><abbr title="\wc_update_200_subcat_display()">wc_update_200_subcat_display()</abbr></a></th>
+                <td class="phpdocumentor-cell">Update sub-category display options for 2.0</td>
+                <td class="phpdocumentor-cell"><a href=""><abbr title=""></abbr></a></td>
+            </tr>
+                    <tr>
+                <th class="phpdocumentor-heading"><a href="../namespaces/default.html#function_wc_update_200_taxrates"><abbr title="\wc_update_200_taxrates()">wc_update_200_taxrates()</abbr></a></th>
+                <td class="phpdocumentor-cell">Update tax rates for 2.0</td>
+                <td class="phpdocumentor-cell"><a href=""><abbr title=""></abbr></a></td>
+            </tr>
+                    <tr>
+                <th class="phpdocumentor-heading"><a href="../namespaces/default.html#function_wc_update_200_line_items"><abbr title="\wc_update_200_line_items()">wc_update_200_line_items()</abbr></a></th>
+                <td class="phpdocumentor-cell">Update order item line items for 2.0</td>
+                <td class="phpdocumentor-cell"><a href=""><abbr title=""></abbr></a></td>
+            </tr>
+                    <tr>
+                <th class="phpdocumentor-heading"><a href="../namespaces/default.html#function_wc_update_200_images"><abbr title="\wc_update_200_images()">wc_update_200_images()</abbr></a></th>
+                <td class="phpdocumentor-cell">Update image settings for 2.0</td>
+                <td class="phpdocumentor-cell"><a href=""><abbr title=""></abbr></a></td>
+            </tr>
+                    <tr>
+                <th class="phpdocumentor-heading"><a href="../namespaces/default.html#function_wc_update_200_db_version"><abbr title="\wc_update_200_db_version()">wc_update_200_db_version()</abbr></a></th>
+                <td class="phpdocumentor-cell">Update DB version for 2.0</td>
+                <td class="phpdocumentor-cell"><a href=""><abbr title=""></abbr></a></td>
+            </tr>
+                    <tr>
+                <th class="phpdocumentor-heading"><a href="../namespaces/default.html#function_wc_update_209_brazillian_state"><abbr title="\wc_update_209_brazillian_state()">wc_update_209_brazillian_state()</abbr></a></th>
+                <td class="phpdocumentor-cell">Update Brazilian States for 2.0.9</td>
+                <td class="phpdocumentor-cell"><a href=""><abbr title=""></abbr></a></td>
+            </tr>
+                    <tr>
+                <th class="phpdocumentor-heading"><a href="../namespaces/default.html#function_wc_update_209_db_version"><abbr title="\wc_update_209_db_version()">wc_update_209_db_version()</abbr></a></th>
+                <td class="phpdocumentor-cell">Update DB version for 2.0.9</td>
+                <td class="phpdocumentor-cell"><a href=""><abbr title=""></abbr></a></td>
+            </tr>
+                    <tr>
+                <th class="phpdocumentor-heading"><a href="../namespaces/default.html#function_wc_update_210_remove_pages"><abbr title="\wc_update_210_remove_pages()">wc_update_210_remove_pages()</abbr></a></th>
+                <td class="phpdocumentor-cell">Remove pages for 2.1</td>
+                <td class="phpdocumentor-cell"><a href=""><abbr title=""></abbr></a></td>
+            </tr>
+                    <tr>
+                <th class="phpdocumentor-heading"><a href="../namespaces/default.html#function_wc_update_210_file_paths"><abbr title="\wc_update_210_file_paths()">wc_update_210_file_paths()</abbr></a></th>
+                <td class="phpdocumentor-cell">Update file paths to support multiple files for 2.1</td>
+                <td class="phpdocumentor-cell"><a href=""><abbr title=""></abbr></a></td>
+            </tr>
+                    <tr>
+                <th class="phpdocumentor-heading"><a href="../namespaces/default.html#function_wc_update_210_db_version"><abbr title="\wc_update_210_db_version()">wc_update_210_db_version()</abbr></a></th>
+                <td class="phpdocumentor-cell">Update DB version for 2.1</td>
+                <td class="phpdocumentor-cell"><a href=""><abbr title=""></abbr></a></td>
+            </tr>
+                    <tr>
+                <th class="phpdocumentor-heading"><a href="../namespaces/default.html#function_wc_update_220_shipping"><abbr title="\wc_update_220_shipping()">wc_update_220_shipping()</abbr></a></th>
+                <td class="phpdocumentor-cell">Update shipping options for 2.2</td>
+                <td class="phpdocumentor-cell"><a href=""><abbr title=""></abbr></a></td>
+            </tr>
+                    <tr>
+                <th class="phpdocumentor-heading"><a href="../namespaces/default.html#function_wc_update_220_order_status"><abbr title="\wc_update_220_order_status()">wc_update_220_order_status()</abbr></a></th>
+                <td class="phpdocumentor-cell">Update order statuses for 2.2</td>
+                <td class="phpdocumentor-cell"><a href=""><abbr title=""></abbr></a></td>
+            </tr>
+                    <tr>
+                <th class="phpdocumentor-heading"><a href="../namespaces/default.html#function_wc_update_220_variations"><abbr title="\wc_update_220_variations()">wc_update_220_variations()</abbr></a></th>
+                <td class="phpdocumentor-cell">Update variations for 2.2</td>
+                <td class="phpdocumentor-cell"><a href=""><abbr title=""></abbr></a></td>
+            </tr>
+                    <tr>
+                <th class="phpdocumentor-heading"><a href="../namespaces/default.html#function_wc_update_220_attributes"><abbr title="\wc_update_220_attributes()">wc_update_220_attributes()</abbr></a></th>
+                <td class="phpdocumentor-cell">Update attributes for 2.2</td>
+                <td class="phpdocumentor-cell"><a href=""><abbr title=""></abbr></a></td>
+            </tr>
+                    <tr>
+                <th class="phpdocumentor-heading"><a href="../namespaces/default.html#function_wc_update_220_db_version"><abbr title="\wc_update_220_db_version()">wc_update_220_db_version()</abbr></a></th>
+                <td class="phpdocumentor-cell">Update DB version for 2.2</td>
+                <td class="phpdocumentor-cell"><a href=""><abbr title=""></abbr></a></td>
+            </tr>
+                    <tr>
+                <th class="phpdocumentor-heading"><a href="../namespaces/default.html#function_wc_update_230_options"><abbr title="\wc_update_230_options()">wc_update_230_options()</abbr></a></th>
+                <td class="phpdocumentor-cell">Update options for 2.3</td>
+                <td class="phpdocumentor-cell"><a href=""><abbr title=""></abbr></a></td>
+            </tr>
+                    <tr>
+                <th class="phpdocumentor-heading"><a href="../namespaces/default.html#function_wc_update_230_db_version"><abbr title="\wc_update_230_db_version()">wc_update_230_db_version()</abbr></a></th>
+                <td class="phpdocumentor-cell">Update DB version for 2.3</td>
+                <td class="phpdocumentor-cell"><a href=""><abbr title=""></abbr></a></td>
+            </tr>
+                    <tr>
+                <th class="phpdocumentor-heading"><a href="../namespaces/default.html#function_wc_update_240_options"><abbr title="\wc_update_240_options()">wc_update_240_options()</abbr></a></th>
+                <td class="phpdocumentor-cell">Update calc discount options for 2.4</td>
+                <td class="phpdocumentor-cell"><a href=""><abbr title=""></abbr></a></td>
+            </tr>
+                    <tr>
+                <th class="phpdocumentor-heading"><a href="../namespaces/default.html#function_wc_update_240_shipping_methods"><abbr title="\wc_update_240_shipping_methods()">wc_update_240_shipping_methods()</abbr></a></th>
+                <td class="phpdocumentor-cell">Update shipping methods for 2.4</td>
+                <td class="phpdocumentor-cell"><a href=""><abbr title=""></abbr></a></td>
+            </tr>
+                    <tr>
+                <th class="phpdocumentor-heading"><a href="../namespaces/default.html#function_wc_update_240_api_keys"><abbr title="\wc_update_240_api_keys()">wc_update_240_api_keys()</abbr></a></th>
+                <td class="phpdocumentor-cell">Update API keys for 2.4</td>
+                <td class="phpdocumentor-cell"><a href=""><abbr title=""></abbr></a></td>
+            </tr>
+                    <tr>
+                <th class="phpdocumentor-heading"><a href="../namespaces/default.html#function_wc_update_240_webhooks"><abbr title="\wc_update_240_webhooks()">wc_update_240_webhooks()</abbr></a></th>
+                <td class="phpdocumentor-cell">Update webhooks for 2.4</td>
+                <td class="phpdocumentor-cell"><a href=""><abbr title=""></abbr></a></td>
+            </tr>
+                    <tr>
+                <th class="phpdocumentor-heading"><a href="../namespaces/default.html#function_wc_update_240_refunds"><abbr title="\wc_update_240_refunds()">wc_update_240_refunds()</abbr></a></th>
+                <td class="phpdocumentor-cell">Update refunds for 2.4</td>
+                <td class="phpdocumentor-cell"><a href=""><abbr title=""></abbr></a></td>
+            </tr>
+                    <tr>
+                <th class="phpdocumentor-heading"><a href="../namespaces/default.html#function_wc_update_240_db_version"><abbr title="\wc_update_240_db_version()">wc_update_240_db_version()</abbr></a></th>
+                <td class="phpdocumentor-cell">Update DB version for 2.4</td>
+                <td class="phpdocumentor-cell"><a href=""><abbr title=""></abbr></a></td>
+            </tr>
+                    <tr>
+                <th class="phpdocumentor-heading"><a href="../namespaces/default.html#function_wc_update_241_variations"><abbr title="\wc_update_241_variations()">wc_update_241_variations()</abbr></a></th>
+                <td class="phpdocumentor-cell">Update variations for 2.4.1</td>
+                <td class="phpdocumentor-cell"><a href=""><abbr title=""></abbr></a></td>
+            </tr>
+                    <tr>
+                <th class="phpdocumentor-heading"><a href="../namespaces/default.html#function_wc_update_241_db_version"><abbr title="\wc_update_241_db_version()">wc_update_241_db_version()</abbr></a></th>
+                <td class="phpdocumentor-cell">Update DB version for 2.4.1</td>
+                <td class="phpdocumentor-cell"><a href=""><abbr title=""></abbr></a></td>
+            </tr>
+                    <tr>
+                <th class="phpdocumentor-heading"><a href="../namespaces/default.html#function_wc_update_250_currency"><abbr title="\wc_update_250_currency()">wc_update_250_currency()</abbr></a></th>
+                <td class="phpdocumentor-cell">Update currency settings for 2.5</td>
+                <td class="phpdocumentor-cell"><a href=""><abbr title=""></abbr></a></td>
+            </tr>
+                    <tr>
+                <th class="phpdocumentor-heading"><a href="../namespaces/default.html#function_wc_update_250_db_version"><abbr title="\wc_update_250_db_version()">wc_update_250_db_version()</abbr></a></th>
+                <td class="phpdocumentor-cell">Update DB version for 2.5</td>
+                <td class="phpdocumentor-cell"><a href=""><abbr title=""></abbr></a></td>
+            </tr>
+                    <tr>
+                <th class="phpdocumentor-heading"><a href="../namespaces/default.html#function_wc_update_260_options"><abbr title="\wc_update_260_options()">wc_update_260_options()</abbr></a></th>
+                <td class="phpdocumentor-cell">Update ship to countries options for 2.6</td>
+                <td class="phpdocumentor-cell"><a href=""><abbr title=""></abbr></a></td>
+            </tr>
+                    <tr>
+                <th class="phpdocumentor-heading"><a href="../namespaces/default.html#function_wc_update_260_termmeta"><abbr title="\wc_update_260_termmeta()">wc_update_260_termmeta()</abbr></a></th>
+                <td class="phpdocumentor-cell">Update term meta for 2.6</td>
+                <td class="phpdocumentor-cell"><a href=""><abbr title=""></abbr></a></td>
+            </tr>
+                    <tr>
+                <th class="phpdocumentor-heading"><a href="../namespaces/default.html#function_wc_update_260_zones"><abbr title="\wc_update_260_zones()">wc_update_260_zones()</abbr></a></th>
+                <td class="phpdocumentor-cell">Update zones for 2.6</td>
+                <td class="phpdocumentor-cell"><a href=""><abbr title=""></abbr></a></td>
+            </tr>
+                    <tr>
+                <th class="phpdocumentor-heading"><a href="../namespaces/default.html#function_wc_update_260_zone_methods"><abbr title="\wc_update_260_zone_methods()">wc_update_260_zone_methods()</abbr></a></th>
+                <td class="phpdocumentor-cell">Update zone methods for 2.6</td>
+                <td class="phpdocumentor-cell"><a href=""><abbr title=""></abbr></a></td>
+            </tr>
+                    <tr>
+                <th class="phpdocumentor-heading"><a href="../namespaces/default.html#function_wc_update_260_refunds"><abbr title="\wc_update_260_refunds()">wc_update_260_refunds()</abbr></a></th>
+                <td class="phpdocumentor-cell">Update refunds for 2.6</td>
+                <td class="phpdocumentor-cell"><a href=""><abbr title=""></abbr></a></td>
+            </tr>
+                    <tr>
+                <th class="phpdocumentor-heading"><a href="../namespaces/default.html#function_wc_update_260_db_version"><abbr title="\wc_update_260_db_version()">wc_update_260_db_version()</abbr></a></th>
+                <td class="phpdocumentor-cell">Update DB version for 2.6</td>
+                <td class="phpdocumentor-cell"><a href=""><abbr title=""></abbr></a></td>
+            </tr>
+                    <tr>
+                <th class="phpdocumentor-heading"><a href="../namespaces/default.html#function_wc_update_300_webhooks"><abbr title="\wc_update_300_webhooks()">wc_update_300_webhooks()</abbr></a></th>
+                <td class="phpdocumentor-cell">Update webhooks for 3.0</td>
+                <td class="phpdocumentor-cell"><a href=""><abbr title=""></abbr></a></td>
+            </tr>
+                    <tr>
+                <th class="phpdocumentor-heading"><a href="../namespaces/default.html#function_wc_update_300_comment_type_index"><abbr title="\wc_update_300_comment_type_index()">wc_update_300_comment_type_index()</abbr></a></th>
+                <td class="phpdocumentor-cell">Add an index to the field comment_type to improve the response time of the query
+used by WC_Comments::wp_count_comments() to get the number of comments by type.</td>
+                <td class="phpdocumentor-cell"><a href=""><abbr title=""></abbr></a></td>
+            </tr>
+                    <tr>
+                <th class="phpdocumentor-heading"><a href="../namespaces/default.html#function_wc_update_300_grouped_products"><abbr title="\wc_update_300_grouped_products()">wc_update_300_grouped_products()</abbr></a></th>
+                <td class="phpdocumentor-cell">Update grouped products for 3.0</td>
+                <td class="phpdocumentor-cell"><a href=""><abbr title=""></abbr></a></td>
+            </tr>
+                    <tr>
+                <th class="phpdocumentor-heading"><a href="../namespaces/default.html#function_wc_update_300_settings"><abbr title="\wc_update_300_settings()">wc_update_300_settings()</abbr></a></th>
+                <td class="phpdocumentor-cell">Update shipping tax classes for 3.0</td>
+                <td class="phpdocumentor-cell"><a href=""><abbr title=""></abbr></a></td>
+            </tr>
+                    <tr>
+                <th class="phpdocumentor-heading"><a href="../namespaces/default.html#function_wc_update_300_product_visibility"><abbr title="\wc_update_300_product_visibility()">wc_update_300_product_visibility()</abbr></a></th>
+                <td class="phpdocumentor-cell">Convert meta values into term for product visibility.</td>
+                <td class="phpdocumentor-cell"><a href=""><abbr title=""></abbr></a></td>
+            </tr>
+                    <tr>
+                <th class="phpdocumentor-heading"><a href="../namespaces/default.html#function_wc_update_300_db_version"><abbr title="\wc_update_300_db_version()">wc_update_300_db_version()</abbr></a></th>
+                <td class="phpdocumentor-cell">Update DB Version.</td>
+                <td class="phpdocumentor-cell"><a href=""><abbr title=""></abbr></a></td>
+            </tr>
+                    <tr>
+                <th class="phpdocumentor-heading"><a href="../namespaces/default.html#function_wc_update_310_downloadable_products"><abbr title="\wc_update_310_downloadable_products()">wc_update_310_downloadable_products()</abbr></a></th>
+                <td class="phpdocumentor-cell">Add an index to the downloadable product permissions table to improve performance of update_user_by_order_id.</td>
+                <td class="phpdocumentor-cell"><a href=""><abbr title=""></abbr></a></td>
+            </tr>
+                    <tr>
+                <th class="phpdocumentor-heading"><a href="../namespaces/default.html#function_wc_update_310_old_comments"><abbr title="\wc_update_310_old_comments()">wc_update_310_old_comments()</abbr></a></th>
+                <td class="phpdocumentor-cell">Find old order notes and ensure they have the correct type for exclusion.</td>
+                <td class="phpdocumentor-cell"><a href=""><abbr title=""></abbr></a></td>
+            </tr>
+                    <tr>
+                <th class="phpdocumentor-heading"><a href="../namespaces/default.html#function_wc_update_310_db_version"><abbr title="\wc_update_310_db_version()">wc_update_310_db_version()</abbr></a></th>
+                <td class="phpdocumentor-cell">Update DB Version.</td>
+                <td class="phpdocumentor-cell"><a href=""><abbr title=""></abbr></a></td>
+            </tr>
+                    <tr>
+                <th class="phpdocumentor-heading"><a href="../namespaces/default.html#function_wc_update_312_shop_manager_capabilities"><abbr title="\wc_update_312_shop_manager_capabilities()">wc_update_312_shop_manager_capabilities()</abbr></a></th>
+                <td class="phpdocumentor-cell">Update shop_manager capabilities.</td>
+                <td class="phpdocumentor-cell"><a href=""><abbr title=""></abbr></a></td>
+            </tr>
+                    <tr>
+                <th class="phpdocumentor-heading"><a href="../namespaces/default.html#function_wc_update_312_db_version"><abbr title="\wc_update_312_db_version()">wc_update_312_db_version()</abbr></a></th>
+                <td class="phpdocumentor-cell">Update DB Version.</td>
+                <td class="phpdocumentor-cell"><a href=""><abbr title=""></abbr></a></td>
+            </tr>
+                    <tr>
+                <th class="phpdocumentor-heading"><a href="../namespaces/default.html#function_wc_update_320_mexican_states"><abbr title="\wc_update_320_mexican_states()">wc_update_320_mexican_states()</abbr></a></th>
+                <td class="phpdocumentor-cell">Update state codes for Mexico.</td>
+                <td class="phpdocumentor-cell"><a href=""><abbr title=""></abbr></a></td>
+            </tr>
+                    <tr>
+                <th class="phpdocumentor-heading"><a href="../namespaces/default.html#function_wc_update_320_db_version"><abbr title="\wc_update_320_db_version()">wc_update_320_db_version()</abbr></a></th>
+                <td class="phpdocumentor-cell">Update DB Version.</td>
+                <td class="phpdocumentor-cell"><a href=""><abbr title=""></abbr></a></td>
+            </tr>
+                    <tr>
+                <th class="phpdocumentor-heading"><a href="../namespaces/default.html#function_wc_update_330_image_options"><abbr title="\wc_update_330_image_options()">wc_update_330_image_options()</abbr></a></th>
+                <td class="phpdocumentor-cell">Update image settings to use new aspect ratios and widths.</td>
+                <td class="phpdocumentor-cell"><a href=""><abbr title=""></abbr></a></td>
+            </tr>
+                    <tr>
+                <th class="phpdocumentor-heading"><a href="../namespaces/default.html#function_wc_update_330_webhooks"><abbr title="\wc_update_330_webhooks()">wc_update_330_webhooks()</abbr></a></th>
+                <td class="phpdocumentor-cell">Migrate webhooks from post type to CRUD.</td>
+                <td class="phpdocumentor-cell"><a href=""><abbr title=""></abbr></a></td>
+            </tr>
+                    <tr>
+                <th class="phpdocumentor-heading"><a href="../namespaces/default.html#function_wc_update_330_set_default_product_cat"><abbr title="\wc_update_330_set_default_product_cat()">wc_update_330_set_default_product_cat()</abbr></a></th>
+                <td class="phpdocumentor-cell">Assign default cat to all products with no cats.</td>
+                <td class="phpdocumentor-cell"><a href=""><abbr title=""></abbr></a></td>
+            </tr>
+                    <tr>
+                <th class="phpdocumentor-heading"><a href="../namespaces/default.html#function_wc_update_330_product_stock_status"><abbr title="\wc_update_330_product_stock_status()">wc_update_330_product_stock_status()</abbr></a></th>
+                <td class="phpdocumentor-cell">Update product stock status to use the new onbackorder status.</td>
+                <td class="phpdocumentor-cell"><a href=""><abbr title=""></abbr></a></td>
+            </tr>
+                    <tr>
+                <th class="phpdocumentor-heading"><a href="../namespaces/default.html#function_wc_update_330_clear_transients"><abbr title="\wc_update_330_clear_transients()">wc_update_330_clear_transients()</abbr></a></th>
+                <td class="phpdocumentor-cell">Clear addons page transients</td>
+                <td class="phpdocumentor-cell"><a href=""><abbr title=""></abbr></a></td>
+            </tr>
+                    <tr>
+                <th class="phpdocumentor-heading"><a href="../namespaces/default.html#function_wc_update_330_set_paypal_sandbox_credentials"><abbr title="\wc_update_330_set_paypal_sandbox_credentials()">wc_update_330_set_paypal_sandbox_credentials()</abbr></a></th>
+                <td class="phpdocumentor-cell">Set PayPal&#039;s sandbox credentials.</td>
+                <td class="phpdocumentor-cell"><a href=""><abbr title=""></abbr></a></td>
+            </tr>
+                    <tr>
+                <th class="phpdocumentor-heading"><a href="../namespaces/default.html#function_wc_update_330_db_version"><abbr title="\wc_update_330_db_version()">wc_update_330_db_version()</abbr></a></th>
+                <td class="phpdocumentor-cell">Update DB Version.</td>
+                <td class="phpdocumentor-cell"><a href=""><abbr title=""></abbr></a></td>
+            </tr>
+                    <tr>
+                <th class="phpdocumentor-heading"><a href="../namespaces/default.html#function_wc_update_340_states"><abbr title="\wc_update_340_states()">wc_update_340_states()</abbr></a></th>
+                <td class="phpdocumentor-cell">Update state codes for Ireland and BD.</td>
+                <td class="phpdocumentor-cell"><a href=""><abbr title=""></abbr></a></td>
+            </tr>
+                    <tr>
+                <th class="phpdocumentor-heading"><a href="../namespaces/default.html#function_wc_update_340_state"><abbr title="\wc_update_340_state()">wc_update_340_state()</abbr></a></th>
+                <td class="phpdocumentor-cell">Update next state in the queue.</td>
+                <td class="phpdocumentor-cell"><a href=""><abbr title=""></abbr></a></td>
+            </tr>
+                    <tr>
+                <th class="phpdocumentor-heading"><a href="../namespaces/default.html#function_wc_update_340_last_active"><abbr title="\wc_update_340_last_active()">wc_update_340_last_active()</abbr></a></th>
+                <td class="phpdocumentor-cell">Set last active prop for users.</td>
+                <td class="phpdocumentor-cell"><a href=""><abbr title=""></abbr></a></td>
+            </tr>
+                    <tr>
+                <th class="phpdocumentor-heading"><a href="../namespaces/default.html#function_wc_update_340_db_version"><abbr title="\wc_update_340_db_version()">wc_update_340_db_version()</abbr></a></th>
+                <td class="phpdocumentor-cell">Update DB Version.</td>
+                <td class="phpdocumentor-cell"><a href=""><abbr title=""></abbr></a></td>
+            </tr>
+                    <tr>
+                <th class="phpdocumentor-heading"><a href="../namespaces/default.html#function_wc_update_343_cleanup_foreign_keys"><abbr title="\wc_update_343_cleanup_foreign_keys()">wc_update_343_cleanup_foreign_keys()</abbr></a></th>
+                <td class="phpdocumentor-cell">Remove duplicate foreign keys</td>
+                <td class="phpdocumentor-cell"><a href=""><abbr title=""></abbr></a></td>
+            </tr>
+                    <tr>
+                <th class="phpdocumentor-heading"><a href="../namespaces/default.html#function_wc_update_343_db_version"><abbr title="\wc_update_343_db_version()">wc_update_343_db_version()</abbr></a></th>
+                <td class="phpdocumentor-cell">Update DB version.</td>
+                <td class="phpdocumentor-cell"><a href=""><abbr title=""></abbr></a></td>
+            </tr>
+                    <tr>
+                <th class="phpdocumentor-heading"><a href="../namespaces/default.html#function_wc_update_344_recreate_roles"><abbr title="\wc_update_344_recreate_roles()">wc_update_344_recreate_roles()</abbr></a></th>
+                <td class="phpdocumentor-cell">Recreate user roles so existing users will get the new capabilities.</td>
+                <td class="phpdocumentor-cell"><a href=""><abbr title=""></abbr></a></td>
+            </tr>
+                    <tr>
+                <th class="phpdocumentor-heading"><a href="../namespaces/default.html#function_wc_update_344_db_version"><abbr title="\wc_update_344_db_version()">wc_update_344_db_version()</abbr></a></th>
+                <td class="phpdocumentor-cell">Update DB version.</td>
+                <td class="phpdocumentor-cell"><a href=""><abbr title=""></abbr></a></td>
+            </tr>
+                    <tr>
+                <th class="phpdocumentor-heading"><a href="../namespaces/default.html#function_wc_update_350_reviews_comment_type"><abbr title="\wc_update_350_reviews_comment_type()">wc_update_350_reviews_comment_type()</abbr></a></th>
+                <td class="phpdocumentor-cell">Set the comment type to &#039;review&#039; for product reviews that don&#039;t have a comment type.</td>
+                <td class="phpdocumentor-cell"><a href=""><abbr title=""></abbr></a></td>
+            </tr>
+                    <tr>
+                <th class="phpdocumentor-heading"><a href="../namespaces/default.html#function_wc_update_350_db_version"><abbr title="\wc_update_350_db_version()">wc_update_350_db_version()</abbr></a></th>
+                <td class="phpdocumentor-cell">Update DB Version.</td>
+                <td class="phpdocumentor-cell"><a href=""><abbr title=""></abbr></a></td>
+            </tr>
+                    <tr>
+                <th class="phpdocumentor-heading"><a href="../namespaces/default.html#function_wc_update_352_drop_download_log_fk"><abbr title="\wc_update_352_drop_download_log_fk()">wc_update_352_drop_download_log_fk()</abbr></a></th>
+                <td class="phpdocumentor-cell">Drop the fk_wc_download_log_permission_id FK as we use a new one with the table and blog prefix for MS compatability.</td>
+                <td class="phpdocumentor-cell"><a href=""><abbr title=""></abbr></a></td>
+            </tr>
+                    <tr>
+                <th class="phpdocumentor-heading"><a href="../namespaces/default.html#function_wc_update_354_modify_shop_manager_caps"><abbr title="\wc_update_354_modify_shop_manager_caps()">wc_update_354_modify_shop_manager_caps()</abbr></a></th>
+                <td class="phpdocumentor-cell">Remove edit_user capabilities from shop managers and use &quot;translated&quot; capabilities instead.</td>
+                <td class="phpdocumentor-cell"><a href=""><abbr title=""></abbr></a></td>
+            </tr>
+                    <tr>
+                <th class="phpdocumentor-heading"><a href="../namespaces/default.html#function_wc_update_354_db_version"><abbr title="\wc_update_354_db_version()">wc_update_354_db_version()</abbr></a></th>
+                <td class="phpdocumentor-cell">Update DB Version.</td>
+                <td class="phpdocumentor-cell"><a href=""><abbr title=""></abbr></a></td>
+            </tr>
+                    <tr>
+                <th class="phpdocumentor-heading"><a href="../namespaces/default.html#function_wc_update_360_product_lookup_tables"><abbr title="\wc_update_360_product_lookup_tables()">wc_update_360_product_lookup_tables()</abbr></a></th>
+                <td class="phpdocumentor-cell">Update product lookup tables in bulk.</td>
+                <td class="phpdocumentor-cell"><a href=""><abbr title=""></abbr></a></td>
+            </tr>
+                    <tr>
+                <th class="phpdocumentor-heading"><a href="../namespaces/default.html#function_wc_update_360_term_meta"><abbr title="\wc_update_360_term_meta()">wc_update_360_term_meta()</abbr></a></th>
+                <td class="phpdocumentor-cell">Renames ordering meta to be consistent across taxonomies.</td>
+                <td class="phpdocumentor-cell"><a href=""><abbr title=""></abbr></a></td>
+            </tr>
+                    <tr>
+                <th class="phpdocumentor-heading"><a href="../namespaces/default.html#function_wc_update_360_downloadable_product_permissions_index"><abbr title="\wc_update_360_downloadable_product_permissions_index()">wc_update_360_downloadable_product_permissions_index()</abbr></a></th>
+                <td class="phpdocumentor-cell">Add new user_order_remaining_expires to speed up user download permission fetching.</td>
+                <td class="phpdocumentor-cell"><a href=""><abbr title=""></abbr></a></td>
+            </tr>
+                    <tr>
+                <th class="phpdocumentor-heading"><a href="../namespaces/default.html#function_wc_update_360_db_version"><abbr title="\wc_update_360_db_version()">wc_update_360_db_version()</abbr></a></th>
+                <td class="phpdocumentor-cell">Update DB Version.</td>
+                <td class="phpdocumentor-cell"><a href=""><abbr title=""></abbr></a></td>
+            </tr>
+                    <tr>
+                <th class="phpdocumentor-heading"><a href="../namespaces/default.html#function_wc_update_370_tax_rate_classes"><abbr title="\wc_update_370_tax_rate_classes()">wc_update_370_tax_rate_classes()</abbr></a></th>
+                <td class="phpdocumentor-cell">Put tax classes into a DB table.</td>
+                <td class="phpdocumentor-cell"><a href=""><abbr title=""></abbr></a></td>
+            </tr>
+                    <tr>
+                <th class="phpdocumentor-heading"><a href="../namespaces/default.html#function_wc_update_370_mro_std_currency"><abbr title="\wc_update_370_mro_std_currency()">wc_update_370_mro_std_currency()</abbr></a></th>
+                <td class="phpdocumentor-cell">Update currency settings for 3.7.0</td>
+                <td class="phpdocumentor-cell"><a href=""><abbr title=""></abbr></a></td>
+            </tr>
+                    <tr>
+                <th class="phpdocumentor-heading"><a href="../namespaces/default.html#function_wc_update_370_db_version"><abbr title="\wc_update_370_db_version()">wc_update_370_db_version()</abbr></a></th>
+                <td class="phpdocumentor-cell">Update DB Version.</td>
+                <td class="phpdocumentor-cell"><a href=""><abbr title=""></abbr></a></td>
+            </tr>
+                    <tr>
+                <th class="phpdocumentor-heading"><a href="../namespaces/default.html#function_wc_update_390_move_maxmind_database"><abbr title="\wc_update_390_move_maxmind_database()">wc_update_390_move_maxmind_database()</abbr></a></th>
+                <td class="phpdocumentor-cell">We&#039;ve moved the MaxMind database to a new location, as per the TOS&#039; requirement that the database not
+be publicly accessible.</td>
+                <td class="phpdocumentor-cell"><a href=""><abbr title=""></abbr></a></td>
+            </tr>
+                    <tr>
+                <th class="phpdocumentor-heading"><a href="../namespaces/default.html#function_wc_update_390_change_geolocation_database_update_cron"><abbr title="\wc_update_390_change_geolocation_database_update_cron()">wc_update_390_change_geolocation_database_update_cron()</abbr></a></th>
+                <td class="phpdocumentor-cell">So that we can best meet MaxMind&#039;s TOS, the geolocation database update cron should run once per 15 days.</td>
+                <td class="phpdocumentor-cell"><a href=""><abbr title=""></abbr></a></td>
+            </tr>
+                    <tr>
+                <th class="phpdocumentor-heading"><a href="../namespaces/default.html#function_wc_update_390_db_version"><abbr title="\wc_update_390_db_version()">wc_update_390_db_version()</abbr></a></th>
+                <td class="phpdocumentor-cell">Update DB version.</td>
+                <td class="phpdocumentor-cell"><a href=""><abbr title=""></abbr></a></td>
+            </tr>
+                    <tr>
+                <th class="phpdocumentor-heading"><a href="../namespaces/default.html#function_wc_update_400_increase_size_of_column"><abbr title="\wc_update_400_increase_size_of_column()">wc_update_400_increase_size_of_column()</abbr></a></th>
+                <td class="phpdocumentor-cell">Increase column size</td>
+                <td class="phpdocumentor-cell"><a href=""><abbr title=""></abbr></a></td>
+            </tr>
+                    <tr>
+                <th class="phpdocumentor-heading"><a href="../namespaces/default.html#function_wc_update_400_reset_action_scheduler_migration_status"><abbr title="\wc_update_400_reset_action_scheduler_migration_status()">wc_update_400_reset_action_scheduler_migration_status()</abbr></a></th>
+                <td class="phpdocumentor-cell">Reset ActionScheduler migration status. Needs AS &gt;= 3.0 shipped with WC &gt;= 4.0.</td>
+                <td class="phpdocumentor-cell"><a href=""><abbr title=""></abbr></a></td>
+            </tr>
+                    <tr>
+                <th class="phpdocumentor-heading"><a href="../namespaces/default.html#function_wc_update_400_db_version"><abbr title="\wc_update_400_db_version()">wc_update_400_db_version()</abbr></a></th>
+                <td class="phpdocumentor-cell">Update DB version.</td>
+                <td class="phpdocumentor-cell"><a href=""><abbr title=""></abbr></a></td>
+            </tr>
+            </table>
+    
+    
+            <section>
+            <h3 class="phpdocumentor-functions__header">Functions</h3>
+                            <a id="function_wc_update_200_file_paths"></a>
+<article
+        class="
+            phpdocumentor-element
+            phpdocumentor-function
+            phpdocumentor-function--
+                    "
+>
+    <h4 class="phpdocumentor-function__name">wc_update_200_file_paths()</h4>
+
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html"><abbr title="woocommerce/includes/wc-update-functions.php">wc-update-functions.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">18</span>
+    </aside>
+
+        <p class="phpdocumentor-summary">Update file paths for 2.0</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility"></span>
+                                <span class="phpdocumentor-signature__name">wc_update_200_file_paths</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">void</span>
+    </code>
+
+    
+    
+        
+    
+</article>
+                            <a id="function_wc_update_200_permalinks"></a>
+<article
+        class="
+            phpdocumentor-element
+            phpdocumentor-function
+            phpdocumentor-function--
+                    "
+>
+    <h4 class="phpdocumentor-function__name">wc_update_200_permalinks()</h4>
+
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html"><abbr title="woocommerce/includes/wc-update-functions.php">wc-update-functions.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">47</span>
+    </aside>
+
+        <p class="phpdocumentor-summary">Update permalinks for 2.0</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility"></span>
+                                <span class="phpdocumentor-signature__name">wc_update_200_permalinks</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">void</span>
+    </code>
+
+    
+    
+        
+    
+</article>
+                            <a id="function_wc_update_200_subcat_display"></a>
+<article
+        class="
+            phpdocumentor-element
+            phpdocumentor-function
+            phpdocumentor-function--
+                    "
+>
+    <h4 class="phpdocumentor-function__name">wc_update_200_subcat_display()</h4>
+
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html"><abbr title="woocommerce/includes/wc-update-functions.php">wc-update-functions.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">91</span>
+    </aside>
+
+        <p class="phpdocumentor-summary">Update sub-category display options for 2.0</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility"></span>
+                                <span class="phpdocumentor-signature__name">wc_update_200_subcat_display</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">void</span>
+    </code>
+
+    
+    
+        
+    
+</article>
+                            <a id="function_wc_update_200_taxrates"></a>
+<article
+        class="
+            phpdocumentor-element
+            phpdocumentor-function
+            phpdocumentor-function--
+                    "
+>
+    <h4 class="phpdocumentor-function__name">wc_update_200_taxrates()</h4>
+
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html"><abbr title="woocommerce/includes/wc-update-functions.php">wc-update-functions.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">115</span>
+    </aside>
+
+        <p class="phpdocumentor-summary">Update tax rates for 2.0</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility"></span>
+                                <span class="phpdocumentor-signature__name">wc_update_200_taxrates</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">void</span>
+    </code>
+
+    
+    
+        
+    
+</article>
+                            <a id="function_wc_update_200_line_items"></a>
+<article
+        class="
+            phpdocumentor-element
+            phpdocumentor-function
+            phpdocumentor-function--
+                    "
+>
+    <h4 class="phpdocumentor-function__name">wc_update_200_line_items()</h4>
+
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html"><abbr title="woocommerce/includes/wc-update-functions.php">wc-update-functions.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">214</span>
+    </aside>
+
+        <p class="phpdocumentor-summary">Update order item line items for 2.0</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility"></span>
+                                <span class="phpdocumentor-signature__name">wc_update_200_line_items</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">void</span>
+    </code>
+
+    
+    
+        
+    
+</article>
+                            <a id="function_wc_update_200_images"></a>
+<article
+        class="
+            phpdocumentor-element
+            phpdocumentor-function
+            phpdocumentor-function--
+                    "
+>
+    <h4 class="phpdocumentor-function__name">wc_update_200_images()</h4>
+
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html"><abbr title="woocommerce/includes/wc-update-functions.php">wc-update-functions.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">356</span>
+    </aside>
+
+        <p class="phpdocumentor-summary">Update image settings for 2.0</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility"></span>
+                                <span class="phpdocumentor-signature__name">wc_update_200_images</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">void</span>
+    </code>
+
+    
+    
+        
+    
+</article>
+                            <a id="function_wc_update_200_db_version"></a>
+<article
+        class="
+            phpdocumentor-element
+            phpdocumentor-function
+            phpdocumentor-function--
+                    "
+>
+    <h4 class="phpdocumentor-function__name">wc_update_200_db_version()</h4>
+
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html"><abbr title="woocommerce/includes/wc-update-functions.php">wc-update-functions.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">384</span>
+    </aside>
+
+        <p class="phpdocumentor-summary">Update DB version for 2.0</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility"></span>
+                                <span class="phpdocumentor-signature__name">wc_update_200_db_version</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">void</span>
+    </code>
+
+    
+    
+        
+    
+</article>
+                            <a id="function_wc_update_209_brazillian_state"></a>
+<article
+        class="
+            phpdocumentor-element
+            phpdocumentor-function
+            phpdocumentor-function--
+                    "
+>
+    <h4 class="phpdocumentor-function__name">wc_update_209_brazillian_state()</h4>
+
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html"><abbr title="woocommerce/includes/wc-update-functions.php">wc-update-functions.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">393</span>
+    </aside>
+
+        <p class="phpdocumentor-summary">Update Brazilian States for 2.0.9</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility"></span>
+                                <span class="phpdocumentor-signature__name">wc_update_209_brazillian_state</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">void</span>
+    </code>
+
+    
+    
+        
+    
+</article>
+                            <a id="function_wc_update_209_db_version"></a>
+<article
+        class="
+            phpdocumentor-element
+            phpdocumentor-function
+            phpdocumentor-function--
+                    "
+>
+    <h4 class="phpdocumentor-function__name">wc_update_209_db_version()</h4>
+
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html"><abbr title="woocommerce/includes/wc-update-functions.php">wc-update-functions.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">444</span>
+    </aside>
+
+        <p class="phpdocumentor-summary">Update DB version for 2.0.9</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility"></span>
+                                <span class="phpdocumentor-signature__name">wc_update_209_db_version</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">void</span>
+    </code>
+
+    
+    
+        
+    
+</article>
+                            <a id="function_wc_update_210_remove_pages"></a>
+<article
+        class="
+            phpdocumentor-element
+            phpdocumentor-function
+            phpdocumentor-function--
+                    "
+>
+    <h4 class="phpdocumentor-function__name">wc_update_210_remove_pages()</h4>
+
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html"><abbr title="woocommerce/includes/wc-update-functions.php">wc-update-functions.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">453</span>
+    </aside>
+
+        <p class="phpdocumentor-summary">Remove pages for 2.1</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility"></span>
+                                <span class="phpdocumentor-signature__name">wc_update_210_remove_pages</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">void</span>
+    </code>
+
+    
+    
+        
+    
+</article>
+                            <a id="function_wc_update_210_file_paths"></a>
+<article
+        class="
+            phpdocumentor-element
+            phpdocumentor-function
+            phpdocumentor-function--
+                    "
+>
+    <h4 class="phpdocumentor-function__name">wc_update_210_file_paths()</h4>
+
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html"><abbr title="woocommerce/includes/wc-update-functions.php">wc-update-functions.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">468</span>
+    </aside>
+
+        <p class="phpdocumentor-summary">Update file paths to support multiple files for 2.1</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility"></span>
+                                <span class="phpdocumentor-signature__name">wc_update_210_file_paths</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">void</span>
+    </code>
+
+    
+    
+        
+    
+</article>
+                            <a id="function_wc_update_210_db_version"></a>
+<article
+        class="
+            phpdocumentor-element
+            phpdocumentor-function
+            phpdocumentor-function--
+                    "
+>
+    <h4 class="phpdocumentor-function__name">wc_update_210_db_version()</h4>
+
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html"><abbr title="woocommerce/includes/wc-update-functions.php">wc-update-functions.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">509</span>
+    </aside>
+
+        <p class="phpdocumentor-summary">Update DB version for 2.1</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility"></span>
+                                <span class="phpdocumentor-signature__name">wc_update_210_db_version</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">void</span>
+    </code>
+
+    
+    
+        
+    
+</article>
+                            <a id="function_wc_update_220_shipping"></a>
+<article
+        class="
+            phpdocumentor-element
+            phpdocumentor-function
+            phpdocumentor-function--
+                    "
+>
+    <h4 class="phpdocumentor-function__name">wc_update_220_shipping()</h4>
+
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html"><abbr title="woocommerce/includes/wc-update-functions.php">wc-update-functions.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">518</span>
+    </aside>
+
+        <p class="phpdocumentor-summary">Update shipping options for 2.2</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility"></span>
+                                <span class="phpdocumentor-signature__name">wc_update_220_shipping</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">void</span>
+    </code>
+
+    
+    
+        
+    
+</article>
+                            <a id="function_wc_update_220_order_status"></a>
+<article
+        class="
+            phpdocumentor-element
+            phpdocumentor-function
+            phpdocumentor-function--
+                    "
+>
+    <h4 class="phpdocumentor-function__name">wc_update_220_order_status()</h4>
+
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html"><abbr title="woocommerce/includes/wc-update-functions.php">wc-update-functions.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">535</span>
+    </aside>
+
+        <p class="phpdocumentor-summary">Update order statuses for 2.2</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility"></span>
+                                <span class="phpdocumentor-signature__name">wc_update_220_order_status</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">void</span>
+    </code>
+
+    
+    
+        
+    
+</article>
+                            <a id="function_wc_update_220_variations"></a>
+<article
+        class="
+            phpdocumentor-element
+            phpdocumentor-function
+            phpdocumentor-function--
+                    "
+>
+    <h4 class="phpdocumentor-function__name">wc_update_220_variations()</h4>
+
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html"><abbr title="woocommerce/includes/wc-update-functions.php">wc-update-functions.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">621</span>
+    </aside>
+
+        <p class="phpdocumentor-summary">Update variations for 2.2</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility"></span>
+                                <span class="phpdocumentor-signature__name">wc_update_220_variations</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">void</span>
+    </code>
+
+    
+    
+        
+    
+</article>
+                            <a id="function_wc_update_220_attributes"></a>
+<article
+        class="
+            phpdocumentor-element
+            phpdocumentor-function
+            phpdocumentor-function--
+                    "
+>
+    <h4 class="phpdocumentor-function__name">wc_update_220_attributes()</h4>
+
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html"><abbr title="woocommerce/includes/wc-update-functions.php">wc-update-functions.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">646</span>
+    </aside>
+
+        <p class="phpdocumentor-summary">Update attributes for 2.2</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility"></span>
+                                <span class="phpdocumentor-signature__name">wc_update_220_attributes</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">void</span>
+    </code>
+
+    
+    
+        
+    
+</article>
+                            <a id="function_wc_update_220_db_version"></a>
+<article
+        class="
+            phpdocumentor-element
+            phpdocumentor-function
+            phpdocumentor-function--
+                    "
+>
+    <h4 class="phpdocumentor-function__name">wc_update_220_db_version()</h4>
+
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html"><abbr title="woocommerce/includes/wc-update-functions.php">wc-update-functions.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">685</span>
+    </aside>
+
+        <p class="phpdocumentor-summary">Update DB version for 2.2</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility"></span>
+                                <span class="phpdocumentor-signature__name">wc_update_220_db_version</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">void</span>
+    </code>
+
+    
+    
+        
+    
+</article>
+                            <a id="function_wc_update_230_options"></a>
+<article
+        class="
+            phpdocumentor-element
+            phpdocumentor-function
+            phpdocumentor-function--
+                    "
+>
+    <h4 class="phpdocumentor-function__name">wc_update_230_options()</h4>
+
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html"><abbr title="woocommerce/includes/wc-update-functions.php">wc-update-functions.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">694</span>
+    </aside>
+
+        <p class="phpdocumentor-summary">Update options for 2.3</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility"></span>
+                                <span class="phpdocumentor-signature__name">wc_update_230_options</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">void</span>
+    </code>
+
+    
+    
+        
+    
+</article>
+                            <a id="function_wc_update_230_db_version"></a>
+<article
+        class="
+            phpdocumentor-element
+            phpdocumentor-function
+            phpdocumentor-function--
+                    "
+>
+    <h4 class="phpdocumentor-function__name">wc_update_230_db_version()</h4>
+
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html"><abbr title="woocommerce/includes/wc-update-functions.php">wc-update-functions.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">710</span>
+    </aside>
+
+        <p class="phpdocumentor-summary">Update DB version for 2.3</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility"></span>
+                                <span class="phpdocumentor-signature__name">wc_update_230_db_version</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">void</span>
+    </code>
+
+    
+    
+        
+    
+</article>
+                            <a id="function_wc_update_240_options"></a>
+<article
+        class="
+            phpdocumentor-element
+            phpdocumentor-function
+            phpdocumentor-function--
+                    "
+>
+    <h4 class="phpdocumentor-function__name">wc_update_240_options()</h4>
+
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html"><abbr title="woocommerce/includes/wc-update-functions.php">wc-update-functions.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">719</span>
+    </aside>
+
+        <p class="phpdocumentor-summary">Update calc discount options for 2.4</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility"></span>
+                                <span class="phpdocumentor-signature__name">wc_update_240_options</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">void</span>
+    </code>
+
+    
+    
+        
+    
+</article>
+                            <a id="function_wc_update_240_shipping_methods"></a>
+<article
+        class="
+            phpdocumentor-element
+            phpdocumentor-function
+            phpdocumentor-function--
+                    "
+>
+    <h4 class="phpdocumentor-function__name">wc_update_240_shipping_methods()</h4>
+
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html"><abbr title="woocommerce/includes/wc-update-functions.php">wc-update-functions.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">732</span>
+    </aside>
+
+        <p class="phpdocumentor-summary">Update shipping methods for 2.4</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility"></span>
+                                <span class="phpdocumentor-signature__name">wc_update_240_shipping_methods</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">void</span>
+    </code>
+
+    
+    
+        
+    
+</article>
+                            <a id="function_wc_update_240_api_keys"></a>
+<article
+        class="
+            phpdocumentor-element
+            phpdocumentor-function
+            phpdocumentor-function--
+                    "
+>
+    <h4 class="phpdocumentor-function__name">wc_update_240_api_keys()</h4>
+
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html"><abbr title="woocommerce/includes/wc-update-functions.php">wc-update-functions.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">808</span>
+    </aside>
+
+        <p class="phpdocumentor-summary">Update API keys for 2.4</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility"></span>
+                                <span class="phpdocumentor-signature__name">wc_update_240_api_keys</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">void</span>
+    </code>
+
+    
+    
+        
+    
+</article>
+                            <a id="function_wc_update_240_webhooks"></a>
+<article
+        class="
+            phpdocumentor-element
+            phpdocumentor-function
+            phpdocumentor-function--
+                    "
+>
+    <h4 class="phpdocumentor-function__name">wc_update_240_webhooks()</h4>
+
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html"><abbr title="woocommerce/includes/wc-update-functions.php">wc-update-functions.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">859</span>
+    </aside>
+
+        <p class="phpdocumentor-summary">Update webhooks for 2.4</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility"></span>
+                                <span class="phpdocumentor-signature__name">wc_update_240_webhooks</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">void</span>
+    </code>
+
+    
+    
+        
+    
+</article>
+                            <a id="function_wc_update_240_refunds"></a>
+<article
+        class="
+            phpdocumentor-element
+            phpdocumentor-function
+            phpdocumentor-function--
+                    "
+>
+    <h4 class="phpdocumentor-function__name">wc_update_240_refunds()</h4>
+
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html"><abbr title="woocommerce/includes/wc-update-functions.php">wc-update-functions.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">883</span>
+    </aside>
+
+        <p class="phpdocumentor-summary">Update refunds for 2.4</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility"></span>
+                                <span class="phpdocumentor-signature__name">wc_update_240_refunds</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">void</span>
+    </code>
+
+    
+    
+        
+    
+</article>
+                            <a id="function_wc_update_240_db_version"></a>
+<article
+        class="
+            phpdocumentor-element
+            phpdocumentor-function
+            phpdocumentor-function--
+                    "
+>
+    <h4 class="phpdocumentor-function__name">wc_update_240_db_version()</h4>
+
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html"><abbr title="woocommerce/includes/wc-update-functions.php">wc-update-functions.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">937</span>
+    </aside>
+
+        <p class="phpdocumentor-summary">Update DB version for 2.4</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility"></span>
+                                <span class="phpdocumentor-signature__name">wc_update_240_db_version</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">void</span>
+    </code>
+
+    
+    
+        
+    
+</article>
+                            <a id="function_wc_update_241_variations"></a>
+<article
+        class="
+            phpdocumentor-element
+            phpdocumentor-function
+            phpdocumentor-function--
+                    "
+>
+    <h4 class="phpdocumentor-function__name">wc_update_241_variations()</h4>
+
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html"><abbr title="woocommerce/includes/wc-update-functions.php">wc-update-functions.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">946</span>
+    </aside>
+
+        <p class="phpdocumentor-summary">Update variations for 2.4.1</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility"></span>
+                                <span class="phpdocumentor-signature__name">wc_update_241_variations</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">void</span>
+    </code>
+
+    
+    
+        
+    
+</article>
+                            <a id="function_wc_update_241_db_version"></a>
+<article
+        class="
+            phpdocumentor-element
+            phpdocumentor-function
+            phpdocumentor-function--
+                    "
+>
+    <h4 class="phpdocumentor-function__name">wc_update_241_db_version()</h4>
+
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html"><abbr title="woocommerce/includes/wc-update-functions.php">wc-update-functions.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">978</span>
+    </aside>
+
+        <p class="phpdocumentor-summary">Update DB version for 2.4.1</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility"></span>
+                                <span class="phpdocumentor-signature__name">wc_update_241_db_version</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">void</span>
+    </code>
+
+    
+    
+        
+    
+</article>
+                            <a id="function_wc_update_250_currency"></a>
+<article
+        class="
+            phpdocumentor-element
+            phpdocumentor-function
+            phpdocumentor-function--
+                    "
+>
+    <h4 class="phpdocumentor-function__name">wc_update_250_currency()</h4>
+
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html"><abbr title="woocommerce/includes/wc-update-functions.php">wc-update-functions.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">987</span>
+    </aside>
+
+        <p class="phpdocumentor-summary">Update currency settings for 2.5</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility"></span>
+                                <span class="phpdocumentor-signature__name">wc_update_250_currency</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">void</span>
+    </code>
+
+    
+    
+        
+    
+</article>
+                            <a id="function_wc_update_250_db_version"></a>
+<article
+        class="
+            phpdocumentor-element
+            phpdocumentor-function
+            phpdocumentor-function--
+                    "
+>
+    <h4 class="phpdocumentor-function__name">wc_update_250_db_version()</h4>
+
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html"><abbr title="woocommerce/includes/wc-update-functions.php">wc-update-functions.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">1015</span>
+    </aside>
+
+        <p class="phpdocumentor-summary">Update DB version for 2.5</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility"></span>
+                                <span class="phpdocumentor-signature__name">wc_update_250_db_version</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">void</span>
+    </code>
+
+    
+    
+        
+    
+</article>
+                            <a id="function_wc_update_260_options"></a>
+<article
+        class="
+            phpdocumentor-element
+            phpdocumentor-function
+            phpdocumentor-function--
+                    "
+>
+    <h4 class="phpdocumentor-function__name">wc_update_260_options()</h4>
+
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html"><abbr title="woocommerce/includes/wc-update-functions.php">wc-update-functions.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">1024</span>
+    </aside>
+
+        <p class="phpdocumentor-summary">Update ship to countries options for 2.6</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility"></span>
+                                <span class="phpdocumentor-signature__name">wc_update_260_options</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">void</span>
+    </code>
+
+    
+    
+        
+    
+</article>
+                            <a id="function_wc_update_260_termmeta"></a>
+<article
+        class="
+            phpdocumentor-element
+            phpdocumentor-function
+            phpdocumentor-function--
+                    "
+>
+    <h4 class="phpdocumentor-function__name">wc_update_260_termmeta()</h4>
+
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html"><abbr title="woocommerce/includes/wc-update-functions.php">wc-update-functions.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">1038</span>
+    </aside>
+
+        <p class="phpdocumentor-summary">Update term meta for 2.6</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility"></span>
+                                <span class="phpdocumentor-signature__name">wc_update_260_termmeta</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">void</span>
+    </code>
+
+    
+    
+        
+    
+</article>
+                            <a id="function_wc_update_260_zones"></a>
+<article
+        class="
+            phpdocumentor-element
+            phpdocumentor-function
+            phpdocumentor-function--
+                    "
+>
+    <h4 class="phpdocumentor-function__name">wc_update_260_zones()</h4>
+
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html"><abbr title="woocommerce/includes/wc-update-functions.php">wc-update-functions.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">1056</span>
+    </aside>
+
+        <p class="phpdocumentor-summary">Update zones for 2.6</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility"></span>
+                                <span class="phpdocumentor-signature__name">wc_update_260_zones</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">void</span>
+    </code>
+
+    
+    
+        
+    
+</article>
+                            <a id="function_wc_update_260_zone_methods"></a>
+<article
+        class="
+            phpdocumentor-element
+            phpdocumentor-function
+            phpdocumentor-function--
+                    "
+>
+    <h4 class="phpdocumentor-function__name">wc_update_260_zone_methods()</h4>
+
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html"><abbr title="woocommerce/includes/wc-update-functions.php">wc-update-functions.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">1073</span>
+    </aside>
+
+        <p class="phpdocumentor-summary">Update zone methods for 2.6</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility"></span>
+                                <span class="phpdocumentor-signature__name">wc_update_260_zone_methods</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">void</span>
+    </code>
+
+    
+    
+        
+    
+</article>
+                            <a id="function_wc_update_260_refunds"></a>
+<article
+        class="
+            phpdocumentor-element
+            phpdocumentor-function
+            phpdocumentor-function--
+                    "
+>
+    <h4 class="phpdocumentor-function__name">wc_update_260_refunds()</h4>
+
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html"><abbr title="woocommerce/includes/wc-update-functions.php">wc-update-functions.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">1158</span>
+    </aside>
+
+        <p class="phpdocumentor-summary">Update refunds for 2.6</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility"></span>
+                                <span class="phpdocumentor-signature__name">wc_update_260_refunds</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">void</span>
+    </code>
+
+    
+    
+        
+    
+</article>
+                            <a id="function_wc_update_260_db_version"></a>
+<article
+        class="
+            phpdocumentor-element
+            phpdocumentor-function
+            phpdocumentor-function--
+                    "
+>
+    <h4 class="phpdocumentor-function__name">wc_update_260_db_version()</h4>
+
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html"><abbr title="woocommerce/includes/wc-update-functions.php">wc-update-functions.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">1177</span>
+    </aside>
+
+        <p class="phpdocumentor-summary">Update DB version for 2.6</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility"></span>
+                                <span class="phpdocumentor-signature__name">wc_update_260_db_version</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">void</span>
+    </code>
+
+    
+    
+        
+    
+</article>
+                            <a id="function_wc_update_300_webhooks"></a>
+<article
+        class="
+            phpdocumentor-element
+            phpdocumentor-function
+            phpdocumentor-function--
+                    "
+>
+    <h4 class="phpdocumentor-function__name">wc_update_300_webhooks()</h4>
+
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html"><abbr title="woocommerce/includes/wc-update-functions.php">wc-update-functions.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">1186</span>
+    </aside>
+
+        <p class="phpdocumentor-summary">Update webhooks for 3.0</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility"></span>
+                                <span class="phpdocumentor-signature__name">wc_update_300_webhooks</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">void</span>
+    </code>
+
+    
+    
+        
+    
+</article>
+                            <a id="function_wc_update_300_comment_type_index"></a>
+<article
+        class="
+            phpdocumentor-element
+            phpdocumentor-function
+            phpdocumentor-function--
+                    "
+>
+    <h4 class="phpdocumentor-function__name">wc_update_300_comment_type_index()</h4>
+
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html"><abbr title="woocommerce/includes/wc-update-functions.php">wc-update-functions.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">1209</span>
+    </aside>
+
+        <p class="phpdocumentor-summary">Add an index to the field comment_type to improve the response time of the query
+used by WC_Comments::wp_count_comments() to get the number of comments by type.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility"></span>
+                                <span class="phpdocumentor-signature__name">wc_update_300_comment_type_index</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">mixed</span>
+    </code>
+
+    
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">mixed</span>
+            
+</article>
+                            <a id="function_wc_update_300_grouped_products"></a>
+<article
+        class="
+            phpdocumentor-element
+            phpdocumentor-function
+            phpdocumentor-function--
+                    "
+>
+    <h4 class="phpdocumentor-function__name">wc_update_300_grouped_products()</h4>
+
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html"><abbr title="woocommerce/includes/wc-update-functions.php">wc-update-functions.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">1226</span>
+    </aside>
+
+        <p class="phpdocumentor-summary">Update grouped products for 3.0</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility"></span>
+                                <span class="phpdocumentor-signature__name">wc_update_300_grouped_products</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">void</span>
+    </code>
+
+    
+    
+        
+    
+</article>
+                            <a id="function_wc_update_300_settings"></a>
+<article
+        class="
+            phpdocumentor-element
+            phpdocumentor-function
+            phpdocumentor-function--
+                    "
+>
+    <h4 class="phpdocumentor-function__name">wc_update_300_settings()</h4>
+
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html"><abbr title="woocommerce/includes/wc-update-functions.php">wc-update-functions.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">1261</span>
+    </aside>
+
+        <p class="phpdocumentor-summary">Update shipping tax classes for 3.0</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility"></span>
+                                <span class="phpdocumentor-signature__name">wc_update_300_settings</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">void</span>
+    </code>
+
+    
+    
+        
+    
+</article>
+                            <a id="function_wc_update_300_product_visibility"></a>
+<article
+        class="
+            phpdocumentor-element
+            phpdocumentor-function
+            phpdocumentor-function--
+                    "
+>
+    <h4 class="phpdocumentor-function__name">wc_update_300_product_visibility()</h4>
+
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html"><abbr title="woocommerce/includes/wc-update-functions.php">wc-update-functions.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">1273</span>
+    </aside>
+
+        <p class="phpdocumentor-summary">Convert meta values into term for product visibility.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility"></span>
+                                <span class="phpdocumentor-signature__name">wc_update_300_product_visibility</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">mixed</span>
+    </code>
+
+    
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">mixed</span>
+            
+</article>
+                            <a id="function_wc_update_300_db_version"></a>
+<article
+        class="
+            phpdocumentor-element
+            phpdocumentor-function
+            phpdocumentor-function--
+                    "
+>
+    <h4 class="phpdocumentor-function__name">wc_update_300_db_version()</h4>
+
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html"><abbr title="woocommerce/includes/wc-update-functions.php">wc-update-functions.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">1336</span>
+    </aside>
+
+        <p class="phpdocumentor-summary">Update DB Version.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility"></span>
+                                <span class="phpdocumentor-signature__name">wc_update_300_db_version</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">mixed</span>
+    </code>
+
+    
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">mixed</span>
+            
+</article>
+                            <a id="function_wc_update_310_downloadable_products"></a>
+<article
+        class="
+            phpdocumentor-element
+            phpdocumentor-function
+            phpdocumentor-function--
+                    "
+>
+    <h4 class="phpdocumentor-function__name">wc_update_310_downloadable_products()</h4>
+
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html"><abbr title="woocommerce/includes/wc-update-functions.php">wc-update-functions.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">1343</span>
+    </aside>
+
+        <p class="phpdocumentor-summary">Add an index to the downloadable product permissions table to improve performance of update_user_by_order_id.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility"></span>
+                                <span class="phpdocumentor-signature__name">wc_update_310_downloadable_products</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">mixed</span>
+    </code>
+
+    
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">mixed</span>
+            
+</article>
+                            <a id="function_wc_update_310_old_comments"></a>
+<article
+        class="
+            phpdocumentor-element
+            phpdocumentor-function
+            phpdocumentor-function--
+                    "
+>
+    <h4 class="phpdocumentor-function__name">wc_update_310_old_comments()</h4>
+
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html"><abbr title="woocommerce/includes/wc-update-functions.php">wc-update-functions.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">1356</span>
+    </aside>
+
+        <p class="phpdocumentor-summary">Find old order notes and ensure they have the correct type for exclusion.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility"></span>
+                                <span class="phpdocumentor-signature__name">wc_update_310_old_comments</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">mixed</span>
+    </code>
+
+    
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">mixed</span>
+            
+</article>
+                            <a id="function_wc_update_310_db_version"></a>
+<article
+        class="
+            phpdocumentor-element
+            phpdocumentor-function
+            phpdocumentor-function--
+                    "
+>
+    <h4 class="phpdocumentor-function__name">wc_update_310_db_version()</h4>
+
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html"><abbr title="woocommerce/includes/wc-update-functions.php">wc-update-functions.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">1365</span>
+    </aside>
+
+        <p class="phpdocumentor-summary">Update DB Version.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility"></span>
+                                <span class="phpdocumentor-signature__name">wc_update_310_db_version</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">mixed</span>
+    </code>
+
+    
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">mixed</span>
+            
+</article>
+                            <a id="function_wc_update_312_shop_manager_capabilities"></a>
+<article
+        class="
+            phpdocumentor-element
+            phpdocumentor-function
+            phpdocumentor-function--
+                    "
+>
+    <h4 class="phpdocumentor-function__name">wc_update_312_shop_manager_capabilities()</h4>
+
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html"><abbr title="woocommerce/includes/wc-update-functions.php">wc-update-functions.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">1372</span>
+    </aside>
+
+        <p class="phpdocumentor-summary">Update shop_manager capabilities.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility"></span>
+                                <span class="phpdocumentor-signature__name">wc_update_312_shop_manager_capabilities</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">mixed</span>
+    </code>
+
+    
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">mixed</span>
+            
+</article>
+                            <a id="function_wc_update_312_db_version"></a>
+<article
+        class="
+            phpdocumentor-element
+            phpdocumentor-function
+            phpdocumentor-function--
+                    "
+>
+    <h4 class="phpdocumentor-function__name">wc_update_312_db_version()</h4>
+
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html"><abbr title="woocommerce/includes/wc-update-functions.php">wc-update-functions.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">1380</span>
+    </aside>
+
+        <p class="phpdocumentor-summary">Update DB Version.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility"></span>
+                                <span class="phpdocumentor-signature__name">wc_update_312_db_version</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">mixed</span>
+    </code>
+
+    
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">mixed</span>
+            
+</article>
+                            <a id="function_wc_update_320_mexican_states"></a>
+<article
+        class="
+            phpdocumentor-element
+            phpdocumentor-function
+            phpdocumentor-function--
+                    "
+>
+    <h4 class="phpdocumentor-function__name">wc_update_320_mexican_states()</h4>
+
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html"><abbr title="woocommerce/includes/wc-update-functions.php">wc-update-functions.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">1387</span>
+    </aside>
+
+        <p class="phpdocumentor-summary">Update state codes for Mexico.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility"></span>
+                                <span class="phpdocumentor-signature__name">wc_update_320_mexican_states</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">mixed</span>
+    </code>
+
+    
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">mixed</span>
+            
+</article>
+                            <a id="function_wc_update_320_db_version"></a>
+<article
+        class="
+            phpdocumentor-element
+            phpdocumentor-function
+            phpdocumentor-function--
+                    "
+>
+    <h4 class="phpdocumentor-function__name">wc_update_320_db_version()</h4>
+
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html"><abbr title="woocommerce/includes/wc-update-functions.php">wc-update-functions.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">1460</span>
+    </aside>
+
+        <p class="phpdocumentor-summary">Update DB Version.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility"></span>
+                                <span class="phpdocumentor-signature__name">wc_update_320_db_version</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">mixed</span>
+    </code>
+
+    
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">mixed</span>
+            
+</article>
+                            <a id="function_wc_update_330_image_options"></a>
+<article
+        class="
+            phpdocumentor-element
+            phpdocumentor-function
+            phpdocumentor-function--
+                    "
+>
+    <h4 class="phpdocumentor-function__name">wc_update_330_image_options()</h4>
+
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html"><abbr title="woocommerce/includes/wc-update-functions.php">wc-update-functions.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">1467</span>
+    </aside>
+
+        <p class="phpdocumentor-summary">Update image settings to use new aspect ratios and widths.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility"></span>
+                                <span class="phpdocumentor-signature__name">wc_update_330_image_options</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">mixed</span>
+    </code>
+
+    
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">mixed</span>
+            
+</article>
+                            <a id="function_wc_update_330_webhooks"></a>
+<article
+        class="
+            phpdocumentor-element
+            phpdocumentor-function
+            phpdocumentor-function--
+                    "
+>
+    <h4 class="phpdocumentor-function__name">wc_update_330_webhooks()</h4>
+
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html"><abbr title="woocommerce/includes/wc-update-functions.php">wc-update-functions.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">1512</span>
+    </aside>
+
+        <p class="phpdocumentor-summary">Migrate webhooks from post type to CRUD.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility"></span>
+                                <span class="phpdocumentor-signature__name">wc_update_330_webhooks</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">mixed</span>
+    </code>
+
+    
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">mixed</span>
+            
+</article>
+                            <a id="function_wc_update_330_set_default_product_cat"></a>
+<article
+        class="
+            phpdocumentor-element
+            phpdocumentor-function
+            phpdocumentor-function--
+                    "
+>
+    <h4 class="phpdocumentor-function__name">wc_update_330_set_default_product_cat()</h4>
+
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html"><abbr title="woocommerce/includes/wc-update-functions.php">wc-update-functions.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">1551</span>
+    </aside>
+
+        <p class="phpdocumentor-summary">Assign default cat to all products with no cats.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility"></span>
+                                <span class="phpdocumentor-signature__name">wc_update_330_set_default_product_cat</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">mixed</span>
+    </code>
+
+    
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">mixed</span>
+            
+</article>
+                            <a id="function_wc_update_330_product_stock_status"></a>
+<article
+        class="
+            phpdocumentor-element
+            phpdocumentor-function
+            phpdocumentor-function--
+                    "
+>
+    <h4 class="phpdocumentor-function__name">wc_update_330_product_stock_status()</h4>
+
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html"><abbr title="woocommerce/includes/wc-update-functions.php">wc-update-functions.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">1582</span>
+    </aside>
+
+        <p class="phpdocumentor-summary">Update product stock status to use the new onbackorder status.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility"></span>
+                                <span class="phpdocumentor-signature__name">wc_update_330_product_stock_status</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">mixed</span>
+    </code>
+
+    
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">mixed</span>
+            
+</article>
+                            <a id="function_wc_update_330_clear_transients"></a>
+<article
+        class="
+            phpdocumentor-element
+            phpdocumentor-function
+            phpdocumentor-function--
+                    "
+>
+    <h4 class="phpdocumentor-function__name">wc_update_330_clear_transients()</h4>
+
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html"><abbr title="woocommerce/includes/wc-update-functions.php">wc-update-functions.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">1623</span>
+    </aside>
+
+        <p class="phpdocumentor-summary">Clear addons page transients</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility"></span>
+                                <span class="phpdocumentor-signature__name">wc_update_330_clear_transients</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">mixed</span>
+    </code>
+
+    
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">mixed</span>
+            
+</article>
+                            <a id="function_wc_update_330_set_paypal_sandbox_credentials"></a>
+<article
+        class="
+            phpdocumentor-element
+            phpdocumentor-function
+            phpdocumentor-function--
+                    "
+>
+    <h4 class="phpdocumentor-function__name">wc_update_330_set_paypal_sandbox_credentials()</h4>
+
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html"><abbr title="woocommerce/includes/wc-update-functions.php">wc-update-functions.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">1631</span>
+    </aside>
+
+        <p class="phpdocumentor-summary">Set PayPal&#039;s sandbox credentials.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility"></span>
+                                <span class="phpdocumentor-signature__name">wc_update_330_set_paypal_sandbox_credentials</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">mixed</span>
+    </code>
+
+    
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">mixed</span>
+            
+</article>
+                            <a id="function_wc_update_330_db_version"></a>
+<article
+        class="
+            phpdocumentor-element
+            phpdocumentor-function
+            phpdocumentor-function--
+                    "
+>
+    <h4 class="phpdocumentor-function__name">wc_update_330_db_version()</h4>
+
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html"><abbr title="woocommerce/includes/wc-update-functions.php">wc-update-functions.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">1649</span>
+    </aside>
+
+        <p class="phpdocumentor-summary">Update DB Version.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility"></span>
+                                <span class="phpdocumentor-signature__name">wc_update_330_db_version</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">mixed</span>
+    </code>
+
+    
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">mixed</span>
+            
+</article>
+                            <a id="function_wc_update_340_states"></a>
+<article
+        class="
+            phpdocumentor-element
+            phpdocumentor-function
+            phpdocumentor-function--
+                    "
+>
+    <h4 class="phpdocumentor-function__name">wc_update_340_states()</h4>
+
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html"><abbr title="woocommerce/includes/wc-update-functions.php">wc-update-functions.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">1656</span>
+    </aside>
+
+        <p class="phpdocumentor-summary">Update state codes for Ireland and BD.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility"></span>
+                                <span class="phpdocumentor-signature__name">wc_update_340_states</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">mixed</span>
+    </code>
+
+    
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">mixed</span>
+            
+</article>
+                            <a id="function_wc_update_340_state"></a>
+<article
+        class="
+            phpdocumentor-element
+            phpdocumentor-function
+            phpdocumentor-function--
+                    "
+>
+    <h4 class="phpdocumentor-function__name">wc_update_340_state()</h4>
+
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html"><abbr title="woocommerce/includes/wc-update-functions.php">wc-update-functions.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">1739</span>
+    </aside>
+
+        <p class="phpdocumentor-summary">Update next state in the queue.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility"></span>
+                                <span class="phpdocumentor-signature__name">wc_update_340_state</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">bool</span>
+    </code>
+
+    
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">bool</span>
+                    &mdash; <span class="phpdocumentor-description"><p>True to run again, false if completed.</p></span>
+            
+</article>
+                            <a id="function_wc_update_340_last_active"></a>
+<article
+        class="
+            phpdocumentor-element
+            phpdocumentor-function
+            phpdocumentor-function--
+                    "
+>
+    <h4 class="phpdocumentor-function__name">wc_update_340_last_active()</h4>
+
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html"><abbr title="woocommerce/includes/wc-update-functions.php">wc-update-functions.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">1799</span>
+    </aside>
+
+        <p class="phpdocumentor-summary">Set last active prop for users.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility"></span>
+                                <span class="phpdocumentor-signature__name">wc_update_340_last_active</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">mixed</span>
+    </code>
+
+    
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">mixed</span>
+            
+</article>
+                            <a id="function_wc_update_340_db_version"></a>
+<article
+        class="
+            phpdocumentor-element
+            phpdocumentor-function
+            phpdocumentor-function--
+                    "
+>
+    <h4 class="phpdocumentor-function__name">wc_update_340_db_version()</h4>
+
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html"><abbr title="woocommerce/includes/wc-update-functions.php">wc-update-functions.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">1819</span>
+    </aside>
+
+        <p class="phpdocumentor-summary">Update DB Version.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility"></span>
+                                <span class="phpdocumentor-signature__name">wc_update_340_db_version</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">mixed</span>
+    </code>
+
+    
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">mixed</span>
+            
+</article>
+                            <a id="function_wc_update_343_cleanup_foreign_keys"></a>
+<article
+        class="
+            phpdocumentor-element
+            phpdocumentor-function
+            phpdocumentor-function--
+                    "
+>
+    <h4 class="phpdocumentor-function__name">wc_update_343_cleanup_foreign_keys()</h4>
+
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html"><abbr title="woocommerce/includes/wc-update-functions.php">wc-update-functions.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">1828</span>
+    </aside>
+
+        <p class="phpdocumentor-summary">Remove duplicate foreign keys</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility"></span>
+                                <span class="phpdocumentor-signature__name">wc_update_343_cleanup_foreign_keys</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">void</span>
+    </code>
+
+    
+    
+        
+    
+</article>
+                            <a id="function_wc_update_343_db_version"></a>
+<article
+        class="
+            phpdocumentor-element
+            phpdocumentor-function
+            phpdocumentor-function--
+                    "
+>
+    <h4 class="phpdocumentor-function__name">wc_update_343_db_version()</h4>
+
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html"><abbr title="woocommerce/includes/wc-update-functions.php">wc-update-functions.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">1852</span>
+    </aside>
+
+        <p class="phpdocumentor-summary">Update DB version.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility"></span>
+                                <span class="phpdocumentor-signature__name">wc_update_343_db_version</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">void</span>
+    </code>
+
+    
+    
+        
+    
+</article>
+                            <a id="function_wc_update_344_recreate_roles"></a>
+<article
+        class="
+            phpdocumentor-element
+            phpdocumentor-function
+            phpdocumentor-function--
+                    "
+>
+    <h4 class="phpdocumentor-function__name">wc_update_344_recreate_roles()</h4>
+
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html"><abbr title="woocommerce/includes/wc-update-functions.php">wc-update-functions.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">1861</span>
+    </aside>
+
+        <p class="phpdocumentor-summary">Recreate user roles so existing users will get the new capabilities.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility"></span>
+                                <span class="phpdocumentor-signature__name">wc_update_344_recreate_roles</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">void</span>
+    </code>
+
+    
+    
+        
+    
+</article>
+                            <a id="function_wc_update_344_db_version"></a>
+<article
+        class="
+            phpdocumentor-element
+            phpdocumentor-function
+            phpdocumentor-function--
+                    "
+>
+    <h4 class="phpdocumentor-function__name">wc_update_344_db_version()</h4>
+
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html"><abbr title="woocommerce/includes/wc-update-functions.php">wc-update-functions.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">1871</span>
+    </aside>
+
+        <p class="phpdocumentor-summary">Update DB version.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility"></span>
+                                <span class="phpdocumentor-signature__name">wc_update_344_db_version</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">void</span>
+    </code>
+
+    
+    
+        
+    
+</article>
+                            <a id="function_wc_update_350_reviews_comment_type"></a>
+<article
+        class="
+            phpdocumentor-element
+            phpdocumentor-function
+            phpdocumentor-function--
+                    "
+>
+    <h4 class="phpdocumentor-function__name">wc_update_350_reviews_comment_type()</h4>
+
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html"><abbr title="woocommerce/includes/wc-update-functions.php">wc-update-functions.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">1878</span>
+    </aside>
+
+        <p class="phpdocumentor-summary">Set the comment type to &#039;review&#039; for product reviews that don&#039;t have a comment type.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility"></span>
+                                <span class="phpdocumentor-signature__name">wc_update_350_reviews_comment_type</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">mixed</span>
+    </code>
+
+    
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">mixed</span>
+            
+</article>
+                            <a id="function_wc_update_350_db_version"></a>
+<article
+        class="
+            phpdocumentor-element
+            phpdocumentor-function
+            phpdocumentor-function--
+                    "
+>
+    <h4 class="phpdocumentor-function__name">wc_update_350_db_version()</h4>
+
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html"><abbr title="woocommerce/includes/wc-update-functions.php">wc-update-functions.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">1889</span>
+    </aside>
+
+        <p class="phpdocumentor-summary">Update DB Version.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility"></span>
+                                <span class="phpdocumentor-signature__name">wc_update_350_db_version</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">mixed</span>
+    </code>
+
+    
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">mixed</span>
+            
+</article>
+                            <a id="function_wc_update_352_drop_download_log_fk"></a>
+<article
+        class="
+            phpdocumentor-element
+            phpdocumentor-function
+            phpdocumentor-function--
+                    "
+>
+    <h4 class="phpdocumentor-function__name">wc_update_352_drop_download_log_fk()</h4>
+
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html"><abbr title="woocommerce/includes/wc-update-functions.php">wc-update-functions.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">1898</span>
+    </aside>
+
+        <p class="phpdocumentor-summary">Drop the fk_wc_download_log_permission_id FK as we use a new one with the table and blog prefix for MS compatability.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility"></span>
+                                <span class="phpdocumentor-signature__name">wc_update_352_drop_download_log_fk</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">void</span>
+    </code>
+
+    
+    
+        
+    
+</article>
+                            <a id="function_wc_update_354_modify_shop_manager_caps"></a>
+<article
+        class="
+            phpdocumentor-element
+            phpdocumentor-function
+            phpdocumentor-function--
+                    "
+>
+    <h4 class="phpdocumentor-function__name">wc_update_354_modify_shop_manager_caps()</h4>
+
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html"><abbr title="woocommerce/includes/wc-update-functions.php">wc-update-functions.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">1919</span>
+    </aside>
+
+        <p class="phpdocumentor-summary">Remove edit_user capabilities from shop managers and use &quot;translated&quot; capabilities instead.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility"></span>
+                                <span class="phpdocumentor-signature__name">wc_update_354_modify_shop_manager_caps</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">mixed</span>
+    </code>
+
+        <section class="phpdocumentor-description"><p>See wc_shop_manager_has_capability function.</p></section>
+    
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">mixed</span>
+            
+</article>
+                            <a id="function_wc_update_354_db_version"></a>
+<article
+        class="
+            phpdocumentor-element
+            phpdocumentor-function
+            phpdocumentor-function--
+                    "
+>
+    <h4 class="phpdocumentor-function__name">wc_update_354_db_version()</h4>
+
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html"><abbr title="woocommerce/includes/wc-update-functions.php">wc-update-functions.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">1936</span>
+    </aside>
+
+        <p class="phpdocumentor-summary">Update DB Version.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility"></span>
+                                <span class="phpdocumentor-signature__name">wc_update_354_db_version</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">mixed</span>
+    </code>
+
+    
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">mixed</span>
+            
+</article>
+                            <a id="function_wc_update_360_product_lookup_tables"></a>
+<article
+        class="
+            phpdocumentor-element
+            phpdocumentor-function
+            phpdocumentor-function--
+                    "
+>
+    <h4 class="phpdocumentor-function__name">wc_update_360_product_lookup_tables()</h4>
+
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html"><abbr title="woocommerce/includes/wc-update-functions.php">wc-update-functions.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">1943</span>
+    </aside>
+
+        <p class="phpdocumentor-summary">Update product lookup tables in bulk.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility"></span>
+                                <span class="phpdocumentor-signature__name">wc_update_360_product_lookup_tables</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">mixed</span>
+    </code>
+
+    
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">mixed</span>
+            
+</article>
+                            <a id="function_wc_update_360_term_meta"></a>
+<article
+        class="
+            phpdocumentor-element
+            phpdocumentor-function
+            phpdocumentor-function--
+                    "
+>
+    <h4 class="phpdocumentor-function__name">wc_update_360_term_meta()</h4>
+
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html"><abbr title="woocommerce/includes/wc-update-functions.php">wc-update-functions.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">1950</span>
+    </aside>
+
+        <p class="phpdocumentor-summary">Renames ordering meta to be consistent across taxonomies.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility"></span>
+                                <span class="phpdocumentor-signature__name">wc_update_360_term_meta</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">mixed</span>
+    </code>
+
+    
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">mixed</span>
+            
+</article>
+                            <a id="function_wc_update_360_downloadable_product_permissions_index"></a>
+<article
+        class="
+            phpdocumentor-element
+            phpdocumentor-function
+            phpdocumentor-function--
+                    "
+>
+    <h4 class="phpdocumentor-function__name">wc_update_360_downloadable_product_permissions_index()</h4>
+
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html"><abbr title="woocommerce/includes/wc-update-functions.php">wc-update-functions.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">1961</span>
+    </aside>
+
+        <p class="phpdocumentor-summary">Add new user_order_remaining_expires to speed up user download permission fetching.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility"></span>
+                                <span class="phpdocumentor-signature__name">wc_update_360_downloadable_product_permissions_index</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">void</span>
+    </code>
+
+    
+    
+        
+    
+</article>
+                            <a id="function_wc_update_360_db_version"></a>
+<article
+        class="
+            phpdocumentor-element
+            phpdocumentor-function
+            phpdocumentor-function--
+                    "
+>
+    <h4 class="phpdocumentor-function__name">wc_update_360_db_version()</h4>
+
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html"><abbr title="woocommerce/includes/wc-update-functions.php">wc-update-functions.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">1974</span>
+    </aside>
+
+        <p class="phpdocumentor-summary">Update DB Version.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility"></span>
+                                <span class="phpdocumentor-signature__name">wc_update_360_db_version</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">mixed</span>
+    </code>
+
+    
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">mixed</span>
+            
+</article>
+                            <a id="function_wc_update_370_tax_rate_classes"></a>
+<article
+        class="
+            phpdocumentor-element
+            phpdocumentor-function
+            phpdocumentor-function--
+                    "
+>
+    <h4 class="phpdocumentor-function__name">wc_update_370_tax_rate_classes()</h4>
+
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html"><abbr title="woocommerce/includes/wc-update-functions.php">wc-update-functions.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">1983</span>
+    </aside>
+
+        <p class="phpdocumentor-summary">Put tax classes into a DB table.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility"></span>
+                                <span class="phpdocumentor-signature__name">wc_update_370_tax_rate_classes</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">void</span>
+    </code>
+
+    
+    
+        
+    
+</article>
+                            <a id="function_wc_update_370_mro_std_currency"></a>
+<article
+        class="
+            phpdocumentor-element
+            phpdocumentor-function
+            phpdocumentor-function--
+                    "
+>
+    <h4 class="phpdocumentor-function__name">wc_update_370_mro_std_currency()</h4>
+
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html"><abbr title="woocommerce/includes/wc-update-functions.php">wc-update-functions.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">2004</span>
+    </aside>
+
+        <p class="phpdocumentor-summary">Update currency settings for 3.7.0</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility"></span>
+                                <span class="phpdocumentor-signature__name">wc_update_370_mro_std_currency</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">void</span>
+    </code>
+
+    
+    
+        
+    
+</article>
+                            <a id="function_wc_update_370_db_version"></a>
+<article
+        class="
+            phpdocumentor-element
+            phpdocumentor-function
+            phpdocumentor-function--
+                    "
+>
+    <h4 class="phpdocumentor-function__name">wc_update_370_db_version()</h4>
+
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html"><abbr title="woocommerce/includes/wc-update-functions.php">wc-update-functions.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">2046</span>
+    </aside>
+
+        <p class="phpdocumentor-summary">Update DB Version.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility"></span>
+                                <span class="phpdocumentor-signature__name">wc_update_370_db_version</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">mixed</span>
+    </code>
+
+    
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">mixed</span>
+            
+</article>
+                            <a id="function_wc_update_390_move_maxmind_database"></a>
+<article
+        class="
+            phpdocumentor-element
+            phpdocumentor-function
+            phpdocumentor-function--
+                    "
+>
+    <h4 class="phpdocumentor-function__name">wc_update_390_move_maxmind_database()</h4>
+
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html"><abbr title="woocommerce/includes/wc-update-functions.php">wc-update-functions.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">2054</span>
+    </aside>
+
+        <p class="phpdocumentor-summary">We&#039;ve moved the MaxMind database to a new location, as per the TOS&#039; requirement that the database not
+be publicly accessible.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility"></span>
+                                <span class="phpdocumentor-signature__name">wc_update_390_move_maxmind_database</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">mixed</span>
+    </code>
+
+    
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">mixed</span>
+            
+</article>
+                            <a id="function_wc_update_390_change_geolocation_database_update_cron"></a>
+<article
+        class="
+            phpdocumentor-element
+            phpdocumentor-function
+            phpdocumentor-function--
+                    "
+>
+    <h4 class="phpdocumentor-function__name">wc_update_390_change_geolocation_database_update_cron()</h4>
+
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html"><abbr title="woocommerce/includes/wc-update-functions.php">wc-update-functions.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">2074</span>
+    </aside>
+
+        <p class="phpdocumentor-summary">So that we can best meet MaxMind&#039;s TOS, the geolocation database update cron should run once per 15 days.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility"></span>
+                                <span class="phpdocumentor-signature__name">wc_update_390_change_geolocation_database_update_cron</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">mixed</span>
+    </code>
+
+    
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">mixed</span>
+            
+</article>
+                            <a id="function_wc_update_390_db_version"></a>
+<article
+        class="
+            phpdocumentor-element
+            phpdocumentor-function
+            phpdocumentor-function--
+                    "
+>
+    <h4 class="phpdocumentor-function__name">wc_update_390_db_version()</h4>
+
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html"><abbr title="woocommerce/includes/wc-update-functions.php">wc-update-functions.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">2082</span>
+    </aside>
+
+        <p class="phpdocumentor-summary">Update DB version.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility"></span>
+                                <span class="phpdocumentor-signature__name">wc_update_390_db_version</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">mixed</span>
+    </code>
+
+    
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">mixed</span>
+            
+</article>
+                            <a id="function_wc_update_400_increase_size_of_column"></a>
+<article
+        class="
+            phpdocumentor-element
+            phpdocumentor-function
+            phpdocumentor-function--
+                    "
+>
+    <h4 class="phpdocumentor-function__name">wc_update_400_increase_size_of_column()</h4>
+
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html"><abbr title="woocommerce/includes/wc-update-functions.php">wc-update-functions.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">2089</span>
+    </aside>
+
+        <p class="phpdocumentor-summary">Increase column size</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility"></span>
+                                <span class="phpdocumentor-signature__name">wc_update_400_increase_size_of_column</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">mixed</span>
+    </code>
+
+    
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">mixed</span>
+            
+</article>
+                            <a id="function_wc_update_400_reset_action_scheduler_migration_status"></a>
+<article
+        class="
+            phpdocumentor-element
+            phpdocumentor-function
+            phpdocumentor-function--
+                    "
+>
+    <h4 class="phpdocumentor-function__name">wc_update_400_reset_action_scheduler_migration_status()</h4>
+
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html"><abbr title="woocommerce/includes/wc-update-functions.php">wc-update-functions.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">2098</span>
+    </aside>
+
+        <p class="phpdocumentor-summary">Reset ActionScheduler migration status. Needs AS &gt;= 3.0 shipped with WC &gt;= 4.0.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility"></span>
+                                <span class="phpdocumentor-signature__name">wc_update_400_reset_action_scheduler_migration_status</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">mixed</span>
+    </code>
+
+    
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">mixed</span>
+            
+</article>
+                            <a id="function_wc_update_400_db_version"></a>
+<article
+        class="
+            phpdocumentor-element
+            phpdocumentor-function
+            phpdocumentor-function--
+                    "
+>
+    <h4 class="phpdocumentor-function__name">wc_update_400_db_version()</h4>
+
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html"><abbr title="woocommerce/includes/wc-update-functions.php">wc-update-functions.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">2110</span>
+    </aside>
+
+        <p class="phpdocumentor-summary">Update DB version.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility"></span>
+                                <span class="phpdocumentor-signature__name">wc_update_400_db_version</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">mixed</span>
+    </code>
+
+    
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">mixed</span>
+            
+</article>
+                    </section>
+            </div>
+    </div>
+</main>
+<a href="#" class="to-top">Back to the top</a>
+<footer class="phpdocumentor phpdocumentor-footer">
+    <div class="phpdocumentor-section">
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on August 18th, 2020 at 11:57 am.</span>
+    </div>
+</footer>
+</body>
+</html>
