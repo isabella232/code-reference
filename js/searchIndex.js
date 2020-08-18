@@ -1816,6 +1816,16 @@ Search.appendIndex(
             "summary": "Save\u0020data\u0020\u0028either\u0020create\u0020or\u0020update\u0020depending\u0020on\u0020if\u0020we\u0020are\u0020working\u0020on\u0020an\u0020existing\u0020product\u0029.",
             "url": "https://woocommerce.github.io/code-reference/classes/WC-Product.html#method_save"
         },                {
+            "fqsen": "\\WC_Product\u003A\u003Adelete\u0028\u0029",
+            "name": "delete",
+            "summary": "Delete\u0020the\u0020product,\u0020set\u0020its\u0020ID\u0020to\u00200,\u0020and\u0020return\u0020result.",
+            "url": "https://woocommerce.github.io/code-reference/classes/WC-Product.html#method_delete"
+        },                {
+            "fqsen": "\\WC_Product\u003A\u003Amaybe_defer_product_sync\u0028\u0029",
+            "name": "maybe_defer_product_sync",
+            "summary": "If\u0020this\u0020is\u0020a\u0020child\u0020product,\u0020queue\u0020its\u0020parent\u0020for\u0020syncing\u0020at\u0020the\u0020end\u0020of\u0020the\u0020request.",
+            "url": "https://woocommerce.github.io/code-reference/classes/WC-Product.html#method_maybe_defer_product_sync"
+        },                {
             "fqsen": "\\WC_Product\u003A\u003A\u0024supports",
             "name": "supports",
             "summary": "Supported\u0020features\u0020such\u0020as\u0020\u0027ajax_add_to_cart\u0027.",
@@ -1855,6 +1865,11 @@ Search.appendIndex(
             "name": "is_visible",
             "summary": "Returns\u0020whether\u0020or\u0020not\u0020the\u0020product\u0020is\u0020visible\u0020in\u0020the\u0020catalog.",
             "url": "https://woocommerce.github.io/code-reference/classes/WC-Product.html#method_is_visible"
+        },                {
+            "fqsen": "\\WC_Product\u003A\u003Ais_visible_core\u0028\u0029",
+            "name": "is_visible_core",
+            "summary": "Returns\u0020whether\u0020or\u0020not\u0020the\u0020product\u0020is\u0020visible\u0020in\u0020the\u0020catalog\u0020\u0028doesn\u0027t\u0020trigger\u0020filters\u0029.",
+            "url": "https://woocommerce.github.io/code-reference/classes/WC-Product.html#method_is_visible_core"
         },                {
             "fqsen": "\\WC_Product\u003A\u003Ais_purchasable\u0028\u0029",
             "name": "is_purchasable",
@@ -3896,6 +3911,21 @@ Search.appendIndex(
             "summary": "Add\u0020a\u0020post\u0020display\u0020state\u0020for\u0020special\u0020WC\u0020pages\u0020in\u0020the\u0020page\u0020list\u0020table.",
             "url": "https://woocommerce.github.io/code-reference/classes/WC-Admin-Post-Types.html#method_add_display_post_states"
         },                {
+            "fqsen": "\\WC_Admin_Post_Types\u003A\u003Amaybe_update_stock_status\u0028\u0029",
+            "name": "maybe_update_stock_status",
+            "summary": "Apply\u0020product\u0020type\u0020constraints\u0020to\u0020stock\u0020status.",
+            "url": "https://woocommerce.github.io/code-reference/classes/WC-Admin-Post-Types.html#method_maybe_update_stock_status"
+        },                {
+            "fqsen": "\\WC_Admin_Post_Types\u003A\u003Aset_new_price\u0028\u0029",
+            "name": "set_new_price",
+            "summary": "Set\u0020the\u0020new\u0020regular\u0020or\u0020sale\u0020price\u0020if\u0020requested.",
+            "url": "https://woocommerce.github.io/code-reference/classes/WC-Admin-Post-Types.html#method_set_new_price"
+        },                {
+            "fqsen": "\\WC_Admin_Post_Types\u003A\u003Arequest_data\u0028\u0029",
+            "name": "request_data",
+            "summary": "Get\u0020the\u0020current\u0020request\u0020data\u0020\u0028\u0024_REQUEST\u0020superglobal\u0029.",
+            "url": "https://woocommerce.github.io/code-reference/classes/WC-Admin-Post-Types.html#method_request_data"
+        },                {
             "fqsen": "\\WC_Admin_Profile",
             "name": "WC_Admin_Profile",
             "summary": "WC_Admin_Profile\u0020Class.",
@@ -4930,6 +4960,11 @@ Search.appendIndex(
             "name": "get_update_data",
             "summary": "Get\u0020update\u0020data\u0020for\u0020all\u0020extensions.",
             "url": "https://woocommerce.github.io/code-reference/classes/WC-Helper-Updater.html#method_get_update_data"
+        },                {
+            "fqsen": "\\WC_Helper_Updater\u003A\u003Aget_translations_update_data\u0028\u0029",
+            "name": "get_translations_update_data",
+            "summary": "Get\u0020translations\u0020updates\u0020informations.",
+            "url": "https://woocommerce.github.io/code-reference/classes/WC-Helper-Updater.html#method_get_translations_update_data"
         },                {
             "fqsen": "\\WC_Helper_Updater\u003A\u003A_update_check\u0028\u0029",
             "name": "_update_check",
@@ -7681,6 +7716,11 @@ Search.appendIndex(
             "summary": "Add\u0020order\u0020item\u0020via\u0020ajax.\u0020Used\u0020on\u0020the\u0020edit\u0020order\u0020screen\u0020in\u0020WP\u0020Admin.",
             "url": "https://woocommerce.github.io/code-reference/classes/WC-AJAX.html#method_add_order_item"
         },                {
+            "fqsen": "\\WC_AJAX\u003A\u003Amaybe_add_order_item\u0028\u0029",
+            "name": "maybe_add_order_item",
+            "summary": "Add\u0020order\u0020item\u0020via\u0020AJAX.\u0020This\u0020is\u0020refactored\u0020for\u0020better\u0020unit\u0020testing.",
+            "url": "https://woocommerce.github.io/code-reference/classes/WC-AJAX.html#method_maybe_add_order_item"
+        },                {
             "fqsen": "\\WC_AJAX\u003A\u003Aadd_order_fee\u0028\u0029",
             "name": "add_order_fee",
             "summary": "Add\u0020order\u0020fee\u0020via\u0020ajax.",
@@ -9301,10 +9341,10 @@ Search.appendIndex(
             "summary": "Reset\u0020cart\u0020totals\u0020to\u0020the\u0020defaults.\u0020Useful\u0020before\u0020running\u0020calculations.",
             "url": "https://woocommerce.github.io/code-reference/classes/WC-Cart.html#method_reset_totals"
         },                {
-            "fqsen": "\\WC_Cart\u003A\u003Ais_tax_displayed\u0028\u0029",
-            "name": "is_tax_displayed",
+            "fqsen": "\\WC_Cart\u003A\u003Aget_tax_price_display_mode\u0028\u0029",
+            "name": "get_tax_price_display_mode",
             "summary": "Returns\u0020\u0027incl\u0027\u0020if\u0020tax\u0020should\u0020be\u0020included\u0020in\u0020cart,\u0020otherwise\u0020returns\u0020\u0027excl\u0027.",
-            "url": "https://woocommerce.github.io/code-reference/classes/WC-Cart.html#method_is_tax_displayed"
+            "url": "https://woocommerce.github.io/code-reference/classes/WC-Cart.html#method_get_tax_price_display_mode"
         },                {
             "fqsen": "\\WC_Cart\u003A\u003Aget_cart_hash\u0028\u0029",
             "name": "get_cart_hash",
@@ -9325,11 +9365,6 @@ Search.appendIndex(
             "name": "applied_coupons",
             "summary": "Contains\u0020an\u0020array\u0020of\u0020coupon\u0020codes\u0020applied\u0020to\u0020the\u0020cart.",
             "url": "https://woocommerce.github.io/code-reference/classes/WC-Cart.html#property_applied_coupons"
-        },                {
-            "fqsen": "\\WC_Cart\u003A\u003A\u0024tax_display_cart",
-            "name": "tax_display_cart",
-            "summary": "Are\u0020prices\u0020in\u0020the\u0020cart\u0020displayed\u0020inc\u0020or\u0020excl\u0020tax\u003F",
-            "url": "https://woocommerce.github.io/code-reference/classes/WC-Cart.html#property_tax_display_cart"
         },                {
             "fqsen": "\\WC_Cart\u003A\u003A\u0024shipping_methods",
             "name": "shipping_methods",
@@ -14586,6 +14621,11 @@ Search.appendIndex(
             "summary": "Register\u0020core\u0020post\u0020types.",
             "url": "https://woocommerce.github.io/code-reference/classes/WC-Post-Types.html#method_register_post_types"
         },                {
+            "fqsen": "\\WC_Post_Types\u003A\u003Aupdated_term_messages\u0028\u0029",
+            "name": "updated_term_messages",
+            "summary": "Customize\u0020taxonomies\u0020update\u0020messages.",
+            "url": "https://woocommerce.github.io/code-reference/classes/WC-Post-Types.html#method_updated_term_messages"
+        },                {
             "fqsen": "\\WC_Post_Types\u003A\u003Aregister_post_status\u0028\u0029",
             "name": "register_post_status",
             "summary": "Register\u0020our\u0020custom\u0020post\u0020statuses,\u0020used\u0020for\u0020order\u0020status.",
@@ -15286,6 +15326,11 @@ Search.appendIndex(
             "summary": "Get\u0020an\u0020array\u0020of\u0020available\u0020variations\u0020for\u0020the\u0020current\u0020product.",
             "url": "https://woocommerce.github.io/code-reference/classes/WC-Product-Variable.html#method_get_available_variations"
         },                {
+            "fqsen": "\\WC_Product_Variable\u003A\u003Avariation_is_available\u0028\u0029",
+            "name": "variation_is_available",
+            "summary": "Check\u0020if\u0020a\u0020given\u0020variation\u0020is\u0020currently\u0020available.",
+            "url": "https://woocommerce.github.io/code-reference/classes/WC-Product-Variable.html#method_variation_is_available"
+        },                {
             "fqsen": "\\WC_Product_Variable\u003A\u003Aget_available_variation\u0028\u0029",
             "name": "get_available_variation",
             "summary": "Returns\u0020an\u0020array\u0020of\u0020data\u0020for\u0020a\u0020variation.\u0020Used\u0020in\u0020the\u0020add\u0020to\u0020cart\u0020form.",
@@ -15356,6 +15401,26 @@ Search.appendIndex(
             "summary": "Returns\u0020whether\u0020or\u0020not\u0020the\u0020product\u0020has\u0020additional\u0020options\u0020that\u0020need\nselecting\u0020before\u0020adding\u0020to\u0020cart.",
             "url": "https://woocommerce.github.io/code-reference/classes/WC-Product-Variable.html#method_has_options"
         },                {
+            "fqsen": "\\WC_Product_Variable\u003A\u003Ais_visible_core\u0028\u0029",
+            "name": "is_visible_core",
+            "summary": "Returns\u0020whether\u0020or\u0020not\u0020the\u0020product\u0020is\u0020visible\u0020in\u0020the\u0020catalog\u0020\u0028doesn\u0027t\u0020trigger\u0020filters\u0029.",
+            "url": "https://woocommerce.github.io/code-reference/classes/WC-Product-Variable.html#method_is_visible_core"
+        },                {
+            "fqsen": "\\WC_Product_Variable\u003A\u003Avariation_matches_filters\u0028\u0029",
+            "name": "variation_matches_filters",
+            "summary": "Checks\u0020if\u0020a\u0020given\u0020variation\u0020matches\u0020the\u0020active\u0020attribute\u0020filters.",
+            "url": "https://woocommerce.github.io/code-reference/classes/WC-Product-Variable.html#method_variation_matches_filters"
+        },                {
+            "fqsen": "\\WC_Product_Variable\u003A\u003Aparent_is_visible_core\u0028\u0029",
+            "name": "parent_is_visible_core",
+            "summary": "What\u0020does\u0020is_visible_core\u0020in\u0020the\u0020parent\u0020class\u0020say\u003F\nThis\u0020method\u0020exists\u0020to\u0020ease\u0020unit\u0020testing.",
+            "url": "https://woocommerce.github.io/code-reference/classes/WC-Product-Variable.html#method_parent_is_visible_core"
+        },                {
+            "fqsen": "\\WC_Product_Variable\u003A\u003Aget_layered_nav_chosen_attributes\u0028\u0029",
+            "name": "get_layered_nav_chosen_attributes",
+            "summary": "Get\u0020an\u0020array\u0020of\u0020attributes\u0020and\u0020terms\u0020selected\u0020with\u0020the\u0020layered\u0020nav\u0020widget.",
+            "url": "https://woocommerce.github.io/code-reference/classes/WC-Product-Variable.html#method_get_layered_nav_chosen_attributes"
+        },                {
             "fqsen": "\\WC_Product_Variable\u003A\u003Async\u0028\u0029",
             "name": "sync",
             "summary": "Sync\u0020a\u0020variable\u0020product\u0020with\u0020it\u0027s\u0020children.\u0020These\u0020sync\u0020functions\u0020sync\nupwards\u0020\u0028from\u0020child\u0020to\u0020parent\u0029\u0020when\u0020the\u0020variation\u0020is\u0020saved.",
@@ -15423,7 +15488,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\WC_Product_Variation\u003A\u003Aget_variation_attributes\u0028\u0029",
             "name": "get_variation_attributes",
-            "summary": "Get\u0020variation\u0020attribute\u0020values.\u0020Keys\u0020are\u0020prefixed\u0020with\u0020attribute_,\u0020as\u0020stored.",
+            "summary": "Get\u0020variation\u0020attribute\u0020values.\u0020Keys\u0020are\u0020prefixed\u0020with\u0020attribute_,\u0020as\u0020stored,\u0020unless\u0020\u0024with_prefix\u0020is\u0020false.",
             "url": "https://woocommerce.github.io/code-reference/classes/WC-Product-Variation.html#method_get_variation_attributes"
         },                {
             "fqsen": "\\WC_Product_Variation\u003A\u003Aget_attribute\u0028\u0029",
@@ -15556,6 +15621,11 @@ Search.appendIndex(
             "summary": "Return\u0020valid\u0020tax\u0020classes.\u0020Adds\u0020\u0027parent\u0027\u0020to\u0020the\u0020default\u0020list\u0020of\u0020valid\u0020tax\u0020classes.",
             "url": "https://woocommerce.github.io/code-reference/classes/WC-Product-Variation.html#method_get_valid_tax_classes"
         },                {
+            "fqsen": "\\WC_Product_Variation\u003A\u003Adelete\u0028\u0029",
+            "name": "delete",
+            "summary": "Delete\u0020variation,\u0020set\u0020the\u0020ID\u0020to\u00200,\u0020and\u0020return\u0020result.",
+            "url": "https://woocommerce.github.io/code-reference/classes/WC-Product-Variation.html#method_delete"
+        },                {
             "fqsen": "\\WC_Product_Variation\u003A\u003A\u0024post_type",
             "name": "post_type",
             "summary": "Post\u0020type.",
@@ -15636,10 +15706,35 @@ Search.appendIndex(
             "summary": "Hook\u0020into\u0020pre_get_posts\u0020to\u0020do\u0020the\u0020main\u0020product\u0020query.",
             "url": "https://woocommerce.github.io/code-reference/classes/WC-Query.html#method_pre_get_posts"
         },                {
+            "fqsen": "\\WC_Query\u003A\u003Ahandle_get_posts\u0028\u0029",
+            "name": "handle_get_posts",
+            "summary": "Handler\u0020for\u0020the\u0020\u0027the_posts\u0027\u0020WP\u0020filter.",
+            "url": "https://woocommerce.github.io/code-reference/classes/WC-Query.html#method_handle_get_posts"
+        },                {
+            "fqsen": "\\WC_Query\u003A\u003Aadjust_total_pages\u0028\u0029",
+            "name": "adjust_total_pages",
+            "summary": "The\u0020\u0027adjust_posts_count\u0027\u0020method\u0020that\u0020handles\u0020the\u0020\u0027found_posts\u0027\u0020filter\u0020indirectly\u0020initializes\nthe\u0020loop\u0020properties\u0020with\u0020a\u0020call\u0020to\u0020\u0027wc_setup_loop\u0027.\u0020This\u0020includes\u0020setting\u0020\u0027total_pages\u0027\u0020to\n\u0027\u0024GLOBALS\u005B\u0027wp_query\u0027\u005D\u002D\u003Emax_num_pages\u0027,\u0020which\u0020at\u0020that\u0020point\u0020has\u0020a\u0020value\u0020of\u0020zero.",
+            "url": "https://woocommerce.github.io/code-reference/classes/WC-Query.html#method_adjust_total_pages"
+        },                {
             "fqsen": "\\WC_Query\u003A\u003Aremove_product_query_filters\u0028\u0029",
             "name": "remove_product_query_filters",
             "summary": "Pre_get_posts\u0020above\u0020may\u0020adjust\u0020the\u0020main\u0020query\u0020to\u0020add\u0020WooCommerce\u0020logic.\u0020When\u0020this\u0020query\u0020is\u0020done,\u0020we\u0020need\u0020to\u0020ensure\nall\u0020custom\u0020filters\u0020are\u0020removed.",
             "url": "https://woocommerce.github.io/code-reference/classes/WC-Query.html#method_remove_product_query_filters"
+        },                {
+            "fqsen": "\\WC_Query\u003A\u003Aadjust_posts_count\u0028\u0029",
+            "name": "adjust_posts_count",
+            "summary": "When\u0020we\u0020are\u0020listing\u0020products\u0020and\u0020the\u0020request\u0020is\u0020filtering\u0020by\u0020attributes\u0020via\u0020layered\u0020nav\u0020plugin\nwe\u0020need\u0020to\u0020adjust\u0020the\u0020total\u0020posts\u0020count\u0020to\u0020account\u0020for\u0020variable\u0020products\u0020having\u0020stock\nin\u0020some\u0020variations\u0020but\u0020not\u0020in\u0020others.",
+            "url": "https://woocommerce.github.io/code-reference/classes/WC-Query.html#method_adjust_posts_count"
+        },                {
+            "fqsen": "\\WC_Query\u003A\u003Aget_layered_nav_chosen_attributes_inst\u0028\u0029",
+            "name": "get_layered_nav_chosen_attributes_inst",
+            "summary": "Instance\u0020version\u0020of\u0020get_layered_nav_chosen_attributes,\u0020needed\u0020for\u0020unit\u0020tests.",
+            "url": "https://woocommerce.github.io/code-reference/classes/WC-Query.html#method_get_layered_nav_chosen_attributes_inst"
+        },                {
+            "fqsen": "\\WC_Query\u003A\u003Aget_current_posts\u0028\u0029",
+            "name": "get_current_posts",
+            "summary": "Get\u0020the\u0020posts\u0020\u0028or\u0020the\u0020ids\u0020of\u0020the\u0020posts\u0029\u0020found\u0020in\u0020the\u0020current\u0020WP\u0020loop.",
+            "url": "https://woocommerce.github.io/code-reference/classes/WC-Query.html#method_get_current_posts"
         },                {
             "fqsen": "\\WC_Query\u003A\u003Awpseo_metadesc\u0028\u0029",
             "name": "wpseo_metadesc",
@@ -15786,10 +15881,10 @@ Search.appendIndex(
             "summary": "Query\u0020vars\u0020to\u0020add\u0020to\u0020wp.",
             "url": "https://woocommerce.github.io/code-reference/classes/WC-Query.html#property_query_vars"
         },                {
-            "fqsen": "\\WC_Query\u003A\u003A\u0024_chosen_attributes",
-            "name": "_chosen_attributes",
+            "fqsen": "\\WC_Query\u003A\u003A\u0024chosen_attributes",
+            "name": "chosen_attributes",
             "summary": "Stores\u0020chosen\u0020attributes.",
-            "url": "https://woocommerce.github.io/code-reference/classes/WC-Query.html#property__chosen_attributes"
+            "url": "https://woocommerce.github.io/code-reference/classes/WC-Query.html#property_chosen_attributes"
         },                {
             "fqsen": "\\WC_Rate_Limiter",
             "name": "WC_Rate_Limiter",
@@ -17826,6 +17921,21 @@ Search.appendIndex(
             "summary": "Is\u0020the\u0020WooCommerce\u0020Admin\u0020actively\u0020included\u0020in\u0020the\u0020WooCommerce\u0020core\u003F\nBased\u0020on\u0020presence\u0020of\u0020a\u0020basic\u0020WC\u0020Admin\u0020function.",
             "url": "https://woocommerce.github.io/code-reference/classes/WooCommerce.html#method_is_wc_admin_active"
         },                {
+            "fqsen": "\\WooCommerce\u003A\u003Acall_function\u0028\u0029",
+            "name": "call_function",
+            "summary": "Call\u0020a\u0020user\u0020function.\u0020This\u0020should\u0020be\u0020used\u0020to\u0020execute\u0020any\u0020non\u002Didempotent\u0020function,\u0020especially\nthose\u0020in\u0020the\u0020\u0060includes\u0060\u0020directory\u0020or\u0020provided\u0020by\u0020WordPress.",
+            "url": "https://woocommerce.github.io/code-reference/classes/WooCommerce.html#method_call_function"
+        },                {
+            "fqsen": "\\WooCommerce\u003A\u003Acall_static\u0028\u0029",
+            "name": "call_static",
+            "summary": "Call\u0020a\u0020static\u0020method\u0020in\u0020a\u0020class.\u0020This\u0020should\u0020be\u0020used\u0020to\u0020execute\u0020any\u0020non\u002Didempotent\u0020method\u0020in\u0020classes\nfrom\u0020the\u0020\u0060includes\u0060\u0020directory.",
+            "url": "https://woocommerce.github.io/code-reference/classes/WooCommerce.html#method_call_static"
+        },                {
+            "fqsen": "\\WooCommerce\u003A\u003Aget_instance_of\u0028\u0029",
+            "name": "get_instance_of",
+            "summary": "Gets\u0020an\u0020instance\u0020of\u0020a\u0020given\u0020legacy\u0020class.",
+            "url": "https://woocommerce.github.io/code-reference/classes/WooCommerce.html#method_get_instance_of"
+        },                {
             "fqsen": "\\WooCommerce\u003A\u003A\u0024version",
             "name": "version",
             "summary": "WooCommerce\u0020version.",
@@ -18165,6 +18275,11 @@ Search.appendIndex(
             "name": "get_post_title",
             "summary": "Get\u0020a\u0020title\u0020for\u0020the\u0020new\u0020post\u0020type.",
             "url": "https://woocommerce.github.io/code-reference/classes/Abstract-WC-Order-Data-Store-CPT.html#method_get_post_title"
+        },                {
+            "fqsen": "\\Abstract_WC_Order_Data_Store_CPT\u003A\u003Aget_order_key\u0028\u0029",
+            "name": "get_order_key",
+            "summary": "Get\u0020order\u0020key.",
+            "url": "https://woocommerce.github.io/code-reference/classes/Abstract-WC-Order-Data-Store-CPT.html#method_get_order_key"
         },                {
             "fqsen": "\\Abstract_WC_Order_Data_Store_CPT\u003A\u003Aread_order_data\u0028\u0029",
             "name": "read_order_data",
@@ -18775,6 +18890,11 @@ Search.appendIndex(
             "name": "get_post_excerpt",
             "summary": "Excerpt\u0020for\u0020post.",
             "url": "https://woocommerce.github.io/code-reference/classes/WC-Order-Data-Store-CPT.html#method_get_post_excerpt"
+        },                {
+            "fqsen": "\\WC_Order_Data_Store_CPT\u003A\u003Aget_order_key\u0028\u0029",
+            "name": "get_order_key",
+            "summary": "Get\u0020order\u0020key.",
+            "url": "https://woocommerce.github.io/code-reference/classes/WC-Order-Data-Store-CPT.html#method_get_order_key"
         },                {
             "fqsen": "\\WC_Order_Data_Store_CPT\u003A\u003Aget_total_refunded\u0028\u0029",
             "name": "get_total_refunded",
@@ -21953,8 +22073,13 @@ Search.appendIndex(
         },                {
             "fqsen": "\\WC_Product_CSV_Importer\u003A\u003Aget_formating_callback\u0028\u0029",
             "name": "get_formating_callback",
-            "summary": "Get\u0020formatting\u0020callback.",
+            "summary": "Deprecated\u0020get\u0020formatting\u0020callback\u0020method.",
             "url": "https://woocommerce.github.io/code-reference/classes/WC-Product-CSV-Importer.html#method_get_formating_callback"
+        },                {
+            "fqsen": "\\WC_Product_CSV_Importer\u003A\u003Aget_formatting_callback\u0028\u0029",
+            "name": "get_formatting_callback",
+            "summary": "Get\u0020formatting\u0020callback.",
+            "url": "https://woocommerce.github.io/code-reference/classes/WC-Product-CSV-Importer.html#method_get_formatting_callback"
         },                {
             "fqsen": "\\WC_Product_CSV_Importer\u003A\u003Astarts_with\u0028\u0029",
             "name": "starts_with",
@@ -27503,7 +27628,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\wc_generate_order_key\u0028\u0029",
             "name": "wc_generate_order_key",
-            "summary": "Generate\u0020an\u0020order\u0020key.",
+            "summary": "Generate\u0020an\u0020order\u0020key\u0020with\u0020prefix.",
             "url": "https://woocommerce.github.io/code-reference/namespaces/default.html#function_wc_generate_order_key"
         },                {
             "fqsen": "\\wc_get_order_id_by_order_key\u0028\u0029",
@@ -28130,6 +28255,16 @@ Search.appendIndex(
             "name": "wc_set_loop_prop",
             "summary": "Sets\u0020a\u0020property\u0020in\u0020the\u0020woocommerce_loop\u0020global.",
             "url": "https://woocommerce.github.io/code-reference/namespaces/default.html#function_wc_set_loop_prop"
+        },                {
+            "fqsen": "\\wc_set_loop_product_visibility\u0028\u0029",
+            "name": "wc_set_loop_product_visibility",
+            "summary": "Set\u0020the\u0020current\u0020visbility\u0020for\u0020a\u0020product\u0020in\u0020the\u0020woocommerce_loop\u0020global.",
+            "url": "https://woocommerce.github.io/code-reference/namespaces/default.html#function_wc_set_loop_product_visibility"
+        },                {
+            "fqsen": "\\wc_get_loop_product_visibility\u0028\u0029",
+            "name": "wc_get_loop_product_visibility",
+            "summary": "Gets\u0020the\u0020cached\u0020current\u0020visibility\u0020for\u0020a\u0020product\u0020from\u0020the\u0020woocommerce_loop\u0020global.",
+            "url": "https://woocommerce.github.io/code-reference/namespaces/default.html#function_wc_get_loop_product_visibility"
         },                {
             "fqsen": "\\woocommerce_product_loop\u0028\u0029",
             "name": "woocommerce_product_loop",
@@ -29341,6 +29476,16 @@ Search.appendIndex(
             "summary": "Update\u0020DB\u0020version.",
             "url": "https://woocommerce.github.io/code-reference/namespaces/default.html#function_wc_update_400_db_version"
         },                {
+            "fqsen": "\\wc_update_440_insert_attribute_terms_for_variable_products\u0028\u0029",
+            "name": "wc_update_440_insert_attribute_terms_for_variable_products",
+            "summary": "Register\u0020attributes\u0020as\u0020terms\u0020for\u0020variable\u0020products,\u0020in\u0020increments\u0020of\u0020100\u0020products.",
+            "url": "https://woocommerce.github.io/code-reference/namespaces/default.html#function_wc_update_440_insert_attribute_terms_for_variable_products"
+        },                {
+            "fqsen": "\\wc_update_440_db_version\u0028\u0029",
+            "name": "wc_update_440_db_version",
+            "summary": "Update\u0020DB\u0020version.",
+            "url": "https://woocommerce.github.io/code-reference/namespaces/default.html#function_wc_update_440_db_version"
+        },                {
             "fqsen": "\\wc_disable_admin_bar\u0028\u0029",
             "name": "wc_disable_admin_bar",
             "summary": "Prevent\u0020any\u0020user\u0020who\u0020cannot\u0020\u0027edit_posts\u0027\u0020\u0028subscribers,\u0020customers\u0020etc\u0029\u0020from\u0020seeing\u0020the\u0020admin\u0020bar.",
@@ -29500,6 +29645,11 @@ Search.appendIndex(
             "name": "wc_translate_user_roles",
             "summary": "Translate\u0020WC\u0020roles\u0020using\u0020the\u0020woocommerce\u0020textdomain.",
             "url": "https://woocommerce.github.io/code-reference/namespaces/default.html#function_wc_translate_user_roles"
+        },                {
+            "fqsen": "\\wc_webhook_execute_queue\u0028\u0029",
+            "name": "wc_webhook_execute_queue",
+            "summary": "Process\u0020the\u0020web\u0020hooks\u0020at\u0020the\u0020end\u0020of\u0020the\u0020request.",
+            "url": "https://woocommerce.github.io/code-reference/namespaces/default.html#function_wc_webhook_execute_queue"
         },                {
             "fqsen": "\\wc_webhook_process_delivery\u0028\u0029",
             "name": "wc_webhook_process_delivery",
@@ -29996,6 +30146,31 @@ Search.appendIndex(
             "summary": "Count\u0020products\u0020within\u0020certain\u0020terms,\u0020taking\u0020the\u0020main\u0020WP\u0020query\u0020into\u0020consideration.",
             "url": "https://woocommerce.github.io/code-reference/classes/WC-Widget-Layered-Nav.html#method_get_filtered_term_product_counts"
         },                {
+            "fqsen": "\\WC_Widget_Layered_Nav\u003A\u003Aget_main_tax_query\u0028\u0029",
+            "name": "get_main_tax_query",
+            "summary": "Wrapper\u0020for\u0020WC_Query\u003A\u003Aget_main_tax_query\u0028\u0029\u0020to\u0020ease\u0020unit\u0020testing.",
+            "url": "https://woocommerce.github.io/code-reference/classes/WC-Widget-Layered-Nav.html#method_get_main_tax_query"
+        },                {
+            "fqsen": "\\WC_Widget_Layered_Nav\u003A\u003Aget_main_search_query_sql\u0028\u0029",
+            "name": "get_main_search_query_sql",
+            "summary": "Wrapper\u0020for\u0020WC_Query\u003A\u003Aget_main_search_query_sql\u0028\u0029\u0020to\u0020ease\u0020unit\u0020testing.",
+            "url": "https://woocommerce.github.io/code-reference/classes/WC-Widget-Layered-Nav.html#method_get_main_search_query_sql"
+        },                {
+            "fqsen": "\\WC_Widget_Layered_Nav\u003A\u003Aget_main_meta_query\u0028\u0029",
+            "name": "get_main_meta_query",
+            "summary": "Wrapper\u0020for\u0020WC_Query\u003A\u003Aget_main_search_queryget_main_meta_query\u0020to\u0020ease\u0020unit\u0020testing.",
+            "url": "https://woocommerce.github.io/code-reference/classes/WC-Widget-Layered-Nav.html#method_get_main_meta_query"
+        },                {
+            "fqsen": "\\WC_Widget_Layered_Nav\u003A\u003Aget_extra_tax_query_sql\u0028\u0029",
+            "name": "get_extra_tax_query_sql",
+            "summary": "Get\u0020a\u0020tax\u0020query\u0020SQL\u0020for\u0020a\u0020given\u0020set\u0020of\u0020taxonomy,\u0020terms\u0020and\u0020operator.",
+            "url": "https://woocommerce.github.io/code-reference/classes/WC-Widget-Layered-Nav.html#method_get_extra_tax_query_sql"
+        },                {
+            "fqsen": "\\WC_Widget_Layered_Nav\u003A\u003Aconvert_tax_query_to_sql\u0028\u0029",
+            "name": "convert_tax_query_to_sql",
+            "summary": "Convert\u0020a\u0020tax\u0020query\u0020array\u0020to\u0020SQL\u0020using\u0020an\u0020intermediate\u0020WP_Tax_Query\u0020object.",
+            "url": "https://woocommerce.github.io/code-reference/classes/WC-Widget-Layered-Nav.html#method_convert_tax_query_to_sql"
+        },                {
             "fqsen": "\\WC_Widget_Layered_Nav\u003A\u003Alayered_nav_list\u0028\u0029",
             "name": "layered_nav_list",
             "summary": "Show\u0020list\u0020based\u0020layered\u0020nav.",
@@ -30286,6 +30461,16 @@ Search.appendIndex(
             "summary": "Update\u0020DB\u0020Version.",
             "url": "https://woocommerce.github.io/code-reference/namespaces/default.html#function_wc_admin_update_130_db_version"
         },                {
+            "fqsen": "\\wc_admin_update_140_change_deactivate_plugin_note_type\u0028\u0029",
+            "name": "wc_admin_update_140_change_deactivate_plugin_note_type",
+            "summary": "Change\u0020the\u0020deactivate\u0020plugin\u0020note\u0020type\u0020to\u0020\u0027info\u0027.",
+            "url": "https://woocommerce.github.io/code-reference/namespaces/default.html#function_wc_admin_update_140_change_deactivate_plugin_note_type"
+        },                {
+            "fqsen": "\\wc_admin_update_140_db_version\u0028\u0029",
+            "name": "wc_admin_update_140_db_version",
+            "summary": "Update\u0020DB\u0020Version.",
+            "url": "https://woocommerce.github.io/code-reference/namespaces/default.html#function_wc_admin_update_140_db_version"
+        },                {
             "fqsen": "\\Automattic\\WooCommerce\\Admin\\API\\Coupons",
             "name": "Coupons",
             "summary": "Coupons\u0020controller.",
@@ -30438,7 +30623,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Automattic\\WooCommerce\\Admin\\API\\Init\u003A\u003Aadd_currency_symbol_to_order_response\u0028\u0029",
             "name": "add_currency_symbol_to_order_response",
-            "summary": "Add\u0020the\u0020currency\u0020symbol\u0020\u0028in\u0020addition\u0020to\u0020currency\u0020code\u0029\u0020to\u0020each\u0020Order\nobject\u0020in\u0020REST\u0020API\u0020responses.\u0020For\u0020use\u0020in\u0020formatCurrency\u0028\u0029.",
+            "summary": "Add\u0020the\u0020currency\u0020symbol\u0020\u0028in\u0020addition\u0020to\u0020currency\u0020code\u0029\u0020to\u0020each\u0020Order\nobject\u0020in\u0020REST\u0020API\u0020responses.\u0020For\u0020use\u0020in\u0020formatAmount\u0028\u0029.",
             "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Admin-API-Init.html#method_add_currency_symbol_to_order_response"
         },                {
             "fqsen": "\\Automattic\\WooCommerce\\Admin\\API\\Leaderboards",
@@ -31536,6 +31721,11 @@ Search.appendIndex(
             "summary": "Returns\u0020the\u0020report\u0020data\u0020based\u0020on\u0020parameters\u0020supplied\u0020by\u0020the\u0020user.",
             "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Admin-API-Reports-Coupons-DataStore.html#method_get_data"
         },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Admin\\API\\Reports\\Coupons\\DataStore\u003A\u003Aget_coupon_id\u0028\u0029",
+            "name": "get_coupon_id",
+            "summary": "Get\u0020coupon\u0020ID\u0020for\u0020an\u0020order.",
+            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Admin-API-Reports-Coupons-DataStore.html#method_get_coupon_id"
+        },                {
             "fqsen": "\\Automattic\\WooCommerce\\Admin\\API\\Reports\\Coupons\\DataStore\u003A\u003Async_order_coupons\u0028\u0029",
             "name": "sync_order_coupons",
             "summary": "Create\u0020or\u0020update\u0020an\u0020an\u0020entry\u0020in\u0020the\u0020wc_order_coupon_lookup\u0020table\u0020for\u0020an\u0020order.",
@@ -31545,11 +31735,6 @@ Search.appendIndex(
             "name": "sync_on_order_delete",
             "summary": "Clean\u0020coupons\u0020data\u0020when\u0020an\u0020order\u0020is\u0020deleted.",
             "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Admin-API-Reports-Coupons-DataStore.html#method_sync_on_order_delete"
-        },                {
-            "fqsen": "\\Automattic\\WooCommerce\\Admin\\API\\Reports\\Coupons\\DataStore\u003A\u003Adelete_coupon\u0028\u0029",
-            "name": "delete_coupon",
-            "summary": "Deletes\u0020the\u0020coupon\u0020lookup\u0020information\u0020when\u0020a\u0020coupon\u0020is\u0020deleted.",
-            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Admin-API-Reports-Coupons-DataStore.html#method_delete_coupon"
         },                {
             "fqsen": "\\Automattic\\WooCommerce\\Admin\\API\\Reports\\Coupons\\DataStore\u003A\u003Aget_coupons\u0028\u0029",
             "name": "get_coupons",
@@ -34731,11 +34916,6 @@ Search.appendIndex(
             "summary": "Returns\u0020true\u0020if\u0020all\u0020dependencies\u0020for\u0020the\u0020wc\u002Dadmin\u0020plugin\u0020are\u0020loaded.",
             "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Admin-FeaturePlugin.html#method_has_satisfied_dependencies"
         },                {
-            "fqsen": "\\Automattic\\WooCommerce\\Admin\\FeaturePlugin\u003A\u003Acheck_build\u0028\u0029",
-            "name": "check_build",
-            "summary": "Returns\u0020true\u0020if\u0020build\u0020file\u0020exists.",
-            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Admin-FeaturePlugin.html#method_check_build"
-        },                {
             "fqsen": "\\Automattic\\WooCommerce\\Admin\\FeaturePlugin\u003A\u003Adeactivate_self\u0028\u0029",
             "name": "deactivate_self",
             "summary": "Deactivates\u0020this\u0020plugin.",
@@ -34745,11 +34925,6 @@ Search.appendIndex(
             "name": "render_dependencies_notice",
             "summary": "Notify\u0020users\u0020of\u0020the\u0020plugin\u0020requirements.",
             "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Admin-FeaturePlugin.html#method_render_dependencies_notice"
-        },                {
-            "fqsen": "\\Automattic\\WooCommerce\\Admin\\FeaturePlugin\u003A\u003Arender_build_notice\u0028\u0029",
-            "name": "render_build_notice",
-            "summary": "Notify\u0020users\u0020that\u0020the\u0020plugin\u0020needs\u0020to\u0020be\u0020built.",
-            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Admin-FeaturePlugin.html#method_render_build_notice"
         },                {
             "fqsen": "\\Automattic\\WooCommerce\\Admin\\FeaturePlugin\u003A\u003Areplace_supported_features\u0028\u0029",
             "name": "replace_supported_features",
@@ -34846,10 +35021,25 @@ Search.appendIndex(
             "summary": "Adds\u0020fields\u0020so\u0020that\u0020we\u0020can\u0020store\u0020user\u0020preferences\u0020for\u0020the\u0020columns\u0020to\u0020display\u0020on\u0020a\u0020report.",
             "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Admin-Features-Analytics.html#method_add_user_data_fields"
         },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Admin\\Features\\Analytics\u003A\u003Aregister_cache_clear_tool\u0028\u0029",
+            "name": "register_cache_clear_tool",
+            "summary": "Register\u0020the\u0020cache\u0020clearing\u0020tool\u0020on\u0020the\u0020WooCommerce\u0020\u003E\u0020Status\u0020\u003E\u0020Tools\u0020page.",
+            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Admin-Features-Analytics.html#method_register_cache_clear_tool"
+        },                {
             "fqsen": "\\Automattic\\WooCommerce\\Admin\\Features\\Analytics\u003A\u003Aregister_pages\u0028\u0029",
             "name": "register_pages",
             "summary": "Registers\u0020report\u0020pages.",
             "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Admin-Features-Analytics.html#method_register_pages"
+        },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Admin\\Features\\Analytics\u003A\u003Arun_clear_cache_tool\u0028\u0029",
+            "name": "run_clear_cache_tool",
+            "summary": "\u0022Clear\u0022\u0020analytics\u0020cache\u0020by\u0020invalidating\u0020it.",
+            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Admin-Features-Analytics.html#method_run_clear_cache_tool"
+        },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Admin\\Features\\Analytics\u003A\u003ACACHE_TOOL_ID",
+            "name": "CACHE_TOOL_ID",
+            "summary": "Clear\u0020cache\u0020tool\u0020identifier.",
+            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Admin-Features-Analytics.html#constant_CACHE_TOOL_ID"
         },                {
             "fqsen": "\\Automattic\\WooCommerce\\Admin\\Features\\Analytics\u003A\u003A\u0024instance",
             "name": "instance",
@@ -34895,6 +35085,11 @@ Search.appendIndex(
             "name": "update_link_structure",
             "summary": "Update\u0020the\u0020WooCommerce\u0020menu\u0020structure\u0020to\u0020make\u0020our\u0020main\u0020dashboard\/handler\nthe\u0020top\u0020level\u0020link\u0020for\u0020\u0027WooCommerce\u0027.",
             "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Admin-Features-AnalyticsDashboard.html#method_update_link_structure"
+        },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Admin\\Features\\AnalyticsDashboard\u003A\u003Aget_homescreen_allowed_plugins\u0028\u0029",
+            "name": "get_homescreen_allowed_plugins",
+            "summary": "Gets\u0020an\u0020array\u0020of\u0020plugins\u0020that\u0020can\u0020be\u0020installed\u0020\u0026\u0020activated\u0020via\u0020the\u0020home\u0020screen.",
+            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Admin-Features-AnalyticsDashboard.html#method_get_homescreen_allowed_plugins"
         },                {
             "fqsen": "\\Automattic\\WooCommerce\\Admin\\Features\\AnalyticsDashboard\u003A\u003AMENU_SLUG",
             "name": "MENU_SLUG",
@@ -35061,121 +35256,6 @@ Search.appendIndex(
             "summary": "Class\u0020instance.",
             "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Admin-Features-Marketing.html#property_instance"
         },                {
-            "fqsen": "\\Automattic\\WooCommerce\\Admin\\Features\\Navigation",
-            "name": "Navigation",
-            "summary": "Contains\u0020logic\u0020for\u0020the\u0020WooCommerce\u0020Navigation.",
-            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Admin-Features-Navigation.html"
-        },                {
-            "fqsen": "\\Automattic\\WooCommerce\\Admin\\Features\\Navigation\u003A\u003Ais_woocommerce_page\u0028\u0029",
-            "name": "is_woocommerce_page",
-            "summary": "Check\u0020if\u0020we\u0027re\u0020on\u0020a\u0020WooCommerce\u0020page",
-            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Admin-Features-Navigation.html#method_is_woocommerce_page"
-        },                {
-            "fqsen": "\\Automattic\\WooCommerce\\Admin\\Features\\Navigation\u003A\u003A\u0024instance",
-            "name": "instance",
-            "summary": "Class\u0020instance.",
-            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Admin-Features-Navigation.html#property_instance"
-        },                {
-            "fqsen": "\\Automattic\\WooCommerce\\Admin\\Features\\Navigation\u003A\u003A__construct\u0028\u0029",
-            "name": "__construct",
-            "summary": "Constructor",
-            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Admin-Features-Navigation.html#method___construct"
-        },                {
-            "fqsen": "\\Automattic\\WooCommerce\\Admin\\Features\\Navigation\u003A\u003Aadd_body_class\u0028\u0029",
-            "name": "add_body_class",
-            "summary": "Add\u0020navigation\u0020classes\u0020to\u0020body.",
-            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Admin-Features-Navigation.html#method_add_body_class"
-        },                {
-            "fqsen": "\\Automattic\\WooCommerce\\Admin\\Features\\Navigation\u003A\u003Aadd_admin_settings\u0028\u0029",
-            "name": "add_admin_settings",
-            "summary": "Add\u0020registered\u0020admin\u0020settings.",
-            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Admin-Features-Navigation.html#method_add_admin_settings"
-        },                {
-            "fqsen": "\\Automattic\\WooCommerce\\Admin\\Features\\Navigation\u003A\u003Aadd_core_menu_items\u0028\u0029",
-            "name": "add_core_menu_items",
-            "summary": "Add\u0020the\u0020core\u0020menu\u0020items\u0020to\u0020the\u0020new\u0020navigation",
-            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Admin-Features-Navigation.html#method_add_core_menu_items"
-        },                {
-            "fqsen": "\\Automattic\\WooCommerce\\Admin\\Features\\Navigation\u003A\u003Aget_callback_url\u0028\u0029",
-            "name": "get_callback_url",
-            "summary": "Convert\u0020a\u0020WordPress\u0020menu\u0020callback\u0020to\u0020a\u0020URL.",
-            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Admin-Features-Navigation.html#method_get_callback_url"
-        },                {
-            "fqsen": "\\Automattic\\WooCommerce\\Admin\\Features\\Navigation\u003A\u003Aadd_menu_category\u0028\u0029",
-            "name": "add_menu_category",
-            "summary": "Adds\u0020a\u0020top\u0020level\u0020menu\u0020item\u0020to\u0020the\u0020navigation.",
-            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Admin-Features-Navigation.html#method_add_menu_category"
-        },                {
-            "fqsen": "\\Automattic\\WooCommerce\\Admin\\Features\\Navigation\u003A\u003Aadd_menu_item\u0028\u0029",
-            "name": "add_menu_item",
-            "summary": "Adds\u0020a\u0020child\u0020menu\u0020item\u0020to\u0020the\u0020navigation.",
-            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Admin-Features-Navigation.html#method_add_menu_item"
-        },                {
-            "fqsen": "\\Automattic\\WooCommerce\\Admin\\Features\\Navigation\u003A\u003Aget_parent_menu_item\u0028\u0029",
-            "name": "get_parent_menu_item",
-            "summary": "Get\u0020the\u0020parent\u0020menu\u0020item\u0020if\u0020one\u0020exists.",
-            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Admin-Features-Navigation.html#method_get_parent_menu_item"
-        },                {
-            "fqsen": "\\Automattic\\WooCommerce\\Admin\\Features\\Navigation\u003A\u003Amigrate_menu_items\u0028\u0029",
-            "name": "migrate_menu_items",
-            "summary": "Hides\u0020all\u0020WP\u0020admin\u0020menus\u0020items\u0020and\u0020adds\u0020screen\u0020IDs\u0020to\u0020check\u0020for\u0020new\u0020items.",
-            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Admin-Features-Navigation.html#method_migrate_menu_items"
-        },                {
-            "fqsen": "\\Automattic\\WooCommerce\\Admin\\Features\\Navigation\u003A\u003Aadd_screen_id\u0028\u0029",
-            "name": "add_screen_id",
-            "summary": "Adds\u0020a\u0020screen\u0020ID\u0020to\u0020the\u0020list\u0020and\u0020automatically\u0020finds\u0020the\u0020parent\u0020if\u0020none\u0020is\u0020given.",
-            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Admin-Features-Navigation.html#method_add_screen_id"
-        },                {
-            "fqsen": "\\Automattic\\WooCommerce\\Admin\\Features\\Navigation\u003A\u003Aadd_menu_settings\u0028\u0029",
-            "name": "add_menu_settings",
-            "summary": "Add\u0020the\u0020menu\u0020to\u0020the\u0020page\u0020output.",
-            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Admin-Features-Navigation.html#method_add_menu_settings"
-        },                {
-            "fqsen": "\\Automattic\\WooCommerce\\Admin\\Features\\Navigation\u003A\u003ACAPABILITY",
-            "name": "CAPABILITY",
-            "summary": "Array\u0020index\u0020of\u0020menu\u0020capability.",
-            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Admin-Features-Navigation.html#constant_CAPABILITY"
-        },                {
-            "fqsen": "\\Automattic\\WooCommerce\\Admin\\Features\\Navigation\u003A\u003ACALLBACK",
-            "name": "CALLBACK",
-            "summary": "Array\u0020index\u0020of\u0020menu\u0020callback.",
-            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Admin-Features-Navigation.html#constant_CALLBACK"
-        },                {
-            "fqsen": "\\Automattic\\WooCommerce\\Admin\\Features\\Navigation\u003A\u003ASLUG",
-            "name": "SLUG",
-            "summary": "Array\u0020index\u0020of\u0020menu\u0020callback.",
-            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Admin-Features-Navigation.html#constant_SLUG"
-        },                {
-            "fqsen": "\\Automattic\\WooCommerce\\Admin\\Features\\Navigation\u003A\u003ACSS_CLASSES",
-            "name": "CSS_CLASSES",
-            "summary": "Array\u0020index\u0020of\u0020menu\u0020CSS\u0020class\u0020string.",
-            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Admin-Features-Navigation.html#constant_CSS_CLASSES"
-        },                {
-            "fqsen": "\\Automattic\\WooCommerce\\Admin\\Features\\Navigation\u003A\u003A\u0024categories",
-            "name": "categories",
-            "summary": "Store\u0020top\u0020level\u0020categories.",
-            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Admin-Features-Navigation.html#property_categories"
-        },                {
-            "fqsen": "\\Automattic\\WooCommerce\\Admin\\Features\\Navigation\u003A\u003A\u0024menu_items",
-            "name": "menu_items",
-            "summary": "Store\u0020related\u0020menu\u0020items.",
-            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Admin-Features-Navigation.html#property_menu_items"
-        },                {
-            "fqsen": "\\Automattic\\WooCommerce\\Admin\\Features\\Navigation\u003A\u003A\u0024screen_ids",
-            "name": "screen_ids",
-            "summary": "Screen\u0020IDs\u0020of\u0020registered\u0020pages.",
-            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Admin-Features-Navigation.html#property_screen_ids"
-        },                {
-            "fqsen": "\\Automattic\\WooCommerce\\Admin\\Features\\Navigation\u003A\u003A\u0024post_types",
-            "name": "post_types",
-            "summary": "Registered\u0020post\u0020types.",
-            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Admin-Features-Navigation.html#property_post_types"
-        },                {
-            "fqsen": "\\Automattic\\WooCommerce\\Admin\\Features\\Navigation\u003A\u003A\u0024callbacks",
-            "name": "callbacks",
-            "summary": "Registered\u0020callbacks\u0020or\u0020URLs\u0020with\u0020migration\u0020boolean\u0020as\u0020key\u0020value\u0020pairs.",
-            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Admin-Features-Navigation.html#property_callbacks"
-        },                {
             "fqsen": "\\Automattic\\WooCommerce\\Admin\\Features\\Onboarding",
             "name": "Onboarding",
             "summary": "Contains\u0020backend\u0020logic\u0020for\u0020the\u0020onboarding\u0020profile\u0020and\u0020checklist\u0020feature.",
@@ -35228,7 +35308,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Automattic\\WooCommerce\\Admin\\Features\\Onboarding\u003A\u003Ashould_show_profiler\u0028\u0029",
             "name": "should_show_profiler",
-            "summary": "Returns\u0020true\u0020if\u0020the\u0020profiler\u0020should\u0020be\u0020displayed\u0020\u0028not\u0020completed\u0029.",
+            "summary": "Returns\u0020true\u0020if\u0020the\u0020profiler\u0020should\u0020be\u0020displayed\u0020\u0028not\u0020completed\u0020and\u0020not\u0020skipped\u0029.",
             "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Admin-Features-Onboarding.html#method_should_show_profiler"
         },                {
             "fqsen": "\\Automattic\\WooCommerce\\Admin\\Features\\Onboarding\u003A\u003Ashould_show_tasks\u0028\u0029",
@@ -35831,6 +35911,11 @@ Search.appendIndex(
             "summary": "Registers\u0020a\u0020basic\u0020page\u0020handler\u0020for\u0020the\u0020app\u0020entry\u0020point.",
             "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Admin-Loader.html#method_register_page_handler"
         },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Admin\\Loader\u003A\u003Aregister_profiler_page\u0028\u0029",
+            "name": "register_profiler_page",
+            "summary": "Registers\u0020the\u0020profiler\u0020page.",
+            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Admin-Loader.html#method_register_profiler_page"
+        },                {
             "fqsen": "\\Automattic\\WooCommerce\\Admin\\Loader\u003A\u003Aremove_app_entry_page_menu_item\u0028\u0029",
             "name": "remove_app_entry_page_menu_item",
             "summary": "Remove\u0020the\u0020menu\u0020item\u0020for\u0020the\u0020app\u0020entry\u0020point\u0020page.",
@@ -35841,6 +35926,21 @@ Search.appendIndex(
             "summary": "Registers\u0020all\u0020the\u0020neccessary\u0020scripts\u0020and\u0020styles\u0020to\u0020show\u0020the\u0020admin\u0020experience.",
             "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Admin-Loader.html#method_register_scripts"
         },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Admin\\Loader\u003A\u003Aget_combined_translation_filename\u0028\u0029",
+            "name": "get_combined_translation_filename",
+            "summary": "Generate\u0020a\u0020filename\u0020to\u0020cache\u0020translations\u0020from\u0020JS\u0020chunks.",
+            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Admin-Loader.html#method_get_combined_translation_filename"
+        },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Admin\\Loader\u003A\u003Aget_translation_chunk_data\u0028\u0029",
+            "name": "get_translation_chunk_data",
+            "summary": "Find\u0020and\u0020combine\u0020translation\u0020chunk\u0020files.",
+            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Admin-Loader.html#method_get_translation_chunk_data"
+        },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Admin\\Loader\u003A\u003Aload_script_translations\u0028\u0029",
+            "name": "load_script_translations",
+            "summary": "Load\u0020translation\u0020strings\u0020from\u0020language\u0020packs\u0020for\u0020dynamic\u0020imports.",
+            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Admin-Loader.html#method_load_script_translations"
+        },                {
             "fqsen": "\\Automattic\\WooCommerce\\Admin\\Loader\u003A\u003Aload_scripts\u0028\u0029",
             "name": "load_scripts",
             "summary": "Loads\u0020the\u0020required\u0020scripts\u0020on\u0020the\u0020correct\u0020pages.",
@@ -35848,12 +35948,12 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Automattic\\WooCommerce\\Admin\\Loader\u003A\u003Amaybe_output_preload_link_tag\u0028\u0029",
             "name": "maybe_output_preload_link_tag",
-            "summary": "Render\u0020a\u0020preload\u0020link\u0020tag\u0020for\u0020a\u0020dependency,\u0020optionally\nchecked\u0020against\u0020a\u0020provided\u0020whitelist.",
+            "summary": "Render\u0020a\u0020preload\u0020link\u0020tag\u0020for\u0020a\u0020dependency,\u0020optionally\nchecked\u0020against\u0020a\u0020provided\u0020allowlist.",
             "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Admin-Loader.html#method_maybe_output_preload_link_tag"
         },                {
             "fqsen": "\\Automattic\\WooCommerce\\Admin\\Loader\u003A\u003Aoutput_header_preload_tags_for_type\u0028\u0029",
             "name": "output_header_preload_tags_for_type",
-            "summary": "Output\u0020a\u0020preload\u0020link\u0020tag\u0020for\u0020dependencies\u0020\u0028and\u0020their\u0020sub\u0020dependencies\u0029\nwith\u0020an\u0020optional\u0020whitelist.",
+            "summary": "Output\u0020a\u0020preload\u0020link\u0020tag\u0020for\u0020dependencies\u0020\u0028and\u0020their\u0020sub\u0020dependencies\u0029\nwith\u0020an\u0020optional\u0020allowlist.",
             "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Admin-Loader.html#method_output_header_preload_tags_for_type"
         },                {
             "fqsen": "\\Automattic\\WooCommerce\\Admin\\Loader\u003A\u003Aoutput_header_preload_tags\u0028\u0029",
@@ -35890,11 +35990,6 @@ Search.appendIndex(
             "name": "embed_page_header",
             "summary": "Set\u0020up\u0020a\u0020div\u0020for\u0020the\u0020header\u0020embed\u0020to\u0020render\u0020into.",
             "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Admin-Loader.html#method_embed_page_header"
-        },                {
-            "fqsen": "\\Automattic\\WooCommerce\\Admin\\Loader\u003A\u003Aembed_navigation_menu\u0028\u0029",
-            "name": "embed_navigation_menu",
-            "summary": "Set\u0020up\u0020a\u0020div\u0020for\u0020the\u0020navigation\u0020menu.",
-            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Admin-Loader.html#method_embed_navigation_menu"
         },                {
             "fqsen": "\\Automattic\\WooCommerce\\Admin\\Loader\u003A\u003Aadd_admin_body_classes\u0028\u0029",
             "name": "add_admin_body_classes",
@@ -36156,6 +36251,11 @@ Search.appendIndex(
             "summary": "Alias\u0020this\u0020method\u0020for\u0020backwards\u0020compatibility.",
             "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Admin-Notes-NoteTraits.html#method_add_note"
         },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Admin\\Notes\\NoteTraits\u003A\u003Apossibly_delete_note\u0028\u0029",
+            "name": "possibly_delete_note",
+            "summary": "Possibly\u0020delete\u0020the\u0020note,\u0020if\u0020it\u0020exists\u0020in\u0020the\u0020database.\u0020Note\u0020that\u0020this\nis\u0020a\u0020hard\u0020delete,\u0020for\u0020where\u0020it\u0020doesn\u0027t\u0020make\u0020sense\u0020to\u0020soft\u0020delete\u0020or\naction\u0020the\u0020note.",
+            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Admin-Notes-NoteTraits.html#method_possibly_delete_note"
+        },                {
             "fqsen": "\\Automattic\\WooCommerce\\Admin\\Notes\\WC_Admin_Note",
             "name": "WC_Admin_Note",
             "summary": "WC_Admin_Note\u0020class.",
@@ -36376,6 +36476,11 @@ Search.appendIndex(
             "summary": "",
             "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Admin-Notes-WC-Admin-Note.html#constant_E_WC_ADMIN_NOTE_MARKETING"
         },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Admin\\Notes\\WC_Admin_Note\u003A\u003AE_WC_ADMIN_NOTE_SURVEY",
+            "name": "E_WC_ADMIN_NOTE_SURVEY",
+            "summary": "",
+            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Admin-Notes-WC-Admin-Note.html#constant_E_WC_ADMIN_NOTE_SURVEY"
+        },                {
             "fqsen": "\\Automattic\\WooCommerce\\Admin\\Notes\\WC_Admin_Note\u003A\u003AE_WC_ADMIN_NOTE_PENDING",
             "name": "E_WC_ADMIN_NOTE_PENDING",
             "summary": "",
@@ -36471,6 +36576,11 @@ Search.appendIndex(
             "summary": "Delete\u0020marketing\u0020notes\u0020if\u0020marketing\u0020has\u0020been\u0020opted\u0020out.",
             "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Admin-Notes-WC-Admin-Notes.html#method_possibly_delete_marketing_notes"
         },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Admin\\Notes\\WC_Admin_Notes\u003A\u003Apossibly_delete_survey_notes\u0028\u0029",
+            "name": "possibly_delete_survey_notes",
+            "summary": "Delete\u0020actioned\u0020survey\u0020notes.",
+            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Admin-Notes-WC-Admin-Notes.html#method_possibly_delete_survey_notes"
+        },                {
             "fqsen": "\\Automattic\\WooCommerce\\Admin\\Notes\\WC_Admin_Notes\u003A\u003AUNSNOOZE_HOOK",
             "name": "UNSNOOZE_HOOK",
             "summary": "Hook\u0020used\u0020for\u0020recurring\u0020\u0022unsnooze\u0022\u0020action.",
@@ -36535,6 +36645,21 @@ Search.appendIndex(
             "name": "NOTE_NAME",
             "summary": "",
             "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Admin-Notes-WC-Admin-Notes-Coupon-Page-Moved.html#constant_NOTE_NAME"
+        },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Admin\\Notes\\WC_Admin_Notes_Customize_Store_With_Blocks",
+            "name": "WC_Admin_Notes_Customize_Store_With_Blocks",
+            "summary": "WC_Admin_Notes_Customize_Store_With_Blocks.",
+            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Admin-Notes-WC-Admin-Notes-Customize-Store-With-Blocks.html"
+        },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Admin\\Notes\\WC_Admin_Notes_Customize_Store_With_Blocks\u003A\u003Aget_note\u0028\u0029",
+            "name": "get_note",
+            "summary": "Get\u0020the\u0020note.",
+            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Admin-Notes-WC-Admin-Notes-Customize-Store-With-Blocks.html#method_get_note"
+        },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Admin\\Notes\\WC_Admin_Notes_Customize_Store_With_Blocks\u003A\u003ANOTE_NAME",
+            "name": "NOTE_NAME",
+            "summary": "Name\u0020of\u0020the\u0020note\u0020for\u0020use\u0020in\u0020the\u0020database.",
+            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Admin-Notes-WC-Admin-Notes-Customize-Store-With-Blocks.html#constant_NOTE_NAME"
         },                {
             "fqsen": "\\Automattic\\WooCommerce\\Admin\\Notes\\WC_Admin_Notes_Deactivate_Plugin",
             "name": "WC_Admin_Notes_Deactivate_Plugin",
@@ -36605,6 +36730,41 @@ Search.appendIndex(
             "name": "NOTE_NAME",
             "summary": "Name\u0020of\u0020the\u0020note\u0020for\u0020use\u0020in\u0020the\u0020database.",
             "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Admin-Notes-WC-Admin-Notes-EU-VAT-Number.html#constant_NOTE_NAME"
+        },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Admin\\Notes\\WC_Admin_Notes_Facebook_Marketing_Expert",
+            "name": "WC_Admin_Notes_Facebook_Marketing_Expert",
+            "summary": "WC_Admin_Notes_Facebook_Marketing_Expert",
+            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Admin-Notes-WC-Admin-Notes-Facebook-Marketing-Expert.html"
+        },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Admin\\Notes\\WC_Admin_Notes_Facebook_Marketing_Expert\u003A\u003Apossibly_add_note\u0028\u0029",
+            "name": "possibly_add_note",
+            "summary": "Possibly\u0020add\u0020note.",
+            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Admin-Notes-WC-Admin-Notes-Facebook-Marketing-Expert.html#method_possibly_add_note"
+        },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Admin\\Notes\\WC_Admin_Notes_Facebook_Marketing_Expert\u003A\u003Aget_note\u0028\u0029",
+            "name": "get_note",
+            "summary": "Get\u0020the\u0020note.",
+            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Admin-Notes-WC-Admin-Notes-Facebook-Marketing-Expert.html#method_get_note"
+        },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Admin\\Notes\\WC_Admin_Notes_Facebook_Marketing_Expert\u003A\u003Ais_facebook_for_woocommerce_installed\u0028\u0029",
+            "name": "is_facebook_for_woocommerce_installed",
+            "summary": "Determine\u0020if\u0020Facebook\u0020for\u0020WooCommerce\u0020is\u0020already\u0020active\u0020or\u0020installed",
+            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Admin-Notes-WC-Admin-Notes-Facebook-Marketing-Expert.html#method_is_facebook_for_woocommerce_installed"
+        },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Admin\\Notes\\WC_Admin_Notes_Facebook_Marketing_Expert\u003A\u003Aorders_last_month\u0028\u0029",
+            "name": "orders_last_month",
+            "summary": "Determine\u0020the\u0020number\u0020of\u0020orders\u0020in\u0020the\u0020last\u0020month",
+            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Admin-Notes-WC-Admin-Notes-Facebook-Marketing-Expert.html#method_orders_last_month"
+        },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Admin\\Notes\\WC_Admin_Notes_Facebook_Marketing_Expert\u003A\u003ANOTE_NAME",
+            "name": "NOTE_NAME",
+            "summary": "Name\u0020of\u0020the\u0020note\u0020for\u0020use\u0020in\u0020the\u0020database.",
+            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Admin-Notes-WC-Admin-Notes-Facebook-Marketing-Expert.html#constant_NOTE_NAME"
+        },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Admin\\Notes\\WC_Admin_Notes_Facebook_Marketing_Expert\u003A\u003APLUGIN_FILE",
+            "name": "PLUGIN_FILE",
+            "summary": "Name\u0020of\u0020plugin\u0020file.",
+            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Admin-Notes-WC-Admin-Notes-Facebook-Marketing-Expert.html#constant_PLUGIN_FILE"
         },                {
             "fqsen": "\\Automattic\\WooCommerce\\Admin\\Notes\\WC_Admin_Notes_First_Product",
             "name": "WC_Admin_Notes_First_Product",
@@ -36691,6 +36851,21 @@ Search.appendIndex(
             "summary": "",
             "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Admin-Notes-WC-Admin-Notes-Home-Screen-Feedback.html#constant_HOMESCREEN_ACCESSED_OPTION_NAME"
         },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Admin\\Notes\\WC_Admin_Notes_Insight_First_Sale",
+            "name": "WC_Admin_Notes_Insight_First_Sale",
+            "summary": "WC_Admin_Notes_Insight_First_Sale.",
+            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Admin-Notes-WC-Admin-Notes-Insight-First-Sale.html"
+        },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Admin\\Notes\\WC_Admin_Notes_Insight_First_Sale\u003A\u003Aget_note\u0028\u0029",
+            "name": "get_note",
+            "summary": "Get\u0020the\u0020note.",
+            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Admin-Notes-WC-Admin-Notes-Insight-First-Sale.html#method_get_note"
+        },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Admin\\Notes\\WC_Admin_Notes_Insight_First_Sale\u003A\u003ANOTE_NAME",
+            "name": "NOTE_NAME",
+            "summary": "Name\u0020of\u0020the\u0020note\u0020for\u0020use\u0020in\u0020the\u0020database.",
+            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Admin-Notes-WC-Admin-Notes-Insight-First-Sale.html#constant_NOTE_NAME"
+        },                {
             "fqsen": "\\Automattic\\WooCommerce\\Admin\\Notes\\WC_Admin_Notes_Install_JP_And_WCS_Plugins",
             "name": "WC_Admin_Notes_Install_JP_And_WCS_Plugins",
             "summary": "WC_Admin_Notes_Install_JP_And_WCS_Plugins",
@@ -36725,6 +36900,21 @@ Search.appendIndex(
             "name": "NOTE_NAME",
             "summary": "Name\u0020of\u0020the\u0020note\u0020for\u0020use\u0020in\u0020the\u0020database.",
             "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Admin-Notes-WC-Admin-Notes-Install-JP-And-WCS-Plugins.html#constant_NOTE_NAME"
+        },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Admin\\Notes\\WC_Admin_Notes_Launch_Checklist",
+            "name": "WC_Admin_Notes_Launch_Checklist",
+            "summary": "WC_Admin_Notes_Launch_Checklist",
+            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Admin-Notes-WC-Admin-Notes-Launch-Checklist.html"
+        },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Admin\\Notes\\WC_Admin_Notes_Launch_Checklist\u003A\u003Aget_note\u0028\u0029",
+            "name": "get_note",
+            "summary": "Get\u0020the\u0020note.",
+            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Admin-Notes-WC-Admin-Notes-Launch-Checklist.html#method_get_note"
+        },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Admin\\Notes\\WC_Admin_Notes_Launch_Checklist\u003A\u003ANOTE_NAME",
+            "name": "NOTE_NAME",
+            "summary": "Name\u0020of\u0020the\u0020note\u0020for\u0020use\u0020in\u0020the\u0020database.",
+            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Admin-Notes-WC-Admin-Notes-Launch-Checklist.html#constant_NOTE_NAME"
         },                {
             "fqsen": "\\Automattic\\WooCommerce\\Admin\\Notes\\WC_Admin_Notes_Learn_More_About_Product_Settings",
             "name": "WC_Admin_Notes_Learn_More_About_Product_Settings",
@@ -37035,6 +37225,36 @@ Search.appendIndex(
             "name": "NOTE_NAME",
             "summary": "Name\u0020of\u0020the\u0020note\u0020for\u0020use\u0020in\u0020the\u0020database.",
             "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Admin-Notes-WC-Admin-Notes-Real-Time-Order-Alerts.html#constant_NOTE_NAME"
+        },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Admin\\Notes\\WC_Admin_Notes_Set_Up_Additional_Payment_Types",
+            "name": "WC_Admin_Notes_Set_Up_Additional_Payment_Types",
+            "summary": "WC_Admin_Notes_Set_Up_Additional_Payment_Types",
+            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Admin-Notes-WC-Admin-Notes-Set-Up-Additional-Payment-Types.html"
+        },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Admin\\Notes\\WC_Admin_Notes_Set_Up_Additional_Payment_Types\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "Constructor.",
+            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Admin-Notes-WC-Admin-Notes-Set-Up-Additional-Payment-Types.html#method___construct"
+        },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Admin\\Notes\\WC_Admin_Notes_Set_Up_Additional_Payment_Types\u003A\u003Aon_activate_wcpay\u0028\u0029",
+            "name": "on_activate_wcpay",
+            "summary": "Executes\u0020when\u0020the\u0020WooCommerce\u0020Payments\u0020plugin\u0020is\u0020activated.\u0020Possibly\nadds\u0020the\u0020note\u0020if\u0020it\u0020isn\u0027t\u0020already\u0020in\u0020the\u0020database\u0020and\u0020if\u0020it\u0020matches\u0020any\ncriteria\u0020\u0028see\u0020get_note\u0028\u0029\u0029.",
+            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Admin-Notes-WC-Admin-Notes-Set-Up-Additional-Payment-Types.html#method_on_activate_wcpay"
+        },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Admin\\Notes\\WC_Admin_Notes_Set_Up_Additional_Payment_Types\u003A\u003Aon_deactivate_wcpay\u0028\u0029",
+            "name": "on_deactivate_wcpay",
+            "summary": "Executes\u0020when\u0020the\u0020WooCommerce\u0020Payments\u0020plugin\u0020is\u0020deactivated.\u0020Possibly\nhard\u002Ddeletes\u0020the\u0020note\u0020if\u0020it\u0020is\u0020in\u0020the\u0020database.\u0020Hard\u002Ddelete\u0020is\u0020used\ninstead\u0020of\u0020soft\u002Ddelete\u0020or\u0020actioning\u0020the\u0020note\u0020because\u0020we\u0020need\u0020to\nshow\u0020the\u0020note\u0020if\u0020the\u0020plugin\u0020is\u0020activated\u0020again.",
+            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Admin-Notes-WC-Admin-Notes-Set-Up-Additional-Payment-Types.html#method_on_deactivate_wcpay"
+        },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Admin\\Notes\\WC_Admin_Notes_Set_Up_Additional_Payment_Types\u003A\u003Aget_note\u0028\u0029",
+            "name": "get_note",
+            "summary": "Get\u0020the\u0020note.",
+            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Admin-Notes-WC-Admin-Notes-Set-Up-Additional-Payment-Types.html#method_get_note"
+        },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Admin\\Notes\\WC_Admin_Notes_Set_Up_Additional_Payment_Types\u003A\u003ANOTE_NAME",
+            "name": "NOTE_NAME",
+            "summary": "Name\u0020of\u0020the\u0020note\u0020for\u0020use\u0020in\u0020the\u0020database.",
+            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Admin-Notes-WC-Admin-Notes-Set-Up-Additional-Payment-Types.html#constant_NOTE_NAME"
         },                {
             "fqsen": "\\Automattic\\WooCommerce\\Admin\\Notes\\WC_Admin_Notes_Start_Dropshipping_Business",
             "name": "WC_Admin_Notes_Start_Dropshipping_Business",
@@ -37376,6 +37596,11 @@ Search.appendIndex(
             "summary": "Hide\u0020the\u0020skin\u0020after\u0020display.",
             "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Admin-Overrides-ThemeUpgraderSkin.html#method_after"
         },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Admin\\Overrides\\ThemeUpgraderSkin\u003A\u003A\u0024api",
+            "name": "api",
+            "summary": "Avoid\u0020undefined\u0020property\u0020error\u0020from\u0020\\Theme_Upgrader\u003A\u003Acheck_parent_theme_filter\u0028\u0029.",
+            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Admin-Overrides-ThemeUpgraderSkin.html#property_api"
+        },                {
             "fqsen": "\\Automattic\\WooCommerce\\Admin\\Composer\\Package",
             "name": "Package",
             "summary": "Main\u0020package\u0020class.",
@@ -37671,6 +37896,21 @@ Search.appendIndex(
             "summary": "Get\u0020the\u0020processor\u0020for\u0020the\u0020specified\u0020rule\u0020type.",
             "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Admin-RemoteInboxNotifications-GetRuleProcessor.html#method_get_processor"
         },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Admin\\RemoteInboxNotifications\\IsEcommerceRuleProcessor",
+            "name": "IsEcommerceRuleProcessor",
+            "summary": "Rule\u0020processor\u0020that\u0020passes\u0020\u0028or\u0020fails\u0029\u0020when\u0020the\u0020site\u0020is\u0020on\u0020the\u0020eCommerce\nplan.",
+            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Admin-RemoteInboxNotifications-IsEcommerceRuleProcessor.html"
+        },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Admin\\RemoteInboxNotifications\\IsEcommerceRuleProcessor\u003A\u003Aprocess\u0028\u0029",
+            "name": "process",
+            "summary": "Passes\u0020\u0028or\u0020fails\u0029\u0020based\u0020on\u0020whether\u0020the\u0020site\u0020is\u0020on\u0020the\u0020eCommerce\u0020plan\u0020or\nnot.",
+            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Admin-RemoteInboxNotifications-IsEcommerceRuleProcessor.html#method_process"
+        },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Admin\\RemoteInboxNotifications\\IsEcommerceRuleProcessor\u003A\u003Avalidate\u0028\u0029",
+            "name": "validate",
+            "summary": "Validate\u0020the\u0020rule.",
+            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Admin-RemoteInboxNotifications-IsEcommerceRuleProcessor.html#method_validate"
+        },                {
             "fqsen": "\\Automattic\\WooCommerce\\Admin\\RemoteInboxNotifications\\NotRuleProcessor",
             "name": "NotRuleProcessor",
             "summary": "Rule\u0020processor\u0020that\u0020negates\u0020the\u0020rules\u0020in\u0020the\u0020rule\u0027s\u0020operand.",
@@ -37885,6 +38125,11 @@ Search.appendIndex(
             "name": "init",
             "summary": "Initialize\u0020the\u0020engine.",
             "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Admin-RemoteInboxNotifications-RemoteInboxNotificationsEngine.html#method_init"
+        },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Admin\\RemoteInboxNotifications\\RemoteInboxNotificationsEngine\u003A\u003Aupdate_profile_option\u0028\u0029",
+            "name": "update_profile_option",
+            "summary": "This\u0020is\u0020triggered\u0020when\u0020the\u0020profile\u0020option\u0020is\u0020updated\u0020and\u0020if\u0020the\nprofiler\u0020is\u0020being\u0020completed,\u0020triggers\u0020a\u0020run\u0020of\u0020the\u0020engine.",
+            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Admin-RemoteInboxNotifications-RemoteInboxNotificationsEngine.html#method_update_profile_option"
         },                {
             "fqsen": "\\Automattic\\WooCommerce\\Admin\\RemoteInboxNotifications\\RemoteInboxNotificationsEngine\u003A\u003Aon_admin_init\u0028\u0029",
             "name": "on_admin_init",
@@ -38571,6 +38816,16 @@ Search.appendIndex(
             "summary": "Action\u0020scheduler\u0020group.",
             "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Admin-Schedulers-SchedulerTraits.html#property_group"
         },                {
+            "fqsen": "\\woocommerce_admin_is_development_version\u0028\u0029",
+            "name": "woocommerce_admin_is_development_version",
+            "summary": "Returns\u0020whether\u0020the\u0020current\u0020version\u0020is\u0020a\u0020development\u0020version\nNote\u0020this\u0020relies\u0020on\u0020composer.json\u0020version,\u0020not\u0020plugin\u0020version.",
+            "url": "https://woocommerce.github.io/code-reference/namespaces/default.html#function_woocommerce_admin_is_development_version"
+        },                {
+            "fqsen": "\\woocommerce_admin_check_build_files\u0028\u0029",
+            "name": "woocommerce_admin_check_build_files",
+            "summary": "Returns\u0020true\u0020if\u0020build\u0020file\u0020exists.",
+            "url": "https://woocommerce.github.io/code-reference/namespaces/default.html#function_woocommerce_admin_check_build_files"
+        },                {
             "fqsen": "\\Automattic\\WooCommerce\\Blocks\\Assets\\Api",
             "name": "Api",
             "summary": "The\u0020Api\u0020class\u0020provides\u0020an\u0020interface\u0020to\u0020various\u0020asset\u0020registration\u0020helpers.",
@@ -38598,13 +38853,18 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Automattic\\WooCommerce\\Blocks\\Assets\\Api\u003A\u003Aregister_block_script\u0028\u0029",
             "name": "register_block_script",
-            "summary": "Queues\u0020a\u0020block\u0020script.",
+            "summary": "Queues\u0020a\u0020block\u0020script\u0020in\u0020the\u0020frontend.",
             "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Blocks-Assets-Api.html#method_register_block_script"
         },                {
             "fqsen": "\\Automattic\\WooCommerce\\Blocks\\Assets\\Api\u003A\u003Aregister_style\u0028\u0029",
             "name": "register_style",
             "summary": "Registers\u0020a\u0020style\u0020according\u0020to\u0020\u0060wp_register_style\u0060.",
             "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Blocks-Assets-Api.html#method_register_style"
+        },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Blocks\\Assets\\Api\u003A\u003Aget_block_asset_build_path\u0028\u0029",
+            "name": "get_block_asset_build_path",
+            "summary": "Returns\u0020the\u0020appropriate\u0020asset\u0020path\u0020for\u0020loading\u0020either\u0020legacy\u0020builds\u0020or\ncurrent\u0020builds.",
+            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Blocks-Assets-Api.html#method_get_block_asset_build_path"
         },                {
             "fqsen": "\\Automattic\\WooCommerce\\Blocks\\Assets\\Api\u003A\u003A\u0024package",
             "name": "package",
@@ -38756,25 +39016,15 @@ Search.appendIndex(
             "summary": "Get\u0020the\u0020file\u0020modified\u0020time\u0020as\u0020a\u0020cache\u0020buster\u0020if\u0020we\u0027re\u0020in\u0020dev\u0020mode.",
             "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Blocks-Assets.html#method_get_file_version"
         },                {
-            "fqsen": "\\Automattic\\WooCommerce\\Blocks\\Assets\u003A\u003Aregister_script\u0028\u0029",
-            "name": "register_script",
-            "summary": "Registers\u0020a\u0020script\u0020according\u0020to\u0020\u0060wp_register_script\u0060,\u0020additionally\u0020loading\u0020the\u0020translations\u0020for\u0020the\u0020file.",
-            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Blocks-Assets.html#method_register_script"
-        },                {
             "fqsen": "\\Automattic\\WooCommerce\\Blocks\\Assets\u003A\u003Aregister_block_script\u0028\u0029",
             "name": "register_block_script",
-            "summary": "Queues\u0020a\u0020block\u0020script.",
+            "summary": "Queues\u0020a\u0020block\u0020script\u0020in\u0020the\u0020frontend.",
             "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Blocks-Assets.html#method_register_block_script"
         },                {
             "fqsen": "\\Automattic\\WooCommerce\\Blocks\\Assets\u003A\u003Aregister_style\u0028\u0029",
             "name": "register_style",
             "summary": "Registers\u0020a\u0020style\u0020according\u0020to\u0020\u0060wp_register_style\u0060.",
             "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Blocks-Assets.html#method_register_style"
-        },                {
-            "fqsen": "\\Automattic\\WooCommerce\\Blocks\\Assets\u003A\u003Aget_block_asset_build_path\u0028\u0029",
-            "name": "get_block_asset_build_path",
-            "summary": "Returns\u0020the\u0020appropriate\u0020asset\u0020path\u0020for\u0020loading\u0020either\u0020legacy\u0020builds\u0020or\ncurrent\u0020builds.",
-            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Blocks-Assets.html#method_get_block_asset_build_path"
         },                {
             "fqsen": "\\Automattic\\WooCommerce\\Blocks\\BlockTypes\\AbstractBlock",
             "name": "AbstractBlock",
@@ -39146,6 +39396,11 @@ Search.appendIndex(
             "summary": "Extra\u0020data\u0020passed\u0020through\u0020from\u0020server\u0020to\u0020client\u0020for\u0020block.",
             "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Blocks-BlockTypes-Cart.html#method_enqueue_data"
         },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Blocks\\BlockTypes\\Cart\u003A\u003Adeep_sort_with_accents\u0028\u0029",
+            "name": "deep_sort_with_accents",
+            "summary": "Removes\u0020accents\u0020from\u0020an\u0020array\u0020of\u0020values,\u0020sorts\u0020by\u0020the\u0020values,\u0020then\u0020returns\u0020the\u0020original\u0020array\u0020values\u0020sorted.",
+            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Blocks-BlockTypes-Cart.html#method_deep_sort_with_accents"
+        },                {
             "fqsen": "\\Automattic\\WooCommerce\\Blocks\\BlockTypes\\Cart\u003A\u003Aenqueue_scripts\u0028\u0029",
             "name": "enqueue_scripts",
             "summary": "Register\/enqueue\u0020scripts\u0020used\u0020for\u0020this\u0020block.",
@@ -39190,6 +39445,11 @@ Search.appendIndex(
             "name": "enqueue_data",
             "summary": "Extra\u0020data\u0020passed\u0020through\u0020from\u0020server\u0020to\u0020client\u0020for\u0020block.",
             "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Blocks-BlockTypes-Checkout.html#method_enqueue_data"
+        },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Blocks\\BlockTypes\\Checkout\u003A\u003Adeep_sort_with_accents\u0028\u0029",
+            "name": "deep_sort_with_accents",
+            "summary": "Removes\u0020accents\u0020from\u0020an\u0020array\u0020of\u0020values,\u0020sorts\u0020by\u0020the\u0020values,\u0020then\u0020returns\u0020the\u0020original\u0020array\u0020values\u0020sorted.",
+            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Blocks-BlockTypes-Checkout.html#method_deep_sort_with_accents"
         },                {
             "fqsen": "\\Automattic\\WooCommerce\\Blocks\\BlockTypes\\Checkout\u003A\u003Aenqueue_scripts\u0028\u0029",
             "name": "enqueue_scripts",
@@ -39365,6 +39625,11 @@ Search.appendIndex(
             "name": "render",
             "summary": "Render\u0020the\u0020Product\u0020Categories\u0020List\u0020block.",
             "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Blocks-BlockTypes-ProductCategories.html#method_render"
+        },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Blocks\\BlockTypes\\ProductCategories\u003A\u003Aget_container_classes\u0028\u0029",
+            "name": "get_container_classes",
+            "summary": "Get\u0020the\u0020list\u0020of\u0020classes\u0020to\u0020apply\u0020to\u0020this\u0020block.",
+            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Blocks-BlockTypes-ProductCategories.html#method_get_container_classes"
         },                {
             "fqsen": "\\Automattic\\WooCommerce\\Blocks\\BlockTypes\\ProductCategories\u003A\u003Aget_categories\u0028\u0029",
             "name": "get_categories",
@@ -39896,6 +40161,11 @@ Search.appendIndex(
             "summary": "AbstractPaymentMethodType\u0020class.",
             "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Blocks-Payments-Integrations-AbstractPaymentMethodType.html"
         },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Blocks\\Payments\\Integrations\\AbstractPaymentMethodType\u003A\u003Aget_setting\u0028\u0029",
+            "name": "get_setting",
+            "summary": "Get\u0020a\u0020setting\u0020from\u0020the\u0020settings\u0020array\u0020if\u0020set.",
+            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Blocks-Payments-Integrations-AbstractPaymentMethodType.html#method_get_setting"
+        },                {
             "fqsen": "\\Automattic\\WooCommerce\\Blocks\\Payments\\Integrations\\AbstractPaymentMethodType\u003A\u003Aget_name\u0028\u0029",
             "name": "get_name",
             "summary": "Returns\u0020the\u0020name\u0020of\u0020the\u0020payment\u0020method.",
@@ -39925,6 +40195,101 @@ Search.appendIndex(
             "name": "name",
             "summary": "Payment\u0020method\u0020name\u0020defined\u0020by\u0020payment\u0020methods\u0020extending\u0020this\u0020class.",
             "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Blocks-Payments-Integrations-AbstractPaymentMethodType.html#property_name"
+        },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Blocks\\Payments\\Integrations\\AbstractPaymentMethodType\u003A\u003A\u0024settings",
+            "name": "settings",
+            "summary": "Settings\u0020from\u0020the\u0020WP\u0020options\u0020table",
+            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Blocks-Payments-Integrations-AbstractPaymentMethodType.html#property_settings"
+        },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Blocks\\Payments\\Integrations\\BankTransfer",
+            "name": "BankTransfer",
+            "summary": "Bank\u0020Transfer\u0020\u0028BACS\u0029\u0020payment\u0020method\u0020integration",
+            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Blocks-Payments-Integrations-BankTransfer.html"
+        },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Blocks\\Payments\\Integrations\\BankTransfer\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "Constructor",
+            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Blocks-Payments-Integrations-BankTransfer.html#method___construct"
+        },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Blocks\\Payments\\Integrations\\BankTransfer\u003A\u003Ainitialize\u0028\u0029",
+            "name": "initialize",
+            "summary": "Initializes\u0020the\u0020payment\u0020method\u0020type.",
+            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Blocks-Payments-Integrations-BankTransfer.html#method_initialize"
+        },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Blocks\\Payments\\Integrations\\BankTransfer\u003A\u003Ais_active\u0028\u0029",
+            "name": "is_active",
+            "summary": "Returns\u0020if\u0020this\u0020payment\u0020method\u0020should\u0020be\u0020active.\u0020If\u0020false,\u0020the\u0020scripts\u0020will\u0020not\u0020be\u0020enqueued.",
+            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Blocks-Payments-Integrations-BankTransfer.html#method_is_active"
+        },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Blocks\\Payments\\Integrations\\BankTransfer\u003A\u003Aget_payment_method_script_handles\u0028\u0029",
+            "name": "get_payment_method_script_handles",
+            "summary": "Returns\u0020an\u0020array\u0020of\u0020scripts\/handles\u0020to\u0020be\u0020registered\u0020for\u0020this\u0020payment\u0020method.",
+            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Blocks-Payments-Integrations-BankTransfer.html#method_get_payment_method_script_handles"
+        },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Blocks\\Payments\\Integrations\\BankTransfer\u003A\u003Aget_payment_method_data\u0028\u0029",
+            "name": "get_payment_method_data",
+            "summary": "Returns\u0020an\u0020array\u0020of\u0020key\u003D\u003Evalue\u0020pairs\u0020of\u0020data\u0020made\u0020available\u0020to\u0020the\u0020payment\u0020methods\u0020script.",
+            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Blocks-Payments-Integrations-BankTransfer.html#method_get_payment_method_data"
+        },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Blocks\\Payments\\Integrations\\BankTransfer\u003A\u003A\u0024name",
+            "name": "name",
+            "summary": "Payment\u0020method\u0020name\/id\/slug\u0020\u0028matches\u0020id\u0020in\u0020WC_Gateway_BACS\u0020in\u0020core\u0029.",
+            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Blocks-Payments-Integrations-BankTransfer.html#property_name"
+        },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Blocks\\Payments\\Integrations\\BankTransfer\u003A\u003A\u0024asset_api",
+            "name": "asset_api",
+            "summary": "An\u0020instance\u0020of\u0020the\u0020Asset\u0020Api",
+            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Blocks-Payments-Integrations-BankTransfer.html#property_asset_api"
+        },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Blocks\\Payments\\Integrations\\CashOnDelivery",
+            "name": "CashOnDelivery",
+            "summary": "Cash\u0020on\u0020Delivery\u0020\u0028COD\u0029\u0020payment\u0020method\u0020integration",
+            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Blocks-Payments-Integrations-CashOnDelivery.html"
+        },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Blocks\\Payments\\Integrations\\CashOnDelivery\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "Constructor",
+            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Blocks-Payments-Integrations-CashOnDelivery.html#method___construct"
+        },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Blocks\\Payments\\Integrations\\CashOnDelivery\u003A\u003Ainitialize\u0028\u0029",
+            "name": "initialize",
+            "summary": "Initializes\u0020the\u0020payment\u0020method\u0020type.",
+            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Blocks-Payments-Integrations-CashOnDelivery.html#method_initialize"
+        },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Blocks\\Payments\\Integrations\\CashOnDelivery\u003A\u003Ais_active\u0028\u0029",
+            "name": "is_active",
+            "summary": "Returns\u0020if\u0020this\u0020payment\u0020method\u0020should\u0020be\u0020active.\u0020If\u0020false,\u0020the\u0020scripts\u0020will\u0020not\u0020be\u0020enqueued.",
+            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Blocks-Payments-Integrations-CashOnDelivery.html#method_is_active"
+        },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Blocks\\Payments\\Integrations\\CashOnDelivery\u003A\u003Aget_enable_for_virtual\u0028\u0029",
+            "name": "get_enable_for_virtual",
+            "summary": "Return\u0020enable_for_virtual\u0020option.",
+            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Blocks-Payments-Integrations-CashOnDelivery.html#method_get_enable_for_virtual"
+        },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Blocks\\Payments\\Integrations\\CashOnDelivery\u003A\u003Aget_enable_for_methods\u0028\u0029",
+            "name": "get_enable_for_methods",
+            "summary": "Return\u0020enable_for_methods\u0020option.",
+            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Blocks-Payments-Integrations-CashOnDelivery.html#method_get_enable_for_methods"
+        },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Blocks\\Payments\\Integrations\\CashOnDelivery\u003A\u003Aget_payment_method_script_handles\u0028\u0029",
+            "name": "get_payment_method_script_handles",
+            "summary": "Returns\u0020an\u0020array\u0020of\u0020scripts\/handles\u0020to\u0020be\u0020registered\u0020for\u0020this\u0020payment\u0020method.",
+            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Blocks-Payments-Integrations-CashOnDelivery.html#method_get_payment_method_script_handles"
+        },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Blocks\\Payments\\Integrations\\CashOnDelivery\u003A\u003Aget_payment_method_data\u0028\u0029",
+            "name": "get_payment_method_data",
+            "summary": "Returns\u0020an\u0020array\u0020of\u0020key\u003D\u003Evalue\u0020pairs\u0020of\u0020data\u0020made\u0020available\u0020to\u0020the\u0020payment\u0020methods\u0020script.",
+            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Blocks-Payments-Integrations-CashOnDelivery.html#method_get_payment_method_data"
+        },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Blocks\\Payments\\Integrations\\CashOnDelivery\u003A\u003A\u0024name",
+            "name": "name",
+            "summary": "Payment\u0020method\u0020name\/id\/slug\u0020\u0028matches\u0020id\u0020in\u0020WC_Gateway_COD\u0020in\u0020core\u0029.",
+            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Blocks-Payments-Integrations-CashOnDelivery.html#property_name"
+        },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Blocks\\Payments\\Integrations\\CashOnDelivery\u003A\u003A\u0024asset_api",
+            "name": "asset_api",
+            "summary": "An\u0020instance\u0020of\u0020the\u0020Asset\u0020Api",
+            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Blocks-Payments-Integrations-CashOnDelivery.html#property_asset_api"
         },                {
             "fqsen": "\\Automattic\\WooCommerce\\Blocks\\Payments\\Integrations\\Cheque",
             "name": "Cheque",
@@ -39960,11 +40325,6 @@ Search.appendIndex(
             "name": "name",
             "summary": "Payment\u0020method\u0020name\u0020defined\u0020by\u0020payment\u0020methods\u0020extending\u0020this\u0020class.",
             "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Blocks-Payments-Integrations-Cheque.html#property_name"
-        },                {
-            "fqsen": "\\Automattic\\WooCommerce\\Blocks\\Payments\\Integrations\\Cheque\u003A\u003A\u0024settings",
-            "name": "settings",
-            "summary": "Settings\u0020from\u0020the\u0020WP\u0020options\u0020table",
-            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Blocks-Payments-Integrations-Cheque.html#property_settings"
         },                {
             "fqsen": "\\Automattic\\WooCommerce\\Blocks\\Payments\\Integrations\\Cheque\u003A\u003A\u0024asset_api",
             "name": "asset_api",
@@ -40005,11 +40365,6 @@ Search.appendIndex(
             "name": "name",
             "summary": "Payment\u0020method\u0020name\u0020defined\u0020by\u0020payment\u0020methods\u0020extending\u0020this\u0020class.",
             "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Blocks-Payments-Integrations-PayPal.html#property_name"
-        },                {
-            "fqsen": "\\Automattic\\WooCommerce\\Blocks\\Payments\\Integrations\\PayPal\u003A\u003A\u0024settings",
-            "name": "settings",
-            "summary": "Settings\u0020from\u0020the\u0020WP\u0020options\u0020table",
-            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Blocks-Payments-Integrations-PayPal.html#property_settings"
         },                {
             "fqsen": "\\Automattic\\WooCommerce\\Blocks\\Payments\\Integrations\\PayPal\u003A\u003A\u0024asset_api",
             "name": "asset_api",
@@ -40110,11 +40465,6 @@ Search.appendIndex(
             "name": "name",
             "summary": "Payment\u0020method\u0020name\u0020defined\u0020by\u0020payment\u0020methods\u0020extending\u0020this\u0020class.",
             "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Blocks-Payments-Integrations-Stripe.html#property_name"
-        },                {
-            "fqsen": "\\Automattic\\WooCommerce\\Blocks\\Payments\\Integrations\\Stripe\u003A\u003A\u0024settings",
-            "name": "settings",
-            "summary": "Stripe\u0020settings\u0020from\u0020the\u0020WP\u0020options\u0020table",
-            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Blocks-Payments-Integrations-Stripe.html#property_settings"
         },                {
             "fqsen": "\\Automattic\\WooCommerce\\Blocks\\Payments\\Integrations\\Stripe\u003A\u003A\u0024asset_api",
             "name": "asset_api",
@@ -41386,11 +41736,6 @@ Search.appendIndex(
             "summary": "Convert\u0020a\u0020WooCommerce\u0020cart\u0020item\u0020to\u0020an\u0020object\u0020suitable\u0020for\u0020the\u0020response.",
             "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Blocks-StoreApi-Schemas-CartItemSchema.html#method_get_item_response"
         },                {
-            "fqsen": "\\Automattic\\WooCommerce\\Blocks\\StoreApi\\Schemas\\CartItemSchema\u003A\u003Aget_product_quantity_limit\u0028\u0029",
-            "name": "get_product_quantity_limit",
-            "summary": "Get\u0020the\u0020quantity\u0020limit\u0020for\u0020an\u0020item\u0020in\u0020the\u0020cart.",
-            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Blocks-StoreApi-Schemas-CartItemSchema.html#method_get_product_quantity_limit"
-        },                {
             "fqsen": "\\Automattic\\WooCommerce\\Blocks\\StoreApi\\Schemas\\CartItemSchema\u003A\u003Aprepare_product_price_response\u0028\u0029",
             "name": "prepare_product_price_response",
             "summary": "Get\u0020an\u0020array\u0020of\u0020pricing\u0020data.",
@@ -41766,6 +42111,41 @@ Search.appendIndex(
             "summary": "If\u0020a\u0020product\u0020has\u0020low\u0020stock,\u0020return\u0020the\u0020remaining\u0020stock\u0020amount\u0020for\u0020display.",
             "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Blocks-StoreApi-Schemas-ProductSchema.html#method_get_low_stock_remaining"
         },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Blocks\\StoreApi\\Schemas\\ProductSchema\u003A\u003Aget_product_quantity_limit\u0028\u0029",
+            "name": "get_product_quantity_limit",
+            "summary": "Get\u0020the\u0020quantity\u0020limit\u0020for\u0020an\u0020item\u0020in\u0020the\u0020cart.",
+            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Blocks-StoreApi-Schemas-ProductSchema.html#method_get_product_quantity_limit"
+        },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Blocks\\StoreApi\\Schemas\\ProductSchema\u003A\u003Afilter_valid_attribute\u0028\u0029",
+            "name": "filter_valid_attribute",
+            "summary": "Returns\u0020true\u0020if\u0020the\u0020given\u0020attribute\u0020is\u0020valid.",
+            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Blocks-StoreApi-Schemas-ProductSchema.html#method_filter_valid_attribute"
+        },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Blocks\\StoreApi\\Schemas\\ProductSchema\u003A\u003Afilter_variation_attribute\u0028\u0029",
+            "name": "filter_variation_attribute",
+            "summary": "Returns\u0020true\u0020if\u0020the\u0020given\u0020attribute\u0020is\u0020valid\u0020and\u0020used\u0020for\u0020variations.",
+            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Blocks-StoreApi-Schemas-ProductSchema.html#method_filter_variation_attribute"
+        },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Blocks\\StoreApi\\Schemas\\ProductSchema\u003A\u003Aget_variations\u0028\u0029",
+            "name": "get_variations",
+            "summary": "Get\u0020variation\u0020IDs\u0020and\u0020attributes\u0020from\u0020the\u0020DB.",
+            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Blocks-StoreApi-Schemas-ProductSchema.html#method_get_variations"
+        },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Blocks\\StoreApi\\Schemas\\ProductSchema\u003A\u003Aget_attributes\u0028\u0029",
+            "name": "get_attributes",
+            "summary": "Get\u0020list\u0020of\u0020product\u0020attributes\u0020and\u0020attribute\u0020terms.",
+            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Blocks-StoreApi-Schemas-ProductSchema.html#method_get_attributes"
+        },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Blocks\\StoreApi\\Schemas\\ProductSchema\u003A\u003Aprepare_product_attribute_taxonomy_value\u0028\u0029",
+            "name": "prepare_product_attribute_taxonomy_value",
+            "summary": "Prepare\u0020an\u0020attribute\u0020term\u0020for\u0020the\u0020response.",
+            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Blocks-StoreApi-Schemas-ProductSchema.html#method_prepare_product_attribute_taxonomy_value"
+        },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Blocks\\StoreApi\\Schemas\\ProductSchema\u003A\u003Aprepare_product_attribute_value\u0028\u0029",
+            "name": "prepare_product_attribute_value",
+            "summary": "Prepare\u0020an\u0020attribute\u0020term\u0020for\u0020the\u0020response.",
+            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Blocks-StoreApi-Schemas-ProductSchema.html#method_prepare_product_attribute_value"
+        },                {
             "fqsen": "\\Automattic\\WooCommerce\\Blocks\\StoreApi\\Schemas\\ProductSchema\u003A\u003Aprepare_product_price_response\u0028\u0029",
             "name": "prepare_product_price_response",
             "summary": "Get\u0020an\u0020array\u0020of\u0020pricing\u0020data.",
@@ -41785,6 +42165,11 @@ Search.appendIndex(
             "name": "get_price_range",
             "summary": "Get\u0020price\u0020range\u0020from\u0020certain\u0020product\u0020types.",
             "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Blocks-StoreApi-Schemas-ProductSchema.html#method_get_price_range"
+        },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Blocks\\StoreApi\\Schemas\\ProductSchema\u003A\u003Aget_term_list\u0028\u0029",
+            "name": "get_term_list",
+            "summary": "Returns\u0020a\u0020list\u0020of\u0020terms\u0020assigned\u0020to\u0020the\u0020product.",
+            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Blocks-StoreApi-Schemas-ProductSchema.html#method_get_term_list"
         },                {
             "fqsen": "\\Automattic\\WooCommerce\\Blocks\\StoreApi\\Schemas\\ProductSchema\u003A\u003A\u0024title",
             "name": "title",
@@ -46946,6 +47331,161 @@ Search.appendIndex(
             "summary": "Error\u0020extra\u0020data.",
             "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Checkout-Helpers-ReserveStockException.html#property_error_data"
         },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Container",
+            "name": "Container",
+            "summary": "PSR11\u0020compliant\u0020dependency\u0020injection\u0020container\u0020for\u0020WooCommerce.",
+            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Container.html"
+        },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Container\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "Class\u0020constructor.",
+            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Container.html#method___construct"
+        },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Container\u003A\u003Aget\u0028\u0029",
+            "name": "get",
+            "summary": "Finds\u0020an\u0020entry\u0020of\u0020the\u0020container\u0020by\u0020its\u0020identifier\u0020and\u0020returns\u0020it.",
+            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Container.html#method_get"
+        },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Container\u003A\u003Ahas\u0028\u0029",
+            "name": "has",
+            "summary": "Returns\u0020true\u0020if\u0020the\u0020container\u0020can\u0020return\u0020an\u0020entry\u0020for\u0020the\u0020given\u0020identifier.",
+            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Container.html#method_has"
+        },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Container\u003A\u003A\u0024service_providers",
+            "name": "service_providers",
+            "summary": "The\u0020list\u0020of\u0020service\u0020provider\u0020classes\u0020to\u0020register.",
+            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Container.html#property_service_providers"
+        },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Container\u003A\u003A\u0024container",
+            "name": "container",
+            "summary": "The\u0020underlying\u0020container.",
+            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Container.html#property_container"
+        },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Internal\\DependencyManagement\\AbstractServiceProvider",
+            "name": "AbstractServiceProvider",
+            "summary": "Base\u0020class\u0020for\u0020the\u0020service\u0020providers\u0020used\u0020to\u0020register\u0020classes\u0020in\u0020the\u0020container.",
+            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Internal-DependencyManagement-AbstractServiceProvider.html"
+        },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Internal\\DependencyManagement\\AbstractServiceProvider\u003A\u003Aadd_with_auto_arguments\u0028\u0029",
+            "name": "add_with_auto_arguments",
+            "summary": "Register\u0020a\u0020class\u0020in\u0020the\u0020container\u0020and\u0020use\u0020reflection\u0020to\u0020guess\u0020the\u0020injection\u0020method\u0020arguments.",
+            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Internal-DependencyManagement-AbstractServiceProvider.html#method_add_with_auto_arguments"
+        },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Internal\\DependencyManagement\\AbstractServiceProvider\u003A\u003Areflect_class_or_callable\u0028\u0029",
+            "name": "reflect_class_or_callable",
+            "summary": "Check\u0020if\u0020a\u0020combination\u0020of\u0020class\u0020name\u0020and\u0020concrete\u0020is\u0020valid\u0020for\u0020registration.",
+            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Internal-DependencyManagement-AbstractServiceProvider.html#method_reflect_class_or_callable"
+        },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Internal\\DependencyManagement\\AbstractServiceProvider\u003A\u003Ashare_with_auto_arguments\u0028\u0029",
+            "name": "share_with_auto_arguments",
+            "summary": "Register\u0020a\u0020class\u0020in\u0020the\u0020container\u0020and\u0020use\u0020reflection\u0020to\u0020guess\u0020the\u0020injection\u0020method\u0020arguments.",
+            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Internal-DependencyManagement-AbstractServiceProvider.html#method_share_with_auto_arguments"
+        },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Internal\\DependencyManagement\\AbstractServiceProvider\u003A\u003Aadd\u0028\u0029",
+            "name": "add",
+            "summary": "Register\u0020an\u0020entry\u0020in\u0020the\u0020container.",
+            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Internal-DependencyManagement-AbstractServiceProvider.html#method_add"
+        },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Internal\\DependencyManagement\\AbstractServiceProvider\u003A\u003Ashare\u0028\u0029",
+            "name": "share",
+            "summary": "Register\u0020a\u0020shared\u0020entry\u0020in\u0020the\u0020container\u0020\u0028\u0060get\u0060\u0020always\u0020returns\u0020the\u0020same\u0020instance\u0029.",
+            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Internal-DependencyManagement-AbstractServiceProvider.html#method_share"
+        },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Internal\\DependencyManagement\\ContainerException",
+            "name": "ContainerException",
+            "summary": "Class\u0020ContainerException.",
+            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Internal-DependencyManagement-ContainerException.html"
+        },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Internal\\DependencyManagement\\ContainerException\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "Create\u0020a\u0020new\u0020instance\u0020of\u0020the\u0020class.",
+            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Internal-DependencyManagement-ContainerException.html#method___construct"
+        },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Internal\\DependencyManagement\\Definition",
+            "name": "Definition",
+            "summary": "An\u0020extension\u0020of\u0020the\u0020definition\u0020class\u0020that\u0020replaces\u0020constructor\u0020injection\u0020with\u0020method\u0020injection.",
+            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Internal-DependencyManagement-Definition.html"
+        },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Internal\\DependencyManagement\\Definition\u003A\u003AresolveClass\u0028\u0029",
+            "name": "resolveClass",
+            "summary": "Resolve\u0020a\u0020class\u0020using\u0020method\u0020injection\u0020instead\u0020of\u0020constructor\u0020injection.",
+            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Internal-DependencyManagement-Definition.html#method_resolveClass"
+        },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Internal\\DependencyManagement\\Definition\u003A\u003AINJECTION_METHOD",
+            "name": "INJECTION_METHOD",
+            "summary": "The\u0020standard\u0020method\u0020that\u0020we\u0020use\u0020for\u0020dependency\u0020injection.",
+            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Internal-DependencyManagement-Definition.html#constant_INJECTION_METHOD"
+        },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Internal\\DependencyManagement\\ExtendedContainer",
+            "name": "ExtendedContainer",
+            "summary": "This\u0020class\u0020extends\u0020the\u0020original\u0020League\u0027s\u0020Container\u0020object\u0020by\u0020adding\u0020some\u0020functionality\nthat\u0020we\u0020need\u0020for\u0020WooCommerce.",
+            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Internal-DependencyManagement-ExtendedContainer.html"
+        },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Internal\\DependencyManagement\\ExtendedContainer\u003A\u003Aadd\u0028\u0029",
+            "name": "add",
+            "summary": "Register\u0020a\u0020class\u0020in\u0020the\u0020container.",
+            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Internal-DependencyManagement-ExtendedContainer.html#method_add"
+        },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Internal\\DependencyManagement\\ExtendedContainer\u003A\u003Areplace\u0028\u0029",
+            "name": "replace",
+            "summary": "Replace\u0020an\u0020existing\u0020registration\u0020with\u0020a\u0020different\u0020concrete.",
+            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Internal-DependencyManagement-ExtendedContainer.html#method_replace"
+        },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Internal\\DependencyManagement\\ExtendedContainer\u003A\u003Areset_all_resolved\u0028\u0029",
+            "name": "reset_all_resolved",
+            "summary": "Reset\u0020all\u0020the\u0020cached\u0020resolutions,\u0020so\u0020any\u0020further\u0020\u0022get\u0022\u0020for\u0020shared\u0020definitions\u0020will\u0020generate\u0020the\u0020instance\u0020again.",
+            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Internal-DependencyManagement-ExtendedContainer.html#method_reset_all_resolved"
+        },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Internal\\DependencyManagement\\ExtendedContainer\u003A\u003Aget\u0028\u0029",
+            "name": "get",
+            "summary": "Get\u0020an\u0020instance\u0020of\u0020a\u0020registered\u0020class.",
+            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Internal-DependencyManagement-ExtendedContainer.html#method_get"
+        },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Internal\\DependencyManagement\\ExtendedContainer\u003A\u003Aget_class_from_concrete\u0028\u0029",
+            "name": "get_class_from_concrete",
+            "summary": "Gets\u0020the\u0020class\u0020from\u0020the\u0020concrete\u0020regardless\u0020of\u0020type.",
+            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Internal-DependencyManagement-ExtendedContainer.html#method_get_class_from_concrete"
+        },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Internal\\DependencyManagement\\ExtendedContainer\u003A\u003Ais_class_allowed\u0028\u0029",
+            "name": "is_class_allowed",
+            "summary": "Checks\u0020to\u0020see\u0020whether\u0020or\u0020not\u0020a\u0020class\u0020is\u0020allowed\u0020to\u0020be\u0020registered.",
+            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Internal-DependencyManagement-ExtendedContainer.html#method_is_class_allowed"
+        },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Internal\\DependencyManagement\\ExtendedContainer\u003A\u003A\u0024woocommerce_namespace",
+            "name": "woocommerce_namespace",
+            "summary": "The\u0020root\u0020namespace\u0020of\u0020all\u0020WooCommerce\u0020classes\u0020in\u0020the\u0020\u0060src\u0060\u0020directory.",
+            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Internal-DependencyManagement-ExtendedContainer.html#property_woocommerce_namespace"
+        },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Internal\\DependencyManagement\\ExtendedContainer\u003A\u003A\u0024registration_whitelist",
+            "name": "registration_whitelist",
+            "summary": "Whitelist\u0020of\u0020classes\u0020that\u0020we\u0020can\u0020register\u0020using\u0020the\u0020container\ndespite\u0020not\u0020belonging\u0020to\u0020the\u0020WooCommerce\u0020root\u0020namespace.",
+            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Internal-DependencyManagement-ExtendedContainer.html#property_registration_whitelist"
+        },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Internal\\DependencyManagement\\ServiceProviders\\ProxiesServiceProvider",
+            "name": "ProxiesServiceProvider",
+            "summary": "Service\u0020provider\u0020for\u0020the\u0020classes\u0020in\u0020the\u0020Automattic\\WooCommerce\\Proxies\u0020namespace.",
+            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Internal-DependencyManagement-ServiceProviders-ProxiesServiceProvider.html"
+        },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Internal\\DependencyManagement\\ServiceProviders\\ProxiesServiceProvider\u003A\u003Aregister\u0028\u0029",
+            "name": "register",
+            "summary": "Register\u0020the\u0020classes.",
+            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Internal-DependencyManagement-ServiceProviders-ProxiesServiceProvider.html#method_register"
+        },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Internal\\DependencyManagement\\ServiceProviders\\ProxiesServiceProvider\u003A\u003A\u0024provides",
+            "name": "provides",
+            "summary": "The\u0020classes\/interfaces\u0020that\u0020are\u0020serviced\u0020by\u0020this\u0020service\u0020provider.",
+            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Internal-DependencyManagement-ServiceProviders-ProxiesServiceProvider.html#property_provides"
+        },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Internal\\WCCom\\ConnectionHelper",
+            "name": "ConnectionHelper",
+            "summary": "Class\u0020WCConnectionHelper.",
+            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Internal-WCCom-ConnectionHelper.html"
+        },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Internal\\WCCom\\ConnectionHelper\u003A\u003Ais_connected\u0028\u0029",
+            "name": "is_connected",
+            "summary": "Check\u0020if\u0020WooCommerce.com\u0020account\u0020is\u0020connected.",
+            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Internal-WCCom-ConnectionHelper.html#method_is_connected"
+        },                {
             "fqsen": "\\Automattic\\WooCommerce\\Packages",
             "name": "Packages",
             "summary": "Packages\u0020class.",
@@ -46986,10 +47526,70 @@ Search.appendIndex(
             "summary": "Array\u0020of\u0020package\u0020names\u0020and\u0020their\u0020main\u0020package\u0020classes.",
             "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Packages.html#property_packages"
         },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Proxies\\ActionsProxy",
+            "name": "ActionsProxy",
+            "summary": "Proxy\u0020for\u0020interacting\u0020with\u0020WordPress\u0020actions\u0020and\u0020filters.",
+            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Proxies-ActionsProxy.html"
+        },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Proxies\\ActionsProxy\u003A\u003Adid_action\u0028\u0029",
+            "name": "did_action",
+            "summary": "Retrieve\u0020the\u0020number\u0020of\u0020times\u0020an\u0020action\u0020is\u0020fired.",
+            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Proxies-ActionsProxy.html#method_did_action"
+        },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Proxies\\ActionsProxy\u003A\u003Aapply_filters\u0028\u0029",
+            "name": "apply_filters",
+            "summary": "Calls\u0020the\u0020callback\u0020functions\u0020that\u0020have\u0020been\u0020added\u0020to\u0020a\u0020filter\u0020hook.",
+            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Proxies-ActionsProxy.html#method_apply_filters"
+        },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Proxies\\LegacyProxy",
+            "name": "LegacyProxy",
+            "summary": "Proxy\u0020class\u0020to\u0020access\u0020legacy\u0020WooCommerce\u0020functionality.",
+            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Proxies-LegacyProxy.html"
+        },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Proxies\\LegacyProxy\u003A\u003Aget_instance_of\u0028\u0029",
+            "name": "get_instance_of",
+            "summary": "Gets\u0020an\u0020instance\u0020of\u0020a\u0020given\u0020legacy\u0020class.",
+            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Proxies-LegacyProxy.html#method_get_instance_of"
+        },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Proxies\\LegacyProxy\u003A\u003Aget_instance_of_wc_queue_interface\u0028\u0029",
+            "name": "get_instance_of_wc_queue_interface",
+            "summary": "Get\u0020an\u0020instance\u0020of\u0020a\u0020class\u0020implementing\u0020WC_Queue_Interface.",
+            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Proxies-LegacyProxy.html#method_get_instance_of_wc_queue_interface"
+        },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Proxies\\LegacyProxy\u003A\u003Acall_function\u0028\u0029",
+            "name": "call_function",
+            "summary": "Call\u0020a\u0020user\u0020function.\u0020This\u0020should\u0020be\u0020used\u0020to\u0020execute\u0020any\u0020non\u002Didempotent\u0020function,\u0020especially\nthose\u0020in\u0020the\u0020\u0060includes\u0060\u0020directory\u0020or\u0020provided\u0020by\u0020WordPress.",
+            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Proxies-LegacyProxy.html#method_call_function"
+        },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Proxies\\LegacyProxy\u003A\u003Acall_static\u0028\u0029",
+            "name": "call_static",
+            "summary": "Call\u0020a\u0020static\u0020method\u0020in\u0020a\u0020class.\u0020This\u0020should\u0020be\u0020used\u0020to\u0020execute\u0020any\u0020non\u002Didempotent\u0020method\u0020in\u0020classes\nfrom\u0020the\u0020\u0060includes\u0060\u0020directory.",
+            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Proxies-LegacyProxy.html#method_call_static"
+        },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Utilities\\StringUtil",
+            "name": "StringUtil",
+            "summary": "A\u0020class\u0020of\u0020utilities\u0020for\u0020dealing\u0020with\u0020strings.",
+            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Utilities-StringUtil.html"
+        },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Utilities\\StringUtil\u003A\u003Astarts_with\u0028\u0029",
+            "name": "starts_with",
+            "summary": "Checks\u0020to\u0020see\u0020whether\u0020or\u0020not\u0020a\u0020string\u0020starts\u0020with\u0020another.",
+            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Utilities-StringUtil.html#method_starts_with"
+        },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Utilities\\StringUtil\u003A\u003Aends_with\u0028\u0029",
+            "name": "ends_with",
+            "summary": "Checks\u0020to\u0020see\u0020whether\u0020or\u0020not\u0020a\u0020string\u0020ends\u0020with\u0020another.",
+            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Utilities-StringUtil.html#method_ends_with"
+        },                {
             "fqsen": "\\WC\u0028\u0029",
             "name": "WC",
             "summary": "Returns\u0020the\u0020main\u0020instance\u0020of\u0020WC.",
             "url": "https://woocommerce.github.io/code-reference/namespaces/default.html#function_WC"
+        },                {
+            "fqsen": "\\wc_get_container\u0028\u0029",
+            "name": "wc_get_container",
+            "summary": "Returns\u0020the\u0020WooCommerce\u0020PSR11\u002Dcompatible\u0020object\u0020container.",
+            "url": "https://woocommerce.github.io/code-reference/namespaces/default.html#function_wc_get_container"
         },                {
             "fqsen": "\\",
             "name": "\\",
@@ -47260,5 +47860,35 @@ Search.appendIndex(
             "name": "Checkout",
             "summary": "",
             "url": "https://woocommerce.github.io/code-reference/namespaces/automattic-woocommerce-checkout.html"
+        },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Internal\\DependencyManagement",
+            "name": "DependencyManagement",
+            "summary": "",
+            "url": "https://woocommerce.github.io/code-reference/namespaces/automattic-woocommerce-internal-dependencymanagement.html"
+        },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Internal",
+            "name": "Internal",
+            "summary": "",
+            "url": "https://woocommerce.github.io/code-reference/namespaces/automattic-woocommerce-internal.html"
+        },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Internal\\DependencyManagement\\ServiceProviders",
+            "name": "ServiceProviders",
+            "summary": "",
+            "url": "https://woocommerce.github.io/code-reference/namespaces/automattic-woocommerce-internal-dependencymanagement-serviceproviders.html"
+        },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Internal\\WCCom",
+            "name": "WCCom",
+            "summary": "",
+            "url": "https://woocommerce.github.io/code-reference/namespaces/automattic-woocommerce-internal-wccom.html"
+        },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Proxies",
+            "name": "Proxies",
+            "summary": "",
+            "url": "https://woocommerce.github.io/code-reference/namespaces/automattic-woocommerce-proxies.html"
+        },                {
+            "fqsen": "\\Automattic\\WooCommerce\\Utilities",
+            "name": "Utilities",
+            "summary": "",
+            "url": "https://woocommerce.github.io/code-reference/namespaces/automattic-woocommerce-utilities.html"
         }            ]
 );
