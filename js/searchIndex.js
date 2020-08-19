@@ -17921,21 +17921,6 @@ Search.appendIndex(
             "summary": "Is\u0020the\u0020WooCommerce\u0020Admin\u0020actively\u0020included\u0020in\u0020the\u0020WooCommerce\u0020core\u003F\nBased\u0020on\u0020presence\u0020of\u0020a\u0020basic\u0020WC\u0020Admin\u0020function.",
             "url": "https://woocommerce.github.io/code-reference/classes/WooCommerce.html#method_is_wc_admin_active"
         },                {
-            "fqsen": "\\WooCommerce\u003A\u003Acall_function\u0028\u0029",
-            "name": "call_function",
-            "summary": "Call\u0020a\u0020user\u0020function.\u0020This\u0020should\u0020be\u0020used\u0020to\u0020execute\u0020any\u0020non\u002Didempotent\u0020function,\u0020especially\nthose\u0020in\u0020the\u0020\u0060includes\u0060\u0020directory\u0020or\u0020provided\u0020by\u0020WordPress.",
-            "url": "https://woocommerce.github.io/code-reference/classes/WooCommerce.html#method_call_function"
-        },                {
-            "fqsen": "\\WooCommerce\u003A\u003Acall_static\u0028\u0029",
-            "name": "call_static",
-            "summary": "Call\u0020a\u0020static\u0020method\u0020in\u0020a\u0020class.\u0020This\u0020should\u0020be\u0020used\u0020to\u0020execute\u0020any\u0020non\u002Didempotent\u0020method\u0020in\u0020classes\nfrom\u0020the\u0020\u0060includes\u0060\u0020directory.",
-            "url": "https://woocommerce.github.io/code-reference/classes/WooCommerce.html#method_call_static"
-        },                {
-            "fqsen": "\\WooCommerce\u003A\u003Aget_instance_of\u0028\u0029",
-            "name": "get_instance_of",
-            "summary": "Gets\u0020an\u0020instance\u0020of\u0020a\u0020given\u0020legacy\u0020class.",
-            "url": "https://woocommerce.github.io/code-reference/classes/WooCommerce.html#method_get_instance_of"
-        },                {
             "fqsen": "\\WooCommerce\u003A\u003A\u0024version",
             "name": "version",
             "summary": "WooCommerce\u0020version.",
@@ -43511,11 +43496,6 @@ Search.appendIndex(
             "summary": "PSR11\u0020compliant\u0020dependency\u0020injection\u0020container\u0020for\u0020WooCommerce.",
             "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Container.html"
         },                {
-            "fqsen": "\\Automattic\\WooCommerce\\Container\u003A\u003A__construct\u0028\u0029",
-            "name": "__construct",
-            "summary": "Class\u0020constructor.",
-            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Container.html#method___construct"
-        },                {
             "fqsen": "\\Automattic\\WooCommerce\\Container\u003A\u003Aget\u0028\u0029",
             "name": "get",
             "summary": "Finds\u0020an\u0020entry\u0020of\u0020the\u0020container\u0020by\u0020its\u0020identifier\u0020and\u0020returns\u0020it.",
@@ -43525,131 +43505,6 @@ Search.appendIndex(
             "name": "has",
             "summary": "Returns\u0020true\u0020if\u0020the\u0020container\u0020can\u0020return\u0020an\u0020entry\u0020for\u0020the\u0020given\u0020identifier.",
             "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Container.html#method_has"
-        },                {
-            "fqsen": "\\Automattic\\WooCommerce\\Container\u003A\u003A\u0024service_providers",
-            "name": "service_providers",
-            "summary": "The\u0020list\u0020of\u0020service\u0020provider\u0020classes\u0020to\u0020register.",
-            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Container.html#property_service_providers"
-        },                {
-            "fqsen": "\\Automattic\\WooCommerce\\Container\u003A\u003A\u0024container",
-            "name": "container",
-            "summary": "The\u0020underlying\u0020container.",
-            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Container.html#property_container"
-        },                {
-            "fqsen": "\\Automattic\\WooCommerce\\Internal\\DependencyManagement\\AbstractServiceProvider",
-            "name": "AbstractServiceProvider",
-            "summary": "Base\u0020class\u0020for\u0020the\u0020service\u0020providers\u0020used\u0020to\u0020register\u0020classes\u0020in\u0020the\u0020container.",
-            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Internal-DependencyManagement-AbstractServiceProvider.html"
-        },                {
-            "fqsen": "\\Automattic\\WooCommerce\\Internal\\DependencyManagement\\AbstractServiceProvider\u003A\u003Aadd_with_auto_arguments\u0028\u0029",
-            "name": "add_with_auto_arguments",
-            "summary": "Register\u0020a\u0020class\u0020in\u0020the\u0020container\u0020and\u0020use\u0020reflection\u0020to\u0020guess\u0020the\u0020injection\u0020method\u0020arguments.",
-            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Internal-DependencyManagement-AbstractServiceProvider.html#method_add_with_auto_arguments"
-        },                {
-            "fqsen": "\\Automattic\\WooCommerce\\Internal\\DependencyManagement\\AbstractServiceProvider\u003A\u003Areflect_class_or_callable\u0028\u0029",
-            "name": "reflect_class_or_callable",
-            "summary": "Check\u0020if\u0020a\u0020combination\u0020of\u0020class\u0020name\u0020and\u0020concrete\u0020is\u0020valid\u0020for\u0020registration.",
-            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Internal-DependencyManagement-AbstractServiceProvider.html#method_reflect_class_or_callable"
-        },                {
-            "fqsen": "\\Automattic\\WooCommerce\\Internal\\DependencyManagement\\AbstractServiceProvider\u003A\u003Ashare_with_auto_arguments\u0028\u0029",
-            "name": "share_with_auto_arguments",
-            "summary": "Register\u0020a\u0020class\u0020in\u0020the\u0020container\u0020and\u0020use\u0020reflection\u0020to\u0020guess\u0020the\u0020injection\u0020method\u0020arguments.",
-            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Internal-DependencyManagement-AbstractServiceProvider.html#method_share_with_auto_arguments"
-        },                {
-            "fqsen": "\\Automattic\\WooCommerce\\Internal\\DependencyManagement\\AbstractServiceProvider\u003A\u003Aadd\u0028\u0029",
-            "name": "add",
-            "summary": "Register\u0020an\u0020entry\u0020in\u0020the\u0020container.",
-            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Internal-DependencyManagement-AbstractServiceProvider.html#method_add"
-        },                {
-            "fqsen": "\\Automattic\\WooCommerce\\Internal\\DependencyManagement\\AbstractServiceProvider\u003A\u003Ashare\u0028\u0029",
-            "name": "share",
-            "summary": "Register\u0020a\u0020shared\u0020entry\u0020in\u0020the\u0020container\u0020\u0028\u0060get\u0060\u0020always\u0020returns\u0020the\u0020same\u0020instance\u0029.",
-            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Internal-DependencyManagement-AbstractServiceProvider.html#method_share"
-        },                {
-            "fqsen": "\\Automattic\\WooCommerce\\Internal\\DependencyManagement\\ContainerException",
-            "name": "ContainerException",
-            "summary": "Class\u0020ContainerException.",
-            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Internal-DependencyManagement-ContainerException.html"
-        },                {
-            "fqsen": "\\Automattic\\WooCommerce\\Internal\\DependencyManagement\\ContainerException\u003A\u003A__construct\u0028\u0029",
-            "name": "__construct",
-            "summary": "Create\u0020a\u0020new\u0020instance\u0020of\u0020the\u0020class.",
-            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Internal-DependencyManagement-ContainerException.html#method___construct"
-        },                {
-            "fqsen": "\\Automattic\\WooCommerce\\Internal\\DependencyManagement\\Definition",
-            "name": "Definition",
-            "summary": "An\u0020extension\u0020of\u0020the\u0020definition\u0020class\u0020that\u0020replaces\u0020constructor\u0020injection\u0020with\u0020method\u0020injection.",
-            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Internal-DependencyManagement-Definition.html"
-        },                {
-            "fqsen": "\\Automattic\\WooCommerce\\Internal\\DependencyManagement\\Definition\u003A\u003AresolveClass\u0028\u0029",
-            "name": "resolveClass",
-            "summary": "Resolve\u0020a\u0020class\u0020using\u0020method\u0020injection\u0020instead\u0020of\u0020constructor\u0020injection.",
-            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Internal-DependencyManagement-Definition.html#method_resolveClass"
-        },                {
-            "fqsen": "\\Automattic\\WooCommerce\\Internal\\DependencyManagement\\Definition\u003A\u003AINJECTION_METHOD",
-            "name": "INJECTION_METHOD",
-            "summary": "The\u0020standard\u0020method\u0020that\u0020we\u0020use\u0020for\u0020dependency\u0020injection.",
-            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Internal-DependencyManagement-Definition.html#constant_INJECTION_METHOD"
-        },                {
-            "fqsen": "\\Automattic\\WooCommerce\\Internal\\DependencyManagement\\ExtendedContainer",
-            "name": "ExtendedContainer",
-            "summary": "This\u0020class\u0020extends\u0020the\u0020original\u0020League\u0027s\u0020Container\u0020object\u0020by\u0020adding\u0020some\u0020functionality\nthat\u0020we\u0020need\u0020for\u0020WooCommerce.",
-            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Internal-DependencyManagement-ExtendedContainer.html"
-        },                {
-            "fqsen": "\\Automattic\\WooCommerce\\Internal\\DependencyManagement\\ExtendedContainer\u003A\u003Aadd\u0028\u0029",
-            "name": "add",
-            "summary": "Register\u0020a\u0020class\u0020in\u0020the\u0020container.",
-            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Internal-DependencyManagement-ExtendedContainer.html#method_add"
-        },                {
-            "fqsen": "\\Automattic\\WooCommerce\\Internal\\DependencyManagement\\ExtendedContainer\u003A\u003Areplace\u0028\u0029",
-            "name": "replace",
-            "summary": "Replace\u0020an\u0020existing\u0020registration\u0020with\u0020a\u0020different\u0020concrete.",
-            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Internal-DependencyManagement-ExtendedContainer.html#method_replace"
-        },                {
-            "fqsen": "\\Automattic\\WooCommerce\\Internal\\DependencyManagement\\ExtendedContainer\u003A\u003Areset_all_resolved\u0028\u0029",
-            "name": "reset_all_resolved",
-            "summary": "Reset\u0020all\u0020the\u0020cached\u0020resolutions,\u0020so\u0020any\u0020further\u0020\u0022get\u0022\u0020for\u0020shared\u0020definitions\u0020will\u0020generate\u0020the\u0020instance\u0020again.",
-            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Internal-DependencyManagement-ExtendedContainer.html#method_reset_all_resolved"
-        },                {
-            "fqsen": "\\Automattic\\WooCommerce\\Internal\\DependencyManagement\\ExtendedContainer\u003A\u003Aget\u0028\u0029",
-            "name": "get",
-            "summary": "Get\u0020an\u0020instance\u0020of\u0020a\u0020registered\u0020class.",
-            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Internal-DependencyManagement-ExtendedContainer.html#method_get"
-        },                {
-            "fqsen": "\\Automattic\\WooCommerce\\Internal\\DependencyManagement\\ExtendedContainer\u003A\u003Aget_class_from_concrete\u0028\u0029",
-            "name": "get_class_from_concrete",
-            "summary": "Gets\u0020the\u0020class\u0020from\u0020the\u0020concrete\u0020regardless\u0020of\u0020type.",
-            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Internal-DependencyManagement-ExtendedContainer.html#method_get_class_from_concrete"
-        },                {
-            "fqsen": "\\Automattic\\WooCommerce\\Internal\\DependencyManagement\\ExtendedContainer\u003A\u003Ais_class_allowed\u0028\u0029",
-            "name": "is_class_allowed",
-            "summary": "Checks\u0020to\u0020see\u0020whether\u0020or\u0020not\u0020a\u0020class\u0020is\u0020allowed\u0020to\u0020be\u0020registered.",
-            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Internal-DependencyManagement-ExtendedContainer.html#method_is_class_allowed"
-        },                {
-            "fqsen": "\\Automattic\\WooCommerce\\Internal\\DependencyManagement\\ExtendedContainer\u003A\u003A\u0024woocommerce_namespace",
-            "name": "woocommerce_namespace",
-            "summary": "The\u0020root\u0020namespace\u0020of\u0020all\u0020WooCommerce\u0020classes\u0020in\u0020the\u0020\u0060src\u0060\u0020directory.",
-            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Internal-DependencyManagement-ExtendedContainer.html#property_woocommerce_namespace"
-        },                {
-            "fqsen": "\\Automattic\\WooCommerce\\Internal\\DependencyManagement\\ExtendedContainer\u003A\u003A\u0024registration_whitelist",
-            "name": "registration_whitelist",
-            "summary": "Whitelist\u0020of\u0020classes\u0020that\u0020we\u0020can\u0020register\u0020using\u0020the\u0020container\ndespite\u0020not\u0020belonging\u0020to\u0020the\u0020WooCommerce\u0020root\u0020namespace.",
-            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Internal-DependencyManagement-ExtendedContainer.html#property_registration_whitelist"
-        },                {
-            "fqsen": "\\Automattic\\WooCommerce\\Internal\\DependencyManagement\\ServiceProviders\\ProxiesServiceProvider",
-            "name": "ProxiesServiceProvider",
-            "summary": "Service\u0020provider\u0020for\u0020the\u0020classes\u0020in\u0020the\u0020Automattic\\WooCommerce\\Proxies\u0020namespace.",
-            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Internal-DependencyManagement-ServiceProviders-ProxiesServiceProvider.html"
-        },                {
-            "fqsen": "\\Automattic\\WooCommerce\\Internal\\DependencyManagement\\ServiceProviders\\ProxiesServiceProvider\u003A\u003Aregister\u0028\u0029",
-            "name": "register",
-            "summary": "Register\u0020the\u0020classes.",
-            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Internal-DependencyManagement-ServiceProviders-ProxiesServiceProvider.html#method_register"
-        },                {
-            "fqsen": "\\Automattic\\WooCommerce\\Internal\\DependencyManagement\\ServiceProviders\\ProxiesServiceProvider\u003A\u003A\u0024provides",
-            "name": "provides",
-            "summary": "The\u0020classes\/interfaces\u0020that\u0020are\u0020serviced\u0020by\u0020this\u0020service\u0020provider.",
-            "url": "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Internal-DependencyManagement-ServiceProviders-ProxiesServiceProvider.html#property_provides"
         },                {
             "fqsen": "\\Automattic\\WooCommerce\\Internal\\WCCom\\ConnectionHelper",
             "name": "ConnectionHelper",
@@ -43971,25 +43826,15 @@ Search.appendIndex(
             "summary": "",
             "url": "https://woocommerce.github.io/code-reference/namespaces/automattic-woocommerce-checkout.html"
         },                {
-            "fqsen": "\\Automattic\\WooCommerce\\Internal\\DependencyManagement",
-            "name": "DependencyManagement",
+            "fqsen": "\\Automattic\\WooCommerce\\Internal\\WCCom",
+            "name": "WCCom",
             "summary": "",
-            "url": "https://woocommerce.github.io/code-reference/namespaces/automattic-woocommerce-internal-dependencymanagement.html"
+            "url": "https://woocommerce.github.io/code-reference/namespaces/automattic-woocommerce-internal-wccom.html"
         },                {
             "fqsen": "\\Automattic\\WooCommerce\\Internal",
             "name": "Internal",
             "summary": "",
             "url": "https://woocommerce.github.io/code-reference/namespaces/automattic-woocommerce-internal.html"
-        },                {
-            "fqsen": "\\Automattic\\WooCommerce\\Internal\\DependencyManagement\\ServiceProviders",
-            "name": "ServiceProviders",
-            "summary": "",
-            "url": "https://woocommerce.github.io/code-reference/namespaces/automattic-woocommerce-internal-dependencymanagement-serviceproviders.html"
-        },                {
-            "fqsen": "\\Automattic\\WooCommerce\\Internal\\WCCom",
-            "name": "WCCom",
-            "summary": "",
-            "url": "https://woocommerce.github.io/code-reference/namespaces/automattic-woocommerce-internal-wccom.html"
         },                {
             "fqsen": "\\Automattic\\WooCommerce\\Proxies",
             "name": "Proxies",
