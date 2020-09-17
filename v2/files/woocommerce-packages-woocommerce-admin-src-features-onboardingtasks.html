@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>WooCommerce Code Reference</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/favicon.png" />
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/template.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
+            <script src="https://cdn.jsdelivr.net/npm/fuse.js@3.4.6"></script>
+    <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
+    <script src="../js/search.js"></script>
+    <script defer src="../js/searchIndex.js"></script>
+        <script src="../js/prism.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            window.dispatchEvent(new HashChangeEvent('hashchange'));
+        });
+    </script>
+</head>
+<body id="top">
+    <header class="phpdocumentor-top-header">
+    <section class="phpdocumentor-section">
+        <div class="site-branding">
+            <a class="site-logo" href="../index.html"><img width="180" src="../images/logo.svg" alt="WooCommerce" /></a>
+        </div>
+        <nav class="main-navigation">
+            <ul>
+                <li><a href="../hooks/hooks.html">Hooks Reference</a></li>
+                <li><a href="https://docs.woocommerce.com/">Documentation</a></li>
+                <li><a href="https://woocommerce.github.io/woocommerce-rest-api-docs/">REST API Docs</a></li>
+            </ul>
+        </nav>
+    </section>
+</header>
+
+<header class="phpdocumentor-header">
+    <section class="phpdocumentor-section">
+        <h1 class="phpdocumentor-title">WooCommerce Code Reference</h1>
+
+        <div data-search-form class="phpdocumentor-search">
+            <label class="phpdocumentor-label">
+                <span class="visually-hidden">Search</span>
+                <input type="search" class="phpdocumentor-field phpdocumentor-search__field" placeholder="Loading..." disabled />
+            </label>
+        </div>
+        <section data-search-form class="phpdocumentor-search">
+    <h2 class="phpdocumentor-sidebar__category-header">Search</h2>
+    <label class="phpdocumentor-label">
+        <span class="visually-hidden">Search for</span>
+        <input type="search" class="phpdocumentor-field phpdocumentor-search__field" placeholder="Loading .." disabled />
+    </label>
+</section>
+
+    </section>
+</header>
+
+    <main class="phpdocumentor">
+        <div class="phpdocumentor-section">
+            <aside class="phpdocumentor-column -four phpdocumentor-sidebar">
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
+                                <h3 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/default.html"><abbr title="\">Global</abbr></a></h3>
+                                        <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/automattic-woocommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                                    </ul>
+                        </section>
+
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/WooCommerce-Classes.html"><abbr title="\WooCommerce\Classes">Classes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Abstracts.html"><abbr title="\WooCommerce\Abstracts">Abstracts</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Views.html"><abbr title="\WooCommerce\Views">Views</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Helper.html"><abbr title="\WooCommerce\Helper">Helper</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Templates.html"><abbr title="\WooCommerce\Templates">Templates</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Reports.html"><abbr title="\WooCommerce\Reports">Reports</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-API.html"><abbr title="\WooCommerce\API">API</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-CLI.html"><abbr title="\WooCommerce\CLI">CLI</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-l10n.html"><abbr title="\WooCommerce\l10n">l10n</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Webhooks.html"><abbr title="\WooCommerce\Webhooks">Webhooks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-DataStores.html"><abbr title="\WooCommerce\DataStores">DataStores</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Emails.html"><abbr title="\WooCommerce\Emails">Emails</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Export.html"><abbr title="\WooCommerce\Export">Export</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Gateways.html"><abbr title="\WooCommerce\Gateways">Gateways</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PayPal.html"><abbr title="\WooCommerce\PayPal">PayPal</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Import.html"><abbr title="\WooCommerce\Import">Import</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Integrations.html"><abbr title="\WooCommerce\Integrations">Integrations</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interfaces.html"><abbr title="\WooCommerce\Interfaces">Interfaces</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interface.html"><abbr title="\WooCommerce\Interface">Interface</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-LogHandlers.html"><abbr title="\WooCommerce\LogHandlers">LogHandlers</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PaymentTokens.html"><abbr title="\WooCommerce\PaymentTokens">PaymentTokens</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shipping.html"><abbr title="\WooCommerce\Shipping">Shipping</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shortcodes.html"><abbr title="\WooCommerce\Shortcodes">Shortcodes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Tracks.html"><abbr title="\WooCommerce\Tracks">Tracks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Traits.html"><abbr title="\WooCommerce\Traits">Traits</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Functions.html"><abbr title="\WooCommerce\Functions">Functions</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCom.html"><abbr title="\WooCommerce\WCCom">WCCom</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Widgets.html"><abbr title="\WooCommerce\Widgets">Widgets</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Uninstaller.html"><abbr title="\WooCommerce\Uninstaller">Uninstaller</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/Default.html"><abbr title="\Default">Default</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/AutomatticWooCommerceRestApi.html"><abbr title="\AutomatticWooCommerceRestApi">AutomatticWooCommerceRestApi</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/AutomatticWooCommerceUtilities.html"><abbr title="\AutomatticWooCommerceUtilities">AutomatticWooCommerceUtilities</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceTemplates.html"><abbr title="\WooCommerceTemplates">WooCommerceTemplates</abbr></a></h3>
+                        </section>
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
+                <h3 class="phpdocumentor-sidebar__root-package"><a href="../graphs/classes.html">Class Diagram</a></h3>
+                <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/deprecated.html">Deprecated</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/errors.html">Errors</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/markers.html">Markers</a></h3>
+    </section>
+
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Indices</h2>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../indices/files.html">Files</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../hooks/hooks.html">Hooks Reference</a></h3>
+    </section>
+</aside>
+
+            <div class="phpdocumentor-column -eight phpdocumentor-content">
+                    <ul class="phpdocumentor-breadcrumbs">
+    </ul>
+
+    <article class="phpdocumentor-element -file">
+        <h2 class="phpdocumentor-content__title">OnboardingTasks.php</h2>
+
+        
+
+<h3 id="interfaces_class_traits">
+    Interfaces, Classes and Traits
+    <a href="#interfaces_class_traits" class="headerlink"><i class="fas fa-link"></i></a>
+</h3>
+
+<dl class="phpdocumentor-table-of-contents">
+    
+            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="../classes/Automattic-WooCommerce-Admin-Features-OnboardingTasks.html"><abbr title="\Automattic\WooCommerce\Admin\Features\OnboardingTasks">OnboardingTasks</abbr></a></dt>
+        <dd>Contains the logic for completing onboarding tasks.</dd>
+    
+    </dl>
+
+
+
+        
+
+        
+                    <h3 class="phpdocumentor-elements__header" id="source-code">
+                Source code
+                <a href="#source-code" class="headerlink"><i class="fas fa-link"></i></a>
+            </h3>
+            <pre id="source-view" tabindex="-1" class="language-php line-numbers linkable-line-numbers"><code>&lt;?php
+/**
+ * WooCommerce Onboarding Tasks
+ * NOTE: DO NOT edit this file in WooCommerce core, this is generated from woocommerce-admin.
+ */
+
+namespace Automattic\WooCommerce\Admin\Features;
+
+use \Automattic\WooCommerce\Admin\Loader;
+use Automattic\WooCommerce\Admin\API\Reports\Taxes\Stats\DataStore;
+
+/**
+ * Contains the logic for completing onboarding tasks.
+ */
+class OnboardingTasks {
+	/**
+	 * Class instance.
+	 *
+	 * @var OnboardingTasks instance
+	 */
+	protected static $instance = null;
+
+	/**
+	 * Name of the active task transient.
+	 *
+	 * @var string
+	 */
+	const ACTIVE_TASK_TRANSIENT = &#039;wc_onboarding_active_task&#039;;
+
+	/**
+	 * Get class instance.
+	 */
+	public static function get_instance() {
+		if ( ! self::$instance ) {
+			self::$instance = new self();
+		}
+		return self::$instance;
+	}
+
+	/**
+	 * Constructor
+	 */
+	public function __construct() {
+		// This hook needs to run when options are updated via REST.
+		add_action( &#039;add_option_woocommerce_task_list_complete&#039;, array( $this, &#039;track_completion&#039; ), 10, 2 );
+		add_action( &#039;add_option_woocommerce_task_list_tracked_completed_tasks&#039;, array( $this, &#039;track_task_completion&#039; ), 10, 2 );
+		add_action( &#039;update_option_woocommerce_task_list_tracked_completed_tasks&#039;, array( $this, &#039;track_task_completion&#039; ), 10, 2 );
+
+		if ( ! is_admin() ) {
+			return;
+		}
+
+		add_action( &#039;admin_enqueue_scripts&#039;, array( $this, &#039;add_media_scripts&#039; ) );
+		// Old settings injection.
+		// Run after Onboarding.
+		add_filter( &#039;woocommerce_components_settings&#039;, array( $this, &#039;component_settings&#039; ), 30 );
+		// New settings injection.
+		add_filter( &#039;woocommerce_shared_settings&#039;, array( $this, &#039;component_settings&#039; ), 30 );
+
+		add_action( &#039;admin_init&#039;, array( $this, &#039;set_active_task&#039; ), 5 );
+		add_action( &#039;admin_enqueue_scripts&#039;, array( $this, &#039;add_onboarding_product_notice_admin_script&#039; ) );
+		add_action( &#039;admin_enqueue_scripts&#039;, array( $this, &#039;add_onboarding_homepage_notice_admin_script&#039; ) );
+		add_action( &#039;admin_enqueue_scripts&#039;, array( $this, &#039;add_onboarding_tax_notice_admin_script&#039; ) );
+		add_action( &#039;admin_enqueue_scripts&#039;, array( $this, &#039;add_onboarding_product_import_notice_admin_script&#039; ) );
+	}
+
+	/**
+	 * Enqueue scripts and styles.
+	 */
+	public function add_media_scripts() {
+		wp_enqueue_media();
+	}
+
+	/**
+	 * Add task items to component settings.
+	 *
+	 * @param array $settings Component settings.
+	 * @return array
+	 */
+	public function component_settings( $settings ) {
+		// Bail early if not on a wc-admin powered page, or task list shouldn&#039;t be shown.
+		if (
+			! \Automattic\WooCommerce\Admin\Loader::is_admin_page() ||
+			! \Automattic\WooCommerce\Admin\Features\Onboarding::should_show_tasks()
+		) {
+			return $settings;
+		}
+
+		$wc_pay_is_connected = false;
+		if ( class_exists( &#039;\WC_Payments&#039; ) ) {
+			$wc_payments_gateway = \WC_Payments::get_gateway();
+			$wc_pay_is_connected = method_exists( $wc_payments_gateway, &#039;is_connected&#039; )
+				? $wc_payments_gateway-&gt;is_connected()
+				: false;
+		}
+
+		// @todo We may want to consider caching some of these and use to check against
+		// task completion along with cache busting for active tasks.
+		$settings[&#039;onboarding&#039;][&#039;automatedTaxSupportedCountries&#039;] = self::get_automated_tax_supported_countries();
+		$settings[&#039;onboarding&#039;][&#039;hasHomepage&#039;]                    = self::check_task_completion( &#039;homepage&#039; ) || &#039;classic&#039; === get_option( &#039;classic-editor-replace&#039; );
+		$settings[&#039;onboarding&#039;][&#039;hasPhysicalProducts&#039;]            = count(
+			wc_get_products(
+				array(
+					&#039;virtual&#039; =&gt; false,
+					&#039;limit&#039;   =&gt; 1,
+				)
+			)
+		) &gt; 0;
+		$settings[&#039;onboarding&#039;][&#039;hasProducts&#039;]                    = self::check_task_completion( &#039;products&#039; );
+		$settings[&#039;onboarding&#039;][&#039;isAppearanceComplete&#039;]           = get_option( &#039;woocommerce_task_list_appearance_complete&#039; );
+		$settings[&#039;onboarding&#039;][&#039;isTaxComplete&#039;]                  = self::check_task_completion( &#039;tax&#039; );
+		$settings[&#039;onboarding&#039;][&#039;shippingZonesCount&#039;]             = count( \WC_Shipping_Zones::get_zones() );
+		$settings[&#039;onboarding&#039;][&#039;stylesheet&#039;]                     = get_option( &#039;stylesheet&#039; );
+		$settings[&#039;onboarding&#039;][&#039;taxJarActivated&#039;]                = class_exists( &#039;WC_Taxjar&#039; );
+		$settings[&#039;onboarding&#039;][&#039;themeMods&#039;]                      = get_theme_mods();
+		$settings[&#039;onboarding&#039;][&#039;wcPayIsConnected&#039;]               = $wc_pay_is_connected;
+
+		return $settings;
+	}
+
+	/**
+	 * Temporarily store the active task to persist across page loads when neccessary (such as publishing a product). Most tasks do not need to do this.
+	 */
+	public static function set_active_task() {
+		if ( isset( $_GET[ self::ACTIVE_TASK_TRANSIENT ] ) ) { // phpcs:ignore csrf ok.
+			$task = sanitize_title_with_dashes( wp_unslash( $_GET[ self::ACTIVE_TASK_TRANSIENT ] ) ); // phpcs:ignore csrf ok.
+
+			if ( self::check_task_completion( $task ) ) {
+				return;
+			}
+
+			set_transient(
+				self::ACTIVE_TASK_TRANSIENT,
+				$task,
+				DAY_IN_SECONDS
+			);
+		}
+	}
+
+	/**
+	 * Get the name of the active task.
+	 *
+	 * @return string
+	 */
+	public static function get_active_task() {
+		return get_transient( self::ACTIVE_TASK_TRANSIENT );
+	}
+
+	/**
+	 * Check for active task completion, and clears the transient.
+	 *
+	 * @return bool
+	 */
+	public static function is_active_task_complete() {
+		$active_task = self::get_active_task();
+
+		if ( ! $active_task ) {
+			return false;
+		}
+
+		if ( self::check_task_completion( $active_task ) ) {
+			delete_transient( self::ACTIVE_TASK_TRANSIENT );
+			return true;
+		}
+
+		return false;
+	}
+
+	/**
+	 * Check for task completion of a given task.
+	 *
+	 * @param string $task Name of task.
+	 * @return bool
+	 */
+	public static function check_task_completion( $task ) {
+		switch ( $task ) {
+			case &#039;products&#039;:
+				$products = wp_count_posts( &#039;product&#039; );
+				return (int) $products-&gt;publish &gt; 0;
+			case &#039;homepage&#039;:
+				$homepage_id = get_option( &#039;woocommerce_onboarding_homepage_post_id&#039;, false );
+				if ( ! $homepage_id ) {
+					return false;
+				}
+				$post      = get_post( $homepage_id );
+				$completed = $post &amp;&amp; &#039;publish&#039; === $post-&gt;post_status;
+				return $completed;
+			case &#039;tax&#039;:
+				return &#039;yes&#039; === get_option( &#039;wc_connect_taxes_enabled&#039; ) || count( DataStore::get_taxes( array() ) ) &gt; 0;
+		}
+		return false;
+	}
+
+	/**
+	 * Hooks into the product page to add a notice to return to the task list if a product was added.
+	 *
+	 * @param string $hook Page hook.
+	 */
+	public static function add_onboarding_product_notice_admin_script( $hook ) {
+		global $post;
+		if (
+			&#039;post.php&#039; !== $hook ||
+			&#039;product&#039; !== $post-&gt;post_type ||
+			&#039;products&#039; !== self::get_active_task() ||
+			! self::is_active_task_complete()
+		) {
+			return;
+		}
+
+		wp_enqueue_script( &#039;onboarding-product-notice&#039;, Loader::get_url( &#039;wp-admin-scripts/onboarding-product-notice&#039;, &#039;js&#039; ), array( &#039;wc-navigation&#039;, &#039;wp-i18n&#039;, &#039;wp-data&#039; ), WC_ADMIN_VERSION_NUMBER, true );
+	}
+
+	/**
+	 * Hooks into the post page to display a different success notice and sets the active page as the site&#039;s home page if visted from onboarding.
+	 *
+	 * @param string $hook Page hook.
+	 */
+	public static function add_onboarding_homepage_notice_admin_script( $hook ) {
+		global $post;
+		if ( &#039;post.php&#039; === $hook &amp;&amp; &#039;page&#039; === $post-&gt;post_type &amp;&amp; isset( $_GET[ self::ACTIVE_TASK_TRANSIENT ] ) &amp;&amp; &#039;homepage&#039; === $_GET[ self::ACTIVE_TASK_TRANSIENT ] ) { // phpcs:ignore csrf ok.
+			wp_enqueue_script( &#039;onboarding-homepage-notice&#039;, Loader::get_url( &#039;wp-admin-scripts/onboarding-homepage-notice&#039;, &#039;js&#039; ), array( &#039;wc-navigation&#039;, &#039;wp-i18n&#039;, &#039;wp-data&#039; ), WC_ADMIN_VERSION_NUMBER, true );
+		}
+	}
+
+	/**
+	 * Adds a notice to return to the task list when the save button is clicked on tax settings pages.
+	 */
+	public static function add_onboarding_tax_notice_admin_script() {
+		$page = isset( $_GET[&#039;page&#039;] ) ? $_GET[&#039;page&#039;] : &#039;&#039;; // phpcs:ignore csrf ok, sanitization ok.
+		$tab  = isset( $_GET[&#039;tab&#039;] ) ? $_GET[&#039;tab&#039;] : &#039;&#039;; // phpcs:ignore csrf ok, sanitization ok.
+
+		if (
+			&#039;wc-settings&#039; === $page &amp;&amp;
+			&#039;tax&#039; === $tab &amp;&amp;
+			&#039;tax&#039; === self::get_active_task() &amp;&amp;
+			! self::is_active_task_complete()
+		) {
+			wp_enqueue_script( &#039;onboarding-tax-notice&#039;, Loader::get_url( &#039;wp-admin-scripts/onboarding-tax-notice&#039;, &#039;js&#039; ), array( &#039;wc-navigation&#039;, &#039;wp-i18n&#039;, &#039;wp-data&#039; ), WC_ADMIN_VERSION_NUMBER, true );
+		}
+	}
+
+	/**
+	 * Adds a notice to return to the task list when the product importeris done running.
+	 *
+	 * @param string $hook Page hook.
+	 */
+	public function add_onboarding_product_import_notice_admin_script( $hook ) {
+		$step = isset( $_GET[&#039;step&#039;] ) ? $_GET[&#039;step&#039;] : &#039;&#039;; // phpcs:ignore csrf ok, sanitization ok.
+		if ( &#039;product_page_product_importer&#039; === $hook &amp;&amp; &#039;done&#039; === $step &amp;&amp; &#039;product-import&#039; === self::get_active_task() ) {
+			delete_transient( self::ACTIVE_TASK_TRANSIENT );
+			wp_enqueue_script( &#039;onboarding-product-import-notice&#039;, Loader::get_url( &#039;wp-admin-scripts/onboarding-product-import-notice&#039;, &#039;js&#039; ), array( &#039;wc-navigation&#039;, &#039;wp-i18n&#039;, &#039;wp-data&#039; ), WC_ADMIN_VERSION_NUMBER, true );
+		}
+	}
+
+	/**
+	 * Get an array of countries that support automated tax.
+	 *
+	 * @return array
+	 */
+	public static function get_automated_tax_supported_countries() {
+		// https://developers.taxjar.com/api/reference/#countries .
+		$tax_supported_countries = array_merge(
+			array( &#039;US&#039;, &#039;CA&#039;, &#039;AU&#039; ),
+			WC()-&gt;countries-&gt;get_european_union_countries()
+		);
+
+		return $tax_supported_countries;
+	}
+
+	/**
+	 * Records an event when all tasks are completed in the task list.
+	 *
+	 * @param mixed $old_value Old value.
+	 * @param mixed $new_value New value.
+	 */
+	public static function track_completion( $old_value, $new_value ) {
+		if ( $new_value ) {
+			wc_admin_record_tracks_event( &#039;tasklist_tasks_completed&#039; );
+		}
+	}
+
+	/**
+	 * Records an event for individual task completion.
+	 *
+	 * @param mixed $old_value Old value.
+	 * @param mixed $new_value New value.
+	 */
+	public static function track_task_completion( $old_value, $new_value ) {
+		$old_value       = is_array( $old_value ) ? $old_value : array();
+		$untracked_tasks = array_diff( $new_value, $old_value );
+
+		foreach ( $untracked_tasks as $task ) {
+			wc_admin_record_tracks_event( &#039;tasklist_task_completed&#039;, array( &#039;task_name&#039; =&gt; $task ) );
+		}
+	}
+}
+</code></pre>
+            </article>
+                <div data-search-results class="phpdocumentor-search-results phpdocumentor-search-results--hidden">
+
+    <h2>Search results</h2>
+    <ul class="phpdocumentor-search-results__entries">
+    </ul>
+</div>
+            </div>
+        </div>
+        <a href="#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+
+    </main>
+
+    <footer class="phpdocumentor phpdocumentor-footer">
+    <div class="phpdocumentor-section">
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on September 17th, 2020 at 04:51 pm.</span>
+    </div>
+</footer>
+
+    <script>
+        cssVars({});
+    </script>
+</body>
+</html>
