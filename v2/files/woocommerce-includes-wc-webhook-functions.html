@@ -13,12 +13,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/template.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
-            <script src="https://cdn.jsdelivr.net/npm/fuse.js@3.4.6"></script>
-    <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
+            <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
-    <script src="../js/search.js"></script>
-    <script defer src="../js/searchIndex.js"></script>
-        <script src="../js/prism.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@7.2.0/dist/js/autoComplete.js"></script>
+
+            <script src="../js/prism.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             window.dispatchEvent(new HashChangeEvent('hashchange'));
@@ -41,26 +40,18 @@
     </section>
 </header>
 
-<header class="phpdocumentor-header">
+<div class="phpdocumentor-header">
     <section class="phpdocumentor-section">
         <h1 class="phpdocumentor-title">WooCommerce Code Reference</h1>
-
-        <div data-search-form class="phpdocumentor-search">
-            <label class="phpdocumentor-label">
-                <span class="visually-hidden">Search</span>
-                <input type="search" class="phpdocumentor-field phpdocumentor-search__field" placeholder="Loading..." disabled />
-            </label>
-        </div>
-        <section data-search-form class="phpdocumentor-search">
-    <h2 class="phpdocumentor-sidebar__category-header">Search</h2>
+        <section class="phpdocumentor-search">
     <label class="phpdocumentor-label">
-        <span class="visually-hidden">Search for</span>
-        <input type="search" class="phpdocumentor-field phpdocumentor-search__field" placeholder="Loading .." disabled />
+        <span class="visually-hidden">Search (click ESC to close search results)</span>
+        <input id="autoComplete" tabindex="1" type="search" class="phpdocumentor-field phpdocumentor-search__field" placeholder="Loading..." disabled />
     </label>
 </section>
 
     </section>
-</header>
+</div>
 
     <main class="phpdocumentor">
         <div class="phpdocumentor-section">
@@ -110,7 +101,6 @@
                                     <li><a href="../packages/WooCommerce-Widgets.html"><abbr title="\WooCommerce\Widgets">Widgets</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-Uninstaller.html"><abbr title="\WooCommerce\Uninstaller">Uninstaller</abbr></a></li>
                             </ul>
-                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/Default.html"><abbr title="\Default">Default</abbr></a></h3>
                                 <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/AutomatticWooCommerceRestApi.html"><abbr title="\AutomatticWooCommerceRestApi">AutomatticWooCommerceRestApi</abbr></a></h3>
                                 <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/AutomatticWooCommerceUtilities.html"><abbr title="\AutomatticWooCommerceUtilities">AutomatticWooCommerceUtilities</abbr></a></h3>
                                 <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceTemplates.html"><abbr title="\WooCommerceTemplates">WooCommerceTemplates</abbr></a></h3>
@@ -138,82 +128,7 @@
     <article class="phpdocumentor-element -file">
         <h2 class="phpdocumentor-content__title">wc-webhook-functions.php</h2>
 
-        
-
-
-
-<h3 id="toc">
-    Table of Contents
-    <a href="#toc" class="headerlink"><i class="fas fa-link"></i></a>
-</h3>
-
-<dl class="phpdocumentor-table-of-contents">
-                        <dt class="phpdocumentor-table-of-contents__entry -function -">
-    <a href="../namespaces/default.html#function_wc_webhook_execute_queue">wc_webhook_execute_queue()</a>
-    <span>
-                        &nbsp;: mixed    </span>
-</dt>
-<dd>Process the web hooks at the end of the request.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -function -">
-    <a href="../namespaces/default.html#function_wc_webhook_process_delivery">wc_webhook_process_delivery()</a>
-    <span>
-                        &nbsp;: mixed    </span>
-</dt>
-<dd>Process webhook delivery.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -function -">
-    <a href="../namespaces/default.html#function_wc_deliver_webhook_async">wc_deliver_webhook_async()</a>
-    <span>
-                        &nbsp;: mixed    </span>
-</dt>
-<dd>Wrapper function to execute the `woocommerce_deliver_webhook_async` cron.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -function -">
-    <a href="../namespaces/default.html#function_wc_is_webhook_valid_topic">wc_is_webhook_valid_topic()</a>
-    <span>
-                        &nbsp;: bool    </span>
-</dt>
-<dd>Check if the given topic is a valid webhook topic, a topic is valid if:</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -function -">
-    <a href="../namespaces/default.html#function_wc_is_webhook_valid_status">wc_is_webhook_valid_status()</a>
-    <span>
-                        &nbsp;: bool    </span>
-</dt>
-<dd>Check if given status is a valid webhook status.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -function -">
-    <a href="../namespaces/default.html#function_wc_get_webhook_statuses">wc_get_webhook_statuses()</a>
-    <span>
-                        &nbsp;: array    </span>
-</dt>
-<dd>Get Webhook statuses.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -function -">
-    <a href="../namespaces/default.html#function_wc_load_webhooks">wc_load_webhooks()</a>
-    <span>
-                        &nbsp;: bool    </span>
-</dt>
-<dd>Load webhooks.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -function -">
-    <a href="../namespaces/default.html#function_wc_get_webhook">wc_get_webhook()</a>
-    <span>
-                        &nbsp;: <a href="../classes/WC-Webhook.html"><abbr title="\WC_Webhook">WC_Webhook</abbr></a>|null    </span>
-</dt>
-<dd>Get webhook.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -function -">
-    <a href="../namespaces/default.html#function_wc_get_webhook_rest_api_versions">wc_get_webhook_rest_api_versions()</a>
-    <span>
-                        &nbsp;: array    </span>
-</dt>
-<dd>Get webhoook REST API versions.</dd>
-
-    </dl>
-
-        
+                
 
             <section class="phpdocumentor-functions">
         <h3 class="phpdocumentor-elements__header" id="functions">
@@ -868,12 +783,6 @@ function wc_get_webhook_rest_api_versions() {
 }
 </code></pre>
             </article>
-                <div data-search-results class="phpdocumentor-search-results phpdocumentor-search-results--hidden">
-
-    <h2>Search results</h2>
-    <ul class="phpdocumentor-search-results__entries">
-    </ul>
-</div>
             </div>
         </div>
         <a href="#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
@@ -882,12 +791,19 @@ function wc_get_webhook_rest_api_versions() {
 
     <footer class="phpdocumentor phpdocumentor-footer">
     <div class="phpdocumentor-section">
-        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on September 17th, 2020 at 04:51 pm.</span>
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on September 23rd, 2020 at 07:06 pm.</span>
     </div>
 </footer>
 
     <script>
         cssVars({});
     </script>
+    <script>
+        var searchParams = {
+            'searchIndex': '..\/js\/searchIndex.json'
+        };
+    </script>
+    <script src="../js/searchIndex.js"></script>
+    <script src="../js/search.js"></script>
 </body>
 </html>

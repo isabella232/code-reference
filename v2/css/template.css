@@ -146,56 +146,6 @@
     font-style: italic;
     margin-left: 2rem;
 }
-.phpdocumentor-content {
-    position: relative;
-}
-
-.phpdocumentor-search-results {
-    backdrop-filter: blur(5px);
-    background: var(--popover-background-color);
-    min-height: 100%;
-    left: calc(var(--spacing-lg) * -1);
-    position: absolute;
-    right: calc(var(--spacing-lg) * -1);
-    top: 0;
-    padding: 0 var(--spacing-lg);
-    opacity: 1;
-    pointer-events: all;
-
-    transition: opacity .3s, background .3s;
-}
-
-.phpdocumentor-search-results--hidden {
-    background: transparent;
-    backdrop-filter: blur(0);
-    opacity: 0;
-    pointer-events: none;
-}
-
-.phpdocumentor-search-results__entries {
-    list-style: none;
-    padding: 0;
-}
-
-.phpdocumentor-search-results__entry {
-    border-bottom: 1px solid var(--table-separator-color);
-    padding: var(--spacing-sm) var(--spacing-md);
-    text-align: left;
-}
-
-.phpdocumentor-search-results__entry a {
-    display: block;
-}
-
-.phpdocumentor-search-results__entry small {
-    margin-top: var(--spacing-xs);
-    margin-bottom: var(--spacing-md);
-    color: var(--primary-color-darker);
-    display: block;
-}
-.phpdocumentor-search-results__entry h3 {
-    margin: 0;
-}
 .phpdocumentor-element-found-in {
     position: absolute;
     top: 0;
@@ -217,78 +167,348 @@
 .phpdocumentor-tag-link {
     margin-right: var(--spacing-sm);
 }
-:root {
-    /* Typography */
-    --font-primary: 'Source Sans Pro', Helvetica, Arial, sans-serif;
-    --font-secondary: "proxima-nova",sans-serif;
-    --line-height--primary: 1.6;
-    --letter-spacing--primary: .05rem;
-    --text-base-size: 1em;
-    --text-scale-ratio: 1.2;
-
-    --text-xxs: calc(var(--text-base-size) / var(--text-scale-ratio) / var(--text-scale-ratio) / var(--text-scale-ratio));
-    --text-xs: calc(var(--text-base-size) / var(--text-scale-ratio) / var(--text-scale-ratio));
-    --text-sm: calc(var(--text-base-size) / var(--text-scale-ratio));
-    --text-md: var(--text-base-size);
-    --text-lg: calc(var(--text-base-size) * var(--text-scale-ratio));
-    --text-xl: calc(var(--text-base-size) * var(--text-scale-ratio) * var(--text-scale-ratio));
-    --text-xxl: calc(var(--text-base-size) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio));
-    --text-xxxl: calc(var(--text-base-size) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio));
-    --text-xxxxl: calc(var(--text-base-size) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio));
-    --text-xxxxxl: calc(var(--text-base-size) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio));
-
-    /* Colors */
-    --primary-color: hsl(267, 38%, 52%);
-    --primary-color-darken: #7f54b3;
-    --primary-color-darker: #301650;
-    --primary-color-lighten: hsl(267, 57%, 80%);
-    --primary-color-lighter: hsl(267, 57%, 97%);
-
-    --text-color: #333;
-
-    --top-header-bg-color: #fff;
-    --top-header-text-color: var(--text-color);
-    --header-bg-color: var(--primary-color);
-    --code-background-color: #eaf2f9;
-    --code-border-color: #c1d9ef;
-    --button-border-color: var(--primary-color-darken);
-    --button-color: transparent;
-    --button-color-primary: var(--primary-color);
-    --button-text-color: #555;
-    --button-text-color-primary: white;
-    --popover-background-color: #f7f7f7;
-    --link-color-primary: var(--primary-color-darken);
-    --link-hover-color-primary: var(--primary-color-darker);
-    --form-field-border-color: #d1d1d1;
-    --form-field-color: #fff;
-    --admonition-success-color: var(--primary-color);
-    --admonition-border-color: silver;
-    --table-separator-color: var(--primary-color-lighten);
-    --title-text-color: white;
-    --title-text-shadow-color: var(--primary-color-darker);
-
-    /* Grid */
-    --container-width: 1400px;
-    --top-header-height: calc(var(--text-lg) + 2 * var(--spacing-sm));
-
-    /* Spacing */
-    --spacing-base-size: 1rem;
-    --spacing-scale-ratio: 1.5;
-
-    --spacing-xxxs: calc(var(--spacing-base-size) / var(--spacing-scale-ratio) / var(--spacing-scale-ratio) / var(--spacing-scale-ratio) / var(--spacing-scale-ratio));
-    --spacing-xxs: calc(var(--spacing-base-size) / var(--spacing-scale-ratio) / var(--spacing-scale-ratio) / var(--spacing-scale-ratio));
-    --spacing-xs: calc(var(--spacing-base-size) / var(--spacing-scale-ratio) / var(--spacing-scale-ratio));
-    --spacing-sm: calc(var(--spacing-base-size) / var(--spacing-scale-ratio));
-    --spacing-md: var(--spacing-base-size);
-    --spacing-lg: calc(var(--spacing-base-size) * var(--spacing-scale-ratio));
-    --spacing-xl: calc(var(--spacing-base-size) * var(--spacing-scale-ratio) * var(--spacing-scale-ratio));
-    --spacing-xxl: calc(var(--spacing-base-size) * var(--spacing-scale-ratio) * var(--spacing-scale-ratio) * var(--spacing-scale-ratio));
-    --spacing-xxxl: calc(var(--spacing-base-size) * var(--spacing-scale-ratio) * var(--spacing-scale-ratio) * var(--spacing-scale-ratio) * var(--spacing-scale-ratio));
-
-    --border-radius-base-size: 3px;
+/* Elements */
+abbr[title] {
+    border: none;
+    text-decoration: none;
 }
 
-/* Prism */
+/* Top Header */
+.phpdocumentor-header > * {
+    height: auto;
+}
+
+.phpdocumentor-top-header {
+    font-family: var(--font-secondary);
+    align-items: center;
+    background: var(--top-header-bg-color);
+    color: var(--top-header-text-color);
+    display: flex;
+    flex-direction: row;
+    font-size: var(--text-md);
+    min-height: var(--top-header-height);
+    padding: 0 var(--spacing-sm);
+    text-align: right;
+}
+
+.phpdocumentor-top-header a {
+    color: var(--primary-color-darker);
+    display: inline-block;
+    text-decoration: none;
+}
+.phpdocumentor-top-header a span {
+    border-bottom: 1px solid transparent;
+    transition: border-bottom-color .2s ease-in-out;
+}
+.phpdocumentor-top-header a:hover {
+    color: var(--text-color);
+}
+.phpdocumentor-top-header a:hover span {
+    border-bottom: 1px solid var(--text-color);
+}
+.phpdocumentor-top-header a:not(:first-of-type):before {
+    display: inline-block;
+    color: #ccc;
+    content: "/";
+    padding: 0 var(--spacing-xxs);
+}
+
+/* Logo */
+.site-branding {
+    margin: 1.5em 0 1em;
+    text-align: left;
+}
+
+.site-branding a::after {
+    content: 'DOCS';
+    font-family: var(--font-secondary);
+    color: #000;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 32.5px;
+    vertical-align: top;
+    letter-spacing: -2px;
+    margin-left: 8px;
+}
+
+/* Navigation */
+.main-navigation ul {
+    margin-bottom: 1em;
+    padding-left: 0;
+    text-align: left;
+}
+
+.main-navigation a {
+    color: #333;
+    font-weight: 400;
+    font-size: .9em;
+    text-decoration: none;
+}
+
+.main-navigation a:hover {
+    color: var(--primary-color);
+}
+
+/* Header */
+.phpdocumentor-header {
+    background: var(--header-bg-color);
+    margin-bottom: var(--spacing-xl);
+    position: relative;
+}
+
+.phpdocumentor-header p {
+    color: white;
+    font-size: var(--text-lg);
+}
+
+.phpdocumentor-title {
+    font-family: var(--font-secondary);
+    color: var(--title-text-color);
+    letter-spacing: -1px;
+    line-height: 1.2;
+    text-align: center;
+    padding: 0.67em 0;
+    margin-top: 0;
+}
+.phpdocumentor-title small {
+    text-shadow: none;
+    font-size: var(--text-xxs);
+    display: block;
+    margin: var(--spacing-sm) 0;
+}
+
+/* Search */
+.phpdocumentor-search-results__entries {
+    background: var(--popover-background-color);
+    left: 0;
+    list-style: none;
+    margin: 0 auto;
+    max-height: 30rem;
+    opacity: 1;
+    overflow-x: auto;
+    padding: 0 var(--spacing-lg);
+    pointer-events: all;
+    position: absolute;
+    right: 0;
+    transition: all 0.1s ease-in-out;
+    width: 75%;
+    z-index: 1000;
+}
+
+.phpdocumentor-search-results__entry {
+    border-bottom: 1px solid var(--table-separator-color);
+    padding: var(--spacing-sm) var(--spacing-md);
+    text-align: left;
+}
+
+.phpdocumentor-search-results__entry a {
+    color: var(--link-color-primary);
+    display: block;
+    margin-bottom: var(--spacing-xs);
+    text-decoration: none;
+}
+
+.phpdocumentor-search-results__entry a:hover {
+    color: var(--link-hover-color-primary);
+}
+
+.phpdocumentor-search-results__entry small {
+    color: var(--primary-color-darker);
+    display: block;
+}
+
+.phpdocumentor-search-results__entry .phpdocumentor-summary {
+    display: block;
+    margin-top: var(--spacing-md);
+}
+
+.phpdocumentor-search-results__entry h3 {
+    font-weight: normal;
+    line-break: anywhere;
+    margin: 0;
+}
+
+.phpdocumentor-search-results__entry:last-child {
+    border-bottom: none;
+}
+
+.phpdocumentor-search {
+    position: relative;
+    display: none; /** disable by default for non-js flow */
+    opacity: .3; /** white-out default for loading indication */
+    transition: opacity .3s, background .3s;
+    text-align: center;
+}
+.phpdocumentor-search:before {
+    content: '';
+    background: transparent;
+    left: calc(-1 * var(--spacing-md));
+    height: 100%;
+    position: absolute;
+    right: -15px;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity .3s, background .3s;
+}
+
+.phpdocumentor-search .phpdocumentor-label {
+    display: block;
+    margin-bottom: var(--spacing-md);
+}
+
+.phpdocumentor-search--enabled {
+    display: block;
+}
+
+.phpdocumentor-search--active {
+    opacity: 1;
+}
+.phpdocumentor-search--has-results:before {
+    background: var(--popover-background-color);
+    opacity: 1;
+}
+
+.phpdocumentor-search input:disabled {
+    background-color: #d3d3d3;
+}
+
+.phpdocumentor-search__field {
+    background-color: #fff;
+    border: 0;
+    border-radius: 50px;
+    color: #333;
+    font-size: 18px;
+    line-height: 50px;
+    padding-left: 45px;
+    width: 80%;
+    height: 50px;
+    margin-bottom: 0;
+}
+
+.phpdocumentor-search__field:focus {
+    border: none;
+}
+
+.autoComplete_highlighted {
+    opacity: 1;
+    color: var(--primary-color-darker);
+    font-weight: bold;
+}
+
+.autoComplete_highlighted::selection {
+    color: rgba(#ffffff, 0);
+    background-color: rgba(#ffffff, 0);
+}
+
+/* Footer */
+.phpdocumentor-footer {
+    clear: both;
+    background-color: #f7f7f7;
+    font-size: var(--text-xs);
+    font-weight: 700;
+    margin-top: var(--spacing-lg);
+    padding: var(--spacing-lg);
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* Content */
+.phpdocumentor-content {
+    position: relative;
+}
+
+main.phpdocumentor::after {
+    display: block;
+    content: '';
+    clear: both;
+}
+
+.phpdocumentor-element-found-in {
+    position: relative;
+    margin-bottom: var(--spacing-md);
+}
+
+.phpdocumentor-table-of-contents .phpdocumentor-table-of-contents__entry > a {
+    text-decoration: none;
+}
+
+.phpdocumentor-table-of-contents .phpdocumentor-table-of-contents__entry.-action:before {
+    content: 'A'
+}
+
+.phpdocumentor-table-of-contents .phpdocumentor-table-of-contents__entry.-filter:before {
+    content: 'F'
+}
+
+.phpdocumentor-table-of-contents .phpdocumentor-table-of-contents__entry.-action:after,
+.phpdocumentor-table-of-contents .phpdocumentor-table-of-contents__entry.-filter:after {
+    left: 13px;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" xml:space="preserve" height="10" width="10" version="1.0" viewBox="0 0 5.5555557 5.5555555"><g id="layer1"><g id="g36"><circle style="fill:%23ffffff;stroke-width:0.111111" id="path20" cx="2.7807782" cy="2.7770009" r="2.7728896" /><g transform="matrix(1.0755,0,0,1.0755,-3.5103,-1.6684)" id="g4"><path fill="%23464342" d="m 5.8465,1.9131 c 0.57932,0 1.1068,0.222 1.5022,0.58547 -0.1938,-0.0052 -0.3872,0.11 -0.3952,0.3738 -0.0163,0.5333 0.6377,0.6469 0.2853,1.7196 L 6.9473,5.47927 6.1534,3.14067 c -0.0123,-0.0362 0.002,-0.0568 0.0465,-0.0568 h 0.22445 c 0.011665,0 0.021201,-0.00996 0.021201,-0.022158 v -0.13294 c 0,-0.012193 -0.00956,-0.022657 -0.021201,-0.022153 -0.42505,0.018587 -0.8476,0.018713 -1.2676,0 -0.0117,-5e-4 -0.0212,0.01 -0.0212,0.0222 v 0.13294 c 0,0.012185 0.00954,0.022158 0.021201,0.022158 h 0.22568 c 0.050201,0 0.064256,0.016728 0.076091,0.049087 l 0.3262,0.8921 -0.4907,1.4817 -0.8066,-2.3758 c -0.01,-0.0298 0.0021,-0.0471 0.0308,-0.0471 h 0.25715 c 0.011661,0 0.021197,-0.00996 0.021197,-0.022158 v -0.13294 c 0,-0.012193 -0.00957,-0.022764 -0.021197,-0.022153 -0.2698,0.014331 -0.54063,0.017213 -0.79291,0.019803 0.39589,-0.60984 1.0828,-1.0134 1.8639,-1.0134 l -2.9e-6,-6.2e-6 z m 1.9532,1.1633 c 0.17065,0.31441 0.26755,0.67464 0.26755,1.0574 0,0.84005 -0.46675,1.5712 -1.1549,1.9486 l 0.6926,-1.9617 c 0.1073,-0.3036 0.2069,-0.7139 0.1947,-1.0443 h -4e-6 z M 6.59,6.2268 C 6.3575,6.3095 6.1073,6.3546 5.8465,6.3546 5.6218,6.3546 5.405,6.3211 5.2006,6.2591 L 5.88475,4.2985 6.58999,6.2269 v -10e-8 z M 4.8962,6.1414 C 4.14519,5.78523 3.6257,5.0201 3.6257,4.1339 c 0,-0.32852 0.071465,-0.64038 0.19955,-0.92096 l 1.071,2.9285 3e-6,-3e-6 z M 5.84643,1.7047 c 1.3413,0 2.4291,1.0878 2.4291,2.4291 0,1.3413 -1.0878,2.4291 -2.4291,2.4291 -1.3413,0 -2.4291,-1.0878 -2.4291,-2.4291 0,-1.3413 1.0878,-2.4291 2.4291,-2.4291 z m 0,-0.15354 c 1.4261,0 2.5827,1.1566 2.5827,2.5827 0,1.4261 -1.1566,2.5827 -2.5827,2.5827 -1.4261,0 -2.5827,-1.1566 -2.5827,-2.5827 0,-1.4261 1.1566,-2.5827 2.5827,-2.5827 z" id="path2" /></g></g></g></svg>') no-repeat;
+}
+
+/* Code */
+.phpdocumentor-argument-list .phpdocumentor-signature__argument__name {
+    font-weight: bold;
+}
+
+/* Media queries */
+@media (min-width: 400px) {
+    .phpdocumentor-top-header .phpdocumentor-section {
+        display: flex;
+    }
+
+    .site-branding {
+        flex: 35%;
+    }
+
+    .site-branding a::after {
+        font-size: 26px;
+    }
+
+    .main-navigation {
+        flex: 65%;
+    }
+
+    .main-navigation ul {
+        display: inline-flex;
+        list-style: none;
+        margin: 0;
+    }
+
+    .main-navigation ul > li:hover {
+        background: #e6e6e6;
+        transition: all ease-in-out .2s;
+    }
+
+    .main-navigation a {
+        padding: 2.5em .8em;
+        font-size: .8em;
+    }
+
+    .main-navigation a:hover {
+        color: #333;
+    }
+
+    th.phpdocumentor-heading,
+    td.phpdocumentor-cell {
+        border-bottom: 1px solid var(--table-separator-color);
+        padding: var(--spacing-sm) var(--spacing-md);
+        text-align: left;
+        display: table-cell;
+    }
+
+    th.phpdocumentor-heading {
+        min-width: 30%;
+    }
+
+    td.phpdocumentor-cell {
+        border-bottom: 1px solid var(--table-separator-color);
+    }
+
+    .phpdocumentor-title {
+        font-size: var(--text-xxxxl);
+    }
+}
 /* PrismJS 1.21.0
 https://prismjs.com/download.html#themes=prism-coy&languages=markup+css+clike+javascript+javadoclike+markup-templating+php+phpdoc+php-extras&plugins=line-highlight+line-numbers */
 /**
@@ -611,326 +831,3 @@ pre[class*="language-"].line-numbers > code {
 			text-align: right;
 		}
 
-
-/* Elements */
-abbr[title] {
-    border: none;
-    text-decoration: none;
-}
-
-/* Top Header */
-.phpdocumentor-header > * {
-    height: auto;
-}
-
-.phpdocumentor-top-header {
-    font-family: var(--font-secondary);
-    align-items: center;
-    background: var(--top-header-bg-color);
-    color: var(--top-header-text-color);
-    display: flex;
-    flex-direction: row;
-    font-size: var(--text-md);
-    min-height: var(--top-header-height);
-    padding: 0 var(--spacing-sm);
-    text-align: right;
-}
-
-.phpdocumentor-top-header a {
-    color: var(--primary-color-darker);
-    display: inline-block;
-    text-decoration: none;
-}
-.phpdocumentor-top-header a span {
-    border-bottom: 1px solid transparent;
-    transition: border-bottom-color .2s ease-in-out;
-}
-.phpdocumentor-top-header a:hover {
-    color: var(--text-color);
-}
-.phpdocumentor-top-header a:hover span {
-    border-bottom: 1px solid var(--text-color);
-}
-.phpdocumentor-top-header a:not(:first-of-type):before {
-    display: inline-block;
-    color: #ccc;
-    content: "/";
-    padding: 0 var(--spacing-xxs);
-}
-
-/* Logo */
-.site-branding {
-    margin: 1.5em 0 1em;
-    text-align: left;
-}
-
-.site-branding a::after {
-    content: 'DOCS';
-    font-family: var(--font-secondary);
-    color: #000;
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 32.5px;
-    vertical-align: top;
-    letter-spacing: -2px;
-    margin-left: 8px;
-}
-
-/* Navigation */
-.main-navigation ul {
-    margin-bottom: 1em;
-    padding-left: 0;
-    text-align: left;
-}
-
-.main-navigation a {
-    color: #333;
-    font-weight: 400;
-    font-size: .9em;
-    text-decoration: none;
-}
-
-.main-navigation a:hover {
-    color: var(--primary-color);
-}
-
-/* Header */
-.phpdocumentor-header {
-    background: var(--header-bg-color);
-    margin-bottom: var(--spacing-xl);
-    position: relative;
-}
-
-.phpdocumentor-header p {
-    color: white;
-    font-size: var(--text-lg);
-}
-
-.phpdocumentor-title {
-    font-family: var(--font-secondary);
-    color: var(--title-text-color);
-    letter-spacing: -1px;
-    line-height: 1.2;
-    text-align: center;
-    padding: 0.67em 0;
-    margin-top: 0;
-}
-.phpdocumentor-title small {
-    text-shadow: none;
-    font-size: var(--text-xxs);
-    display: block;
-    margin: var(--spacing-sm) 0;
-}
-
-/* Search */
-.phpdocumentor-search-results {
-    backdrop-filter: blur(5px);
-    background: var(--popover-background-color);
-    min-height: 100%;
-    left: calc(var(--spacing-lg) * -1);
-    position: absolute;
-    padding: 0 var(--spacing-lg);
-    opacity: 1;
-    pointer-events: all;
-    transition: opacity .3s, background .3s;
-    z-index: 1000;
-}
-
-.phpdocumentor-search-results--hidden {
-    background: transparent;
-    backdrop-filter: blur(0);
-    opacity: 0;
-    pointer-events: none;
-}
-
-.phpdocumentor-search-results__entries {
-    list-style: none;
-    padding: 0;
-}
-
-.phpdocumentor-search-results__entry {
-    border-bottom: 1px solid var(--table-separator-color);
-    padding: var(--spacing-sm) var(--spacing-md);
-    text-align: left;
-}
-
-.phpdocumentor-search-results__entry a {
-    color: var(--link-color-primary);
-    display: block;
-}
-
-.phpdocumentor-search-results__entry a:hover {
-    color: var(--link-hover-color-primary);
-}
-
-.phpdocumentor-search-results__entry small {
-    margin-top: var(--spacing-xs);
-    margin-bottom: var(--spacing-md);
-    color: var(--primary-color-darker);
-    display: block;
-}
-.phpdocumentor-search-results__entry h3 {
-    line-break: anywhere;
-    margin: 0;
-}
-
-.phpdocumentor-search {
-    position: relative;
-    display: none; /** disable by default for non-js flow */
-    opacity: .3; /** white-out default for loading indication */
-    transition: opacity .3s, background .3s;
-    text-align: center;
-}
-.phpdocumentor-search:before {
-    content: '';
-    background: transparent;
-    left: calc(-1 * var(--spacing-md));
-    height: 100%;
-    position: absolute;
-    right: -15px;
-    z-index: -1;
-    opacity: 0;
-    transition: opacity .3s, background .3s;
-}
-
-.phpdocumentor-search--enabled {
-    display: block;
-}
-
-.phpdocumentor-search--active {
-    opacity: 1;
-}
-.phpdocumentor-search--has-results:before {
-    background: var(--popover-background-color);
-    opacity: 1;
-}
-
-.phpdocumentor-search input:disabled {
-    background-color: lightgray;
-}
-
-.phpdocumentor-search__field {
-    background-color: #fff;
-    border: 0;
-    border-radius: 50px;
-    color: #333;
-    font-size: 18px;
-    line-height: 50px;
-    padding-left: 45px;
-    width: 80%;
-    height: 50px;
-}
-
-.phpdocumentor-search__field:focus {
-    border: none;
-}
-
-/* Footer */
-.phpdocumentor-footer {
-    clear: both;
-    background-color: #f7f7f7;
-    font-size: var(--text-xs);
-    font-weight: 700;
-    margin-top: var(--spacing-lg);
-    padding: var(--spacing-lg);
-    text-align: center;
-    text-transform: uppercase;
-}
-
-/* Content */
-.phpdocumentor-content {
-    position: relative;
-}
-
-main.phpdocumentor::after {
-    display: block;
-    content: '';
-    clear: both;
-}
-
-.phpdocumentor-element-found-in {
-    position: relative;
-    margin-bottom: var(--spacing-md);
-}
-
-.phpdocumentor-table-of-contents .phpdocumentor-table-of-contents__entry > a {
-    text-decoration: none;
-}
-
-.phpdocumentor-table-of-contents .phpdocumentor-table-of-contents__entry.-action:before {
-    content: 'A'
-}
-
-.phpdocumentor-table-of-contents .phpdocumentor-table-of-contents__entry.-filter:before {
-    content: 'F'
-}
-
-.phpdocumentor-table-of-contents .phpdocumentor-table-of-contents__entry.-action:after,
-.phpdocumentor-table-of-contents .phpdocumentor-table-of-contents__entry.-filter:after {
-    left: 13px;
-    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" xml:space="preserve" height="10" width="10" version="1.0" viewBox="0 0 5.5555557 5.5555555"><g id="layer1"><g id="g36"><circle style="fill:%23ffffff;stroke-width:0.111111" id="path20" cx="2.7807782" cy="2.7770009" r="2.7728896" /><g transform="matrix(1.0755,0,0,1.0755,-3.5103,-1.6684)" id="g4"><path fill="%23464342" d="m 5.8465,1.9131 c 0.57932,0 1.1068,0.222 1.5022,0.58547 -0.1938,-0.0052 -0.3872,0.11 -0.3952,0.3738 -0.0163,0.5333 0.6377,0.6469 0.2853,1.7196 L 6.9473,5.47927 6.1534,3.14067 c -0.0123,-0.0362 0.002,-0.0568 0.0465,-0.0568 h 0.22445 c 0.011665,0 0.021201,-0.00996 0.021201,-0.022158 v -0.13294 c 0,-0.012193 -0.00956,-0.022657 -0.021201,-0.022153 -0.42505,0.018587 -0.8476,0.018713 -1.2676,0 -0.0117,-5e-4 -0.0212,0.01 -0.0212,0.0222 v 0.13294 c 0,0.012185 0.00954,0.022158 0.021201,0.022158 h 0.22568 c 0.050201,0 0.064256,0.016728 0.076091,0.049087 l 0.3262,0.8921 -0.4907,1.4817 -0.8066,-2.3758 c -0.01,-0.0298 0.0021,-0.0471 0.0308,-0.0471 h 0.25715 c 0.011661,0 0.021197,-0.00996 0.021197,-0.022158 v -0.13294 c 0,-0.012193 -0.00957,-0.022764 -0.021197,-0.022153 -0.2698,0.014331 -0.54063,0.017213 -0.79291,0.019803 0.39589,-0.60984 1.0828,-1.0134 1.8639,-1.0134 l -2.9e-6,-6.2e-6 z m 1.9532,1.1633 c 0.17065,0.31441 0.26755,0.67464 0.26755,1.0574 0,0.84005 -0.46675,1.5712 -1.1549,1.9486 l 0.6926,-1.9617 c 0.1073,-0.3036 0.2069,-0.7139 0.1947,-1.0443 h -4e-6 z M 6.59,6.2268 C 6.3575,6.3095 6.1073,6.3546 5.8465,6.3546 5.6218,6.3546 5.405,6.3211 5.2006,6.2591 L 5.88475,4.2985 6.58999,6.2269 v -10e-8 z M 4.8962,6.1414 C 4.14519,5.78523 3.6257,5.0201 3.6257,4.1339 c 0,-0.32852 0.071465,-0.64038 0.19955,-0.92096 l 1.071,2.9285 3e-6,-3e-6 z M 5.84643,1.7047 c 1.3413,0 2.4291,1.0878 2.4291,2.4291 0,1.3413 -1.0878,2.4291 -2.4291,2.4291 -1.3413,0 -2.4291,-1.0878 -2.4291,-2.4291 0,-1.3413 1.0878,-2.4291 2.4291,-2.4291 z m 0,-0.15354 c 1.4261,0 2.5827,1.1566 2.5827,2.5827 0,1.4261 -1.1566,2.5827 -2.5827,2.5827 -1.4261,0 -2.5827,-1.1566 -2.5827,-2.5827 0,-1.4261 1.1566,-2.5827 2.5827,-2.5827 z" id="path2" /></g></g></g></svg>') no-repeat;
-}
-
-/* Code */
-.phpdocumentor-argument-list .phpdocumentor-signature__argument__name {
-    font-weight: bold;
-}
-
-/* Media queries */
-@media (min-width: 400px) {
-    .phpdocumentor-top-header .phpdocumentor-section {
-        display: flex;
-    }
-
-    .site-branding {
-        flex: 35%;
-    }
-
-    .site-branding a::after {
-        font-size: 26px;
-    }
-
-    .main-navigation {
-        flex: 65%;
-    }
-
-    .main-navigation ul {
-        display: inline-flex;
-        list-style: none;
-        margin: 0;
-    }
-
-    .main-navigation ul > li:hover {
-        background: #e6e6e6;
-        transition: all ease-in-out .2s;
-    }
-
-    .main-navigation a {
-        padding: 2.5em .8em;
-        font-size: .8em;
-    }
-
-    .main-navigation a:hover {
-        color: #333;
-    }
-
-    th.phpdocumentor-heading,
-    td.phpdocumentor-cell {
-        border-bottom: 1px solid var(--table-separator-color);
-        padding: var(--spacing-sm) var(--spacing-md);
-        text-align: left;
-        display: table-cell;
-    }
-
-    th.phpdocumentor-heading {
-        min-width: 30%;
-    }
-
-    td.phpdocumentor-cell {
-        border-bottom: 1px solid var(--table-separator-color);
-    }
-
-    .phpdocumentor-title {
-        font-size: var(--text-xxxxl);
-    }
-}

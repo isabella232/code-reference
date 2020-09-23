@@ -13,12 +13,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/template.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
-            <script src="https://cdn.jsdelivr.net/npm/fuse.js@3.4.6"></script>
-    <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
+            <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
-    <script src="../js/search.js"></script>
-    <script defer src="../js/searchIndex.js"></script>
-        <script src="../js/prism.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@7.2.0/dist/js/autoComplete.js"></script>
+
+            <script src="../js/prism.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             window.dispatchEvent(new HashChangeEvent('hashchange'));
@@ -41,26 +40,18 @@
     </section>
 </header>
 
-<header class="phpdocumentor-header">
+<div class="phpdocumentor-header">
     <section class="phpdocumentor-section">
         <h1 class="phpdocumentor-title">WooCommerce Code Reference</h1>
-
-        <div data-search-form class="phpdocumentor-search">
-            <label class="phpdocumentor-label">
-                <span class="visually-hidden">Search</span>
-                <input type="search" class="phpdocumentor-field phpdocumentor-search__field" placeholder="Loading..." disabled />
-            </label>
-        </div>
-        <section data-search-form class="phpdocumentor-search">
-    <h2 class="phpdocumentor-sidebar__category-header">Search</h2>
+        <section class="phpdocumentor-search">
     <label class="phpdocumentor-label">
-        <span class="visually-hidden">Search for</span>
-        <input type="search" class="phpdocumentor-field phpdocumentor-search__field" placeholder="Loading .." disabled />
+        <span class="visually-hidden">Search (click ESC to close search results)</span>
+        <input id="autoComplete" tabindex="1" type="search" class="phpdocumentor-field phpdocumentor-search__field" placeholder="Loading..." disabled />
     </label>
 </section>
 
     </section>
-</header>
+</div>
 
     <main class="phpdocumentor">
         <div class="phpdocumentor-section">
@@ -110,7 +101,6 @@
                                     <li><a href="../packages/WooCommerce-Widgets.html"><abbr title="\WooCommerce\Widgets">Widgets</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-Uninstaller.html"><abbr title="\WooCommerce\Uninstaller">Uninstaller</abbr></a></li>
                             </ul>
-                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/Default.html"><abbr title="\Default">Default</abbr></a></h3>
                                 <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/AutomatticWooCommerceRestApi.html"><abbr title="\AutomatticWooCommerceRestApi">AutomatticWooCommerceRestApi</abbr></a></h3>
                                 <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/AutomatticWooCommerceUtilities.html"><abbr title="\AutomatticWooCommerceUtilities">AutomatticWooCommerceUtilities</abbr></a></h3>
                                 <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceTemplates.html"><abbr title="\WooCommerceTemplates">WooCommerceTemplates</abbr></a></h3>
@@ -138,390 +128,7 @@
     <article class="phpdocumentor-element -file">
         <h2 class="phpdocumentor-content__title">wc-product-functions.php</h2>
 
-        
-
-
-
-<h3 id="toc">
-    Table of Contents
-    <a href="#toc" class="headerlink"><i class="fas fa-link"></i></a>
-</h3>
-
-<dl class="phpdocumentor-table-of-contents">
-                        <dt class="phpdocumentor-table-of-contents__entry -function -">
-    <a href="../namespaces/default.html#function_wc_get_products">wc_get_products()</a>
-    <span>
-                        &nbsp;: array|<abbr title="\stdClass">stdClass</abbr>    </span>
-</dt>
-<dd>Standard way of retrieving products based on certain parameters.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -function -">
-    <a href="../namespaces/default.html#function_wc_get_product">wc_get_product()</a>
-    <span>
-                        &nbsp;: <a href="../classes/WC-Product.html"><abbr title="\WC_Product">WC_Product</abbr></a>|null|false    </span>
-</dt>
-<dd>Main function for returning products, uses the WC_Product_Factory class.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -function -">
-    <a href="../namespaces/default.html#function_wc_get_product_object">wc_get_product_object()</a>
-    <span>
-                        &nbsp;: <a href="../classes/WC-Product.html"><abbr title="\WC_Product">WC_Product</abbr></a>    </span>
-</dt>
-<dd>Get a product object.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -function -">
-    <a href="../namespaces/default.html#function_wc_product_sku_enabled">wc_product_sku_enabled()</a>
-    <span>
-                        &nbsp;: bool    </span>
-</dt>
-<dd>Returns whether or not SKUS are enabled.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -function -">
-    <a href="../namespaces/default.html#function_wc_product_weight_enabled">wc_product_weight_enabled()</a>
-    <span>
-                        &nbsp;: bool    </span>
-</dt>
-<dd>Returns whether or not product weights are enabled.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -function -">
-    <a href="../namespaces/default.html#function_wc_product_dimensions_enabled">wc_product_dimensions_enabled()</a>
-    <span>
-                        &nbsp;: bool    </span>
-</dt>
-<dd>Returns whether or not product dimensions (HxWxD) are enabled.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -function -">
-    <a href="../namespaces/default.html#function_wc_delete_product_transients">wc_delete_product_transients()</a>
-    <span>
-                        &nbsp;: mixed    </span>
-</dt>
-<dd>Clear transient cache for product data.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -function -">
-    <a href="../namespaces/default.html#function_wc_get_product_ids_on_sale">wc_get_product_ids_on_sale()</a>
-    <span>
-                        &nbsp;: array    </span>
-</dt>
-<dd>Function that returns an array containing the IDs of the products that are on sale.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -function -">
-    <a href="../namespaces/default.html#function_wc_get_featured_product_ids">wc_get_featured_product_ids()</a>
-    <span>
-                        &nbsp;: array    </span>
-</dt>
-<dd>Function that returns an array containing the IDs of the featured products.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -function -">
-    <a href="../namespaces/default.html#function_wc_product_post_type_link">wc_product_post_type_link()</a>
-    <span>
-                        &nbsp;: string    </span>
-</dt>
-<dd>Filter to allow product_cat in the permalinks for products.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -function -">
-    <a href="../namespaces/default.html#function_wc_placeholder_img_src">wc_placeholder_img_src()</a>
-    <span>
-                        &nbsp;: string    </span>
-</dt>
-<dd>Get the placeholder image URL either from media, or use the fallback image.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -function -">
-    <a href="../namespaces/default.html#function_wc_placeholder_img">wc_placeholder_img()</a>
-    <span>
-                        &nbsp;: string    </span>
-</dt>
-<dd>Get the placeholder image.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -function -">
-    <a href="../namespaces/default.html#function_wc_get_formatted_variation">wc_get_formatted_variation()</a>
-    <span>
-                        &nbsp;: string    </span>
-</dt>
-<dd>Variation Formatting.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -function -">
-    <a href="../namespaces/default.html#function_wc_scheduled_sales">wc_scheduled_sales()</a>
-    <span>
-                        &nbsp;: mixed    </span>
-</dt>
-<dd>Function which handles the start and end of scheduled sales via cron.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -function -">
-    <a href="../namespaces/default.html#function_wc_get_attachment_image_attributes">wc_get_attachment_image_attributes()</a>
-    <span>
-                        &nbsp;: array    </span>
-</dt>
-<dd>Get attachment image attributes.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -function -">
-    <a href="../namespaces/default.html#function_wc_prepare_attachment_for_js">wc_prepare_attachment_for_js()</a>
-    <span>
-                        &nbsp;: array    </span>
-</dt>
-<dd>Prepare attachment for JavaScript.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -function -">
-    <a href="../namespaces/default.html#function_wc_track_product_view">wc_track_product_view()</a>
-    <span>
-                        &nbsp;: mixed    </span>
-</dt>
-<dd>Track product views.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -function -">
-    <a href="../namespaces/default.html#function_wc_get_product_types">wc_get_product_types()</a>
-    <span>
-                        &nbsp;: array    </span>
-</dt>
-<dd>Get product types.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -function -">
-    <a href="../namespaces/default.html#function_wc_product_has_unique_sku">wc_product_has_unique_sku()</a>
-    <span>
-                        &nbsp;: bool    </span>
-</dt>
-<dd>Check if product sku is unique.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -function -">
-    <a href="../namespaces/default.html#function_wc_product_force_unique_sku">wc_product_force_unique_sku()</a>
-    <span>
-                        &nbsp;: mixed    </span>
-</dt>
-<dd>Force a unique SKU.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -function -">
-    <a href="../namespaces/default.html#function_wc_product_generate_unique_sku">wc_product_generate_unique_sku()</a>
-    <span>
-                        &nbsp;: string    </span>
-</dt>
-<dd>Recursively appends a suffix until a unique SKU is found.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -function -">
-    <a href="../namespaces/default.html#function_wc_get_product_id_by_sku">wc_get_product_id_by_sku()</a>
-    <span>
-                        &nbsp;: int    </span>
-</dt>
-<dd>Get product ID by SKU.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -function -">
-    <a href="../namespaces/default.html#function_wc_get_product_variation_attributes">wc_get_product_variation_attributes()</a>
-    <span>
-                        &nbsp;: array    </span>
-</dt>
-<dd>Get attibutes/data for an individual variation from the database and maintain it&#039;s integrity.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -function -">
-    <a href="../namespaces/default.html#function_wc_get_product_cat_ids">wc_get_product_cat_ids()</a>
-    <span>
-                        &nbsp;: array    </span>
-</dt>
-<dd>Get all product cats for a product by ID, including hierarchy</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -function -">
-    <a href="../namespaces/default.html#function_wc_get_product_attachment_props">wc_get_product_attachment_props()</a>
-    <span>
-                        &nbsp;: array    </span>
-</dt>
-<dd>Gets data about an attachment, such as alt text and captions.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -function -">
-    <a href="../namespaces/default.html#function_wc_get_product_visibility_options">wc_get_product_visibility_options()</a>
-    <span>
-                        &nbsp;: array    </span>
-</dt>
-<dd>Get product visibility options.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -function -">
-    <a href="../namespaces/default.html#function_wc_get_product_tax_class_options">wc_get_product_tax_class_options()</a>
-    <span>
-                        &nbsp;: array    </span>
-</dt>
-<dd>Get product tax class options.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -function -">
-    <a href="../namespaces/default.html#function_wc_get_product_stock_status_options">wc_get_product_stock_status_options()</a>
-    <span>
-                        &nbsp;: array    </span>
-</dt>
-<dd>Get stock status options.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -function -">
-    <a href="../namespaces/default.html#function_wc_get_product_backorder_options">wc_get_product_backorder_options()</a>
-    <span>
-                        &nbsp;: array    </span>
-</dt>
-<dd>Get backorder options.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -function -">
-    <a href="../namespaces/default.html#function_wc_get_related_products">wc_get_related_products()</a>
-    <span>
-                        &nbsp;: array    </span>
-</dt>
-<dd>Get related products based on product category and tags.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -function -">
-    <a href="../namespaces/default.html#function_wc_get_product_term_ids">wc_get_product_term_ids()</a>
-    <span>
-                        &nbsp;: array    </span>
-</dt>
-<dd>Retrieves product term ids for a taxonomy.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -function -">
-    <a href="../namespaces/default.html#function_wc_get_price_including_tax">wc_get_price_including_tax()</a>
-    <span>
-                        &nbsp;: float    </span>
-</dt>
-<dd>For a given product, and optionally price/qty, work out the price with tax included, based on store settings.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -function -">
-    <a href="../namespaces/default.html#function_wc_get_price_excluding_tax">wc_get_price_excluding_tax()</a>
-    <span>
-                        &nbsp;: float    </span>
-</dt>
-<dd>For a given product, and optionally price/qty, work out the price with tax excluded, based on store settings.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -function -">
-    <a href="../namespaces/default.html#function_wc_get_price_to_display">wc_get_price_to_display()</a>
-    <span>
-                        &nbsp;: float    </span>
-</dt>
-<dd>Returns the price including or excluding tax, based on the &#039;woocommerce_tax_display_shop&#039; setting.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -function -">
-    <a href="../namespaces/default.html#function_wc_get_product_category_list">wc_get_product_category_list()</a>
-    <span>
-                        &nbsp;: string    </span>
-</dt>
-<dd>Returns the product categories in a list.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -function -">
-    <a href="../namespaces/default.html#function_wc_get_product_tag_list">wc_get_product_tag_list()</a>
-    <span>
-                        &nbsp;: string    </span>
-</dt>
-<dd>Returns the product tags in a list.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -function -">
-    <a href="../namespaces/default.html#function_wc_products_array_filter_visible">wc_products_array_filter_visible()</a>
-    <span>
-                        &nbsp;: bool    </span>
-</dt>
-<dd>Callback for array filter to get visible only.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -function -">
-    <a href="../namespaces/default.html#function_wc_products_array_filter_visible_grouped">wc_products_array_filter_visible_grouped()</a>
-    <span>
-                        &nbsp;: bool    </span>
-</dt>
-<dd>Callback for array filter to get visible grouped products only.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -function -">
-    <a href="../namespaces/default.html#function_wc_products_array_filter_editable">wc_products_array_filter_editable()</a>
-    <span>
-                        &nbsp;: bool    </span>
-</dt>
-<dd>Callback for array filter to get products the user can edit only.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -function -">
-    <a href="../namespaces/default.html#function_wc_products_array_filter_readable">wc_products_array_filter_readable()</a>
-    <span>
-                        &nbsp;: bool    </span>
-</dt>
-<dd>Callback for array filter to get products the user can view only.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -function -">
-    <a href="../namespaces/default.html#function_wc_products_array_orderby">wc_products_array_orderby()</a>
-    <span>
-                        &nbsp;: array    </span>
-</dt>
-<dd>Sort an array of products by a value.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -function -">
-    <a href="../namespaces/default.html#function_wc_products_array_orderby_title">wc_products_array_orderby_title()</a>
-    <span>
-                        &nbsp;: int    </span>
-</dt>
-<dd>Sort by title.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -function -">
-    <a href="../namespaces/default.html#function_wc_products_array_orderby_id">wc_products_array_orderby_id()</a>
-    <span>
-                        &nbsp;: int    </span>
-</dt>
-<dd>Sort by id.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -function -">
-    <a href="../namespaces/default.html#function_wc_products_array_orderby_date">wc_products_array_orderby_date()</a>
-    <span>
-                        &nbsp;: int    </span>
-</dt>
-<dd>Sort by date.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -function -">
-    <a href="../namespaces/default.html#function_wc_products_array_orderby_modified">wc_products_array_orderby_modified()</a>
-    <span>
-                        &nbsp;: int    </span>
-</dt>
-<dd>Sort by modified.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -function -">
-    <a href="../namespaces/default.html#function_wc_products_array_orderby_menu_order">wc_products_array_orderby_menu_order()</a>
-    <span>
-                        &nbsp;: int    </span>
-</dt>
-<dd>Sort by menu order.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -function -">
-    <a href="../namespaces/default.html#function_wc_products_array_orderby_price">wc_products_array_orderby_price()</a>
-    <span>
-                        &nbsp;: int    </span>
-</dt>
-<dd>Sort by price low to high.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -function -">
-    <a href="../namespaces/default.html#function_wc_deferred_product_sync">wc_deferred_product_sync()</a>
-    <span>
-                        &nbsp;: mixed    </span>
-</dt>
-<dd>Queue a product for syncing at the end of the request.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -function -">
-    <a href="../namespaces/default.html#function_wc_update_product_lookup_tables_is_running">wc_update_product_lookup_tables_is_running()</a>
-    <span>
-                        &nbsp;: bool    </span>
-</dt>
-<dd>See if the lookup table is being generated already.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -function -">
-    <a href="../namespaces/default.html#function_wc_update_product_lookup_tables">wc_update_product_lookup_tables()</a>
-    <span>
-                        &nbsp;: mixed    </span>
-</dt>
-<dd>Populate lookup table data for products.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -function -">
-    <a href="../namespaces/default.html#function_wc_update_product_lookup_tables_column">wc_update_product_lookup_tables_column()</a>
-    <span>
-                        &nbsp;: mixed    </span>
-</dt>
-<dd>Populate lookup table column data.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -function -">
-    <a href="../namespaces/default.html#function_wc_update_product_lookup_tables_rating_count">wc_update_product_lookup_tables_rating_count()</a>
-    <span>
-                        &nbsp;: mixed    </span>
-</dt>
-<dd>Populate rating count lookup table data for products.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -function -">
-    <a href="../namespaces/default.html#function_wc_update_product_lookup_tables_rating_count_batch">wc_update_product_lookup_tables_rating_count_batch()</a>
-    <span>
-                        &nbsp;: mixed    </span>
-</dt>
-<dd>Populate a batch of rating count lookup table data for products.</dd>
-
-    </dl>
-
-        
+                
 
             <section class="phpdocumentor-functions">
         <h3 class="phpdocumentor-elements__header" id="functions">
@@ -4559,12 +4166,6 @@ function wc_update_product_lookup_tables_rating_count_batch( $offset = 0, $limit
 add_action( &#039;wc_update_product_lookup_tables_rating_count_batch&#039;, &#039;wc_update_product_lookup_tables_rating_count_batch&#039;, 10, 2 );
 </code></pre>
             </article>
-                <div data-search-results class="phpdocumentor-search-results phpdocumentor-search-results--hidden">
-
-    <h2>Search results</h2>
-    <ul class="phpdocumentor-search-results__entries">
-    </ul>
-</div>
             </div>
         </div>
         <a href="#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
@@ -4573,12 +4174,19 @@ add_action( &#039;wc_update_product_lookup_tables_rating_count_batch&#039;, &#03
 
     <footer class="phpdocumentor phpdocumentor-footer">
     <div class="phpdocumentor-section">
-        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on September 17th, 2020 at 04:51 pm.</span>
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on September 23rd, 2020 at 07:06 pm.</span>
     </div>
 </footer>
 
     <script>
         cssVars({});
     </script>
+    <script>
+        var searchParams = {
+            'searchIndex': '..\/js\/searchIndex.json'
+        };
+    </script>
+    <script src="../js/searchIndex.js"></script>
+    <script src="../js/search.js"></script>
 </body>
 </html>

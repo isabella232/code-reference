@@ -13,12 +13,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/template.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
-            <script src="https://cdn.jsdelivr.net/npm/fuse.js@3.4.6"></script>
-    <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
+            <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
-    <script src="../js/search.js"></script>
-    <script defer src="../js/searchIndex.js"></script>
-        <script src="../js/prism.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@7.2.0/dist/js/autoComplete.js"></script>
+
+            <script src="../js/prism.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             window.dispatchEvent(new HashChangeEvent('hashchange'));
@@ -41,26 +40,18 @@
     </section>
 </header>
 
-<header class="phpdocumentor-header">
+<div class="phpdocumentor-header">
     <section class="phpdocumentor-section">
         <h1 class="phpdocumentor-title">WooCommerce Code Reference</h1>
-
-        <div data-search-form class="phpdocumentor-search">
-            <label class="phpdocumentor-label">
-                <span class="visually-hidden">Search</span>
-                <input type="search" class="phpdocumentor-field phpdocumentor-search__field" placeholder="Loading..." disabled />
-            </label>
-        </div>
-        <section data-search-form class="phpdocumentor-search">
-    <h2 class="phpdocumentor-sidebar__category-header">Search</h2>
+        <section class="phpdocumentor-search">
     <label class="phpdocumentor-label">
-        <span class="visually-hidden">Search for</span>
-        <input type="search" class="phpdocumentor-field phpdocumentor-search__field" placeholder="Loading .." disabled />
+        <span class="visually-hidden">Search (click ESC to close search results)</span>
+        <input id="autoComplete" tabindex="1" type="search" class="phpdocumentor-field phpdocumentor-search__field" placeholder="Loading..." disabled />
     </label>
 </section>
 
     </section>
-</header>
+</div>
 
     <main class="phpdocumentor">
         <div class="phpdocumentor-section">
@@ -110,7 +101,6 @@
                                     <li><a href="../packages/WooCommerce-Widgets.html"><abbr title="\WooCommerce\Widgets">Widgets</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-Uninstaller.html"><abbr title="\WooCommerce\Uninstaller">Uninstaller</abbr></a></li>
                             </ul>
-                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/Default.html"><abbr title="\Default">Default</abbr></a></h3>
                                 <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/AutomatticWooCommerceRestApi.html"><abbr title="\AutomatticWooCommerceRestApi">AutomatticWooCommerceRestApi</abbr></a></h3>
                                 <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/AutomatticWooCommerceUtilities.html"><abbr title="\AutomatticWooCommerceUtilities">AutomatticWooCommerceUtilities</abbr></a></h3>
                                 <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceTemplates.html"><abbr title="\WooCommerceTemplates">WooCommerceTemplates</abbr></a></h3>
@@ -138,243 +128,7 @@
     <article class="phpdocumentor-element -file">
         <h2 class="phpdocumentor-content__title">wc-conditional-functions.php</h2>
 
-        
-
-
-
-<h3 id="toc">
-    Table of Contents
-    <a href="#toc" class="headerlink"><i class="fas fa-link"></i></a>
-</h3>
-
-<dl class="phpdocumentor-table-of-contents">
-                        <dt class="phpdocumentor-table-of-contents__entry -function -">
-    <a href="../namespaces/default.html#function_is_woocommerce">is_woocommerce()</a>
-    <span>
-                        &nbsp;: bool    </span>
-</dt>
-<dd>Is_woocommerce - Returns true if on a page which uses WooCommerce templates (cart and checkout are standard pages with shortcodes and thus are not included).</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -function -">
-    <a href="../namespaces/default.html#function_is_shop">is_shop()</a>
-    <span>
-                        &nbsp;: bool    </span>
-</dt>
-<dd>Is_shop - Returns true when viewing the product type archive (shop).</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -function -">
-    <a href="../namespaces/default.html#function_is_product_taxonomy">is_product_taxonomy()</a>
-    <span>
-                        &nbsp;: bool    </span>
-</dt>
-<dd>Is_product_taxonomy - Returns true when viewing a product taxonomy archive.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -function -">
-    <a href="../namespaces/default.html#function_is_product_category">is_product_category()</a>
-    <span>
-                        &nbsp;: bool    </span>
-</dt>
-<dd>Is_product_category - Returns true when viewing a product category.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -function -">
-    <a href="../namespaces/default.html#function_is_product_tag">is_product_tag()</a>
-    <span>
-                        &nbsp;: bool    </span>
-</dt>
-<dd>Is_product_tag - Returns true when viewing a product tag.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -function -">
-    <a href="../namespaces/default.html#function_is_product">is_product()</a>
-    <span>
-                        &nbsp;: bool    </span>
-</dt>
-<dd>Is_product - Returns true when viewing a single product.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -function -">
-    <a href="../namespaces/default.html#function_is_cart">is_cart()</a>
-    <span>
-                        &nbsp;: bool    </span>
-</dt>
-<dd>Is_cart - Returns true when viewing the cart page.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -function -">
-    <a href="../namespaces/default.html#function_is_checkout">is_checkout()</a>
-    <span>
-                        &nbsp;: bool    </span>
-</dt>
-<dd>Is_checkout - Returns true when viewing the checkout page.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -function -">
-    <a href="../namespaces/default.html#function_is_checkout_pay_page">is_checkout_pay_page()</a>
-    <span>
-                        &nbsp;: bool    </span>
-</dt>
-<dd>Is_checkout_pay - Returns true when viewing the checkout&#039;s pay page.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -function -">
-    <a href="../namespaces/default.html#function_is_wc_endpoint_url">is_wc_endpoint_url()</a>
-    <span>
-                        &nbsp;: bool    </span>
-</dt>
-<dd>Is_wc_endpoint_url - Check if an endpoint is showing.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -function -">
-    <a href="../namespaces/default.html#function_is_account_page">is_account_page()</a>
-    <span>
-                        &nbsp;: bool    </span>
-</dt>
-<dd>Is_account_page - Returns true when viewing an account page.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -function -">
-    <a href="../namespaces/default.html#function_is_view_order_page">is_view_order_page()</a>
-    <span>
-                        &nbsp;: bool    </span>
-</dt>
-<dd>Is_view_order_page - Returns true when on the view order page.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -function -">
-    <a href="../namespaces/default.html#function_is_edit_account_page">is_edit_account_page()</a>
-    <span>
-                        &nbsp;: bool    </span>
-</dt>
-<dd>Check for edit account page.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -function -">
-    <a href="../namespaces/default.html#function_is_order_received_page">is_order_received_page()</a>
-    <span>
-                        &nbsp;: bool    </span>
-</dt>
-<dd>Is_order_received_page - Returns true when viewing the order received page.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -function -">
-    <a href="../namespaces/default.html#function_is_add_payment_method_page">is_add_payment_method_page()</a>
-    <span>
-                        &nbsp;: bool    </span>
-</dt>
-<dd>Is_add_payment_method_page - Returns true when viewing the add payment method page.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -function -">
-    <a href="../namespaces/default.html#function_is_lost_password_page">is_lost_password_page()</a>
-    <span>
-                        &nbsp;: bool    </span>
-</dt>
-<dd>Is_lost_password_page - Returns true when viewing the lost password page.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -function -">
-    <a href="../namespaces/default.html#function_is_ajax">is_ajax()</a>
-    <span>
-                        &nbsp;: bool    </span>
-</dt>
-<dd>Is_ajax - Returns true when the page is loaded via ajax.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -function -">
-    <a href="../namespaces/default.html#function_is_store_notice_showing">is_store_notice_showing()</a>
-    <span>
-                        &nbsp;: bool    </span>
-</dt>
-<dd>Is_store_notice_showing - Returns true when store notice is active.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -function -">
-    <a href="../namespaces/default.html#function_is_filtered">is_filtered()</a>
-    <span>
-                        &nbsp;: bool    </span>
-</dt>
-<dd>Is_filtered - Returns true when filtering products using layered nav or price sliders.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -function -">
-    <a href="../namespaces/default.html#function_taxonomy_is_product_attribute">taxonomy_is_product_attribute()</a>
-    <span>
-                        &nbsp;: bool    </span>
-</dt>
-<dd>Returns true when the passed taxonomy name is a product attribute.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -function -">
-    <a href="../namespaces/default.html#function_meta_is_product_attribute">meta_is_product_attribute()</a>
-    <span>
-                        &nbsp;: bool    </span>
-</dt>
-<dd>Returns true when the passed meta name is a product attribute.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -function -">
-    <a href="../namespaces/default.html#function_wc_tax_enabled">wc_tax_enabled()</a>
-    <span>
-                        &nbsp;: bool    </span>
-</dt>
-<dd>Are store-wide taxes enabled?</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -function -">
-    <a href="../namespaces/default.html#function_wc_shipping_enabled">wc_shipping_enabled()</a>
-    <span>
-                        &nbsp;: bool    </span>
-</dt>
-<dd>Is shipping enabled?</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -function -">
-    <a href="../namespaces/default.html#function_wc_prices_include_tax">wc_prices_include_tax()</a>
-    <span>
-                        &nbsp;: bool    </span>
-</dt>
-<dd>Are prices inclusive of tax?</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -function -">
-    <a href="../namespaces/default.html#function_wc_is_valid_url">wc_is_valid_url()</a>
-    <span>
-                        &nbsp;: bool    </span>
-</dt>
-<dd>Simple check for validating a URL, it must start with http:// or https://.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -function -">
-    <a href="../namespaces/default.html#function_wc_site_is_https">wc_site_is_https()</a>
-    <span>
-                        &nbsp;: bool    </span>
-</dt>
-<dd>Check if the home URL is https. If it is, we don&#039;t need to do things such as &#039;force ssl&#039;.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -function -">
-    <a href="../namespaces/default.html#function_wc_checkout_is_https">wc_checkout_is_https()</a>
-    <span>
-                        &nbsp;: bool    </span>
-</dt>
-<dd>Check if the checkout is configured for https. Look at options, WP HTTPS plugin, or the permalink itself.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -function -">
-    <a href="../namespaces/default.html#function_wc_post_content_has_shortcode">wc_post_content_has_shortcode()</a>
-    <span>
-                        &nbsp;: bool    </span>
-</dt>
-<dd>Checks whether the content passed contains a specific short code.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -function -">
-    <a href="../namespaces/default.html#function_wc_reviews_enabled">wc_reviews_enabled()</a>
-    <span>
-                        &nbsp;: bool    </span>
-</dt>
-<dd>Check if reviews are enabled.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -function -">
-    <a href="../namespaces/default.html#function_wc_review_ratings_enabled">wc_review_ratings_enabled()</a>
-    <span>
-                        &nbsp;: bool    </span>
-</dt>
-<dd>Check if reviews ratings are enabled.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -function -">
-    <a href="../namespaces/default.html#function_wc_review_ratings_required">wc_review_ratings_required()</a>
-    <span>
-                        &nbsp;: bool    </span>
-</dt>
-<dd>Check if review ratings are required.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -function -">
-    <a href="../namespaces/default.html#function_wc_is_file_valid_csv">wc_is_file_valid_csv()</a>
-    <span>
-                        &nbsp;: bool    </span>
-</dt>
-<dd>Check if a CSV file is valid.</dd>
-
-    </dl>
-
-        
+                
 
             <section class="phpdocumentor-functions">
         <h3 class="phpdocumentor-elements__header" id="functions">
@@ -1839,12 +1593,6 @@ function wc_is_file_valid_csv( $file, $check_path = true ) {
 }
 </code></pre>
             </article>
-                <div data-search-results class="phpdocumentor-search-results phpdocumentor-search-results--hidden">
-
-    <h2>Search results</h2>
-    <ul class="phpdocumentor-search-results__entries">
-    </ul>
-</div>
             </div>
         </div>
         <a href="#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
@@ -1853,12 +1601,19 @@ function wc_is_file_valid_csv( $file, $check_path = true ) {
 
     <footer class="phpdocumentor phpdocumentor-footer">
     <div class="phpdocumentor-section">
-        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on September 17th, 2020 at 04:51 pm.</span>
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on September 23rd, 2020 at 07:06 pm.</span>
     </div>
 </footer>
 
     <script>
         cssVars({});
     </script>
+    <script>
+        var searchParams = {
+            'searchIndex': '..\/js\/searchIndex.json'
+        };
+    </script>
+    <script src="../js/searchIndex.js"></script>
+    <script src="../js/search.js"></script>
 </body>
 </html>
