@@ -43540,16 +43540,6 @@ var searchIndex = [
         summary: "Returns\u0020true\u0020if\u0020the\u0020container\u0020can\u0020return\u0020an\u0020entry\u0020for\u0020the\u0020given\u0020identifier.",
         url: "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Container.html#method_has"
     },{
-        fqsen: "\\Automattic\\WooCommerce\\Internal\\WCCom\\ConnectionHelper",
-        name: "ConnectionHelper",
-        summary: "Class\u0020WCConnectionHelper.",
-        url: "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Internal-WCCom-ConnectionHelper.html"
-    },{
-        fqsen: "\\Automattic\\WooCommerce\\Internal\\WCCom\\ConnectionHelper\u003A\u003Ais_connected\u0028\u0029",
-        name: "is_connected",
-        summary: "Check\u0020if\u0020WooCommerce.com\u0020account\u0020is\u0020connected.",
-        url: "https://woocommerce.github.io/code-reference/classes/Automattic-WooCommerce-Internal-WCCom-ConnectionHelper.html#method_is_connected"
-    },{
         fqsen: "\\Automattic\\WooCommerce\\Packages",
         name: "Packages",
         summary: "Packages\u0020class.",
@@ -43859,16 +43849,6 @@ var searchIndex = [
         name: "Checkout",
         summary: "",
         url: "https://woocommerce.github.io/code-reference/namespaces/automattic-woocommerce-checkout.html"
-    },{
-        fqsen: "\\Automattic\\WooCommerce\\Internal\\WCCom",
-        name: "WCCom",
-        summary: "",
-        url: "https://woocommerce.github.io/code-reference/namespaces/automattic-woocommerce-internal-wccom.html"
-    },{
-        fqsen: "\\Automattic\\WooCommerce\\Internal",
-        name: "Internal",
-        summary: "",
-        url: "https://woocommerce.github.io/code-reference/namespaces/automattic-woocommerce-internal.html"
     },{
         fqsen: "\\Automattic\\WooCommerce\\Proxies",
         name: "Proxies",
