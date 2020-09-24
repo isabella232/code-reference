@@ -3,23 +3,28 @@
 <head>
     <meta charset="utf-8">
     <title>WooCommerce Code Reference</title>
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro">
-    <link rel="stylesheet" href="../css/normalize.css">
-    <link rel="stylesheet" href="../css/template.css">
-    <link rel="shortcut icon" href="../images/favicon.png"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/favicon.png" />
     <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
     <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
     <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
-        <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.4.6/fuse.min.js"></script>
-    <script src="../js/search.js"></script>
-    <script defer src="../js/searchIndex.js"></script>
-    </head>
-<body>
-<header class="phpdocumentor-top-header">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/base.css?updated=1600961772">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/template.css?updated=1600961772">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
+            <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@7.2.0/dist/js/autoComplete.min.js"></script>
+        <script src="../js/prism.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            window.dispatchEvent(new HashChangeEvent('hashchange'));
+        });
+    </script>
+</head>
+<body id="top">
+    <header class="phpdocumentor-top-header">
     <section class="phpdocumentor-section">
         <div class="site-branding">
             <a class="site-logo" href="../index.html"><img width="180" src="../images/logo.svg" alt="WooCommerce" /></a>
@@ -27,280 +32,298 @@
         <nav class="main-navigation">
             <ul>
                 <li><a href="../hooks/hooks.html">Hooks Reference</a></li>
-                                    <li><a href="../graphs/classes.html">Class Diagram</a></li>
-                                <li><a href="https://docs.woocommerce.com/">Documentation</a></li>
+                <li><a href="https://docs.woocommerce.com/">Documentation</a></li>
                 <li><a href="https://woocommerce.github.io/woocommerce-rest-api-docs/">REST API Docs</a></li>
             </ul>
         </nav>
     </section>
 </header>
-<header class="phpdocumentor-header">
+
+<div class="phpdocumentor-header">
     <section class="phpdocumentor-section">
         <h1 class="phpdocumentor-title">WooCommerce Code Reference</h1>
+        <section class="phpdocumentor-search">
+    <label class="phpdocumentor-label">
+        <span class="visually-hidden">Search (click ESC to close search results)</span>
+        <input id="autoComplete" tabindex="1" type="search" class="phpdocumentor-field phpdocumentor-search__field" placeholder="Loading..." disabled />
+    </label>
+</section>
+
     </section>
+</div>
 
-    <section class="phpdocumentor-section">
-        <div data-search-form class="phpdocumentor-search">
-            <label class="phpdocumentor-label">
-                <span class="visually-hidden">Search</span>
-                <input type="search" class="phpdocumentor-field phpdocumentor-search__field" placeholder="Loading..." disabled />
-            </label>
-        </div>
-        <div data-search-results class="phpdocumentor-search-results phpdocumentor-search-results--hidden">
-
-            <h2>Search results</h2>
-            <ul class="phpdocumentor-search-results__entries">
-
-            </ul>
-        </div>
-    </section>
-</header>
-<main class="phpdocumentor">
-    <div class="phpdocumentor-section">
-        <aside class="three phpdocumentor-columns phpdocumentor-sidebar">
+    <main class="phpdocumentor">
+        <div class="phpdocumentor-section">
+            <aside class="phpdocumentor-column -four phpdocumentor-sidebar">
     
-    <h1 class="phpdocumentor-sidebar__category-header">Namespaces</h1>
-            <h2 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/default.html"><abbr title="\">Global</abbr></a></h2>
-                    <h3 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h3>
-            <ul class="phpdocumentor-list">
-                                    <li><a href="../namespaces/automattic-woocommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
+                                <h3 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/default.html"><abbr title="\">Global</abbr></a></h3>
+                                        <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/automattic-woocommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                                    </ul>
+                        </section>
+
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/WooCommerce-Classes.html"><abbr title="\WooCommerce\Classes">Classes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Abstracts.html"><abbr title="\WooCommerce\Abstracts">Abstracts</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Views.html"><abbr title="\WooCommerce\Views">Views</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Helper.html"><abbr title="\WooCommerce\Helper">Helper</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Templates.html"><abbr title="\WooCommerce\Templates">Templates</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Reports.html"><abbr title="\WooCommerce\Reports">Reports</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-API.html"><abbr title="\WooCommerce\API">API</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-CLI.html"><abbr title="\WooCommerce\CLI">CLI</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-l10n.html"><abbr title="\WooCommerce\l10n">l10n</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Webhooks.html"><abbr title="\WooCommerce\Webhooks">Webhooks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-DataStores.html"><abbr title="\WooCommerce\DataStores">DataStores</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Emails.html"><abbr title="\WooCommerce\Emails">Emails</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Export.html"><abbr title="\WooCommerce\Export">Export</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Gateways.html"><abbr title="\WooCommerce\Gateways">Gateways</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PayPal.html"><abbr title="\WooCommerce\PayPal">PayPal</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Import.html"><abbr title="\WooCommerce\Import">Import</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Integrations.html"><abbr title="\WooCommerce\Integrations">Integrations</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interfaces.html"><abbr title="\WooCommerce\Interfaces">Interfaces</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interface.html"><abbr title="\WooCommerce\Interface">Interface</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-LogHandlers.html"><abbr title="\WooCommerce\LogHandlers">LogHandlers</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PaymentTokens.html"><abbr title="\WooCommerce\PaymentTokens">PaymentTokens</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shipping.html"><abbr title="\WooCommerce\Shipping">Shipping</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shortcodes.html"><abbr title="\WooCommerce\Shortcodes">Shortcodes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Tracks.html"><abbr title="\WooCommerce\Tracks">Tracks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Traits.html"><abbr title="\WooCommerce\Traits">Traits</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Functions.html"><abbr title="\WooCommerce\Functions">Functions</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCom.html"><abbr title="\WooCommerce\WCCom">WCCom</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Widgets.html"><abbr title="\WooCommerce\Widgets">Widgets</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Uninstaller.html"><abbr title="\WooCommerce\Uninstaller">Uninstaller</abbr></a></li>
                             </ul>
-            
-        <h1 class="phpdocumentor-sidebar__category-header">Packages</h1>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceClasses.html"><abbr title="\WooCommerceClasses">WooCommerceClasses</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAbstracts.html"><abbr title="\WooCommerceAbstracts">WooCommerceAbstracts</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                            <li><a href="../packages/WooCommerce-Abstracts.html"><abbr title="\WooCommerce\Abstracts">Abstracts</abbr></a></li>
-                            <li><a href="../packages/WooCommerce-Admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
-                            <li><a href="../packages/WooCommerce-Views.html"><abbr title="\WooCommerce\Views">Views</abbr></a></li>
-                            <li><a href="../packages/WooCommerce-admin.html"><abbr title="\WooCommerce\admin">admin</abbr></a></li>
-                            <li><a href="../packages/WooCommerce-Classes.html"><abbr title="\WooCommerce\Classes">Classes</abbr></a></li>
-                            <li><a href="../packages/WooCommerce-Reports.html"><abbr title="\WooCommerce\Reports">Reports</abbr></a></li>
-                            <li><a href="../packages/WooCommerce-CLI.html"><abbr title="\WooCommerce\CLI">CLI</abbr></a></li>
-                            <li><a href="../packages/WooCommerce-l10n.html"><abbr title="\WooCommerce\l10n">l10n</abbr></a></li>
-                            <li><a href="../packages/WooCommerce-Cli.html"><abbr title="\WooCommerce\Cli">Cli</abbr></a></li>
-                            <li><a href="../packages/WooCommerce-DataStores.html"><abbr title="\WooCommerce\DataStores">DataStores</abbr></a></li>
-                            <li><a href="../packages/WooCommerce-DataStore.html"><abbr title="\WooCommerce\DataStore">DataStore</abbr></a></li>
-                            <li><a href="../packages/WooCommerce-Emails.html"><abbr title="\WooCommerce\Emails">Emails</abbr></a></li>
-                            <li><a href="../packages/WooCommerce-Gateways.html"><abbr title="\WooCommerce\Gateways">Gateways</abbr></a></li>
-                            <li><a href="../packages/WooCommerce-Integrations.html"><abbr title="\WooCommerce\Integrations">Integrations</abbr></a></li>
-                            <li><a href="../packages/WooCommerce-LogHandlers.html"><abbr title="\WooCommerce\LogHandlers">LogHandlers</abbr></a></li>
-                            <li><a href="../packages/WooCommerce-PaymentTokens.html"><abbr title="\WooCommerce\PaymentTokens">PaymentTokens</abbr></a></li>
-                            <li><a href="../packages/WooCommerce-Shipping.html"><abbr title="\WooCommerce\Shipping">Shipping</abbr></a></li>
-                            <li><a href="../packages/WooCommerce-Tracks.html"><abbr title="\WooCommerce\Tracks">Tracks</abbr></a></li>
-                            <li><a href="../packages/WooCommerce-Functions.html"><abbr title="\WooCommerce\Functions">Functions</abbr></a></li>
-                            <li><a href="../packages/WooCommerce-WooCommerce.html"><abbr title="\WooCommerce\WooCommerce">WooCommerce</abbr></a></li>
-                            <li><a href="../packages/WooCommerce-Templates.html"><abbr title="\WooCommerce\Templates">Templates</abbr></a></li>
-                            <li><a href="../packages/WooCommerce-Uninstaller.html"><abbr title="\WooCommerce\Uninstaller">Uninstaller</abbr></a></li>
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdmin.html"><abbr title="\WooCommerceAdmin">WooCommerceAdmin</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdminMetaBoxes.html"><abbr title="\WooCommerceAdminMetaBoxes">WooCommerceAdminMetaBoxes</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceadmin.html"><abbr title="\WooCommerceadmin">WooCommerceadmin</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdminReports.html"><abbr title="\WooCommerceAdminReports">WooCommerceAdminReports</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdminSystemStatus.html"><abbr title="\WooCommerceAdminSystemStatus">WooCommerceAdminSystemStatus</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/Default.html"><abbr title="\Default">Default</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceHelper.html"><abbr title="\WooCommerceHelper">WooCommerceHelper</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdminImporters.html"><abbr title="\WooCommerceAdminImporters">WooCommerceAdminImporters</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceTemplates.html"><abbr title="\WooCommerceTemplates">WooCommerceTemplates</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdminReporting.html"><abbr title="\WooCommerceAdminReporting">WooCommerceAdminReporting</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdminShipping.html"><abbr title="\WooCommerceAdminShipping">WooCommerceAdminShipping</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdminSettings.html"><abbr title="\WooCommerceAdminSettings">WooCommerceAdminSettings</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdminWebhooksViews.html"><abbr title="\WooCommerceAdminWebhooksViews">WooCommerceAdminWebhooksViews</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/Settings.html"><abbr title="\Settings">Settings</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdminExport.html"><abbr title="\WooCommerceAdminExport">WooCommerceAdminExport</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdminLogs.html"><abbr title="\WooCommerceAdminLogs">WooCommerceAdminLogs</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceViews.html"><abbr title="\WooCommerceViews">WooCommerceViews</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/admin.html"><abbr title="\admin">admin</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdminFunctions.html"><abbr title="\WooCommerceAdminFunctions">WooCommerceAdminFunctions</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAPI.html"><abbr title="\WooCommerceAPI">WooCommerceAPI</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceClassesProducts.html"><abbr title="\WooCommerceClassesProducts">WooCommerceClassesProducts</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceClassesEmails.html"><abbr title="\WooCommerceClassesEmails">WooCommerceClassesEmails</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceClassesEmbed.html"><abbr title="\WooCommerceClassesEmbed">WooCommerceClassesEmbed</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceClassesIntegrations.html"><abbr title="\WooCommerceClassesIntegrations">WooCommerceClassesIntegrations</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceClassesPayment.html"><abbr title="\WooCommerceClassesPayment">WooCommerceClassesPayment</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceClassesData.html"><abbr title="\WooCommerceClassesData">WooCommerceClassesData</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                            <li><a href="../packages/WooCommerceClassesData-Store.html"><abbr title="\WooCommerceClassesData\Store">Store</abbr></a></li>
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceClassesShipping.html"><abbr title="\WooCommerceClassesShipping">WooCommerceClassesShipping</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceWebhooks.html"><abbr title="\WooCommerceWebhooks">WooCommerceWebhooks</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceExport.html"><abbr title="\WooCommerceExport">WooCommerceExport</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommercePayPal.html"><abbr title="\WooCommercePayPal">WooCommercePayPal</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceImport.html"><abbr title="\WooCommerceImport">WooCommerceImport</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceIntegrations.html"><abbr title="\WooCommerceIntegrations">WooCommerceIntegrations</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceInterfaces.html"><abbr title="\WooCommerceInterfaces">WooCommerceInterfaces</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceInterface.html"><abbr title="\WooCommerceInterface">WooCommerceInterface</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceClassesLog.html"><abbr title="\WooCommerceClassesLog">WooCommerceClassesLog</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                            <li><a href="../packages/WooCommerceClassesLog-Handlers.html"><abbr title="\WooCommerceClassesLog\Handlers">Handlers</abbr></a></li>
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommercePaymentTokens.html"><abbr title="\WooCommercePaymentTokens">WooCommercePaymentTokens</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceShortcodesCart.html"><abbr title="\WooCommerceShortcodesCart">WooCommerceShortcodesCart</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceShortcodesCheckout.html"><abbr title="\WooCommerceShortcodesCheckout">WooCommerceShortcodesCheckout</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceShortcodesMy.html"><abbr title="\WooCommerceShortcodesMy">WooCommerceShortcodesMy</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                            <li><a href="../packages/WooCommerceShortcodesMy-Account.html"><abbr title="\WooCommerceShortcodesMy\Account">Account</abbr></a></li>
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceShortcodesOrder.html"><abbr title="\WooCommerceShortcodesOrder">WooCommerceShortcodesOrder</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                            <li><a href="../packages/WooCommerceShortcodesOrder-Tracking.html"><abbr title="\WooCommerceShortcodesOrder\Tracking">Tracking</abbr></a></li>
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceShortcodes.html"><abbr title="\WooCommerceShortcodes">WooCommerceShortcodes</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceTraits.html"><abbr title="\WooCommerceTraits">WooCommerceTraits</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceClassesWalkers.html"><abbr title="\WooCommerceClassesWalkers">WooCommerceClassesWalkers</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceFunctions.html"><abbr title="\WooCommerceFunctions">WooCommerceFunctions</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceWCCOM.html"><abbr title="\WooCommerceWCCOM">WooCommerceWCCOM</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                            <li><a href="../packages/WooCommerceWCCOM-SiteREST.html"><abbr title="\WooCommerceWCCOM\SiteREST">SiteREST</abbr></a></li>
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceWidgets.html"><abbr title="\WooCommerceWidgets">WooCommerceWidgets</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/AutomatticWooCommerceRestApi.html"><abbr title="\AutomatticWooCommerceRestApi">AutomatticWooCommerceRestApi</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/AutomatticWooCommerceUtilities.html"><abbr title="\AutomatticWooCommerceUtilities">AutomatticWooCommerceUtilities</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/AutomatticWooCommerce.html"><abbr title="\AutomatticWooCommerce">AutomatticWooCommerce</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/Automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                            <li><a href="../packages/Automattic-WooCommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/AutomatticWooCommerceToolsProxies.html"><abbr title="\AutomatticWooCommerceToolsProxies">AutomatticWooCommerceToolsProxies</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceTemplatesAuth.html"><abbr title="\WooCommerceTemplatesAuth">WooCommerceTemplatesAuth</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceTemplatesEmails.html"><abbr title="\WooCommerceTemplatesEmails">WooCommerceTemplatesEmails</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceTemplatesEmailsHTML.html"><abbr title="\WooCommerceTemplatesEmailsHTML">WooCommerceTemplatesEmailsHTML</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceTemplatesEmailsPlain.html"><abbr title="\WooCommerceTemplatesEmailsPlain">WooCommerceTemplatesEmailsPlain</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-        
-    <h1 class="phpdocumentor-sidebar__category-header">Reports</h1>
-    <h2 class="phpdocumentor-sidebar__root-package"><a href="../reports/deprecated.html">Deprecated</a></h2>
-    <h2 class="phpdocumentor-sidebar__root-package"><a href="../reports/errors.html">Errors</a></h2>
-    <h2 class="phpdocumentor-sidebar__root-package"><a href="../reports/markers.html">Markers</a></h2>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/AutomatticWooCommerceRestApi.html"><abbr title="\AutomatticWooCommerceRestApi">AutomatticWooCommerceRestApi</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/AutomatticWooCommerceUtilities.html"><abbr title="\AutomatticWooCommerceUtilities">AutomatticWooCommerceUtilities</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceTemplates.html"><abbr title="\WooCommerceTemplates">WooCommerceTemplates</abbr></a></h3>
+                        </section>
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
+                <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/deprecated.html">Deprecated</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/errors.html">Errors</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/markers.html">Markers</a></h3>
+    </section>
+
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Indices</h2>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../indices/files.html">Files</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../hooks/hooks.html">Hooks Reference</a></h3>
+    </section>
 </aside>
 
-        <div class="nine phpdocumentor-columns phpdocumentor-content">
-            <ul class="phpdocumentor-breadcrumbs">
-    <li><a href="../index.html">Home</a></li>
-                </ul>
+            <div class="phpdocumentor-column -eight phpdocumentor-content">
+                    <ul class="phpdocumentor-breadcrumbs">
+    </ul>
 
-    <h2>class-wc-plugins-screen-updates.php</h2>
+    <article class="phpdocumentor-element -file">
+        <h2 class="phpdocumentor-content__title">class-wc-plugins-screen-updates.php</h2>
 
-            <h3>Interfaces, Classes and Traits</h3>
-        <dl>
-            
-                            <dt><a href="../classes/WC-Plugins-Screen-Updates.html"><abbr title="\WC_Plugins_Screen_Updates">WC_Plugins_Screen_Updates</abbr></a></dt>
-                <dd>Class WC_Plugins_Screen_Updates</dd>
-            
-                    </dl>
-    
-    
-    
+                
+
+        
+                    <h3 class="phpdocumentor-elements__header" id="source-code">
+                Source code
+                <a href="#source-code" class="headerlink"><i class="fas fa-link"></i></a>
+            </h3>
+            <pre id="source-view" tabindex="-1" class="language-php line-numbers linkable-line-numbers"><code>&lt;?php
+/**
+ * Manages WooCommerce plugin updating on the Plugins screen.
+ *
+ * @package     WooCommerce\Admin
+ * @version     3.2.0
+ */
+
+use Automattic\Jetpack\Constants;
+
+if ( ! defined( &#039;ABSPATH&#039; ) ) {
+	exit;
+}
+
+if ( ! class_exists( &#039;WC_Plugin_Updates&#039; ) ) {
+	include_once dirname( __FILE__ ) . &#039;/class-wc-plugin-updates.php&#039;;
+}
+
+/**
+ * Class WC_Plugins_Screen_Updates
+ */
+class WC_Plugins_Screen_Updates extends WC_Plugin_Updates {
+
+	/**
+	 * The upgrade notice shown inline.
+	 *
+	 * @var string
+	 */
+	protected $upgrade_notice = &#039;&#039;;
+
+	/**
+	 * Constructor.
+	 */
+	public function __construct() {
+		add_action( &#039;in_plugin_update_message-woocommerce/woocommerce.php&#039;, array( $this, &#039;in_plugin_update_message&#039; ), 10, 2 );
+	}
+
+	/**
+	 * Show plugin changes on the plugins screen. Code adapted from W3 Total Cache.
+	 *
+	 * @param array    $args Unused parameter.
+	 * @param stdClass $response Plugin update response.
+	 */
+	public function in_plugin_update_message( $args, $response ) {
+		$this-&gt;new_version            = $response-&gt;new_version;
+		$this-&gt;upgrade_notice         = $this-&gt;get_upgrade_notice( $response-&gt;new_version );
+		$this-&gt;major_untested_plugins = $this-&gt;get_untested_plugins( $response-&gt;new_version, &#039;major&#039; );
+
+		$current_version_parts = explode( &#039;.&#039;, Constants::get_constant( &#039;WC_VERSION&#039; ) );
+		$new_version_parts     = explode( &#039;.&#039;, $this-&gt;new_version );
+
+		// If user has already moved to the minor version, we don&#039;t need to flag up anything.
+		if ( version_compare( $current_version_parts[0] . &#039;.&#039; . $current_version_parts[1], $new_version_parts[0] . &#039;.&#039; . $new_version_parts[1], &#039;=&#039; ) ) {
+			return;
+		}
+
+		if ( ! empty( $this-&gt;major_untested_plugins ) ) {
+			$this-&gt;upgrade_notice .= $this-&gt;get_extensions_inline_warning_major();
+		}
+
+		if ( ! empty( $this-&gt;major_untested_plugins ) ) {
+			$this-&gt;upgrade_notice .= $this-&gt;get_extensions_modal_warning();
+			add_action( &#039;admin_print_footer_scripts&#039;, array( $this, &#039;plugin_screen_modal_js&#039; ) );
+		}
+
+		echo apply_filters( &#039;woocommerce_in_plugin_update_message&#039;, $this-&gt;upgrade_notice ? &#039;&lt;/p&gt;&#039; . wp_kses_post( $this-&gt;upgrade_notice ) . &#039;&lt;p class=&quot;dummy&quot;&gt;&#039; : &#039;&#039; ); // phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped
+	}
+
+	/**
+	 * Get the upgrade notice from WordPress.org.
+	 *
+	 * @param  string $version WooCommerce new version.
+	 * @return string
+	 */
+	protected function get_upgrade_notice( $version ) {
+		$transient_name = &#039;wc_upgrade_notice_&#039; . $version;
+		$upgrade_notice = get_transient( $transient_name );
+
+		if ( false === $upgrade_notice ) {
+			$response = wp_safe_remote_get( &#039;https://plugins.svn.wordpress.org/woocommerce/trunk/readme.txt&#039; );
+
+			if ( ! is_wp_error( $response ) &amp;&amp; ! empty( $response[&#039;body&#039;] ) ) {
+				$upgrade_notice = $this-&gt;parse_update_notice( $response[&#039;body&#039;], $version );
+				set_transient( $transient_name, $upgrade_notice, DAY_IN_SECONDS );
+			}
+		}
+		return $upgrade_notice;
+	}
+
+	/**
+	 * Parse update notice from readme file.
+	 *
+	 * @param  string $content WooCommerce readme file content.
+	 * @param  string $new_version WooCommerce new version.
+	 * @return string
+	 */
+	private function parse_update_notice( $content, $new_version ) {
+		$version_parts     = explode( &#039;.&#039;, $new_version );
+		$check_for_notices = array(
+			$version_parts[0] . &#039;.0&#039;, // Major.
+			$version_parts[0] . &#039;.0.0&#039;, // Major.
+			$version_parts[0] . &#039;.&#039; . $version_parts[1], // Minor.
+			$version_parts[0] . &#039;.&#039; . $version_parts[1] . &#039;.&#039; . $version_parts[2], // Patch.
+		);
+		$notice_regexp     = &#039;~==\s*Upgrade Notice\s*==\s*=\s*(.*)\s*=(.*)(=\s*&#039; . preg_quote( $new_version ) . &#039;\s*=|$)~Uis&#039;;
+		$upgrade_notice    = &#039;&#039;;
+
+		foreach ( $check_for_notices as $check_version ) {
+			if ( version_compare( Constants::get_constant( &#039;WC_VERSION&#039; ), $check_version, &#039;&gt;&#039; ) ) {
+				continue;
+			}
+
+			$matches = null;
+			if ( preg_match( $notice_regexp, $content, $matches ) ) {
+				$notices = (array) preg_split( &#039;~[\r\n]+~&#039;, trim( $matches[2] ) );
+
+				if ( version_compare( trim( $matches[1] ), $check_version, &#039;=&#039; ) ) {
+					$upgrade_notice .= &#039;&lt;p class=&quot;wc_plugin_upgrade_notice&quot;&gt;&#039;;
+
+					foreach ( $notices as $index =&gt; $line ) {
+						$upgrade_notice .= preg_replace( &#039;~\[([^\]]*)\]\(([^\)]*)\)~&#039;, &#039;&lt;a href=&quot;${2}&quot;&gt;${1}&lt;/a&gt;&#039;, $line );
+					}
+
+					$upgrade_notice .= &#039;&lt;/p&gt;&#039;;
+				}
+				break;
+			}
+		}
+		return wp_kses_post( $upgrade_notice );
+	}
+
+	/**
+	 * JS for the modal window on the plugins screen.
+	 */
+	public function plugin_screen_modal_js() {
+		?&gt;
+		&lt;script&gt;
+			( function( $ ) {
+				var $update_box = $( &#039;#woocommerce-update&#039; );
+				var $update_link = $update_box.find(&#039;a.update-link&#039;).first();
+				var update_url = $update_link.attr( &#039;href&#039; );
+
+				// Set up thickbox.
+				$update_link.removeClass( &#039;update-link&#039; );
+				$update_link.addClass( &#039;wc-thickbox&#039; );
+				$update_link.attr( &#039;href&#039;, &#039;#TB_inline?height=600&amp;width=550&amp;inlineId=wc_untested_extensions_modal&#039; );
+
+				// Trigger the update if the user accepts the modal&#039;s warning.
+				$( &#039;#wc_untested_extensions_modal .accept&#039; ).on( &#039;click&#039;, function( evt ) {
+					evt.preventDefault();
+					tb_remove();
+					$update_link.removeClass( &#039;wc-thickbox open-plugin-details-modal&#039; );
+					$update_link.addClass( &#039;update-link&#039; );
+					$update_link.attr( &#039;href&#039;, update_url );
+					$update_link.click();
+				});
+
+				$( &#039;#wc_untested_extensions_modal .cancel&#039; ).on( &#039;click&#039;, function( evt ) {
+					evt.preventDefault();
+					tb_remove();
+				});
+			})( jQuery );
+		&lt;/script&gt;
+		&lt;?php
+		$this-&gt;generic_modal_js();
+	}
+}
+new WC_Plugins_Screen_Updates();
+</code></pre>
+            </article>
             </div>
-    </div>
-</main>
-<a href="#" class="to-top">Back to the top</a>
-<footer class="phpdocumentor phpdocumentor-footer">
+        </div>
+        <a href="#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+
+    </main>
+
+    <footer class="phpdocumentor phpdocumentor-footer">
     <div class="phpdocumentor-section">
-        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on August 19th, 2020 at 03:11 pm.</span>
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on September 24th, 2020 at 12:36 pm.</span>
     </div>
 </footer>
+
+    <script>
+        cssVars({});
+    </script>
+    <script>
+        var searchParams = {
+            'searchIndex': '..\/js\/searchIndex.json'
+        };
+    </script>
+    <script src="../js/searchIndex.js?updated=1600961772"></script>
+    <script src="../js/search.js?updated=1600961772"></script>
 </body>
 </html>

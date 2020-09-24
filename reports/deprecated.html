@@ -2,24 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>WooCommerce Code Reference</title>
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro">
-    <link rel="stylesheet" href="../css/normalize.css">
-    <link rel="stylesheet" href="../css/template.css">
-    <link rel="shortcut icon" href="../images/favicon.png"/>
+    <title>    WooCommerce Code Reference &raquo; Deprecated elements
+</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/favicon.png" />
     <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
     <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
     <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
-        <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.4.6/fuse.min.js"></script>
-    <script src="../js/search.js"></script>
-    <script defer src="../js/searchIndex.js"></script>
-    </head>
-<body>
-<header class="phpdocumentor-top-header">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/base.css?updated=1600961785">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/template.css?updated=1600961785">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
+            <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@7.2.0/dist/js/autoComplete.min.js"></script>
+        </head>
+<body id="top">
+    <header class="phpdocumentor-top-header">
     <section class="phpdocumentor-section">
         <div class="site-branding">
             <a class="site-logo" href="../index.html"><img width="180" src="../images/logo.svg" alt="WooCommerce" /></a>
@@ -27,257 +27,95 @@
         <nav class="main-navigation">
             <ul>
                 <li><a href="../hooks/hooks.html">Hooks Reference</a></li>
-                                    <li><a href="../graphs/classes.html">Class Diagram</a></li>
-                                <li><a href="https://docs.woocommerce.com/">Documentation</a></li>
+                <li><a href="https://docs.woocommerce.com/">Documentation</a></li>
                 <li><a href="https://woocommerce.github.io/woocommerce-rest-api-docs/">REST API Docs</a></li>
             </ul>
         </nav>
     </section>
 </header>
-<header class="phpdocumentor-header">
+
+<div class="phpdocumentor-header">
     <section class="phpdocumentor-section">
         <h1 class="phpdocumentor-title">WooCommerce Code Reference</h1>
+        <section class="phpdocumentor-search">
+    <label class="phpdocumentor-label">
+        <span class="visually-hidden">Search (click ESC to close search results)</span>
+        <input id="autoComplete" tabindex="1" type="search" class="phpdocumentor-field phpdocumentor-search__field" placeholder="Loading..." disabled />
+    </label>
+</section>
+
     </section>
+</div>
 
-    <section class="phpdocumentor-section">
-        <div data-search-form class="phpdocumentor-search">
-            <label class="phpdocumentor-label">
-                <span class="visually-hidden">Search</span>
-                <input type="search" class="phpdocumentor-field phpdocumentor-search__field" placeholder="Loading..." disabled />
-            </label>
-        </div>
-        <div data-search-results class="phpdocumentor-search-results phpdocumentor-search-results--hidden">
-
-            <h2>Search results</h2>
-            <ul class="phpdocumentor-search-results__entries">
-
-            </ul>
-        </div>
-    </section>
-</header>
-<main class="phpdocumentor">
-    <div class="phpdocumentor-section">
-        <aside class="three phpdocumentor-columns phpdocumentor-sidebar">
+    <main class="phpdocumentor">
+        <div class="phpdocumentor-section">
+            <aside class="phpdocumentor-column -four phpdocumentor-sidebar">
     
-    <h1 class="phpdocumentor-sidebar__category-header">Namespaces</h1>
-            <h2 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/default.html"><abbr title="\">Global</abbr></a></h2>
-                    <h3 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h3>
-            <ul class="phpdocumentor-list">
-                                    <li><a href="../namespaces/automattic-woocommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
+                                <h3 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/default.html"><abbr title="\">Global</abbr></a></h3>
+                                        <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/automattic-woocommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                                    </ul>
+                        </section>
+
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/WooCommerce-Classes.html"><abbr title="\WooCommerce\Classes">Classes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Abstracts.html"><abbr title="\WooCommerce\Abstracts">Abstracts</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Views.html"><abbr title="\WooCommerce\Views">Views</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Helper.html"><abbr title="\WooCommerce\Helper">Helper</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Templates.html"><abbr title="\WooCommerce\Templates">Templates</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Reports.html"><abbr title="\WooCommerce\Reports">Reports</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-API.html"><abbr title="\WooCommerce\API">API</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-CLI.html"><abbr title="\WooCommerce\CLI">CLI</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-l10n.html"><abbr title="\WooCommerce\l10n">l10n</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Webhooks.html"><abbr title="\WooCommerce\Webhooks">Webhooks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-DataStores.html"><abbr title="\WooCommerce\DataStores">DataStores</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Emails.html"><abbr title="\WooCommerce\Emails">Emails</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Export.html"><abbr title="\WooCommerce\Export">Export</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Gateways.html"><abbr title="\WooCommerce\Gateways">Gateways</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PayPal.html"><abbr title="\WooCommerce\PayPal">PayPal</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Import.html"><abbr title="\WooCommerce\Import">Import</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Integrations.html"><abbr title="\WooCommerce\Integrations">Integrations</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interfaces.html"><abbr title="\WooCommerce\Interfaces">Interfaces</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interface.html"><abbr title="\WooCommerce\Interface">Interface</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-LogHandlers.html"><abbr title="\WooCommerce\LogHandlers">LogHandlers</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PaymentTokens.html"><abbr title="\WooCommerce\PaymentTokens">PaymentTokens</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shipping.html"><abbr title="\WooCommerce\Shipping">Shipping</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shortcodes.html"><abbr title="\WooCommerce\Shortcodes">Shortcodes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Tracks.html"><abbr title="\WooCommerce\Tracks">Tracks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Traits.html"><abbr title="\WooCommerce\Traits">Traits</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Functions.html"><abbr title="\WooCommerce\Functions">Functions</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCom.html"><abbr title="\WooCommerce\WCCom">WCCom</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Widgets.html"><abbr title="\WooCommerce\Widgets">Widgets</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Uninstaller.html"><abbr title="\WooCommerce\Uninstaller">Uninstaller</abbr></a></li>
                             </ul>
-            
-        <h1 class="phpdocumentor-sidebar__category-header">Packages</h1>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceClasses.html"><abbr title="\WooCommerceClasses">WooCommerceClasses</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAbstracts.html"><abbr title="\WooCommerceAbstracts">WooCommerceAbstracts</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                            <li><a href="../packages/WooCommerce-Abstracts.html"><abbr title="\WooCommerce\Abstracts">Abstracts</abbr></a></li>
-                            <li><a href="../packages/WooCommerce-Admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
-                            <li><a href="../packages/WooCommerce-Views.html"><abbr title="\WooCommerce\Views">Views</abbr></a></li>
-                            <li><a href="../packages/WooCommerce-admin.html"><abbr title="\WooCommerce\admin">admin</abbr></a></li>
-                            <li><a href="../packages/WooCommerce-Classes.html"><abbr title="\WooCommerce\Classes">Classes</abbr></a></li>
-                            <li><a href="../packages/WooCommerce-Reports.html"><abbr title="\WooCommerce\Reports">Reports</abbr></a></li>
-                            <li><a href="../packages/WooCommerce-CLI.html"><abbr title="\WooCommerce\CLI">CLI</abbr></a></li>
-                            <li><a href="../packages/WooCommerce-l10n.html"><abbr title="\WooCommerce\l10n">l10n</abbr></a></li>
-                            <li><a href="../packages/WooCommerce-Cli.html"><abbr title="\WooCommerce\Cli">Cli</abbr></a></li>
-                            <li><a href="../packages/WooCommerce-DataStores.html"><abbr title="\WooCommerce\DataStores">DataStores</abbr></a></li>
-                            <li><a href="../packages/WooCommerce-DataStore.html"><abbr title="\WooCommerce\DataStore">DataStore</abbr></a></li>
-                            <li><a href="../packages/WooCommerce-Emails.html"><abbr title="\WooCommerce\Emails">Emails</abbr></a></li>
-                            <li><a href="../packages/WooCommerce-Gateways.html"><abbr title="\WooCommerce\Gateways">Gateways</abbr></a></li>
-                            <li><a href="../packages/WooCommerce-Integrations.html"><abbr title="\WooCommerce\Integrations">Integrations</abbr></a></li>
-                            <li><a href="../packages/WooCommerce-LogHandlers.html"><abbr title="\WooCommerce\LogHandlers">LogHandlers</abbr></a></li>
-                            <li><a href="../packages/WooCommerce-PaymentTokens.html"><abbr title="\WooCommerce\PaymentTokens">PaymentTokens</abbr></a></li>
-                            <li><a href="../packages/WooCommerce-Shipping.html"><abbr title="\WooCommerce\Shipping">Shipping</abbr></a></li>
-                            <li><a href="../packages/WooCommerce-Tracks.html"><abbr title="\WooCommerce\Tracks">Tracks</abbr></a></li>
-                            <li><a href="../packages/WooCommerce-Functions.html"><abbr title="\WooCommerce\Functions">Functions</abbr></a></li>
-                            <li><a href="../packages/WooCommerce-WooCommerce.html"><abbr title="\WooCommerce\WooCommerce">WooCommerce</abbr></a></li>
-                            <li><a href="../packages/WooCommerce-Templates.html"><abbr title="\WooCommerce\Templates">Templates</abbr></a></li>
-                            <li><a href="../packages/WooCommerce-Uninstaller.html"><abbr title="\WooCommerce\Uninstaller">Uninstaller</abbr></a></li>
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdmin.html"><abbr title="\WooCommerceAdmin">WooCommerceAdmin</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdminMetaBoxes.html"><abbr title="\WooCommerceAdminMetaBoxes">WooCommerceAdminMetaBoxes</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceadmin.html"><abbr title="\WooCommerceadmin">WooCommerceadmin</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdminReports.html"><abbr title="\WooCommerceAdminReports">WooCommerceAdminReports</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdminSystemStatus.html"><abbr title="\WooCommerceAdminSystemStatus">WooCommerceAdminSystemStatus</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/Default.html"><abbr title="\Default">Default</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceHelper.html"><abbr title="\WooCommerceHelper">WooCommerceHelper</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdminImporters.html"><abbr title="\WooCommerceAdminImporters">WooCommerceAdminImporters</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceTemplates.html"><abbr title="\WooCommerceTemplates">WooCommerceTemplates</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdminReporting.html"><abbr title="\WooCommerceAdminReporting">WooCommerceAdminReporting</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdminShipping.html"><abbr title="\WooCommerceAdminShipping">WooCommerceAdminShipping</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdminSettings.html"><abbr title="\WooCommerceAdminSettings">WooCommerceAdminSettings</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdminWebhooksViews.html"><abbr title="\WooCommerceAdminWebhooksViews">WooCommerceAdminWebhooksViews</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/Settings.html"><abbr title="\Settings">Settings</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdminExport.html"><abbr title="\WooCommerceAdminExport">WooCommerceAdminExport</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdminLogs.html"><abbr title="\WooCommerceAdminLogs">WooCommerceAdminLogs</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceViews.html"><abbr title="\WooCommerceViews">WooCommerceViews</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/admin.html"><abbr title="\admin">admin</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdminFunctions.html"><abbr title="\WooCommerceAdminFunctions">WooCommerceAdminFunctions</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAPI.html"><abbr title="\WooCommerceAPI">WooCommerceAPI</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceClassesProducts.html"><abbr title="\WooCommerceClassesProducts">WooCommerceClassesProducts</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceClassesEmails.html"><abbr title="\WooCommerceClassesEmails">WooCommerceClassesEmails</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceClassesEmbed.html"><abbr title="\WooCommerceClassesEmbed">WooCommerceClassesEmbed</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceClassesIntegrations.html"><abbr title="\WooCommerceClassesIntegrations">WooCommerceClassesIntegrations</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceClassesPayment.html"><abbr title="\WooCommerceClassesPayment">WooCommerceClassesPayment</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceClassesData.html"><abbr title="\WooCommerceClassesData">WooCommerceClassesData</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                            <li><a href="../packages/WooCommerceClassesData-Store.html"><abbr title="\WooCommerceClassesData\Store">Store</abbr></a></li>
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceClassesShipping.html"><abbr title="\WooCommerceClassesShipping">WooCommerceClassesShipping</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceWebhooks.html"><abbr title="\WooCommerceWebhooks">WooCommerceWebhooks</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceExport.html"><abbr title="\WooCommerceExport">WooCommerceExport</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommercePayPal.html"><abbr title="\WooCommercePayPal">WooCommercePayPal</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceImport.html"><abbr title="\WooCommerceImport">WooCommerceImport</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceIntegrations.html"><abbr title="\WooCommerceIntegrations">WooCommerceIntegrations</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceInterfaces.html"><abbr title="\WooCommerceInterfaces">WooCommerceInterfaces</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceInterface.html"><abbr title="\WooCommerceInterface">WooCommerceInterface</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceClassesLog.html"><abbr title="\WooCommerceClassesLog">WooCommerceClassesLog</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                            <li><a href="../packages/WooCommerceClassesLog-Handlers.html"><abbr title="\WooCommerceClassesLog\Handlers">Handlers</abbr></a></li>
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommercePaymentTokens.html"><abbr title="\WooCommercePaymentTokens">WooCommercePaymentTokens</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceShortcodesCart.html"><abbr title="\WooCommerceShortcodesCart">WooCommerceShortcodesCart</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceShortcodesCheckout.html"><abbr title="\WooCommerceShortcodesCheckout">WooCommerceShortcodesCheckout</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceShortcodesMy.html"><abbr title="\WooCommerceShortcodesMy">WooCommerceShortcodesMy</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                            <li><a href="../packages/WooCommerceShortcodesMy-Account.html"><abbr title="\WooCommerceShortcodesMy\Account">Account</abbr></a></li>
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceShortcodesOrder.html"><abbr title="\WooCommerceShortcodesOrder">WooCommerceShortcodesOrder</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                            <li><a href="../packages/WooCommerceShortcodesOrder-Tracking.html"><abbr title="\WooCommerceShortcodesOrder\Tracking">Tracking</abbr></a></li>
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceShortcodes.html"><abbr title="\WooCommerceShortcodes">WooCommerceShortcodes</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceTraits.html"><abbr title="\WooCommerceTraits">WooCommerceTraits</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceClassesWalkers.html"><abbr title="\WooCommerceClassesWalkers">WooCommerceClassesWalkers</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceFunctions.html"><abbr title="\WooCommerceFunctions">WooCommerceFunctions</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceWCCOM.html"><abbr title="\WooCommerceWCCOM">WooCommerceWCCOM</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                            <li><a href="../packages/WooCommerceWCCOM-SiteREST.html"><abbr title="\WooCommerceWCCOM\SiteREST">SiteREST</abbr></a></li>
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceWidgets.html"><abbr title="\WooCommerceWidgets">WooCommerceWidgets</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/AutomatticWooCommerceRestApi.html"><abbr title="\AutomatticWooCommerceRestApi">AutomatticWooCommerceRestApi</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/AutomatticWooCommerceUtilities.html"><abbr title="\AutomatticWooCommerceUtilities">AutomatticWooCommerceUtilities</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/AutomatticWooCommerce.html"><abbr title="\AutomatticWooCommerce">AutomatticWooCommerce</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/Automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                            <li><a href="../packages/Automattic-WooCommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/AutomatticWooCommerceToolsProxies.html"><abbr title="\AutomatticWooCommerceToolsProxies">AutomatticWooCommerceToolsProxies</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceTemplatesAuth.html"><abbr title="\WooCommerceTemplatesAuth">WooCommerceTemplatesAuth</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceTemplatesEmails.html"><abbr title="\WooCommerceTemplatesEmails">WooCommerceTemplatesEmails</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceTemplatesEmailsHTML.html"><abbr title="\WooCommerceTemplatesEmailsHTML">WooCommerceTemplatesEmailsHTML</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceTemplatesEmailsPlain.html"><abbr title="\WooCommerceTemplatesEmailsPlain">WooCommerceTemplatesEmailsPlain</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-        
-    <h1 class="phpdocumentor-sidebar__category-header">Reports</h1>
-    <h2 class="phpdocumentor-sidebar__root-package"><a href="../reports/deprecated.html">Deprecated</a></h2>
-    <h2 class="phpdocumentor-sidebar__root-package"><a href="../reports/errors.html">Errors</a></h2>
-    <h2 class="phpdocumentor-sidebar__root-package"><a href="../reports/markers.html">Markers</a></h2>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/AutomatticWooCommerceRestApi.html"><abbr title="\AutomatticWooCommerceRestApi">AutomatticWooCommerceRestApi</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/AutomatticWooCommerceUtilities.html"><abbr title="\AutomatticWooCommerceUtilities">AutomatticWooCommerceUtilities</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceTemplates.html"><abbr title="\WooCommerceTemplates">WooCommerceTemplates</abbr></a></h3>
+                        </section>
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
+                <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/deprecated.html">Deprecated</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/errors.html">Errors</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/markers.html">Markers</a></h3>
+    </section>
+
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Indices</h2>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../indices/files.html">Files</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../hooks/hooks.html">Hooks Reference</a></h3>
+    </section>
 </aside>
 
-        <div class="nine phpdocumentor-columns phpdocumentor-content">
-            <ul class="phpdocumentor-breadcrumbs">
+            <div class="phpdocumentor-column -eight phpdocumentor-content">
+                    <ul class="phpdocumentor-breadcrumbs">
         <li><a href="../index.html">Home</a></li>
     </ul>
 
@@ -422,6 +260,30 @@
                     <td class="phpdocumentor-cell"><a href="#woocommerce/includes/legacy/class-wc-legacy-webhook.php">woocommerce/includes/legacy/class-wc-legacy-webhook.php</a></td>
                 </tr>
                             <tr>
+                    <td class="phpdocumentor-cell"><a href="#woocommerce/includes/rest-api/Controllers/Version1/class-wc-rest-orders-v1-controller.php">woocommerce/includes/rest-api/Controllers/Version1/class-wc-rest-orders-v1-controller.php</a></td>
+                </tr>
+                            <tr>
+                    <td class="phpdocumentor-cell"><a href="#woocommerce/includes/rest-api/Controllers/Version1/class-wc-rest-product-attributes-v1-controller.php">woocommerce/includes/rest-api/Controllers/Version1/class-wc-rest-product-attributes-v1-controller.php</a></td>
+                </tr>
+                            <tr>
+                    <td class="phpdocumentor-cell"><a href="#woocommerce/includes/rest-api/Controllers/Version1/class-wc-rest-products-v1-controller.php">woocommerce/includes/rest-api/Controllers/Version1/class-wc-rest-products-v1-controller.php</a></td>
+                </tr>
+                            <tr>
+                    <td class="phpdocumentor-cell"><a href="#woocommerce/includes/rest-api/Controllers/Version1/class-wc-rest-webhook-deliveries-v1-controller.php">woocommerce/includes/rest-api/Controllers/Version1/class-wc-rest-webhook-deliveries-v1-controller.php</a></td>
+                </tr>
+                            <tr>
+                    <td class="phpdocumentor-cell"><a href="#woocommerce/includes/rest-api/Controllers/Version2/class-wc-rest-products-v2-controller.php">woocommerce/includes/rest-api/Controllers/Version2/class-wc-rest-products-v2-controller.php</a></td>
+                </tr>
+                            <tr>
+                    <td class="phpdocumentor-cell"><a href="#woocommerce/includes/rest-api/Controllers/Version2/class-wc-rest-system-status-v2-controller.php">woocommerce/includes/rest-api/Controllers/Version2/class-wc-rest-system-status-v2-controller.php</a></td>
+                </tr>
+                            <tr>
+                    <td class="phpdocumentor-cell"><a href="#woocommerce/includes/rest-api/Controllers/Version2/class-wc-rest-webhook-deliveries-v2-controller.php">woocommerce/includes/rest-api/Controllers/Version2/class-wc-rest-webhook-deliveries-v2-controller.php</a></td>
+                </tr>
+                            <tr>
+                    <td class="phpdocumentor-cell"><a href="#woocommerce/includes/rest-api/Package.php">woocommerce/includes/rest-api/Package.php</a></td>
+                </tr>
+                            <tr>
                     <td class="phpdocumentor-cell"><a href="#woocommerce/includes/shipping/legacy-flat-rate/class-wc-shipping-legacy-flat-rate.php">woocommerce/includes/shipping/legacy-flat-rate/class-wc-shipping-legacy-flat-rate.php</a></td>
                 </tr>
                             <tr>
@@ -447,27 +309,6 @@
                 </tr>
                             <tr>
                     <td class="phpdocumentor-cell"><a href="#woocommerce/includes/widgets/class-wc-widget-product-tag-cloud.php">woocommerce/includes/widgets/class-wc-widget-product-tag-cloud.php</a></td>
-                </tr>
-                            <tr>
-                    <td class="phpdocumentor-cell"><a href="#woocommerce/packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-orders-v1-controller.php">woocommerce/packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-orders-v1-controller.php</a></td>
-                </tr>
-                            <tr>
-                    <td class="phpdocumentor-cell"><a href="#woocommerce/packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-product-attributes-v1-controller.php">woocommerce/packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-product-attributes-v1-controller.php</a></td>
-                </tr>
-                            <tr>
-                    <td class="phpdocumentor-cell"><a href="#woocommerce/packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-products-v1-controller.php">woocommerce/packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-products-v1-controller.php</a></td>
-                </tr>
-                            <tr>
-                    <td class="phpdocumentor-cell"><a href="#woocommerce/packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-webhook-deliveries-v1-controller.php">woocommerce/packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-webhook-deliveries-v1-controller.php</a></td>
-                </tr>
-                            <tr>
-                    <td class="phpdocumentor-cell"><a href="#woocommerce/packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-products-v2-controller.php">woocommerce/packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-products-v2-controller.php</a></td>
-                </tr>
-                            <tr>
-                    <td class="phpdocumentor-cell"><a href="#woocommerce/packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-system-status-v2-controller.php">woocommerce/packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-system-status-v2-controller.php</a></td>
-                </tr>
-                            <tr>
-                    <td class="phpdocumentor-cell"><a href="#woocommerce/packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-webhook-deliveries-v2-controller.php">woocommerce/packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-webhook-deliveries-v2-controller.php</a></td>
                 </tr>
                     </table>
         
@@ -939,17 +780,17 @@
                     <th class="phpdocumentor-heading">Reason</th>
                 </tr>
                                                             <tr>
-                            <td class="phpdocumentor-cell">498</td>
+                            <td class="phpdocumentor-cell">501</td>
                             <td class="phpdocumentor-cell"><a href="../classes/WC-Post-Data.html#method_sync_product_stock_status"><abbr title="\WC_Post_Data::sync_product_stock_status()">normal</abbr></a></td>
                             <td class="phpdocumentor-cell"></td>
                         </tr>
                                                                                 <tr>
-                            <td class="phpdocumentor-cell">508</td>
+                            <td class="phpdocumentor-cell">511</td>
                             <td class="phpdocumentor-cell"><a href="../classes/WC-Post-Data.html#method_process_product_file_download_paths"><abbr title="\WC_Post_Data::process_product_file_download_paths()">normal</abbr></a></td>
                             <td class="phpdocumentor-cell">No action is necessary on changes to download paths since download_id is no longer based on file hash.</td>
                         </tr>
                                                                                 <tr>
-                            <td class="phpdocumentor-cell">523</td>
+                            <td class="phpdocumentor-cell">526</td>
                             <td class="phpdocumentor-cell"><a href="../classes/WC-Post-Data.html#method_set_object_terms"><abbr title="\WC_Post_Data::set_object_terms()">normal</abbr></a></td>
                             <td class="phpdocumentor-cell"></td>
                         </tr>
@@ -982,42 +823,42 @@
                     <th class="phpdocumentor-heading">Reason</th>
                 </tr>
                                                             <tr>
-                            <td class="phpdocumentor-cell">921</td>
+                            <td class="phpdocumentor-cell">876</td>
                             <td class="phpdocumentor-cell"><a href="../classes/WC-Query.html#method_rating_filter_meta_query"><abbr title="\WC_Query::rating_filter_meta_query()">normal</abbr></a></td>
                             <td class="phpdocumentor-cell">Replaced with taxonomy.</td>
                         </tr>
                                                                                 <tr>
-                            <td class="phpdocumentor-cell">932</td>
+                            <td class="phpdocumentor-cell">887</td>
                             <td class="phpdocumentor-cell"><a href="../classes/WC-Query.html#method_visibility_meta_query"><abbr title="\WC_Query::visibility_meta_query()">normal</abbr></a></td>
                             <td class="phpdocumentor-cell">Replaced with taxonomy.</td>
                         </tr>
                                                                                 <tr>
-                            <td class="phpdocumentor-cell">943</td>
+                            <td class="phpdocumentor-cell">898</td>
                             <td class="phpdocumentor-cell"><a href="../classes/WC-Query.html#method_stock_status_meta_query"><abbr title="\WC_Query::stock_status_meta_query()">normal</abbr></a></td>
                             <td class="phpdocumentor-cell">Replaced with taxonomy.</td>
                         </tr>
                                                                                 <tr>
-                            <td class="phpdocumentor-cell">952</td>
+                            <td class="phpdocumentor-cell">907</td>
                             <td class="phpdocumentor-cell"><a href="../classes/WC-Query.html#method_layered_nav_init"><abbr title="\WC_Query::layered_nav_init()">normal</abbr></a></td>
                             <td class="phpdocumentor-cell"></td>
                         </tr>
                                                                                 <tr>
-                            <td class="phpdocumentor-cell">961</td>
+                            <td class="phpdocumentor-cell">916</td>
                             <td class="phpdocumentor-cell"><a href="../classes/WC-Query.html#method_get_products_in_view"><abbr title="\WC_Query::get_products_in_view()">normal</abbr></a></td>
                             <td class="phpdocumentor-cell">due to performance concerns</td>
                         </tr>
                                                                                 <tr>
-                            <td class="phpdocumentor-cell">972</td>
+                            <td class="phpdocumentor-cell">927</td>
                             <td class="phpdocumentor-cell"><a href="../classes/WC-Query.html#method_layered_nav_query"><abbr title="\WC_Query::layered_nav_query()">normal</abbr></a></td>
                             <td class="phpdocumentor-cell">due to performance concerns</td>
                         </tr>
                                                                                 <tr>
-                            <td class="phpdocumentor-cell">983</td>
+                            <td class="phpdocumentor-cell">938</td>
                             <td class="phpdocumentor-cell"><a href="../classes/WC-Query.html#method_search_post_excerpt"><abbr title="\WC_Query::search_post_excerpt()">normal</abbr></a></td>
                             <td class="phpdocumentor-cell">- Not needed anymore since WordPress 4.5.</td>
                         </tr>
                                                                                 <tr>
-                            <td class="phpdocumentor-cell">993</td>
+                            <td class="phpdocumentor-cell">948</td>
                             <td class="phpdocumentor-cell"><a href="../classes/WC-Query.html#method_remove_posts_where"><abbr title="\WC_Query::remove_posts_where()">normal</abbr></a></td>
                             <td class="phpdocumentor-cell">- Nothing to remove anymore because search_post_excerpt() is deprecated.</td>
                         </tr>
@@ -1667,6 +1508,158 @@ classes. This function now does nothing to avoid data breakage.</td>
                             <td class="phpdocumentor-cell"></td>
                         </tr>
                                                 </table>
+                    <a id="woocommerce/includes/rest-api/Controllers/Version1/class-wc-rest-orders-v1-controller.php"></a>
+            <h3><abbr title="woocommerce/includes/rest-api/Controllers/Version1/class-wc-rest-orders-v1-controller.php">class-wc-rest-orders-v1-controller.php</abbr></h3>
+            <table>
+                <tr>
+                    <th class="phpdocumentor-heading">Line</th>
+                    <th class="phpdocumentor-heading">Element</th>
+                    <th class="phpdocumentor-heading">Reason</th>
+                </tr>
+                                                            <tr>
+                            <td class="phpdocumentor-cell">511</td>
+                            <td class="phpdocumentor-cell"><a href="../classes/WC-REST-Orders-V1-Controller.html#method_create_base_order"><abbr title="\WC_REST_Orders_V1_Controller::create_base_order()">normal</abbr></a></td>
+                            <td class="phpdocumentor-cell"></td>
+                        </tr>
+                                                </table>
+                    <a id="woocommerce/includes/rest-api/Controllers/Version1/class-wc-rest-product-attributes-v1-controller.php"></a>
+            <h3><abbr title="woocommerce/includes/rest-api/Controllers/Version1/class-wc-rest-product-attributes-v1-controller.php">class-wc-rest-product-attributes-v1-controller.php</abbr></h3>
+            <table>
+                <tr>
+                    <th class="phpdocumentor-heading">Line</th>
+                    <th class="phpdocumentor-heading">Element</th>
+                    <th class="phpdocumentor-heading">Reason</th>
+                </tr>
+                                                            <tr>
+                            <td class="phpdocumentor-cell">571</td>
+                            <td class="phpdocumentor-cell"><a href="../classes/WC-REST-Product-Attributes-V1-Controller.html#method_validate_attribute_slug"><abbr title="\WC_REST_Product_Attributes_V1_Controller::validate_attribute_slug()">normal</abbr></a></td>
+                            <td class="phpdocumentor-cell"></td>
+                        </tr>
+                                                                                <tr>
+                            <td class="phpdocumentor-cell">589</td>
+                            <td class="phpdocumentor-cell"><a href="../classes/WC-REST-Product-Attributes-V1-Controller.html#method_flush_rewrite_rules"><abbr title="\WC_REST_Product_Attributes_V1_Controller::flush_rewrite_rules()">normal</abbr></a></td>
+                            <td class="phpdocumentor-cell"></td>
+                        </tr>
+                                                </table>
+                    <a id="woocommerce/includes/rest-api/Controllers/Version1/class-wc-rest-products-v1-controller.php"></a>
+            <h3><abbr title="woocommerce/includes/rest-api/Controllers/Version1/class-wc-rest-products-v1-controller.php">class-wc-rest-products-v1-controller.php</abbr></h3>
+            <table>
+                <tr>
+                    <th class="phpdocumentor-heading">Line</th>
+                    <th class="phpdocumentor-heading">Element</th>
+                    <th class="phpdocumentor-heading">Reason</th>
+                </tr>
+                                                            <tr>
+                            <td class="phpdocumentor-cell">450</td>
+                            <td class="phpdocumentor-cell"><a href="../classes/WC-REST-Products-V1-Controller.html#method_get_product_menu_order"><abbr title="\WC_REST_Products_V1_Controller::get_product_menu_order()">normal</abbr></a></td>
+                            <td class="phpdocumentor-cell"></td>
+                        </tr>
+                                                                                <tr>
+                            <td class="phpdocumentor-cell">831</td>
+                            <td class="phpdocumentor-cell"><a href="../classes/WC-REST-Products-V1-Controller.html#method_save_product_images"><abbr title="\WC_REST_Products_V1_Controller::save_product_images()">normal</abbr></a></td>
+                            <td class="phpdocumentor-cell"></td>
+                        </tr>
+                                                                                <tr>
+                            <td class="phpdocumentor-cell">1062</td>
+                            <td class="phpdocumentor-cell"><a href="../classes/WC-REST-Products-V1-Controller.html#method_save_product_meta"><abbr title="\WC_REST_Products_V1_Controller::save_product_meta()">normal</abbr></a></td>
+                            <td class="phpdocumentor-cell"></td>
+                        </tr>
+                                                </table>
+                    <a id="woocommerce/includes/rest-api/Controllers/Version1/class-wc-rest-webhook-deliveries-v1-controller.php"></a>
+            <h3><abbr title="woocommerce/includes/rest-api/Controllers/Version1/class-wc-rest-webhook-deliveries-v1-controller.php">class-wc-rest-webhook-deliveries-v1-controller.php</abbr></h3>
+            <table>
+                <tr>
+                    <th class="phpdocumentor-heading">Line</th>
+                    <th class="phpdocumentor-heading">Element</th>
+                    <th class="phpdocumentor-heading">Reason</th>
+                </tr>
+                                                            <tr>
+                            <td class="phpdocumentor-cell">24</td>
+                            <td class="phpdocumentor-cell"><a href="../classes/WC-REST-Webhook-Deliveries-V1-Controller.html"><abbr title="\WC_REST_Webhook_Deliveries_V1_Controller">normal</abbr></a></td>
+                            <td class="phpdocumentor-cell">Webhooks deliveries logs now uses logging system.</td>
+                        </tr>
+                                                </table>
+                    <a id="woocommerce/includes/rest-api/Controllers/Version2/class-wc-rest-products-v2-controller.php"></a>
+            <h3><abbr title="woocommerce/includes/rest-api/Controllers/Version2/class-wc-rest-products-v2-controller.php">class-wc-rest-products-v2-controller.php</abbr></h3>
+            <table>
+                <tr>
+                    <th class="phpdocumentor-heading">Line</th>
+                    <th class="phpdocumentor-heading">Element</th>
+                    <th class="phpdocumentor-heading">Reason</th>
+                </tr>
+                                                            <tr>
+                            <td class="phpdocumentor-cell">443</td>
+                            <td class="phpdocumentor-cell"><a href="../classes/WC-REST-Products-V2-Controller.html#method_get_attribute_taxonomy_label"><abbr title="\WC_REST_Products_V2_Controller::get_attribute_taxonomy_label()">normal</abbr></a></td>
+                            <td class="phpdocumentor-cell"></td>
+                        </tr>
+                                                </table>
+                    <a id="woocommerce/includes/rest-api/Controllers/Version2/class-wc-rest-system-status-v2-controller.php"></a>
+            <h3><abbr title="woocommerce/includes/rest-api/Controllers/Version2/class-wc-rest-system-status-v2-controller.php">class-wc-rest-system-status-v2-controller.php</abbr></h3>
+            <table>
+                <tr>
+                    <th class="phpdocumentor-heading">Line</th>
+                    <th class="phpdocumentor-heading">Element</th>
+                    <th class="phpdocumentor-heading">Reason</th>
+                </tr>
+                                                            <tr>
+                            <td class="phpdocumentor-cell">565</td>
+                            <td class="phpdocumentor-cell"><a href="../classes/WC-REST-System-Status-V2-Controller.html#method_get_item_mappings"><abbr title="\WC_REST_System_Status_V2_Controller::get_item_mappings()">normal</abbr></a></td>
+                            <td class="phpdocumentor-cell"></td>
+                        </tr>
+                                                                                <tr>
+                            <td class="phpdocumentor-cell">609</td>
+                            <td class="phpdocumentor-cell"><a href="../classes/WC-REST-System-Status-V2-Controller.html#method_get_environment_info"><abbr title="\WC_REST_System_Status_V2_Controller::get_environment_info()">normal</abbr></a></td>
+                            <td class="phpdocumentor-cell"></td>
+                        </tr>
+                                                </table>
+                    <a id="woocommerce/includes/rest-api/Controllers/Version2/class-wc-rest-webhook-deliveries-v2-controller.php"></a>
+            <h3><abbr title="woocommerce/includes/rest-api/Controllers/Version2/class-wc-rest-webhook-deliveries-v2-controller.php">class-wc-rest-webhook-deliveries-v2-controller.php</abbr></h3>
+            <table>
+                <tr>
+                    <th class="phpdocumentor-heading">Line</th>
+                    <th class="phpdocumentor-heading">Element</th>
+                    <th class="phpdocumentor-heading">Reason</th>
+                </tr>
+                                                            <tr>
+                            <td class="phpdocumentor-cell">20</td>
+                            <td class="phpdocumentor-cell"><a href="../classes/WC-REST-Webhook-Deliveries-V2-Controller.html"><abbr title="\WC_REST_Webhook_Deliveries_V2_Controller">normal</abbr></a></td>
+                            <td class="phpdocumentor-cell">Webhooks deliveries logs now uses logging system.</td>
+                        </tr>
+                                                </table>
+                    <a id="woocommerce/includes/rest-api/Package.php"></a>
+            <h3><abbr title="woocommerce/includes/rest-api/Package.php">Package.php</abbr></h3>
+            <table>
+                <tr>
+                    <th class="phpdocumentor-heading">Line</th>
+                    <th class="phpdocumentor-heading">Element</th>
+                    <th class="phpdocumentor-heading">Reason</th>
+                </tr>
+                                                            <tr>
+                            <td class="phpdocumentor-cell">19</td>
+                            <td class="phpdocumentor-cell"><a href="../classes/Automattic-WooCommerce-RestApi-Package.html"><abbr title="\Automattic\WooCommerce\RestApi\Package">normal</abbr></a></td>
+                            <td class="phpdocumentor-cell">Use \Automattic\WooCommerce\RestApi\Server directly.</td>
+                        </tr>
+                                                                                <tr>
+                            <td class="phpdocumentor-cell">34</td>
+                            <td class="phpdocumentor-cell"><a href="../classes/Automattic-WooCommerce-RestApi-Package.html#method_init"><abbr title="\Automattic\WooCommerce\RestApi\Package::init()">normal</abbr></a></td>
+                            <td class="phpdocumentor-cell">since 4.5.0. Directly call Automattic\WooCommerce\RestApi\Server::instance()-&gt;init()</td>
+                        </tr>
+                                                                                <tr>
+                            <td class="phpdocumentor-cell">45</td>
+                            <td class="phpdocumentor-cell"><a href="../classes/Automattic-WooCommerce-RestApi-Package.html#method_get_version"><abbr title="\Automattic\WooCommerce\RestApi\Package::get_version()">normal</abbr></a></td>
+                            <td class="phpdocumentor-cell">since 4.5.0. This tracks WooCommerce version now.</td>
+                        </tr>
+                                                                                <tr>
+                            <td class="phpdocumentor-cell">56</td>
+                            <td class="phpdocumentor-cell"><a href="../classes/Automattic-WooCommerce-RestApi-Package.html#method_get_path"><abbr title="\Automattic\WooCommerce\RestApi\Package::get_path()">normal</abbr></a></td>
+                            <td class="phpdocumentor-cell">since 4.5.0. Directly call Automattic\WooCommerce\RestApi\Server::get_path()</td>
+                        </tr>
+                                                                                <tr>
+                            <td class="phpdocumentor-cell">27</td>
+                            <td class="phpdocumentor-cell"><a href="../classes/Automattic-WooCommerce-RestApi-Package.html#constant_VERSION"><abbr title="\Automattic\WooCommerce\RestApi\Package::VERSION">normal</abbr></a></td>
+                            <td class="phpdocumentor-cell">since 4.5.0. This tracks WooCommerce version now.</td>
+                        </tr>
+                                                </table>
                     <a id="woocommerce/includes/shipping/legacy-flat-rate/class-wc-shipping-legacy-flat-rate.php"></a>
             <h3><abbr title="woocommerce/includes/shipping/legacy-flat-rate/class-wc-shipping-legacy-flat-rate.php">class-wc-shipping-legacy-flat-rate.php</abbr></h3>
             <table>
@@ -2300,17 +2293,17 @@ Option Name | Additional Cost [+- Percents%] | Per Cost Type (order, class, or i
                             <td class="phpdocumentor-cell">@todo Add a notice in a future version.</td>
                         </tr>
                                                                                 <tr>
-                            <td class="phpdocumentor-cell">3699</td>
+                            <td class="phpdocumentor-cell">3703</td>
                             <td class="phpdocumentor-cell"><a href="../namespaces/default.html#function_wc_products_rss_feed"><abbr title="\wc_products_rss_feed()">normal</abbr></a></td>
                             <td class="phpdocumentor-cell"></td>
                         </tr>
                                                                                 <tr>
-                            <td class="phpdocumentor-cell">3710</td>
+                            <td class="phpdocumentor-cell">3714</td>
                             <td class="phpdocumentor-cell"><a href="../namespaces/default.html#function_woocommerce_reset_loop"><abbr title="\woocommerce_reset_loop()">normal</abbr></a></td>
                             <td class="phpdocumentor-cell"></td>
                         </tr>
                                                                                 <tr>
-                            <td class="phpdocumentor-cell">3721</td>
+                            <td class="phpdocumentor-cell">3725</td>
                             <td class="phpdocumentor-cell"><a href="../namespaces/default.html#function_woocommerce_product_reviews_tab"><abbr title="\woocommerce_product_reviews_tab()">normal</abbr></a></td>
                             <td class="phpdocumentor-cell">Unused.</td>
                         </tr>
@@ -2334,133 +2327,28 @@ Option Name | Additional Cost [+- Percents%] | Per Cost Type (order, class, or i
                             <td class="phpdocumentor-cell"></td>
                         </tr>
                                                 </table>
-                    <a id="woocommerce/packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-orders-v1-controller.php"></a>
-            <h3><abbr title="woocommerce/packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-orders-v1-controller.php">class-wc-rest-orders-v1-controller.php</abbr></h3>
-            <table>
-                <tr>
-                    <th class="phpdocumentor-heading">Line</th>
-                    <th class="phpdocumentor-heading">Element</th>
-                    <th class="phpdocumentor-heading">Reason</th>
-                </tr>
-                                                            <tr>
-                            <td class="phpdocumentor-cell">511</td>
-                            <td class="phpdocumentor-cell"><a href="../classes/WC-REST-Orders-V1-Controller.html#method_create_base_order"><abbr title="\WC_REST_Orders_V1_Controller::create_base_order()">normal</abbr></a></td>
-                            <td class="phpdocumentor-cell"></td>
-                        </tr>
-                                                </table>
-                    <a id="woocommerce/packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-product-attributes-v1-controller.php"></a>
-            <h3><abbr title="woocommerce/packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-product-attributes-v1-controller.php">class-wc-rest-product-attributes-v1-controller.php</abbr></h3>
-            <table>
-                <tr>
-                    <th class="phpdocumentor-heading">Line</th>
-                    <th class="phpdocumentor-heading">Element</th>
-                    <th class="phpdocumentor-heading">Reason</th>
-                </tr>
-                                                            <tr>
-                            <td class="phpdocumentor-cell">571</td>
-                            <td class="phpdocumentor-cell"><a href="../classes/WC-REST-Product-Attributes-V1-Controller.html#method_validate_attribute_slug"><abbr title="\WC_REST_Product_Attributes_V1_Controller::validate_attribute_slug()">normal</abbr></a></td>
-                            <td class="phpdocumentor-cell"></td>
-                        </tr>
-                                                                                <tr>
-                            <td class="phpdocumentor-cell">589</td>
-                            <td class="phpdocumentor-cell"><a href="../classes/WC-REST-Product-Attributes-V1-Controller.html#method_flush_rewrite_rules"><abbr title="\WC_REST_Product_Attributes_V1_Controller::flush_rewrite_rules()">normal</abbr></a></td>
-                            <td class="phpdocumentor-cell"></td>
-                        </tr>
-                                                </table>
-                    <a id="woocommerce/packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-products-v1-controller.php"></a>
-            <h3><abbr title="woocommerce/packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-products-v1-controller.php">class-wc-rest-products-v1-controller.php</abbr></h3>
-            <table>
-                <tr>
-                    <th class="phpdocumentor-heading">Line</th>
-                    <th class="phpdocumentor-heading">Element</th>
-                    <th class="phpdocumentor-heading">Reason</th>
-                </tr>
-                                                            <tr>
-                            <td class="phpdocumentor-cell">450</td>
-                            <td class="phpdocumentor-cell"><a href="../classes/WC-REST-Products-V1-Controller.html#method_get_product_menu_order"><abbr title="\WC_REST_Products_V1_Controller::get_product_menu_order()">normal</abbr></a></td>
-                            <td class="phpdocumentor-cell"></td>
-                        </tr>
-                                                                                <tr>
-                            <td class="phpdocumentor-cell">831</td>
-                            <td class="phpdocumentor-cell"><a href="../classes/WC-REST-Products-V1-Controller.html#method_save_product_images"><abbr title="\WC_REST_Products_V1_Controller::save_product_images()">normal</abbr></a></td>
-                            <td class="phpdocumentor-cell"></td>
-                        </tr>
-                                                                                <tr>
-                            <td class="phpdocumentor-cell">1062</td>
-                            <td class="phpdocumentor-cell"><a href="../classes/WC-REST-Products-V1-Controller.html#method_save_product_meta"><abbr title="\WC_REST_Products_V1_Controller::save_product_meta()">normal</abbr></a></td>
-                            <td class="phpdocumentor-cell"></td>
-                        </tr>
-                                                </table>
-                    <a id="woocommerce/packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-webhook-deliveries-v1-controller.php"></a>
-            <h3><abbr title="woocommerce/packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-webhook-deliveries-v1-controller.php">class-wc-rest-webhook-deliveries-v1-controller.php</abbr></h3>
-            <table>
-                <tr>
-                    <th class="phpdocumentor-heading">Line</th>
-                    <th class="phpdocumentor-heading">Element</th>
-                    <th class="phpdocumentor-heading">Reason</th>
-                </tr>
-                                                            <tr>
-                            <td class="phpdocumentor-cell">24</td>
-                            <td class="phpdocumentor-cell"><a href="../classes/WC-REST-Webhook-Deliveries-V1-Controller.html"><abbr title="\WC_REST_Webhook_Deliveries_V1_Controller">normal</abbr></a></td>
-                            <td class="phpdocumentor-cell">Webhooks deliveries logs now uses logging system.</td>
-                        </tr>
-                                                </table>
-                    <a id="woocommerce/packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-products-v2-controller.php"></a>
-            <h3><abbr title="woocommerce/packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-products-v2-controller.php">class-wc-rest-products-v2-controller.php</abbr></h3>
-            <table>
-                <tr>
-                    <th class="phpdocumentor-heading">Line</th>
-                    <th class="phpdocumentor-heading">Element</th>
-                    <th class="phpdocumentor-heading">Reason</th>
-                </tr>
-                                                            <tr>
-                            <td class="phpdocumentor-cell">443</td>
-                            <td class="phpdocumentor-cell"><a href="../classes/WC-REST-Products-V2-Controller.html#method_get_attribute_taxonomy_label"><abbr title="\WC_REST_Products_V2_Controller::get_attribute_taxonomy_label()">normal</abbr></a></td>
-                            <td class="phpdocumentor-cell"></td>
-                        </tr>
-                                                </table>
-                    <a id="woocommerce/packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-system-status-v2-controller.php"></a>
-            <h3><abbr title="woocommerce/packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-system-status-v2-controller.php">class-wc-rest-system-status-v2-controller.php</abbr></h3>
-            <table>
-                <tr>
-                    <th class="phpdocumentor-heading">Line</th>
-                    <th class="phpdocumentor-heading">Element</th>
-                    <th class="phpdocumentor-heading">Reason</th>
-                </tr>
-                                                            <tr>
-                            <td class="phpdocumentor-cell">565</td>
-                            <td class="phpdocumentor-cell"><a href="../classes/WC-REST-System-Status-V2-Controller.html#method_get_item_mappings"><abbr title="\WC_REST_System_Status_V2_Controller::get_item_mappings()">normal</abbr></a></td>
-                            <td class="phpdocumentor-cell"></td>
-                        </tr>
-                                                                                <tr>
-                            <td class="phpdocumentor-cell">609</td>
-                            <td class="phpdocumentor-cell"><a href="../classes/WC-REST-System-Status-V2-Controller.html#method_get_environment_info"><abbr title="\WC_REST_System_Status_V2_Controller::get_environment_info()">normal</abbr></a></td>
-                            <td class="phpdocumentor-cell"></td>
-                        </tr>
-                                                </table>
-                    <a id="woocommerce/packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-webhook-deliveries-v2-controller.php"></a>
-            <h3><abbr title="woocommerce/packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-webhook-deliveries-v2-controller.php">class-wc-rest-webhook-deliveries-v2-controller.php</abbr></h3>
-            <table>
-                <tr>
-                    <th class="phpdocumentor-heading">Line</th>
-                    <th class="phpdocumentor-heading">Element</th>
-                    <th class="phpdocumentor-heading">Reason</th>
-                </tr>
-                                                            <tr>
-                            <td class="phpdocumentor-cell">20</td>
-                            <td class="phpdocumentor-cell"><a href="../classes/WC-REST-Webhook-Deliveries-V2-Controller.html"><abbr title="\WC_REST_Webhook_Deliveries_V2_Controller">normal</abbr></a></td>
-                            <td class="phpdocumentor-cell">Webhooks deliveries logs now uses logging system.</td>
-                        </tr>
-                                                </table>
+            </div>
             </div>
         </div>
-    </div>
-</main>
-<a href="#" class="to-top">Back to the top</a>
-<footer class="phpdocumentor phpdocumentor-footer">
+        <a href="#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+
+    </main>
+
+    <footer class="phpdocumentor phpdocumentor-footer">
     <div class="phpdocumentor-section">
-        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on August 19th, 2020 at 03:11 pm.</span>
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on September 24th, 2020 at 12:36 pm.</span>
     </div>
 </footer>
+
+    <script>
+        cssVars({});
+    </script>
+    <script>
+        var searchParams = {
+            'searchIndex': '..\/js\/searchIndex.json'
+        };
+    </script>
+    <script src="../js/searchIndex.js?updated=1600961786"></script>
+    <script src="../js/search.js?updated=1600961786"></script>
 </body>
 </html>

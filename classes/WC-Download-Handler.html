@@ -3,23 +3,22 @@
 <head>
     <meta charset="utf-8">
     <title>WooCommerce Code Reference</title>
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro">
-    <link rel="stylesheet" href="../css/normalize.css">
-    <link rel="stylesheet" href="../css/template.css">
-    <link rel="shortcut icon" href="../images/favicon.png"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/favicon.png" />
     <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
     <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
     <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
-        <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.4.6/fuse.min.js"></script>
-    <script src="../js/search.js"></script>
-    <script defer src="../js/searchIndex.js"></script>
-    </head>
-<body>
-<header class="phpdocumentor-top-header">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/base.css?updated=1600961776">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/template.css?updated=1600961776">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
+            <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@7.2.0/dist/js/autoComplete.min.js"></script>
+        </head>
+<body id="top">
+    <header class="phpdocumentor-top-header">
     <section class="phpdocumentor-section">
         <div class="site-branding">
             <a class="site-logo" href="../index.html"><img width="180" src="../images/logo.svg" alt="WooCommerce" /></a>
@@ -27,1259 +26,1195 @@
         <nav class="main-navigation">
             <ul>
                 <li><a href="../hooks/hooks.html">Hooks Reference</a></li>
-                                    <li><a href="../graphs/classes.html">Class Diagram</a></li>
-                                <li><a href="https://docs.woocommerce.com/">Documentation</a></li>
+                <li><a href="https://docs.woocommerce.com/">Documentation</a></li>
                 <li><a href="https://woocommerce.github.io/woocommerce-rest-api-docs/">REST API Docs</a></li>
             </ul>
         </nav>
     </section>
 </header>
-<header class="phpdocumentor-header">
+
+<div class="phpdocumentor-header">
     <section class="phpdocumentor-section">
         <h1 class="phpdocumentor-title">WooCommerce Code Reference</h1>
+        <section class="phpdocumentor-search">
+    <label class="phpdocumentor-label">
+        <span class="visually-hidden">Search (click ESC to close search results)</span>
+        <input id="autoComplete" tabindex="1" type="search" class="phpdocumentor-field phpdocumentor-search__field" placeholder="Loading..." disabled />
+    </label>
+</section>
+
     </section>
+</div>
 
-    <section class="phpdocumentor-section">
-        <div data-search-form class="phpdocumentor-search">
-            <label class="phpdocumentor-label">
-                <span class="visually-hidden">Search</span>
-                <input type="search" class="phpdocumentor-field phpdocumentor-search__field" placeholder="Loading..." disabled />
-            </label>
-        </div>
-        <div data-search-results class="phpdocumentor-search-results phpdocumentor-search-results--hidden">
-
-            <h2>Search results</h2>
-            <ul class="phpdocumentor-search-results__entries">
-
-            </ul>
-        </div>
-    </section>
-</header>
-<main class="phpdocumentor">
-    <div class="phpdocumentor-section">
-        <aside class="three phpdocumentor-columns phpdocumentor-sidebar">
+    <main class="phpdocumentor">
+        <div class="phpdocumentor-section">
+            <aside class="phpdocumentor-column -four phpdocumentor-sidebar">
     
-    <h1 class="phpdocumentor-sidebar__category-header">Namespaces</h1>
-            <h2 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/default.html"><abbr title="\">Global</abbr></a></h2>
-                    <h3 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h3>
-            <ul class="phpdocumentor-list">
-                                    <li><a href="../namespaces/automattic-woocommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
+                                <h3 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/default.html"><abbr title="\">Global</abbr></a></h3>
+                                        <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/automattic-woocommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                                    </ul>
+                        </section>
+
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/WooCommerce-Classes.html"><abbr title="\WooCommerce\Classes">Classes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Abstracts.html"><abbr title="\WooCommerce\Abstracts">Abstracts</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Views.html"><abbr title="\WooCommerce\Views">Views</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Helper.html"><abbr title="\WooCommerce\Helper">Helper</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Templates.html"><abbr title="\WooCommerce\Templates">Templates</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Reports.html"><abbr title="\WooCommerce\Reports">Reports</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-API.html"><abbr title="\WooCommerce\API">API</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-CLI.html"><abbr title="\WooCommerce\CLI">CLI</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-l10n.html"><abbr title="\WooCommerce\l10n">l10n</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Webhooks.html"><abbr title="\WooCommerce\Webhooks">Webhooks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-DataStores.html"><abbr title="\WooCommerce\DataStores">DataStores</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Emails.html"><abbr title="\WooCommerce\Emails">Emails</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Export.html"><abbr title="\WooCommerce\Export">Export</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Gateways.html"><abbr title="\WooCommerce\Gateways">Gateways</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PayPal.html"><abbr title="\WooCommerce\PayPal">PayPal</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Import.html"><abbr title="\WooCommerce\Import">Import</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Integrations.html"><abbr title="\WooCommerce\Integrations">Integrations</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interfaces.html"><abbr title="\WooCommerce\Interfaces">Interfaces</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interface.html"><abbr title="\WooCommerce\Interface">Interface</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-LogHandlers.html"><abbr title="\WooCommerce\LogHandlers">LogHandlers</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PaymentTokens.html"><abbr title="\WooCommerce\PaymentTokens">PaymentTokens</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shipping.html"><abbr title="\WooCommerce\Shipping">Shipping</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shortcodes.html"><abbr title="\WooCommerce\Shortcodes">Shortcodes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Tracks.html"><abbr title="\WooCommerce\Tracks">Tracks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Traits.html"><abbr title="\WooCommerce\Traits">Traits</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Functions.html"><abbr title="\WooCommerce\Functions">Functions</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCom.html"><abbr title="\WooCommerce\WCCom">WCCom</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Widgets.html"><abbr title="\WooCommerce\Widgets">Widgets</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Uninstaller.html"><abbr title="\WooCommerce\Uninstaller">Uninstaller</abbr></a></li>
                             </ul>
-            
-        <h1 class="phpdocumentor-sidebar__category-header">Packages</h1>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceClasses.html"><abbr title="\WooCommerceClasses">WooCommerceClasses</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAbstracts.html"><abbr title="\WooCommerceAbstracts">WooCommerceAbstracts</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                            <li><a href="../packages/WooCommerce-Abstracts.html"><abbr title="\WooCommerce\Abstracts">Abstracts</abbr></a></li>
-                            <li><a href="../packages/WooCommerce-Admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
-                            <li><a href="../packages/WooCommerce-Views.html"><abbr title="\WooCommerce\Views">Views</abbr></a></li>
-                            <li><a href="../packages/WooCommerce-admin.html"><abbr title="\WooCommerce\admin">admin</abbr></a></li>
-                            <li><a href="../packages/WooCommerce-Classes.html"><abbr title="\WooCommerce\Classes">Classes</abbr></a></li>
-                            <li><a href="../packages/WooCommerce-Reports.html"><abbr title="\WooCommerce\Reports">Reports</abbr></a></li>
-                            <li><a href="../packages/WooCommerce-CLI.html"><abbr title="\WooCommerce\CLI">CLI</abbr></a></li>
-                            <li><a href="../packages/WooCommerce-l10n.html"><abbr title="\WooCommerce\l10n">l10n</abbr></a></li>
-                            <li><a href="../packages/WooCommerce-Cli.html"><abbr title="\WooCommerce\Cli">Cli</abbr></a></li>
-                            <li><a href="../packages/WooCommerce-DataStores.html"><abbr title="\WooCommerce\DataStores">DataStores</abbr></a></li>
-                            <li><a href="../packages/WooCommerce-DataStore.html"><abbr title="\WooCommerce\DataStore">DataStore</abbr></a></li>
-                            <li><a href="../packages/WooCommerce-Emails.html"><abbr title="\WooCommerce\Emails">Emails</abbr></a></li>
-                            <li><a href="../packages/WooCommerce-Gateways.html"><abbr title="\WooCommerce\Gateways">Gateways</abbr></a></li>
-                            <li><a href="../packages/WooCommerce-Integrations.html"><abbr title="\WooCommerce\Integrations">Integrations</abbr></a></li>
-                            <li><a href="../packages/WooCommerce-LogHandlers.html"><abbr title="\WooCommerce\LogHandlers">LogHandlers</abbr></a></li>
-                            <li><a href="../packages/WooCommerce-PaymentTokens.html"><abbr title="\WooCommerce\PaymentTokens">PaymentTokens</abbr></a></li>
-                            <li><a href="../packages/WooCommerce-Shipping.html"><abbr title="\WooCommerce\Shipping">Shipping</abbr></a></li>
-                            <li><a href="../packages/WooCommerce-Tracks.html"><abbr title="\WooCommerce\Tracks">Tracks</abbr></a></li>
-                            <li><a href="../packages/WooCommerce-Functions.html"><abbr title="\WooCommerce\Functions">Functions</abbr></a></li>
-                            <li><a href="../packages/WooCommerce-WooCommerce.html"><abbr title="\WooCommerce\WooCommerce">WooCommerce</abbr></a></li>
-                            <li><a href="../packages/WooCommerce-Templates.html"><abbr title="\WooCommerce\Templates">Templates</abbr></a></li>
-                            <li><a href="../packages/WooCommerce-Uninstaller.html"><abbr title="\WooCommerce\Uninstaller">Uninstaller</abbr></a></li>
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdmin.html"><abbr title="\WooCommerceAdmin">WooCommerceAdmin</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdminMetaBoxes.html"><abbr title="\WooCommerceAdminMetaBoxes">WooCommerceAdminMetaBoxes</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceadmin.html"><abbr title="\WooCommerceadmin">WooCommerceadmin</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdminReports.html"><abbr title="\WooCommerceAdminReports">WooCommerceAdminReports</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdminSystemStatus.html"><abbr title="\WooCommerceAdminSystemStatus">WooCommerceAdminSystemStatus</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/Default.html"><abbr title="\Default">Default</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceHelper.html"><abbr title="\WooCommerceHelper">WooCommerceHelper</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdminImporters.html"><abbr title="\WooCommerceAdminImporters">WooCommerceAdminImporters</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceTemplates.html"><abbr title="\WooCommerceTemplates">WooCommerceTemplates</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdminReporting.html"><abbr title="\WooCommerceAdminReporting">WooCommerceAdminReporting</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdminShipping.html"><abbr title="\WooCommerceAdminShipping">WooCommerceAdminShipping</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdminSettings.html"><abbr title="\WooCommerceAdminSettings">WooCommerceAdminSettings</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdminWebhooksViews.html"><abbr title="\WooCommerceAdminWebhooksViews">WooCommerceAdminWebhooksViews</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/Settings.html"><abbr title="\Settings">Settings</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdminExport.html"><abbr title="\WooCommerceAdminExport">WooCommerceAdminExport</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdminLogs.html"><abbr title="\WooCommerceAdminLogs">WooCommerceAdminLogs</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceViews.html"><abbr title="\WooCommerceViews">WooCommerceViews</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/admin.html"><abbr title="\admin">admin</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdminFunctions.html"><abbr title="\WooCommerceAdminFunctions">WooCommerceAdminFunctions</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAPI.html"><abbr title="\WooCommerceAPI">WooCommerceAPI</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceClassesProducts.html"><abbr title="\WooCommerceClassesProducts">WooCommerceClassesProducts</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceClassesEmails.html"><abbr title="\WooCommerceClassesEmails">WooCommerceClassesEmails</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceClassesEmbed.html"><abbr title="\WooCommerceClassesEmbed">WooCommerceClassesEmbed</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceClassesIntegrations.html"><abbr title="\WooCommerceClassesIntegrations">WooCommerceClassesIntegrations</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceClassesPayment.html"><abbr title="\WooCommerceClassesPayment">WooCommerceClassesPayment</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceClassesData.html"><abbr title="\WooCommerceClassesData">WooCommerceClassesData</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                            <li><a href="../packages/WooCommerceClassesData-Store.html"><abbr title="\WooCommerceClassesData\Store">Store</abbr></a></li>
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceClassesShipping.html"><abbr title="\WooCommerceClassesShipping">WooCommerceClassesShipping</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceWebhooks.html"><abbr title="\WooCommerceWebhooks">WooCommerceWebhooks</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceExport.html"><abbr title="\WooCommerceExport">WooCommerceExport</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommercePayPal.html"><abbr title="\WooCommercePayPal">WooCommercePayPal</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceImport.html"><abbr title="\WooCommerceImport">WooCommerceImport</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceIntegrations.html"><abbr title="\WooCommerceIntegrations">WooCommerceIntegrations</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceInterfaces.html"><abbr title="\WooCommerceInterfaces">WooCommerceInterfaces</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceInterface.html"><abbr title="\WooCommerceInterface">WooCommerceInterface</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceClassesLog.html"><abbr title="\WooCommerceClassesLog">WooCommerceClassesLog</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                            <li><a href="../packages/WooCommerceClassesLog-Handlers.html"><abbr title="\WooCommerceClassesLog\Handlers">Handlers</abbr></a></li>
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommercePaymentTokens.html"><abbr title="\WooCommercePaymentTokens">WooCommercePaymentTokens</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceShortcodesCart.html"><abbr title="\WooCommerceShortcodesCart">WooCommerceShortcodesCart</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceShortcodesCheckout.html"><abbr title="\WooCommerceShortcodesCheckout">WooCommerceShortcodesCheckout</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceShortcodesMy.html"><abbr title="\WooCommerceShortcodesMy">WooCommerceShortcodesMy</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                            <li><a href="../packages/WooCommerceShortcodesMy-Account.html"><abbr title="\WooCommerceShortcodesMy\Account">Account</abbr></a></li>
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceShortcodesOrder.html"><abbr title="\WooCommerceShortcodesOrder">WooCommerceShortcodesOrder</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                            <li><a href="../packages/WooCommerceShortcodesOrder-Tracking.html"><abbr title="\WooCommerceShortcodesOrder\Tracking">Tracking</abbr></a></li>
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceShortcodes.html"><abbr title="\WooCommerceShortcodes">WooCommerceShortcodes</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceTraits.html"><abbr title="\WooCommerceTraits">WooCommerceTraits</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceClassesWalkers.html"><abbr title="\WooCommerceClassesWalkers">WooCommerceClassesWalkers</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceFunctions.html"><abbr title="\WooCommerceFunctions">WooCommerceFunctions</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceWCCOM.html"><abbr title="\WooCommerceWCCOM">WooCommerceWCCOM</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                            <li><a href="../packages/WooCommerceWCCOM-SiteREST.html"><abbr title="\WooCommerceWCCOM\SiteREST">SiteREST</abbr></a></li>
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceWidgets.html"><abbr title="\WooCommerceWidgets">WooCommerceWidgets</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/AutomatticWooCommerceRestApi.html"><abbr title="\AutomatticWooCommerceRestApi">AutomatticWooCommerceRestApi</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/AutomatticWooCommerceUtilities.html"><abbr title="\AutomatticWooCommerceUtilities">AutomatticWooCommerceUtilities</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/AutomatticWooCommerce.html"><abbr title="\AutomatticWooCommerce">AutomatticWooCommerce</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/Automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                            <li><a href="../packages/Automattic-WooCommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/AutomatticWooCommerceToolsProxies.html"><abbr title="\AutomatticWooCommerceToolsProxies">AutomatticWooCommerceToolsProxies</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceTemplatesAuth.html"><abbr title="\WooCommerceTemplatesAuth">WooCommerceTemplatesAuth</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceTemplatesEmails.html"><abbr title="\WooCommerceTemplatesEmails">WooCommerceTemplatesEmails</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceTemplatesEmailsHTML.html"><abbr title="\WooCommerceTemplatesEmailsHTML">WooCommerceTemplatesEmailsHTML</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-            <h2 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceTemplatesEmailsPlain.html"><abbr title="\WooCommerceTemplatesEmailsPlain">WooCommerceTemplatesEmailsPlain</abbr></a></h2>
-        <ul class="phpdocumentor-list">
-                    </ul>
-        
-    <h1 class="phpdocumentor-sidebar__category-header">Reports</h1>
-    <h2 class="phpdocumentor-sidebar__root-package"><a href="../reports/deprecated.html">Deprecated</a></h2>
-    <h2 class="phpdocumentor-sidebar__root-package"><a href="../reports/errors.html">Errors</a></h2>
-    <h2 class="phpdocumentor-sidebar__root-package"><a href="../reports/markers.html">Markers</a></h2>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/AutomatticWooCommerceRestApi.html"><abbr title="\AutomatticWooCommerceRestApi">AutomatticWooCommerceRestApi</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/AutomatticWooCommerceUtilities.html"><abbr title="\AutomatticWooCommerceUtilities">AutomatticWooCommerceUtilities</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceTemplates.html"><abbr title="\WooCommerceTemplates">WooCommerceTemplates</abbr></a></h3>
+                        </section>
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
+                <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/deprecated.html">Deprecated</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/errors.html">Errors</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/markers.html">Markers</a></h3>
+    </section>
+
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Indices</h2>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../indices/files.html">Files</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../hooks/hooks.html">Hooks Reference</a></h3>
+    </section>
 </aside>
 
-        <div class="nine phpdocumentor-columns phpdocumentor-content">
-            <ul class="phpdocumentor-breadcrumbs">
-    <li><a href="../index.html">Home</a></li>
-                </ul>
-
-    <article class="phpdocumentor-element phpdocumentor-class">
-        <h2 class="phpdocumentor-content__title">
-            WC_Download_Handler
-                                        <div class="phpdocumentor-element__package">
-                    in
+            <div class="phpdocumentor-column -eight phpdocumentor-content">
                     <ul class="phpdocumentor-breadcrumbs">
-                                                    <li><a href="../packages/WooCommerceClasses.html">WooCommerceClasses</a></li>
-                                            </ul>
-                </div>
-                                            </h2>
+    </ul>
+
+    <article class="phpdocumentor-element -class">
+        <h2 class="phpdocumentor-content__title">
+    WC_Download_Handler
+
+    
+            <div class="phpdocumentor-element__package">
+            in package
+            <ul class="phpdocumentor-breadcrumbs">
+                                    <li class="phpdocumentor-breadcrumb"><a href="../packages/WooCommerce.html">WooCommerce</a></li>
+                                    <li class="phpdocumentor-breadcrumb"><a href="../packages/WooCommerce-Classes.html">Classes</a></li>
+                            </ul>
+        </div>
+    
+    
+    </h2>
+
         <aside class="phpdocumentor-element-found-in">
-            <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-download-handler.php"><a href="../files/woocommerce-includes-class-wc-download-handler.html"><abbr title="woocommerce/includes/class-wc-download-handler.php">class-wc-download-handler.php</abbr></a></abbr>
-            :
-            <span class="phpdocumentor-element-found-in__line">16</span>
-        </aside>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-download-handler.php"><a href="../files/woocommerce-includes-class-wc-download-handler.html#source-view.16">includes/class-wc-download-handler.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">16</span>
+</aside>
 
-        <p class="phpdocumentor-class__summary">Download handler class.</p>
-        <section class="phpdocumentor-class__description"></section>
+            <p class="phpdocumentor-summary">Download handler class.</p>
 
-        <h3>Table of Contents</h3>
-        <table class="phpdocumentor-table_of_contents">
-                                                                            <tr>
-                    <th class="phpdocumentor-heading"><a href="../classes/WC-Download-Handler.html#method_init">init()</a></th>
-                    <td class="phpdocumentor-cell">Hook in methods.</td>
-                    <td class="phpdocumentor-cell">mixed</td>
-                </tr>
-                            <tr>
-                    <th class="phpdocumentor-heading"><a href="../classes/WC-Download-Handler.html#method_download_product">download_product()</a></th>
-                    <td class="phpdocumentor-cell">Check if we need to download a file and check validity.</td>
-                    <td class="phpdocumentor-cell">mixed</td>
-                </tr>
-                            <tr>
-                    <th class="phpdocumentor-heading"><a href="../classes/WC-Download-Handler.html#method_check_order_is_valid">check_order_is_valid()</a></th>
-                    <td class="phpdocumentor-cell">Check if an order is valid for downloading from.</td>
-                    <td class="phpdocumentor-cell">mixed</td>
-                </tr>
-                            <tr>
-                    <th class="phpdocumentor-heading"><a href="../classes/WC-Download-Handler.html#method_check_downloads_remaining">check_downloads_remaining()</a></th>
-                    <td class="phpdocumentor-cell">Check if there are downloads remaining.</td>
-                    <td class="phpdocumentor-cell">mixed</td>
-                </tr>
-                            <tr>
-                    <th class="phpdocumentor-heading"><a href="../classes/WC-Download-Handler.html#method_check_download_expiry">check_download_expiry()</a></th>
-                    <td class="phpdocumentor-cell">Check if the download has expired.</td>
-                    <td class="phpdocumentor-cell">mixed</td>
-                </tr>
-                            <tr>
-                    <th class="phpdocumentor-heading"><a href="../classes/WC-Download-Handler.html#method_check_download_login_required">check_download_login_required()</a></th>
-                    <td class="phpdocumentor-cell">Check if a download requires the user to login first.</td>
-                    <td class="phpdocumentor-cell">mixed</td>
-                </tr>
-                            <tr>
-                    <th class="phpdocumentor-heading"><a href="../classes/WC-Download-Handler.html#method_count_download">count_download()</a></th>
-                    <td class="phpdocumentor-cell">Count download.</td>
-                    <td class="phpdocumentor-cell">mixed</td>
-                </tr>
-                            <tr>
-                    <th class="phpdocumentor-heading"><a href="../classes/WC-Download-Handler.html#method_download">download()</a></th>
-                    <td class="phpdocumentor-cell">Download a file - hook into init function.</td>
-                    <td class="phpdocumentor-cell">mixed</td>
-                </tr>
-                            <tr>
-                    <th class="phpdocumentor-heading"><a href="../classes/WC-Download-Handler.html#method_download_file_redirect">download_file_redirect()</a></th>
-                    <td class="phpdocumentor-cell">Redirect to a file to start the download.</td>
-                    <td class="phpdocumentor-cell">mixed</td>
-                </tr>
-                            <tr>
-                    <th class="phpdocumentor-heading"><a href="../classes/WC-Download-Handler.html#method_parse_file_path">parse_file_path()</a></th>
-                    <td class="phpdocumentor-cell">Parse file path and see if its remote or local.</td>
-                    <td class="phpdocumentor-cell">array</td>
-                </tr>
-                            <tr>
-                    <th class="phpdocumentor-heading"><a href="../classes/WC-Download-Handler.html#method_download_file_xsendfile">download_file_xsendfile()</a></th>
-                    <td class="phpdocumentor-cell">Download a file using X-Sendfile, X-Lighttpd-Sendfile, or X-Accel-Redirect if available.</td>
-                    <td class="phpdocumentor-cell">mixed</td>
-                </tr>
-                            <tr>
-                    <th class="phpdocumentor-heading"><a href="../classes/WC-Download-Handler.html#method_get_download_range">get_download_range()</a></th>
-                    <td class="phpdocumentor-cell">Parse the HTTP_RANGE request from iOS devices.</td>
-                    <td class="phpdocumentor-cell">array</td>
-                </tr>
-                            <tr>
-                    <th class="phpdocumentor-heading"><a href="../classes/WC-Download-Handler.html#method_download_file_force">download_file_force()</a></th>
-                    <td class="phpdocumentor-cell">Force download - this is the default method.</td>
-                    <td class="phpdocumentor-cell">mixed</td>
-                </tr>
-                            <tr>
-                    <th class="phpdocumentor-heading"><a href="../classes/WC-Download-Handler.html#method_get_download_content_type">get_download_content_type()</a></th>
-                    <td class="phpdocumentor-cell">Get content type of a download.</td>
-                    <td class="phpdocumentor-cell">string</td>
-                </tr>
-                            <tr>
-                    <th class="phpdocumentor-heading"><a href="../classes/WC-Download-Handler.html#method_download_headers">download_headers()</a></th>
-                    <td class="phpdocumentor-cell">Set headers for the download.</td>
-                    <td class="phpdocumentor-cell">mixed</td>
-                </tr>
-                            <tr>
-                    <th class="phpdocumentor-heading"><a href="../classes/WC-Download-Handler.html#method_check_server_config">check_server_config()</a></th>
-                    <td class="phpdocumentor-cell">Check and set certain server config variables to ensure downloads work as intended.</td>
-                    <td class="phpdocumentor-cell">mixed</td>
-                </tr>
-                            <tr>
-                    <th class="phpdocumentor-heading"><a href="../classes/WC-Download-Handler.html#method_clean_buffers">clean_buffers()</a></th>
-                    <td class="phpdocumentor-cell">Clean all output buffers.</td>
-                    <td class="phpdocumentor-cell">mixed</td>
-                </tr>
-                            <tr>
-                    <th class="phpdocumentor-heading"><a href="../classes/WC-Download-Handler.html#method_readfile_chunked">readfile_chunked()</a></th>
-                    <td class="phpdocumentor-cell">Read file chunked.</td>
-                    <td class="phpdocumentor-cell">bool</td>
-                </tr>
-                            <tr>
-                    <th class="phpdocumentor-heading"><a href="../classes/WC-Download-Handler.html#method_ie_nocache_headers_fix">ie_nocache_headers_fix()</a></th>
-                    <td class="phpdocumentor-cell">Filter headers for IE to fix issues over SSL.</td>
-                    <td class="phpdocumentor-cell">array</td>
-                </tr>
-                            <tr>
-                    <th class="phpdocumentor-heading"><a href="../classes/WC-Download-Handler.html#method_download_error">download_error()</a></th>
-                    <td class="phpdocumentor-cell">Die with an error message if the download fails.</td>
-                    <td class="phpdocumentor-cell">mixed</td>
-                </tr>
-                                            </table>
+
+
+
+
+
+
+
+
+<h3 id="toc">
+    Table of Contents
+    <a href="#toc" class="headerlink"><i class="fas fa-link"></i></a>
+</h3>
+
+<dl class="phpdocumentor-table-of-contents">
+                    <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="../classes/WC-Download-Handler.html#method_count_download">count_download()</a>
+    <span>
+                        &nbsp;: mixed    </span>
+</dt>
+<dd>Count download.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="../classes/WC-Download-Handler.html#method_download">download()</a>
+    <span>
+                        &nbsp;: mixed    </span>
+</dt>
+<dd>Download a file - hook into init function.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="../classes/WC-Download-Handler.html#method_download_file_force">download_file_force()</a>
+    <span>
+                        &nbsp;: mixed    </span>
+</dt>
+<dd>Force download - this is the default method.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="../classes/WC-Download-Handler.html#method_download_file_redirect">download_file_redirect()</a>
+    <span>
+                        &nbsp;: mixed    </span>
+</dt>
+<dd>Redirect to a file to start the download.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="../classes/WC-Download-Handler.html#method_download_file_xsendfile">download_file_xsendfile()</a>
+    <span>
+                        &nbsp;: mixed    </span>
+</dt>
+<dd>Download a file using X-Sendfile, X-Lighttpd-Sendfile, or X-Accel-Redirect if available.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="../classes/WC-Download-Handler.html#method_download_product">download_product()</a>
+    <span>
+                        &nbsp;: mixed    </span>
+</dt>
+<dd>Check if we need to download a file and check validity.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="../classes/WC-Download-Handler.html#method_ie_nocache_headers_fix">ie_nocache_headers_fix()</a>
+    <span>
+                        &nbsp;: array    </span>
+</dt>
+<dd>Filter headers for IE to fix issues over SSL.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="../classes/WC-Download-Handler.html#method_init">init()</a>
+    <span>
+                        &nbsp;: mixed    </span>
+</dt>
+<dd>Hook in methods.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="../classes/WC-Download-Handler.html#method_parse_file_path">parse_file_path()</a>
+    <span>
+                        &nbsp;: array    </span>
+</dt>
+<dd>Parse file path and see if its remote or local.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="../classes/WC-Download-Handler.html#method_readfile_chunked">readfile_chunked()</a>
+    <span>
+                        &nbsp;: bool    </span>
+</dt>
+<dd>Read file chunked.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -protected">
+    <a href="../classes/WC-Download-Handler.html#method_get_download_range">get_download_range()</a>
+    <span>
+                        &nbsp;: array    </span>
+</dt>
+<dd>Parse the HTTP_RANGE request from iOS devices.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -private">
+    <a href="../classes/WC-Download-Handler.html#method_check_download_expiry">check_download_expiry()</a>
+    <span>
+                        &nbsp;: mixed    </span>
+</dt>
+<dd>Check if the download has expired.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -private">
+    <a href="../classes/WC-Download-Handler.html#method_check_download_login_required">check_download_login_required()</a>
+    <span>
+                        &nbsp;: mixed    </span>
+</dt>
+<dd>Check if a download requires the user to login first.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -private">
+    <a href="../classes/WC-Download-Handler.html#method_check_downloads_remaining">check_downloads_remaining()</a>
+    <span>
+                        &nbsp;: mixed    </span>
+</dt>
+<dd>Check if there are downloads remaining.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -private">
+    <a href="../classes/WC-Download-Handler.html#method_check_order_is_valid">check_order_is_valid()</a>
+    <span>
+                        &nbsp;: mixed    </span>
+</dt>
+<dd>Check if an order is valid for downloading from.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -private">
+    <a href="../classes/WC-Download-Handler.html#method_check_server_config">check_server_config()</a>
+    <span>
+                        &nbsp;: mixed    </span>
+</dt>
+<dd>Check and set certain server config variables to ensure downloads work as intended.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -private">
+    <a href="../classes/WC-Download-Handler.html#method_clean_buffers">clean_buffers()</a>
+    <span>
+                        &nbsp;: mixed    </span>
+</dt>
+<dd>Clean all output buffers.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -private">
+    <a href="../classes/WC-Download-Handler.html#method_download_error">download_error()</a>
+    <span>
+                        &nbsp;: mixed    </span>
+</dt>
+<dd>Die with an error message if the download fails.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -private">
+    <a href="../classes/WC-Download-Handler.html#method_download_headers">download_headers()</a>
+    <span>
+                        &nbsp;: mixed    </span>
+</dt>
+<dd>Set headers for the download.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -private">
+    <a href="../classes/WC-Download-Handler.html#method_get_download_content_type">get_download_content_type()</a>
+    <span>
+                        &nbsp;: string    </span>
+</dt>
+<dd>Get content type of a download.</dd>
+
+        </dl>
+
+
 
         
+
         
-                    <section>
-                <h3 class="phpdocumentor-methods__header">Methods</h3>
-                                    <a id="method_init"></a>
-<article
-        class="
-            phpdocumentor-method
-            phpdocumentor-method--public
-                                    phpdocumentor-element--static                    "
+
+            <section class="phpdocumentor-methods">
+        <h3 class="phpdocumentor-elements__header" id="methods">
+            Methods
+            <a href="#methods" class="headerlink"><i class="fas fa-link"></i></a>
+        </h3>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+            -deprecated                        -static                    "
 >
-    <h4 class="phpdocumentor-method__name">init()</h4>
+    <h4 class="phpdocumentor-element__name" id="method_count_download">
+        count_download()
+        <a href="#method_count_download" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
     <aside class="phpdocumentor-element-found-in">
-        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-download-handler.php"><a href="../files/woocommerce-includes-class-wc-download-handler.html"><abbr title="woocommerce/includes/class-wc-download-handler.php">class-wc-download-handler.php</abbr></a></abbr>
-        :
-        <span class="phpdocumentor-element-found-in__line">21</span>
-    </aside>
-        <p class="phpdocumentor-summary">Hook in methods.</p>
-        <code class="phpdocumentor-signature phpdocumentor-code ">
-        <span class="phpdocumentor-signature__visibility">public</span>
-                        <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">init</span>(
-                )
-        : <span class="phpdocumentor-signature__response_type">mixed</span>
-    </code>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-download-handler.php"><a href="../files/woocommerce-includes-class-wc-download-handler.html#source-view.197">includes/class-wc-download-handler.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">197</span>
+</aside>
 
-    
-    
-        
-            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-        <span class="phpdocumentor-signature__response_type">mixed</span>
-            
-</article>
-                                    <a id="method_download_product"></a>
-<article
-        class="
-            phpdocumentor-method
-            phpdocumentor-method--public
-                                    phpdocumentor-element--static                    "
->
-    <h4 class="phpdocumentor-method__name">download_product()</h4>
-    <aside class="phpdocumentor-element-found-in">
-        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-download-handler.php"><a href="../files/woocommerce-includes-class-wc-download-handler.html"><abbr title="woocommerce/includes/class-wc-download-handler.php">class-wc-download-handler.php</abbr></a></abbr>
-        :
-        <span class="phpdocumentor-element-found-in__line">33</span>
-    </aside>
-        <p class="phpdocumentor-summary">Check if we need to download a file and check validity.</p>
-        <code class="phpdocumentor-signature phpdocumentor-code ">
-        <span class="phpdocumentor-signature__visibility">public</span>
-                        <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">download_product</span>(
-                )
-        : <span class="phpdocumentor-signature__response_type">mixed</span>
-    </code>
-
-    
-    
-        
-            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-        <span class="phpdocumentor-signature__response_type">mixed</span>
-            
-</article>
-                                    <a id="method_check_order_is_valid"></a>
-<article
-        class="
-            phpdocumentor-method
-            phpdocumentor-method--private
-                                    phpdocumentor-element--static                    "
->
-    <h4 class="phpdocumentor-method__name">check_order_is_valid()</h4>
-    <aside class="phpdocumentor-element-found-in">
-        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-download-handler.php"><a href="../files/woocommerce-includes-class-wc-download-handler.html"><abbr title="woocommerce/includes/class-wc-download-handler.php">class-wc-download-handler.php</abbr></a></abbr>
-        :
-        <span class="phpdocumentor-element-found-in__line">139</span>
-    </aside>
-        <p class="phpdocumentor-summary">Check if an order is valid for downloading from.</p>
-        <code class="phpdocumentor-signature phpdocumentor-code ">
-        <span class="phpdocumentor-signature__visibility">private</span>
-                        <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">check_order_is_valid</span>(
-                    <span class="phpdocumentor-signature__argument">
-                            <span class="phpdocumentor-signature__argument__name">$download</span> :
-                <span class="phpdocumentor-signature__argument__return-type"><a href="../classes/WC-Customer-Download.html"><abbr title="\WC_Customer_Download">WC_Customer_Download</abbr></a></span>
-                            </span>
-                )
-        : <span class="phpdocumentor-signature__response_type">mixed</span>
-    </code>
-
-    
-            <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
-        <dl class="phpdocumentor-argument-list">
-                            <dt class="phpdocumentor-argument-list__entry">
-                    <span class="phpdocumentor-signature__argument__name">$download</span>
-                    : <span class="phpdocumentor-signature__argument__return-type"><a href="../classes/WC-Customer-Download.html"><abbr title="\WC_Customer_Download">WC_Customer_Download</abbr></a></span>
-                                    </dt>
-                <dd class="phpdocumentor-argument-list__definition"><section class="phpdocumentor-description"><p>Download instance.</p></section></dd>
-                    </dl>
-    
-        
-            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-        <span class="phpdocumentor-signature__response_type">mixed</span>
-            
-</article>
-                                    <a id="method_check_downloads_remaining"></a>
-<article
-        class="
-            phpdocumentor-method
-            phpdocumentor-method--private
-                                    phpdocumentor-element--static                    "
->
-    <h4 class="phpdocumentor-method__name">check_downloads_remaining()</h4>
-    <aside class="phpdocumentor-element-found-in">
-        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-download-handler.php"><a href="../files/woocommerce-includes-class-wc-download-handler.html"><abbr title="woocommerce/includes/class-wc-download-handler.php">class-wc-download-handler.php</abbr></a></abbr>
-        :
-        <span class="phpdocumentor-element-found-in__line">154</span>
-    </aside>
-        <p class="phpdocumentor-summary">Check if there are downloads remaining.</p>
-        <code class="phpdocumentor-signature phpdocumentor-code ">
-        <span class="phpdocumentor-signature__visibility">private</span>
-                        <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">check_downloads_remaining</span>(
-                    <span class="phpdocumentor-signature__argument">
-                            <span class="phpdocumentor-signature__argument__name">$download</span> :
-                <span class="phpdocumentor-signature__argument__return-type"><a href="../classes/WC-Customer-Download.html"><abbr title="\WC_Customer_Download">WC_Customer_Download</abbr></a></span>
-                            </span>
-                )
-        : <span class="phpdocumentor-signature__response_type">mixed</span>
-    </code>
-
-    
-            <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
-        <dl class="phpdocumentor-argument-list">
-                            <dt class="phpdocumentor-argument-list__entry">
-                    <span class="phpdocumentor-signature__argument__name">$download</span>
-                    : <span class="phpdocumentor-signature__argument__return-type"><a href="../classes/WC-Customer-Download.html"><abbr title="\WC_Customer_Download">WC_Customer_Download</abbr></a></span>
-                                    </dt>
-                <dd class="phpdocumentor-argument-list__definition"><section class="phpdocumentor-description"><p>Download instance.</p></section></dd>
-                    </dl>
-    
-        
-            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-        <span class="phpdocumentor-signature__response_type">mixed</span>
-            
-</article>
-                                    <a id="method_check_download_expiry"></a>
-<article
-        class="
-            phpdocumentor-method
-            phpdocumentor-method--private
-                                    phpdocumentor-element--static                    "
->
-    <h4 class="phpdocumentor-method__name">check_download_expiry()</h4>
-    <aside class="phpdocumentor-element-found-in">
-        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-download-handler.php"><a href="../files/woocommerce-includes-class-wc-download-handler.html"><abbr title="woocommerce/includes/class-wc-download-handler.php">class-wc-download-handler.php</abbr></a></abbr>
-        :
-        <span class="phpdocumentor-element-found-in__line">165</span>
-    </aside>
-        <p class="phpdocumentor-summary">Check if the download has expired.</p>
-        <code class="phpdocumentor-signature phpdocumentor-code ">
-        <span class="phpdocumentor-signature__visibility">private</span>
-                        <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">check_download_expiry</span>(
-                    <span class="phpdocumentor-signature__argument">
-                            <span class="phpdocumentor-signature__argument__name">$download</span> :
-                <span class="phpdocumentor-signature__argument__return-type"><a href="../classes/WC-Customer-Download.html"><abbr title="\WC_Customer_Download">WC_Customer_Download</abbr></a></span>
-                            </span>
-                )
-        : <span class="phpdocumentor-signature__response_type">mixed</span>
-    </code>
-
-    
-            <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
-        <dl class="phpdocumentor-argument-list">
-                            <dt class="phpdocumentor-argument-list__entry">
-                    <span class="phpdocumentor-signature__argument__name">$download</span>
-                    : <span class="phpdocumentor-signature__argument__return-type"><a href="../classes/WC-Customer-Download.html"><abbr title="\WC_Customer_Download">WC_Customer_Download</abbr></a></span>
-                                    </dt>
-                <dd class="phpdocumentor-argument-list__definition"><section class="phpdocumentor-description"><p>Download instance.</p></section></dd>
-                    </dl>
-    
-        
-            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-        <span class="phpdocumentor-signature__response_type">mixed</span>
-            
-</article>
-                                    <a id="method_check_download_login_required"></a>
-<article
-        class="
-            phpdocumentor-method
-            phpdocumentor-method--private
-                                    phpdocumentor-element--static                    "
->
-    <h4 class="phpdocumentor-method__name">check_download_login_required()</h4>
-    <aside class="phpdocumentor-element-found-in">
-        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-download-handler.php"><a href="../files/woocommerce-includes-class-wc-download-handler.html"><abbr title="woocommerce/includes/class-wc-download-handler.php">class-wc-download-handler.php</abbr></a></abbr>
-        :
-        <span class="phpdocumentor-element-found-in__line">176</span>
-    </aside>
-        <p class="phpdocumentor-summary">Check if a download requires the user to login first.</p>
-        <code class="phpdocumentor-signature phpdocumentor-code ">
-        <span class="phpdocumentor-signature__visibility">private</span>
-                        <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">check_download_login_required</span>(
-                    <span class="phpdocumentor-signature__argument">
-                            <span class="phpdocumentor-signature__argument__name">$download</span> :
-                <span class="phpdocumentor-signature__argument__return-type"><a href="../classes/WC-Customer-Download.html"><abbr title="\WC_Customer_Download">WC_Customer_Download</abbr></a></span>
-                            </span>
-                )
-        : <span class="phpdocumentor-signature__response_type">mixed</span>
-    </code>
-
-    
-            <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
-        <dl class="phpdocumentor-argument-list">
-                            <dt class="phpdocumentor-argument-list__entry">
-                    <span class="phpdocumentor-signature__argument__name">$download</span>
-                    : <span class="phpdocumentor-signature__argument__return-type"><a href="../classes/WC-Customer-Download.html"><abbr title="\WC_Customer_Download">WC_Customer_Download</abbr></a></span>
-                                    </dt>
-                <dd class="phpdocumentor-argument-list__definition"><section class="phpdocumentor-description"><p>Download instance.</p></section></dd>
-                    </dl>
-    
-        
-            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-        <span class="phpdocumentor-signature__response_type">mixed</span>
-            
-</article>
-                                    <a id="method_count_download"></a>
-<article
-        class="
-            phpdocumentor-method
-            phpdocumentor-method--public
-            phpdocumentor-element--deprecated                        phpdocumentor-element--static                    "
->
-    <h4 class="phpdocumentor-method__name">count_download()</h4>
-    <aside class="phpdocumentor-element-found-in">
-        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-download-handler.php"><a href="../files/woocommerce-includes-class-wc-download-handler.html"><abbr title="woocommerce/includes/class-wc-download-handler.php">class-wc-download-handler.php</abbr></a></abbr>
-        :
-        <span class="phpdocumentor-element-found-in__line">197</span>
-    </aside>
         <p class="phpdocumentor-summary">Count download.</p>
-        <code class="phpdocumentor-signature phpdocumentor-code phpdocumentor-signature--deprecated">
-        <span class="phpdocumentor-signature__visibility">public</span>
-                        <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">count_download</span>(
-                    <span class="phpdocumentor-signature__argument">
-                            <span class="phpdocumentor-signature__argument__name">$download_data</span> :
-                <span class="phpdocumentor-signature__argument__return-type">array</span>
-                            </span>
-                )
-        : <span class="phpdocumentor-signature__response_type">mixed</span>
-    </code>
+
+    <code class="phpdocumentor-code phpdocumentor-signature -deprecated">
+    <span class="phpdocumentor-signature__visibility">public</span>
+            <span class="phpdocumentor-signature__static">static</span>    <span class="phpdocumentor-signature__name">count_download</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&nbsp;</span><span class="phpdocumentor-signature__argument__name">$download_data</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
 
     
-            <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
-        <dl class="phpdocumentor-argument-list">
-                            <dt class="phpdocumentor-argument-list__entry">
-                    <span class="phpdocumentor-signature__argument__name">$download_data</span>
-                    : <span class="phpdocumentor-signature__argument__return-type">array</span>
-                                    </dt>
-                <dd class="phpdocumentor-argument-list__definition"><section class="phpdocumentor-description"><p>Download data.</p></section></dd>
-                    </dl>
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$download_data</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Download data.</p></section>
+
+            </dd>
+            </dl>
+
     
-                <h5 class="phpdocumentor-tag-list__heading">Tags</h5>
-        <dl class="phpdocumentor-tag-list">
-                                                <dt class="phpdocumentor-tag-list__entry">
-                        <span class="phpdocumentor-tag__name">deprecated</span>
-                    </dt>
-                    <dd class="phpdocumentor-tag-list__definition"><section class="phpdocumentor-description"></section></dd>
-                                    </dl>
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">deprecated</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                            <span class="phpdocumentor-tag-link">4.4.0</span>
+                                                                                                    
+                </dd>
+                        </dl>
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">mixed</span>
     
-            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-        <span class="phpdocumentor-signature__response_type">mixed</span>
-            
 </article>
-                                    <a id="method_download"></a>
-<article
-        class="
-            phpdocumentor-method
-            phpdocumentor-method--public
-                                    phpdocumentor-element--static                    "
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                    -static                    "
 >
-    <h4 class="phpdocumentor-method__name">download()</h4>
+    <h4 class="phpdocumentor-element__name" id="method_download">
+        download()
+        <a href="#method_download" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
     <aside class="phpdocumentor-element-found-in">
-        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-download-handler.php"><a href="../files/woocommerce-includes-class-wc-download-handler.html"><abbr title="woocommerce/includes/class-wc-download-handler.php">class-wc-download-handler.php</abbr></a></abbr>
-        :
-        <span class="phpdocumentor-element-found-in__line">207</span>
-    </aside>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-download-handler.php"><a href="../files/woocommerce-includes-class-wc-download-handler.html#source-view.207">includes/class-wc-download-handler.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">207</span>
+</aside>
+
         <p class="phpdocumentor-summary">Download a file - hook into init function.</p>
-        <code class="phpdocumentor-signature phpdocumentor-code ">
-        <span class="phpdocumentor-signature__visibility">public</span>
-                        <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">download</span>(
-                    <span class="phpdocumentor-signature__argument">
-                            <span class="phpdocumentor-signature__argument__name">$file_path</span> :
-                <span class="phpdocumentor-signature__argument__return-type">string</span>
-                            </span>
-                    <span class="phpdocumentor-signature__argument">
-            ,                 <span class="phpdocumentor-signature__argument__name">$product_id</span> :
-                <span class="phpdocumentor-signature__argument__return-type">int</span>
-                            </span>
-                )
-        : <span class="phpdocumentor-signature__response_type">mixed</span>
-    </code>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+            <span class="phpdocumentor-signature__static">static</span>    <span class="phpdocumentor-signature__name">download</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$file_path</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$product_id</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
 
     
-            <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
-        <dl class="phpdocumentor-argument-list">
-                            <dt class="phpdocumentor-argument-list__entry">
-                    <span class="phpdocumentor-signature__argument__name">$file_path</span>
-                    : <span class="phpdocumentor-signature__argument__return-type">string</span>
-                                    </dt>
-                <dd class="phpdocumentor-argument-list__definition"><section class="phpdocumentor-description"><p>URL to file.</p></section></dd>
-                            <dt class="phpdocumentor-argument-list__entry">
-                    <span class="phpdocumentor-signature__argument__name">$product_id</span>
-                    : <span class="phpdocumentor-signature__argument__return-type">int</span>
-                                    </dt>
-                <dd class="phpdocumentor-argument-list__definition"><section class="phpdocumentor-description"><p>Product ID of the product being downloaded.</p></section></dd>
-                    </dl>
-    
-        
-            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-        <span class="phpdocumentor-signature__response_type">mixed</span>
-            
-</article>
-                                    <a id="method_download_file_redirect"></a>
-<article
-        class="
-            phpdocumentor-method
-            phpdocumentor-method--public
-                                    phpdocumentor-element--static                    "
->
-    <h4 class="phpdocumentor-method__name">download_file_redirect()</h4>
-    <aside class="phpdocumentor-element-found-in">
-        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-download-handler.php"><a href="../files/woocommerce-includes-class-wc-download-handler.html"><abbr title="woocommerce/includes/class-wc-download-handler.php">class-wc-download-handler.php</abbr></a></abbr>
-        :
-        <span class="phpdocumentor-element-found-in__line">234</span>
-    </aside>
-        <p class="phpdocumentor-summary">Redirect to a file to start the download.</p>
-        <code class="phpdocumentor-signature phpdocumentor-code ">
-        <span class="phpdocumentor-signature__visibility">public</span>
-                        <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">download_file_redirect</span>(
-                    <span class="phpdocumentor-signature__argument">
-                            <span class="phpdocumentor-signature__argument__name">$file_path</span> :
-                <span class="phpdocumentor-signature__argument__return-type">string</span>
-                            </span>
-                    <span class="phpdocumentor-signature__argument">
-            [,                 <span class="phpdocumentor-signature__argument__name">$filename</span> :
-                <span class="phpdocumentor-signature__argument__return-type">string</span>
-                 = <span class="phpdocumentor-signature__argument__default-value">&#039;&#039;</span> ]            </span>
-                )
-        : <span class="phpdocumentor-signature__response_type">mixed</span>
-    </code>
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$file_path</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>URL to file.</p></section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$product_id</span>
+                : <span class="phpdocumentor-signature__argument__return-type">int</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Product ID of the product being downloaded.</p></section>
+
+            </dd>
+            </dl>
 
     
-            <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
-        <dl class="phpdocumentor-argument-list">
-                            <dt class="phpdocumentor-argument-list__entry">
-                    <span class="phpdocumentor-signature__argument__name">$file_path</span>
-                    : <span class="phpdocumentor-signature__argument__return-type">string</span>
-                                    </dt>
-                <dd class="phpdocumentor-argument-list__definition"><section class="phpdocumentor-description"><p>File path.</p></section></dd>
-                            <dt class="phpdocumentor-argument-list__entry">
-                    <span class="phpdocumentor-signature__argument__name">$filename</span>
-                    : <span class="phpdocumentor-signature__argument__return-type">string</span>
-                     = <span class="phpdocumentor-signature__argument__default-value">&#039;&#039;</span>                </dt>
-                <dd class="phpdocumentor-argument-list__definition"><section class="phpdocumentor-description"><p>File name.</p></section></dd>
-                    </dl>
-    
-        
-            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-        <span class="phpdocumentor-signature__response_type">mixed</span>
-            
-</article>
-                                    <a id="method_parse_file_path"></a>
-<article
-        class="
-            phpdocumentor-method
-            phpdocumentor-method--public
-                                    phpdocumentor-element--static                    "
->
-    <h4 class="phpdocumentor-method__name">parse_file_path()</h4>
-    <aside class="phpdocumentor-element-found-in">
-        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-download-handler.php"><a href="../files/woocommerce-includes-class-wc-download-handler.html"><abbr title="woocommerce/includes/class-wc-download-handler.php">class-wc-download-handler.php</abbr></a></abbr>
-        :
-        <span class="phpdocumentor-element-found-in__line">245</span>
-    </aside>
-        <p class="phpdocumentor-summary">Parse file path and see if its remote or local.</p>
-        <code class="phpdocumentor-signature phpdocumentor-code ">
-        <span class="phpdocumentor-signature__visibility">public</span>
-                        <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">parse_file_path</span>(
-                    <span class="phpdocumentor-signature__argument">
-                            <span class="phpdocumentor-signature__argument__name">$file_path</span> :
-                <span class="phpdocumentor-signature__argument__return-type">string</span>
-                            </span>
-                )
-        : <span class="phpdocumentor-signature__response_type">array</span>
-    </code>
 
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">mixed</span>
     
-            <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
-        <dl class="phpdocumentor-argument-list">
-                            <dt class="phpdocumentor-argument-list__entry">
-                    <span class="phpdocumentor-signature__argument__name">$file_path</span>
-                    : <span class="phpdocumentor-signature__argument__return-type">string</span>
-                                    </dt>
-                <dd class="phpdocumentor-argument-list__definition"><section class="phpdocumentor-description"><p>File path.</p></section></dd>
-                    </dl>
-    
-        
-            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-        <span class="phpdocumentor-signature__response_type">array</span>
-            
 </article>
-                                    <a id="method_download_file_xsendfile"></a>
-<article
-        class="
-            phpdocumentor-method
-            phpdocumentor-method--public
-                                    phpdocumentor-element--static                    "
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                    -static                    "
 >
-    <h4 class="phpdocumentor-method__name">download_file_xsendfile()</h4>
+    <h4 class="phpdocumentor-element__name" id="method_download_file_force">
+        download_file_force()
+        <a href="#method_download_file_force" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
     <aside class="phpdocumentor-element-found-in">
-        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-download-handler.php"><a href="../files/woocommerce-includes-class-wc-download-handler.html"><abbr title="woocommerce/includes/class-wc-download-handler.php">class-wc-download-handler.php</abbr></a></abbr>
-        :
-        <span class="phpdocumentor-element-found-in__line">302</span>
-    </aside>
-        <p class="phpdocumentor-summary">Download a file using X-Sendfile, X-Lighttpd-Sendfile, or X-Accel-Redirect if available.</p>
-        <code class="phpdocumentor-signature phpdocumentor-code ">
-        <span class="phpdocumentor-signature__visibility">public</span>
-                        <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">download_file_xsendfile</span>(
-                    <span class="phpdocumentor-signature__argument">
-                            <span class="phpdocumentor-signature__argument__name">$file_path</span> :
-                <span class="phpdocumentor-signature__argument__return-type">string</span>
-                            </span>
-                    <span class="phpdocumentor-signature__argument">
-            ,                 <span class="phpdocumentor-signature__argument__name">$filename</span> :
-                <span class="phpdocumentor-signature__argument__return-type">string</span>
-                            </span>
-                )
-        : <span class="phpdocumentor-signature__response_type">mixed</span>
-    </code>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-download-handler.php"><a href="../files/woocommerce-includes-class-wc-download-handler.html#source-view.429">includes/class-wc-download-handler.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">429</span>
+</aside>
 
-    
-            <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
-        <dl class="phpdocumentor-argument-list">
-                            <dt class="phpdocumentor-argument-list__entry">
-                    <span class="phpdocumentor-signature__argument__name">$file_path</span>
-                    : <span class="phpdocumentor-signature__argument__return-type">string</span>
-                                    </dt>
-                <dd class="phpdocumentor-argument-list__definition"><section class="phpdocumentor-description"><p>File path.</p></section></dd>
-                            <dt class="phpdocumentor-argument-list__entry">
-                    <span class="phpdocumentor-signature__argument__name">$filename</span>
-                    : <span class="phpdocumentor-signature__argument__return-type">string</span>
-                                    </dt>
-                <dd class="phpdocumentor-argument-list__definition"><section class="phpdocumentor-description"><p>File name.</p></section></dd>
-                    </dl>
-    
-        
-            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-        <span class="phpdocumentor-signature__response_type">mixed</span>
-            
-</article>
-                                    <a id="method_get_download_range"></a>
-<article
-        class="
-            phpdocumentor-method
-            phpdocumentor-method--protected
-                                    phpdocumentor-element--static                    "
->
-    <h4 class="phpdocumentor-method__name">get_download_range()</h4>
-    <aside class="phpdocumentor-element-found-in">
-        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-download-handler.php"><a href="../files/woocommerce-includes-class-wc-download-handler.html"><abbr title="woocommerce/includes/class-wc-download-handler.php">class-wc-download-handler.php</abbr></a></abbr>
-        :
-        <span class="phpdocumentor-element-found-in__line">352</span>
-    </aside>
-        <p class="phpdocumentor-summary">Parse the HTTP_RANGE request from iOS devices.</p>
-        <code class="phpdocumentor-signature phpdocumentor-code ">
-        <span class="phpdocumentor-signature__visibility">protected</span>
-                        <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">get_download_range</span>(
-                    <span class="phpdocumentor-signature__argument">
-                            <span class="phpdocumentor-signature__argument__name">$file_size</span> :
-                <span class="phpdocumentor-signature__argument__return-type">int</span>
-                            </span>
-                )
-        : <span class="phpdocumentor-signature__response_type">array</span>
-    </code>
-
-        <section class="phpdocumentor-description"><p>Does not support multi-range requests.</p></section>
-    
-            <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
-        <dl class="phpdocumentor-argument-list">
-                            <dt class="phpdocumentor-argument-list__entry">
-                    <span class="phpdocumentor-signature__argument__name">$file_size</span>
-                    : <span class="phpdocumentor-signature__argument__return-type">int</span>
-                                    </dt>
-                <dd class="phpdocumentor-argument-list__definition"><section class="phpdocumentor-description"><p>Size of file in bytes.</p></section></dd>
-                    </dl>
-    
-        
-            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-        <span class="phpdocumentor-signature__response_type">array</span>
-                    &mdash; <span class="phpdocumentor-description"><p>{
-Information about range download request: beginning and length of
-file chunk, whether the range is valid/supported and whether the request is a range request.</p>
-<pre class="prettyprint"><code class="prettyprint">@type int  $start            Byte offset of the beginning of the range. Default 0.
-@type int  $length           Length of the requested file chunk in bytes. Optional.
-@type bool $is_range_valid   Whether the requested range is a valid and supported range.
-@type bool $is_range_request Whether the request is a range request.</code></pre>
-<p>}</p></span>
-            
-</article>
-                                    <a id="method_download_file_force"></a>
-<article
-        class="
-            phpdocumentor-method
-            phpdocumentor-method--public
-                                    phpdocumentor-element--static                    "
->
-    <h4 class="phpdocumentor-method__name">download_file_force()</h4>
-    <aside class="phpdocumentor-element-found-in">
-        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-download-handler.php"><a href="../files/woocommerce-includes-class-wc-download-handler.html"><abbr title="woocommerce/includes/class-wc-download-handler.php">class-wc-download-handler.php</abbr></a></abbr>
-        :
-        <span class="phpdocumentor-element-found-in__line">420</span>
-    </aside>
         <p class="phpdocumentor-summary">Force download - this is the default method.</p>
-        <code class="phpdocumentor-signature phpdocumentor-code ">
-        <span class="phpdocumentor-signature__visibility">public</span>
-                        <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">download_file_force</span>(
-                    <span class="phpdocumentor-signature__argument">
-                            <span class="phpdocumentor-signature__argument__name">$file_path</span> :
-                <span class="phpdocumentor-signature__argument__return-type">string</span>
-                            </span>
-                    <span class="phpdocumentor-signature__argument">
-            ,                 <span class="phpdocumentor-signature__argument__name">$filename</span> :
-                <span class="phpdocumentor-signature__argument__return-type">string</span>
-                            </span>
-                )
-        : <span class="phpdocumentor-signature__response_type">mixed</span>
-    </code>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+            <span class="phpdocumentor-signature__static">static</span>    <span class="phpdocumentor-signature__name">download_file_force</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$file_path</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$filename</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
 
     
-            <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
-        <dl class="phpdocumentor-argument-list">
-                            <dt class="phpdocumentor-argument-list__entry">
-                    <span class="phpdocumentor-signature__argument__name">$file_path</span>
-                    : <span class="phpdocumentor-signature__argument__return-type">string</span>
-                                    </dt>
-                <dd class="phpdocumentor-argument-list__definition"><section class="phpdocumentor-description"><p>File path.</p></section></dd>
-                            <dt class="phpdocumentor-argument-list__entry">
-                    <span class="phpdocumentor-signature__argument__name">$filename</span>
-                    : <span class="phpdocumentor-signature__argument__return-type">string</span>
-                                    </dt>
-                <dd class="phpdocumentor-argument-list__definition"><section class="phpdocumentor-description"><p>File name.</p></section></dd>
-                    </dl>
-    
-        
-            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-        <span class="phpdocumentor-signature__response_type">mixed</span>
-            
-</article>
-                                    <a id="method_get_download_content_type"></a>
-<article
-        class="
-            phpdocumentor-method
-            phpdocumentor-method--private
-                                    phpdocumentor-element--static                    "
->
-    <h4 class="phpdocumentor-method__name">get_download_content_type()</h4>
-    <aside class="phpdocumentor-element-found-in">
-        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-download-handler.php"><a href="../files/woocommerce-includes-class-wc-download-handler.html"><abbr title="woocommerce/includes/class-wc-download-handler.php">class-wc-download-handler.php</abbr></a></abbr>
-        :
-        <span class="phpdocumentor-element-found-in__line">445</span>
-    </aside>
-        <p class="phpdocumentor-summary">Get content type of a download.</p>
-        <code class="phpdocumentor-signature phpdocumentor-code ">
-        <span class="phpdocumentor-signature__visibility">private</span>
-                        <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">get_download_content_type</span>(
-                    <span class="phpdocumentor-signature__argument">
-                            <span class="phpdocumentor-signature__argument__name">$file_path</span> :
-                <span class="phpdocumentor-signature__argument__return-type">string</span>
-                            </span>
-                )
-        : <span class="phpdocumentor-signature__response_type">string</span>
-    </code>
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$file_path</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>File path.</p></section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$filename</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>File name.</p></section>
+
+            </dd>
+            </dl>
 
     
-            <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
-        <dl class="phpdocumentor-argument-list">
-                            <dt class="phpdocumentor-argument-list__entry">
-                    <span class="phpdocumentor-signature__argument__name">$file_path</span>
-                    : <span class="phpdocumentor-signature__argument__return-type">string</span>
-                                    </dt>
-                <dd class="phpdocumentor-argument-list__definition"><section class="phpdocumentor-description"><p>File path.</p></section></dd>
-                    </dl>
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">mixed</span>
     
-        
-            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-        <span class="phpdocumentor-signature__response_type">string</span>
-            
 </article>
-                                    <a id="method_download_headers"></a>
-<article
-        class="
-            phpdocumentor-method
-            phpdocumentor-method--private
-                                    phpdocumentor-element--static                    "
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                    -static                    "
 >
-    <h4 class="phpdocumentor-method__name">download_headers()</h4>
+    <h4 class="phpdocumentor-element__name" id="method_download_file_redirect">
+        download_file_redirect()
+        <a href="#method_download_file_redirect" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
     <aside class="phpdocumentor-element-found-in">
-        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-download-handler.php"><a href="../files/woocommerce-includes-class-wc-download-handler.html"><abbr title="woocommerce/includes/class-wc-download-handler.php">class-wc-download-handler.php</abbr></a></abbr>
-        :
-        <span class="phpdocumentor-element-found-in__line">467</span>
-    </aside>
-        <p class="phpdocumentor-summary">Set headers for the download.</p>
-        <code class="phpdocumentor-signature phpdocumentor-code ">
-        <span class="phpdocumentor-signature__visibility">private</span>
-                        <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">download_headers</span>(
-                    <span class="phpdocumentor-signature__argument">
-                            <span class="phpdocumentor-signature__argument__name">$file_path</span> :
-                <span class="phpdocumentor-signature__argument__return-type">string</span>
-                            </span>
-                    <span class="phpdocumentor-signature__argument">
-            ,                 <span class="phpdocumentor-signature__argument__name">$filename</span> :
-                <span class="phpdocumentor-signature__argument__return-type">string</span>
-                            </span>
-                    <span class="phpdocumentor-signature__argument">
-            [,                 <span class="phpdocumentor-signature__argument__name">$download_range</span> :
-                <span class="phpdocumentor-signature__argument__return-type">array</span>
-                 = <span class="phpdocumentor-signature__argument__default-value">array()</span> ]            </span>
-                )
-        : <span class="phpdocumentor-signature__response_type">mixed</span>
-    </code>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-download-handler.php"><a href="../files/woocommerce-includes-class-wc-download-handler.html#source-view.243">includes/class-wc-download-handler.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">243</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Redirect to a file to start the download.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+            <span class="phpdocumentor-signature__static">static</span>    <span class="phpdocumentor-signature__name">download_file_redirect</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$file_path</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$filename</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">&#039;&#039;</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
 
     
-            <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
-        <dl class="phpdocumentor-argument-list">
-                            <dt class="phpdocumentor-argument-list__entry">
-                    <span class="phpdocumentor-signature__argument__name">$file_path</span>
-                    : <span class="phpdocumentor-signature__argument__return-type">string</span>
-                                    </dt>
-                <dd class="phpdocumentor-argument-list__definition"><section class="phpdocumentor-description"><p>File path.</p></section></dd>
-                            <dt class="phpdocumentor-argument-list__entry">
-                    <span class="phpdocumentor-signature__argument__name">$filename</span>
-                    : <span class="phpdocumentor-signature__argument__return-type">string</span>
-                                    </dt>
-                <dd class="phpdocumentor-argument-list__definition"><section class="phpdocumentor-description"><p>File name.</p></section></dd>
-                            <dt class="phpdocumentor-argument-list__entry">
-                    <span class="phpdocumentor-signature__argument__name">$download_range</span>
-                    : <span class="phpdocumentor-signature__argument__return-type">array</span>
-                     = <span class="phpdocumentor-signature__argument__default-value">array()</span>                </dt>
-                <dd class="phpdocumentor-argument-list__definition"><section class="phpdocumentor-description"><p>Array containing info about range download request (see {@see \get_download_range} for structure).</p></section></dd>
-                    </dl>
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$file_path</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>File path.</p></section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$filename</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">&#039;&#039;</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>File name.</p></section>
+
+            </dd>
+            </dl>
+
     
-        
-            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-        <span class="phpdocumentor-signature__response_type">mixed</span>
-            
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">mixed</span>
+    
 </article>
-                                    <a id="method_check_server_config"></a>
-<article
-        class="
-            phpdocumentor-method
-            phpdocumentor-method--private
-                                    phpdocumentor-element--static                    "
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                    -static                    "
 >
-    <h4 class="phpdocumentor-method__name">check_server_config()</h4>
+    <h4 class="phpdocumentor-element__name" id="method_download_file_xsendfile">
+        download_file_xsendfile()
+        <a href="#method_download_file_xsendfile" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
     <aside class="phpdocumentor-element-found-in">
-        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-download-handler.php"><a href="../files/woocommerce-includes-class-wc-download-handler.html"><abbr title="woocommerce/includes/class-wc-download-handler.php">class-wc-download-handler.php</abbr></a></abbr>
-        :
-        <span class="phpdocumentor-element-found-in__line">506</span>
-    </aside>
-        <p class="phpdocumentor-summary">Check and set certain server config variables to ensure downloads work as intended.</p>
-        <code class="phpdocumentor-signature phpdocumentor-code ">
-        <span class="phpdocumentor-signature__visibility">private</span>
-                        <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">check_server_config</span>(
-                )
-        : <span class="phpdocumentor-signature__response_type">mixed</span>
-    </code>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-download-handler.php"><a href="../files/woocommerce-includes-class-wc-download-handler.html#source-view.311">includes/class-wc-download-handler.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">311</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Download a file using X-Sendfile, X-Lighttpd-Sendfile, or X-Accel-Redirect if available.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+            <span class="phpdocumentor-signature__static">static</span>    <span class="phpdocumentor-signature__name">download_file_xsendfile</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$file_path</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$filename</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$file_path</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>File path.</p></section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$filename</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>File name.</p></section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">mixed</span>
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                    -static                    "
+>
+    <h4 class="phpdocumentor-element__name" id="method_download_product">
+        download_product()
+        <a href="#method_download_product" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-download-handler.php"><a href="../files/woocommerce-includes-class-wc-download-handler.html#source-view.33">includes/class-wc-download-handler.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">33</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Check if we need to download a file and check validity.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+            <span class="phpdocumentor-signature__static">static</span>    <span class="phpdocumentor-signature__name">download_product</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
 
     
     
-        
-            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-        <span class="phpdocumentor-signature__response_type">mixed</span>
-            
-</article>
-                                    <a id="method_clean_buffers"></a>
-<article
-        class="
-            phpdocumentor-method
-            phpdocumentor-method--private
-                                    phpdocumentor-element--static                    "
->
-    <h4 class="phpdocumentor-method__name">clean_buffers()</h4>
-    <aside class="phpdocumentor-element-found-in">
-        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-download-handler.php"><a href="../files/woocommerce-includes-class-wc-download-handler.html"><abbr title="woocommerce/includes/class-wc-download-handler.php">class-wc-download-handler.php</abbr></a></abbr>
-        :
-        <span class="phpdocumentor-element-found-in__line">520</span>
-    </aside>
-        <p class="phpdocumentor-summary">Clean all output buffers.</p>
-        <code class="phpdocumentor-signature phpdocumentor-code ">
-        <span class="phpdocumentor-signature__visibility">private</span>
-                        <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">clean_buffers</span>(
-                )
-        : <span class="phpdocumentor-signature__response_type">mixed</span>
-    </code>
+    
 
-        <section class="phpdocumentor-description"><p>Can prevent errors, for example: transfer closed with 3 bytes remaining to read.</p></section>
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">mixed</span>
     
-    
-        
-            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-        <span class="phpdocumentor-signature__response_type">mixed</span>
-            
 </article>
-                                    <a id="method_readfile_chunked"></a>
-<article
-        class="
-            phpdocumentor-method
-            phpdocumentor-method--public
-                                    phpdocumentor-element--static                    "
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                    -static                    "
 >
-    <h4 class="phpdocumentor-method__name">readfile_chunked()</h4>
+    <h4 class="phpdocumentor-element__name" id="method_ie_nocache_headers_fix">
+        ie_nocache_headers_fix()
+        <a href="#method_ie_nocache_headers_fix" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
     <aside class="phpdocumentor-element-found-in">
-        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-download-handler.php"><a href="../files/woocommerce-includes-class-wc-download-handler.html"><abbr title="woocommerce/includes/class-wc-download-handler.php">class-wc-download-handler.php</abbr></a></abbr>
-        :
-        <span class="phpdocumentor-element-found-in__line">541</span>
-    </aside>
-        <p class="phpdocumentor-summary">Read file chunked.</p>
-        <code class="phpdocumentor-signature phpdocumentor-code ">
-        <span class="phpdocumentor-signature__visibility">public</span>
-                        <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">readfile_chunked</span>(
-                    <span class="phpdocumentor-signature__argument">
-                            <span class="phpdocumentor-signature__argument__name">$file</span> :
-                <span class="phpdocumentor-signature__argument__return-type">string</span>
-                            </span>
-                    <span class="phpdocumentor-signature__argument">
-            ,                 <span class="phpdocumentor-signature__argument__name">$start</span> :
-                <span class="phpdocumentor-signature__argument__return-type">int</span>
-                            </span>
-                    <span class="phpdocumentor-signature__argument">
-            ,                 <span class="phpdocumentor-signature__argument__name">$length</span> :
-                <span class="phpdocumentor-signature__argument__return-type">int</span>
-                            </span>
-                )
-        : <span class="phpdocumentor-signature__response_type">bool</span>
-    </code>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-download-handler.php"><a href="../files/woocommerce-includes-class-wc-download-handler.html#source-view.607">includes/class-wc-download-handler.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">607</span>
+</aside>
 
-        <section class="phpdocumentor-description"><p>Reads file in chunks so big downloads are possible without changing PHP.INI - <a href="http://codeigniter.com/wiki/Download_helper_for_large_files/">http://codeigniter.com/wiki/Download_helper_for_large_files/</a>.</p></section>
-    
-            <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
-        <dl class="phpdocumentor-argument-list">
-                            <dt class="phpdocumentor-argument-list__entry">
-                    <span class="phpdocumentor-signature__argument__name">$file</span>
-                    : <span class="phpdocumentor-signature__argument__return-type">string</span>
-                                    </dt>
-                <dd class="phpdocumentor-argument-list__definition"><section class="phpdocumentor-description"><p>File.</p></section></dd>
-                            <dt class="phpdocumentor-argument-list__entry">
-                    <span class="phpdocumentor-signature__argument__name">$start</span>
-                    : <span class="phpdocumentor-signature__argument__return-type">int</span>
-                                    </dt>
-                <dd class="phpdocumentor-argument-list__definition"><section class="phpdocumentor-description"><p>Byte offset/position of the beginning from which to read from the file.</p></section></dd>
-                            <dt class="phpdocumentor-argument-list__entry">
-                    <span class="phpdocumentor-signature__argument__name">$length</span>
-                    : <span class="phpdocumentor-signature__argument__return-type">int</span>
-                                    </dt>
-                <dd class="phpdocumentor-argument-list__definition"><section class="phpdocumentor-description"><p>Length of the chunk to be read from the file in bytes, 0 means full file.</p></section></dd>
-                    </dl>
-    
-        
-            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-        <span class="phpdocumentor-signature__response_type">bool</span>
-                    &mdash; <span class="phpdocumentor-description"><p>Success or fail</p></span>
-            
-</article>
-                                    <a id="method_ie_nocache_headers_fix"></a>
-<article
-        class="
-            phpdocumentor-method
-            phpdocumentor-method--public
-                                    phpdocumentor-element--static                    "
->
-    <h4 class="phpdocumentor-method__name">ie_nocache_headers_fix()</h4>
-    <aside class="phpdocumentor-element-found-in">
-        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-download-handler.php"><a href="../files/woocommerce-includes-class-wc-download-handler.html"><abbr title="woocommerce/includes/class-wc-download-handler.php">class-wc-download-handler.php</abbr></a></abbr>
-        :
-        <span class="phpdocumentor-element-found-in__line">598</span>
-    </aside>
         <p class="phpdocumentor-summary">Filter headers for IE to fix issues over SSL.</p>
-        <code class="phpdocumentor-signature phpdocumentor-code ">
-        <span class="phpdocumentor-signature__visibility">public</span>
-                        <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">ie_nocache_headers_fix</span>(
-                    <span class="phpdocumentor-signature__argument">
-                            <span class="phpdocumentor-signature__argument__name">$headers</span> :
-                <span class="phpdocumentor-signature__argument__return-type">array</span>
-                            </span>
-                )
-        : <span class="phpdocumentor-signature__response_type">array</span>
-    </code>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+            <span class="phpdocumentor-signature__static">static</span>    <span class="phpdocumentor-signature__name">ie_nocache_headers_fix</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&nbsp;</span><span class="phpdocumentor-signature__argument__name">$headers</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array</span></code>
 
         <section class="phpdocumentor-description"><p>IE bug prevents download via SSL when Cache Control and Pragma no-cache headers set.</p></section>
-    
-            <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
-        <dl class="phpdocumentor-argument-list">
-                            <dt class="phpdocumentor-argument-list__entry">
-                    <span class="phpdocumentor-signature__argument__name">$headers</span>
-                    : <span class="phpdocumentor-signature__argument__return-type">array</span>
-                                    </dt>
-                <dd class="phpdocumentor-argument-list__definition"><section class="phpdocumentor-description"><p>HTTP headers.</p></section></dd>
-                    </dl>
-    
-        
-            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-        <span class="phpdocumentor-signature__response_type">array</span>
-            
-</article>
-                                    <a id="method_download_error"></a>
-<article
-        class="
-            phpdocumentor-method
-            phpdocumentor-method--private
-                                    phpdocumentor-element--static                    "
->
-    <h4 class="phpdocumentor-method__name">download_error()</h4>
-    <aside class="phpdocumentor-element-found-in">
-        <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-download-handler.php"><a href="../files/woocommerce-includes-class-wc-download-handler.html"><abbr title="woocommerce/includes/class-wc-download-handler.php">class-wc-download-handler.php</abbr></a></abbr>
-        :
-        <span class="phpdocumentor-element-found-in__line">613</span>
-    </aside>
-        <p class="phpdocumentor-summary">Die with an error message if the download fails.</p>
-        <code class="phpdocumentor-signature phpdocumentor-code ">
-        <span class="phpdocumentor-signature__visibility">private</span>
-                        <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">download_error</span>(
-                    <span class="phpdocumentor-signature__argument">
-                            <span class="phpdocumentor-signature__argument__name">$message</span> :
-                <span class="phpdocumentor-signature__argument__return-type">string</span>
-                            </span>
-                    <span class="phpdocumentor-signature__argument">
-            [,                 <span class="phpdocumentor-signature__argument__name">$title</span> :
-                <span class="phpdocumentor-signature__argument__return-type">string</span>
-                 = <span class="phpdocumentor-signature__argument__default-value">&#039;&#039;</span> ]            </span>
-                    <span class="phpdocumentor-signature__argument">
-            [,                 <span class="phpdocumentor-signature__argument__name">$status</span> :
-                <span class="phpdocumentor-signature__argument__return-type">int</span>
-                 = <span class="phpdocumentor-signature__argument__default-value">404</span> ]            </span>
-                )
-        : <span class="phpdocumentor-signature__response_type">mixed</span>
-    </code>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$headers</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>HTTP headers.</p></section>
+
+            </dd>
+            </dl>
 
     
-            <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
-        <dl class="phpdocumentor-argument-list">
-                            <dt class="phpdocumentor-argument-list__entry">
-                    <span class="phpdocumentor-signature__argument__name">$message</span>
-                    : <span class="phpdocumentor-signature__argument__return-type">string</span>
-                                    </dt>
-                <dd class="phpdocumentor-argument-list__definition"><section class="phpdocumentor-description"><p>Error message.</p></section></dd>
-                            <dt class="phpdocumentor-argument-list__entry">
-                    <span class="phpdocumentor-signature__argument__name">$title</span>
-                    : <span class="phpdocumentor-signature__argument__return-type">string</span>
-                     = <span class="phpdocumentor-signature__argument__default-value">&#039;&#039;</span>                </dt>
-                <dd class="phpdocumentor-argument-list__definition"><section class="phpdocumentor-description"><p>Error title.</p></section></dd>
-                            <dt class="phpdocumentor-argument-list__entry">
-                    <span class="phpdocumentor-signature__argument__name">$status</span>
-                    : <span class="phpdocumentor-signature__argument__return-type">int</span>
-                     = <span class="phpdocumentor-signature__argument__default-value">404</span>                </dt>
-                <dd class="phpdocumentor-argument-list__definition"><section class="phpdocumentor-description"><p>Error status.</p></section></dd>
-                    </dl>
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">array</span>
     
-        
-            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-        <span class="phpdocumentor-signature__response_type">mixed</span>
-            
 </article>
-                                                            </section>
-            </article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                    -static                    "
+>
+    <h4 class="phpdocumentor-element__name" id="method_init">
+        init()
+        <a href="#method_init" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-download-handler.php"><a href="../files/woocommerce-includes-class-wc-download-handler.html#source-view.21">includes/class-wc-download-handler.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">21</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Hook in methods.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+            <span class="phpdocumentor-signature__static">static</span>    <span class="phpdocumentor-signature__name">init</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+    
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">mixed</span>
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                    -static                    "
+>
+    <h4 class="phpdocumentor-element__name" id="method_parse_file_path">
+        parse_file_path()
+        <a href="#method_parse_file_path" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-download-handler.php"><a href="../files/woocommerce-includes-class-wc-download-handler.html#source-view.254">includes/class-wc-download-handler.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">254</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Parse file path and see if its remote or local.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+            <span class="phpdocumentor-signature__static">static</span>    <span class="phpdocumentor-signature__name">parse_file_path</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$file_path</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array</span></code>
+
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$file_path</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>File path.</p></section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">array</span>
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                    -static                    "
+>
+    <h4 class="phpdocumentor-element__name" id="method_readfile_chunked">
+        readfile_chunked()
+        <a href="#method_readfile_chunked" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-download-handler.php"><a href="../files/woocommerce-includes-class-wc-download-handler.html#source-view.550">includes/class-wc-download-handler.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">550</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Read file chunked.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+            <span class="phpdocumentor-signature__static">static</span>    <span class="phpdocumentor-signature__name">readfile_chunked</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$file</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$start</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$length</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool</span></code>
+
+        <section class="phpdocumentor-description"><p>Reads file in chunks so big downloads are possible without changing PHP.INI - <a href="http://codeigniter.com/wiki/Download_helper_for_large_files/">http://codeigniter.com/wiki/Download_helper_for_large_files/</a>.</p></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$file</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>File.</p></section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$start</span>
+                : <span class="phpdocumentor-signature__argument__return-type">int</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Byte offset/position of the beginning from which to read from the file.</p></section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$length</span>
+                : <span class="phpdocumentor-signature__argument__return-type">int</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Length of the chunk to be read from the file in bytes, 0 means full file.</p></section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">bool</span>
+            &mdash; <span class="phpdocumentor-return-value__description">Success or fail</span>
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -protected
+                                    -static                    "
+>
+    <h4 class="phpdocumentor-element__name" id="method_get_download_range">
+        get_download_range()
+        <a href="#method_get_download_range" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-download-handler.php"><a href="../files/woocommerce-includes-class-wc-download-handler.html#source-view.361">includes/class-wc-download-handler.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">361</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Parse the HTTP_RANGE request from iOS devices.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">protected</span>
+            <span class="phpdocumentor-signature__static">static</span>    <span class="phpdocumentor-signature__name">get_download_range</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$file_size</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array</span></code>
+
+        <section class="phpdocumentor-description"><p>Does not support multi-range requests.</p></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$file_size</span>
+                : <span class="phpdocumentor-signature__argument__return-type">int</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Size of file in bytes.</p></section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">array</span>
+            &mdash; <span class="phpdocumentor-return-value__description">{
+    Information about range download request: beginning and length of
+    file chunk, whether the range is valid/supported and whether the request is a range request.
+
+    @type int  $start            Byte offset of the beginning of the range. Default 0.
+    @type int  $length           Length of the requested file chunk in bytes. Optional.
+    @type bool $is_range_valid   Whether the requested range is a valid and supported range.
+    @type bool $is_range_request Whether the request is a range request.
+}</span>
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -private
+                                    -static                    "
+>
+    <h4 class="phpdocumentor-element__name" id="method_check_download_expiry">
+        check_download_expiry()
+        <a href="#method_check_download_expiry" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-download-handler.php"><a href="../files/woocommerce-includes-class-wc-download-handler.html#source-view.165">includes/class-wc-download-handler.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">165</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Check if the download has expired.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">private</span>
+            <span class="phpdocumentor-signature__static">static</span>    <span class="phpdocumentor-signature__name">check_download_expiry</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="../classes/WC-Customer-Download.html"><abbr title="\WC_Customer_Download">WC_Customer_Download</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$download</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$download</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href="../classes/WC-Customer-Download.html"><abbr title="\WC_Customer_Download">WC_Customer_Download</abbr></a></span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Download instance.</p></section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">mixed</span>
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -private
+                                    -static                    "
+>
+    <h4 class="phpdocumentor-element__name" id="method_check_download_login_required">
+        check_download_login_required()
+        <a href="#method_check_download_login_required" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-download-handler.php"><a href="../files/woocommerce-includes-class-wc-download-handler.html#source-view.176">includes/class-wc-download-handler.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">176</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Check if a download requires the user to login first.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">private</span>
+            <span class="phpdocumentor-signature__static">static</span>    <span class="phpdocumentor-signature__name">check_download_login_required</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="../classes/WC-Customer-Download.html"><abbr title="\WC_Customer_Download">WC_Customer_Download</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$download</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$download</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href="../classes/WC-Customer-Download.html"><abbr title="\WC_Customer_Download">WC_Customer_Download</abbr></a></span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Download instance.</p></section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">mixed</span>
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -private
+                                    -static                    "
+>
+    <h4 class="phpdocumentor-element__name" id="method_check_downloads_remaining">
+        check_downloads_remaining()
+        <a href="#method_check_downloads_remaining" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-download-handler.php"><a href="../files/woocommerce-includes-class-wc-download-handler.html#source-view.154">includes/class-wc-download-handler.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">154</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Check if there are downloads remaining.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">private</span>
+            <span class="phpdocumentor-signature__static">static</span>    <span class="phpdocumentor-signature__name">check_downloads_remaining</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="../classes/WC-Customer-Download.html"><abbr title="\WC_Customer_Download">WC_Customer_Download</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$download</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$download</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href="../classes/WC-Customer-Download.html"><abbr title="\WC_Customer_Download">WC_Customer_Download</abbr></a></span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Download instance.</p></section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">mixed</span>
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -private
+                                    -static                    "
+>
+    <h4 class="phpdocumentor-element__name" id="method_check_order_is_valid">
+        check_order_is_valid()
+        <a href="#method_check_order_is_valid" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-download-handler.php"><a href="../files/woocommerce-includes-class-wc-download-handler.html#source-view.139">includes/class-wc-download-handler.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">139</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Check if an order is valid for downloading from.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">private</span>
+            <span class="phpdocumentor-signature__static">static</span>    <span class="phpdocumentor-signature__name">check_order_is_valid</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="../classes/WC-Customer-Download.html"><abbr title="\WC_Customer_Download">WC_Customer_Download</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$download</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$download</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href="../classes/WC-Customer-Download.html"><abbr title="\WC_Customer_Download">WC_Customer_Download</abbr></a></span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Download instance.</p></section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">mixed</span>
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -private
+                                    -static                    "
+>
+    <h4 class="phpdocumentor-element__name" id="method_check_server_config">
+        check_server_config()
+        <a href="#method_check_server_config" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-download-handler.php"><a href="../files/woocommerce-includes-class-wc-download-handler.html#source-view.515">includes/class-wc-download-handler.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">515</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Check and set certain server config variables to ensure downloads work as intended.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">private</span>
+            <span class="phpdocumentor-signature__static">static</span>    <span class="phpdocumentor-signature__name">check_server_config</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+    
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">mixed</span>
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -private
+                                    -static                    "
+>
+    <h4 class="phpdocumentor-element__name" id="method_clean_buffers">
+        clean_buffers()
+        <a href="#method_clean_buffers" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-download-handler.php"><a href="../files/woocommerce-includes-class-wc-download-handler.html#source-view.529">includes/class-wc-download-handler.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">529</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Clean all output buffers.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">private</span>
+            <span class="phpdocumentor-signature__static">static</span>    <span class="phpdocumentor-signature__name">clean_buffers</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+        <section class="phpdocumentor-description"><p>Can prevent errors, for example: transfer closed with 3 bytes remaining to read.</p></section>
+
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">mixed</span>
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -private
+                                    -static                    "
+>
+    <h4 class="phpdocumentor-element__name" id="method_download_error">
+        download_error()
+        <a href="#method_download_error" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-download-handler.php"><a href="../files/woocommerce-includes-class-wc-download-handler.html#source-view.622">includes/class-wc-download-handler.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">622</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Die with an error message if the download fails.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">private</span>
+            <span class="phpdocumentor-signature__static">static</span>    <span class="phpdocumentor-signature__name">download_error</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$message</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$title</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">&#039;&#039;</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$status</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">404</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$message</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Error message.</p></section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$title</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">&#039;&#039;</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Error title.</p></section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$status</span>
+                : <span class="phpdocumentor-signature__argument__return-type">int</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">404</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Error status.</p></section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">mixed</span>
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -private
+                                    -static                    "
+>
+    <h4 class="phpdocumentor-element__name" id="method_download_headers">
+        download_headers()
+        <a href="#method_download_headers" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-download-handler.php"><a href="../files/woocommerce-includes-class-wc-download-handler.html#source-view.476">includes/class-wc-download-handler.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">476</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Set headers for the download.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">private</span>
+            <span class="phpdocumentor-signature__static">static</span>    <span class="phpdocumentor-signature__name">download_headers</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$file_path</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$filename</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&nbsp;</span><span class="phpdocumentor-signature__argument__name">$download_range</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">array()</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$file_path</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>File path.</p></section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$filename</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>File name.</p></section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$download_range</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">array()</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Array containing info about range download request (see {@see \get_download_range} for structure).</p></section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">mixed</span>
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -private
+                                    -static                    "
+>
+    <h4 class="phpdocumentor-element__name" id="method_get_download_content_type">
+        get_download_content_type()
+        <a href="#method_get_download_content_type" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-download-handler.php"><a href="../files/woocommerce-includes-class-wc-download-handler.html#source-view.454">includes/class-wc-download-handler.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">454</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Get content type of a download.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">private</span>
+            <span class="phpdocumentor-signature__static">static</span>    <span class="phpdocumentor-signature__name">get_download_content_type</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$file_path</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
+
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$file_path</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>File path.</p></section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">string</span>
+    
+</article>
+            </section>
+
+    </article>
+            </div>
         </div>
-    </div>
-</main>
-<a href="#" class="to-top">Back to the top</a>
-<footer class="phpdocumentor phpdocumentor-footer">
+        <a href="#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+
+    </main>
+
+    <footer class="phpdocumentor phpdocumentor-footer">
     <div class="phpdocumentor-section">
-        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on August 19th, 2020 at 03:11 pm.</span>
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on September 24th, 2020 at 12:36 pm.</span>
     </div>
 </footer>
+
+    <script>
+        cssVars({});
+    </script>
+    <script>
+        var searchParams = {
+            'searchIndex': '..\/js\/searchIndex.json'
+        };
+    </script>
+    <script src="../js/searchIndex.js?updated=1600961776"></script>
+    <script src="../js/search.js?updated=1600961776"></script>
 </body>
 </html>
