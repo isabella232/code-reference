@@ -9,9 +9,9 @@
     <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
     <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
     <link rel="stylesheet" href="../css/normalize.css">
-    <link rel="stylesheet" href="../css/base.css?updated=1600961773">
+    <link rel="stylesheet" href="../css/base.css?updated=1606754662">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/template.css?updated=1600961773">
+    <link rel="stylesheet" href="../css/template.css?updated=1606754662">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
             <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
@@ -76,7 +76,7 @@
                                     <li><a href="../packages/WooCommerce-Helper.html"><abbr title="\WooCommerce\Helper">Helper</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-Templates.html"><abbr title="\WooCommerce\Templates">Templates</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-Reports.html"><abbr title="\WooCommerce\Reports">Reports</abbr></a></li>
-                                    <li><a href="../packages/WooCommerce-API.html"><abbr title="\WooCommerce\API">API</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-RestApi.html"><abbr title="\WooCommerce\RestApi">RestApi</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-CLI.html"><abbr title="\WooCommerce\CLI">CLI</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-l10n.html"><abbr title="\WooCommerce\l10n">l10n</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-Webhooks.html"><abbr title="\WooCommerce\Webhooks">Webhooks</abbr></a></li>
@@ -91,6 +91,7 @@
                                     <li><a href="../packages/WooCommerce-Interface.html"><abbr title="\WooCommerce\Interface">Interface</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-LogHandlers.html"><abbr title="\WooCommerce\LogHandlers">LogHandlers</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-PaymentTokens.html"><abbr title="\WooCommerce\PaymentTokens">PaymentTokens</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Utilities.html"><abbr title="\WooCommerce\Utilities">Utilities</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-Shipping.html"><abbr title="\WooCommerce\Shipping">Shipping</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-Shortcodes.html"><abbr title="\WooCommerce\Shortcodes">Shortcodes</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-Tracks.html"><abbr title="\WooCommerce\Tracks">Tracks</abbr></a></li>
@@ -100,9 +101,8 @@
                                     <li><a href="../packages/WooCommerce-Widgets.html"><abbr title="\WooCommerce\Widgets">Widgets</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-Uninstaller.html"><abbr title="\WooCommerce\Uninstaller">Uninstaller</abbr></a></li>
                             </ul>
-                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/AutomatticWooCommerceRestApi.html"><abbr title="\AutomatticWooCommerceRestApi">AutomatticWooCommerceRestApi</abbr></a></h3>
-                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/AutomatticWooCommerceUtilities.html"><abbr title="\AutomatticWooCommerceUtilities">AutomatticWooCommerceUtilities</abbr></a></h3>
-                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceTemplates.html"><abbr title="\WooCommerceTemplates">WooCommerceTemplates</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceAdmin.html"><abbr title="\WoocommerceAdmin">WoocommerceAdmin</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdmin.html"><abbr title="\WooCommerceAdmin">WooCommerceAdmin</abbr></a></h3>
                         </section>
     
     <section class="phpdocumentor-sidebar__category">
@@ -2005,9 +2005,9 @@ be publicly accessible.</p>
         <a href="#function_wc_update_440_insert_attribute_terms_for_variable_products" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.2139">includes/wc-update-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.2144">includes/wc-update-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">2139</span>
+    <span class="phpdocumentor-element-found-in__line">2144</span>
 </aside>
 
         <p class="phpdocumentor-summary">Register attributes as terms for variable products, in increments of 100 products.</p>
@@ -2016,7 +2016,11 @@ be publicly accessible.</p>
     <span class="phpdocumentor-signature__visibility"></span>
                 <span class="phpdocumentor-signature__name">wc_update_440_insert_attribute_terms_for_variable_products</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool</span></code>
 
-    
+        <section class="phpdocumentor-description"><p>This migration was added to support a new mechanism to improve the filtering of
+variable products by attribute (<a href="https://github.com/woocommerce/woocommerce/pull/26260">https://github.com/woocommerce/woocommerce/pull/26260</a>),
+however that mechanism was later reverted (<a href="https://github.com/woocommerce/woocommerce/pull/27625">https://github.com/woocommerce/woocommerce/pull/27625</a>)
+due to numerous issues found. Thus the migration is no longer needed.</p></section>
+
     
     
 
@@ -2028,9 +2032,9 @@ be publicly accessible.</p>
         <a href="#function_wc_update_440_db_version" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.2175">includes/wc-update-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.2151">includes/wc-update-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">2175</span>
+    <span class="phpdocumentor-element-found-in__line">2151</span>
 </aside>
 
         <p class="phpdocumentor-summary">Update DB version.</p>
@@ -2051,9 +2055,9 @@ be publicly accessible.</p>
         <a href="#function_wc_update_450_db_version" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.2182">includes/wc-update-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.2158">includes/wc-update-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">2182</span>
+    <span class="phpdocumentor-element-found-in__line">2158</span>
 </aside>
 
         <p class="phpdocumentor-summary">Update DB version to 4.5.0.</p>
@@ -2074,9 +2078,9 @@ be publicly accessible.</p>
         <a href="#function_wc_update_450_sanitize_coupons_code" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.2191">includes/wc-update-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.2167">includes/wc-update-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">2191</span>
+    <span class="phpdocumentor-element-found-in__line">2167</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sanitize all coupons code.</p>
@@ -4233,39 +4237,15 @@ function wc_update_400_db_version() {
 /**
  * Register attributes as terms for variable products, in increments of 100 products.
  *
- * @return bool true if there are more products to process.
+ * This migration was added to support a new mechanism to improve the filtering of
+ * variable products by attribute (https://github.com/woocommerce/woocommerce/pull/26260),
+ * however that mechanism was later reverted (https://github.com/woocommerce/woocommerce/pull/27625)
+ * due to numerous issues found. Thus the migration is no longer needed.
+ *
+ * @return bool true if the migration needs to be run again.
  */
 function wc_update_440_insert_attribute_terms_for_variable_products() {
-	$state_option_name = &#039;woocommerce_&#039; . __FUNCTION__ . &#039;_state&#039;;
-
-	$page     = intval( get_option( $state_option_name, 1 ) );
-	$products = wc_get_products(
-		array(
-			&#039;type&#039;  =&gt; &#039;variable&#039;,
-			&#039;limit&#039; =&gt; 100,
-			&#039;page&#039;  =&gt; $page,
-		)
-	);
-	if ( empty( $products ) ) {
-		delete_option( $state_option_name );
-		return false;
-	}
-
-	$attribute_taxonomy_names = wc_get_attribute_taxonomy_names();
-	foreach ( $products as $product ) {
-		$variation_ids = $product-&gt;get_children();
-		foreach ( $variation_ids as $variation_id ) {
-			$variation            = wc_get_product( $variation_id );
-			$variation_attributes = $variation-&gt;get_attributes();
-			foreach ( $variation_attributes as $attr_name =&gt; $attr_value ) {
-				wp_set_post_terms( $variation_id, array( $attr_value ), $attr_name );
-			}
-			$attributes_to_delete = array_diff( $attribute_taxonomy_names, array_keys( $variation_attributes ) );
-			wp_delete_object_term_relationships( $variation_id, $attributes_to_delete );
-		}
-	}
-
-	return update_option( $state_option_name, $page + 1 );
+	return false;
 }
 
 /**
@@ -4351,7 +4331,7 @@ function wc_update_450_sanitize_coupons_code() {
 
     <footer class="phpdocumentor phpdocumentor-footer">
     <div class="phpdocumentor-section">
-        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on September 24th, 2020 at 12:36 pm.</span>
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on November 30th, 2020 at 01:44 pm.</span>
     </div>
 </footer>
 
@@ -4363,7 +4343,7 @@ function wc_update_450_sanitize_coupons_code() {
             'searchIndex': '..\/js\/searchIndex.json'
         };
     </script>
-    <script src="../js/searchIndex.js?updated=1600961773"></script>
-    <script src="../js/search.js?updated=1600961773"></script>
+    <script src="../js/searchIndex.js?updated=1606754662"></script>
+    <script src="../js/search.js?updated=1606754662"></script>
 </body>
 </html>

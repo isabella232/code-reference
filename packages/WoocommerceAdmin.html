@@ -9,20 +9,14 @@
     <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
     <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
     <link rel="stylesheet" href="../css/normalize.css">
-    <link rel="stylesheet" href="../css/base.css?updated=1600961774">
+    <link rel="stylesheet" href="../css/base.css?updated=1606754664">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/template.css?updated=1600961774">
+    <link rel="stylesheet" href="../css/template.css?updated=1606754664">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
             <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@7.2.0/dist/js/autoComplete.min.js"></script>
-        <script src="../js/prism.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            window.dispatchEvent(new HashChangeEvent('hashchange'));
-        });
-    </script>
-</head>
+        </head>
 <body id="top">
     <header class="phpdocumentor-top-header">
     <section class="phpdocumentor-section">
@@ -76,7 +70,7 @@
                                     <li><a href="../packages/WooCommerce-Helper.html"><abbr title="\WooCommerce\Helper">Helper</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-Templates.html"><abbr title="\WooCommerce\Templates">Templates</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-Reports.html"><abbr title="\WooCommerce\Reports">Reports</abbr></a></li>
-                                    <li><a href="../packages/WooCommerce-API.html"><abbr title="\WooCommerce\API">API</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-RestApi.html"><abbr title="\WooCommerce\RestApi">RestApi</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-CLI.html"><abbr title="\WooCommerce\CLI">CLI</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-l10n.html"><abbr title="\WooCommerce\l10n">l10n</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-Webhooks.html"><abbr title="\WooCommerce\Webhooks">Webhooks</abbr></a></li>
@@ -91,6 +85,7 @@
                                     <li><a href="../packages/WooCommerce-Interface.html"><abbr title="\WooCommerce\Interface">Interface</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-LogHandlers.html"><abbr title="\WooCommerce\LogHandlers">LogHandlers</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-PaymentTokens.html"><abbr title="\WooCommerce\PaymentTokens">PaymentTokens</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Utilities.html"><abbr title="\WooCommerce\Utilities">Utilities</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-Shipping.html"><abbr title="\WooCommerce\Shipping">Shipping</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-Shortcodes.html"><abbr title="\WooCommerce\Shortcodes">Shortcodes</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-Tracks.html"><abbr title="\WooCommerce\Tracks">Tracks</abbr></a></li>
@@ -100,9 +95,8 @@
                                     <li><a href="../packages/WooCommerce-Widgets.html"><abbr title="\WooCommerce\Widgets">Widgets</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-Uninstaller.html"><abbr title="\WooCommerce\Uninstaller">Uninstaller</abbr></a></li>
                             </ul>
-                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/AutomatticWooCommerceRestApi.html"><abbr title="\AutomatticWooCommerceRestApi">AutomatticWooCommerceRestApi</abbr></a></h3>
-                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/AutomatticWooCommerceUtilities.html"><abbr title="\AutomatticWooCommerceUtilities">AutomatticWooCommerceUtilities</abbr></a></h3>
-                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceTemplates.html"><abbr title="\WooCommerceTemplates">WooCommerceTemplates</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceAdmin.html"><abbr title="\WoocommerceAdmin">WoocommerceAdmin</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdmin.html"><abbr title="\WooCommerceAdmin">WooCommerceAdmin</abbr></a></h3>
                         </section>
     
     <section class="phpdocumentor-sidebar__category">
@@ -123,127 +117,31 @@
                     <ul class="phpdocumentor-breadcrumbs">
     </ul>
 
-    <article class="phpdocumentor-element -file">
-        <h2 class="phpdocumentor-content__title">WC_Admin_Notes_Facebook_Marketing_Expert.php</h2>
-
-                
+    <article class="phpdocumentor-element -package">
+        <h2 class="phpdocumentor-content__title">WoocommerceAdmin</h2>
 
         
-                    <h3 class="phpdocumentor-elements__header" id="source-code">
-                Source code
-                <a href="#source-code" class="headerlink"><i class="fas fa-link"></i></a>
-            </h3>
-            <pre id="source-view" tabindex="-1" class="language-php line-numbers linkable-line-numbers"><code>&lt;?php
-/**
- * WooCommerce Admin Facebook Marketing Expert Note Provider.
- *
- * Adds notes to the merchant&#039;s inbox concerning Facebook Marketing Expert.
- *
- * @package WooCommerce\Admin
- */
 
-namespace Automattic\WooCommerce\Admin\Notes;
+<h3 id="interfaces_class_traits">
+    Interfaces, Classes and Traits
+    <a href="#interfaces_class_traits" class="headerlink"><i class="fas fa-link"></i></a>
+</h3>
 
-defined( &#039;ABSPATH&#039; ) || exit;
+<dl class="phpdocumentor-table-of-contents">
+    
+            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="../classes/Automattic-WooCommerce-Admin-Features-OnboardingAutomateTaxes.html"><abbr title="\Automattic\WooCommerce\Admin\Features\OnboardingAutomateTaxes">OnboardingAutomateTaxes</abbr></a></dt>
+        <dd>This contains logic for setting up shipping when the profiler completes.</dd>
+            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="../classes/Automattic-WooCommerce-Admin-Features-OnboardingSetUpShipping.html"><abbr title="\Automattic\WooCommerce\Admin\Features\OnboardingSetUpShipping">OnboardingSetUpShipping</abbr></a></dt>
+        <dd>This contains logic for setting up shipping when the profiler completes.</dd>
+    
+    </dl>
 
-use \Automattic\WooCommerce\Admin\PluginsHelper;
 
-/**
- * WC_Admin_Notes_Facebook_Marketing_Expert
- */
-class WC_Admin_Notes_Facebook_Marketing_Expert {
 
-	/**
-	 * Note traits.
-	 */
-	use NoteTraits;
+        
 
-	/**
-	 * Name of the note for use in the database.
-	 */
-	const NOTE_NAME = &#039;wc-admin-facebook-marketing-expert&#039;;
-
-	/**
-	 * Name of plugin file.
-	 */
-	const PLUGIN_FILE = &#039;facebook-for-woocommerce/facebook-for-woocommerce.php&#039;;
-
-	/**
-	 * Possibly add note.
-	 */
-	public static function possibly_add_note() {
-
-		// Check if the note can and should be added.
-		if ( ! self::can_be_added() ) {
-			return;
-		}
-
-		// Only add the note to stores with Facebook for WooCommerce installed.
-		if ( ! self::is_facebook_for_woocommerce_installed() ) {
-			return;
-		}
-
-		// Only add the note to stores with at least 30 orders in the last month.
-		if ( self::orders_last_month() &lt; 30 ) {
-			return;
-		}
-
-		$note = self::get_note();
-		$note-&gt;save();
-	}
-
-	/**
-	 * Get the note.
-	 */
-	public static function get_note() {
-		$note = new WC_Admin_Note();
-		$note-&gt;set_title( __( &#039;Create and optimise your Facebook ads with the help of a Facebook Marketing Expert&#039;, &#039;woocommerce&#039; ) );
-		$note-&gt;set_content( __( &#039;Get 1:1 business support from a Facebook Marketing Expert who will work with you and your business to create and optimize your Facebook ads. Discover new strategies used by similar businesses in your market and industry. Check whether you are eligible to make use of this offer.&#039;, &#039;woocommerce&#039; ) );
-		$note-&gt;set_type( WC_Admin_Note::E_WC_ADMIN_NOTE_INFORMATIONAL );
-		$note-&gt;set_name( self::NOTE_NAME );
-		$note-&gt;set_content_data( (object) array() );
-		$note-&gt;set_source( &#039;woocommerce-admin&#039; );
-		$note-&gt;add_action(
-			&#039;learn-more&#039;,
-			__( &#039;Learn more&#039;, &#039;woocommerce&#039; ),
-			&#039;https://www.facebook.com/business/m/facebook-marketing-experts-program?content_id=UxWvEceBNtpQLhU&#039;,
-			WC_Admin_Note::E_WC_ADMIN_NOTE_ACTIONED,
-			true
-		);
-		return $note;
-	}
-
-	/**
-	 * Determine if Facebook for WooCommerce is already active or installed
-	 *
-	 * @return bool
-	 */
-	protected static function is_facebook_for_woocommerce_installed() {
-		if ( class_exists( &#039;WC_Facebookcommerce_Integration&#039; ) ) {
-			return true;
-		}
-		return PluginsHelper::is_plugin_installed( self::PLUGIN_FILE );
-	}
-
-	/**
-	 * Determine the number of orders in the last month
-	 *
-	 * @return int
-	 */
-	protected static function orders_last_month() {
-
-		$date = new \DateTime();
-
-		$args = array(
-			&#039;date_created&#039; =&gt; &#039;&gt;&#039; . $date-&gt;modify( &#039;-1 month&#039; )-&gt;format( &#039;Y-m-d&#039; ),
-			&#039;return&#039;       =&gt; &#039;ids&#039;,
-		);
-
-		return count( wc_get_orders( $args ) );
-	}
-}
-</code></pre>
-            </article>
+        
+    </article>
             </div>
         </div>
         <a href="#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
@@ -252,7 +150,7 @@ class WC_Admin_Notes_Facebook_Marketing_Expert {
 
     <footer class="phpdocumentor phpdocumentor-footer">
     <div class="phpdocumentor-section">
-        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on September 24th, 2020 at 12:36 pm.</span>
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on November 30th, 2020 at 01:44 pm.</span>
     </div>
 </footer>
 
@@ -264,7 +162,7 @@ class WC_Admin_Notes_Facebook_Marketing_Expert {
             'searchIndex': '..\/js\/searchIndex.json'
         };
     </script>
-    <script src="../js/searchIndex.js?updated=1600961774"></script>
-    <script src="../js/search.js?updated=1600961774"></script>
+    <script src="../js/searchIndex.js?updated=1606754664"></script>
+    <script src="../js/search.js?updated=1606754664"></script>
 </body>
 </html>

@@ -9,9 +9,9 @@
     <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
     <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
     <link rel="stylesheet" href="../css/normalize.css">
-    <link rel="stylesheet" href="../css/base.css?updated=1600961774">
+    <link rel="stylesheet" href="../css/base.css?updated=1606754663">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/template.css?updated=1600961774">
+    <link rel="stylesheet" href="../css/template.css?updated=1606754663">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
             <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
@@ -76,7 +76,7 @@
                                     <li><a href="../packages/WooCommerce-Helper.html"><abbr title="\WooCommerce\Helper">Helper</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-Templates.html"><abbr title="\WooCommerce\Templates">Templates</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-Reports.html"><abbr title="\WooCommerce\Reports">Reports</abbr></a></li>
-                                    <li><a href="../packages/WooCommerce-API.html"><abbr title="\WooCommerce\API">API</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-RestApi.html"><abbr title="\WooCommerce\RestApi">RestApi</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-CLI.html"><abbr title="\WooCommerce\CLI">CLI</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-l10n.html"><abbr title="\WooCommerce\l10n">l10n</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-Webhooks.html"><abbr title="\WooCommerce\Webhooks">Webhooks</abbr></a></li>
@@ -91,6 +91,7 @@
                                     <li><a href="../packages/WooCommerce-Interface.html"><abbr title="\WooCommerce\Interface">Interface</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-LogHandlers.html"><abbr title="\WooCommerce\LogHandlers">LogHandlers</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-PaymentTokens.html"><abbr title="\WooCommerce\PaymentTokens">PaymentTokens</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Utilities.html"><abbr title="\WooCommerce\Utilities">Utilities</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-Shipping.html"><abbr title="\WooCommerce\Shipping">Shipping</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-Shortcodes.html"><abbr title="\WooCommerce\Shortcodes">Shortcodes</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-Tracks.html"><abbr title="\WooCommerce\Tracks">Tracks</abbr></a></li>
@@ -100,9 +101,8 @@
                                     <li><a href="../packages/WooCommerce-Widgets.html"><abbr title="\WooCommerce\Widgets">Widgets</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-Uninstaller.html"><abbr title="\WooCommerce\Uninstaller">Uninstaller</abbr></a></li>
                             </ul>
-                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/AutomatticWooCommerceRestApi.html"><abbr title="\AutomatticWooCommerceRestApi">AutomatticWooCommerceRestApi</abbr></a></h3>
-                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/AutomatticWooCommerceUtilities.html"><abbr title="\AutomatticWooCommerceUtilities">AutomatticWooCommerceUtilities</abbr></a></h3>
-                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceTemplates.html"><abbr title="\WooCommerceTemplates">WooCommerceTemplates</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceAdmin.html"><abbr title="\WoocommerceAdmin">WoocommerceAdmin</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdmin.html"><abbr title="\WooCommerceAdmin">WooCommerceAdmin</abbr></a></h3>
                         </section>
     
     <section class="phpdocumentor-sidebar__category">
@@ -172,7 +172,8 @@ class WC_Admin_Notes_WooCommerce_Payments {
 	 * Attach hooks.
 	 */
 	public function __construct() {
-		add_action( &#039;woocommerce_note_action_install-now&#039;, array( $this, &#039;install&#039; ) );
+		add_action( &#039;init&#039;, array( $this, &#039;install_on_action&#039; ) );
+		add_action( &#039;woocommerce_note_action_install-now&#039;, array( $this, &#039;install_and_activate_wcpay&#039; ) ); // Handle &lt;1.6.3 note action.
 		add_action( &#039;wc-admin-woocommerce-payments_add_note&#039;, array( $this, &#039;add_note&#039; ) );
 	}
 
@@ -233,13 +234,22 @@ class WC_Admin_Notes_WooCommerce_Payments {
 	public static function get_note() {
 		$note = new WC_Admin_Note();
 		$note-&gt;set_title( __( &#039;Try the new way to get paid&#039;, &#039;woocommerce&#039; ) );
-		$note-&gt;set_content( __( &#039;Securely accept credit and debit cards on your site. Manage transactions without leaving your WordPress dashboard. Only with WooCommerce Payments.&#039;, &#039;woocommerce&#039; ) );
+		$note-&gt;set_content(
+			__( &#039;Securely accept credit and debit cards on your site. Manage transactions without leaving your WordPress dashboard. Only with &lt;strong&gt;WooCommerce Payments&lt;/strong&gt;.&#039;, &#039;woocommerce&#039; ) .
+			&#039;&lt;br&gt;&lt;br&gt;&#039; .
+			sprintf(
+				/* translators: 1: opening link tag, 2: closing tag */
+				__( &#039;By clicking &quot;Get started&quot;, you agree to our %1$sTerms of Service%2$s&#039;, &#039;woocommerce&#039; ),
+				&#039;&lt;a href=&quot;https://wordpress.com/tos/&quot; target=&quot;_blank&quot;&gt;&#039;,
+				&#039;&lt;/a&gt;&#039;
+			)
+		);
 		$note-&gt;set_content_data( (object) array() );
 		$note-&gt;set_type( WC_Admin_Note::E_WC_ADMIN_NOTE_MARKETING );
 		$note-&gt;set_name( self::NOTE_NAME );
 		$note-&gt;set_source( &#039;woocommerce-admin&#039; );
 		$note-&gt;add_action( &#039;learn-more&#039;, __( &#039;Learn more&#039;, &#039;woocommerce&#039; ), &#039;https://woocommerce.com/payments/&#039;, WC_Admin_Note::E_WC_ADMIN_NOTE_UNACTIONED );
-		$note-&gt;add_action( &#039;install-now&#039;, __( &#039;Install now&#039;, &#039;woocommerce&#039; ), false, WC_Admin_Note::E_WC_ADMIN_NOTE_ACTIONED, true );
+		$note-&gt;add_action( &#039;get-started&#039;, __( &#039;Get started&#039;, &#039;woocommerce&#039; ), wc_admin_url( &#039;&amp;action=setup-woocommerce-payments&#039; ), WC_Admin_Note::E_WC_ADMIN_NOTE_ACTIONED, true );
 
 		// Create the note as &quot;actioned&quot; if the plugin is already installed.
 		if ( self::is_installed() ) {
@@ -261,23 +271,59 @@ class WC_Admin_Notes_WooCommerce_Payments {
 	}
 
 	/**
-	 * Install WooCommerce Payments when note is actioned.
+	 * Install and activate WooCommerce Payments.
 	 *
-	 * @param WC_Admin_Note $note Note being acted upon.
+	 * @return boolean Whether the plugin was successfully activated.
 	 */
-	public function install( $note ) {
-		if ( self::NOTE_NAME === $note-&gt;get_name() &amp;&amp; current_user_can( &#039;install_plugins&#039; ) ) {
-			$install_request = array( &#039;plugins&#039; =&gt; self::PLUGIN_SLUG );
-			$installer       = new \Automattic\WooCommerce\Admin\API\Plugins();
-			$result          = $installer-&gt;install_plugins( $install_request );
-
-			if ( is_wp_error( $result ) ) {
-				return;
-			}
-
-			$activate_request = array( &#039;plugins&#039; =&gt; self::PLUGIN_SLUG );
-			$installer-&gt;activate_plugins( $activate_request );
+	public function install_and_activate_wcpay() {
+		$install_request = array( &#039;plugins&#039; =&gt; self::PLUGIN_SLUG );
+		$installer       = new \Automattic\WooCommerce\Admin\API\Plugins();
+		$result          = $installer-&gt;install_plugins( $install_request );
+		if ( is_wp_error( $result ) ) {
+			return false;
 		}
+
+		$activate_request = array( &#039;plugins&#039; =&gt; self::PLUGIN_SLUG );
+		$result           = $installer-&gt;activate_plugins( $activate_request );
+		if ( is_wp_error( $result ) ) {
+			return false;
+		}
+
+		return true;
+	}
+
+	/**
+	 * Install &amp; activate WooCommerce Payments plugin, and redirect to setup.
+	 */
+	public function install_on_action() {
+		// TODO: Need to validate this request more strictly since we&#039;re taking install actions directly?
+		/* phpcs:disable WordPress.Security.NonceVerification */
+		if (
+			! isset( $_GET[&#039;page&#039;] ) ||
+			&#039;wc-admin&#039; !== $_GET[&#039;page&#039;] ||
+			! isset( $_GET[&#039;action&#039;] ) ||
+			&#039;setup-woocommerce-payments&#039; !== $_GET[&#039;action&#039;]
+		) {
+			return;
+		}
+		/* phpcs:enable */
+
+		if ( ! current_user_can( &#039;install_plugins&#039; ) ) {
+			return;
+		}
+
+		$this-&gt;install_and_activate_wcpay();
+
+		// WooCommerce Payments is installed at this point, so link straight into the onboarding flow.
+		$connect_url = add_query_arg(
+			array(
+				&#039;wcpay-connect&#039; =&gt; &#039;1&#039;,
+				&#039;_wpnonce&#039;      =&gt; wp_create_nonce( &#039;wcpay-connect&#039; ),
+			),
+			admin_url()
+		);
+		wp_safe_redirect( $connect_url );
+		exit;
 	}
 }
 </code></pre>
@@ -290,7 +336,7 @@ class WC_Admin_Notes_WooCommerce_Payments {
 
     <footer class="phpdocumentor phpdocumentor-footer">
     <div class="phpdocumentor-section">
-        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on September 24th, 2020 at 12:36 pm.</span>
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on November 30th, 2020 at 01:44 pm.</span>
     </div>
 </footer>
 
@@ -302,7 +348,7 @@ class WC_Admin_Notes_WooCommerce_Payments {
             'searchIndex': '..\/js\/searchIndex.json'
         };
     </script>
-    <script src="../js/searchIndex.js?updated=1600961774"></script>
-    <script src="../js/search.js?updated=1600961774"></script>
+    <script src="../js/searchIndex.js?updated=1606754663"></script>
+    <script src="../js/search.js?updated=1606754663"></script>
 </body>
 </html>

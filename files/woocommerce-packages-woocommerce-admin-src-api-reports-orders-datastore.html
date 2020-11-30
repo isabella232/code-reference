@@ -9,9 +9,9 @@
     <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
     <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
     <link rel="stylesheet" href="../css/normalize.css">
-    <link rel="stylesheet" href="../css/base.css?updated=1600961773">
+    <link rel="stylesheet" href="../css/base.css?updated=1606754662">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/template.css?updated=1600961773">
+    <link rel="stylesheet" href="../css/template.css?updated=1606754662">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
             <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
@@ -76,7 +76,7 @@
                                     <li><a href="../packages/WooCommerce-Helper.html"><abbr title="\WooCommerce\Helper">Helper</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-Templates.html"><abbr title="\WooCommerce\Templates">Templates</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-Reports.html"><abbr title="\WooCommerce\Reports">Reports</abbr></a></li>
-                                    <li><a href="../packages/WooCommerce-API.html"><abbr title="\WooCommerce\API">API</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-RestApi.html"><abbr title="\WooCommerce\RestApi">RestApi</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-CLI.html"><abbr title="\WooCommerce\CLI">CLI</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-l10n.html"><abbr title="\WooCommerce\l10n">l10n</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-Webhooks.html"><abbr title="\WooCommerce\Webhooks">Webhooks</abbr></a></li>
@@ -91,6 +91,7 @@
                                     <li><a href="../packages/WooCommerce-Interface.html"><abbr title="\WooCommerce\Interface">Interface</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-LogHandlers.html"><abbr title="\WooCommerce\LogHandlers">LogHandlers</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-PaymentTokens.html"><abbr title="\WooCommerce\PaymentTokens">PaymentTokens</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Utilities.html"><abbr title="\WooCommerce\Utilities">Utilities</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-Shipping.html"><abbr title="\WooCommerce\Shipping">Shipping</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-Shortcodes.html"><abbr title="\WooCommerce\Shortcodes">Shortcodes</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-Tracks.html"><abbr title="\WooCommerce\Tracks">Tracks</abbr></a></li>
@@ -100,9 +101,8 @@
                                     <li><a href="../packages/WooCommerce-Widgets.html"><abbr title="\WooCommerce\Widgets">Widgets</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-Uninstaller.html"><abbr title="\WooCommerce\Uninstaller">Uninstaller</abbr></a></li>
                             </ul>
-                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/AutomatticWooCommerceRestApi.html"><abbr title="\AutomatticWooCommerceRestApi">AutomatticWooCommerceRestApi</abbr></a></h3>
-                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/AutomatticWooCommerceUtilities.html"><abbr title="\AutomatticWooCommerceUtilities">AutomatticWooCommerceUtilities</abbr></a></h3>
-                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceTemplates.html"><abbr title="\WooCommerceTemplates">WooCommerceTemplates</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceAdmin.html"><abbr title="\WoocommerceAdmin">WoocommerceAdmin</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdmin.html"><abbr title="\WooCommerceAdmin">WooCommerceAdmin</abbr></a></h3>
                         </section>
     
     <section class="phpdocumentor-sidebar__category">
@@ -295,6 +295,20 @@ class DataStore extends ReportsDataStore implements DataStoreInterface {
 			$where_subquery[] = &quot;{$order_tax_lookup_table}.tax_rate_id NOT IN ({$excluded_tax_rates}) OR {$order_tax_lookup_table}.tax_rate_id IS NULL&quot;;
 		}
 
+		$attribute_subqueries = $this-&gt;get_attribute_subqueries( $query_args );
+		if ( $attribute_subqueries[&#039;join&#039;] &amp;&amp; $attribute_subqueries[&#039;where&#039;] ) {
+			// JOIN on product lookup if we haven&#039;t already.
+			if ( ! $included_products &amp;&amp; ! $excluded_products ) {
+				$this-&gt;subquery-&gt;add_sql_clause( &#039;join&#039;, &quot;JOIN {$order_product_lookup_table} ON {$order_stats_lookup_table}.order_id = {$order_product_lookup_table}.order_id&quot; );
+			}
+			// Add JOINs for matching attributes.
+			foreach ( $attribute_subqueries[&#039;join&#039;] as $attribute_join ) {
+				$this-&gt;subquery-&gt;add_sql_clause( &#039;join&#039;, $attribute_join );
+			}
+			// Add WHEREs for matching attributes.
+			$where_subquery = array_merge( $where_subquery, $attribute_subqueries[&#039;where&#039;] );
+		}
+
 		if ( 0 &lt; count( $where_subquery ) ) {
 			$this-&gt;subquery-&gt;add_sql_clause( &#039;where&#039;, &#039;AND (&#039; . implode( &quot; {$operator} &quot;, $where_subquery ) . &#039;)&#039; );
 		}
@@ -430,7 +444,6 @@ class DataStore extends ReportsDataStore implements DataStoreInterface {
 	protected function include_extended_info( &amp;$orders_data, $query_args ) {
 		$mapped_orders    = $this-&gt;map_array_by_key( $orders_data, &#039;order_id&#039; );
 		$products         = $this-&gt;get_products_by_order_ids( array_keys( $mapped_orders ) );
-		$mapped_products  = $this-&gt;map_array_by_key( $products, &#039;product_id&#039; );
 		$coupons          = $this-&gt;get_coupons_by_order_ids( array_keys( $mapped_orders ) );
 		$customers        = $this-&gt;get_customers_by_orders( $orders_data );
 		$mapped_customers = $this-&gt;map_array_by_key( $customers, &#039;customer_id&#039; );
@@ -442,7 +455,7 @@ class DataStore extends ReportsDataStore implements DataStoreInterface {
 			}
 
 			$mapped_data[ $product[&#039;order_id&#039;] ][&#039;products&#039;][] = array(
-				&#039;id&#039;       =&gt; $product[&#039;product_id&#039;],
+				&#039;id&#039;       =&gt; &#039;0&#039; === $product[&#039;variation_id&#039;] ? $product[&#039;product_id&#039;] : $product[&#039;variation_id&#039;],
 				&#039;name&#039;     =&gt; $product[&#039;product_name&#039;],
 				&#039;quantity&#039; =&gt; $product[&#039;product_quantity&#039;],
 			);
@@ -499,12 +512,24 @@ class DataStore extends ReportsDataStore implements DataStoreInterface {
 		$included_order_ids         = implode( &#039;,&#039;, $order_ids );
 
 		$products = $wpdb-&gt;get_results(
-			&quot;SELECT order_id, ID as product_id, post_title as product_name, product_qty as product_quantity
-				FROM {$wpdb-&gt;posts}
-				JOIN {$order_product_lookup_table} ON {$order_product_lookup_table}.product_id = {$wpdb-&gt;posts}.ID
-				WHERE
-					order_id IN ({$included_order_ids})
-				&quot;,
+			&quot;SELECT
+				order_id,
+				product_id,
+				variation_id,
+				post_title as product_name,
+				product_qty as product_quantity
+			FROM {$wpdb-&gt;posts}
+			JOIN
+				{$order_product_lookup_table}
+				ON {$wpdb-&gt;posts}.ID = (
+					CASE WHEN variation_id &gt; 0
+						THEN variation_id
+						ELSE product_id
+					END
+				)
+			WHERE
+				order_id IN ({$included_order_ids})
+			&quot;,
 			ARRAY_A
 		); // WPCS: cache ok, DB call ok, unprepared SQL ok.
 
@@ -609,7 +634,7 @@ class DataStore extends ReportsDataStore implements DataStoreInterface {
 
     <footer class="phpdocumentor phpdocumentor-footer">
     <div class="phpdocumentor-section">
-        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on September 24th, 2020 at 12:36 pm.</span>
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on November 30th, 2020 at 01:44 pm.</span>
     </div>
 </footer>
 
@@ -621,7 +646,7 @@ class DataStore extends ReportsDataStore implements DataStoreInterface {
             'searchIndex': '..\/js\/searchIndex.json'
         };
     </script>
-    <script src="../js/searchIndex.js?updated=1600961773"></script>
-    <script src="../js/search.js?updated=1600961773"></script>
+    <script src="../js/searchIndex.js?updated=1606754662"></script>
+    <script src="../js/search.js?updated=1606754662"></script>
 </body>
 </html>

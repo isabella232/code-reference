@@ -9,9 +9,9 @@
     <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
     <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
     <link rel="stylesheet" href="../css/normalize.css">
-    <link rel="stylesheet" href="../css/base.css?updated=1600961782">
+    <link rel="stylesheet" href="../css/base.css?updated=1606754671">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/template.css?updated=1600961782">
+    <link rel="stylesheet" href="../css/template.css?updated=1606754671">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
             <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
@@ -70,7 +70,7 @@
                                     <li><a href="../packages/WooCommerce-Helper.html"><abbr title="\WooCommerce\Helper">Helper</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-Templates.html"><abbr title="\WooCommerce\Templates">Templates</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-Reports.html"><abbr title="\WooCommerce\Reports">Reports</abbr></a></li>
-                                    <li><a href="../packages/WooCommerce-API.html"><abbr title="\WooCommerce\API">API</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-RestApi.html"><abbr title="\WooCommerce\RestApi">RestApi</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-CLI.html"><abbr title="\WooCommerce\CLI">CLI</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-l10n.html"><abbr title="\WooCommerce\l10n">l10n</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-Webhooks.html"><abbr title="\WooCommerce\Webhooks">Webhooks</abbr></a></li>
@@ -85,6 +85,7 @@
                                     <li><a href="../packages/WooCommerce-Interface.html"><abbr title="\WooCommerce\Interface">Interface</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-LogHandlers.html"><abbr title="\WooCommerce\LogHandlers">LogHandlers</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-PaymentTokens.html"><abbr title="\WooCommerce\PaymentTokens">PaymentTokens</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Utilities.html"><abbr title="\WooCommerce\Utilities">Utilities</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-Shipping.html"><abbr title="\WooCommerce\Shipping">Shipping</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-Shortcodes.html"><abbr title="\WooCommerce\Shortcodes">Shortcodes</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-Tracks.html"><abbr title="\WooCommerce\Tracks">Tracks</abbr></a></li>
@@ -94,9 +95,8 @@
                                     <li><a href="../packages/WooCommerce-Widgets.html"><abbr title="\WooCommerce\Widgets">Widgets</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-Uninstaller.html"><abbr title="\WooCommerce\Uninstaller">Uninstaller</abbr></a></li>
                             </ul>
-                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/AutomatticWooCommerceRestApi.html"><abbr title="\AutomatticWooCommerceRestApi">AutomatticWooCommerceRestApi</abbr></a></h3>
-                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/AutomatticWooCommerceUtilities.html"><abbr title="\AutomatticWooCommerceUtilities">AutomatticWooCommerceUtilities</abbr></a></h3>
-                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceTemplates.html"><abbr title="\WooCommerceTemplates">WooCommerceTemplates</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceAdmin.html"><abbr title="\WoocommerceAdmin">WoocommerceAdmin</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdmin.html"><abbr title="\WooCommerceAdmin">WooCommerceAdmin</abbr></a></h3>
                         </section>
     
     <section class="phpdocumentor-sidebar__category">
@@ -140,9 +140,9 @@
     </h2>
 
         <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/API/OnboardingTasks.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-api-onboardingtasks.html#source-view.19">packages/woocommerce-admin/src/API/OnboardingTasks.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/API/OnboardingTasks.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-api-onboardingtasks.html#source-view.20">packages/woocommerce-admin/src/API/OnboardingTasks.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">19</span>
+    <span class="phpdocumentor-element-found-in__line">20</span>
 </aside>
 
             <p class="phpdocumentor-summary">Onboarding Tasks Controller.</p>
@@ -210,13 +210,6 @@
 <dd>Check if a given request has access to create a product.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="../classes/Automattic-WooCommerce-Admin-API-OnboardingTasks.html#method_create_store_pages">create_store_pages()</a>
-    <span>
-                        &nbsp;: bool    </span>
-</dt>
-<dd>Creates base store starter pages like my account and checkout.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="../classes/WC-REST-Controller.html#method_get_endpoint_args_for_item_schema">get_endpoint_args_for_item_schema()</a>
     <span>
                         &nbsp;: array    </span>
@@ -271,6 +264,27 @@
                         &nbsp;: array    </span>
 </dt>
 <dd>Get the batch schema, conforming to JSON Schema.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="../classes/Automattic-WooCommerce-Admin-API-OnboardingTasks.html#method_get_status">get_status()</a>
+    <span>
+                        &nbsp;: <abbr title="\Automattic\WooCommerce\Admin\API\WP_Error">WP_Error</abbr>|array    </span>
+</dt>
+<dd>Get various onboarding task statuses.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="../classes/Automattic-WooCommerce-Admin-API-OnboardingTasks.html#method_get_status_item_schema">get_status_item_schema()</a>
+    <span>
+                        &nbsp;: array    </span>
+</dt>
+<dd>Get the status endpoint schema, conforming to JSON Schema.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="../classes/Automattic-WooCommerce-Admin-API-OnboardingTasks.html#method_get_status_permission_check">get_status_permission_check()</a>
+    <span>
+                        &nbsp;: <abbr title="\Automattic\WooCommerce\Admin\API\WP_Error">WP_Error</abbr>|bool    </span>
+</dt>
+<dd>Check if a given request has access to get onboarding tasks status.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="../classes/Automattic-WooCommerce-Admin-API-OnboardingTasks.html#method_import_products_permission_check">import_products_permission_check()</a>
@@ -459,9 +473,9 @@
                                 </span>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/API/OnboardingTasks.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-api-onboardingtasks.html#source-view.25">packages/woocommerce-admin/src/API/OnboardingTasks.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/API/OnboardingTasks.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-api-onboardingtasks.html#source-view.26">packages/woocommerce-admin/src/API/OnboardingTasks.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">25</span>
+    <span class="phpdocumentor-element-found-in__line">26</span>
 </aside>
 
         <p class="phpdocumentor-summary">Endpoint namespace.</p>
@@ -490,9 +504,9 @@
                                 </span>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/API/OnboardingTasks.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-api-onboardingtasks.html#source-view.32">packages/woocommerce-admin/src/API/OnboardingTasks.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/API/OnboardingTasks.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-api-onboardingtasks.html#source-view.33">packages/woocommerce-admin/src/API/OnboardingTasks.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">32</span>
+    <span class="phpdocumentor-element-found-in__line">33</span>
 </aside>
 
         <p class="phpdocumentor-summary">Route base.</p>
@@ -567,9 +581,9 @@
         <a href="#method_create_homepage" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/API/OnboardingTasks.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-api-onboardingtasks.html#source-view.401">packages/woocommerce-admin/src/API/OnboardingTasks.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/API/OnboardingTasks.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-api-onboardingtasks.html#source-view.405">packages/woocommerce-admin/src/API/OnboardingTasks.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">401</span>
+    <span class="phpdocumentor-element-found-in__line">405</span>
 </aside>
 
         <p class="phpdocumentor-summary">Create a homepage from a template.</p>
@@ -597,9 +611,9 @@
         <a href="#method_create_pages_permission_check" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/API/OnboardingTasks.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-api-onboardingtasks.html#source-view.98">packages/woocommerce-admin/src/API/OnboardingTasks.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/API/OnboardingTasks.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-api-onboardingtasks.html#source-view.99">packages/woocommerce-admin/src/API/OnboardingTasks.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">98</span>
+    <span class="phpdocumentor-element-found-in__line">99</span>
 </aside>
 
         <p class="phpdocumentor-summary">Check if a given request has access to create a product.</p>
@@ -625,37 +639,6 @@
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
     <span class="phpdocumentor-signature__response_type"><abbr title="\Automattic\WooCommerce\Admin\API\WP_Error">WP_Error</abbr>|bool</span>
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                    -static                    "
->
-    <h4 class="phpdocumentor-element__name" id="method_create_store_pages">
-        create_store_pages()
-        <a href="#method_create_store_pages" class="headerlink"><i class="fas fa-link"></i></a>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/API/OnboardingTasks.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-api-onboardingtasks.html#source-view.391">packages/woocommerce-admin/src/API/OnboardingTasks.php</a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">391</span>
-</aside>
-
-        <p class="phpdocumentor-summary">Creates base store starter pages like my account and checkout.</p>
-
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-            <span class="phpdocumentor-signature__static">static</span>    <span class="phpdocumentor-signature__name">create_store_pages</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool</span></code>
-
-        <section class="phpdocumentor-description"><p>Note that WC_Install::create_pages already checks if pages exist before creating them again.</p></section>
-
-    
-    
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">bool</span>
     
 </article>
                     <article
@@ -769,9 +752,9 @@ Updated from WordPress 5.3, included into this class to support old versions.</p
         <a href="#method_get_header_mappings" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/API/OnboardingTasks.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-api-onboardingtasks.html#source-view.139">packages/woocommerce-admin/src/API/OnboardingTasks.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/API/OnboardingTasks.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-api-onboardingtasks.html#source-view.154">packages/woocommerce-admin/src/API/OnboardingTasks.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">139</span>
+    <span class="phpdocumentor-element-found-in__line">154</span>
 </aside>
 
         <p class="phpdocumentor-summary">Get header mappings from CSV columns.</p>
@@ -1015,14 +998,115 @@ Updated from WordPress 5.3, included into this class to support old versions.</p
             -public
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_get_status">
+        get_status()
+        <a href="#method_get_status" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/API/OnboardingTasks.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-api-onboardingtasks.html#source-view.539">packages/woocommerce-admin/src/API/OnboardingTasks.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">539</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Get various onboarding task statuses.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">get_status</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\Automattic\WooCommerce\Admin\API\WP_Error">WP_Error</abbr>|array</span></code>
+
+    
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><abbr title="\Automattic\WooCommerce\Admin\API\WP_Error">WP_Error</abbr>|array</span>
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_get_status_item_schema">
+        get_status_item_schema()
+        <a href="#method_get_status_item_schema" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/API/OnboardingTasks.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-api-onboardingtasks.html#source-view.450">packages/woocommerce-admin/src/API/OnboardingTasks.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">450</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Get the status endpoint schema, conforming to JSON Schema.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">get_status_item_schema</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array</span></code>
+
+    
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">array</span>
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_get_status_permission_check">
+        get_status_permission_check()
+        <a href="#method_get_status_permission_check" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/API/OnboardingTasks.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-api-onboardingtasks.html#source-view.113">packages/woocommerce-admin/src/API/OnboardingTasks.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">113</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Check if a given request has access to get onboarding tasks status.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">get_status_permission_check</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><abbr title="\Automattic\WooCommerce\Admin\API\WP_REST_Request">WP_REST_Request</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$request</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\Automattic\WooCommerce\Admin\API\WP_Error">WP_Error</abbr>|bool</span></code>
+
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$request</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><abbr title="\Automattic\WooCommerce\Admin\API\WP_REST_Request">WP_REST_Request</abbr></span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Full details about the request.</p></section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><abbr title="\Automattic\WooCommerce\Admin\API\WP_Error">WP_Error</abbr>|bool</span>
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_import_products_permission_check">
         import_products_permission_check()
         <a href="#method_import_products_permission_check" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/API/OnboardingTasks.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-api-onboardingtasks.html#source-view.84">packages/woocommerce-admin/src/API/OnboardingTasks.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/API/OnboardingTasks.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-api-onboardingtasks.html#source-view.85">packages/woocommerce-admin/src/API/OnboardingTasks.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">84</span>
+    <span class="phpdocumentor-element-found-in__line">85</span>
 </aside>
 
         <p class="phpdocumentor-summary">Check if a given request has access to create a product.</p>
@@ -1061,9 +1145,9 @@ Updated from WordPress 5.3, included into this class to support old versions.</p
         <a href="#method_import_sample_products" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/API/OnboardingTasks.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-api-onboardingtasks.html#source-view.111">packages/woocommerce-admin/src/API/OnboardingTasks.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/API/OnboardingTasks.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-api-onboardingtasks.html#source-view.126">packages/woocommerce-admin/src/API/OnboardingTasks.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">111</span>
+    <span class="phpdocumentor-element-found-in__line">126</span>
 </aside>
 
         <p class="phpdocumentor-summary">Import sample products from WooCommerce sample CSV.</p>
@@ -1141,9 +1225,9 @@ Updated from WordPress 5.3, included into this class to support old versions.</p
         <a href="#method_register_routes" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/API/OnboardingTasks.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-api-onboardingtasks.html#source-view.37">packages/woocommerce-admin/src/API/OnboardingTasks.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/API/OnboardingTasks.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-api-onboardingtasks.html#source-view.38">packages/woocommerce-admin/src/API/OnboardingTasks.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">37</span>
+    <span class="phpdocumentor-element-found-in__line">38</span>
 </aside>
 
         <p class="phpdocumentor-summary">Register routes.</p>
@@ -1171,9 +1255,9 @@ Updated from WordPress 5.3, included into this class to support old versions.</p
         <a href="#method_sanitize_special_column_name_regex" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/API/OnboardingTasks.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-api-onboardingtasks.html#source-view.174">packages/woocommerce-admin/src/API/OnboardingTasks.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/API/OnboardingTasks.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-api-onboardingtasks.html#source-view.189">packages/woocommerce-admin/src/API/OnboardingTasks.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">174</span>
+    <span class="phpdocumentor-element-found-in__line">189</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sanitize special column name regex.</p>
@@ -1907,9 +1991,9 @@ Updated from WordPress 5.3, included into this class to support old versions.</p
         <a href="#method_get_available_homepage_images" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/API/OnboardingTasks.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-api-onboardingtasks.html#source-view.313">packages/woocommerce-admin/src/API/OnboardingTasks.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/API/OnboardingTasks.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-api-onboardingtasks.html#source-view.328">packages/woocommerce-admin/src/API/OnboardingTasks.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">313</span>
+    <span class="phpdocumentor-element-found-in__line">328</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the possible industry images from the plugin folder for sideloading. If an image doesn&#039;t exist, other.jpg is used a fallback.</p>
@@ -1938,9 +2022,9 @@ Updated from WordPress 5.3, included into this class to support old versions.</p
         <a href="#method_get_homepage_cover_block" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/API/OnboardingTasks.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-api-onboardingtasks.html#source-view.184">packages/woocommerce-admin/src/API/OnboardingTasks.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/API/OnboardingTasks.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-api-onboardingtasks.html#source-view.199">packages/woocommerce-admin/src/API/OnboardingTasks.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">184</span>
+    <span class="phpdocumentor-element-found-in__line">199</span>
 </aside>
 
         <p class="phpdocumentor-summary">Returns a valid cover block with an image, if one exists, or background as a fallback.</p>
@@ -1980,9 +2064,9 @@ Updated from WordPress 5.3, included into this class to support old versions.</p
         <a href="#method_get_homepage_media_block" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/API/OnboardingTasks.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-api-onboardingtasks.html#source-view.224">packages/woocommerce-admin/src/API/OnboardingTasks.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/API/OnboardingTasks.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-api-onboardingtasks.html#source-view.239">packages/woocommerce-admin/src/API/OnboardingTasks.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">224</span>
+    <span class="phpdocumentor-element-found-in__line">239</span>
 </aside>
 
         <p class="phpdocumentor-summary">Returns a valid media block with an image, if one exists, or a uninitialized media block the user can set.</p>
@@ -2030,9 +2114,9 @@ Updated from WordPress 5.3, included into this class to support old versions.</p
         <a href="#method_get_homepage_template" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/API/OnboardingTasks.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-api-onboardingtasks.html#source-view.249">packages/woocommerce-admin/src/API/OnboardingTasks.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/API/OnboardingTasks.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-api-onboardingtasks.html#source-view.264">packages/woocommerce-admin/src/API/OnboardingTasks.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">249</span>
+    <span class="phpdocumentor-element-found-in__line">264</span>
 </aside>
 
         <p class="phpdocumentor-summary">Returns a homepage template to be inserted into a post. A different template will be used depending on the number of products.</p>
@@ -2072,9 +2156,9 @@ Updated from WordPress 5.3, included into this class to support old versions.</p
         <a href="#method_sideload_homepage_images" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/API/OnboardingTasks.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-api-onboardingtasks.html#source-view.329">packages/woocommerce-admin/src/API/OnboardingTasks.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/API/OnboardingTasks.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-api-onboardingtasks.html#source-view.344">packages/woocommerce-admin/src/API/OnboardingTasks.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">329</span>
+    <span class="phpdocumentor-element-found-in__line">344</span>
 </aside>
 
         <p class="phpdocumentor-summary">Uploads a number of images to a homepage template, depending on the selected industry from the profile wizard.</p>
@@ -2122,7 +2206,7 @@ Updated from WordPress 5.3, included into this class to support old versions.</p
 
     <footer class="phpdocumentor phpdocumentor-footer">
     <div class="phpdocumentor-section">
-        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on September 24th, 2020 at 12:36 pm.</span>
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on November 30th, 2020 at 01:44 pm.</span>
     </div>
 </footer>
 
@@ -2134,7 +2218,7 @@ Updated from WordPress 5.3, included into this class to support old versions.</p
             'searchIndex': '..\/js\/searchIndex.json'
         };
     </script>
-    <script src="../js/searchIndex.js?updated=1600961782"></script>
-    <script src="../js/search.js?updated=1600961782"></script>
+    <script src="../js/searchIndex.js?updated=1606754671"></script>
+    <script src="../js/search.js?updated=1606754671"></script>
 </body>
 </html>

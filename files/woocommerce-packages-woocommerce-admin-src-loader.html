@@ -9,9 +9,9 @@
     <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
     <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
     <link rel="stylesheet" href="../css/normalize.css">
-    <link rel="stylesheet" href="../css/base.css?updated=1600961773">
+    <link rel="stylesheet" href="../css/base.css?updated=1606754663">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/template.css?updated=1600961773">
+    <link rel="stylesheet" href="../css/template.css?updated=1606754663">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
             <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
@@ -76,7 +76,7 @@
                                     <li><a href="../packages/WooCommerce-Helper.html"><abbr title="\WooCommerce\Helper">Helper</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-Templates.html"><abbr title="\WooCommerce\Templates">Templates</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-Reports.html"><abbr title="\WooCommerce\Reports">Reports</abbr></a></li>
-                                    <li><a href="../packages/WooCommerce-API.html"><abbr title="\WooCommerce\API">API</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-RestApi.html"><abbr title="\WooCommerce\RestApi">RestApi</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-CLI.html"><abbr title="\WooCommerce\CLI">CLI</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-l10n.html"><abbr title="\WooCommerce\l10n">l10n</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-Webhooks.html"><abbr title="\WooCommerce\Webhooks">Webhooks</abbr></a></li>
@@ -91,6 +91,7 @@
                                     <li><a href="../packages/WooCommerce-Interface.html"><abbr title="\WooCommerce\Interface">Interface</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-LogHandlers.html"><abbr title="\WooCommerce\LogHandlers">LogHandlers</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-PaymentTokens.html"><abbr title="\WooCommerce\PaymentTokens">PaymentTokens</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Utilities.html"><abbr title="\WooCommerce\Utilities">Utilities</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-Shipping.html"><abbr title="\WooCommerce\Shipping">Shipping</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-Shortcodes.html"><abbr title="\WooCommerce\Shortcodes">Shortcodes</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-Tracks.html"><abbr title="\WooCommerce\Tracks">Tracks</abbr></a></li>
@@ -100,9 +101,8 @@
                                     <li><a href="../packages/WooCommerce-Widgets.html"><abbr title="\WooCommerce\Widgets">Widgets</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-Uninstaller.html"><abbr title="\WooCommerce\Uninstaller">Uninstaller</abbr></a></li>
                             </ul>
-                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/AutomatticWooCommerceRestApi.html"><abbr title="\AutomatticWooCommerceRestApi">AutomatticWooCommerceRestApi</abbr></a></h3>
-                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/AutomatticWooCommerceUtilities.html"><abbr title="\AutomatticWooCommerceUtilities">AutomatticWooCommerceUtilities</abbr></a></h3>
-                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceTemplates.html"><abbr title="\WooCommerceTemplates">WooCommerceTemplates</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceAdmin.html"><abbr title="\WoocommerceAdmin">WoocommerceAdmin</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdmin.html"><abbr title="\WooCommerceAdmin">WooCommerceAdmin</abbr></a></h3>
                         </section>
     
     <section class="phpdocumentor-sidebar__category">
@@ -204,13 +204,14 @@ class Loader {
 		add_filter( &#039;woocommerce_shared_settings&#039;, array( __CLASS__, &#039;add_component_settings&#039; ) );
 		add_filter( &#039;admin_body_class&#039;, array( __CLASS__, &#039;add_admin_body_classes&#039; ) );
 		add_action( &#039;admin_menu&#039;, array( __CLASS__, &#039;register_page_handler&#039; ) );
-		add_action( &#039;admin_menu&#039;, array( __CLASS__, &#039;register_profiler_page&#039; ) );
+		add_action( &#039;admin_menu&#039;, array( __CLASS__, &#039;register_store_details_page&#039; ) );
 		add_filter( &#039;admin_title&#039;, array( __CLASS__, &#039;update_admin_title&#039; ) );
 		add_action( &#039;rest_api_init&#039;, array( __CLASS__, &#039;register_user_data&#039; ) );
 		add_action( &#039;in_admin_header&#039;, array( __CLASS__, &#039;embed_page_header&#039; ) );
 		add_filter( &#039;woocommerce_settings_groups&#039;, array( __CLASS__, &#039;add_settings_group&#039; ) );
 		add_filter( &#039;woocommerce_settings-wc_admin&#039;, array( __CLASS__, &#039;add_settings&#039; ) );
 		add_action( &#039;admin_head&#039;, array( __CLASS__, &#039;remove_notices&#039; ) );
+		add_action( &#039;admin_head&#039;, array( __CLASS__, &#039;smart_app_banner&#039; ) );
 		add_action( &#039;admin_notices&#039;, array( __CLASS__, &#039;inject_before_notices&#039; ), -9999 );
 		add_action( &#039;admin_notices&#039;, array( __CLASS__, &#039;inject_after_notices&#039; ), PHP_INT_MAX );
 
@@ -225,6 +226,9 @@ class Loader {
 		* Gutenberg has also disabled emojis. More on that here -&gt; https://github.com/WordPress/gutenberg/pull/6151
 		*/
 		remove_action( &#039;admin_print_scripts&#039;, &#039;print_emoji_detection_script&#039; );
+
+		// Combine JSON translation files (from chunks) when language packs are updated.
+		add_action( &#039;upgrader_process_complete&#039;, array( __CLASS__, &#039;combine_translation_chunk_files&#039; ), 10, 2 );
 	}
 
 	/**
@@ -296,34 +300,8 @@ class Loader {
 	 * @return bool Returns true if the feature is enabled.
 	 */
 	public static function is_feature_enabled( $feature ) {
-		if ( &#039;homescreen&#039; === $feature &amp;&amp; &#039;yes&#039; !== get_option( &#039;woocommerce_homescreen_enabled&#039;, &#039;no&#039; ) ) {
-			return false;
-		}
-
 		$features = self::get_features();
 		return in_array( $feature, $features, true );
-	}
-
-	/**
-	 * Returns if the onboarding feature of WooCommerce Admin should be enabled.
-	 *
-	 * While we preform an a/b test of onboarding, the feature will be enabled within the plugin build, but only if the user received the test/opted in.
-	 *
-	 * @return bool Returns true if the onboarding is enabled.
-	 */
-	public static function is_onboarding_enabled() {
-		if ( ! self::is_feature_enabled( &#039;onboarding&#039; ) ) {
-			return false;
-		}
-
-		$onboarding_opt_in        = &#039;yes&#039; === get_option( Onboarding::OPT_IN_OPTION, &#039;no&#039; );
-		$legacy_onboarding_opt_in = &#039;yes&#039; === get_option( &#039;wc_onboarding_opt_in&#039;, &#039;no&#039; );
-
-		if ( $onboarding_opt_in || $legacy_onboarding_opt_in ) {
-			return true;
-		}
-
-		return false;
 	}
 
 	/**
@@ -333,9 +311,9 @@ class Loader {
 	 * @return boolean If js asset should use minified version.
 	 */
 	public static function should_use_minified_js_file( $script_debug ) {
-		// un-minified files are only shipped in non-core versions of wc-admin, return true if unminified files are not available.
-		if ( ! self::is_feature_enabled( &#039;unminified-js&#039; ) ) {
-			return true;
+		// minified files are only shipped in non-core versions of wc-admin, return false if minified files are not available.
+		if ( ! self::is_feature_enabled( &#039;minified-js&#039; ) ) {
+			return false;
 		}
 
 		// Otherwise we will serve un-minified files if SCRIPT_DEBUG is on, or if anything truthy is passed in-lieu of SCRIPT_DEBUG.
@@ -400,36 +378,23 @@ class Loader {
 	}
 
 	/**
-	 * Registers a basic page handler for the app entry point.
+	 * Connects existing WooCommerce pages.
 	 *
 	 * @todo The entry point for the embed needs moved to this class as well.
 	 */
 	public static function register_page_handler() {
-		$id = self::is_feature_enabled( &#039;homescreen&#039; ) ? &#039;woocommerce-home&#039; : &#039;woocommerce-dashboard&#039;;
-
-		wc_admin_register_page(
-			array(
-				&#039;id&#039;         =&gt; $id, // Expected to be overridden if dashboard is enabled.
-				&#039;parent&#039;     =&gt; &#039;woocommerce&#039;,
-				&#039;title&#039;      =&gt; null,
-				&#039;path&#039;       =&gt; self::APP_ENTRY_POINT,
-				&#039;capability&#039; =&gt; static::get_analytics_capability(),
-			)
-		);
-
-		// Connect existing WooCommerce pages.
 		require_once WC_ADMIN_ABSPATH . &#039;includes/connect-existing-pages.php&#039;;
 	}
 
 	/**
-	 * Registers the profiler page.
+	 * Registers the store details (profiler) page.
 	 */
-	public static function register_profiler_page() {
+	public static function register_store_details_page() {
 		wc_admin_register_page(
 			array(
-				&#039;title&#039;  =&gt; &#039;Profiler&#039;,
+				&#039;title&#039;  =&gt; __( &#039;Setup Wizard&#039;, &#039;woocommerce&#039; ),
 				&#039;parent&#039; =&gt; &#039;&#039;,
-				&#039;path&#039;   =&gt; &#039;/profiler&#039;,
+				&#039;path&#039;   =&gt; &#039;/setup-wizard&#039;,
 			)
 		);
 	}
@@ -507,6 +472,14 @@ class Loader {
 		);
 
 		wp_register_script(
+			&#039;wc-tracks&#039;,
+			self::get_url( &#039;tracks/index&#039;, &#039;js&#039; ),
+			array(),
+			$js_file_version,
+			true
+		);
+
+		wp_register_script(
 			&#039;wc-date&#039;,
 			self::get_url( &#039;date/index&#039;, &#039;js&#039; ),
 			array( &#039;moment&#039;, &#039;wp-date&#039;, &#039;wp-i18n&#039; ),
@@ -573,6 +546,7 @@ class Loader {
 				&#039;wp-core-data&#039;,
 				&#039;wc-components&#039;,
 				&#039;wp-date&#039;,
+				&#039;wc-tracks&#039;,
 			),
 			$js_file_version,
 			true
@@ -620,8 +594,7 @@ class Loader {
 	 * @return string Filename.
 	 */
 	public static function get_combined_translation_filename( $domain, $locale ) {
-		$version  = self::get_file_version( &#039;js&#039; );
-		$filename = implode( &#039;-&#039;, array( $domain, $locale, WC_ADMIN_APP, $version ) ) . &#039;.json&#039;;
+		$filename = implode( &#039;-&#039;, array( $domain, $locale, WC_ADMIN_APP ) ) . &#039;.json&#039;;
 
 		return $filename;
 	}
@@ -637,11 +610,17 @@ class Loader {
 	 * @return array Combined translation chunk data.
 	 */
 	public static function get_translation_chunk_data( $lang_dir, $domain, $locale ) {
+		// So long as this function is called during the &#039;upgrader_process_complete&#039; action,
+		// the filesystem object should be hooked up.
 		global $wp_filesystem;
 
 		// Grab all JSON files in the current language pack.
 		$json_i18n_filenames       = glob( $lang_dir . $domain . &#039;-&#039; . $locale . &#039;-*.json&#039; );
 		$combined_translation_data = array();
+
+		if ( false === $json_i18n_filenames ) {
+			return $combined_translation_data;
+		}
 
 		foreach ( $json_i18n_filenames as $json_filename ) {
 			if ( ! $wp_filesystem-&gt;is_readable( $json_filename ) ) {
@@ -688,62 +667,85 @@ class Loader {
 	}
 
 	/**
-	 * Load translation strings from language packs for dynamic imports.
+	 * Combine translation chunks when files are updated.
 	 *
 	 * This function combines JSON translation data auto-extracted by GlotPress
 	 * from Webpack-generated JS chunks into a single file that can be used in
 	 * subsequent requests. This is necessary since the JS chunks are not known
 	 * to WordPress via wp_register_script() and wp_set_script_translations().
 	 *
-	 * @param string $original_translations JSON encoded translations object.
+	 * @param Language_Pack_Upgrader $instance Upgrader instance.
+	 * @param array                  $hook_extra Info about the upgraded language packs.
+	 */
+	public static function combine_translation_chunk_files( $instance, $hook_extra ) {
+		// So long as this function is hooked to the &#039;upgrader_process_complete&#039; action,
+		// the filesystem object should be hooked up.
+		global $wp_filesystem;
+
+		if (
+			! is_a( $instance, &#039;Language_Pack_Upgrader&#039; ) ||
+			! isset( $hook_extra[&#039;translations&#039;] ) ||
+			! is_array( $hook_extra[&#039;translations&#039;] )
+		) {
+			return;
+		}
+
+		// Make sure we&#039;re handing the correct domain (could be woocommerce or woocommerce-admin).
+		$plugin_domain = explode( &#039;/&#039;, plugin_basename( __FILE__ ) )[0];
+		$locales       = array();
+		$language_dir  = WP_LANG_DIR . &#039;/plugins/&#039;;
+
+		// Gather the locales that were updated in this operation.
+		foreach ( $hook_extra[&#039;translations&#039;] as $translation ) {
+			if (
+				&#039;plugin&#039; === $translation[&#039;type&#039;] &amp;&amp;
+				$plugin_domain === $translation[&#039;slug&#039;]
+			) {
+				$locales[] = $translation[&#039;language&#039;];
+			}
+		}
+
+		// Build combined translation files for all updated locales.
+		foreach ( $locales as $locale ) {
+			$translations_from_chunks = self::get_translation_chunk_data( $language_dir, $plugin_domain, $locale );
+
+			if ( empty( $translations_from_chunks ) ) {
+				continue;
+			}
+
+			$cache_filename          = self::get_combined_translation_filename( $plugin_domain, $locale );
+			$chunk_translations_json = wp_json_encode( $translations_from_chunks );
+
+			// Cache combined translations strings to a file.
+			$wp_filesystem-&gt;put_contents( $language_dir . $cache_filename, $chunk_translations_json );
+		}
+	}
+
+	/**
+	 * Load translation strings from language packs for dynamic imports.
+	 *
 	 * @param string $file File location for the script being translated.
 	 * @param string $handle Script handle.
 	 * @param string $domain Text domain.
 	 *
-	 * @return string JSON encoded translations object.
+	 * @return string New file location for the script being translated.
 	 */
-	public static function load_script_translations( $original_translations, $file, $handle, $domain ) {
+	public static function load_script_translation_file( $file, $handle, $domain ) {
 		// Make sure the main app script is being loaded.
 		if ( WC_ADMIN_APP !== $handle ) {
-			return $original_translations;
+			return $file;
 		}
 
 		// Make sure we&#039;re handing the correct domain (could be woocommerce or woocommerce-admin).
 		$plugin_domain = explode( &#039;/&#039;, plugin_basename( __FILE__ ) )[0];
 		if ( $plugin_domain !== $domain ) {
-			return $original_translations;
+			return $file;
 		}
 
 		$locale         = determine_locale();
 		$cache_filename = self::get_combined_translation_filename( $domain, $locale );
-		$lang_dir       = WP_LANG_DIR . &#039;/plugins/&#039;;
 
-		// Allow us to easily interact with the filesystem.
-		require_once ABSPATH . &#039;wp-admin/includes/file.php&#039;;
-		\WP_Filesystem();
-		global $wp_filesystem;
-
-		// First attempt to get a previously generated combined translation file.
-		if (
-			$wp_filesystem-&gt;is_file( $lang_dir . $cache_filename ) &amp;&amp;
-			$wp_filesystem-&gt;is_readable( $lang_dir . $cache_filename )
-		) {
-			return $wp_filesystem-&gt;get_contents( $lang_dir . $cache_filename );
-		}
-
-		// Get all translation chunk data combined into a single object.
-		$translations_from_chunks = self::get_translation_chunk_data( $lang_dir, $domain, $locale );
-
-		if ( empty( $translations_from_chunks ) ) {
-			return $original_translations;
-		}
-
-		$chunk_translations_json = wp_json_encode( $translations_from_chunks );
-
-		// Cache combined translations strings to a file.
-		$wp_filesystem-&gt;put_contents( $lang_dir . $cache_filename, $chunk_translations_json );
-
-		return $chunk_translations_json;
+		return WP_LANG_DIR . &#039;/plugins/&#039; . $cache_filename;
 	}
 
 	/**
@@ -759,7 +761,7 @@ class Loader {
 		}
 
 		// Grab translation strings from Webpack-generated chunks.
-		add_filter( &#039;pre_load_script_translations&#039;, array( __CLASS__, &#039;load_script_translations&#039; ), 10, 4 );
+		add_filter( &#039;load_script_translation_file&#039;, array( __CLASS__, &#039;load_script_translation_file&#039; ), 10, 3 );
 
 		$features         = self::get_features();
 		$enabled_features = array();
@@ -995,6 +997,18 @@ class Loader {
 		return &quot; $admin_body_class &quot;;
 	}
 
+	/**
+	 * Adds an iOS &quot;Smart App Banner&quot; for display on iOS Safari.
+	 * See https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/PromotingAppswithAppBanners/PromotingAppswithAppBanners.html
+	 */
+	public static function smart_app_banner() {
+		if ( self::is_admin_or_embed_page() ) {
+			echo &quot;
+				&lt;meta name=&#039;apple-itunes-app&#039; content=&#039;app-id=1389130815&#039;&gt;
+			&quot;;
+		}
+	}
+
 
 	/**
 	 * Removes notices that should not be displayed on WC Admin pages.
@@ -1154,12 +1168,11 @@ class Loader {
 		$settings[&#039;notifyLowStockAmount&#039;] = get_option( &#039;woocommerce_notify_low_stock_amount&#039; );
 		// @todo On merge, once plugin images are added to core WooCommerce, `wcAdminAssetUrl` can be retired,
 		// and `wcAssetUrl` can be used in its place throughout the codebase.
-		$settings[&#039;wcAdminAssetUrl&#039;]   = plugins_url( &#039;images/&#039;, dirname( __DIR__ ) . &#039;/woocommerce-admin.php&#039; );
-		$settings[&#039;wcVersion&#039;]         = WC_VERSION;
-		$settings[&#039;siteUrl&#039;]           = site_url();
-		$settings[&#039;onboardingEnabled&#039;] = self::is_onboarding_enabled();
-		$settings[&#039;dateFormat&#039;]        = get_option( &#039;date_format&#039; );
-		$settings[&#039;plugins&#039;]           = array(
+		$settings[&#039;wcAdminAssetUrl&#039;] = plugins_url( &#039;images/&#039;, dirname( __DIR__ ) . &#039;/woocommerce-admin.php&#039; );
+		$settings[&#039;wcVersion&#039;]       = WC_VERSION;
+		$settings[&#039;siteUrl&#039;]         = site_url();
+		$settings[&#039;dateFormat&#039;]      = get_option( &#039;date_format&#039; );
+		$settings[&#039;plugins&#039;]         = array(
 			&#039;installedPlugins&#039; =&gt; PluginsHelper::get_installed_plugin_slugs(),
 			&#039;activePlugins&#039;    =&gt; Plugins::get_active_plugins(),
 		);
@@ -1440,6 +1453,7 @@ class Loader {
 				&#039;wc-number&#039;,
 				&#039;wc-date&#039;,
 				&#039;wc-components&#039;,
+				&#039;wc-tracks&#039;,
 			];
 			foreach ( $handles_for_injection as $handle ) {
 				$script = wp_scripts()-&gt;query( $handle, &#039;registered&#039; );
@@ -1475,7 +1489,7 @@ class Loader {
 
     <footer class="phpdocumentor phpdocumentor-footer">
     <div class="phpdocumentor-section">
-        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on September 24th, 2020 at 12:36 pm.</span>
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on November 30th, 2020 at 01:44 pm.</span>
     </div>
 </footer>
 
@@ -1487,7 +1501,7 @@ class Loader {
             'searchIndex': '..\/js\/searchIndex.json'
         };
     </script>
-    <script src="../js/searchIndex.js?updated=1600961774"></script>
-    <script src="../js/search.js?updated=1600961774"></script>
+    <script src="../js/searchIndex.js?updated=1606754663"></script>
+    <script src="../js/search.js?updated=1606754663"></script>
 </body>
 </html>

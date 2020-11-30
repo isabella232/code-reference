@@ -9,9 +9,9 @@
     <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
     <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
     <link rel="stylesheet" href="../css/normalize.css">
-    <link rel="stylesheet" href="../css/base.css?updated=1600961772">
+    <link rel="stylesheet" href="../css/base.css?updated=1606754661">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/template.css?updated=1600961772">
+    <link rel="stylesheet" href="../css/template.css?updated=1606754661">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
             <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
@@ -76,7 +76,7 @@
                                     <li><a href="../packages/WooCommerce-Helper.html"><abbr title="\WooCommerce\Helper">Helper</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-Templates.html"><abbr title="\WooCommerce\Templates">Templates</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-Reports.html"><abbr title="\WooCommerce\Reports">Reports</abbr></a></li>
-                                    <li><a href="../packages/WooCommerce-API.html"><abbr title="\WooCommerce\API">API</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-RestApi.html"><abbr title="\WooCommerce\RestApi">RestApi</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-CLI.html"><abbr title="\WooCommerce\CLI">CLI</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-l10n.html"><abbr title="\WooCommerce\l10n">l10n</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-Webhooks.html"><abbr title="\WooCommerce\Webhooks">Webhooks</abbr></a></li>
@@ -91,6 +91,7 @@
                                     <li><a href="../packages/WooCommerce-Interface.html"><abbr title="\WooCommerce\Interface">Interface</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-LogHandlers.html"><abbr title="\WooCommerce\LogHandlers">LogHandlers</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-PaymentTokens.html"><abbr title="\WooCommerce\PaymentTokens">PaymentTokens</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Utilities.html"><abbr title="\WooCommerce\Utilities">Utilities</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-Shipping.html"><abbr title="\WooCommerce\Shipping">Shipping</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-Shortcodes.html"><abbr title="\WooCommerce\Shortcodes">Shortcodes</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-Tracks.html"><abbr title="\WooCommerce\Tracks">Tracks</abbr></a></li>
@@ -100,9 +101,8 @@
                                     <li><a href="../packages/WooCommerce-Widgets.html"><abbr title="\WooCommerce\Widgets">Widgets</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-Uninstaller.html"><abbr title="\WooCommerce\Uninstaller">Uninstaller</abbr></a></li>
                             </ul>
-                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/AutomatticWooCommerceRestApi.html"><abbr title="\AutomatticWooCommerceRestApi">AutomatticWooCommerceRestApi</abbr></a></h3>
-                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/AutomatticWooCommerceUtilities.html"><abbr title="\AutomatticWooCommerceUtilities">AutomatticWooCommerceUtilities</abbr></a></h3>
-                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceTemplates.html"><abbr title="\WooCommerceTemplates">WooCommerceTemplates</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceAdmin.html"><abbr title="\WoocommerceAdmin">WoocommerceAdmin</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdmin.html"><abbr title="\WooCommerceAdmin">WooCommerceAdmin</abbr></a></h3>
                         </section>
     
     <section class="phpdocumentor-sidebar__category">
@@ -163,7 +163,6 @@ class WC_Admin {
 		add_action( &#039;admin_init&#039;, array( $this, &#039;admin_redirects&#039; ) );
 		add_action( &#039;admin_footer&#039;, &#039;wc_print_js&#039;, 25 );
 		add_filter( &#039;admin_footer_text&#039;, array( $this, &#039;admin_footer_text&#039; ), 1 );
-		add_action( &#039;wp_ajax_setup_wizard_check_jetpack&#039;, array( $this, &#039;setup_wizard_check_jetpack&#039; ) );
 		add_action( &#039;init&#039;, array( &#039;WC_Site_Tracking&#039;, &#039;init&#039; ) );
 
 		// Disable WXR export of schedule action posts.
@@ -184,19 +183,19 @@ class WC_Admin {
 	 * Include any classes we need within admin.
 	 */
 	public function includes() {
-		include_once dirname( __FILE__ ) . &#039;/wc-admin-functions.php&#039;;
-		include_once dirname( __FILE__ ) . &#039;/wc-meta-box-functions.php&#039;;
-		include_once dirname( __FILE__ ) . &#039;/class-wc-admin-post-types.php&#039;;
-		include_once dirname( __FILE__ ) . &#039;/class-wc-admin-taxonomies.php&#039;;
-		include_once dirname( __FILE__ ) . &#039;/class-wc-admin-menus.php&#039;;
-		include_once dirname( __FILE__ ) . &#039;/class-wc-admin-customize.php&#039;;
-		include_once dirname( __FILE__ ) . &#039;/class-wc-admin-notices.php&#039;;
-		include_once dirname( __FILE__ ) . &#039;/class-wc-admin-assets.php&#039;;
-		include_once dirname( __FILE__ ) . &#039;/class-wc-admin-api-keys.php&#039;;
-		include_once dirname( __FILE__ ) . &#039;/class-wc-admin-webhooks.php&#039;;
-		include_once dirname( __FILE__ ) . &#039;/class-wc-admin-pointers.php&#039;;
-		include_once dirname( __FILE__ ) . &#039;/class-wc-admin-importers.php&#039;;
-		include_once dirname( __FILE__ ) . &#039;/class-wc-admin-exporters.php&#039;;
+		include_once __DIR__ . &#039;/wc-admin-functions.php&#039;;
+		include_once __DIR__ . &#039;/wc-meta-box-functions.php&#039;;
+		include_once __DIR__ . &#039;/class-wc-admin-post-types.php&#039;;
+		include_once __DIR__ . &#039;/class-wc-admin-taxonomies.php&#039;;
+		include_once __DIR__ . &#039;/class-wc-admin-menus.php&#039;;
+		include_once __DIR__ . &#039;/class-wc-admin-customize.php&#039;;
+		include_once __DIR__ . &#039;/class-wc-admin-notices.php&#039;;
+		include_once __DIR__ . &#039;/class-wc-admin-assets.php&#039;;
+		include_once __DIR__ . &#039;/class-wc-admin-api-keys.php&#039;;
+		include_once __DIR__ . &#039;/class-wc-admin-webhooks.php&#039;;
+		include_once __DIR__ . &#039;/class-wc-admin-pointers.php&#039;;
+		include_once __DIR__ . &#039;/class-wc-admin-importers.php&#039;;
+		include_once __DIR__ . &#039;/class-wc-admin-exporters.php&#039;;
 
 		include_once WC_ABSPATH . &#039;includes/tracks/class-wc-tracks.php&#039;;
 		include_once WC_ABSPATH . &#039;includes/tracks/class-wc-tracks-event.php&#039;;
@@ -206,24 +205,15 @@ class WC_Admin {
 
 		// Help Tabs.
 		if ( apply_filters( &#039;woocommerce_enable_admin_help_tab&#039;, true ) ) {
-			include_once dirname( __FILE__ ) . &#039;/class-wc-admin-help.php&#039;;
-		}
-
-		// Setup/welcome.
-		if ( ! empty( $_GET[&#039;page&#039;] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended
-			switch ( $_GET[&#039;page&#039;] ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended
-				case &#039;wc-setup&#039;:
-					include_once dirname( __FILE__ ) . &#039;/class-wc-admin-setup-wizard.php&#039;;
-					break;
-			}
+			include_once __DIR__ . &#039;/class-wc-admin-help.php&#039;;
 		}
 
 		// Helper.
-		include_once dirname( __FILE__ ) . &#039;/helper/class-wc-helper.php&#039;;
+		include_once __DIR__ . &#039;/helper/class-wc-helper.php&#039;;
 
 		// Marketplace suggestions &amp; related REST API.
-		include_once dirname( __FILE__ ) . &#039;/marketplace-suggestions/class-wc-marketplace-suggestions.php&#039;;
-		include_once dirname( __FILE__ ) . &#039;/marketplace-suggestions/class-wc-marketplace-updater.php&#039;;
+		include_once __DIR__ . &#039;/marketplace-suggestions/class-wc-marketplace-suggestions.php&#039;;
+		include_once __DIR__ . &#039;/marketplace-suggestions/class-wc-marketplace-updater.php&#039;;
 	}
 
 	/**
@@ -239,22 +229,22 @@ class WC_Admin {
 		switch ( $screen-&gt;id ) {
 			case &#039;dashboard&#039;:
 			case &#039;dashboard-network&#039;:
-				include &#039;class-wc-admin-dashboard.php&#039;;
+				include __DIR__ . &#039;/class-wc-admin-dashboard.php&#039;;
 				break;
 			case &#039;options-permalink&#039;:
-				include &#039;class-wc-admin-permalink-settings.php&#039;;
+				include __DIR__ . &#039;/class-wc-admin-permalink-settings.php&#039;;
 				break;
 			case &#039;plugins&#039;:
-				include &#039;plugin-updates/class-wc-plugins-screen-updates.php&#039;;
+				include __DIR__ . &#039;/plugin-updates/class-wc-plugins-screen-updates.php&#039;;
 				break;
 			case &#039;update-core&#039;:
-				include &#039;plugin-updates/class-wc-updates-screen-updates.php&#039;;
+				include __DIR__ . &#039;/plugin-updates/class-wc-updates-screen-updates.php&#039;;
 				break;
 			case &#039;users&#039;:
 			case &#039;user&#039;:
 			case &#039;profile&#039;:
 			case &#039;user-edit&#039;:
-				include &#039;class-wc-admin-profile.php&#039;;
+				include __DIR__ . &#039;/class-wc-admin-profile.php&#039;;
 				break;
 		}
 	}
@@ -262,7 +252,7 @@ class WC_Admin {
 	/**
 	 * Handle redirects to setup/welcome page after install and updates.
 	 *
-	 * For setup wizard, transient must be present, the user must have access rights, and we must ignore the network/bulk plugin updaters.
+	 * The user must have access rights, and we must ignore the network/bulk plugin updaters.
 	 */
 	public function admin_redirects() {
 		// Don&#039;t run this fn from Action Scheduler requests, as it would clear _wc_activation_redirect transient.
@@ -272,7 +262,7 @@ class WC_Admin {
 		}
 
 		// phpcs:disable WordPress.Security.NonceVerification.Recommended
-		// Nonced plugin install redirects (whitelisted).
+		// Nonced plugin install redirects.
 		if ( ! empty( $_GET[&#039;wc-install-plugin-redirect&#039;] ) ) {
 			$plugin_slug = wc_clean( wp_unslash( $_GET[&#039;wc-install-plugin-redirect&#039;] ) );
 
@@ -287,28 +277,6 @@ class WC_Admin {
 			exit;
 		}
 
-		// Setup wizard redirect.
-		if ( get_transient( &#039;_wc_activation_redirect&#039; ) &amp;&amp; apply_filters( &#039;woocommerce_enable_setup_wizard&#039;, true ) ) {
-			$do_redirect  = true;
-			$current_page = isset( $_GET[&#039;page&#039;] ) ? wc_clean( wp_unslash( $_GET[&#039;page&#039;] ) ) : false;
-
-			// On these pages, or during these events, postpone the redirect.
-			if ( wp_doing_ajax() || is_network_admin() || ! current_user_can( &#039;manage_woocommerce&#039; ) ) {
-				$do_redirect = false;
-			}
-
-			// On these pages, or during these events, disable the redirect.
-			if ( &#039;wc-setup&#039; === $current_page || ! WC_Admin_Notices::has_notice( &#039;install&#039; ) || apply_filters( &#039;woocommerce_prevent_automatic_wizard_redirect&#039;, false ) || isset( $_GET[&#039;activate-multi&#039;] ) ) {
-				delete_transient( &#039;_wc_activation_redirect&#039; );
-				$do_redirect = false;
-			}
-
-			if ( $do_redirect ) {
-				delete_transient( &#039;_wc_activation_redirect&#039; );
-				wp_safe_redirect( admin_url( &#039;index.php?page=wc-setup&#039; ) );
-				exit;
-			}
-		}
 		// phpcs:enable WordPress.Security.NonceVerification.Recommended
 	}
 
@@ -358,7 +326,7 @@ class WC_Admin {
 
 			// get the preview email content.
 			ob_start();
-			include &#039;views/html-email-template-preview.php&#039;;
+			include __DIR__ . &#039;/views/html-email-template-preview.php&#039;;
 			$message = ob_get_clean();
 
 			// create a new email.
@@ -486,7 +454,7 @@ return new WC_Admin();
 
     <footer class="phpdocumentor phpdocumentor-footer">
     <div class="phpdocumentor-section">
-        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on September 24th, 2020 at 12:36 pm.</span>
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on November 30th, 2020 at 01:44 pm.</span>
     </div>
 </footer>
 
@@ -498,7 +466,7 @@ return new WC_Admin();
             'searchIndex': '..\/js\/searchIndex.json'
         };
     </script>
-    <script src="../js/searchIndex.js?updated=1600961772"></script>
-    <script src="../js/search.js?updated=1600961772"></script>
+    <script src="../js/searchIndex.js?updated=1606754661"></script>
+    <script src="../js/search.js?updated=1606754661"></script>
 </body>
 </html>

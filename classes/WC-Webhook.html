@@ -9,9 +9,9 @@
     <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
     <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
     <link rel="stylesheet" href="../css/normalize.css">
-    <link rel="stylesheet" href="../css/base.css?updated=1600961778">
+    <link rel="stylesheet" href="../css/base.css?updated=1606754667">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/template.css?updated=1600961778">
+    <link rel="stylesheet" href="../css/template.css?updated=1606754667">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
             <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
@@ -70,7 +70,7 @@
                                     <li><a href="../packages/WooCommerce-Helper.html"><abbr title="\WooCommerce\Helper">Helper</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-Templates.html"><abbr title="\WooCommerce\Templates">Templates</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-Reports.html"><abbr title="\WooCommerce\Reports">Reports</abbr></a></li>
-                                    <li><a href="../packages/WooCommerce-API.html"><abbr title="\WooCommerce\API">API</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-RestApi.html"><abbr title="\WooCommerce\RestApi">RestApi</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-CLI.html"><abbr title="\WooCommerce\CLI">CLI</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-l10n.html"><abbr title="\WooCommerce\l10n">l10n</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-Webhooks.html"><abbr title="\WooCommerce\Webhooks">Webhooks</abbr></a></li>
@@ -85,6 +85,7 @@
                                     <li><a href="../packages/WooCommerce-Interface.html"><abbr title="\WooCommerce\Interface">Interface</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-LogHandlers.html"><abbr title="\WooCommerce\LogHandlers">LogHandlers</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-PaymentTokens.html"><abbr title="\WooCommerce\PaymentTokens">PaymentTokens</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Utilities.html"><abbr title="\WooCommerce\Utilities">Utilities</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-Shipping.html"><abbr title="\WooCommerce\Shipping">Shipping</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-Shortcodes.html"><abbr title="\WooCommerce\Shortcodes">Shortcodes</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-Tracks.html"><abbr title="\WooCommerce\Tracks">Tracks</abbr></a></li>
@@ -94,9 +95,8 @@
                                     <li><a href="../packages/WooCommerce-Widgets.html"><abbr title="\WooCommerce\Widgets">Widgets</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-Uninstaller.html"><abbr title="\WooCommerce\Uninstaller">Uninstaller</abbr></a></li>
                             </ul>
-                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/AutomatticWooCommerceRestApi.html"><abbr title="\AutomatticWooCommerceRestApi">AutomatticWooCommerceRestApi</abbr></a></h3>
-                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/AutomatticWooCommerceUtilities.html"><abbr title="\AutomatticWooCommerceUtilities">AutomatticWooCommerceUtilities</abbr></a></h3>
-                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceTemplates.html"><abbr title="\WooCommerceTemplates">WooCommerceTemplates</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceAdmin.html"><abbr title="\WoocommerceAdmin">WoocommerceAdmin</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdmin.html"><abbr title="\WooCommerceAdmin">WooCommerceAdmin</abbr></a></h3>
                         </section>
     
     <section class="phpdocumentor-sidebar__category">
@@ -137,9 +137,9 @@
     </h2>
 
         <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-webhook.php"><a href="../files/woocommerce-includes-class-wc-webhook.html#source-view.23">includes/class-wc-webhook.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-webhook.php"><a href="../files/woocommerce-includes-class-wc-webhook.html#source-view.24">includes/class-wc-webhook.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">23</span>
+    <span class="phpdocumentor-element-found-in__line">24</span>
 </aside>
 
             <p class="phpdocumentor-summary">Webhook class.</p>
@@ -354,7 +354,9 @@ within the current page request.</dd>
     <span>
                         &nbsp;: string    </span>
 </dt>
-<dd>Generate a base64-encoded HMAC-SHA256 signature of the payload body so the.</dd>
+<dd>Generate a base64-encoded HMAC-SHA256 signature of the payload body so the
+recipient can verify the authenticity of the webhook. Note that the signature
+is calculated after the body has already been encoded (JSON by default).</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="../classes/WC-Webhook.html#method_get_api_version">get_api_version()</a>
@@ -982,9 +984,9 @@ within the current page request.</dd>
                                 </span>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-webhook.php"><a href="../files/woocommerce-includes-class-wc-webhook.html#source-view.38">includes/class-wc-webhook.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-webhook.php"><a href="../files/woocommerce-includes-class-wc-webhook.html#source-view.39">includes/class-wc-webhook.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">38</span>
+    <span class="phpdocumentor-element-found-in__line">39</span>
 </aside>
 
         <p class="phpdocumentor-summary">Stores webhook data.</p>
@@ -1326,9 +1328,9 @@ ull</span></code>
                                 </span>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-webhook.php"><a href="../files/woocommerce-includes-class-wc-webhook.html#source-view.31">includes/class-wc-webhook.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-webhook.php"><a href="../files/woocommerce-includes-class-wc-webhook.html#source-view.32">includes/class-wc-webhook.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">31</span>
+    <span class="phpdocumentor-element-found-in__line">32</span>
 </aside>
 
         <p class="phpdocumentor-summary">Store which object IDs this webhook has processed (ie scheduled to be delivered)
@@ -1405,9 +1407,9 @@ within the current page request.</p>
         <a href="#method___construct" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-webhook.php"><a href="../files/woocommerce-includes-class-wc-webhook.html#source-view.61">includes/class-wc-webhook.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-webhook.php"><a href="../files/woocommerce-includes-class-wc-webhook.html#source-view.62">includes/class-wc-webhook.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">61</span>
+    <span class="phpdocumentor-element-found-in__line">62</span>
 </aside>
 
         <p class="phpdocumentor-summary">Load webhook data based on how WC_Webhook is called.</p>
@@ -1760,9 +1762,9 @@ within the current page request.</p>
         <a href="#method_build_payload" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-webhook.php"><a href="../files/woocommerce-includes-class-wc-webhook.html#source-view.454">includes/class-wc-webhook.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-webhook.php"><a href="../files/woocommerce-includes-class-wc-webhook.html#source-view.455">includes/class-wc-webhook.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">454</span>
+    <span class="phpdocumentor-element-found-in__line">455</span>
 </aside>
 
         <p class="phpdocumentor-summary">Build the payload data for the webhook.</p>
@@ -1978,9 +1980,9 @@ within the current page request.</p>
         <a href="#method_deliver" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-webhook.php"><a href="../files/woocommerce-includes-class-wc-webhook.html#source-view.315">includes/class-wc-webhook.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-webhook.php"><a href="../files/woocommerce-includes-class-wc-webhook.html#source-view.316">includes/class-wc-webhook.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">315</span>
+    <span class="phpdocumentor-element-found-in__line">316</span>
 </aside>
 
         <p class="phpdocumentor-summary">Deliver the webhook payload using wp_safe_remote_request().</p>
@@ -2032,9 +2034,9 @@ within the current page request.</p>
         <a href="#method_deliver_ping" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-webhook.php"><a href="../files/woocommerce-includes-class-wc-webhook.html#source-view.637">includes/class-wc-webhook.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-webhook.php"><a href="../files/woocommerce-includes-class-wc-webhook.html#source-view.639">includes/class-wc-webhook.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">637</span>
+    <span class="phpdocumentor-element-found-in__line">639</span>
 </aside>
 
         <p class="phpdocumentor-summary">Send a test ping to the delivery URL, sent when the webhook is first created.</p>
@@ -2075,9 +2077,9 @@ within the current page request.</p>
         <a href="#method_enqueue" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-webhook.php"><a href="../files/woocommerce-includes-class-wc-webhook.html#source-view.90">includes/class-wc-webhook.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-webhook.php"><a href="../files/woocommerce-includes-class-wc-webhook.html#source-view.91">includes/class-wc-webhook.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">90</span>
+    <span class="phpdocumentor-element-found-in__line">91</span>
 </aside>
 
         <p class="phpdocumentor-summary">Enqueue the hooks associated with the webhook.</p>
@@ -2118,20 +2120,20 @@ within the current page request.</p>
         <a href="#method_generate_signature" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-webhook.php"><a href="../files/woocommerce-includes-class-wc-webhook.html#source-view.492">includes/class-wc-webhook.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-webhook.php"><a href="../files/woocommerce-includes-class-wc-webhook.html#source-view.493">includes/class-wc-webhook.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">492</span>
+    <span class="phpdocumentor-element-found-in__line">493</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Generate a base64-encoded HMAC-SHA256 signature of the payload body so the.</p>
+        <p class="phpdocumentor-summary">Generate a base64-encoded HMAC-SHA256 signature of the payload body so the
+recipient can verify the authenticity of the webhook. Note that the signature
+is calculated after the body has already been encoded (JSON by default).</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
                 <span class="phpdocumentor-signature__name">generate_signature</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$payload</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
 
-        <section class="phpdocumentor-description"><p>recipient can verify the authenticity of the webhook. Note that the signature.
-is calculated after the body has already been encoded (JSON by default).</p></section>
-
+    
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
@@ -2174,9 +2176,9 @@ is calculated after the body has already been encoded (JSON by default).</p></se
         <a href="#method_get_api_version" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-webhook.php"><a href="../files/woocommerce-includes-class-wc-webhook.html#source-view.776">includes/class-wc-webhook.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-webhook.php"><a href="../files/woocommerce-includes-class-wc-webhook.html#source-view.778">includes/class-wc-webhook.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">776</span>
+    <span class="phpdocumentor-element-found-in__line">778</span>
 </aside>
 
         <p class="phpdocumentor-summary">API version.</p>
@@ -2401,9 +2403,9 @@ Valid values are 'view' and 'edit'.</p></section>
         <a href="#method_get_date_created" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-webhook.php"><a href="../files/woocommerce-includes-class-wc-webhook.html#source-view.704">includes/class-wc-webhook.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-webhook.php"><a href="../files/woocommerce-includes-class-wc-webhook.html#source-view.706">includes/class-wc-webhook.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">704</span>
+    <span class="phpdocumentor-element-found-in__line">706</span>
 </aside>
 
         <p class="phpdocumentor-summary">Get webhook created date.</p>
@@ -2457,9 +2459,9 @@ Valid values are 'view' and 'edit'.</p></section>
         <a href="#method_get_date_modified" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-webhook.php"><a href="../files/woocommerce-includes-class-wc-webhook.html#source-view.716">includes/class-wc-webhook.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-webhook.php"><a href="../files/woocommerce-includes-class-wc-webhook.html#source-view.718">includes/class-wc-webhook.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">716</span>
+    <span class="phpdocumentor-element-found-in__line">718</span>
 </aside>
 
         <p class="phpdocumentor-summary">Get webhook modified date.</p>
@@ -2513,9 +2515,9 @@ Valid values are 'view' and 'edit'.</p></section>
         <a href="#method_get_delivery_log" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-webhook.php"><a href="../files/woocommerce-includes-class-wc-webhook.html#source-view.627">includes/class-wc-webhook.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-webhook.php"><a href="../files/woocommerce-includes-class-wc-webhook.html#source-view.629">includes/class-wc-webhook.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">627</span>
+    <span class="phpdocumentor-element-found-in__line">629</span>
 </aside>
 
         <p class="phpdocumentor-summary">Get the delivery log specified by the ID. The delivery log includes:</p>
@@ -2579,9 +2581,9 @@ Valid values are 'view' and 'edit'.</p></section>
         <a href="#method_get_delivery_logs" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-webhook.php"><a href="../files/woocommerce-includes-class-wc-webhook.html#source-view.609">includes/class-wc-webhook.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-webhook.php"><a href="../files/woocommerce-includes-class-wc-webhook.html#source-view.611">includes/class-wc-webhook.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">609</span>
+    <span class="phpdocumentor-element-found-in__line">611</span>
 </aside>
 
         <p class="phpdocumentor-summary">Get the delivery logs for this webhook.</p>
@@ -2622,9 +2624,9 @@ Valid values are 'view' and 'edit'.</p></section>
         <a href="#method_get_delivery_url" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-webhook.php"><a href="../files/woocommerce-includes-class-wc-webhook.html#source-view.752">includes/class-wc-webhook.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-webhook.php"><a href="../files/woocommerce-includes-class-wc-webhook.html#source-view.754">includes/class-wc-webhook.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">752</span>
+    <span class="phpdocumentor-element-found-in__line">754</span>
 </aside>
 
         <p class="phpdocumentor-summary">Get the delivery URL.</p>
@@ -2677,9 +2679,9 @@ Valid values are 'view' and 'edit'.</p></section>
         <a href="#method_get_event" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-webhook.php"><a href="../files/woocommerce-includes-class-wc-webhook.html#source-view.1054">includes/class-wc-webhook.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-webhook.php"><a href="../files/woocommerce-includes-class-wc-webhook.html#source-view.1056">includes/class-wc-webhook.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1054</span>
+    <span class="phpdocumentor-element-found-in__line">1056</span>
 </aside>
 
         <p class="phpdocumentor-summary">Get the event for the webhook, e.g. `created`.</p>
@@ -2763,9 +2765,9 @@ Valid values are 'view' and 'edit'.</p></section>
         <a href="#method_get_failure_count" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-webhook.php"><a href="../files/woocommerce-includes-class-wc-webhook.html#source-view.790">includes/class-wc-webhook.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-webhook.php"><a href="../files/woocommerce-includes-class-wc-webhook.html#source-view.792">includes/class-wc-webhook.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">790</span>
+    <span class="phpdocumentor-element-found-in__line">792</span>
 </aside>
 
         <p class="phpdocumentor-summary">Get the failure count.</p>
@@ -2818,9 +2820,9 @@ Valid values are 'view' and 'edit'.</p></section>
         <a href="#method_get_hooks" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-webhook.php"><a href="../files/woocommerce-includes-class-wc-webhook.html#source-view.1026">includes/class-wc-webhook.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-webhook.php"><a href="../files/woocommerce-includes-class-wc-webhook.html#source-view.1028">includes/class-wc-webhook.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1026</span>
+    <span class="phpdocumentor-element-found-in__line">1028</span>
 </aside>
 
         <p class="phpdocumentor-summary">Get the hook names for the webhook.</p>
@@ -2861,9 +2863,9 @@ Valid values are 'view' and 'edit'.</p></section>
         <a href="#method_get_i18n_status" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-webhook.php"><a href="../files/woocommerce-includes-class-wc-webhook.html#source-view.1065">includes/class-wc-webhook.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-webhook.php"><a href="../files/woocommerce-includes-class-wc-webhook.html#source-view.1067">includes/class-wc-webhook.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1065</span>
+    <span class="phpdocumentor-element-found-in__line">1067</span>
 </aside>
 
         <p class="phpdocumentor-summary">Get the webhook i18n status.</p>
@@ -3048,9 +3050,9 @@ Valid values are 'view' and 'edit'.</p></section>
         <a href="#method_get_name" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-webhook.php"><a href="../files/woocommerce-includes-class-wc-webhook.html#source-view.676">includes/class-wc-webhook.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-webhook.php"><a href="../files/woocommerce-includes-class-wc-webhook.html#source-view.678">includes/class-wc-webhook.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">676</span>
+    <span class="phpdocumentor-element-found-in__line">678</span>
 </aside>
 
         <p class="phpdocumentor-summary">Get the friendly name for the webhook.</p>
@@ -3103,9 +3105,9 @@ Valid values are 'view' and 'edit'.</p></section>
         <a href="#method_get_new_delivery_id" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-webhook.php"><a href="../files/woocommerce-includes-class-wc-webhook.html#source-view.505">includes/class-wc-webhook.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-webhook.php"><a href="../files/woocommerce-includes-class-wc-webhook.html#source-view.507">includes/class-wc-webhook.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">505</span>
+    <span class="phpdocumentor-element-found-in__line">507</span>
 </aside>
 
         <p class="phpdocumentor-summary">Generate a new unique hash as a delivery id based on current time and wehbook id.</p>
@@ -3190,9 +3192,9 @@ Valid values are 'view' and 'edit'.</p></section>
         <a href="#method_get_pending_delivery" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-webhook.php"><a href="../files/woocommerce-includes-class-wc-webhook.html#source-view.802">includes/class-wc-webhook.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-webhook.php"><a href="../files/woocommerce-includes-class-wc-webhook.html#source-view.804">includes/class-wc-webhook.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">802</span>
+    <span class="phpdocumentor-element-found-in__line">804</span>
 </aside>
 
         <p class="phpdocumentor-summary">Get pending delivery.</p>
@@ -3295,9 +3297,9 @@ Valid values are 'view' and 'edit'.</p></section>
         <a href="#method_get_resource" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-webhook.php"><a href="../files/woocommerce-includes-class-wc-webhook.html#source-view.1042">includes/class-wc-webhook.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-webhook.php"><a href="../files/woocommerce-includes-class-wc-webhook.html#source-view.1044">includes/class-wc-webhook.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1042</span>
+    <span class="phpdocumentor-element-found-in__line">1044</span>
 </aside>
 
         <p class="phpdocumentor-summary">Get the resource for the webhook, e.g. `order`.</p>
@@ -3338,9 +3340,9 @@ Valid values are 'view' and 'edit'.</p></section>
         <a href="#method_get_secret" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-webhook.php"><a href="../files/woocommerce-includes-class-wc-webhook.html#source-view.728">includes/class-wc-webhook.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-webhook.php"><a href="../files/woocommerce-includes-class-wc-webhook.html#source-view.730">includes/class-wc-webhook.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">728</span>
+    <span class="phpdocumentor-element-found-in__line">730</span>
 </aside>
 
         <p class="phpdocumentor-summary">Get the secret used for generating the HMAC-SHA256 signature.</p>
@@ -3393,9 +3395,9 @@ Valid values are 'view' and 'edit'.</p></section>
         <a href="#method_get_status" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-webhook.php"><a href="../files/woocommerce-includes-class-wc-webhook.html#source-view.692">includes/class-wc-webhook.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-webhook.php"><a href="../files/woocommerce-includes-class-wc-webhook.html#source-view.694">includes/class-wc-webhook.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">692</span>
+    <span class="phpdocumentor-element-found-in__line">694</span>
 </aside>
 
         <p class="phpdocumentor-summary">Get the webhook status.</p>
@@ -3454,9 +3456,9 @@ Valid values are 'view' and 'edit'.</p></section>
         <a href="#method_get_topic" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-webhook.php"><a href="../files/woocommerce-includes-class-wc-webhook.html#source-view.740">includes/class-wc-webhook.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-webhook.php"><a href="../files/woocommerce-includes-class-wc-webhook.html#source-view.742">includes/class-wc-webhook.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">740</span>
+    <span class="phpdocumentor-element-found-in__line">742</span>
 </aside>
 
         <p class="phpdocumentor-summary">Get the webhook topic, e.g. `order.created`.</p>
@@ -3509,9 +3511,9 @@ Valid values are 'view' and 'edit'.</p></section>
         <a href="#method_get_user_id" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-webhook.php"><a href="../files/woocommerce-includes-class-wc-webhook.html#source-view.764">includes/class-wc-webhook.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-webhook.php"><a href="../files/woocommerce-includes-class-wc-webhook.html#source-view.766">includes/class-wc-webhook.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">764</span>
+    <span class="phpdocumentor-element-found-in__line">766</span>
 </aside>
 
         <p class="phpdocumentor-summary">Get the user ID for this webhook.</p>
@@ -3564,9 +3566,9 @@ Valid values are 'view' and 'edit'.</p></section>
         <a href="#method_log_delivery" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-webhook.php"><a href="../files/woocommerce-includes-class-wc-webhook.html#source-view.519">includes/class-wc-webhook.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-webhook.php"><a href="../files/woocommerce-includes-class-wc-webhook.html#source-view.521">includes/class-wc-webhook.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">519</span>
+    <span class="phpdocumentor-element-found-in__line">521</span>
 </aside>
 
         <p class="phpdocumentor-summary">Log the delivery request/response.</p>
@@ -3696,9 +3698,9 @@ Valid values are 'view' and 'edit'.</p></section>
         <a href="#method_process" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-webhook.php"><a href="../files/woocommerce-includes-class-wc-webhook.html#source-view.109">includes/class-wc-webhook.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-webhook.php"><a href="../files/woocommerce-includes-class-wc-webhook.html#source-view.110">includes/class-wc-webhook.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">109</span>
+    <span class="phpdocumentor-element-found-in__line">110</span>
 </aside>
 
         <p class="phpdocumentor-summary">Process the webhook for delivery by verifying that it should be delivered.</p>
@@ -3893,9 +3895,9 @@ Valid values are 'view' and 'edit'.</p></section>
         <a href="#method_set_api_version" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-webhook.php"><a href="../files/woocommerce-includes-class-wc-webhook.html#source-view.915">includes/class-wc-webhook.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-webhook.php"><a href="../files/woocommerce-includes-class-wc-webhook.html#source-view.917">includes/class-wc-webhook.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">915</span>
+    <span class="phpdocumentor-element-found-in__line">917</span>
 </aside>
 
         <p class="phpdocumentor-summary">Set API version.</p>
@@ -3947,9 +3949,9 @@ Valid values are 'view' and 'edit'.</p></section>
         <a href="#method_set_date_created" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-webhook.php"><a href="../files/woocommerce-includes-class-wc-webhook.html#source-view.831">includes/class-wc-webhook.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-webhook.php"><a href="../files/woocommerce-includes-class-wc-webhook.html#source-view.833">includes/class-wc-webhook.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">831</span>
+    <span class="phpdocumentor-element-found-in__line">833</span>
 </aside>
 
         <p class="phpdocumentor-summary">Set webhook created date.</p>
@@ -4004,9 +4006,9 @@ Null if their is no date.</p></section>
         <a href="#method_set_date_modified" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-webhook.php"><a href="../files/woocommerce-includes-class-wc-webhook.html#source-view.844">includes/class-wc-webhook.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-webhook.php"><a href="../files/woocommerce-includes-class-wc-webhook.html#source-view.846">includes/class-wc-webhook.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">844</span>
+    <span class="phpdocumentor-element-found-in__line">846</span>
 </aside>
 
         <p class="phpdocumentor-summary">Set webhook modified date.</p>
@@ -4104,9 +4106,9 @@ Null if their is no date.</p></section>
         <a href="#method_set_delivery_url" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-webhook.php"><a href="../files/woocommerce-includes-class-wc-webhook.html#source-view.895">includes/class-wc-webhook.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-webhook.php"><a href="../files/woocommerce-includes-class-wc-webhook.html#source-view.897">includes/class-wc-webhook.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">895</span>
+    <span class="phpdocumentor-element-found-in__line">897</span>
 </aside>
 
         <p class="phpdocumentor-summary">Set the delivery URL.</p>
@@ -4158,9 +4160,9 @@ Null if their is no date.</p></section>
         <a href="#method_set_failure_count" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-webhook.php"><a href="../files/woocommerce-includes-class-wc-webhook.html#source-view.939">includes/class-wc-webhook.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-webhook.php"><a href="../files/woocommerce-includes-class-wc-webhook.html#source-view.941">includes/class-wc-webhook.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">939</span>
+    <span class="phpdocumentor-element-found-in__line">941</span>
 </aside>
 
         <p class="phpdocumentor-summary">Set failure count.</p>
@@ -4320,9 +4322,9 @@ Null if their is no date.</p></section>
         <a href="#method_set_name" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-webhook.php"><a href="../files/woocommerce-includes-class-wc-webhook.html#source-view.818">includes/class-wc-webhook.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-webhook.php"><a href="../files/woocommerce-includes-class-wc-webhook.html#source-view.820">includes/class-wc-webhook.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">818</span>
+    <span class="phpdocumentor-element-found-in__line">820</span>
 </aside>
 
         <p class="phpdocumentor-summary">Set webhook name.</p>
@@ -4428,9 +4430,9 @@ Null if their is no date.</p></section>
         <a href="#method_set_pending_delivery" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-webhook.php"><a href="../files/woocommerce-includes-class-wc-webhook.html#source-view.929">includes/class-wc-webhook.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-webhook.php"><a href="../files/woocommerce-includes-class-wc-webhook.html#source-view.931">includes/class-wc-webhook.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">929</span>
+    <span class="phpdocumentor-element-found-in__line">931</span>
 </aside>
 
         <p class="phpdocumentor-summary">Set pending delivery.</p>
@@ -4545,9 +4547,9 @@ Null if their is no date.</p></section>
         <a href="#method_set_secret" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-webhook.php"><a href="../files/woocommerce-includes-class-wc-webhook.html#source-view.868">includes/class-wc-webhook.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-webhook.php"><a href="../files/woocommerce-includes-class-wc-webhook.html#source-view.870">includes/class-wc-webhook.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">868</span>
+    <span class="phpdocumentor-element-found-in__line">870</span>
 </aside>
 
         <p class="phpdocumentor-summary">Set the secret used for generating the HMAC-SHA256 signature.</p>
@@ -4599,9 +4601,9 @@ Null if their is no date.</p></section>
         <a href="#method_set_status" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-webhook.php"><a href="../files/woocommerce-includes-class-wc-webhook.html#source-view.854">includes/class-wc-webhook.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-webhook.php"><a href="../files/woocommerce-includes-class-wc-webhook.html#source-view.856">includes/class-wc-webhook.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">854</span>
+    <span class="phpdocumentor-element-found-in__line">856</span>
 </aside>
 
         <p class="phpdocumentor-summary">Set status.</p>
@@ -4653,9 +4655,9 @@ Null if their is no date.</p></section>
         <a href="#method_set_topic" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-webhook.php"><a href="../files/woocommerce-includes-class-wc-webhook.html#source-view.879">includes/class-wc-webhook.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-webhook.php"><a href="../files/woocommerce-includes-class-wc-webhook.html#source-view.881">includes/class-wc-webhook.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">879</span>
+    <span class="phpdocumentor-element-found-in__line">881</span>
 </aside>
 
         <p class="phpdocumentor-summary">Set the webhook topic and associated hooks.</p>
@@ -4708,9 +4710,9 @@ Null if their is no date.</p></section>
         <a href="#method_set_user_id" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-webhook.php"><a href="../files/woocommerce-includes-class-wc-webhook.html#source-view.905">includes/class-wc-webhook.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-webhook.php"><a href="../files/woocommerce-includes-class-wc-webhook.html#source-view.907">includes/class-wc-webhook.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">905</span>
+    <span class="phpdocumentor-element-found-in__line">907</span>
 </aside>
 
         <p class="phpdocumentor-summary">Set user ID.</p>
@@ -5140,9 +5142,9 @@ Context controls what happens to the value before it's returned.</p></section>
         <a href="#method_is_already_processed" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-webhook.php"><a href="../files/woocommerce-includes-class-wc-webhook.html#source-view.305">includes/class-wc-webhook.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-webhook.php"><a href="../files/woocommerce-includes-class-wc-webhook.html#source-view.306">includes/class-wc-webhook.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">305</span>
+    <span class="phpdocumentor-element-found-in__line">306</span>
 </aside>
 
         <p class="phpdocumentor-summary">Checks if the specified resource has already been queued for delivery within the current request.</p>
@@ -5406,9 +5408,9 @@ the the DB later.</p></section>
         <a href="#method_failed_delivery" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-webhook.php"><a href="../files/woocommerce-includes-class-wc-webhook.html#source-view.589">includes/class-wc-webhook.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-webhook.php"><a href="../files/woocommerce-includes-class-wc-webhook.html#source-view.591">includes/class-wc-webhook.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">589</span>
+    <span class="phpdocumentor-element-found-in__line">591</span>
 </aside>
 
         <p class="phpdocumentor-summary">Track consecutive delivery failures and automatically disable the webhook.</p>
@@ -5451,9 +5453,9 @@ non-2xx response.</p></section>
         <a href="#method_get_legacy_api_payload" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-webhook.php"><a href="../files/woocommerce-includes-class-wc-webhook.html#source-view.365">includes/class-wc-webhook.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-webhook.php"><a href="../files/woocommerce-includes-class-wc-webhook.html#source-view.366">includes/class-wc-webhook.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">365</span>
+    <span class="phpdocumentor-element-found-in__line">366</span>
 </aside>
 
         <p class="phpdocumentor-summary">Get Legacy API payload.</p>
@@ -5521,9 +5523,9 @@ non-2xx response.</p></section>
         <a href="#method_get_topic_hooks" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-webhook.php"><a href="../files/woocommerce-includes-class-wc-webhook.html#source-view.956">includes/class-wc-webhook.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-webhook.php"><a href="../files/woocommerce-includes-class-wc-webhook.html#source-view.958">includes/class-wc-webhook.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">956</span>
+    <span class="phpdocumentor-element-found-in__line">958</span>
 </aside>
 
         <p class="phpdocumentor-summary">Get the associated hook names for a topic.</p>
@@ -5575,9 +5577,9 @@ non-2xx response.</p></section>
         <a href="#method_get_wp_api_payload" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-webhook.php"><a href="../files/woocommerce-includes-class-wc-webhook.html#source-view.416">includes/class-wc-webhook.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-webhook.php"><a href="../files/woocommerce-includes-class-wc-webhook.html#source-view.417">includes/class-wc-webhook.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">416</span>
+    <span class="phpdocumentor-element-found-in__line">417</span>
 </aside>
 
         <p class="phpdocumentor-summary">Get WP API integration payload.</p>
@@ -5645,9 +5647,9 @@ non-2xx response.</p></section>
         <a href="#method_is_active" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-webhook.php"><a href="../files/woocommerce-includes-class-wc-webhook.html#source-view.157">includes/class-wc-webhook.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-webhook.php"><a href="../files/woocommerce-includes-class-wc-webhook.html#source-view.158">includes/class-wc-webhook.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">157</span>
+    <span class="phpdocumentor-element-found-in__line">158</span>
 </aside>
 
         <p class="phpdocumentor-summary">Returns if webhook is active.</p>
@@ -5689,9 +5691,9 @@ non-2xx response.</p></section>
         <a href="#method_is_valid_action" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-webhook.php"><a href="../files/woocommerce-includes-class-wc-webhook.html#source-view.178">includes/class-wc-webhook.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-webhook.php"><a href="../files/woocommerce-includes-class-wc-webhook.html#source-view.179">includes/class-wc-webhook.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">178</span>
+    <span class="phpdocumentor-element-found-in__line">179</span>
 </aside>
 
         <p class="phpdocumentor-summary">Validates the criteria for certain actions.</p>
@@ -5744,9 +5746,9 @@ non-2xx response.</p></section>
         <a href="#method_is_valid_post_action" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-webhook.php"><a href="../files/woocommerce-includes-class-wc-webhook.html#source-view.207">includes/class-wc-webhook.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-webhook.php"><a href="../files/woocommerce-includes-class-wc-webhook.html#source-view.208">includes/class-wc-webhook.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">207</span>
+    <span class="phpdocumentor-element-found-in__line">208</span>
 </aside>
 
         <p class="phpdocumentor-summary">Validates post actions.</p>
@@ -5799,9 +5801,9 @@ non-2xx response.</p></section>
         <a href="#method_is_valid_processing_action" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-webhook.php"><a href="../files/woocommerce-includes-class-wc-webhook.html#source-view.245">includes/class-wc-webhook.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-webhook.php"><a href="../files/woocommerce-includes-class-wc-webhook.html#source-view.246">includes/class-wc-webhook.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">245</span>
+    <span class="phpdocumentor-element-found-in__line">246</span>
 </aside>
 
         <p class="phpdocumentor-summary">Validates WC processing actions.</p>
@@ -5854,9 +5856,9 @@ non-2xx response.</p></section>
         <a href="#method_is_valid_resource" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-webhook.php"><a href="../files/woocommerce-includes-class-wc-webhook.html#source-view.272">includes/class-wc-webhook.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-webhook.php"><a href="../files/woocommerce-includes-class-wc-webhook.html#source-view.273">includes/class-wc-webhook.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">272</span>
+    <span class="phpdocumentor-element-found-in__line">273</span>
 </aside>
 
         <p class="phpdocumentor-summary">Checks the resource for this webhook is valid e.g. valid post status.</p>
@@ -5909,9 +5911,9 @@ non-2xx response.</p></section>
         <a href="#method_is_valid_topic" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-webhook.php"><a href="../files/woocommerce-includes-class-wc-webhook.html#source-view.167">includes/class-wc-webhook.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-webhook.php"><a href="../files/woocommerce-includes-class-wc-webhook.html#source-view.168">includes/class-wc-webhook.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">167</span>
+    <span class="phpdocumentor-element-found-in__line">168</span>
 </aside>
 
         <p class="phpdocumentor-summary">Returns if topic is valid.</p>
@@ -5953,9 +5955,9 @@ non-2xx response.</p></section>
         <a href="#method_is_valid_user_action" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-webhook.php"><a href="../files/woocommerce-includes-class-wc-webhook.html#source-view.227">includes/class-wc-webhook.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-webhook.php"><a href="../files/woocommerce-includes-class-wc-webhook.html#source-view.228">includes/class-wc-webhook.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">227</span>
+    <span class="phpdocumentor-element-found-in__line">228</span>
 </aside>
 
         <p class="phpdocumentor-summary">Validates user actions.</p>
@@ -6008,9 +6010,9 @@ non-2xx response.</p></section>
         <a href="#method_should_deliver" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-webhook.php"><a href="../files/woocommerce-includes-class-wc-webhook.html#source-view.138">includes/class-wc-webhook.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-webhook.php"><a href="../files/woocommerce-includes-class-wc-webhook.html#source-view.139">includes/class-wc-webhook.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">138</span>
+    <span class="phpdocumentor-element-found-in__line">139</span>
 </aside>
 
         <p class="phpdocumentor-summary">Helper to check if the webhook should be delivered, as some hooks.</p>
@@ -6064,7 +6066,7 @@ non-2xx response.</p></section>
 
     <footer class="phpdocumentor phpdocumentor-footer">
     <div class="phpdocumentor-section">
-        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on September 24th, 2020 at 12:36 pm.</span>
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on November 30th, 2020 at 01:44 pm.</span>
     </div>
 </footer>
 
@@ -6076,7 +6078,7 @@ non-2xx response.</p></section>
             'searchIndex': '..\/js\/searchIndex.json'
         };
     </script>
-    <script src="../js/searchIndex.js?updated=1600961778"></script>
-    <script src="../js/search.js?updated=1600961778"></script>
+    <script src="../js/searchIndex.js?updated=1606754667"></script>
+    <script src="../js/search.js?updated=1606754667"></script>
 </body>
 </html>

@@ -9,9 +9,9 @@
     <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
     <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
     <link rel="stylesheet" href="../css/normalize.css">
-    <link rel="stylesheet" href="../css/base.css?updated=1600961773">
+    <link rel="stylesheet" href="../css/base.css?updated=1606754662">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/template.css?updated=1600961773">
+    <link rel="stylesheet" href="../css/template.css?updated=1606754662">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
             <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
@@ -76,7 +76,7 @@
                                     <li><a href="../packages/WooCommerce-Helper.html"><abbr title="\WooCommerce\Helper">Helper</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-Templates.html"><abbr title="\WooCommerce\Templates">Templates</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-Reports.html"><abbr title="\WooCommerce\Reports">Reports</abbr></a></li>
-                                    <li><a href="../packages/WooCommerce-API.html"><abbr title="\WooCommerce\API">API</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-RestApi.html"><abbr title="\WooCommerce\RestApi">RestApi</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-CLI.html"><abbr title="\WooCommerce\CLI">CLI</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-l10n.html"><abbr title="\WooCommerce\l10n">l10n</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-Webhooks.html"><abbr title="\WooCommerce\Webhooks">Webhooks</abbr></a></li>
@@ -91,6 +91,7 @@
                                     <li><a href="../packages/WooCommerce-Interface.html"><abbr title="\WooCommerce\Interface">Interface</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-LogHandlers.html"><abbr title="\WooCommerce\LogHandlers">LogHandlers</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-PaymentTokens.html"><abbr title="\WooCommerce\PaymentTokens">PaymentTokens</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Utilities.html"><abbr title="\WooCommerce\Utilities">Utilities</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-Shipping.html"><abbr title="\WooCommerce\Shipping">Shipping</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-Shortcodes.html"><abbr title="\WooCommerce\Shortcodes">Shortcodes</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-Tracks.html"><abbr title="\WooCommerce\Tracks">Tracks</abbr></a></li>
@@ -100,9 +101,8 @@
                                     <li><a href="../packages/WooCommerce-Widgets.html"><abbr title="\WooCommerce\Widgets">Widgets</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-Uninstaller.html"><abbr title="\WooCommerce\Uninstaller">Uninstaller</abbr></a></li>
                             </ul>
-                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/AutomatticWooCommerceRestApi.html"><abbr title="\AutomatticWooCommerceRestApi">AutomatticWooCommerceRestApi</abbr></a></h3>
-                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/AutomatticWooCommerceUtilities.html"><abbr title="\AutomatticWooCommerceUtilities">AutomatticWooCommerceUtilities</abbr></a></h3>
-                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceTemplates.html"><abbr title="\WooCommerceTemplates">WooCommerceTemplates</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceAdmin.html"><abbr title="\WoocommerceAdmin">WoocommerceAdmin</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdmin.html"><abbr title="\WooCommerceAdmin">WooCommerceAdmin</abbr></a></h3>
                         </section>
     
     <section class="phpdocumentor-sidebar__category">
@@ -312,6 +312,29 @@ class DataStore extends ReportsDataStore implements DataStoreInterface {
 			&#039;NOT IN&#039;,
 			implode( &#039;,&#039;, $query_args[&#039;tax_rate_excludes&#039;] )
 		);
+
+		// Product attribute filters.
+		$attribute_subqueries = $this-&gt;get_attribute_subqueries( $query_args );
+		if ( $attribute_subqueries[&#039;join&#039;] &amp;&amp; $attribute_subqueries[&#039;where&#039;] ) {
+			// Build a subquery for getting order IDs by product attribute(s).
+			// Done here since our use case is a little more complicated than get_object_where_filter() can handle.
+			$attribute_subquery = new SqlQuery();
+			$attribute_subquery-&gt;add_sql_clause( &#039;select&#039;, &quot;{$orders_stats_table}.order_id&quot; );
+			$attribute_subquery-&gt;add_sql_clause( &#039;from&#039;, $orders_stats_table );
+
+			// JOIN on product lookup.
+			$attribute_subquery-&gt;add_sql_clause( &#039;join&#039;, &quot;JOIN {$product_lookup} ON {$orders_stats_table}.order_id = {$product_lookup}.order_id&quot; );
+
+			// Add JOINs for matching attributes.
+			foreach ( $attribute_subqueries[&#039;join&#039;] as $attribute_join ) {
+				$attribute_subquery-&gt;add_sql_clause( &#039;join&#039;, $attribute_join );
+			}
+			// Add WHEREs for matching attributes.
+			$attribute_subquery-&gt;add_sql_clause( &#039;where&#039;, &#039;AND (&#039; . implode( &quot; {$operator} &quot;, $attribute_subqueries[&#039;where&#039;] ) . &#039;)&#039; );
+
+			// Generate subquery statement and add to our where filters.
+			$where_filters[] = &quot;{$orders_stats_table}.order_id IN (&quot; . $attribute_subquery-&gt;get_query_statement() . &#039;)&#039;;
+		}
 
 		$where_filters[] = $this-&gt;get_customer_subquery( $query_args );
 		$refund_subquery = $this-&gt;get_refund_subquery( $query_args );
@@ -593,20 +616,31 @@ class DataStore extends ReportsDataStore implements DataStoreInterface {
 			return -1;
 		}
 
-		$data   = array(
-			&#039;order_id&#039;           =&gt; $order-&gt;get_id(),
-			&#039;parent_id&#039;          =&gt; $order-&gt;get_parent_id(),
-			&#039;date_created&#039;       =&gt; $order-&gt;get_date_created()-&gt;date( &#039;Y-m-d H:i:s&#039; ),
-			&#039;date_created_gmt&#039;   =&gt; gmdate( &#039;Y-m-d H:i:s&#039;, $order-&gt;get_date_created()-&gt;getTimestamp() ),
-			&#039;num_items_sold&#039;     =&gt; self::get_num_items_sold( $order ),
-			&#039;total_sales&#039;        =&gt; $order-&gt;get_total(),
-			&#039;tax_total&#039;          =&gt; $order-&gt;get_total_tax(),
-			&#039;shipping_total&#039;     =&gt; $order-&gt;get_shipping_total(),
-			&#039;net_total&#039;          =&gt; self::get_net_total( $order ),
-			&#039;status&#039;             =&gt; self::normalize_order_status( $order-&gt;get_status() ),
-			&#039;customer_id&#039;        =&gt; $order-&gt;get_report_customer_id(),
-			&#039;returning_customer&#039; =&gt; $order-&gt;is_returning_customer(),
+		/**
+		 * Filters order stats data.
+		 *
+		 * @param array $data Data written to order stats lookup table.
+		 * @param WC_Order $order  Order object.
+		 */
+		$data = apply_filters(
+			&#039;woocommerce_analytics_update_order_stats_data&#039;,
+			array(
+				&#039;order_id&#039;           =&gt; $order-&gt;get_id(),
+				&#039;parent_id&#039;          =&gt; $order-&gt;get_parent_id(),
+				&#039;date_created&#039;       =&gt; $order-&gt;get_date_created()-&gt;date( &#039;Y-m-d H:i:s&#039; ),
+				&#039;date_created_gmt&#039;   =&gt; gmdate( &#039;Y-m-d H:i:s&#039;, $order-&gt;get_date_created()-&gt;getTimestamp() ),
+				&#039;num_items_sold&#039;     =&gt; self::get_num_items_sold( $order ),
+				&#039;total_sales&#039;        =&gt; $order-&gt;get_total(),
+				&#039;tax_total&#039;          =&gt; $order-&gt;get_total_tax(),
+				&#039;shipping_total&#039;     =&gt; $order-&gt;get_shipping_total(),
+				&#039;net_total&#039;          =&gt; self::get_net_total( $order ),
+				&#039;status&#039;             =&gt; self::normalize_order_status( $order-&gt;get_status() ),
+				&#039;customer_id&#039;        =&gt; $order-&gt;get_report_customer_id(),
+				&#039;returning_customer&#039; =&gt; $order-&gt;is_returning_customer(),
+			),
+			$order
 		);
+
 		$format = array(
 			&#039;%d&#039;,
 			&#039;%d&#039;,
@@ -794,7 +828,7 @@ class DataStore extends ReportsDataStore implements DataStoreInterface {
 
     <footer class="phpdocumentor phpdocumentor-footer">
     <div class="phpdocumentor-section">
-        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on September 24th, 2020 at 12:36 pm.</span>
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on November 30th, 2020 at 01:44 pm.</span>
     </div>
 </footer>
 
@@ -806,7 +840,7 @@ class DataStore extends ReportsDataStore implements DataStoreInterface {
             'searchIndex': '..\/js\/searchIndex.json'
         };
     </script>
-    <script src="../js/searchIndex.js?updated=1600961773"></script>
-    <script src="../js/search.js?updated=1600961773"></script>
+    <script src="../js/searchIndex.js?updated=1606754662"></script>
+    <script src="../js/search.js?updated=1606754662"></script>
 </body>
 </html>

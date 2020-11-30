@@ -9,9 +9,9 @@
     <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
     <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
     <link rel="stylesheet" href="../css/normalize.css">
-    <link rel="stylesheet" href="../css/base.css?updated=1600961784">
+    <link rel="stylesheet" href="../css/base.css?updated=1606754672">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/template.css?updated=1600961784">
+    <link rel="stylesheet" href="../css/template.css?updated=1606754672">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
             <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
@@ -70,7 +70,7 @@
                                     <li><a href="../packages/WooCommerce-Helper.html"><abbr title="\WooCommerce\Helper">Helper</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-Templates.html"><abbr title="\WooCommerce\Templates">Templates</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-Reports.html"><abbr title="\WooCommerce\Reports">Reports</abbr></a></li>
-                                    <li><a href="../packages/WooCommerce-API.html"><abbr title="\WooCommerce\API">API</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-RestApi.html"><abbr title="\WooCommerce\RestApi">RestApi</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-CLI.html"><abbr title="\WooCommerce\CLI">CLI</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-l10n.html"><abbr title="\WooCommerce\l10n">l10n</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-Webhooks.html"><abbr title="\WooCommerce\Webhooks">Webhooks</abbr></a></li>
@@ -85,6 +85,7 @@
                                     <li><a href="../packages/WooCommerce-Interface.html"><abbr title="\WooCommerce\Interface">Interface</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-LogHandlers.html"><abbr title="\WooCommerce\LogHandlers">LogHandlers</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-PaymentTokens.html"><abbr title="\WooCommerce\PaymentTokens">PaymentTokens</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Utilities.html"><abbr title="\WooCommerce\Utilities">Utilities</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-Shipping.html"><abbr title="\WooCommerce\Shipping">Shipping</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-Shortcodes.html"><abbr title="\WooCommerce\Shortcodes">Shortcodes</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-Tracks.html"><abbr title="\WooCommerce\Tracks">Tracks</abbr></a></li>
@@ -94,9 +95,8 @@
                                     <li><a href="../packages/WooCommerce-Widgets.html"><abbr title="\WooCommerce\Widgets">Widgets</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-Uninstaller.html"><abbr title="\WooCommerce\Uninstaller">Uninstaller</abbr></a></li>
                             </ul>
-                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/AutomatticWooCommerceRestApi.html"><abbr title="\AutomatticWooCommerceRestApi">AutomatticWooCommerceRestApi</abbr></a></h3>
-                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/AutomatticWooCommerceUtilities.html"><abbr title="\AutomatticWooCommerceUtilities">AutomatticWooCommerceUtilities</abbr></a></h3>
-                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceTemplates.html"><abbr title="\WooCommerceTemplates">WooCommerceTemplates</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceAdmin.html"><abbr title="\WoocommerceAdmin">WoocommerceAdmin</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdmin.html"><abbr title="\WooCommerceAdmin">WooCommerceAdmin</abbr></a></h3>
                         </section>
     
     <section class="phpdocumentor-sidebar__category">
@@ -374,7 +374,7 @@ when uninstalling the plugin in a single site or multi site environment.</dd>
     <span class="phpdocumentor-signature__visibility">protected</span>
     <span class="phpdocumentor-signature__static">static</span>    <span class="phpdocumentor-signature__type">array</span>
     <span class="phpdocumentor-signature__name">$db_updates</span>
-     = <span class="phpdocumentor-signature__default-value">array(&#039;0.20.1&#039; =&gt; array(&#039;wc_admin_update_0201_order_status_index&#039;, &#039;wc_admin_update_0201_db_version&#039;), &#039;0.23.0&#039; =&gt; array(&#039;wc_admin_update_0230_rename_gross_total&#039;, &#039;wc_admin_update_0230_db_version&#039;), &#039;0.25.1&#039; =&gt; array(&#039;wc_admin_update_0251_remove_unsnooze_action&#039;, &#039;wc_admin_update_0251_db_version&#039;), &#039;1.1.0&#039; =&gt; array(&#039;wc_admin_update_110_remove_facebook_note&#039;, &#039;wc_admin_update_110_db_version&#039;), &#039;1.3.0&#039; =&gt; array(&#039;wc_admin_update_130_remove_dismiss_action_from_tracking_opt_in_note&#039;, &#039;wc_admin_update_130_db_version&#039;), &#039;1.4.0&#039; =&gt; array(&#039;wc_admin_update_140_change_deactivate_plugin_note_type&#039;, &#039;wc_admin_update_140_db_version&#039;))</span></code>
+     = <span class="phpdocumentor-signature__default-value">array(&#039;0.20.1&#039; =&gt; array(&#039;wc_admin_update_0201_order_status_index&#039;, &#039;wc_admin_update_0201_db_version&#039;), &#039;0.23.0&#039; =&gt; array(&#039;wc_admin_update_0230_rename_gross_total&#039;, &#039;wc_admin_update_0230_db_version&#039;), &#039;0.25.1&#039; =&gt; array(&#039;wc_admin_update_0251_remove_unsnooze_action&#039;, &#039;wc_admin_update_0251_db_version&#039;), &#039;1.1.0&#039; =&gt; array(&#039;wc_admin_update_110_remove_facebook_note&#039;, &#039;wc_admin_update_110_db_version&#039;), &#039;1.3.0&#039; =&gt; array(&#039;wc_admin_update_130_remove_dismiss_action_from_tracking_opt_in_note&#039;, &#039;wc_admin_update_130_db_version&#039;), &#039;1.4.0&#039; =&gt; array(&#039;wc_admin_update_140_change_deactivate_plugin_note_type&#039;, &#039;wc_admin_update_140_db_version&#039;), &#039;1.6.0&#039; =&gt; array(&#039;wc_admin_update_160_remove_facebook_note&#039;, &#039;wc_admin_update_160_db_version&#039;))</span></code>
 
     
     
@@ -394,9 +394,9 @@ when uninstalling the plugin in a single site or multi site environment.</dd>
                                 </span>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Install.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-install.html#source-view.60">packages/woocommerce-admin/src/Install.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Install.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-install.html#source-view.64">packages/woocommerce-admin/src/Install.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">60</span>
+    <span class="phpdocumentor-element-found-in__line">64</span>
 </aside>
 
         <p class="phpdocumentor-summary">Migrated option names mapping. New =&gt; old.</p>
@@ -429,9 +429,9 @@ when uninstalling the plugin in a single site or multi site environment.</dd>
         <a href="#method_add_tables" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Install.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-install.html#source-view.343">packages/woocommerce-admin/src/Install.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Install.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-install.html#source-view.347">packages/woocommerce-admin/src/Install.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">343</span>
+    <span class="phpdocumentor-element-found-in__line">347</span>
 </aside>
 
         <p class="phpdocumentor-summary">Adds new tables.</p>
@@ -470,9 +470,9 @@ when uninstalling the plugin in a single site or multi site environment.</dd>
         <a href="#method_check_version" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Install.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-install.html#source-view.116">packages/woocommerce-admin/src/Install.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Install.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-install.html#source-view.120">packages/woocommerce-admin/src/Install.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">116</span>
+    <span class="phpdocumentor-element-found-in__line">120</span>
 </aside>
 
         <p class="phpdocumentor-summary">Check WC Admin version and run the updater is required.</p>
@@ -501,9 +501,9 @@ when uninstalling the plugin in a single site or multi site environment.</dd>
         <a href="#method_create_events" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Install.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-install.html#source-view.454">packages/woocommerce-admin/src/Install.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Install.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-install.html#source-view.458">packages/woocommerce-admin/src/Install.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">454</span>
+    <span class="phpdocumentor-element-found-in__line">458</span>
 </aside>
 
         <p class="phpdocumentor-summary">Schedule cron events.</p>
@@ -531,9 +531,9 @@ when uninstalling the plugin in a single site or multi site environment.</dd>
         <a href="#method_create_tables" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Install.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-install.html#source-view.310">packages/woocommerce-admin/src/Install.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Install.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-install.html#source-view.314">packages/woocommerce-admin/src/Install.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">310</span>
+    <span class="phpdocumentor-element-found-in__line">314</span>
 </aside>
 
         <p class="phpdocumentor-summary">Create database tables.</p>
@@ -561,9 +561,9 @@ when uninstalling the plugin in a single site or multi site environment.</dd>
         <a href="#method_drop_tables" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Install.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-install.html#source-view.499">packages/woocommerce-admin/src/Install.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Install.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-install.html#source-view.504">packages/woocommerce-admin/src/Install.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">499</span>
+    <span class="phpdocumentor-element-found-in__line">504</span>
 </aside>
 
         <p class="phpdocumentor-summary">Drop WooCommerce Admin tables.</p>
@@ -589,9 +589,9 @@ when uninstalling the plugin in a single site or multi site environment.</dd>
         <a href="#method_get_db_update_callbacks" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Install.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-install.html#source-view.366">packages/woocommerce-admin/src/Install.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Install.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-install.html#source-view.370">packages/woocommerce-admin/src/Install.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">366</span>
+    <span class="phpdocumentor-element-found-in__line">370</span>
 </aside>
 
         <p class="phpdocumentor-summary">Get list of DB update callbacks.</p>
@@ -619,9 +619,9 @@ when uninstalling the plugin in a single site or multi site environment.</dd>
         <a href="#method_get_tables" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Install.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-install.html#source-view.322">packages/woocommerce-admin/src/Install.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Install.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-install.html#source-view.326">packages/woocommerce-admin/src/Install.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">322</span>
+    <span class="phpdocumentor-element-found-in__line">326</span>
 </aside>
 
         <p class="phpdocumentor-summary">Return a list of tables. Used to make sure all WC Admin tables are dropped
@@ -651,9 +651,9 @@ when uninstalling the plugin in a single site or multi site environment.</p>
         <a href="#method_init" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Install.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-install.html#source-view.76">packages/woocommerce-admin/src/Install.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Install.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-install.html#source-view.80">packages/woocommerce-admin/src/Install.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">76</span>
+    <span class="phpdocumentor-element-found-in__line">80</span>
 </aside>
 
         <p class="phpdocumentor-summary">Hook in tabs.</p>
@@ -681,9 +681,9 @@ when uninstalling the plugin in a single site or multi site environment.</p>
         <a href="#method_install" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Install.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-install.html#source-view.146">packages/woocommerce-admin/src/Install.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Install.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-install.html#source-view.150">packages/woocommerce-admin/src/Install.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">146</span>
+    <span class="phpdocumentor-element-found-in__line">150</span>
 </aside>
 
         <p class="phpdocumentor-summary">Install WC Admin.</p>
@@ -711,9 +711,9 @@ when uninstalling the plugin in a single site or multi site environment.</p>
         <a href="#method_migrate_options" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Install.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-install.html#source-view.87">packages/woocommerce-admin/src/Install.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Install.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-install.html#source-view.91">packages/woocommerce-admin/src/Install.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">87</span>
+    <span class="phpdocumentor-element-found-in__line">91</span>
 </aside>
 
         <p class="phpdocumentor-summary">Migrate option values to their new keys/names.</p>
@@ -741,9 +741,9 @@ when uninstalling the plugin in a single site or multi site environment.</p>
         <a href="#method_needs_db_update" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Install.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-install.html#source-view.375">packages/woocommerce-admin/src/Install.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Install.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-install.html#source-view.379">packages/woocommerce-admin/src/Install.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">375</span>
+    <span class="phpdocumentor-element-found-in__line">379</span>
 </aside>
 
         <p class="phpdocumentor-summary">Is a DB update needed?</p>
@@ -771,9 +771,9 @@ when uninstalling the plugin in a single site or multi site environment.</p>
         <a href="#method_update_db_version" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Install.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-install.html#source-view.446">packages/woocommerce-admin/src/Install.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Install.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-install.html#source-view.450">packages/woocommerce-admin/src/Install.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">446</span>
+    <span class="phpdocumentor-element-found-in__line">450</span>
 </aside>
 
         <p class="phpdocumentor-summary">Update WC Admin version to current.</p>
@@ -812,9 +812,9 @@ when uninstalling the plugin in a single site or multi site environment.</p>
         <a href="#method_wpmu_drop_tables" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Install.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-install.html#source-view.357">packages/woocommerce-admin/src/Install.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Install.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-install.html#source-view.361">packages/woocommerce-admin/src/Install.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">357</span>
+    <span class="phpdocumentor-element-found-in__line">361</span>
 </aside>
 
         <p class="phpdocumentor-summary">Uninstall tables when MU blog is deleted.</p>
@@ -853,9 +853,9 @@ when uninstalling the plugin in a single site or multi site environment.</p>
         <a href="#method_create_notes" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Install.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-install.html#source-view.490">packages/woocommerce-admin/src/Install.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Install.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-install.html#source-view.495">packages/woocommerce-admin/src/Install.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">490</span>
+    <span class="phpdocumentor-element-found-in__line">495</span>
 </aside>
 
         <p class="phpdocumentor-summary">Create notes.</p>
@@ -883,9 +883,9 @@ when uninstalling the plugin in a single site or multi site environment.</p>
         <a href="#method_delete_obsolete_notes" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Install.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-install.html#source-view.465">packages/woocommerce-admin/src/Install.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Install.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-install.html#source-view.469">packages/woocommerce-admin/src/Install.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">465</span>
+    <span class="phpdocumentor-element-found-in__line">469</span>
 </aside>
 
         <p class="phpdocumentor-summary">Delete obsolete notes.</p>
@@ -913,9 +913,9 @@ when uninstalling the plugin in a single site or multi site environment.</p>
         <a href="#method_get_schema" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Install.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-install.html#source-view.180">packages/woocommerce-admin/src/Install.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Install.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-install.html#source-view.184">packages/woocommerce-admin/src/Install.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">180</span>
+    <span class="phpdocumentor-element-found-in__line">184</span>
 </aside>
 
         <p class="phpdocumentor-summary">Get database schema.</p>
@@ -943,9 +943,9 @@ when uninstalling the plugin in a single site or multi site environment.</p>
         <a href="#method_maybe_update_db_version" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Install.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-install.html#source-view.387">packages/woocommerce-admin/src/Install.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Install.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-install.html#source-view.391">packages/woocommerce-admin/src/Install.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">387</span>
+    <span class="phpdocumentor-element-found-in__line">391</span>
 </aside>
 
         <p class="phpdocumentor-summary">See if we need to show or run database updates during install.</p>
@@ -973,9 +973,9 @@ when uninstalling the plugin in a single site or multi site environment.</p>
         <a href="#method_update" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Install.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-install.html#source-view.398">packages/woocommerce-admin/src/Install.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Install.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-install.html#source-view.402">packages/woocommerce-admin/src/Install.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">398</span>
+    <span class="phpdocumentor-element-found-in__line">402</span>
 </aside>
 
         <p class="phpdocumentor-summary">Push all needed DB updates to the queue for processing.</p>
@@ -1003,7 +1003,7 @@ when uninstalling the plugin in a single site or multi site environment.</p>
 
     <footer class="phpdocumentor phpdocumentor-footer">
     <div class="phpdocumentor-section">
-        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on September 24th, 2020 at 12:36 pm.</span>
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on November 30th, 2020 at 01:44 pm.</span>
     </div>
 </footer>
 
@@ -1015,7 +1015,7 @@ when uninstalling the plugin in a single site or multi site environment.</p>
             'searchIndex': '..\/js\/searchIndex.json'
         };
     </script>
-    <script src="../js/searchIndex.js?updated=1600961784"></script>
-    <script src="../js/search.js?updated=1600961784"></script>
+    <script src="../js/searchIndex.js?updated=1606754672"></script>
+    <script src="../js/search.js?updated=1606754672"></script>
 </body>
 </html>

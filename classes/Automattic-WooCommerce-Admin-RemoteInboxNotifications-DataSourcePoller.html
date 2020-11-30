@@ -9,9 +9,9 @@
     <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
     <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
     <link rel="stylesheet" href="../css/normalize.css">
-    <link rel="stylesheet" href="../css/base.css?updated=1600961784">
+    <link rel="stylesheet" href="../css/base.css?updated=1606754673">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/template.css?updated=1600961784">
+    <link rel="stylesheet" href="../css/template.css?updated=1606754673">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
             <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
@@ -70,7 +70,7 @@
                                     <li><a href="../packages/WooCommerce-Helper.html"><abbr title="\WooCommerce\Helper">Helper</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-Templates.html"><abbr title="\WooCommerce\Templates">Templates</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-Reports.html"><abbr title="\WooCommerce\Reports">Reports</abbr></a></li>
-                                    <li><a href="../packages/WooCommerce-API.html"><abbr title="\WooCommerce\API">API</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-RestApi.html"><abbr title="\WooCommerce\RestApi">RestApi</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-CLI.html"><abbr title="\WooCommerce\CLI">CLI</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-l10n.html"><abbr title="\WooCommerce\l10n">l10n</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-Webhooks.html"><abbr title="\WooCommerce\Webhooks">Webhooks</abbr></a></li>
@@ -85,6 +85,7 @@
                                     <li><a href="../packages/WooCommerce-Interface.html"><abbr title="\WooCommerce\Interface">Interface</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-LogHandlers.html"><abbr title="\WooCommerce\LogHandlers">LogHandlers</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-PaymentTokens.html"><abbr title="\WooCommerce\PaymentTokens">PaymentTokens</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Utilities.html"><abbr title="\WooCommerce\Utilities">Utilities</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-Shipping.html"><abbr title="\WooCommerce\Shipping">Shipping</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-Shortcodes.html"><abbr title="\WooCommerce\Shortcodes">Shortcodes</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-Tracks.html"><abbr title="\WooCommerce\Tracks">Tracks</abbr></a></li>
@@ -94,9 +95,8 @@
                                     <li><a href="../packages/WooCommerce-Widgets.html"><abbr title="\WooCommerce\Widgets">Widgets</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-Uninstaller.html"><abbr title="\WooCommerce\Uninstaller">Uninstaller</abbr></a></li>
                             </ul>
-                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/AutomatticWooCommerceRestApi.html"><abbr title="\AutomatticWooCommerceRestApi">AutomatticWooCommerceRestApi</abbr></a></h3>
-                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/AutomatticWooCommerceUtilities.html"><abbr title="\AutomatticWooCommerceUtilities">AutomatticWooCommerceUtilities</abbr></a></h3>
-                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceTemplates.html"><abbr title="\WooCommerceTemplates">WooCommerceTemplates</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceAdmin.html"><abbr title="\WoocommerceAdmin">WoocommerceAdmin</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdmin.html"><abbr title="\WooCommerceAdmin">WooCommerceAdmin</abbr></a></h3>
                         </section>
     
     <section class="phpdocumentor-sidebar__category">
@@ -167,12 +167,26 @@ stores the specs in to the database as an option.</p></section>
 </dt>
 <dd></dd>
 
-                    <dt class="phpdocumentor-table-of-contents__entry -method -public">
+                <dt class="phpdocumentor-table-of-contents__entry -property -protected">
+    <a href="../classes/Automattic-WooCommerce-Admin-RemoteInboxNotifications-DataSourcePoller.html#property_logger">$logger</a>
+    <span>
+                &nbsp;: <abbr title="\Automattic\WooCommerce\Admin\RemoteInboxNotifications\WC_Logger">WC_Logger</abbr>|null            </span>
+</dt>
+<dd>The logger instance.</dd>
+
+                <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="../classes/Automattic-WooCommerce-Admin-RemoteInboxNotifications-DataSourcePoller.html#method_read_specs_from_data_sources">read_specs_from_data_sources()</a>
     <span>
                         &nbsp;: bool    </span>
 </dt>
 <dd>Reads the data sources for specs and persists those specs.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -private">
+    <a href="../classes/Automattic-WooCommerce-Admin-RemoteInboxNotifications-DataSourcePoller.html#method_get_logger">get_logger()</a>
+    <span>
+                        &nbsp;: <abbr title="\Automattic\WooCommerce\Admin\RemoteInboxNotifications\WC_Logger">WC_Logger</abbr>    </span>
+</dt>
+<dd>Get the logger instance.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -private">
     <a href="../classes/Automattic-WooCommerce-Admin-RemoteInboxNotifications-DataSourcePoller.html#method_merge_specs">merge_specs()</a>
@@ -240,6 +254,43 @@ stores the specs in to the database as an option.</p></section>
             </section>
 
         
+    <section class="phpdocumentor-properties">
+        <h3 class="phpdocumentor-elements__header" id="properties">
+            Properties
+            <a href="#properties" class="headerlink"><i class="fas fa-link"></i></a>
+        </h3>
+                    <article
+        class="
+            phpdocumentor-element
+            -property
+            -protected
+            -static                                            "
+>
+    <h4 class="phpdocumentor-element__name" id="property_logger">
+        $logger
+        <a href="#property_logger" class="headerlink"><i class="fas fa-link"></i></a>
+        <span class="phpdocumentor-element__modifiers">
+                                </span>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/RemoteInboxNotifications/DataSourcePoller.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-remoteinboxnotifications-datasourcepoller.html#source-view.25">packages/woocommerce-admin/src/RemoteInboxNotifications/DataSourcePoller.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">25</span>
+</aside>
+
+        <p class="phpdocumentor-summary">The logger instance.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">protected</span>
+    <span class="phpdocumentor-signature__static">static</span>    <span class="phpdocumentor-signature__type"><abbr title="\Automattic\WooCommerce\Admin\RemoteInboxNotifications\WC_Logger">WC_Logger</abbr>|null</span>
+    <span class="phpdocumentor-signature__name">$logger</span>
+     = <span class="phpdocumentor-signature__default-value">null</span></code>
+
+    
+    
+
+</article>
+            </section>
 
             <section class="phpdocumentor-methods">
         <h3 class="phpdocumentor-elements__header" id="methods">
@@ -257,9 +308,9 @@ stores the specs in to the database as an option.</p></section>
         <a href="#method_read_specs_from_data_sources" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/RemoteInboxNotifications/DataSourcePoller.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-remoteinboxnotifications-datasourcepoller.html#source-view.25">packages/woocommerce-admin/src/RemoteInboxNotifications/DataSourcePoller.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/RemoteInboxNotifications/DataSourcePoller.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-remoteinboxnotifications-datasourcepoller.html#source-view.45">packages/woocommerce-admin/src/RemoteInboxNotifications/DataSourcePoller.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">25</span>
+    <span class="phpdocumentor-element-found-in__line">45</span>
 </aside>
 
         <p class="phpdocumentor-summary">Reads the data sources for specs and persists those specs.</p>
@@ -283,21 +334,51 @@ stores the specs in to the database as an option.</p></section>
             -private
                                     -static                    "
 >
+    <h4 class="phpdocumentor-element__name" id="method_get_logger">
+        get_logger()
+        <a href="#method_get_logger" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/RemoteInboxNotifications/DataSourcePoller.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-remoteinboxnotifications-datasourcepoller.html#source-view.32">packages/woocommerce-admin/src/RemoteInboxNotifications/DataSourcePoller.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">32</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Get the logger instance.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">private</span>
+            <span class="phpdocumentor-signature__static">static</span>    <span class="phpdocumentor-signature__name">get_logger</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\Automattic\WooCommerce\Admin\RemoteInboxNotifications\WC_Logger">WC_Logger</abbr></span></code>
+
+    
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><abbr title="\Automattic\WooCommerce\Admin\RemoteInboxNotifications\WC_Logger">WC_Logger</abbr></span>
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -private
+                                    -static                    "
+>
     <h4 class="phpdocumentor-element__name" id="method_merge_specs">
         merge_specs()
         <a href="#method_merge_specs" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/RemoteInboxNotifications/DataSourcePoller.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-remoteinboxnotifications-datasourcepoller.html#source-view.75">packages/woocommerce-admin/src/RemoteInboxNotifications/DataSourcePoller.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/RemoteInboxNotifications/DataSourcePoller.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-remoteinboxnotifications-datasourcepoller.html#source-view.115">packages/woocommerce-admin/src/RemoteInboxNotifications/DataSourcePoller.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">75</span>
+    <span class="phpdocumentor-element-found-in__line">115</span>
 </aside>
 
         <p class="phpdocumentor-summary">Merge the specs.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
-            <span class="phpdocumentor-signature__static">static</span>    <span class="phpdocumentor-signature__name">merge_specs</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&nbsp;</span><span class="phpdocumentor-signature__argument__name">$specs_to_merge_in</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&nbsp;</span><span class="phpdocumentor-signature__argument__reference-operator">&amp;</span><span class="phpdocumentor-signature__argument__name">$specs</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+            <span class="phpdocumentor-signature__static">static</span>    <span class="phpdocumentor-signature__name">merge_specs</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&nbsp;</span><span class="phpdocumentor-signature__argument__name">$specs_to_merge_in</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&nbsp;</span><span class="phpdocumentor-signature__argument__reference-operator">&amp;</span><span class="phpdocumentor-signature__argument__name">$specs</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$url</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
 
     
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
@@ -316,6 +397,14 @@ stores the specs in to the database as an option.</p></section>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The list of specs being merged into.</p></section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$url</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>The url of the feed being merged in (for error reporting).</p></section>
 
             </dd>
             </dl>
@@ -337,9 +426,9 @@ stores the specs in to the database as an option.</p></section>
         <a href="#method_read_data_source" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/RemoteInboxNotifications/DataSourcePoller.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-remoteinboxnotifications-datasourcepoller.html#source-view.48">packages/woocommerce-admin/src/RemoteInboxNotifications/DataSourcePoller.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/RemoteInboxNotifications/DataSourcePoller.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-remoteinboxnotifications-datasourcepoller.html#source-view.68">packages/woocommerce-admin/src/RemoteInboxNotifications/DataSourcePoller.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">48</span>
+    <span class="phpdocumentor-element-found-in__line">68</span>
 </aside>
 
         <p class="phpdocumentor-summary">Read a single data source and return the read specs</p>
@@ -379,16 +468,16 @@ stores the specs in to the database as an option.</p></section>
         <a href="#method_validate_action" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/RemoteInboxNotifications/DataSourcePoller.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-remoteinboxnotifications-datasourcepoller.html#source-view.150">packages/woocommerce-admin/src/RemoteInboxNotifications/DataSourcePoller.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/RemoteInboxNotifications/DataSourcePoller.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-remoteinboxnotifications-datasourcepoller.html#source-view.251">packages/woocommerce-admin/src/RemoteInboxNotifications/DataSourcePoller.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">150</span>
+    <span class="phpdocumentor-element-found-in__line">251</span>
 </aside>
 
         <p class="phpdocumentor-summary">Validate the action.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
-            <span class="phpdocumentor-signature__static">static</span>    <span class="phpdocumentor-signature__name">validate_action</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">object&nbsp;</span><span class="phpdocumentor-signature__argument__name">$action</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool</span></code>
+            <span class="phpdocumentor-signature__static">static</span>    <span class="phpdocumentor-signature__name">validate_action</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">object&nbsp;</span><span class="phpdocumentor-signature__argument__name">$action</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$url</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool</span></code>
 
     
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
@@ -399,6 +488,14 @@ stores the specs in to the database as an option.</p></section>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The action to validate.</p></section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$url</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>The url of the feed containing the action (for error reporting).</p></section>
 
             </dd>
             </dl>
@@ -421,16 +518,16 @@ stores the specs in to the database as an option.</p></section>
         <a href="#method_validate_spec" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/RemoteInboxNotifications/DataSourcePoller.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-remoteinboxnotifications-datasourcepoller.html#source-view.93">packages/woocommerce-admin/src/RemoteInboxNotifications/DataSourcePoller.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/RemoteInboxNotifications/DataSourcePoller.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-remoteinboxnotifications-datasourcepoller.html#source-view.134">packages/woocommerce-admin/src/RemoteInboxNotifications/DataSourcePoller.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">93</span>
+    <span class="phpdocumentor-element-found-in__line">134</span>
 </aside>
 
         <p class="phpdocumentor-summary">Validate the spec.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
-            <span class="phpdocumentor-signature__static">static</span>    <span class="phpdocumentor-signature__name">validate_spec</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">object&nbsp;</span><span class="phpdocumentor-signature__argument__name">$spec</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool</span></code>
+            <span class="phpdocumentor-signature__static">static</span>    <span class="phpdocumentor-signature__name">validate_spec</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">object&nbsp;</span><span class="phpdocumentor-signature__argument__name">$spec</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$url</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool</span></code>
 
     
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
@@ -441,6 +538,14 @@ stores the specs in to the database as an option.</p></section>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The spec to validate.</p></section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$url</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>The url of the feed that provided the spec.</p></section>
 
             </dd>
             </dl>
@@ -463,7 +568,7 @@ stores the specs in to the database as an option.</p></section>
 
     <footer class="phpdocumentor phpdocumentor-footer">
     <div class="phpdocumentor-section">
-        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on September 24th, 2020 at 12:36 pm.</span>
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on November 30th, 2020 at 01:44 pm.</span>
     </div>
 </footer>
 
@@ -475,7 +580,7 @@ stores the specs in to the database as an option.</p></section>
             'searchIndex': '..\/js\/searchIndex.json'
         };
     </script>
-    <script src="../js/searchIndex.js?updated=1600961784"></script>
-    <script src="../js/search.js?updated=1600961784"></script>
+    <script src="../js/searchIndex.js?updated=1606754673"></script>
+    <script src="../js/search.js?updated=1606754673"></script>
 </body>
 </html>

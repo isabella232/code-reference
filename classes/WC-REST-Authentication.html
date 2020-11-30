@@ -9,9 +9,9 @@
     <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
     <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
     <link rel="stylesheet" href="../css/normalize.css">
-    <link rel="stylesheet" href="../css/base.css?updated=1600961778">
+    <link rel="stylesheet" href="../css/base.css?updated=1606754666">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/template.css?updated=1600961778">
+    <link rel="stylesheet" href="../css/template.css?updated=1606754666">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
             <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
@@ -70,7 +70,7 @@
                                     <li><a href="../packages/WooCommerce-Helper.html"><abbr title="\WooCommerce\Helper">Helper</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-Templates.html"><abbr title="\WooCommerce\Templates">Templates</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-Reports.html"><abbr title="\WooCommerce\Reports">Reports</abbr></a></li>
-                                    <li><a href="../packages/WooCommerce-API.html"><abbr title="\WooCommerce\API">API</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-RestApi.html"><abbr title="\WooCommerce\RestApi">RestApi</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-CLI.html"><abbr title="\WooCommerce\CLI">CLI</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-l10n.html"><abbr title="\WooCommerce\l10n">l10n</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-Webhooks.html"><abbr title="\WooCommerce\Webhooks">Webhooks</abbr></a></li>
@@ -85,6 +85,7 @@
                                     <li><a href="../packages/WooCommerce-Interface.html"><abbr title="\WooCommerce\Interface">Interface</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-LogHandlers.html"><abbr title="\WooCommerce\LogHandlers">LogHandlers</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-PaymentTokens.html"><abbr title="\WooCommerce\PaymentTokens">PaymentTokens</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Utilities.html"><abbr title="\WooCommerce\Utilities">Utilities</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-Shipping.html"><abbr title="\WooCommerce\Shipping">Shipping</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-Shortcodes.html"><abbr title="\WooCommerce\Shortcodes">Shortcodes</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-Tracks.html"><abbr title="\WooCommerce\Tracks">Tracks</abbr></a></li>
@@ -94,9 +95,8 @@
                                     <li><a href="../packages/WooCommerce-Widgets.html"><abbr title="\WooCommerce\Widgets">Widgets</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-Uninstaller.html"><abbr title="\WooCommerce\Uninstaller">Uninstaller</abbr></a></li>
                             </ul>
-                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/AutomatticWooCommerceRestApi.html"><abbr title="\AutomatticWooCommerceRestApi">AutomatticWooCommerceRestApi</abbr></a></h3>
-                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/AutomatticWooCommerceUtilities.html"><abbr title="\AutomatticWooCommerceUtilities">AutomatticWooCommerceUtilities</abbr></a></h3>
-                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceTemplates.html"><abbr title="\WooCommerceTemplates">WooCommerceTemplates</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceAdmin.html"><abbr title="\WoocommerceAdmin">WoocommerceAdmin</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdmin.html"><abbr title="\WooCommerceAdmin">WooCommerceAdmin</abbr></a></h3>
                         </section>
     
     <section class="phpdocumentor-sidebar__category">
@@ -126,7 +126,7 @@
             in package
             <ul class="phpdocumentor-breadcrumbs">
                                     <li class="phpdocumentor-breadcrumb"><a href="../packages/WooCommerce.html">WooCommerce</a></li>
-                                    <li class="phpdocumentor-breadcrumb"><a href="../packages/WooCommerce-API.html">API</a></li>
+                                    <li class="phpdocumentor-breadcrumb"><a href="../packages/WooCommerce-RestApi.html">RestApi</a></li>
                             </ul>
         </div>
     
@@ -189,6 +189,14 @@
                         &nbsp;: int|false    </span>
 </dt>
 <dd>Authenticate user.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="../classes/WC-REST-Authentication.html#method_authentication_fallback">authentication_fallback()</a>
+    <span>
+                        &nbsp;: <abbr title="\WP_Error">WP_Error</abbr>|null|bool    </span>
+</dt>
+<dd>Authenticate the user if authentication wasn&#039;t performed during the
+determine_current_user action.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="../classes/WC-REST-Authentication.html#method_check_authentication_error">check_authentication_error()</a>
@@ -476,9 +484,9 @@ ull</span></code>
         <a href="#method_authenticate" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-rest-authentication.php"><a href="../files/woocommerce-includes-class-wc-rest-authentication.html#source-view.75">includes/class-wc-rest-authentication.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-rest-authentication.php"><a href="../files/woocommerce-includes-class-wc-rest-authentication.html#source-view.76">includes/class-wc-rest-authentication.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">75</span>
+    <span class="phpdocumentor-element-found-in__line">76</span>
 </aside>
 
         <p class="phpdocumentor-summary">Authenticate user.</p>
@@ -512,14 +520,70 @@ ull</span></code>
             -public
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_authentication_fallback">
+        authentication_fallback()
+        <a href="#method_authentication_fallback" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-rest-authentication.php"><a href="../files/woocommerce-includes-class-wc-rest-authentication.html#source-view.104">includes/class-wc-rest-authentication.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">104</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Authenticate the user if authentication wasn&#039;t performed during the
+determine_current_user action.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">authentication_fallback</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><abbr title="\WP_Error">WP_Error</abbr>|null|bool&nbsp;</span><span class="phpdocumentor-signature__argument__name">$error</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\WP_Error">WP_Error</abbr>|null|bool</span></code>
+
+        <section class="phpdocumentor-description"><p>Necessary in cases where wp_get_current_user() is called before WooCommerce is loaded.</p></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$error</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><abbr title="\WP_Error">WP_Error</abbr>|null|bool</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Error data.</p></section>
+
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">see</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                                    <span class="phpdocumentor-tag-link"><a href="https://github.com/woocommerce/woocommerce/issues/26847"><abbr title="https://github.com/woocommerce/woocommerce/issues/26847">https://github.com/woocommerce/woocommerce/issues/26847</abbr></a></span>
+                                                            
+                </dd>
+                        </dl>
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><abbr title="\WP_Error">WP_Error</abbr>|null|bool</span>
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_check_authentication_error">
         check_authentication_error()
         <a href="#method_check_authentication_error" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-rest-authentication.php"><a href="../files/woocommerce-includes-class-wc-rest-authentication.html#source-view.98">includes/class-wc-rest-authentication.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-rest-authentication.php"><a href="../files/woocommerce-includes-class-wc-rest-authentication.html#source-view.126">includes/class-wc-rest-authentication.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">98</span>
+    <span class="phpdocumentor-element-found-in__line">126</span>
 </aside>
 
         <p class="phpdocumentor-summary">Check for authentication error.</p>
@@ -558,9 +622,9 @@ ull</span></code>
         <a href="#method_check_user_permissions" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-rest-authentication.php"><a href="../files/woocommerce-includes-class-wc-rest-authentication.html#source-view.596">includes/class-wc-rest-authentication.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-rest-authentication.php"><a href="../files/woocommerce-includes-class-wc-rest-authentication.html#source-view.624">includes/class-wc-rest-authentication.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">596</span>
+    <span class="phpdocumentor-element-found-in__line">624</span>
 </aside>
 
         <p class="phpdocumentor-summary">Check for user permissions and register last access.</p>
@@ -615,9 +679,9 @@ ull</span></code>
         <a href="#method_get_authorization_header" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-rest-authentication.php"><a href="../files/woocommerce-includes-class-wc-rest-authentication.html#source-view.216">includes/class-wc-rest-authentication.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-rest-authentication.php"><a href="../files/woocommerce-includes-class-wc-rest-authentication.html#source-view.244">includes/class-wc-rest-authentication.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">216</span>
+    <span class="phpdocumentor-element-found-in__line">244</span>
 </aside>
 
         <p class="phpdocumentor-summary">Get the authorization header.</p>
@@ -663,9 +727,9 @@ generate <code class="prettyprint">PHP_AUTH_USER</code>/<code class="prettyprint
         <a href="#method_get_oauth_parameters" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-rest-authentication.php"><a href="../files/woocommerce-includes-class-wc-rest-authentication.html#source-view.241">includes/class-wc-rest-authentication.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-rest-authentication.php"><a href="../files/woocommerce-includes-class-wc-rest-authentication.html#source-view.269">includes/class-wc-rest-authentication.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">241</span>
+    <span class="phpdocumentor-element-found-in__line">269</span>
 </aside>
 
         <p class="phpdocumentor-summary">Get oAuth parameters from $_GET, $_POST or request header.</p>
@@ -706,9 +770,9 @@ generate <code class="prettyprint">PHP_AUTH_USER</code>/<code class="prettyprint
         <a href="#method_parse_header" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-rest-authentication.php"><a href="../files/woocommerce-includes-class-wc-rest-authentication.html#source-view.185">includes/class-wc-rest-authentication.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-rest-authentication.php"><a href="../files/woocommerce-includes-class-wc-rest-authentication.html#source-view.213">includes/class-wc-rest-authentication.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">185</span>
+    <span class="phpdocumentor-element-found-in__line">213</span>
 </aside>
 
         <p class="phpdocumentor-summary">Parse the Authorization header into parameters.</p>
@@ -761,9 +825,9 @@ generate <code class="prettyprint">PHP_AUTH_USER</code>/<code class="prettyprint
         <a href="#method_send_unauthorized_headers" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-rest-authentication.php"><a href="../files/woocommerce-includes-class-wc-rest-authentication.html#source-view.579">includes/class-wc-rest-authentication.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-rest-authentication.php"><a href="../files/woocommerce-includes-class-wc-rest-authentication.html#source-view.607">includes/class-wc-rest-authentication.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">579</span>
+    <span class="phpdocumentor-element-found-in__line">607</span>
 </aside>
 
         <p class="phpdocumentor-summary">If the consumer_key and consumer_secret $_GET parameters are NOT provided
@@ -804,9 +868,9 @@ key provided, then return the correct Basic headers and an error message.</p>
         <a href="#method_get_error" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-rest-authentication.php"><a href="../files/woocommerce-includes-class-wc-rest-authentication.html#source-view.124">includes/class-wc-rest-authentication.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-rest-authentication.php"><a href="../files/woocommerce-includes-class-wc-rest-authentication.html#source-view.152">includes/class-wc-rest-authentication.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">124</span>
+    <span class="phpdocumentor-element-found-in__line">152</span>
 </aside>
 
         <p class="phpdocumentor-summary">Get authentication error.</p>
@@ -834,9 +898,9 @@ key provided, then return the correct Basic headers and an error message.</p>
         <a href="#method_is_request_to_rest_api" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-rest-authentication.php"><a href="../files/woocommerce-includes-class-wc-rest-authentication.html#source-view.52">includes/class-wc-rest-authentication.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-rest-authentication.php"><a href="../files/woocommerce-includes-class-wc-rest-authentication.html#source-view.53">includes/class-wc-rest-authentication.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">52</span>
+    <span class="phpdocumentor-element-found-in__line">53</span>
 </aside>
 
         <p class="phpdocumentor-summary">Check if is request to our REST API.</p>
@@ -864,9 +928,9 @@ key provided, then return the correct Basic headers and an error message.</p>
         <a href="#method_set_error" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-rest-authentication.php"><a href="../files/woocommerce-includes-class-wc-rest-authentication.html#source-view.112">includes/class-wc-rest-authentication.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-rest-authentication.php"><a href="../files/woocommerce-includes-class-wc-rest-authentication.html#source-view.140">includes/class-wc-rest-authentication.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">112</span>
+    <span class="phpdocumentor-element-found-in__line">140</span>
 </aside>
 
         <p class="phpdocumentor-summary">Set authentication error.</p>
@@ -905,9 +969,9 @@ key provided, then return the correct Basic headers and an error message.</p>
         <a href="#method_check_oauth_signature" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-rest-authentication.php"><a href="../files/woocommerce-includes-class-wc-rest-authentication.html#source-view.355">includes/class-wc-rest-authentication.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-rest-authentication.php"><a href="../files/woocommerce-includes-class-wc-rest-authentication.html#source-view.383">includes/class-wc-rest-authentication.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">355</span>
+    <span class="phpdocumentor-element-found-in__line">383</span>
 </aside>
 
         <p class="phpdocumentor-summary">Verify that the consumer-provided request signature matches our generated signature,
@@ -955,9 +1019,9 @@ this ensures the consumer has a valid key/secret.</p>
         <a href="#method_check_oauth_timestamp_and_nonce" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-rest-authentication.php"><a href="../files/woocommerce-includes-class-wc-rest-authentication.html#source-view.457">includes/class-wc-rest-authentication.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-rest-authentication.php"><a href="../files/woocommerce-includes-class-wc-rest-authentication.html#source-view.485">includes/class-wc-rest-authentication.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">457</span>
+    <span class="phpdocumentor-element-found-in__line">485</span>
 </aside>
 
         <p class="phpdocumentor-summary">Verify that the timestamp and nonce provided with the request are valid. This prevents replay attacks where
@@ -1017,9 +1081,9 @@ an attacker could attempt to re-send an intercepted request at a later time.</p>
         <a href="#method_check_permissions" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-rest-authentication.php"><a href="../files/woocommerce-includes-class-wc-rest-authentication.html#source-view.528">includes/class-wc-rest-authentication.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-rest-authentication.php"><a href="../files/woocommerce-includes-class-wc-rest-authentication.html#source-view.556">includes/class-wc-rest-authentication.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">528</span>
+    <span class="phpdocumentor-element-found-in__line">556</span>
 </aside>
 
         <p class="phpdocumentor-summary">Check that the API keys provided have the proper key-specific permissions to either read or write API resources.</p>
@@ -1058,9 +1122,9 @@ an attacker could attempt to re-send an intercepted request at a later time.</p>
         <a href="#method_get_user_data_by_consumer_key" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-rest-authentication.php"><a href="../files/woocommerce-includes-class-wc-rest-authentication.html#source-view.504">includes/class-wc-rest-authentication.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-rest-authentication.php"><a href="../files/woocommerce-includes-class-wc-rest-authentication.html#source-view.532">includes/class-wc-rest-authentication.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">504</span>
+    <span class="phpdocumentor-element-found-in__line">532</span>
 </aside>
 
         <p class="phpdocumentor-summary">Return the user data for the given consumer_key.</p>
@@ -1099,9 +1163,9 @@ an attacker could attempt to re-send an intercepted request at a later time.</p>
         <a href="#method_join_with_equals_sign" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-rest-authentication.php"><a href="../files/woocommerce-includes-class-wc-rest-authentication.html#source-view.401">includes/class-wc-rest-authentication.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-rest-authentication.php"><a href="../files/woocommerce-includes-class-wc-rest-authentication.html#source-view.429">includes/class-wc-rest-authentication.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">401</span>
+    <span class="phpdocumentor-element-found-in__line">429</span>
 </aside>
 
         <p class="phpdocumentor-summary">Creates an array of urlencoded strings out of each array key/value pairs.</p>
@@ -1157,9 +1221,9 @@ an attacker could attempt to re-send an intercepted request at a later time.</p>
         <a href="#method_normalize_parameters" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-rest-authentication.php"><a href="../files/woocommerce-includes-class-wc-rest-authentication.html#source-view.437">includes/class-wc-rest-authentication.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-rest-authentication.php"><a href="../files/woocommerce-includes-class-wc-rest-authentication.html#source-view.465">includes/class-wc-rest-authentication.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">437</span>
+    <span class="phpdocumentor-element-found-in__line">465</span>
 </aside>
 
         <p class="phpdocumentor-summary">Normalize each parameter by assuming each parameter may have already been
@@ -1219,9 +1283,9 @@ should be URL encoded.</p></section>
         <a href="#method_perform_basic_authentication" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-rest-authentication.php"><a href="../files/woocommerce-includes-class-wc-rest-authentication.html#source-view.138">includes/class-wc-rest-authentication.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-rest-authentication.php"><a href="../files/woocommerce-includes-class-wc-rest-authentication.html#source-view.166">includes/class-wc-rest-authentication.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">138</span>
+    <span class="phpdocumentor-element-found-in__line">166</span>
 </aside>
 
         <p class="phpdocumentor-summary">Basic Authentication.</p>
@@ -1253,9 +1317,9 @@ provided is valid.</p></section>
         <a href="#method_perform_oauth_authentication" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-rest-authentication.php"><a href="../files/woocommerce-includes-class-wc-rest-authentication.html#source-view.314">includes/class-wc-rest-authentication.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-rest-authentication.php"><a href="../files/woocommerce-includes-class-wc-rest-authentication.html#source-view.342">includes/class-wc-rest-authentication.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">314</span>
+    <span class="phpdocumentor-element-found-in__line">342</span>
 </aside>
 
         <p class="phpdocumentor-summary">Perform OAuth 1.0a &quot;one-legged&quot; (http://oauthbible.com/#oauth-10a-one-legged) authentication for non-SSL requests.</p>
@@ -1302,9 +1366,9 @@ This is because there is no cross-OS function within PHP to get the raw Authoriz
         <a href="#method_update_last_access" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-rest-authentication.php"><a href="../files/woocommerce-includes-class-wc-rest-authentication.html#source-view.559">includes/class-wc-rest-authentication.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-rest-authentication.php"><a href="../files/woocommerce-includes-class-wc-rest-authentication.html#source-view.587">includes/class-wc-rest-authentication.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">559</span>
+    <span class="phpdocumentor-element-found-in__line">587</span>
 </aside>
 
         <p class="phpdocumentor-summary">Updated API Key last access datetime.</p>
@@ -1332,7 +1396,7 @@ This is because there is no cross-OS function within PHP to get the raw Authoriz
 
     <footer class="phpdocumentor phpdocumentor-footer">
     <div class="phpdocumentor-section">
-        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on September 24th, 2020 at 12:36 pm.</span>
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on November 30th, 2020 at 01:44 pm.</span>
     </div>
 </footer>
 
@@ -1344,7 +1408,7 @@ This is because there is no cross-OS function within PHP to get the raw Authoriz
             'searchIndex': '..\/js\/searchIndex.json'
         };
     </script>
-    <script src="../js/searchIndex.js?updated=1600961778"></script>
-    <script src="../js/search.js?updated=1600961778"></script>
+    <script src="../js/searchIndex.js?updated=1606754666"></script>
+    <script src="../js/search.js?updated=1606754666"></script>
 </body>
 </html>

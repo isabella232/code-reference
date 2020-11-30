@@ -9,9 +9,9 @@
     <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
     <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
     <link rel="stylesheet" href="../css/normalize.css">
-    <link rel="stylesheet" href="../css/base.css?updated=1600961773">
+    <link rel="stylesheet" href="../css/base.css?updated=1606754662">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/template.css?updated=1600961773">
+    <link rel="stylesheet" href="../css/template.css?updated=1606754662">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
             <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
@@ -76,7 +76,7 @@
                                     <li><a href="../packages/WooCommerce-Helper.html"><abbr title="\WooCommerce\Helper">Helper</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-Templates.html"><abbr title="\WooCommerce\Templates">Templates</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-Reports.html"><abbr title="\WooCommerce\Reports">Reports</abbr></a></li>
-                                    <li><a href="../packages/WooCommerce-API.html"><abbr title="\WooCommerce\API">API</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-RestApi.html"><abbr title="\WooCommerce\RestApi">RestApi</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-CLI.html"><abbr title="\WooCommerce\CLI">CLI</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-l10n.html"><abbr title="\WooCommerce\l10n">l10n</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-Webhooks.html"><abbr title="\WooCommerce\Webhooks">Webhooks</abbr></a></li>
@@ -91,6 +91,7 @@
                                     <li><a href="../packages/WooCommerce-Interface.html"><abbr title="\WooCommerce\Interface">Interface</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-LogHandlers.html"><abbr title="\WooCommerce\LogHandlers">LogHandlers</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-PaymentTokens.html"><abbr title="\WooCommerce\PaymentTokens">PaymentTokens</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Utilities.html"><abbr title="\WooCommerce\Utilities">Utilities</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-Shipping.html"><abbr title="\WooCommerce\Shipping">Shipping</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-Shortcodes.html"><abbr title="\WooCommerce\Shortcodes">Shortcodes</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-Tracks.html"><abbr title="\WooCommerce\Tracks">Tracks</abbr></a></li>
@@ -100,9 +101,8 @@
                                     <li><a href="../packages/WooCommerce-Widgets.html"><abbr title="\WooCommerce\Widgets">Widgets</abbr></a></li>
                                     <li><a href="../packages/WooCommerce-Uninstaller.html"><abbr title="\WooCommerce\Uninstaller">Uninstaller</abbr></a></li>
                             </ul>
-                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/AutomatticWooCommerceRestApi.html"><abbr title="\AutomatticWooCommerceRestApi">AutomatticWooCommerceRestApi</abbr></a></h3>
-                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/AutomatticWooCommerceUtilities.html"><abbr title="\AutomatticWooCommerceUtilities">AutomatticWooCommerceUtilities</abbr></a></h3>
-                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceTemplates.html"><abbr title="\WooCommerceTemplates">WooCommerceTemplates</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceAdmin.html"><abbr title="\WoocommerceAdmin">WoocommerceAdmin</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdmin.html"><abbr title="\WooCommerceAdmin">WooCommerceAdmin</abbr></a></h3>
                         </section>
     
     <section class="phpdocumentor-sidebar__category">
@@ -137,7 +137,7 @@
 /**
  * REST API Authentication
  *
- * @package  WooCommerce\API
+ * @package  WooCommerce\RestApi
  * @since    2.6.0
  */
 
@@ -174,6 +174,7 @@ class WC_REST_Authentication {
 	 */
 	public function __construct() {
 		add_filter( &#039;determine_current_user&#039;, array( $this, &#039;authenticate&#039; ), 15 );
+		add_filter( &#039;rest_authentication_errors&#039;, array( $this, &#039;authentication_fallback&#039; ) );
 		add_filter( &#039;rest_authentication_errors&#039;, array( $this, &#039;check_authentication_error&#039; ), 15 );
 		add_filter( &#039;rest_post_dispatch&#039;, array( $this, &#039;send_unauthorized_headers&#039; ), 50 );
 		add_filter( &#039;rest_pre_dispatch&#039;, array( $this, &#039;check_user_permissions&#039; ), 10, 3 );
@@ -222,6 +223,33 @@ class WC_REST_Authentication {
 		}
 
 		return $this-&gt;perform_oauth_authentication();
+	}
+
+	/**
+	 * Authenticate the user if authentication wasn&#039;t performed during the
+	 * determine_current_user action.
+	 *
+	 * Necessary in cases where wp_get_current_user() is called before WooCommerce is loaded.
+	 *
+	 * @see https://github.com/woocommerce/woocommerce/issues/26847
+	 *
+	 * @param WP_Error|null|bool $error Error data.
+	 * @return WP_Error|null|bool
+	 */
+	public function authentication_fallback( $error ) {
+		if ( ! empty( $error ) ) {
+			// Another plugin has already declared a failure.
+			return $error;
+		}
+		if ( empty( $this-&gt;error ) &amp;&amp; empty( $this-&gt;auth_method ) &amp;&amp; empty( $this-&gt;user ) &amp;&amp; 0 === get_current_user_id() ) {
+			// Authentication hasn&#039;t occurred during `determine_current_user`, so check auth.
+			$user_id = $this-&gt;authenticate( false );
+			if ( $user_id ) {
+				wp_set_current_user( $user_id );
+				return true;
+			}
+		}
+		return $error;
 	}
 
 	/**
@@ -755,7 +783,7 @@ new WC_REST_Authentication();
 
     <footer class="phpdocumentor phpdocumentor-footer">
     <div class="phpdocumentor-section">
-        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on September 24th, 2020 at 12:36 pm.</span>
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on November 30th, 2020 at 01:44 pm.</span>
     </div>
 </footer>
 
@@ -767,7 +795,7 @@ new WC_REST_Authentication();
             'searchIndex': '..\/js\/searchIndex.json'
         };
     </script>
-    <script src="../js/searchIndex.js?updated=1600961773"></script>
-    <script src="../js/search.js?updated=1600961773"></script>
+    <script src="../js/searchIndex.js?updated=1606754662"></script>
+    <script src="../js/search.js?updated=1606754662"></script>
 </body>
 </html>
