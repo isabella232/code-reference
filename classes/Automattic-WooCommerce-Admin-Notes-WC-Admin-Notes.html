@@ -9,9 +9,9 @@
     <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
     <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
     <link rel="stylesheet" href="../css/normalize.css">
-    <link rel="stylesheet" href="../css/base.css?updated=1606754672">
+    <link rel="stylesheet" href="../css/base.css?updated=1607611555">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/template.css?updated=1606754672">
+    <link rel="stylesheet" href="../css/template.css?updated=1607611555">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
             <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
@@ -96,6 +96,7 @@
                                     <li><a href="../packages/WooCommerce-Uninstaller.html"><abbr title="\WooCommerce\Uninstaller">Uninstaller</abbr></a></li>
                             </ul>
                                 <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceAdmin.html"><abbr title="\WoocommerceAdmin">WoocommerceAdmin</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceNavigation.html"><abbr title="\WoocommerceNavigation">WoocommerceNavigation</abbr></a></h3>
                                 <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdmin.html"><abbr title="\WooCommerceAdmin">WooCommerceAdmin</abbr></a></h3>
                         </section>
     
@@ -125,6 +126,9 @@
         <h2 class="phpdocumentor-content__title">
     WC_Admin_Notes
 
+        <span class="phpdocumentor-element__extends">
+        extends <a href="../classes/Automattic-WooCommerce-Admin-DeprecatedClassFacade.html"><abbr title="\Automattic\WooCommerce\Admin\DeprecatedClassFacade">DeprecatedClassFacade</abbr></a>
+    </span>
     
             <div class="phpdocumentor-element__package">
             in package
@@ -137,15 +141,28 @@
     </h2>
 
         <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Notes/WC_Admin_Notes.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-notes-wc-admin-notes.html#source-view.14">packages/woocommerce-admin/src/Notes/WC_Admin_Notes.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Notes/DeprecatedNotes.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-notes-deprecatednotes.html#source-view.62">packages/woocommerce-admin/src/Notes/DeprecatedNotes.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">14</span>
+    <span class="phpdocumentor-element-found-in__line">62</span>
 </aside>
 
-            <p class="phpdocumentor-summary">Admin Notes class.</p>
+            <p class="phpdocumentor-summary">WC_Admin_Notes.</p>
 
 
 
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">deprecated</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                                                        <section class="phpdocumentor-description"><p>since 1.7.0, use Notes</p></section>
+
+                </dd>
+                        </dl>
 
 
 
@@ -158,143 +175,161 @@
 </h3>
 
 <dl class="phpdocumentor-table-of-contents">
-            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
-    <a href="../classes/Automattic-WooCommerce-Admin-Notes-WC-Admin-Notes.html#constant_UNSNOOZE_HOOK">UNSNOOZE_HOOK</a>
+                <dt class="phpdocumentor-table-of-contents__entry -property -protected">
+    <a href="../classes/Automattic-WooCommerce-Admin-Notes-WC-Admin-Notes.html#property_deprecated_in_version">$deprecated_in_version</a>
     <span>
-        &nbsp;= &#039;wc_admin_unsnooze_admin_notes&#039;                    </span>
+                &nbsp;: string            </span>
 </dt>
-<dd>Hook used for recurring &quot;unsnooze&quot; action.</dd>
+<dd>The version that this class was deprecated in.</dd>
 
-                    <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="../classes/Automattic-WooCommerce-Admin-Notes-WC-Admin-Notes.html#method_clear_queued_actions">clear_queued_actions()</a>
+            <dt class="phpdocumentor-table-of-contents__entry -property -protected">
+    <a href="../classes/Automattic-WooCommerce-Admin-Notes-WC-Admin-Notes.html#property_facade_over_classname">$facade_over_classname</a>
+    <span>
+                &nbsp;: string            </span>
+</dt>
+<dd>The name of the non-deprecated class that this facade covers.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -property -protected">
+    <a href="../classes/Automattic-WooCommerce-Admin-DeprecatedClassFacade.html#property_instance">$instance</a>
+    <span>
+                &nbsp;: object            </span>
+</dt>
+<dd>The instance that this facade covers over.</dd>
+
+                <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="../classes/Automattic-WooCommerce-Admin-DeprecatedClassFacade.html#method___call">__call()</a>
     <span>
                         &nbsp;: mixed    </span>
 </dt>
-<dd>Unschedule unsnooze notes event.</dd>
+<dd>Executes when calling any function on an instance of this class.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="../classes/Automattic-WooCommerce-Admin-Notes-WC-Admin-Notes.html#method_delete_all_notes">delete_all_notes()</a>
-    <span>
-                        &nbsp;: array    </span>
-</dt>
-<dd>Soft delete of all the admin notes. Returns the deleted items.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="../classes/Automattic-WooCommerce-Admin-Notes-WC-Admin-Notes.html#method_delete_note">delete_note()</a>
+    <a href="../classes/Automattic-WooCommerce-Admin-DeprecatedClassFacade.html#method___callStatic">__callStatic()</a>
     <span>
                         &nbsp;: mixed    </span>
 </dt>
-<dd>Soft delete of a note.</dd>
+<dd>Executes when calling any static function on this class.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="../classes/Automattic-WooCommerce-Admin-Notes-WC-Admin-Notes.html#method_delete_notes_with_name">delete_notes_with_name()</a>
+    <a href="../classes/Automattic-WooCommerce-Admin-DeprecatedClassFacade.html#method___construct">__construct()</a>
     <span>
                         &nbsp;: mixed    </span>
 </dt>
-<dd>Deletes admin notes with a given name.</dd>
+<dd>Constructor.</dd>
 
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="../classes/Automattic-WooCommerce-Admin-Notes-WC-Admin-Notes.html#method_get_note">get_note()</a>
-    <span>
-                        &nbsp;: <a href="../classes/Automattic-WooCommerce-Admin-Notes-WC-Admin-Note.html"><abbr title="\Automattic\WooCommerce\Admin\Notes\WC_Admin_Note">WC_Admin_Note</abbr></a>|bool    </span>
-</dt>
-<dd>Get admin note using it&#039;s ID</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="../classes/Automattic-WooCommerce-Admin-Notes-WC-Admin-Notes.html#method_get_notes">get_notes()</a>
-    <span>
-                        &nbsp;: array    </span>
-</dt>
-<dd>Get notes from the database.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="../classes/Automattic-WooCommerce-Admin-Notes-WC-Admin-Notes.html#method_get_notes_count">get_notes_count()</a>
-    <span>
-                        &nbsp;: int    </span>
-</dt>
-<dd>Get the total number of notes</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="../classes/Automattic-WooCommerce-Admin-Notes-WC-Admin-Notes.html#method_init">init()</a>
+            <dt class="phpdocumentor-table-of-contents__entry -method -private">
+    <a href="../classes/Automattic-WooCommerce-Admin-DeprecatedClassFacade.html#method_log_deprecation">log_deprecation()</a>
     <span>
                         &nbsp;: mixed    </span>
 </dt>
-<dd>Hook appropriate actions.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="../classes/Automattic-WooCommerce-Admin-Notes-WC-Admin-Notes.html#method_possibly_delete_marketing_notes">possibly_delete_marketing_notes()</a>
-    <span>
-                        &nbsp;: mixed    </span>
-</dt>
-<dd>Delete marketing notes if marketing has been opted out.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="../classes/Automattic-WooCommerce-Admin-Notes-WC-Admin-Notes.html#method_possibly_delete_survey_notes">possibly_delete_survey_notes()</a>
-    <span>
-                        &nbsp;: mixed    </span>
-</dt>
-<dd>Delete actioned survey notes.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="../classes/Automattic-WooCommerce-Admin-Notes-WC-Admin-Notes.html#method_schedule_unsnooze_notes">schedule_unsnooze_notes()</a>
-    <span>
-                        &nbsp;: mixed    </span>
-</dt>
-<dd>Schedule unsnooze notes event.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="../classes/Automattic-WooCommerce-Admin-Notes-WC-Admin-Notes.html#method_unsnooze_notes">unsnooze_notes()</a>
-    <span>
-                        &nbsp;: mixed    </span>
-</dt>
-<dd>Clear note snooze status if the reminder date has been reached.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="../classes/Automattic-WooCommerce-Admin-Notes-WC-Admin-Notes.html#method_update_note">update_note()</a>
-    <span>
-                        &nbsp;: mixed    </span>
-</dt>
-<dd>Update a note.</dd>
+<dd>Log a deprecation to the error log.</dd>
 
         </dl>
 
 
 
         
-    <section class="phpdocumentor-constants">
-        <h3 class="phpdocumentor-elements__header" id="constants">
-            Constants
-            <a href="#constants" class="headerlink"><i class="fas fa-link"></i></a>
-        </h3>
-                    <article class="phpdocumentor-element -constant -public ">
-    <h4 class="phpdocumentor-element__name" id="constant_UNSNOOZE_HOOK">
-        UNSNOOZE_HOOK
-        <a href="#constant_UNSNOOZE_HOOK" class="headerlink"><i class="fas fa-link"></i></a>
-    </h4>
 
+        
+    <section class="phpdocumentor-properties">
+        <h3 class="phpdocumentor-elements__header" id="properties">
+            Properties
+            <a href="#properties" class="headerlink"><i class="fas fa-link"></i></a>
+        </h3>
+                    <article
+        class="
+            phpdocumentor-element
+            -property
+            -protected
+            -static                                            "
+>
+    <h4 class="phpdocumentor-element__name" id="property_deprecated_in_version">
+        $deprecated_in_version
+        <a href="#property_deprecated_in_version" class="headerlink"><i class="fas fa-link"></i></a>
+        <span class="phpdocumentor-element__modifiers">
+                                </span>
+    </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Notes/WC_Admin_Notes.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-notes-wc-admin-notes.html#source-view.18">packages/woocommerce-admin/src/Notes/WC_Admin_Notes.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Notes/DeprecatedNotes.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-notes-deprecatednotes.html#source-view.75">packages/woocommerce-admin/src/Notes/DeprecatedNotes.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">18</span>
+    <span class="phpdocumentor-element-found-in__line">75</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Hook used for recurring &quot;unsnooze&quot; action.</p>
+        <p class="phpdocumentor-summary">The version that this class was deprecated in.</p>
 
-    <code class="phpdocumentor-signature phpdocumentor-code ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-    <span class="phpdocumentor-signature__type">mixed</span>
-    <span class="phpdocumentor-signature__name">UNSNOOZE_HOOK</span>
-    = <span class="phpdocumentor-signature__default-value">&#039;wc_admin_unsnooze_admin_notes&#039;</span>
-</code>
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">protected</span>
+    <span class="phpdocumentor-signature__static">static</span>    <span class="phpdocumentor-signature__type">string</span>
+    <span class="phpdocumentor-signature__name">$deprecated_in_version</span>
+     = <span class="phpdocumentor-signature__default-value">&#039;1.7.0&#039;</span></code>
 
+    
+    
+
+</article>
+                    <article
+        class="
+            phpdocumentor-element
+            -property
+            -protected
+            -static                                            "
+>
+    <h4 class="phpdocumentor-element__name" id="property_facade_over_classname">
+        $facade_over_classname
+        <a href="#property_facade_over_classname" class="headerlink"><i class="fas fa-link"></i></a>
+        <span class="phpdocumentor-element__modifiers">
+                                </span>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Notes/DeprecatedNotes.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-notes-deprecatednotes.html#source-view.68">packages/woocommerce-admin/src/Notes/DeprecatedNotes.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">68</span>
+</aside>
+
+        <p class="phpdocumentor-summary">The name of the non-deprecated class that this facade covers.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">protected</span>
+    <span class="phpdocumentor-signature__static">static</span>    <span class="phpdocumentor-signature__type">string</span>
+    <span class="phpdocumentor-signature__name">$facade_over_classname</span>
+     = <span class="phpdocumentor-signature__default-value">&#039;Automattic\WooCommerce\Admin\Notes\Notes&#039;</span></code>
+
+    
+    
+
+</article>
+                    <article
+        class="
+            phpdocumentor-element
+            -property
+            -protected
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="property_instance">
+        $instance
+        <a href="#property_instance" class="headerlink"><i class="fas fa-link"></i></a>
+        <span class="phpdocumentor-element__modifiers">
+                                </span>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/DeprecatedClassFacade.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-deprecatedclassfacade.html#source-view.33">packages/woocommerce-admin/src/DeprecatedClassFacade.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">33</span>
+</aside>
+
+        <p class="phpdocumentor-summary">The instance that this facade covers over.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">protected</span>
+        <span class="phpdocumentor-signature__type">object</span>
+    <span class="phpdocumentor-signature__name">$instance</span>
+    </code>
 
     
     
 
 </article>
             </section>
-
-        
 
             <section class="phpdocumentor-methods">
         <h3 class="phpdocumentor-elements__header" id="methods">
@@ -305,493 +340,161 @@
         class="phpdocumentor-element
             -method
             -public
-                                    -static                    "
+                                                        "
 >
-    <h4 class="phpdocumentor-element__name" id="method_clear_queued_actions">
-        clear_queued_actions()
-        <a href="#method_clear_queued_actions" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method___call">
+        __call()
+        <a href="#method___call" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Notes/WC_Admin_Notes.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-notes-wc-admin-notes.html#source-view.235">packages/woocommerce-admin/src/Notes/WC_Admin_Notes.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/DeprecatedClassFacade.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-deprecatedclassfacade.html#source-view.64">packages/woocommerce-admin/src/DeprecatedClassFacade.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">235</span>
+    <span class="phpdocumentor-element-found-in__line">64</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Unschedule unsnooze notes event.</p>
+        <p class="phpdocumentor-summary">Executes when calling any function on an instance of this class.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-            <span class="phpdocumentor-signature__static">static</span>    <span class="phpdocumentor-signature__name">clear_queued_actions</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
-
-    
-    
-    
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">mixed</span>
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                    -static                    "
->
-    <h4 class="phpdocumentor-element__name" id="method_delete_all_notes">
-        delete_all_notes()
-        <a href="#method_delete_all_notes" class="headerlink"><i class="fas fa-link"></i></a>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Notes/WC_Admin_Notes.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-notes-wc-admin-notes.html#source-view.165">packages/woocommerce-admin/src/Notes/WC_Admin_Notes.php</a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">165</span>
-</aside>
-
-        <p class="phpdocumentor-summary">Soft delete of all the admin notes. Returns the deleted items.</p>
-
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-            <span class="phpdocumentor-signature__static">static</span>    <span class="phpdocumentor-signature__name">delete_all_notes</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array</span></code>
-
-    
-    
-    
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array</span>
-            &mdash; <span class="phpdocumentor-return-value__description">Array of notes.</span>
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                    -static                    "
->
-    <h4 class="phpdocumentor-element__name" id="method_delete_note">
-        delete_note()
-        <a href="#method_delete_note" class="headerlink"><i class="fas fa-link"></i></a>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Notes/WC_Admin_Notes.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-notes-wc-admin-notes.html#source-view.155">packages/woocommerce-admin/src/Notes/WC_Admin_Notes.php</a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">155</span>
-</aside>
-
-        <p class="phpdocumentor-summary">Soft delete of a note.</p>
-
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-            <span class="phpdocumentor-signature__static">static</span>    <span class="phpdocumentor-signature__name">delete_note</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="../classes/Automattic-WooCommerce-Admin-Notes-WC-Admin-Note.html"><abbr title="\Automattic\WooCommerce\Admin\Notes\WC_Admin_Note">WC_Admin_Note</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$note</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                <span class="phpdocumentor-signature__name">__call</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$name</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&nbsp;</span><span class="phpdocumentor-signature__argument__name">$arguments</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
 
     
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$note</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="../classes/Automattic-WooCommerce-Admin-Notes-WC-Admin-Note.html"><abbr title="\Automattic\WooCommerce\Admin\Notes\WC_Admin_Note">WC_Admin_Note</abbr></a></span>
-                            </dt>
-            <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"><p>The note that will be deleted.</p></section>
-
-            </dd>
-            </dl>
-
-    
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">mixed</span>
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                    -static                    "
->
-    <h4 class="phpdocumentor-element__name" id="method_delete_notes_with_name">
-        delete_notes_with_name()
-        <a href="#method_delete_notes_with_name" class="headerlink"><i class="fas fa-link"></i></a>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Notes/WC_Admin_Notes.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-notes-wc-admin-notes.html#source-view.102">packages/woocommerce-admin/src/Notes/WC_Admin_Notes.php</a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">102</span>
-</aside>
-
-        <p class="phpdocumentor-summary">Deletes admin notes with a given name.</p>
-
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-            <span class="phpdocumentor-signature__static">static</span>    <span class="phpdocumentor-signature__name">delete_notes_with_name</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string|array&nbsp;</span><span class="phpdocumentor-signature__argument__name">$names</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
-
-    
-        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
-    <dl class="phpdocumentor-argument-list">
-                    <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$names</span>
-                : <span class="phpdocumentor-signature__argument__return-type">string|array</span>
-                            </dt>
-            <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"><p>Name(s) to search for.</p></section>
-
-            </dd>
-            </dl>
-
-    
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">mixed</span>
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                    -static                    "
->
-    <h4 class="phpdocumentor-element__name" id="method_get_note">
-        get_note()
-        <a href="#method_get_note" class="headerlink"><i class="fas fa-link"></i></a>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Notes/WC_Admin_Notes.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-notes-wc-admin-notes.html#source-view.72">packages/woocommerce-admin/src/Notes/WC_Admin_Notes.php</a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">72</span>
-</aside>
-
-        <p class="phpdocumentor-summary">Get admin note using it&#039;s ID</p>
-
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-            <span class="phpdocumentor-signature__static">static</span>    <span class="phpdocumentor-signature__name">get_note</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$note_id</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="../classes/Automattic-WooCommerce-Admin-Notes-WC-Admin-Note.html"><abbr title="\Automattic\WooCommerce\Admin\Notes\WC_Admin_Note">WC_Admin_Note</abbr></a>|bool</span></code>
-
-    
-        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
-    <dl class="phpdocumentor-argument-list">
-                    <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$note_id</span>
-                : <span class="phpdocumentor-signature__argument__return-type">int</span>
-                            </dt>
-            <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"><p>Note ID.</p></section>
-
-            </dd>
-            </dl>
-
-    
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type"><a href="../classes/Automattic-WooCommerce-Admin-Notes-WC-Admin-Note.html"><abbr title="\Automattic\WooCommerce\Admin\Notes\WC_Admin_Note">WC_Admin_Note</abbr></a>|bool</span>
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                    -static                    "
->
-    <h4 class="phpdocumentor-element__name" id="method_get_notes">
-        get_notes()
-        <a href="#method_get_notes" class="headerlink"><i class="fas fa-link"></i></a>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Notes/WC_Admin_Notes.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-notes-wc-admin-notes.html#source-view.36">packages/woocommerce-admin/src/Notes/WC_Admin_Notes.php</a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">36</span>
-</aside>
-
-        <p class="phpdocumentor-summary">Get notes from the database.</p>
-
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-            <span class="phpdocumentor-signature__static">static</span>    <span class="phpdocumentor-signature__name">get_notes</span><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$context</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">&#039;edit&#039;</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&nbsp;</span><span class="phpdocumentor-signature__argument__name">$args</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">array()</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array</span></code>
-
-    
-        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
-    <dl class="phpdocumentor-argument-list">
-                    <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$context</span>
-                : <span class="phpdocumentor-signature__argument__return-type">string</span>
-                 = <span class="phpdocumentor-signature__argument__default-value">&#039;edit&#039;</span>            </dt>
-            <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"><p>Getting notes for what context. Valid values: view, edit.</p></section>
-
-            </dd>
-                    <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$args</span>
-                : <span class="phpdocumentor-signature__argument__return-type">array</span>
-                 = <span class="phpdocumentor-signature__argument__default-value">array()</span>            </dt>
-            <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"><p>Arguments to pass to the query( e.g. per_page and page).</p></section>
-
-            </dd>
-            </dl>
-
-    
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array</span>
-            &mdash; <span class="phpdocumentor-return-value__description">Array of arrays.</span>
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                    -static                    "
->
-    <h4 class="phpdocumentor-element__name" id="method_get_notes_count">
-        get_notes_count()
-        <a href="#method_get_notes_count" class="headerlink"><i class="fas fa-link"></i></a>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Notes/WC_Admin_Notes.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-notes-wc-admin-notes.html#source-view.92">packages/woocommerce-admin/src/Notes/WC_Admin_Notes.php</a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">92</span>
-</aside>
-
-        <p class="phpdocumentor-summary">Get the total number of notes</p>
-
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-            <span class="phpdocumentor-signature__static">static</span>    <span class="phpdocumentor-signature__name">get_notes_count</span><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$type</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">array()</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$status</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">array()</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">int</span></code>
-
-    
-        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
-    <dl class="phpdocumentor-argument-list">
-                    <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$type</span>
-                : <span class="phpdocumentor-signature__argument__return-type">string</span>
-                 = <span class="phpdocumentor-signature__argument__default-value">array()</span>            </dt>
-            <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"><p>Comma separated list of note types.</p></section>
-
-            </dd>
-                    <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$status</span>
-                : <span class="phpdocumentor-signature__argument__return-type">string</span>
-                 = <span class="phpdocumentor-signature__argument__default-value">array()</span>            </dt>
-            <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"><p>Comma separated list of statuses.</p></section>
-
-            </dd>
-            </dl>
-
-    
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">int</span>
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                    -static                    "
->
-    <h4 class="phpdocumentor-element__name" id="method_init">
-        init()
-        <a href="#method_init" class="headerlink"><i class="fas fa-link"></i></a>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Notes/WC_Admin_Notes.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-notes-wc-admin-notes.html#source-view.23">packages/woocommerce-admin/src/Notes/WC_Admin_Notes.php</a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">23</span>
-</aside>
-
-        <p class="phpdocumentor-summary">Hook appropriate actions.</p>
-
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-            <span class="phpdocumentor-signature__static">static</span>    <span class="phpdocumentor-signature__name">init</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
-
-    
-    
-    
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">mixed</span>
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                    -static                    "
->
-    <h4 class="phpdocumentor-element__name" id="method_possibly_delete_marketing_notes">
-        possibly_delete_marketing_notes()
-        <a href="#method_possibly_delete_marketing_notes" class="headerlink"><i class="fas fa-link"></i></a>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Notes/WC_Admin_Notes.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-notes-wc-admin-notes.html#source-view.245">packages/woocommerce-admin/src/Notes/WC_Admin_Notes.php</a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">245</span>
-</aside>
-
-        <p class="phpdocumentor-summary">Delete marketing notes if marketing has been opted out.</p>
-
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-            <span class="phpdocumentor-signature__static">static</span>    <span class="phpdocumentor-signature__name">possibly_delete_marketing_notes</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$old_value</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$value</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
-
-    
-        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
-    <dl class="phpdocumentor-argument-list">
-                    <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$old_value</span>
+                <span class="phpdocumentor-signature__argument__name">$name</span>
                 : <span class="phpdocumentor-signature__argument__return-type">string</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"><p>Old value.</p></section>
+                    <section class="phpdocumentor-description"><p>The name of the function being called.</p></section>
 
             </dd>
                     <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$value</span>
-                : <span class="phpdocumentor-signature__argument__return-type">string</span>
-                            </dt>
-            <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"><p>New value.</p></section>
-
-            </dd>
-            </dl>
-
-    
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">mixed</span>
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                    -static                    "
->
-    <h4 class="phpdocumentor-element__name" id="method_possibly_delete_survey_notes">
-        possibly_delete_survey_notes()
-        <a href="#method_possibly_delete_survey_notes" class="headerlink"><i class="fas fa-link"></i></a>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Notes/WC_Admin_Notes.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-notes-wc-admin-notes.html#source-view.268">packages/woocommerce-admin/src/Notes/WC_Admin_Notes.php</a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">268</span>
-</aside>
-
-        <p class="phpdocumentor-summary">Delete actioned survey notes.</p>
-
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-            <span class="phpdocumentor-signature__static">static</span>    <span class="phpdocumentor-signature__name">possibly_delete_survey_notes</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
-
-    
-    
-    
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">mixed</span>
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                    -static                    "
->
-    <h4 class="phpdocumentor-element__name" id="method_schedule_unsnooze_notes">
-        schedule_unsnooze_notes()
-        <a href="#method_schedule_unsnooze_notes" class="headerlink"><i class="fas fa-link"></i></a>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Notes/WC_Admin_Notes.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-notes-wc-admin-notes.html#source-view.226">packages/woocommerce-admin/src/Notes/WC_Admin_Notes.php</a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">226</span>
-</aside>
-
-        <p class="phpdocumentor-summary">Schedule unsnooze notes event.</p>
-
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-            <span class="phpdocumentor-signature__static">static</span>    <span class="phpdocumentor-signature__name">schedule_unsnooze_notes</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
-
-    
-    
-    
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">mixed</span>
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                    -static                    "
->
-    <h4 class="phpdocumentor-element__name" id="method_unsnooze_notes">
-        unsnooze_notes()
-        <a href="#method_unsnooze_notes" class="headerlink"><i class="fas fa-link"></i></a>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Notes/WC_Admin_Notes.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-notes-wc-admin-notes.html#source-view.198">packages/woocommerce-admin/src/Notes/WC_Admin_Notes.php</a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">198</span>
-</aside>
-
-        <p class="phpdocumentor-summary">Clear note snooze status if the reminder date has been reached.</p>
-
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-            <span class="phpdocumentor-signature__static">static</span>    <span class="phpdocumentor-signature__name">unsnooze_notes</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
-
-    
-    
-    
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">mixed</span>
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                    -static                    "
->
-    <h4 class="phpdocumentor-element__name" id="method_update_note">
-        update_note()
-        <a href="#method_update_note" class="headerlink"><i class="fas fa-link"></i></a>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Notes/WC_Admin_Notes.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-notes-wc-admin-notes.html#source-view.128">packages/woocommerce-admin/src/Notes/WC_Admin_Notes.php</a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">128</span>
-</aside>
-
-        <p class="phpdocumentor-summary">Update a note.</p>
-
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-            <span class="phpdocumentor-signature__static">static</span>    <span class="phpdocumentor-signature__name">update_note</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="../classes/Automattic-WooCommerce-Admin-Notes-WC-Admin-Note.html"><abbr title="\Automattic\WooCommerce\Admin\Notes\WC_Admin_Note">WC_Admin_Note</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$note</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&nbsp;</span><span class="phpdocumentor-signature__argument__name">$requested_updates</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
-
-    
-        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
-    <dl class="phpdocumentor-argument-list">
-                    <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$note</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="../classes/Automattic-WooCommerce-Admin-Notes-WC-Admin-Note.html"><abbr title="\Automattic\WooCommerce\Admin\Notes\WC_Admin_Note">WC_Admin_Note</abbr></a></span>
-                            </dt>
-            <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"><p>The note that will be updated.</p></section>
-
-            </dd>
-                    <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$requested_updates</span>
+                <span class="phpdocumentor-signature__argument__name">$arguments</span>
                 : <span class="phpdocumentor-signature__argument__return-type">array</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"><p>a list of requested updates.</p></section>
+                    <section class="phpdocumentor-description"><p>An array of the arguments to the function call.</p></section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">mixed</span>
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                    -static                    "
+>
+    <h4 class="phpdocumentor-element__name" id="method___callStatic">
+        __callStatic()
+        <a href="#method___callStatic" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/DeprecatedClassFacade.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-deprecatedclassfacade.html#source-view.82">packages/woocommerce-admin/src/DeprecatedClassFacade.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">82</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Executes when calling any static function on this class.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+            <span class="phpdocumentor-signature__static">static</span>    <span class="phpdocumentor-signature__name">__callStatic</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$name</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&nbsp;</span><span class="phpdocumentor-signature__argument__name">$arguments</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$name</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>The name of the function being called.</p></section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$arguments</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>An array of the arguments to the function call.</p></section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">mixed</span>
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method___construct">
+        __construct()
+        <a href="#method___construct" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/DeprecatedClassFacade.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-deprecatedclassfacade.html#source-view.38">packages/woocommerce-admin/src/DeprecatedClassFacade.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">38</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Constructor.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">__construct</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+    
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">mixed</span>
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -private
+                                    -static                    "
+>
+    <h4 class="phpdocumentor-element__name" id="method_log_deprecation">
+        log_deprecation()
+        <a href="#method_log_deprecation" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/DeprecatedClassFacade.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-deprecatedclassfacade.html#source-view.47">packages/woocommerce-admin/src/DeprecatedClassFacade.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">47</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Log a deprecation to the error log.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">private</span>
+            <span class="phpdocumentor-signature__static">static</span>    <span class="phpdocumentor-signature__name">log_deprecation</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$function</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$function</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>The name of the deprecated function being called.</p></section>
 
             </dd>
             </dl>
@@ -813,7 +516,7 @@
 
     <footer class="phpdocumentor phpdocumentor-footer">
     <div class="phpdocumentor-section">
-        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on November 30th, 2020 at 01:44 pm.</span>
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on December 10th, 2020 at 11:45 am.</span>
     </div>
 </footer>
 
@@ -825,7 +528,7 @@
             'searchIndex': '..\/js\/searchIndex.json'
         };
     </script>
-    <script src="../js/searchIndex.js?updated=1606754672"></script>
-    <script src="../js/search.js?updated=1606754672"></script>
+    <script src="../js/searchIndex.js?updated=1607611555"></script>
+    <script src="../js/search.js?updated=1607611555"></script>
 </body>
 </html>

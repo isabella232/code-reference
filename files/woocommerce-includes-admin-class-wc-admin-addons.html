@@ -9,9 +9,9 @@
     <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
     <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
     <link rel="stylesheet" href="../css/normalize.css">
-    <link rel="stylesheet" href="../css/base.css?updated=1606754661">
+    <link rel="stylesheet" href="../css/base.css?updated=1607611540">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/template.css?updated=1606754661">
+    <link rel="stylesheet" href="../css/template.css?updated=1607611540">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
             <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
@@ -102,6 +102,7 @@
                                     <li><a href="../packages/WooCommerce-Uninstaller.html"><abbr title="\WooCommerce\Uninstaller">Uninstaller</abbr></a></li>
                             </ul>
                                 <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceAdmin.html"><abbr title="\WoocommerceAdmin">WoocommerceAdmin</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceNavigation.html"><abbr title="\WoocommerceNavigation">WoocommerceNavigation</abbr></a></h3>
                                 <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdmin.html"><abbr title="\WooCommerceAdmin">WooCommerceAdmin</abbr></a></h3>
                         </section>
     
@@ -505,9 +506,9 @@ class WC_Admin_Addons {
 
 		$defaults = array(
 			&#039;image&#039;       =&gt; WC()-&gt;plugin_url() . &#039;/assets/images/wcs-extensions-banner-3x.png&#039;,
-			&#039;image_alt&#039;   =&gt; __( &#039;WooCommerce Services&#039;, &#039;woocommerce&#039; ),
+			&#039;image_alt&#039;   =&gt; __( &#039;WooCommerce Shipping&#039;, &#039;woocommerce&#039; ),
 			&#039;title&#039;       =&gt; __( &#039;Buy discounted shipping labels — then print them from your dashboard.&#039;, &#039;woocommerce&#039; ),
-			&#039;description&#039; =&gt; __( &#039;Integrate your store with USPS to buy discounted shipping labels, and print them directly from your WooCommerce dashboard. Powered by WooCommerce Services.&#039;, &#039;woocommerce&#039; ),
+			&#039;description&#039; =&gt; __( &#039;Integrate your store with USPS to buy discounted shipping labels, and print them directly from your WooCommerce dashboard. Powered by WooCommerce Shipping.&#039;, &#039;woocommerce&#039; ),
 			&#039;button&#039;      =&gt; __( &#039;Free - Install now&#039;, &#039;woocommerce&#039; ),
 			&#039;href&#039;        =&gt; $button_url,
 			&#039;logos&#039;       =&gt; array(),
@@ -518,7 +519,7 @@ class WC_Admin_Addons {
 				$local_defaults = array(
 					&#039;image&#039;       =&gt; WC()-&gt;plugin_url() . &#039;/assets/images/wcs-truck-banner-3x.png&#039;,
 					&#039;title&#039;       =&gt; __( &#039;Show Canada Post shipping rates&#039;, &#039;woocommerce&#039; ),
-					&#039;description&#039; =&gt; __( &#039;Display live rates from Canada Post at checkout to make shipping a breeze. Powered by WooCommerce Services.&#039;, &#039;woocommerce&#039; ),
+					&#039;description&#039; =&gt; __( &#039;Display live rates from Canada Post at checkout to make shipping a breeze. Powered by WooCommerce Shipping.&#039;, &#039;woocommerce&#039; ),
 					&#039;logos&#039;       =&gt; array_merge(
 						$defaults[&#039;logos&#039;],
 						array(
@@ -575,7 +576,69 @@ class WC_Admin_Addons {
 					self::output_button(
 						$block_data[&#039;href&#039;],
 						$block_data[&#039;button&#039;],
-						&#039;addons-button-outline-green&#039;
+						&#039;addons-button-outline-purple&#039;
+					);
+				?&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;?php
+	}
+
+	/**
+	 * Handles the outputting of the WooCommerce Pay banner block.
+	 *
+	 * @param object $block Block data.
+	 */
+	public static function output_wcpay_banner_block( $block = array() ) {
+		$is_active = is_plugin_active( &#039;woocommerce-payments/woocommerce-payments.php&#039; );
+		$location  = wc_get_base_location();
+
+		if (
+			! in_array( $location[&#039;country&#039;], array( &#039;US&#039; ), true ) ||
+			$is_active ||
+			! current_user_can( &#039;install_plugins&#039; ) ||
+			! current_user_can( &#039;activate_plugins&#039; )
+		) {
+			return;
+		}
+
+		$button_url = wp_nonce_url(
+			add_query_arg(
+				array(
+					&#039;install-addon&#039; =&gt; &#039;woocommerce-payments&#039;,
+				)
+			),
+			&#039;install-addon_woocommerce-payments&#039;
+		);
+
+		$defaults = array(
+			&#039;image&#039;       =&gt; WC()-&gt;plugin_url() . &#039;/assets/images/wcpayments-icon-secure.png&#039;,
+			&#039;image_alt&#039;   =&gt; __( &#039;WooCommerce Payments&#039;, &#039;woocommerce&#039; ),
+			&#039;title&#039;       =&gt; __( &#039;Payments made simple, with no monthly fees &amp;mdash; exclusively for WooCommerce stores.&#039;, &#039;woocommerce&#039; ),
+			&#039;description&#039; =&gt; __( &#039;Securely accept cards in your store. See payments, track cash flow into your bank account, and stay on top of disputes – right from your dashboard.&#039;, &#039;woocommerce&#039; ),
+			&#039;button&#039;      =&gt; __( &#039;Free - Install now&#039;, &#039;woocommerce&#039; ),
+			&#039;href&#039;        =&gt; $button_url,
+			&#039;logos&#039;       =&gt; array(),
+		);
+
+		$block_data = array_merge( $defaults, $block );
+		?&gt;
+		&lt;div class=&quot;addons-wcs-banner-block&quot;&gt;
+			&lt;div class=&quot;addons-wcs-banner-block-image&quot;&gt;
+				&lt;img
+					class=&quot;addons-img&quot;
+					src=&quot;&lt;?php echo esc_url( $block_data[&#039;image&#039;] ); ?&gt;&quot;
+					alt=&quot;&lt;?php echo esc_attr( $block_data[&#039;image_alt&#039;] ); ?&gt;&quot;
+				/&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;addons-wcs-banner-block-content&quot;&gt;
+				&lt;h1&gt;&lt;?php echo esc_html( $block_data[&#039;title&#039;] ); ?&gt;&lt;/h1&gt;
+				&lt;p&gt;&lt;?php echo esc_html( $block_data[&#039;description&#039;] ); ?&gt;&lt;/p&gt;
+				&lt;?php
+					self::output_button(
+						$block_data[&#039;href&#039;],
+						$block_data[&#039;button&#039;],
+						&#039;addons-button-outline-purple&#039;
 					);
 				?&gt;
 			&lt;/div&gt;
@@ -611,6 +674,9 @@ class WC_Admin_Addons {
 					break;
 				case &#039;wcs_banner_block&#039;:
 					self::output_wcs_banner_block( (array) $section );
+					break;
+				case &#039;wcpay_banner_block&#039;:
+					self::output_wcpay_banner_block( (array) $section );
 					break;
 			}
 		}
@@ -655,7 +721,7 @@ class WC_Admin_Addons {
 	 * @param string $plugin The plugin the button is promoting.
 	 */
 	public static function output_button( $url, $text, $style, $plugin = &#039;&#039; ) {
-		$style = __( &#039;Free&#039;, &#039;woocommerce&#039; ) === $text ? &#039;addons-button-outline-green&#039; : $style;
+		$style = __( &#039;Free&#039;, &#039;woocommerce&#039; ) === $text ? &#039;addons-button-outline-purple&#039; : $style;
 		$style = is_plugin_active( $plugin ) ? &#039;addons-button-installed&#039; : $style;
 		$text  = is_plugin_active( $plugin ) ? __( &#039;Installed&#039;, &#039;woocommerce&#039; ) : $text;
 		$url   = self::add_in_app_purchase_url_params( $url );
@@ -681,8 +747,18 @@ class WC_Admin_Addons {
 			return;
 		}
 
-		if ( isset( $_GET[&#039;install-addon&#039;] ) &amp;&amp; &#039;woocommerce-services&#039; === $_GET[&#039;install-addon&#039;] ) {
-			self::install_woocommerce_services_addon();
+		if ( isset( $_GET[&#039;install-addon&#039;] ) ) {
+			switch ( $_GET[&#039;install-addon&#039;] ) {
+				case &#039;woocommerce-services&#039;:
+					self::install_woocommerce_services_addon();
+					break;
+				case &#039;woocommerce-payments&#039;:
+					self::install_woocommerce_payments_addon();
+					break;
+				default:
+					// Do nothing.
+					break;
+			}
 		}
 
 		$sections        = self::get_sections();
@@ -727,6 +803,26 @@ class WC_Admin_Addons {
 	}
 
 	/**
+	 * Install WooCommerce Payments from the Extensions screens.
+	 *
+	 * @return void
+	 */
+	public static function install_woocommerce_payments_addon() {
+		check_admin_referer( &#039;install-addon_woocommerce-payments&#039; );
+
+		$wcpay_plugin_id = &#039;woocommerce-payments&#039;;
+		$wcpay_plugin    = array(
+			&#039;name&#039;      =&gt; __( &#039;WooCommerce Payments&#039;, &#039;woocommerce&#039; ),
+			&#039;repo-slug&#039; =&gt; &#039;woocommerce-payments&#039;,
+		);
+
+		WC_Install::background_installer( $services_plugin_id, $wcpay_plugin );
+
+		wp_safe_redirect( remove_query_arg( array( &#039;install-addon&#039;, &#039;_wpnonce&#039; ) ) );
+		exit;
+	}
+
+	/**
 	 * Should an extension be shown on the featured page.
 	 *
 	 * @param object $item Item data.
@@ -759,7 +855,7 @@ class WC_Admin_Addons {
 
     <footer class="phpdocumentor phpdocumentor-footer">
     <div class="phpdocumentor-section">
-        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on November 30th, 2020 at 01:44 pm.</span>
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on December 10th, 2020 at 11:45 am.</span>
     </div>
 </footer>
 
@@ -771,7 +867,7 @@ class WC_Admin_Addons {
             'searchIndex': '..\/js\/searchIndex.json'
         };
     </script>
-    <script src="../js/searchIndex.js?updated=1606754661"></script>
-    <script src="../js/search.js?updated=1606754661"></script>
+    <script src="../js/searchIndex.js?updated=1607611540"></script>
+    <script src="../js/search.js?updated=1607611540"></script>
 </body>
 </html>

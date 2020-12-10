@@ -9,9 +9,9 @@
     <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
     <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
     <link rel="stylesheet" href="../css/normalize.css">
-    <link rel="stylesheet" href="../css/base.css?updated=1606754663">
+    <link rel="stylesheet" href="../css/base.css?updated=1607611542">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/template.css?updated=1606754663">
+    <link rel="stylesheet" href="../css/template.css?updated=1607611542">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
             <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
@@ -102,6 +102,7 @@
                                     <li><a href="../packages/WooCommerce-Uninstaller.html"><abbr title="\WooCommerce\Uninstaller">Uninstaller</abbr></a></li>
                             </ul>
                                 <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceAdmin.html"><abbr title="\WoocommerceAdmin">WoocommerceAdmin</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceNavigation.html"><abbr title="\WoocommerceNavigation">WoocommerceNavigation</abbr></a></h3>
                                 <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdmin.html"><abbr title="\WooCommerceAdmin">WooCommerceAdmin</abbr></a></h3>
                         </section>
     
@@ -135,7 +136,7 @@
             </h3>
             <pre id="source-view" tabindex="-1" class="language-php line-numbers linkable-line-numbers"><code>&lt;?php
 /**
- * WC_Admin_Note_Data_Store class file.
+ * WC Admin Note Data_Store class file.
  */
 
 namespace Automattic\WooCommerce\Admin\Notes;
@@ -149,7 +150,7 @@ class DataStore extends \WC_Data_Store_WP implements \WC_Object_Data_Store_Inter
 	/**
 	 * Method to create a new note in the database.
 	 *
-	 * @param WC_Admin_Note $note Admin note.
+	 * @param Note $note Admin note.
 	 */
 	public function create( &amp;$note ) {
 		$date_created = time();
@@ -193,7 +194,7 @@ class DataStore extends \WC_Data_Store_WP implements \WC_Object_Data_Store_Inter
 	/**
 	 * Method to read a note.
 	 *
-	 * @param WC_Admin_Note $note Admin note.
+	 * @param Note $note Admin note.
 	 * @throws \Exception Throws exception when invalid data is found.
 	 */
 	public function read( &amp;$note ) {
@@ -264,7 +265,7 @@ class DataStore extends \WC_Data_Store_WP implements \WC_Object_Data_Store_Inter
 	/**
 	 * Updates a note in the database.
 	 *
-	 * @param WC_Admin_Note $note Admin note.
+	 * @param Note $note Admin note.
 	 */
 	public function update( &amp;$note ) {
 		global $wpdb;
@@ -319,8 +320,8 @@ class DataStore extends \WC_Data_Store_WP implements \WC_Object_Data_Store_Inter
 	/**
 	 * Deletes a note from the database.
 	 *
-	 * @param WC_Admin_Note $note Admin note.
-	 * @param array         $args Array of args to pass to the delete method (not used).
+	 * @param Note  $note Admin note.
+	 * @param array $args Array of args to pass to the delete method (not used).
 	 */
 	public function delete( &amp;$note, $args = array() ) {
 		$note_id = $note-&gt;get_id();
@@ -342,7 +343,7 @@ class DataStore extends \WC_Data_Store_WP implements \WC_Object_Data_Store_Inter
 	/**
 	 * Read actions from the database.
 	 *
-	 * @param WC_Admin_Note $note Admin note.
+	 * @param Note $note Admin note.
 	 */
 	private function read_actions( &amp;$note ) {
 		global $wpdb;
@@ -379,7 +380,7 @@ class DataStore extends \WC_Data_Store_WP implements \WC_Object_Data_Store_Inter
 	 * Save actions to the database.
 	 * This function clears old actions, then re-inserts new if any changes are found.
 	 *
-	 * @param WC_Admin_Note $note Note object.
+	 * @param Note $note Note object.
 	 *
 	 * @return bool|void
 	 */
@@ -394,7 +395,7 @@ class DataStore extends \WC_Data_Store_WP implements \WC_Object_Data_Store_Inter
 
 		// Process action removal. Actions are removed from
 		// the note if they aren&#039;t part of the changeset.
-		// See WC_Admin_Note::add_action().
+		// See Note::add_action().
 		$changed_actions = $note-&gt;get_actions( &#039;edit&#039; );
 		$actions_to_keep = array();
 
@@ -515,7 +516,7 @@ class DataStore extends \WC_Data_Store_WP implements \WC_Object_Data_Store_Inter
 	 * @return string Where clauses for the query.
 	 */
 	public function get_notes_where_clauses( $args = array() ) {
-		$allowed_types    = WC_Admin_Note::get_allowed_types();
+		$allowed_types    = Note::get_allowed_types();
 		$where_type_array = array();
 		if ( isset( $args[&#039;type&#039;] ) ) {
 			foreach ( $args[&#039;type&#039;] as $args_type ) {
@@ -526,7 +527,7 @@ class DataStore extends \WC_Data_Store_WP implements \WC_Object_Data_Store_Inter
 			}
 		}
 
-		$allowed_statuses   = WC_Admin_Note::get_allowed_statuses();
+		$allowed_statuses   = Note::get_allowed_statuses();
 		$where_status_array = array();
 		if ( isset( $args[&#039;status&#039;] ) ) {
 			foreach ( $args[&#039;status&#039;] as $args_status ) {
@@ -606,7 +607,7 @@ class DataStore extends \WC_Data_Store_WP implements \WC_Object_Data_Store_Inter
 
     <footer class="phpdocumentor phpdocumentor-footer">
     <div class="phpdocumentor-section">
-        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on November 30th, 2020 at 01:44 pm.</span>
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on December 10th, 2020 at 11:45 am.</span>
     </div>
 </footer>
 
@@ -618,7 +619,7 @@ class DataStore extends \WC_Data_Store_WP implements \WC_Object_Data_Store_Inter
             'searchIndex': '..\/js\/searchIndex.json'
         };
     </script>
-    <script src="../js/searchIndex.js?updated=1606754663"></script>
-    <script src="../js/search.js?updated=1606754663"></script>
+    <script src="../js/searchIndex.js?updated=1607611542"></script>
+    <script src="../js/search.js?updated=1607611542"></script>
 </body>
 </html>

@@ -9,9 +9,9 @@
     <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
     <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
     <link rel="stylesheet" href="../css/normalize.css">
-    <link rel="stylesheet" href="../css/base.css?updated=1606754662">
+    <link rel="stylesheet" href="../css/base.css?updated=1607611542">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/template.css?updated=1606754662">
+    <link rel="stylesheet" href="../css/template.css?updated=1607611542">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
             <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
@@ -102,6 +102,7 @@
                                     <li><a href="../packages/WooCommerce-Uninstaller.html"><abbr title="\WooCommerce\Uninstaller">Uninstaller</abbr></a></li>
                             </ul>
                                 <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceAdmin.html"><abbr title="\WoocommerceAdmin">WoocommerceAdmin</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceNavigation.html"><abbr title="\WoocommerceNavigation">WoocommerceNavigation</abbr></a></h3>
                                 <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdmin.html"><abbr title="\WooCommerceAdmin">WooCommerceAdmin</abbr></a></h3>
                         </section>
     
@@ -457,6 +458,52 @@
 
     
 </article>
+                    <article class="phpdocumentor-element -function - ">
+    <h4 class="phpdocumentor-element__name" id="function_wc_admin_update_170_homescreen_layout">
+        wc_admin_update_170_homescreen_layout()
+        <a href="#function_wc_admin_update_170_homescreen_layout" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/includes/wc-admin-update-functions.php"><a href="../files/woocommerce-packages-woocommerce-admin-includes-wc-admin-update-functions.html#source-view.145">packages/woocommerce-admin/includes/wc-admin-update-functions.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">145</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Set &quot;two column&quot; homescreen layout as default for existing stores.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility"></span>
+                <span class="phpdocumentor-signature__name">wc_admin_update_170_homescreen_layout</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+    
+    
+    
+
+    
+</article>
+                    <article class="phpdocumentor-element -function - ">
+    <h4 class="phpdocumentor-element__name" id="function_wc_admin_update_170_db_version">
+        wc_admin_update_170_db_version()
+        <a href="#function_wc_admin_update_170_db_version" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/includes/wc-admin-update-functions.php"><a href="../files/woocommerce-packages-woocommerce-admin-includes-wc-admin-update-functions.html#source-view.152">packages/woocommerce-admin/includes/wc-admin-update-functions.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">152</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Update DB Version.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility"></span>
+                <span class="phpdocumentor-signature__name">wc_admin_update_170_db_version</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+    
+    
+    
+
+    
+</article>
             </section>
 
                     <h3 class="phpdocumentor-elements__header" id="source-code">
@@ -473,8 +520,8 @@
  */
 
 use \Automattic\WooCommerce\Admin\Install as Installer;
-use \Automattic\WooCommerce\Admin\Notes\WC_Admin_Notes;
-use \Automattic\WooCommerce\Admin\Notes\WC_Admin_Notes_Deactivate_Plugin;
+use \Automattic\WooCommerce\Admin\Notes\Notes;
+use \Automattic\WooCommerce\Admin\Notes\DeactivatePlugin;
 
 /**
  * Update order stats `status` index length.
@@ -533,8 +580,8 @@ function wc_admin_update_0230_db_version() {
  * Remove the note unsnoozing scheduled action.
  */
 function wc_admin_update_0251_remove_unsnooze_action() {
-	as_unschedule_action( WC_Admin_Notes::UNSNOOZE_HOOK, null, &#039;wc-admin-data&#039; );
-	as_unschedule_action( WC_Admin_Notes::UNSNOOZE_HOOK, null, &#039;wc-admin-notes&#039; );
+	as_unschedule_action( Notes::UNSNOOZE_HOOK, null, &#039;wc-admin-data&#039; );
+	as_unschedule_action( Notes::UNSNOOZE_HOOK, null, &#039;wc-admin-notes&#039; );
 }
 
 /**
@@ -548,7 +595,7 @@ function wc_admin_update_0251_db_version() {
  * Remove Facebook Extension note.
  */
 function wc_admin_update_110_remove_facebook_note() {
-	WC_Admin_Notes::delete_notes_with_name( &#039;wc-admin-facebook-extension&#039; );
+	Notes::delete_notes_with_name( &#039;wc-admin-facebook-extension&#039; );
 }
 
 /**
@@ -580,7 +627,7 @@ function wc_admin_update_130_db_version() {
 function wc_admin_update_140_change_deactivate_plugin_note_type() {
 	global $wpdb;
 
-	$wpdb-&gt;query( $wpdb-&gt;prepare( &quot;UPDATE {$wpdb-&gt;prefix}wc_admin_notes SET type = &#039;info&#039; WHERE name = %s&quot;, WC_Admin_Notes_Deactivate_Plugin::NOTE_NAME ) );
+	$wpdb-&gt;query( $wpdb-&gt;prepare( &quot;UPDATE {$wpdb-&gt;prefix}wc_admin_notes SET type = &#039;info&#039; WHERE name = %s&quot;, DeactivatePlugin::NOTE_NAME ) );
 }
 
 /**
@@ -594,7 +641,7 @@ function wc_admin_update_140_db_version() {
  * Remove Facebook Experts note.
  */
 function wc_admin_update_160_remove_facebook_note() {
-	WC_Admin_Notes::delete_notes_with_name( &#039;wc-admin-facebook-marketing-expert&#039; );
+	Notes::delete_notes_with_name( &#039;wc-admin-facebook-marketing-expert&#039; );
 }
 
 /**
@@ -602,6 +649,20 @@ function wc_admin_update_160_remove_facebook_note() {
  */
 function wc_admin_update_160_db_version() {
 	Installer::update_db_version( &#039;1.6.0&#039; );
+}
+
+/**
+ * Set &quot;two column&quot; homescreen layout as default for existing stores.
+ */
+function wc_admin_update_170_homescreen_layout() {
+	add_option( &#039;woocommerce_default_homepage_layout&#039;, &#039;two_columns&#039;, &#039;&#039;, &#039;no&#039; );
+}
+
+/**
+ * Update DB Version.
+ */
+function wc_admin_update_170_db_version() {
+	Installer::update_db_version( &#039;1.7.0&#039; );
 }
 </code></pre>
             </article>
@@ -613,7 +674,7 @@ function wc_admin_update_160_db_version() {
 
     <footer class="phpdocumentor phpdocumentor-footer">
     <div class="phpdocumentor-section">
-        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on November 30th, 2020 at 01:44 pm.</span>
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on December 10th, 2020 at 11:45 am.</span>
     </div>
 </footer>
 
@@ -625,7 +686,7 @@ function wc_admin_update_160_db_version() {
             'searchIndex': '..\/js\/searchIndex.json'
         };
     </script>
-    <script src="../js/searchIndex.js?updated=1606754662"></script>
-    <script src="../js/search.js?updated=1606754662"></script>
+    <script src="../js/searchIndex.js?updated=1607611542"></script>
+    <script src="../js/search.js?updated=1607611542"></script>
 </body>
 </html>

@@ -9,9 +9,9 @@
     <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
     <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
     <link rel="stylesheet" href="../css/normalize.css">
-    <link rel="stylesheet" href="../css/base.css?updated=1606754662">
+    <link rel="stylesheet" href="../css/base.css?updated=1607611541">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/template.css?updated=1606754662">
+    <link rel="stylesheet" href="../css/template.css?updated=1607611541">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
             <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
@@ -102,6 +102,7 @@
                                     <li><a href="../packages/WooCommerce-Uninstaller.html"><abbr title="\WooCommerce\Uninstaller">Uninstaller</abbr></a></li>
                             </ul>
                                 <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceAdmin.html"><abbr title="\WoocommerceAdmin">WoocommerceAdmin</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceNavigation.html"><abbr title="\WoocommerceNavigation">WoocommerceNavigation</abbr></a></h3>
                                 <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdmin.html"><abbr title="\WooCommerceAdmin">WooCommerceAdmin</abbr></a></h3>
                         </section>
     
@@ -655,6 +656,7 @@ class WC_Countries {
 					&#039;IN&#039;      =&gt; &quot;{company}\n{name}\n{address_1}\n{address_2}\n{city} {postcode}\n{state}, {country}&quot;,
 					&#039;IS&#039;      =&gt; &quot;{company}\n{name}\n{address_1}\n{address_2}\n{postcode} {city}\n{country}&quot;,
 					&#039;IT&#039;      =&gt; &quot;{company}\n{name}\n{address_1}\n{address_2}\n{postcode}\n{city}\n{state_upper}\n{country}&quot;,
+					&#039;JM&#039;      =&gt; &quot;{name}\n{company}\n{address_1}\n{address_2}\n{city}\n{state}\n{postcode_upper}\n{country}&quot;,
 					&#039;JP&#039;      =&gt; &quot;{postcode}\n{state} {city} {address_1}\n{address_2}\n{company}\n{last_name} {first_name}\n{country}&quot;,
 					&#039;TW&#039;      =&gt; &quot;{company}\n{last_name} {first_name}\n{address_1}\n{address_2}\n{state}, {city} {postcode}\n{country}&quot;,
 					&#039;LI&#039;      =&gt; &quot;{company}\n{name}\n{address_1}\n{address_2}\n{postcode} {city}\n{country}&quot;,
@@ -662,7 +664,7 @@ class WC_Countries {
 					&#039;NZ&#039;      =&gt; &quot;{name}\n{company}\n{address_1}\n{address_2}\n{city} {postcode}\n{country}&quot;,
 					&#039;NO&#039;      =&gt; &quot;{company}\n{name}\n{address_1}\n{address_2}\n{postcode} {city}\n{country}&quot;,
 					&#039;PL&#039;      =&gt; &quot;{company}\n{name}\n{address_1}\n{address_2}\n{postcode} {city}\n{country}&quot;,
-					&#039;PR&#039;      =&gt; &quot;{company}\n{name}\n{address_1} {address_2}\n{state} \n{country} {postcode}&quot;,
+					&#039;PR&#039;      =&gt; &quot;{company}\n{name}\n{address_1} {address_2}\n{city} \n{country} {postcode}&quot;,
 					&#039;PT&#039;      =&gt; &quot;{company}\n{name}\n{address_1}\n{address_2}\n{postcode} {city}\n{country}&quot;,
 					&#039;SK&#039;      =&gt; &quot;{company}\n{name}\n{address_1}\n{address_2}\n{postcode} {city}\n{country}&quot;,
 					&#039;RS&#039;      =&gt; &quot;{name}\n{company}\n{address_1}\n{address_2}\n{postcode} {city}\n{country}&quot;,
@@ -1204,6 +1206,19 @@ class WC_Countries {
 							&#039;label&#039;    =&gt; __( &#039;Province&#039;, &#039;woocommerce&#039; ),
 						),
 					),
+					&#039;JM&#039; =&gt; array(
+						&#039;city&#039;     =&gt; array(
+							&#039;label&#039; =&gt; __( &#039;Town / City / Post Office&#039;, &#039;woocommerce&#039; ),
+						),
+						&#039;postcode&#039; =&gt; array(
+							&#039;required&#039; =&gt; false,
+							&#039;label&#039;    =&gt; __( &#039;Postal Code&#039;, &#039;woocommerce&#039; ),
+						),
+						&#039;state&#039;    =&gt; array(
+							&#039;required&#039; =&gt; true,
+							&#039;label&#039;    =&gt; __( &#039;Parish&#039;, &#039;woocommerce&#039; ),
+						),
+					),
 					&#039;JP&#039; =&gt; array(
 						&#039;last_name&#039;  =&gt; array(
 							&#039;class&#039;    =&gt; array( &#039;form-row-first&#039; ),
@@ -1326,11 +1341,11 @@ class WC_Countries {
 					),
 					&#039;PR&#039; =&gt; array(
 						&#039;city&#039;  =&gt; array(
-							&#039;required&#039; =&gt; false,
-							&#039;hidden&#039;   =&gt; true,
+							&#039;label&#039; =&gt; __( &#039;Municipality&#039;, &#039;woocommerce&#039; ),
 						),
 						&#039;state&#039; =&gt; array(
-							&#039;label&#039; =&gt; __( &#039;Municipality&#039;, &#039;woocommerce&#039; ),
+							&#039;required&#039; =&gt; false,
+							&#039;hidden&#039;   =&gt; true,
 						),
 					),
 					&#039;PT&#039; =&gt; array(
@@ -1614,7 +1629,7 @@ class WC_Countries {
 
     <footer class="phpdocumentor phpdocumentor-footer">
     <div class="phpdocumentor-section">
-        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on November 30th, 2020 at 01:44 pm.</span>
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on December 10th, 2020 at 11:45 am.</span>
     </div>
 </footer>
 
@@ -1626,7 +1641,7 @@ class WC_Countries {
             'searchIndex': '..\/js\/searchIndex.json'
         };
     </script>
-    <script src="../js/searchIndex.js?updated=1606754662"></script>
-    <script src="../js/search.js?updated=1606754662"></script>
+    <script src="../js/searchIndex.js?updated=1607611541"></script>
+    <script src="../js/search.js?updated=1607611541"></script>
 </body>
 </html>

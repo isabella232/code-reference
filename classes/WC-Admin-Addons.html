@@ -9,9 +9,9 @@
     <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
     <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
     <link rel="stylesheet" href="../css/normalize.css">
-    <link rel="stylesheet" href="../css/base.css?updated=1606754664">
+    <link rel="stylesheet" href="../css/base.css?updated=1607611545">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/template.css?updated=1606754664">
+    <link rel="stylesheet" href="../css/template.css?updated=1607611545">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
             <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
@@ -96,6 +96,7 @@
                                     <li><a href="../packages/WooCommerce-Uninstaller.html"><abbr title="\WooCommerce\Uninstaller">Uninstaller</abbr></a></li>
                             </ul>
                                 <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceAdmin.html"><abbr title="\WoocommerceAdmin">WoocommerceAdmin</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceNavigation.html"><abbr title="\WoocommerceNavigation">WoocommerceNavigation</abbr></a></h3>
                                 <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdmin.html"><abbr title="\WooCommerceAdmin">WooCommerceAdmin</abbr></a></h3>
                         </section>
     
@@ -212,6 +213,13 @@
 <dd>Get sections for the addons screen</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="../classes/WC-Admin-Addons.html#method_install_woocommerce_payments_addon">install_woocommerce_payments_addon()</a>
+    <span>
+                        &nbsp;: void    </span>
+</dt>
+<dd>Install WooCommerce Payments from the Extensions screens.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="../classes/WC-Admin-Addons.html#method_install_woocommerce_services_addon">install_woocommerce_services_addon()</a>
     <span>
                         &nbsp;: mixed    </span>
@@ -282,6 +290,13 @@
 <dd>Handles the outputting of a contextually aware Storefront link (points to child themes if Storefront is already active).</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="../classes/WC-Admin-Addons.html#method_output_wcpay_banner_block">output_wcpay_banner_block()</a>
+    <span>
+                        &nbsp;: mixed    </span>
+</dt>
+<dd>Handles the outputting of the WooCommerce Pay banner block.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="../classes/WC-Admin-Addons.html#method_output_wcs_banner_block">output_wcs_banner_block()</a>
     <span>
                         &nbsp;: mixed    </span>
@@ -319,9 +334,9 @@
         <a href="#method_add_in_app_purchase_url_params" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/admin/class-wc-admin-addons.php"><a href="../files/woocommerce-includes-admin-class-wc-admin-addons.html#source-view.507">includes/admin/class-wc-admin-addons.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/admin/class-wc-admin-addons.php"><a href="../files/woocommerce-includes-admin-class-wc-admin-addons.html#source-view.572">includes/admin/class-wc-admin-addons.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">507</span>
+    <span class="phpdocumentor-element-found-in__line">572</span>
 </aside>
 
         <p class="phpdocumentor-summary">Add in-app-purchase URL params to link.</p>
@@ -509,9 +524,9 @@ flow for obtaining and setting up WooCommerce extensons.</p></section>
         <a href="#method_get_in_app_purchase_url_params" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/admin/class-wc-admin-addons.php"><a href="../files/woocommerce-includes-admin-class-wc-admin-addons.html#source-view.487">includes/admin/class-wc-admin-addons.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/admin/class-wc-admin-addons.php"><a href="../files/woocommerce-includes-admin-class-wc-admin-addons.html#source-view.552">includes/admin/class-wc-admin-addons.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">487</span>
+    <span class="phpdocumentor-element-found-in__line">552</span>
 </aside>
 
         <p class="phpdocumentor-summary">Returns in-app-purchase URL params.</p>
@@ -647,14 +662,42 @@ flow for obtaining and setting up WooCommerce extensons.</p></section>
             -public
                                     -static                    "
 >
+    <h4 class="phpdocumentor-element__name" id="method_install_woocommerce_payments_addon">
+        install_woocommerce_payments_addon()
+        <a href="#method_install_woocommerce_payments_addon" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/admin/class-wc-admin-addons.php"><a href="../files/woocommerce-includes-admin-class-wc-admin-addons.html#source-view.674">includes/admin/class-wc-admin-addons.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">674</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Install WooCommerce Payments from the Extensions screens.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+            <span class="phpdocumentor-signature__static">static</span>    <span class="phpdocumentor-signature__name">install_woocommerce_payments_addon</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+
+    
+    
+    
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                    -static                    "
+>
     <h4 class="phpdocumentor-element__name" id="method_install_woocommerce_services_addon">
         install_woocommerce_services_addon()
         <a href="#method_install_woocommerce_services_addon" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/admin/class-wc-admin-addons.php"><a href="../files/woocommerce-includes-admin-class-wc-admin-addons.html#source-view.579">includes/admin/class-wc-admin-addons.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/admin/class-wc-admin-addons.php"><a href="../files/woocommerce-includes-admin-class-wc-admin-addons.html#source-view.654">includes/admin/class-wc-admin-addons.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">579</span>
+    <span class="phpdocumentor-element-found-in__line">654</span>
 </aside>
 
         <p class="phpdocumentor-summary">Install WooCommerce Services from Extensions screens.</p>
@@ -682,9 +725,9 @@ flow for obtaining and setting up WooCommerce extensons.</p></section>
         <a href="#method_output" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/admin/class-wc-admin-addons.php"><a href="../files/woocommerce-includes-admin-class-wc-admin-addons.html#source-view.540">includes/admin/class-wc-admin-addons.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/admin/class-wc-admin-addons.php"><a href="../files/woocommerce-includes-admin-class-wc-admin-addons.html#source-view.605">includes/admin/class-wc-admin-addons.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">540</span>
+    <span class="phpdocumentor-element-found-in__line">605</span>
 </aside>
 
         <p class="phpdocumentor-summary">Handles output of the addons page in admin.</p>
@@ -753,9 +796,9 @@ flow for obtaining and setting up WooCommerce extensons.</p></section>
         <a href="#method_output_button" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/admin/class-wc-admin-addons.php"><a href="../files/woocommerce-includes-admin-class-wc-admin-addons.html#source-view.522">includes/admin/class-wc-admin-addons.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/admin/class-wc-admin-addons.php"><a href="../files/woocommerce-includes-admin-class-wc-admin-addons.html#source-view.587">includes/admin/class-wc-admin-addons.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">522</span>
+    <span class="phpdocumentor-element-found-in__line">587</span>
 </aside>
 
         <p class="phpdocumentor-summary">Outputs a button.</p>
@@ -900,9 +943,9 @@ flow for obtaining and setting up WooCommerce extensons.</p></section>
         <a href="#method_output_featured_sections" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/admin/class-wc-admin-addons.php"><a href="../files/woocommerce-includes-admin-class-wc-admin-addons.html#source-view.456">includes/admin/class-wc-admin-addons.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/admin/class-wc-admin-addons.php"><a href="../files/woocommerce-includes-admin-class-wc-admin-addons.html#source-view.518">includes/admin/class-wc-admin-addons.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">456</span>
+    <span class="phpdocumentor-element-found-in__line">518</span>
 </aside>
 
         <p class="phpdocumentor-summary">Handles the outputting of featured sections</p>
@@ -1048,6 +1091,47 @@ flow for obtaining and setting up WooCommerce extensons.</p></section>
             -public
                                     -static                    "
 >
+    <h4 class="phpdocumentor-element__name" id="method_output_wcpay_banner_block">
+        output_wcpay_banner_block()
+        <a href="#method_output_wcpay_banner_block" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/admin/class-wc-admin-addons.php"><a href="../files/woocommerce-includes-admin-class-wc-admin-addons.html#source-view.456">includes/admin/class-wc-admin-addons.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">456</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Handles the outputting of the WooCommerce Pay banner block.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+            <span class="phpdocumentor-signature__static">static</span>    <span class="phpdocumentor-signature__name">output_wcpay_banner_block</span><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">object&nbsp;</span><span class="phpdocumentor-signature__argument__name">$block</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">array()</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$block</span>
+                : <span class="phpdocumentor-signature__argument__return-type">object</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">array()</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Block data.</p></section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">mixed</span>
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                    -static                    "
+>
     <h4 class="phpdocumentor-element__name" id="method_output_wcs_banner_block">
         output_wcs_banner_block()
         <a href="#method_output_wcs_banner_block" class="headerlink"><i class="fas fa-link"></i></a>
@@ -1094,9 +1178,9 @@ flow for obtaining and setting up WooCommerce extensons.</p></section>
         <a href="#method_show_extension" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/admin/class-wc-admin-addons.php"><a href="../files/woocommerce-includes-admin-class-wc-admin-addons.html#source-view.600">includes/admin/class-wc-admin-addons.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/admin/class-wc-admin-addons.php"><a href="../files/woocommerce-includes-admin-class-wc-admin-addons.html#source-view.695">includes/admin/class-wc-admin-addons.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">600</span>
+    <span class="phpdocumentor-element-found-in__line">695</span>
 </aside>
 
         <p class="phpdocumentor-summary">Should an extension be shown on the featured page.</p>
@@ -1135,7 +1219,7 @@ flow for obtaining and setting up WooCommerce extensons.</p></section>
 
     <footer class="phpdocumentor phpdocumentor-footer">
     <div class="phpdocumentor-section">
-        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on November 30th, 2020 at 01:44 pm.</span>
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on December 10th, 2020 at 11:45 am.</span>
     </div>
 </footer>
 
@@ -1147,7 +1231,7 @@ flow for obtaining and setting up WooCommerce extensons.</p></section>
             'searchIndex': '..\/js\/searchIndex.json'
         };
     </script>
-    <script src="../js/searchIndex.js?updated=1606754664"></script>
-    <script src="../js/search.js?updated=1606754664"></script>
+    <script src="../js/searchIndex.js?updated=1607611545"></script>
+    <script src="../js/search.js?updated=1607611545"></script>
 </body>
 </html>

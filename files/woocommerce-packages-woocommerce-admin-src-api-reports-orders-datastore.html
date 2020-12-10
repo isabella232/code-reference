@@ -9,9 +9,9 @@
     <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
     <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
     <link rel="stylesheet" href="../css/normalize.css">
-    <link rel="stylesheet" href="../css/base.css?updated=1606754662">
+    <link rel="stylesheet" href="../css/base.css?updated=1607611542">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/template.css?updated=1606754662">
+    <link rel="stylesheet" href="../css/template.css?updated=1607611542">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
             <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
@@ -102,6 +102,7 @@
                                     <li><a href="../packages/WooCommerce-Uninstaller.html"><abbr title="\WooCommerce\Uninstaller">Uninstaller</abbr></a></li>
                             </ul>
                                 <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceAdmin.html"><abbr title="\WoocommerceAdmin">WoocommerceAdmin</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceNavigation.html"><abbr title="\WoocommerceNavigation">WoocommerceNavigation</abbr></a></h3>
                                 <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdmin.html"><abbr title="\WooCommerceAdmin">WooCommerceAdmin</abbr></a></h3>
                         </section>
     
@@ -224,6 +225,7 @@ class DataStore extends ReportsDataStore implements DataStoreInterface {
 		$order_tax_lookup_table     = $wpdb-&gt;prefix . &#039;wc_order_tax_lookup&#039;;
 		$operator                   = $this-&gt;get_match_operator( $query_args );
 		$where_subquery             = array();
+		$have_joined_products_table = false;
 
 		$this-&gt;add_time_period_sql_params( $query_args, $order_stats_lookup_table );
 		$this-&gt;get_limit_sql_params( $query_args );
@@ -274,6 +276,7 @@ class DataStore extends ReportsDataStore implements DataStoreInterface {
 		$included_products = $this-&gt;get_included_products( $query_args );
 		$excluded_products = $this-&gt;get_excluded_products( $query_args );
 		if ( $included_products || $excluded_products ) {
+			$have_joined_products_table = true;
 			$this-&gt;subquery-&gt;add_sql_clause( &#039;join&#039;, &quot;JOIN {$order_product_lookup_table} ON {$order_stats_lookup_table}.order_id = {$order_product_lookup_table}.order_id&quot; );
 		}
 		if ( $included_products ) {
@@ -281,6 +284,19 @@ class DataStore extends ReportsDataStore implements DataStoreInterface {
 		}
 		if ( $excluded_products ) {
 			$where_subquery[] = &quot;{$order_product_lookup_table}.product_id NOT IN ({$excluded_products})&quot;;
+		}
+
+		$included_variations = $this-&gt;get_included_variations( $query_args );
+		$excluded_variations = $this-&gt;get_excluded_variations( $query_args );
+		if ( ! $have_joined_products_table &amp;&amp; ( $included_variations || $excluded_variations ) ) {
+			$have_joined_products_table = true;
+			$this-&gt;subquery-&gt;add_sql_clause( &#039;join&#039;, &quot;JOIN {$order_product_lookup_table} ON {$order_stats_lookup_table}.order_id = {$order_product_lookup_table}.order_id&quot; );
+		}
+		if ( $included_variations ) {
+			$where_subquery[] = &quot;{$order_product_lookup_table}.variation_id IN ({$included_variations})&quot;;
+		}
+		if ( $excluded_variations ) {
+			$where_subquery[] = &quot;{$order_product_lookup_table}.variation_id NOT IN ({$excluded_variations})&quot;;
 		}
 
 		$included_tax_rates = ! empty( $query_args[&#039;tax_rate_includes&#039;] ) ? implode( &#039;,&#039;, $query_args[&#039;tax_rate_includes&#039;] ) : false;
@@ -298,7 +314,8 @@ class DataStore extends ReportsDataStore implements DataStoreInterface {
 		$attribute_subqueries = $this-&gt;get_attribute_subqueries( $query_args );
 		if ( $attribute_subqueries[&#039;join&#039;] &amp;&amp; $attribute_subqueries[&#039;where&#039;] ) {
 			// JOIN on product lookup if we haven&#039;t already.
-			if ( ! $included_products &amp;&amp; ! $excluded_products ) {
+			if ( ! $have_joined_products_table ) {
+				$have_joined_products_table = true;
 				$this-&gt;subquery-&gt;add_sql_clause( &#039;join&#039;, &quot;JOIN {$order_product_lookup_table} ON {$order_stats_lookup_table}.order_id = {$order_product_lookup_table}.order_id&quot; );
 			}
 			// Add JOINs for matching attributes.
@@ -454,11 +471,24 @@ class DataStore extends ReportsDataStore implements DataStoreInterface {
 				$mapped_data[ $product[&#039;order_id&#039;] ][&#039;products&#039;] = array();
 			}
 
-			$mapped_data[ $product[&#039;order_id&#039;] ][&#039;products&#039;][] = array(
-				&#039;id&#039;       =&gt; &#039;0&#039; === $product[&#039;variation_id&#039;] ? $product[&#039;product_id&#039;] : $product[&#039;variation_id&#039;],
+			$is_variation = &#039;0&#039; !== $product[&#039;variation_id&#039;];
+			$product_data = array(
+				&#039;id&#039;       =&gt; $is_variation ? $product[&#039;variation_id&#039;] : $product[&#039;product_id&#039;],
 				&#039;name&#039;     =&gt; $product[&#039;product_name&#039;],
 				&#039;quantity&#039; =&gt; $product[&#039;product_quantity&#039;],
 			);
+
+			if ( $is_variation ) {
+				$variation = wc_get_product( $product_data[&#039;id&#039;] );
+				$separator = apply_filters( &#039;woocommerce_product_variation_title_attributes_separator&#039;, &#039; - &#039;, $variation );
+
+				if ( false === strpos( $product_data[&#039;name&#039;], $separator ) ) {
+					$attributes            = wc_get_formatted_variation( $variation, true, false );
+					$product_data[&#039;name&#039;] .= $separator . $attributes;
+				}
+			}
+
+			$mapped_data[ $product[&#039;order_id&#039;] ][&#039;products&#039;][] = $product_data;
 		}
 
 		foreach ( $coupons as $coupon ) {
@@ -634,7 +664,7 @@ class DataStore extends ReportsDataStore implements DataStoreInterface {
 
     <footer class="phpdocumentor phpdocumentor-footer">
     <div class="phpdocumentor-section">
-        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on November 30th, 2020 at 01:44 pm.</span>
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on December 10th, 2020 at 11:45 am.</span>
     </div>
 </footer>
 
@@ -646,7 +676,7 @@ class DataStore extends ReportsDataStore implements DataStoreInterface {
             'searchIndex': '..\/js\/searchIndex.json'
         };
     </script>
-    <script src="../js/searchIndex.js?updated=1606754662"></script>
-    <script src="../js/search.js?updated=1606754662"></script>
+    <script src="../js/searchIndex.js?updated=1607611542"></script>
+    <script src="../js/search.js?updated=1607611542"></script>
 </body>
 </html>

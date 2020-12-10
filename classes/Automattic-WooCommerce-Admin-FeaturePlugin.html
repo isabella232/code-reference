@@ -9,9 +9,9 @@
     <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
     <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
     <link rel="stylesheet" href="../css/normalize.css">
-    <link rel="stylesheet" href="../css/base.css?updated=1606754672">
+    <link rel="stylesheet" href="../css/base.css?updated=1607611555">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/template.css?updated=1606754672">
+    <link rel="stylesheet" href="../css/template.css?updated=1607611555">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
             <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
@@ -96,6 +96,7 @@
                                     <li><a href="../packages/WooCommerce-Uninstaller.html"><abbr title="\WooCommerce\Uninstaller">Uninstaller</abbr></a></li>
                             </ul>
                                 <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceAdmin.html"><abbr title="\WoocommerceAdmin">WoocommerceAdmin</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceNavigation.html"><abbr title="\WoocommerceNavigation">WoocommerceNavigation</abbr></a></h3>
                                 <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdmin.html"><abbr title="\WooCommerceAdmin">WooCommerceAdmin</abbr></a></h3>
                         </section>
     
@@ -185,6 +186,13 @@
 <dd>The single instance of the class.</dd>
 
                 <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="../classes/Automattic-WooCommerce-Admin-FeaturePlugin.html#method___wakeup">__wakeup()</a>
+    <span>
+                        &nbsp;: mixed    </span>
+</dt>
+<dd>Prevent unserializing.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="../classes/Automattic-WooCommerce-Admin-FeaturePlugin.html#method_deactivate_self">deactivate_self()</a>
     <span>
                         &nbsp;: mixed    </span>
@@ -239,13 +247,6 @@
                         &nbsp;: void    </span>
 </dt>
 <dd>Setup plugin once all other plugins are loaded.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="../classes/Automattic-WooCommerce-Admin-FeaturePlugin.html#method_register_devdocs_page">register_devdocs_page()</a>
-    <span>
-                        &nbsp;: mixed    </span>
-</dt>
-<dd>Adds a menu item for the wc-admin devdocs.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="../classes/Automattic-WooCommerce-Admin-FeaturePlugin.html#method_render_dependencies_notice">render_dependencies_notice()</a>
@@ -310,13 +311,6 @@
 </dt>
 <dd>Prevent cloning.</dd>
 
-            <dt class="phpdocumentor-table-of-contents__entry -method -private">
-    <a href="../classes/Automattic-WooCommerce-Admin-FeaturePlugin.html#method___wakeup">__wakeup()</a>
-    <span>
-                        &nbsp;: mixed    </span>
-</dt>
-<dd>Prevent unserializing.</dd>
-
         </dl>
 
 
@@ -367,6 +361,36 @@
             Methods
             <a href="#methods" class="headerlink"><i class="fas fa-link"></i></a>
         </h3>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method___wakeup">
+        __wakeup()
+        <a href="#method___wakeup" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/FeaturePlugin.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-featureplugin.html#source-view.301">packages/woocommerce-admin/src/FeaturePlugin.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">301</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Prevent unserializing.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">__wakeup</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+    
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">mixed</span>
+    
+</article>
                     <article
         class="phpdocumentor-element
             -method
@@ -438,9 +462,9 @@
         <a href="#method_includes" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/FeaturePlugin.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-featureplugin.html#source-view.168">packages/woocommerce-admin/src/FeaturePlugin.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/FeaturePlugin.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-featureplugin.html#source-view.169">packages/woocommerce-admin/src/FeaturePlugin.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">168</span>
+    <span class="phpdocumentor-element-found-in__line">169</span>
 </aside>
 
         <p class="phpdocumentor-summary">Include WC Admin classes.</p>
@@ -529,9 +553,9 @@
         <a href="#method_on_activation" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/FeaturePlugin.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-featureplugin.html#source-view.96">packages/woocommerce-admin/src/FeaturePlugin.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/FeaturePlugin.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-featureplugin.html#source-view.97">packages/woocommerce-admin/src/FeaturePlugin.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">96</span>
+    <span class="phpdocumentor-element-found-in__line">97</span>
 </aside>
 
         <p class="phpdocumentor-summary">Install DB and create cron events when activated.</p>
@@ -557,9 +581,9 @@
         <a href="#method_on_deactivation" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/FeaturePlugin.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-featureplugin.html#source-view.106">packages/woocommerce-admin/src/FeaturePlugin.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/FeaturePlugin.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-featureplugin.html#source-view.107">packages/woocommerce-admin/src/FeaturePlugin.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">106</span>
+    <span class="phpdocumentor-element-found-in__line">107</span>
 </aside>
 
         <p class="phpdocumentor-summary">Remove WooCommerce Admin scheduled actions on deactivate.</p>
@@ -585,9 +609,9 @@
         <a href="#method_on_plugins_loaded" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/FeaturePlugin.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-featureplugin.html#source-view.131">packages/woocommerce-admin/src/FeaturePlugin.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/FeaturePlugin.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-featureplugin.html#source-view.132">packages/woocommerce-admin/src/FeaturePlugin.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">131</span>
+    <span class="phpdocumentor-element-found-in__line">132</span>
 </aside>
 
         <p class="phpdocumentor-summary">Setup plugin once all other plugins are loaded.</p>
@@ -600,36 +624,6 @@
     
     
 
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="method_register_devdocs_page">
-        register_devdocs_page()
-        <a href="#method_register_devdocs_page" class="headerlink"><i class="fas fa-link"></i></a>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/FeaturePlugin.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-featureplugin.html#source-view.284">packages/woocommerce-admin/src/FeaturePlugin.php</a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">284</span>
-</aside>
-
-        <p class="phpdocumentor-summary">Adds a menu item for the wc-admin devdocs.</p>
-
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">register_devdocs_page</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
-
-    
-    
-    
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">mixed</span>
     
 </article>
                     <article
@@ -742,9 +736,9 @@
         <a href="#method_define" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/FeaturePlugin.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-featureplugin.html#source-view.302">packages/woocommerce-admin/src/FeaturePlugin.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/FeaturePlugin.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-featureplugin.html#source-view.287">packages/woocommerce-admin/src/FeaturePlugin.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">302</span>
+    <span class="phpdocumentor-element-found-in__line">287</span>
 </aside>
 
         <p class="phpdocumentor-summary">Define constant if not already set.</p>
@@ -791,9 +785,9 @@
         <a href="#method_define_constants" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/FeaturePlugin.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-featureplugin.html#source-view.147">packages/woocommerce-admin/src/FeaturePlugin.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/FeaturePlugin.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-featureplugin.html#source-view.148">packages/woocommerce-admin/src/FeaturePlugin.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">147</span>
+    <span class="phpdocumentor-element-found-in__line">148</span>
 </aside>
 
         <p class="phpdocumentor-summary">Define Constants.</p>
@@ -851,9 +845,9 @@
         <a href="#method_hooks" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/FeaturePlugin.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-featureplugin.html#source-view.203">packages/woocommerce-admin/src/FeaturePlugin.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/FeaturePlugin.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-featureplugin.html#source-view.204">packages/woocommerce-admin/src/FeaturePlugin.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">203</span>
+    <span class="phpdocumentor-element-found-in__line">204</span>
 </aside>
 
         <p class="phpdocumentor-summary">Set up our admin hooks and plugin loader.</p>
@@ -881,9 +875,9 @@
         <a href="#method_load_plugin_textdomain" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/FeaturePlugin.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-featureplugin.html#source-view.161">packages/woocommerce-admin/src/FeaturePlugin.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/FeaturePlugin.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-featureplugin.html#source-view.162">packages/woocommerce-admin/src/FeaturePlugin.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">161</span>
+    <span class="phpdocumentor-element-found-in__line">162</span>
 </aside>
 
         <p class="phpdocumentor-summary">Load Localisation files.</p>
@@ -911,9 +905,9 @@
         <a href="#method___clone" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/FeaturePlugin.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-featureplugin.html#source-view.311">packages/woocommerce-admin/src/FeaturePlugin.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/FeaturePlugin.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-featureplugin.html#source-view.296">packages/woocommerce-admin/src/FeaturePlugin.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">311</span>
+    <span class="phpdocumentor-element-found-in__line">296</span>
 </aside>
 
         <p class="phpdocumentor-summary">Prevent cloning.</p>
@@ -921,36 +915,6 @@
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
                 <span class="phpdocumentor-signature__name">__clone</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
-
-    
-    
-    
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">mixed</span>
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -private
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="method___wakeup">
-        __wakeup()
-        <a href="#method___wakeup" class="headerlink"><i class="fas fa-link"></i></a>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/FeaturePlugin.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-featureplugin.html#source-view.316">packages/woocommerce-admin/src/FeaturePlugin.php</a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">316</span>
-</aside>
-
-        <p class="phpdocumentor-summary">Prevent unserializing.</p>
-
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">private</span>
-                <span class="phpdocumentor-signature__name">__wakeup</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
 
     
     
@@ -971,7 +935,7 @@
 
     <footer class="phpdocumentor phpdocumentor-footer">
     <div class="phpdocumentor-section">
-        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on November 30th, 2020 at 01:44 pm.</span>
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on December 10th, 2020 at 11:45 am.</span>
     </div>
 </footer>
 
@@ -983,7 +947,7 @@
             'searchIndex': '..\/js\/searchIndex.json'
         };
     </script>
-    <script src="../js/searchIndex.js?updated=1606754672"></script>
-    <script src="../js/search.js?updated=1606754672"></script>
+    <script src="../js/searchIndex.js?updated=1607611555"></script>
+    <script src="../js/search.js?updated=1607611555"></script>
 </body>
 </html>

@@ -9,9 +9,9 @@
     <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
     <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
     <link rel="stylesheet" href="../css/normalize.css">
-    <link rel="stylesheet" href="../css/base.css?updated=1606754662">
+    <link rel="stylesheet" href="../css/base.css?updated=1607611542">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/template.css?updated=1606754662">
+    <link rel="stylesheet" href="../css/template.css?updated=1607611542">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
             <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
@@ -102,6 +102,7 @@
                                     <li><a href="../packages/WooCommerce-Uninstaller.html"><abbr title="\WooCommerce\Uninstaller">Uninstaller</abbr></a></li>
                             </ul>
                                 <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceAdmin.html"><abbr title="\WoocommerceAdmin">WoocommerceAdmin</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceNavigation.html"><abbr title="\WoocommerceNavigation">WoocommerceNavigation</abbr></a></h3>
                                 <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdmin.html"><abbr title="\WooCommerceAdmin">WooCommerceAdmin</abbr></a></h3>
                         </section>
     
@@ -1016,27 +1017,21 @@ class DataStore extends SqlQuery {
 	 * @return array|stdClass
 	 */
 	protected function get_products_by_cat_ids( $categories ) {
-		$product_categories = get_categories(
+		$terms = get_terms(
 			array(
-				&#039;hide_empty&#039; =&gt; 0,
-				&#039;taxonomy&#039;   =&gt; &#039;product_cat&#039;,
+				&#039;taxonomy&#039; =&gt; &#039;product_cat&#039;,
+				&#039;include&#039;  =&gt; $categories,
 			)
 		);
-		$cat_slugs          = array();
-		$categories         = array_flip( $categories );
-		foreach ( $product_categories as $product_cat ) {
-			if ( key_exists( $product_cat-&gt;cat_ID, $categories ) ) {
-				$cat_slugs[] = $product_cat-&gt;slug;
-			}
-		}
 
-		if ( empty( $cat_slugs ) ) {
+		if ( is_wp_error( $terms ) || empty( $terms ) ) {
 			return array();
 		}
 
 		$args = array(
-			&#039;category&#039; =&gt; $cat_slugs,
+			&#039;category&#039; =&gt; wc_list_pluck( $terms, &#039;slug&#039; ),
 			&#039;limit&#039;    =&gt; -1,
+			&#039;return&#039;   =&gt; &#039;ids&#039;,
 		);
 		return wc_get_products( $args );
 	}
@@ -1080,18 +1075,24 @@ class DataStore extends SqlQuery {
 		$included_products = array();
 		$operator          = $this-&gt;get_match_operator( $query_args );
 
-		if ( isset( $query_args[&#039;categories&#039;] ) &amp;&amp; is_array( $query_args[&#039;categories&#039;] ) &amp;&amp; count( $query_args[&#039;categories&#039;] ) &gt; 0 ) {
-			$included_products = $this-&gt;get_products_by_cat_ids( $query_args[&#039;categories&#039;] );
-			$included_products = empty( $included_products ) ? array( &#039;-1&#039; ) : wc_list_pluck( $included_products, &#039;get_id&#039; );
+		if ( isset( $query_args[&#039;category_includes&#039;] ) &amp;&amp; is_array( $query_args[&#039;category_includes&#039;] ) &amp;&amp; count( $query_args[&#039;category_includes&#039;] ) &gt; 0 ) {
+			$included_products = $this-&gt;get_products_by_cat_ids( $query_args[&#039;category_includes&#039;] );
+
+			// If no products were found in the specified categories, we will force an empty set
+			// by matching a product ID of -1, unless the filters are OR/any and products are specified.
+			if ( empty( $included_products ) ) {
+				$included_products = array( &#039;-1&#039; );
+			}
 		}
 
 		if ( isset( $query_args[&#039;product_includes&#039;] ) &amp;&amp; is_array( $query_args[&#039;product_includes&#039;] ) &amp;&amp; count( $query_args[&#039;product_includes&#039;] ) &gt; 0 ) {
 			if ( count( $included_products ) &gt; 0 ) {
 				if ( &#039;AND&#039; === $operator ) {
+					// AND results in an intersection between products from selected categories and manually included products.
 					$included_products = array_intersect( $included_products, $query_args[&#039;product_includes&#039;] );
 				} elseif ( &#039;OR&#039; === $operator ) {
-					// Union of products from selected categories and manually included products.
-					$included_products = array_unique( array_merge( $included_products, $query_args[&#039;product_includes&#039;] ) );
+					// OR results in a union of products from selected categories and manually included products.
+					$included_products = array_merge( $included_products, $query_args[&#039;product_includes&#039;] );
 				}
 			} else {
 				$included_products = $query_args[&#039;product_includes&#039;];
@@ -1119,11 +1120,38 @@ class DataStore extends SqlQuery {
 	 * @return string
 	 */
 	protected function get_included_variations( $query_args ) {
-		if ( isset( $query_args[&#039;variations&#039;] ) &amp;&amp; is_array( $query_args[&#039;variations&#039;] ) &amp;&amp; count( $query_args[&#039;variations&#039;] ) &gt; 0 ) {
-			$query_args[&#039;variations&#039;] = array_filter( array_map( &#039;intval&#039;, $query_args[&#039;variations&#039;] ) );
+		return $this-&gt;get_filtered_ids( $query_args, &#039;variation_includes&#039; );
+	}
+
+	/**
+	 * Returns comma separated ids of excluded variations, based on query arguments from the user.
+	 *
+	 * @param array $query_args Parameters supplied by the user.
+	 * @return string
+	 */
+	protected function get_excluded_variations( $query_args ) {
+		return $this-&gt;get_filtered_ids( $query_args, &#039;variation_excludes&#039; );
+	}
+
+	/**
+	 * Returns an array of ids of disallowed products, based on query arguments from the user.
+	 *
+	 * @param array $query_args Parameters supplied by the user.
+	 * @return array
+	 */
+	protected function get_excluded_products_array( $query_args ) {
+		$excluded_products = array();
+		$operator          = $this-&gt;get_match_operator( $query_args );
+
+		if ( isset( $query_args[&#039;category_excludes&#039;] ) &amp;&amp; is_array( $query_args[&#039;category_excludes&#039;] ) &amp;&amp; count( $query_args[&#039;category_excludes&#039;] ) &gt; 0 ) {
+			$excluded_products = $this-&gt;get_products_by_cat_ids( $query_args[&#039;category_excludes&#039;] );
 		}
 
-		return $this-&gt;get_filtered_ids( $query_args, &#039;variations&#039; );
+		if ( isset( $query_args[&#039;product_excludes&#039;] ) &amp;&amp; is_array( $query_args[&#039;product_excludes&#039;] ) &amp;&amp; count( $query_args[&#039;product_excludes&#039;] ) &gt; 0 ) {
+			$excluded_products = array_merge( $excluded_products, $query_args[&#039;product_excludes&#039;] );
+		}
+
+		return $excluded_products;
 	}
 
 	/**
@@ -1133,7 +1161,8 @@ class DataStore extends SqlQuery {
 	 * @return string
 	 */
 	protected function get_excluded_products( $query_args ) {
-		return $this-&gt;get_filtered_ids( $query_args, &#039;product_excludes&#039; );
+		$excluded_products = $this-&gt;get_excluded_products_array( $query_args );
+		return implode( &#039;,&#039;, $excluded_products );
 	}
 
 	/**
@@ -1143,7 +1172,7 @@ class DataStore extends SqlQuery {
 	 * @return string
 	 */
 	protected function get_included_categories( $query_args ) {
-		return $this-&gt;get_filtered_ids( $query_args, &#039;categories&#039; );
+		return $this-&gt;get_filtered_ids( $query_args, &#039;category_includes&#039; );
 	}
 
 	/**
@@ -1452,7 +1481,7 @@ class DataStore extends SqlQuery {
 
     <footer class="phpdocumentor phpdocumentor-footer">
     <div class="phpdocumentor-section">
-        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on November 30th, 2020 at 01:44 pm.</span>
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on December 10th, 2020 at 11:45 am.</span>
     </div>
 </footer>
 
@@ -1464,7 +1493,7 @@ class DataStore extends SqlQuery {
             'searchIndex': '..\/js\/searchIndex.json'
         };
     </script>
-    <script src="../js/searchIndex.js?updated=1606754662"></script>
-    <script src="../js/search.js?updated=1606754662"></script>
+    <script src="../js/searchIndex.js?updated=1607611542"></script>
+    <script src="../js/search.js?updated=1607611542"></script>
 </body>
 </html>

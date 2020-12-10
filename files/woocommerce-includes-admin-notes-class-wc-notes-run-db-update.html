@@ -9,9 +9,9 @@
     <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
     <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
     <link rel="stylesheet" href="../css/normalize.css">
-    <link rel="stylesheet" href="../css/base.css?updated=1606754661">
+    <link rel="stylesheet" href="../css/base.css?updated=1607611541">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/template.css?updated=1606754661">
+    <link rel="stylesheet" href="../css/template.css?updated=1607611541">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
             <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
@@ -102,6 +102,7 @@
                                     <li><a href="../packages/WooCommerce-Uninstaller.html"><abbr title="\WooCommerce\Uninstaller">Uninstaller</abbr></a></li>
                             </ul>
                                 <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceAdmin.html"><abbr title="\WoocommerceAdmin">WoocommerceAdmin</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceNavigation.html"><abbr title="\WoocommerceNavigation">WoocommerceNavigation</abbr></a></h3>
                                 <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdmin.html"><abbr title="\WooCommerceAdmin">WooCommerceAdmin</abbr></a></h3>
                         </section>
     
@@ -145,7 +146,7 @@
 defined( &#039;ABSPATH&#039; ) || exit;
 
 use \Automattic\Jetpack\Constants;
-use \Automattic\WooCommerce\Admin\Notes\WC_Admin_Note;
+use Automattic\WooCommerce\Admin\Notes\Note;
 
 /**
  * WC_Notes_Run_Db_Update.
@@ -193,7 +194,7 @@ class WC_Notes_Run_Db_Update {
 			// Remove weird duplicates. Leave the first one.
 			$current_notice = array_shift( $note_ids );
 			foreach ( $note_ids as $note_id ) {
-				$note = new WC_Admin_Note( $note_id );
+				$note = new Note( $note_id );
 				$data_store-&gt;delete( $note );
 			}
 			return $current_notice;
@@ -212,8 +213,8 @@ class WC_Notes_Run_Db_Update {
 			return;
 		}
 
-		$note = new WC_Admin_Note( $note_id );
-		$note-&gt;set_status( WC_Admin_Note::E_WC_ADMIN_NOTE_ACTIONED );
+		$note = new Note( $note_id );
+		$note-&gt;set_status( Note::E_WC_ADMIN_NOTE_ACTIONED );
 		$note-&gt;save();
 	}
 
@@ -224,7 +225,7 @@ class WC_Notes_Run_Db_Update {
 	 *  - actions are set up for the first &#039;Update database&#039; notice, and
 	 *  - URL for note&#039;s action is equal to the given URL (to check for potential nonce update).
 	 *
-	 * @param WC_Admin_Note      $note            Note to check.
+	 * @param Note               $note            Note to check.
 	 * @param string             $update_url      URL to check the note against.
 	 * @param array&lt;int, string&gt; $current_actions List of actions to check for.
 	 * @return bool
@@ -270,9 +271,9 @@ class WC_Notes_Run_Db_Update {
 		);
 
 		if ( $note_id ) {
-			$note = new WC_Admin_Note( $note_id );
+			$note = new Note( $note_id );
 		} else {
-			$note = new WC_Admin_Note();
+			$note = new Note();
 		}
 
 		// Check if the note needs to be updated (e.g. expired nonce or different note type stored in the previous run).
@@ -286,13 +287,13 @@ class WC_Notes_Run_Db_Update {
 			/* translators: %1$s: opening &lt;a&gt; tag %2$s: closing &lt;/a&gt; tag*/
 			. sprintf( &#039; &#039; . esc_html__( &#039;The database update process runs in the background and may take a little while, so please be patient. Advanced users can alternatively update via %1$sWP CLI%2$s.&#039;, &#039;woocommerce&#039; ), &#039;&lt;a href=&quot;https://github.com/woocommerce/woocommerce/wiki/Upgrading-the-database-using-WP-CLI&quot;&gt;&#039;, &#039;&lt;/a&gt;&#039; )
 		);
-		$note-&gt;set_type( WC_Admin_Note::E_WC_ADMIN_NOTE_UPDATE );
+		$note-&gt;set_type( Note::E_WC_ADMIN_NOTE_UPDATE );
 		$note-&gt;set_name( self::NOTE_NAME );
 		$note-&gt;set_content_data( (object) array() );
 		$note-&gt;set_source( &#039;woocommerce-core&#039; );
 		// In case db version is out of sync with WC version or during the next update, the notice needs to show up again,
 		// so set it to unactioned.
-		$note-&gt;set_status( WC_Admin_Note::E_WC_ADMIN_NOTE_UNACTIONED );
+		$note-&gt;set_status( Note::E_WC_ADMIN_NOTE_UNACTIONED );
 
 		// Set new actions.
 		$note-&gt;clear_actions();
@@ -316,7 +317,7 @@ class WC_Notes_Run_Db_Update {
 		$cron_disabled       = Constants::is_true( &#039;DISABLE_WP_CRON&#039; );
 		$cron_cta            = $cron_disabled ? __( &#039;You can manually run queued updates here.&#039;, &#039;woocommerce&#039; ) : __( &#039;View progress →&#039;, &#039;woocommerce&#039; );
 
-		$note = new WC_Admin_Note( $note_id );
+		$note = new Note( $note_id );
 		$note-&gt;set_title( __( &#039;WooCommerce database update in progress&#039;, &#039;woocommerce&#039; ) );
 		$note-&gt;set_content( __( &#039;WooCommerce is updating the database in the background. The database update process may take a little while, so please be patient.&#039;, &#039;woocommerce&#039; ) );
 
@@ -362,7 +363,7 @@ class WC_Notes_Run_Db_Update {
 			),
 		);
 
-		$note = new WC_Admin_Note( $note_id );
+		$note = new Note( $note_id );
 
 		// Check if the note needs to be updated (e.g. expired nonce or different note type stored in the previous run).
 		if ( self::note_up_to_date( $note, $hide_notices_url, wp_list_pluck( $note_actions, &#039;name&#039; ) ) ) {
@@ -401,7 +402,7 @@ class WC_Notes_Run_Db_Update {
 				return;
 			}
 
-			$note = new WC_Admin_Note( $note_id );
+			$note = new Note( $note_id );
 			if ( $note::E_WC_ADMIN_NOTE_ACTIONED === $note-&gt;get_status() ) {
 				// Db update not needed &amp;&amp; note actioned -&gt; don&#039;t show it.
 				return;
@@ -440,7 +441,7 @@ class WC_Notes_Run_Db_Update {
 
     <footer class="phpdocumentor phpdocumentor-footer">
     <div class="phpdocumentor-section">
-        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on November 30th, 2020 at 01:44 pm.</span>
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on December 10th, 2020 at 11:45 am.</span>
     </div>
 </footer>
 
@@ -452,7 +453,7 @@ class WC_Notes_Run_Db_Update {
             'searchIndex': '..\/js\/searchIndex.json'
         };
     </script>
-    <script src="../js/searchIndex.js?updated=1606754661"></script>
-    <script src="../js/search.js?updated=1606754661"></script>
+    <script src="../js/searchIndex.js?updated=1607611541"></script>
+    <script src="../js/search.js?updated=1607611541"></script>
 </body>
 </html>

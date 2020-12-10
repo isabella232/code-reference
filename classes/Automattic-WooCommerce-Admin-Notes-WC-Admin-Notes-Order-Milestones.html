@@ -9,9 +9,9 @@
     <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
     <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
     <link rel="stylesheet" href="../css/normalize.css">
-    <link rel="stylesheet" href="../css/base.css?updated=1606754673">
+    <link rel="stylesheet" href="../css/base.css?updated=1607611555">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/template.css?updated=1606754673">
+    <link rel="stylesheet" href="../css/template.css?updated=1607611555">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
             <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
@@ -96,6 +96,7 @@
                                     <li><a href="../packages/WooCommerce-Uninstaller.html"><abbr title="\WooCommerce\Uninstaller">Uninstaller</abbr></a></li>
                             </ul>
                                 <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceAdmin.html"><abbr title="\WoocommerceAdmin">WoocommerceAdmin</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceNavigation.html"><abbr title="\WoocommerceNavigation">WoocommerceNavigation</abbr></a></h3>
                                 <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdmin.html"><abbr title="\WooCommerceAdmin">WooCommerceAdmin</abbr></a></h3>
                         </section>
     
@@ -125,6 +126,9 @@
         <h2 class="phpdocumentor-content__title">
     WC_Admin_Notes_Order_Milestones
 
+        <span class="phpdocumentor-element__extends">
+        extends <a href="../classes/Automattic-WooCommerce-Admin-DeprecatedClassFacade.html"><abbr title="\Automattic\WooCommerce\Admin\DeprecatedClassFacade">DeprecatedClassFacade</abbr></a>
+    </span>
     
             <div class="phpdocumentor-element__package">
             in package
@@ -137,15 +141,28 @@
     </h2>
 
         <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Notes/WC_Admin_Notes_Order_Milestones.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-notes-wc-admin-notes-order-milestones.html#source-view.15">packages/woocommerce-admin/src/Notes/WC_Admin_Notes_Order_Milestones.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Notes/DeprecatedNotes.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-notes-deprecatednotes.html#source-view.566">packages/woocommerce-admin/src/Notes/DeprecatedNotes.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">15</span>
+    <span class="phpdocumentor-element-found-in__line">566</span>
 </aside>
 
-            <p class="phpdocumentor-summary">WC_Admin_Notes_Order_Milestones</p>
+            <p class="phpdocumentor-summary">WC_Admin_Notes_Order_Milestones.</p>
 
 
 
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">deprecated</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                                                        <section class="phpdocumentor-description"><p>since 1.7.0, use OrderMilestones</p></section>
+
+                </dd>
+                        </dl>
 
 
 
@@ -158,228 +175,60 @@
 </h3>
 
 <dl class="phpdocumentor-table-of-contents">
-            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
-    <a href="../classes/Automattic-WooCommerce-Admin-Notes-WC-Admin-Notes-Order-Milestones.html#constant_LAST_ORDER_MILESTONE_OPTION_KEY">LAST_ORDER_MILESTONE_OPTION_KEY</a>
-    <span>
-        &nbsp;= &#039;woocommerce_admin_last_orders_milestone&#039;                    </span>
-</dt>
-<dd>Option key name to store last order milestone.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
-    <a href="../classes/Automattic-WooCommerce-Admin-Notes-WC-Admin-Notes-Order-Milestones.html#constant_NOTE_NAME">NOTE_NAME</a>
-    <span>
-        &nbsp;= &#039;wc-admin-orders-milestone&#039;                    </span>
-</dt>
-<dd>Name of the &quot;other milestones&quot; note.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
-    <a href="../classes/Automattic-WooCommerce-Admin-Notes-WC-Admin-Notes-Order-Milestones.html#constant_PROCESS_ORDERS_MILESTONE_HOOK">PROCESS_ORDERS_MILESTONE_HOOK</a>
-    <span>
-        &nbsp;= &#039;wc_admin_process_orders_milestone&#039;                    </span>
-</dt>
-<dd>Hook to process order milestones.</dd>
-
                 <dt class="phpdocumentor-table-of-contents__entry -property -protected">
-    <a href="../classes/Automattic-WooCommerce-Admin-Notes-WC-Admin-Notes-Order-Milestones.html#property_allowed_statuses">$allowed_statuses</a>
+    <a href="../classes/Automattic-WooCommerce-Admin-Notes-WC-Admin-Notes-Order-Milestones.html#property_deprecated_in_version">$deprecated_in_version</a>
     <span>
-                &nbsp;: array            </span>
+                &nbsp;: string            </span>
 </dt>
-<dd>Allowed order statuses for calculating milestones.</dd>
+<dd>The version that this class was deprecated in.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -protected">
-    <a href="../classes/Automattic-WooCommerce-Admin-Notes-WC-Admin-Notes-Order-Milestones.html#property_milestones">$milestones</a>
+    <a href="../classes/Automattic-WooCommerce-Admin-Notes-WC-Admin-Notes-Order-Milestones.html#property_facade_over_classname">$facade_over_classname</a>
     <span>
-                &nbsp;: array            </span>
+                &nbsp;: string            </span>
 </dt>
-<dd>Further order milestone thresholds.</dd>
+<dd>The name of the non-deprecated class that this facade covers.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -protected">
-    <a href="../classes/Automattic-WooCommerce-Admin-Notes-WC-Admin-Notes-Order-Milestones.html#property_orders_count">$orders_count</a>
+    <a href="../classes/Automattic-WooCommerce-Admin-DeprecatedClassFacade.html#property_instance">$instance</a>
     <span>
-                &nbsp;: int            </span>
+                &nbsp;: object            </span>
 </dt>
-<dd>Orders count cache.</dd>
+<dd>The instance that this facade covers over.</dd>
 
                 <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="../classes/Automattic-WooCommerce-Admin-Notes-WC-Admin-Notes-Order-Milestones.html#method___construct">__construct()</a>
+    <a href="../classes/Automattic-WooCommerce-Admin-DeprecatedClassFacade.html#method___call">__call()</a>
     <span>
                         &nbsp;: mixed    </span>
 </dt>
-<dd>Delay hook attachment until after the WC post types have been registered.</dd>
+<dd>Executes when calling any function on an instance of this class.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="../classes/Automattic-WooCommerce-Admin-Notes-WC-Admin-Notes-Order-Milestones.html#method_are_milestones_enabled">are_milestones_enabled()</a>
-    <span>
-                        &nbsp;: bool    </span>
-</dt>
-<dd>Convenience method to see if the milestone notes are enabled.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="../classes/Automattic-WooCommerce-Admin-Notes-WC-Admin-Notes-Order-Milestones.html#method_backfill_last_milestone">backfill_last_milestone()</a>
+    <a href="../classes/Automattic-WooCommerce-Admin-DeprecatedClassFacade.html#method___callStatic">__callStatic()</a>
     <span>
                         &nbsp;: mixed    </span>
 </dt>
-<dd>Backfill the store&#039;s current milestone.</dd>
+<dd>Executes when calling any static function on this class.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="../classes/Automattic-WooCommerce-Admin-Notes-WC-Admin-Notes-Order-Milestones.html#method_clear_scheduled_event">clear_scheduled_event()</a>
+    <a href="../classes/Automattic-WooCommerce-Admin-DeprecatedClassFacade.html#method___construct">__construct()</a>
     <span>
                         &nbsp;: mixed    </span>
 </dt>
-<dd>Clear out our hourly milestone hook upon plugin deactivation.</dd>
+<dd>Constructor.</dd>
 
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="../classes/Automattic-WooCommerce-Admin-Notes-WC-Admin-Notes-Order-Milestones.html#method_get_current_milestone">get_current_milestone()</a>
-    <span>
-                        &nbsp;: int    </span>
-</dt>
-<dd>Calculate the current orders milestone.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="../classes/Automattic-WooCommerce-Admin-Notes-WC-Admin-Notes-Order-Milestones.html#method_get_last_milestone">get_last_milestone()</a>
-    <span>
-                        &nbsp;: int    </span>
-</dt>
-<dd>Get the store&#039;s last milestone.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="../classes/Automattic-WooCommerce-Admin-Notes-WC-Admin-Notes-Order-Milestones.html#method_get_note_action_for_milestone">get_note_action_for_milestone()</a>
-    <span>
-                        &nbsp;: array    </span>
-</dt>
-<dd>Get the appropriate note action for a given milestone.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="../classes/Automattic-WooCommerce-Admin-Notes-WC-Admin-Notes-Order-Milestones.html#method_get_note_content_for_milestone">get_note_content_for_milestone()</a>
-    <span>
-                        &nbsp;: string    </span>
-</dt>
-<dd>Get the appropriate note content for a given milestone.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="../classes/Automattic-WooCommerce-Admin-Notes-WC-Admin-Notes-Order-Milestones.html#method_get_note_title_for_milestone">get_note_title_for_milestone()</a>
-    <span>
-                        &nbsp;: string    </span>
-</dt>
-<dd>Get the appropriate note title for a given milestone.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="../classes/Automattic-WooCommerce-Admin-Notes-WC-Admin-Notes-Order-Milestones.html#method_get_orders_count">get_orders_count()</a>
-    <span>
-                        &nbsp;: int    </span>
-</dt>
-<dd>Get the total count of orders (in the allowed statuses).</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="../classes/Automattic-WooCommerce-Admin-Notes-WC-Admin-Notes-Order-Milestones.html#method_init">init()</a>
+            <dt class="phpdocumentor-table-of-contents__entry -method -private">
+    <a href="../classes/Automattic-WooCommerce-Admin-DeprecatedClassFacade.html#method_log_deprecation">log_deprecation()</a>
     <span>
                         &nbsp;: mixed    </span>
 </dt>
-<dd>Hook everything up.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="../classes/Automattic-WooCommerce-Admin-Notes-WC-Admin-Notes-Order-Milestones.html#method_other_milestones">other_milestones()</a>
-    <span>
-                        &nbsp;: mixed    </span>
-</dt>
-<dd>Add milestone notes for other significant thresholds.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="../classes/Automattic-WooCommerce-Admin-Notes-WC-Admin-Notes-Order-Milestones.html#method_set_last_milestone">set_last_milestone()</a>
-    <span>
-                        &nbsp;: mixed    </span>
-</dt>
-<dd>Update the last reached milestone.</dd>
+<dd>Log a deprecation to the error log.</dd>
 
         </dl>
 
 
 
         
-    <section class="phpdocumentor-constants">
-        <h3 class="phpdocumentor-elements__header" id="constants">
-            Constants
-            <a href="#constants" class="headerlink"><i class="fas fa-link"></i></a>
-        </h3>
-                    <article class="phpdocumentor-element -constant -public ">
-    <h4 class="phpdocumentor-element__name" id="constant_LAST_ORDER_MILESTONE_OPTION_KEY">
-        LAST_ORDER_MILESTONE_OPTION_KEY
-        <a href="#constant_LAST_ORDER_MILESTONE_OPTION_KEY" class="headerlink"><i class="fas fa-link"></i></a>
-    </h4>
-
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Notes/WC_Admin_Notes_Order_Milestones.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-notes-wc-admin-notes-order-milestones.html#source-view.24">packages/woocommerce-admin/src/Notes/WC_Admin_Notes_Order_Milestones.php</a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">24</span>
-</aside>
-
-        <p class="phpdocumentor-summary">Option key name to store last order milestone.</p>
-
-    <code class="phpdocumentor-signature phpdocumentor-code ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-    <span class="phpdocumentor-signature__type">mixed</span>
-    <span class="phpdocumentor-signature__name">LAST_ORDER_MILESTONE_OPTION_KEY</span>
-    = <span class="phpdocumentor-signature__default-value">&#039;woocommerce_admin_last_orders_milestone&#039;</span>
-</code>
-
-
-    
-    
-
-</article>
-                    <article class="phpdocumentor-element -constant -public ">
-    <h4 class="phpdocumentor-element__name" id="constant_NOTE_NAME">
-        NOTE_NAME
-        <a href="#constant_NOTE_NAME" class="headerlink"><i class="fas fa-link"></i></a>
-    </h4>
-
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Notes/WC_Admin_Notes_Order_Milestones.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-notes-wc-admin-notes-order-milestones.html#source-view.19">packages/woocommerce-admin/src/Notes/WC_Admin_Notes_Order_Milestones.php</a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">19</span>
-</aside>
-
-        <p class="phpdocumentor-summary">Name of the &quot;other milestones&quot; note.</p>
-
-    <code class="phpdocumentor-signature phpdocumentor-code ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-    <span class="phpdocumentor-signature__type">mixed</span>
-    <span class="phpdocumentor-signature__name">NOTE_NAME</span>
-    = <span class="phpdocumentor-signature__default-value">&#039;wc-admin-orders-milestone&#039;</span>
-</code>
-
-
-    
-    
-
-</article>
-                    <article class="phpdocumentor-element -constant -public ">
-    <h4 class="phpdocumentor-element__name" id="constant_PROCESS_ORDERS_MILESTONE_HOOK">
-        PROCESS_ORDERS_MILESTONE_HOOK
-        <a href="#constant_PROCESS_ORDERS_MILESTONE_HOOK" class="headerlink"><i class="fas fa-link"></i></a>
-    </h4>
-
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Notes/WC_Admin_Notes_Order_Milestones.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-notes-wc-admin-notes-order-milestones.html#source-view.29">packages/woocommerce-admin/src/Notes/WC_Admin_Notes_Order_Milestones.php</a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">29</span>
-</aside>
-
-        <p class="phpdocumentor-summary">Hook to process order milestones.</p>
-
-    <code class="phpdocumentor-signature phpdocumentor-code ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-    <span class="phpdocumentor-signature__type">mixed</span>
-    <span class="phpdocumentor-signature__name">PROCESS_ORDERS_MILESTONE_HOOK</span>
-    = <span class="phpdocumentor-signature__default-value">&#039;wc_admin_process_orders_milestone&#039;</span>
-</code>
-
-
-    
-    
-
-</article>
-            </section>
 
         
     <section class="phpdocumentor-properties">
@@ -392,27 +241,58 @@
             phpdocumentor-element
             -property
             -protected
-                                                        "
+            -static                                            "
 >
-    <h4 class="phpdocumentor-element__name" id="property_allowed_statuses">
-        $allowed_statuses
-        <a href="#property_allowed_statuses" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="property_deprecated_in_version">
+        $deprecated_in_version
+        <a href="#property_deprecated_in_version" class="headerlink"><i class="fas fa-link"></i></a>
         <span class="phpdocumentor-element__modifiers">
                                 </span>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Notes/WC_Admin_Notes_Order_Milestones.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-notes-wc-admin-notes-order-milestones.html#source-view.36">packages/woocommerce-admin/src/Notes/WC_Admin_Notes_Order_Milestones.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Notes/DeprecatedNotes.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-notes-deprecatednotes.html#source-view.579">packages/woocommerce-admin/src/Notes/DeprecatedNotes.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">36</span>
+    <span class="phpdocumentor-element-found-in__line">579</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Allowed order statuses for calculating milestones.</p>
+        <p class="phpdocumentor-summary">The version that this class was deprecated in.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">protected</span>
-        <span class="phpdocumentor-signature__type">array</span>
-    <span class="phpdocumentor-signature__name">$allowed_statuses</span>
-     = <span class="phpdocumentor-signature__default-value">array(&#039;pending&#039;, &#039;processing&#039;, &#039;completed&#039;)</span></code>
+    <span class="phpdocumentor-signature__static">static</span>    <span class="phpdocumentor-signature__type">string</span>
+    <span class="phpdocumentor-signature__name">$deprecated_in_version</span>
+     = <span class="phpdocumentor-signature__default-value">&#039;1.7.0&#039;</span></code>
+
+    
+    
+
+</article>
+                    <article
+        class="
+            phpdocumentor-element
+            -property
+            -protected
+            -static                                            "
+>
+    <h4 class="phpdocumentor-element__name" id="property_facade_over_classname">
+        $facade_over_classname
+        <a href="#property_facade_over_classname" class="headerlink"><i class="fas fa-link"></i></a>
+        <span class="phpdocumentor-element__modifiers">
+                                </span>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Notes/DeprecatedNotes.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-notes-deprecatednotes.html#source-view.572">packages/woocommerce-admin/src/Notes/DeprecatedNotes.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">572</span>
+</aside>
+
+        <p class="phpdocumentor-summary">The name of the non-deprecated class that this facade covers.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">protected</span>
+    <span class="phpdocumentor-signature__static">static</span>    <span class="phpdocumentor-signature__type">string</span>
+    <span class="phpdocumentor-signature__name">$facade_over_classname</span>
+     = <span class="phpdocumentor-signature__default-value">&#039;Automattic\WooCommerce\Admin\Notes\OrderMilestones&#039;</span></code>
 
     
     
@@ -425,56 +305,25 @@
             -protected
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="property_milestones">
-        $milestones
-        <a href="#property_milestones" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="property_instance">
+        $instance
+        <a href="#property_instance" class="headerlink"><i class="fas fa-link"></i></a>
         <span class="phpdocumentor-element__modifiers">
                                 </span>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Notes/WC_Admin_Notes_Order_Milestones.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-notes-wc-admin-notes-order-milestones.html#source-view.54">packages/woocommerce-admin/src/Notes/WC_Admin_Notes_Order_Milestones.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/DeprecatedClassFacade.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-deprecatedclassfacade.html#source-view.33">packages/woocommerce-admin/src/DeprecatedClassFacade.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">54</span>
+    <span class="phpdocumentor-element-found-in__line">33</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Further order milestone thresholds.</p>
+        <p class="phpdocumentor-summary">The instance that this facade covers over.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">protected</span>
-        <span class="phpdocumentor-signature__type">array</span>
-    <span class="phpdocumentor-signature__name">$milestones</span>
-     = <span class="phpdocumentor-signature__default-value">array(1, 10, 100, 250, 500, 1000, 5000, 10000, 500000, 1000000)</span></code>
-
-    
-    
-
-</article>
-                    <article
-        class="
-            phpdocumentor-element
-            -property
-            -protected
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="property_orders_count">
-        $orders_count
-        <a href="#property_orders_count" class="headerlink"><i class="fas fa-link"></i></a>
-        <span class="phpdocumentor-element__modifiers">
-                                </span>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Notes/WC_Admin_Notes_Order_Milestones.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-notes-wc-admin-notes-order-milestones.html#source-view.47">packages/woocommerce-admin/src/Notes/WC_Admin_Notes_Order_Milestones.php</a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">47</span>
-</aside>
-
-        <p class="phpdocumentor-summary">Orders count cache.</p>
-
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">protected</span>
-        <span class="phpdocumentor-signature__type">int</span>
-    <span class="phpdocumentor-signature__name">$orders_count</span>
-     = <span class="phpdocumentor-signature__default-value">null</span></code>
+        <span class="phpdocumentor-signature__type">object</span>
+    <span class="phpdocumentor-signature__name">$instance</span>
+    </code>
 
     
     
@@ -493,115 +342,120 @@
             -public
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method___call">
+        __call()
+        <a href="#method___call" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/DeprecatedClassFacade.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-deprecatedclassfacade.html#source-view.64">packages/woocommerce-admin/src/DeprecatedClassFacade.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">64</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Executes when calling any function on an instance of this class.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">__call</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$name</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&nbsp;</span><span class="phpdocumentor-signature__argument__name">$arguments</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$name</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>The name of the function being called.</p></section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$arguments</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>An array of the arguments to the function call.</p></section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">mixed</span>
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                    -static                    "
+>
+    <h4 class="phpdocumentor-element__name" id="method___callStatic">
+        __callStatic()
+        <a href="#method___callStatic" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/DeprecatedClassFacade.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-deprecatedclassfacade.html#source-view.82">packages/woocommerce-admin/src/DeprecatedClassFacade.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">82</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Executes when calling any static function on this class.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+            <span class="phpdocumentor-signature__static">static</span>    <span class="phpdocumentor-signature__name">__callStatic</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$name</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&nbsp;</span><span class="phpdocumentor-signature__argument__name">$arguments</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$name</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>The name of the function being called.</p></section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$arguments</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>An array of the arguments to the function call.</p></section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">mixed</span>
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method___construct">
         __construct()
         <a href="#method___construct" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Notes/WC_Admin_Notes_Order_Milestones.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-notes-wc-admin-notes-order-milestones.html#source-view.72">packages/woocommerce-admin/src/Notes/WC_Admin_Notes_Order_Milestones.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/DeprecatedClassFacade.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-deprecatedclassfacade.html#source-view.38">packages/woocommerce-admin/src/DeprecatedClassFacade.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">72</span>
+    <span class="phpdocumentor-element-found-in__line">38</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Delay hook attachment until after the WC post types have been registered.</p>
+        <p class="phpdocumentor-summary">Constructor.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
                 <span class="phpdocumentor-signature__name">__construct</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
 
-        <section class="phpdocumentor-description"><p>This is required for retrieving the order count.</p></section>
-
-    
-    
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">mixed</span>
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="method_are_milestones_enabled">
-        are_milestones_enabled()
-        <a href="#method_are_milestones_enabled" class="headerlink"><i class="fas fa-link"></i></a>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Notes/WC_Admin_Notes_Order_Milestones.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-notes-wc-admin-notes-order-milestones.html#source-view.275">packages/woocommerce-admin/src/Notes/WC_Admin_Notes_Order_Milestones.php</a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">275</span>
-</aside>
-
-        <p class="phpdocumentor-summary">Convenience method to see if the milestone notes are enabled.</p>
-
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">are_milestones_enabled</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool</span></code>
-
-    
-    
-    
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">bool</span>
-            &mdash; <span class="phpdocumentor-return-value__description">True if milestone notifications are enabled.</span>
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="method_backfill_last_milestone">
-        backfill_last_milestone()
-        <a href="#method_backfill_last_milestone" class="headerlink"><i class="fas fa-link"></i></a>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Notes/WC_Admin_Notes_Order_Milestones.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-notes-wc-admin-notes-order-milestones.html#source-view.126">packages/woocommerce-admin/src/Notes/WC_Admin_Notes_Order_Milestones.php</a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">126</span>
-</aside>
-
-        <p class="phpdocumentor-summary">Backfill the store&#039;s current milestone.</p>
-
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">backfill_last_milestone</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
-
-        <section class="phpdocumentor-description"><p>Used to avoid celebrating milestones that were reached before plugin activation.</p></section>
-
-    
-    
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">mixed</span>
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="method_clear_scheduled_event">
-        clear_scheduled_event()
-        <a href="#method_clear_scheduled_event" class="headerlink"><i class="fas fa-link"></i></a>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Notes/WC_Admin_Notes_Order_Milestones.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-notes-wc-admin-notes-order-milestones.html#source-view.102">packages/woocommerce-admin/src/Notes/WC_Admin_Notes_Order_Milestones.php</a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">102</span>
-</aside>
-
-        <p class="phpdocumentor-summary">Clear out our hourly milestone hook upon plugin deactivation.</p>
-
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">clear_scheduled_event</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
-
     
     
     
@@ -613,325 +467,34 @@
                     <article
         class="phpdocumentor-element
             -method
-            -public
-                                                        "
+            -private
+                                    -static                    "
 >
-    <h4 class="phpdocumentor-element__name" id="method_get_current_milestone">
-        get_current_milestone()
-        <a href="#method_get_current_milestone" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_log_deprecation">
+        log_deprecation()
+        <a href="#method_log_deprecation" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Notes/WC_Admin_Notes_Order_Milestones.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-notes-wc-admin-notes-order-milestones.html#source-view.160">packages/woocommerce-admin/src/Notes/WC_Admin_Notes_Order_Milestones.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/DeprecatedClassFacade.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-deprecatedclassfacade.html#source-view.47">packages/woocommerce-admin/src/DeprecatedClassFacade.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">160</span>
+    <span class="phpdocumentor-element-found-in__line">47</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Calculate the current orders milestone.</p>
+        <p class="phpdocumentor-summary">Log a deprecation to the error log.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">get_current_milestone</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">int</span></code>
-
-        <section class="phpdocumentor-description"><p>Based on the threshold values in $this-&gt;milestones.</p></section>
-
-    
-    
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">int</span>
-            &mdash; <span class="phpdocumentor-return-value__description">Current orders milestone.</span>
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="method_get_last_milestone">
-        get_last_milestone()
-        <a href="#method_get_last_milestone" class="headerlink"><i class="fas fa-link"></i></a>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Notes/WC_Admin_Notes_Order_Milestones.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-notes-wc-admin-notes-order-milestones.html#source-view.140">packages/woocommerce-admin/src/Notes/WC_Admin_Notes_Order_Milestones.php</a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">140</span>
-</aside>
-
-        <p class="phpdocumentor-summary">Get the store&#039;s last milestone.</p>
-
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">get_last_milestone</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">int</span></code>
-
-    
-    
-    
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">int</span>
-            &mdash; <span class="phpdocumentor-return-value__description">Last milestone reached.</span>
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="method_get_note_action_for_milestone">
-        get_note_action_for_milestone()
-        <a href="#method_get_note_action_for_milestone" class="headerlink"><i class="fas fa-link"></i></a>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Notes/WC_Admin_Notes_Order_Milestones.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-notes-wc-admin-notes-order-milestones.html#source-view.234">packages/woocommerce-admin/src/Notes/WC_Admin_Notes_Order_Milestones.php</a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">234</span>
-</aside>
-
-        <p class="phpdocumentor-summary">Get the appropriate note action for a given milestone.</p>
-
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">get_note_action_for_milestone</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$milestone</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array</span></code>
+    <span class="phpdocumentor-signature__visibility">private</span>
+            <span class="phpdocumentor-signature__static">static</span>    <span class="phpdocumentor-signature__name">log_deprecation</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$function</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
 
     
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$milestone</span>
-                : <span class="phpdocumentor-signature__argument__return-type">int</span>
+                <span class="phpdocumentor-signature__argument__name">$function</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"><p>Order milestone.</p></section>
-
-            </dd>
-            </dl>
-
-    
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array</span>
-            &mdash; <span class="phpdocumentor-return-value__description">Note actoion (name, label, query) for the milestone.</span>
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="method_get_note_content_for_milestone">
-        get_note_content_for_milestone()
-        <a href="#method_get_note_content_for_milestone" class="headerlink"><i class="fas fa-link"></i></a>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Notes/WC_Admin_Notes_Order_Milestones.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-notes-wc-admin-notes-order-milestones.html#source-view.208">packages/woocommerce-admin/src/Notes/WC_Admin_Notes_Order_Milestones.php</a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">208</span>
-</aside>
-
-        <p class="phpdocumentor-summary">Get the appropriate note content for a given milestone.</p>
-
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">get_note_content_for_milestone</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$milestone</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
-
-    
-        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
-    <dl class="phpdocumentor-argument-list">
-                    <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$milestone</span>
-                : <span class="phpdocumentor-signature__argument__return-type">int</span>
-                            </dt>
-            <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"><p>Order milestone.</p></section>
-
-            </dd>
-            </dl>
-
-    
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">string</span>
-            &mdash; <span class="phpdocumentor-return-value__description">Note content for the milestone.</span>
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="method_get_note_title_for_milestone">
-        get_note_title_for_milestone()
-        <a href="#method_get_note_title_for_milestone" class="headerlink"><i class="fas fa-link"></i></a>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Notes/WC_Admin_Notes_Order_Milestones.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-notes-wc-admin-notes-order-milestones.html#source-view.179">packages/woocommerce-admin/src/Notes/WC_Admin_Notes_Order_Milestones.php</a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">179</span>
-</aside>
-
-        <p class="phpdocumentor-summary">Get the appropriate note title for a given milestone.</p>
-
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">get_note_title_for_milestone</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$milestone</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
-
-    
-        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
-    <dl class="phpdocumentor-argument-list">
-                    <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$milestone</span>
-                : <span class="phpdocumentor-signature__argument__return-type">int</span>
-                            </dt>
-            <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"><p>Order milestone.</p></section>
-
-            </dd>
-            </dl>
-
-    
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">string</span>
-            &mdash; <span class="phpdocumentor-return-value__description">Note title for the milestone.</span>
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="method_get_orders_count">
-        get_orders_count()
-        <a href="#method_get_orders_count" class="headerlink"><i class="fas fa-link"></i></a>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Notes/WC_Admin_Notes_Order_Milestones.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-notes-wc-admin-notes-order-milestones.html#source-view.112">packages/woocommerce-admin/src/Notes/WC_Admin_Notes_Order_Milestones.php</a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">112</span>
-</aside>
-
-        <p class="phpdocumentor-summary">Get the total count of orders (in the allowed statuses).</p>
-
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">get_orders_count</span><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><span class="phpdocumentor-signature__argument__name">$no_cache</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">false</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">int</span></code>
-
-    
-        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
-    <dl class="phpdocumentor-argument-list">
-                    <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$no_cache</span>
-                : <span class="phpdocumentor-signature__argument__return-type">bool</span>
-                 = <span class="phpdocumentor-signature__argument__default-value">false</span>            </dt>
-            <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"><p>Optional. Skip cache.</p></section>
-
-            </dd>
-            </dl>
-
-    
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">int</span>
-            &mdash; <span class="phpdocumentor-return-value__description">Total orders count.</span>
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="method_init">
-        init()
-        <a href="#method_init" class="headerlink"><i class="fas fa-link"></i></a>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Notes/WC_Admin_Notes_Order_Milestones.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-notes-wc-admin-notes-order-milestones.html#source-view.89">packages/woocommerce-admin/src/Notes/WC_Admin_Notes_Order_Milestones.php</a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">89</span>
-</aside>
-
-        <p class="phpdocumentor-summary">Hook everything up.</p>
-
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">init</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
-
-    
-    
-    
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">mixed</span>
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="method_other_milestones">
-        other_milestones()
-        <a href="#method_other_milestones" class="headerlink"><i class="fas fa-link"></i></a>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Notes/WC_Admin_Notes_Order_Milestones.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-notes-wc-admin-notes-order-milestones.html#source-view.291">packages/woocommerce-admin/src/Notes/WC_Admin_Notes_Order_Milestones.php</a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">291</span>
-</aside>
-
-        <p class="phpdocumentor-summary">Add milestone notes for other significant thresholds.</p>
-
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">other_milestones</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
-
-    
-    
-    
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">mixed</span>
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="method_set_last_milestone">
-        set_last_milestone()
-        <a href="#method_set_last_milestone" class="headerlink"><i class="fas fa-link"></i></a>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Notes/WC_Admin_Notes_Order_Milestones.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-notes-wc-admin-notes-order-milestones.html#source-view.149">packages/woocommerce-admin/src/Notes/WC_Admin_Notes_Order_Milestones.php</a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">149</span>
-</aside>
-
-        <p class="phpdocumentor-summary">Update the last reached milestone.</p>
-
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">set_last_milestone</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$milestone</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
-
-    
-        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
-    <dl class="phpdocumentor-argument-list">
-                    <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$milestone</span>
-                : <span class="phpdocumentor-signature__argument__return-type">int</span>
-                            </dt>
-            <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"><p>Last milestone reached.</p></section>
+                    <section class="phpdocumentor-description"><p>The name of the deprecated function being called.</p></section>
 
             </dd>
             </dl>
@@ -953,7 +516,7 @@
 
     <footer class="phpdocumentor phpdocumentor-footer">
     <div class="phpdocumentor-section">
-        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on November 30th, 2020 at 01:44 pm.</span>
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on December 10th, 2020 at 11:45 am.</span>
     </div>
 </footer>
 
@@ -965,7 +528,7 @@
             'searchIndex': '..\/js\/searchIndex.json'
         };
     </script>
-    <script src="../js/searchIndex.js?updated=1606754673"></script>
-    <script src="../js/search.js?updated=1606754673"></script>
+    <script src="../js/searchIndex.js?updated=1607611555"></script>
+    <script src="../js/search.js?updated=1607611555"></script>
 </body>
 </html>

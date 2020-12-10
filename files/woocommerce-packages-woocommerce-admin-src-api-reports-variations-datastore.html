@@ -9,9 +9,9 @@
     <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
     <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
     <link rel="stylesheet" href="../css/normalize.css">
-    <link rel="stylesheet" href="../css/base.css?updated=1606754663">
+    <link rel="stylesheet" href="../css/base.css?updated=1607611542">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/template.css?updated=1606754663">
+    <link rel="stylesheet" href="../css/template.css?updated=1607611542">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
             <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
@@ -102,6 +102,7 @@
                                     <li><a href="../packages/WooCommerce-Uninstaller.html"><abbr title="\WooCommerce\Uninstaller">Uninstaller</abbr></a></li>
                             </ul>
                                 <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceAdmin.html"><abbr title="\WoocommerceAdmin">WoocommerceAdmin</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceNavigation.html"><abbr title="\WoocommerceNavigation">WoocommerceNavigation</abbr></a></h3>
                                 <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdmin.html"><abbr title="\WooCommerceAdmin">WooCommerceAdmin</abbr></a></h3>
                         </section>
     
@@ -237,7 +238,7 @@ class DataStore extends ReportsDataStore implements DataStoreInterface {
 		}
 
 		$table_name = self::get_db_table_name();
-		$join       = &quot;JOIN {$wpdb-&gt;postmeta} AS postmeta ON {$table_name}.variation_id = postmeta.post_id AND postmeta.meta_key = &#039;_sku&#039;&quot;;
+		$join       = &quot;LEFT JOIN {$wpdb-&gt;postmeta} AS postmeta ON {$table_name}.variation_id = postmeta.post_id AND postmeta.meta_key = &#039;_sku&#039;&quot;;
 
 		if ( &#039;inner&#039; === $arg_name ) {
 			$this-&gt;subquery-&gt;add_sql_clause( &#039;join&#039;, $join );
@@ -254,12 +255,15 @@ class DataStore extends ReportsDataStore implements DataStoreInterface {
 	protected function add_sql_query_params( $query_args ) {
 		global $wpdb;
 		$order_product_lookup_table = self::get_db_table_name();
+		$order_stats_lookup_table   = $wpdb-&gt;prefix . &#039;wc_order_stats&#039;;
+		$where_subquery             = array();
 
 		$this-&gt;add_time_period_sql_params( $query_args, $order_product_lookup_table );
 		$this-&gt;get_limit_sql_params( $query_args );
 		$this-&gt;add_order_by_sql_params( $query_args );
 
-		if ( count( $query_args[&#039;variations&#039;] ) &gt; 0 ) {
+		$included_variations = $this-&gt;get_included_variations( $query_args );
+		if ( $included_variations &gt; 0 ) {
 			$this-&gt;add_from_sql_params( $query_args, &#039;outer&#039; );
 		} else {
 			$this-&gt;add_from_sql_params( $query_args, &#039;inner&#039; );
@@ -270,15 +274,40 @@ class DataStore extends ReportsDataStore implements DataStoreInterface {
 			$this-&gt;subquery-&gt;add_sql_clause( &#039;where&#039;, &quot;AND {$order_product_lookup_table}.product_id IN ({$included_products})&quot; );
 		}
 
-		if ( count( $query_args[&#039;variations&#039;] ) &gt; 0 ) {
-			$allowed_variations_str = self::get_filtered_ids( $query_args, &#039;variations&#039; );
-			$this-&gt;subquery-&gt;add_sql_clause( &#039;where&#039;, &quot;AND {$order_product_lookup_table}.variation_id IN ({$allowed_variations_str})&quot; );
+		$excluded_products = $this-&gt;get_excluded_products( $query_args );
+		if ( $excluded_products ) {
+			$this-&gt;subquery-&gt;add_sql_clause( &#039;where&#039;, &quot;AND {$order_product_lookup_table}.product_id NOT IN ({$excluded_products})&quot; );
+		}
+
+		if ( $included_variations ) {
+			$this-&gt;subquery-&gt;add_sql_clause( &#039;where&#039;, &quot;AND {$order_product_lookup_table}.variation_id IN ({$included_variations})&quot; );
+		} elseif ( ! $included_products ) {
+			$this-&gt;subquery-&gt;add_sql_clause( &#039;where&#039;, &quot;AND {$order_product_lookup_table}.variation_id != 0&quot; );
 		}
 
 		$order_status_filter = $this-&gt;get_status_subquery( $query_args );
 		if ( $order_status_filter ) {
-			$this-&gt;subquery-&gt;add_sql_clause( &#039;join&#039;, &quot;JOIN {$wpdb-&gt;prefix}wc_order_stats ON {$order_product_lookup_table}.order_id = {$wpdb-&gt;prefix}wc_order_stats.order_id&quot; );
+			$this-&gt;subquery-&gt;add_sql_clause( &#039;join&#039;, &quot;JOIN {$order_stats_lookup_table} ON {$order_product_lookup_table}.order_id = {$order_stats_lookup_table}.order_id&quot; );
 			$this-&gt;subquery-&gt;add_sql_clause( &#039;where&#039;, &quot;AND ( {$order_status_filter} )&quot; );
+		}
+
+		$attribute_subqueries = $this-&gt;get_attribute_subqueries( $query_args );
+		if ( $attribute_subqueries[&#039;join&#039;] &amp;&amp; $attribute_subqueries[&#039;where&#039;] ) {
+			// JOIN on product lookup if we haven&#039;t already.
+			if ( ! $order_status_filter ) {
+				$this-&gt;subquery-&gt;add_sql_clause( &#039;join&#039;, &quot;JOIN {$order_product_lookup_table} ON {$order_stats_lookup_table}.order_id = {$order_product_lookup_table}.order_id&quot; );
+			}
+			// Add JOINs for matching attributes.
+			foreach ( $attribute_subqueries[&#039;join&#039;] as $attribute_join ) {
+				$this-&gt;subquery-&gt;add_sql_clause( &#039;join&#039;, $attribute_join );
+			}
+			// Add WHEREs for matching attributes.
+			$where_subquery = array_merge( $where_subquery, $attribute_subqueries[&#039;where&#039;] );
+		}
+
+		if ( 0 &lt; count( $where_subquery ) ) {
+			$operator = $this-&gt;get_match_operator( $query_args );
+			$this-&gt;subquery-&gt;add_sql_clause( &#039;where&#039;, &#039;AND (&#039; . implode( &quot; {$operator} &quot;, $where_subquery ) . &#039;)&#039; );
 		}
 	}
 
@@ -376,16 +405,16 @@ class DataStore extends ReportsDataStore implements DataStoreInterface {
 
 		// These defaults are only partially applied when used via REST API, as that has its own defaults.
 		$defaults   = array(
-			&#039;per_page&#039;      =&gt; get_option( &#039;posts_per_page&#039; ),
-			&#039;page&#039;          =&gt; 1,
-			&#039;order&#039;         =&gt; &#039;DESC&#039;,
-			&#039;orderby&#039;       =&gt; &#039;date&#039;,
-			&#039;before&#039;        =&gt; TimeInterval::default_before(),
-			&#039;after&#039;         =&gt; TimeInterval::default_after(),
-			&#039;fields&#039;        =&gt; &#039;*&#039;,
-			&#039;products&#039;      =&gt; array(),
-			&#039;variations&#039;    =&gt; array(),
-			&#039;extended_info&#039; =&gt; false,
+			&#039;per_page&#039;           =&gt; get_option( &#039;posts_per_page&#039; ),
+			&#039;page&#039;               =&gt; 1,
+			&#039;order&#039;              =&gt; &#039;DESC&#039;,
+			&#039;orderby&#039;            =&gt; &#039;date&#039;,
+			&#039;before&#039;             =&gt; TimeInterval::default_before(),
+			&#039;after&#039;              =&gt; TimeInterval::default_after(),
+			&#039;fields&#039;             =&gt; &#039;*&#039;,
+			&#039;product_includes&#039;   =&gt; array(),
+			&#039;variation_includes&#039; =&gt; array(),
+			&#039;extended_info&#039;      =&gt; false,
 		);
 		$query_args = wp_parse_args( $query_args, $defaults );
 		$this-&gt;normalize_timezones( $query_args, $defaults );
@@ -407,22 +436,28 @@ class DataStore extends ReportsDataStore implements DataStoreInterface {
 				&#039;page_no&#039; =&gt; 0,
 			);
 
-			$included_products = $this-&gt;get_included_products_array( $query_args );
-
+			$selections          = $this-&gt;selected_columns( $query_args );
+			$included_variations =
+				( isset( $query_args[&#039;variation_includes&#039;] ) &amp;&amp; is_array( $query_args[&#039;variation_includes&#039;] ) )
+					? $query_args[&#039;variation_includes&#039;]
+					: array();
+			$params              = $this-&gt;get_limit_params( $query_args );
 			$this-&gt;add_sql_query_params( $query_args );
-			$params = $this-&gt;get_limit_params( $query_args );
-			if ( count( $included_products ) &gt; 0 &amp;&amp; count( $query_args[&#039;variations&#039;] ) &gt; 0 ) {
-				$this-&gt;subquery-&gt;add_sql_clause( &#039;select&#039;, $this-&gt;selected_columns( $query_args ) );
+
+			if ( count( $included_variations ) &gt; 0 ) {
+				$total_results = count( $included_variations );
+				$total_pages   = (int) ceil( $total_results / $params[&#039;per_page&#039;] );
+
+				$this-&gt;subquery-&gt;clear_sql_clause( &#039;select&#039; );
+				$this-&gt;subquery-&gt;add_sql_clause( &#039;select&#039;, $selections );
+
 				if ( &#039;date&#039; === $query_args[&#039;orderby&#039;] ) {
 					$this-&gt;subquery-&gt;add_sql_clause( &#039;select&#039;, &quot;, {$table_name}.date_created&quot; );
 				}
 
-				$total_results = count( $query_args[&#039;variations&#039;] );
-				$total_pages   = (int) ceil( $total_results / $params[&#039;per_page&#039;] );
-
 				$fields          = $this-&gt;get_fields( $query_args );
-				$join_selections = $this-&gt;format_join_selections( $fields, array( &#039;product_id&#039;, &#039;variation_id&#039; ) );
-				$ids_table       = $this-&gt;get_ids_table( $query_args[&#039;variations&#039;], &#039;variation_id&#039;, array( &#039;product_id&#039; =&gt; $included_products[0] ) );
+				$join_selections = $this-&gt;format_join_selections( $fields, array( &#039;variation_id&#039; ) );
+				$ids_table       = $this-&gt;get_ids_table( $included_variations, &#039;variation_id&#039; );
 
 				$this-&gt;add_sql_clause( &#039;select&#039;, $join_selections );
 				$this-&gt;add_sql_clause( &#039;from&#039;, &#039;(&#039; );
@@ -450,8 +485,9 @@ class DataStore extends ReportsDataStore implements DataStoreInterface {
 				}
 
 				$this-&gt;subquery-&gt;clear_sql_clause( &#039;select&#039; );
-				$this-&gt;subquery-&gt;add_sql_clause( &#039;select&#039;, $this-&gt;selected_columns( $query_args ) );
+				$this-&gt;subquery-&gt;add_sql_clause( &#039;select&#039;, $selections );
 				$this-&gt;subquery-&gt;add_sql_clause( &#039;order_by&#039;, $this-&gt;get_sql_clause( &#039;order_by&#039; ) );
+				$this-&gt;subquery-&gt;add_sql_clause( &#039;limit&#039;, $this-&gt;get_sql_clause( &#039;limit&#039; ) );
 				$variations_query = $this-&gt;subquery-&gt;get_query_statement();
 			}
 
@@ -501,7 +537,7 @@ class DataStore extends ReportsDataStore implements DataStoreInterface {
 
     <footer class="phpdocumentor phpdocumentor-footer">
     <div class="phpdocumentor-section">
-        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on November 30th, 2020 at 01:44 pm.</span>
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on December 10th, 2020 at 11:45 am.</span>
     </div>
 </footer>
 
@@ -513,7 +549,7 @@ class DataStore extends ReportsDataStore implements DataStoreInterface {
             'searchIndex': '..\/js\/searchIndex.json'
         };
     </script>
-    <script src="../js/searchIndex.js?updated=1606754663"></script>
-    <script src="../js/search.js?updated=1606754663"></script>
+    <script src="../js/searchIndex.js?updated=1607611542"></script>
+    <script src="../js/search.js?updated=1607611542"></script>
 </body>
 </html>

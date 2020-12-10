@@ -9,9 +9,9 @@
     <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
     <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
     <link rel="stylesheet" href="../css/normalize.css">
-    <link rel="stylesheet" href="../css/base.css?updated=1606754672">
+    <link rel="stylesheet" href="../css/base.css?updated=1607611555">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/template.css?updated=1606754672">
+    <link rel="stylesheet" href="../css/template.css?updated=1607611555">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
             <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
@@ -96,6 +96,7 @@
                                     <li><a href="../packages/WooCommerce-Uninstaller.html"><abbr title="\WooCommerce\Uninstaller">Uninstaller</abbr></a></li>
                             </ul>
                                 <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceAdmin.html"><abbr title="\WoocommerceAdmin">WoocommerceAdmin</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceNavigation.html"><abbr title="\WoocommerceNavigation">WoocommerceNavigation</abbr></a></h3>
                                 <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdmin.html"><abbr title="\WooCommerceAdmin">WooCommerceAdmin</abbr></a></h3>
                         </section>
     
@@ -136,9 +137,9 @@
     </h2>
 
         <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.18">packages/woocommerce-admin/src/Loader.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.19">packages/woocommerce-admin/src/Loader.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">18</span>
+    <span class="phpdocumentor-element-found-in__line">19</span>
 </aside>
 
             <p class="phpdocumentor-summary">Loader Class.</p>
@@ -205,6 +206,20 @@
                         &nbsp;: array    </span>
 </dt>
 <dd>Hooks extra neccessary data into the component settings array already set in WooCommerce core.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="../classes/Automattic-WooCommerce-Admin-Loader.html#method_add_features_section">add_features_section()</a>
+    <span>
+                        &nbsp;: array    </span>
+</dt>
+<dd>Adds the Features section to the advanced tab of WooCommerce Settings</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="../classes/Automattic-WooCommerce-Admin-Loader.html#method_add_features_settings">add_features_settings()</a>
+    <span>
+                        &nbsp;: array    </span>
+</dt>
+<dd>Adds the Features settings.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="../classes/Automattic-WooCommerce-Admin-Loader.html#method_add_settings">add_settings()</a>
@@ -385,13 +400,6 @@ a &quot;classic&quot; (non JS app) powered admin page (an embedded page).</dd>
 <dd>Returns true if we are on a JS powered admin page.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="../classes/Automattic-WooCommerce-Admin-Loader.html#method_is_dev">is_dev()</a>
-    <span>
-                        &nbsp;: mixed    </span>
-</dt>
-<dd>Returns true if WooCommerce Admin is currently running in a development environment.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="../classes/Automattic-WooCommerce-Admin-Loader.html#method_is_embed_page">is_embed_page()</a>
     <span>
                         &nbsp;: mixed    </span>
@@ -556,7 +564,7 @@ for the REST API.</dd>
 <dd>Gets the path for the asset depending on file type.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -private">
-    <a href="../classes/Automattic-WooCommerce-Admin-Loader.html#method_output_breadcrumbs">output_breadcrumbs()</a>
+    <a href="../classes/Automattic-WooCommerce-Admin-Loader.html#method_output_heading">output_heading()</a>
     <span>
                         &nbsp;: mixed    </span>
 </dt>
@@ -579,9 +587,9 @@ for the REST API.</dd>
     </h4>
 
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.22">packages/woocommerce-admin/src/Loader.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.23">packages/woocommerce-admin/src/Loader.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">22</span>
+    <span class="phpdocumentor-element-found-in__line">23</span>
 </aside>
 
         <p class="phpdocumentor-summary">App entry point.</p>
@@ -620,9 +628,9 @@ for the REST API.</dd>
                                 </span>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.36">packages/woocommerce-admin/src/Loader.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.37">packages/woocommerce-admin/src/Loader.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">36</span>
+    <span class="phpdocumentor-element-found-in__line">37</span>
 </aside>
 
         <p class="phpdocumentor-summary">An array of classes to load from the includes folder.</p>
@@ -651,9 +659,9 @@ for the REST API.</dd>
                                 </span>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.29">packages/woocommerce-admin/src/Loader.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.30">packages/woocommerce-admin/src/Loader.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">29</span>
+    <span class="phpdocumentor-element-found-in__line">30</span>
 </aside>
 
         <p class="phpdocumentor-summary">Class instance.</p>
@@ -682,9 +690,9 @@ for the REST API.</dd>
                                 </span>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.43">packages/woocommerce-admin/src/Loader.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.44">packages/woocommerce-admin/src/Loader.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">43</span>
+    <span class="phpdocumentor-element-found-in__line">44</span>
 </aside>
 
         <p class="phpdocumentor-summary">WordPress capability required to use analytics features.</p>
@@ -717,9 +725,9 @@ for the REST API.</dd>
         <a href="#method___construct" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.59">packages/woocommerce-admin/src/Loader.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.60">packages/woocommerce-admin/src/Loader.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">59</span>
+    <span class="phpdocumentor-element-found-in__line">60</span>
 </aside>
 
         <p class="phpdocumentor-summary">Constructor.</p>
@@ -748,9 +756,9 @@ for the REST API.</dd>
         <a href="#method_add_admin_body_classes" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.831">packages/woocommerce-admin/src/Loader.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.886">packages/woocommerce-admin/src/Loader.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">831</span>
+    <span class="phpdocumentor-element-found-in__line">886</span>
 </aside>
 
         <p class="phpdocumentor-summary">Adds body classes to the main wp-admin wrapper, allowing us to better target elements in specific scenarios.</p>
@@ -789,9 +797,9 @@ for the REST API.</dd>
         <a href="#method_add_component_settings" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.970">packages/woocommerce-admin/src/Loader.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.1025">packages/woocommerce-admin/src/Loader.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">970</span>
+    <span class="phpdocumentor-element-found-in__line">1025</span>
 </aside>
 
         <p class="phpdocumentor-summary">Hooks extra neccessary data into the component settings array already set in WooCommerce core.</p>
@@ -826,14 +834,104 @@ for the REST API.</dd>
             -public
                                     -static                    "
 >
+    <h4 class="phpdocumentor-element__name" id="method_add_features_section">
+        add_features_section()
+        <a href="#method_add_features_section" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.249">packages/woocommerce-admin/src/Loader.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">249</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Adds the Features section to the advanced tab of WooCommerce Settings</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+            <span class="phpdocumentor-signature__static">static</span>    <span class="phpdocumentor-signature__name">add_features_section</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&nbsp;</span><span class="phpdocumentor-signature__argument__name">$sections</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array</span></code>
+
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$sections</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Sections.</p></section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">array</span>
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                    -static                    "
+>
+    <h4 class="phpdocumentor-element__name" id="method_add_features_settings">
+        add_features_settings()
+        <a href="#method_add_features_settings" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.261">packages/woocommerce-admin/src/Loader.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">261</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Adds the Features settings.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+            <span class="phpdocumentor-signature__static">static</span>    <span class="phpdocumentor-signature__name">add_features_settings</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&nbsp;</span><span class="phpdocumentor-signature__argument__name">$settings</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$current_section</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array</span></code>
+
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$settings</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Settings.</p></section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$current_section</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Current section slug.</p></section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">array</span>
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                    -static                    "
+>
     <h4 class="phpdocumentor-element__name" id="method_add_settings">
         add_settings()
         <a href="#method_add_settings" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.1127">packages/woocommerce-admin/src/Loader.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.1184">packages/woocommerce-admin/src/Loader.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1127</span>
+    <span class="phpdocumentor-element-found-in__line">1184</span>
 </aside>
 
         <p class="phpdocumentor-summary">Add WC Admin specific settings</p>
@@ -872,9 +970,9 @@ for the REST API.</dd>
         <a href="#method_add_settings_group" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.1112">packages/woocommerce-admin/src/Loader.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.1169">packages/woocommerce-admin/src/Loader.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1112</span>
+    <span class="phpdocumentor-element-found-in__line">1169</span>
 </aside>
 
         <p class="phpdocumentor-summary">Register the admin settings for use in the WC REST API</p>
@@ -913,9 +1011,9 @@ for the REST API.</dd>
         <a href="#method_combine_translation_chunk_files" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.545">packages/woocommerce-admin/src/Loader.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.609">packages/woocommerce-admin/src/Loader.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">545</span>
+    <span class="phpdocumentor-element-found-in__line">609</span>
 </aside>
 
         <p class="phpdocumentor-summary">Combine translation chunks when files are updated.</p>
@@ -966,9 +1064,9 @@ to WordPress via wp_register_script() and wp_set_script_translations().</p></sec
         <a href="#method_define_tables" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.102">packages/woocommerce-admin/src/Loader.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.105">packages/woocommerce-admin/src/Loader.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">102</span>
+    <span class="phpdocumentor-element-found-in__line">105</span>
 </aside>
 
         <p class="phpdocumentor-summary">Add custom tables to $wpdb object.</p>
@@ -996,9 +1094,9 @@ to WordPress via wp_register_script() and wp_set_script_translations().</p></sec
         <a href="#method_delete_homepage" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.1337">packages/woocommerce-admin/src/Loader.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.1395">packages/woocommerce-admin/src/Loader.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1337</span>
+    <span class="phpdocumentor-element-found-in__line">1395</span>
 </aside>
 
         <p class="phpdocumentor-summary">Delete woocommerce_onboarding_homepage_post_id field when the homepage is deleted</p>
@@ -1037,9 +1135,9 @@ to WordPress via wp_register_script() and wp_set_script_translations().</p></sec
         <a href="#method_embed_page_header" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.796">packages/woocommerce-admin/src/Loader.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.853">packages/woocommerce-admin/src/Loader.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">796</span>
+    <span class="phpdocumentor-element-found-in__line">853</span>
 </aside>
 
         <p class="phpdocumentor-summary">Set up a div for the header embed to render into.</p>
@@ -1068,9 +1166,9 @@ to WordPress via wp_register_script() and wp_set_script_translations().</p></sec
         <a href="#method_get_analytics_capability" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.140">packages/woocommerce-admin/src/Loader.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.133">packages/woocommerce-admin/src/Loader.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">140</span>
+    <span class="phpdocumentor-element-found-in__line">133</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets WordPress capability required to use analytics features.</p>
@@ -1098,9 +1196,9 @@ to WordPress via wp_register_script() and wp_set_script_translations().</p></sec
         <a href="#method_get_combined_translation_filename" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.461">packages/woocommerce-admin/src/Loader.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.525">packages/woocommerce-admin/src/Loader.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">461</span>
+    <span class="phpdocumentor-element-found-in__line">525</span>
 </aside>
 
         <p class="phpdocumentor-summary">Generate a filename to cache translations from JS chunks.</p>
@@ -1148,9 +1246,9 @@ to WordPress via wp_register_script() and wp_set_script_translations().</p></sec
         <a href="#method_get_currency_settings" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.1191">packages/woocommerce-admin/src/Loader.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.1248">packages/woocommerce-admin/src/Loader.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1191</span>
+    <span class="phpdocumentor-element-found-in__line">1248</span>
 </aside>
 
         <p class="phpdocumentor-summary">Return an object defining the currecy options for the site&#039;s current currency</p>
@@ -1185,9 +1283,9 @@ to WordPress via wp_register_script() and wp_set_script_translations().</p></sec
         <a href="#method_get_custom_settings" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.1167">packages/woocommerce-admin/src/Loader.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.1224">packages/woocommerce-admin/src/Loader.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1167</span>
+    <span class="phpdocumentor-element-found-in__line">1224</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets custom settings used for WC Admin.</p>
@@ -1226,9 +1324,9 @@ to WordPress via wp_register_script() and wp_set_script_translations().</p></sec
         <a href="#method_get_features" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.131">packages/woocommerce-admin/src/Loader.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.124">packages/woocommerce-admin/src/Loader.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">131</span>
+    <span class="phpdocumentor-element-found-in__line">124</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets a build configured array of enabled WooCommerce Admin features/sections.</p>
@@ -1257,9 +1355,9 @@ to WordPress via wp_register_script() and wp_set_script_translations().</p></sec
         <a href="#method_get_file_version" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.213">packages/woocommerce-admin/src/Loader.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.206">packages/woocommerce-admin/src/Loader.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">213</span>
+    <span class="phpdocumentor-element-found-in__line">206</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the file modified time as a cache buster if we&#039;re in dev mode, or the plugin version otherwise.</p>
@@ -1299,9 +1397,9 @@ to WordPress via wp_register_script() and wp_set_script_translations().</p></sec
         <a href="#method_get_instance" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.48">packages/woocommerce-admin/src/Loader.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.49">packages/woocommerce-admin/src/Loader.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">48</span>
+    <span class="phpdocumentor-element-found-in__line">49</span>
 </aside>
 
         <p class="phpdocumentor-summary">Get class instance.</p>
@@ -1329,9 +1427,9 @@ to WordPress via wp_register_script() and wp_set_script_translations().</p></sec
         <a href="#method_get_order_statuses" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.1082">packages/woocommerce-admin/src/Loader.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.1139">packages/woocommerce-admin/src/Loader.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1082</span>
+    <span class="phpdocumentor-element-found-in__line">1139</span>
 </aside>
 
         <p class="phpdocumentor-summary">Format order statuses by removing a leading &#039;wc-&#039; if present.</p>
@@ -1371,9 +1469,9 @@ to WordPress via wp_register_script() and wp_set_script_translations().</p></sec
         <a href="#method_get_translation_chunk_data" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.477">packages/woocommerce-admin/src/Loader.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.541">packages/woocommerce-admin/src/Loader.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">477</span>
+    <span class="phpdocumentor-element-found-in__line">541</span>
 </aside>
 
         <p class="phpdocumentor-summary">Find and combine translation chunk files.</p>
@@ -1430,9 +1528,9 @@ to WordPress via wp_register_script() and wp_set_script_translations().</p></sec
         <a href="#method_get_unregistered_order_statuses" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.1096">packages/woocommerce-admin/src/Loader.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.1153">packages/woocommerce-admin/src/Loader.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1096</span>
+    <span class="phpdocumentor-element-found-in__line">1153</span>
 </aside>
 
         <p class="phpdocumentor-summary">Get all order statuses present in analytics tables that aren&#039;t registered.</p>
@@ -1461,9 +1559,9 @@ to WordPress via wp_register_script() and wp_set_script_translations().</p></sec
         <a href="#method_get_url" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.195">packages/woocommerce-admin/src/Loader.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.188">packages/woocommerce-admin/src/Loader.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">195</span>
+    <span class="phpdocumentor-element-found-in__line">188</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the URL to an asset file.</p>
@@ -1511,9 +1609,9 @@ to WordPress via wp_register_script() and wp_set_script_translations().</p></sec
         <a href="#method_get_user_data_field" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.1291">packages/woocommerce-admin/src/Loader.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.1348">packages/woocommerce-admin/src/Loader.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1291</span>
+    <span class="phpdocumentor-element-found-in__line">1348</span>
 </aside>
 
         <p class="phpdocumentor-summary">Helper to retrive user data fields.</p>
@@ -1562,9 +1660,9 @@ to WordPress via wp_register_script() and wp_set_script_translations().</p></sec
         <a href="#method_get_user_data_fields" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.1267">packages/woocommerce-admin/src/Loader.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.1324">packages/woocommerce-admin/src/Loader.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1267</span>
+    <span class="phpdocumentor-element-found-in__line">1324</span>
 </aside>
 
         <p class="phpdocumentor-summary">We store some WooCommerce specific user meta attached to users endpoint,
@@ -1595,9 +1693,9 @@ so that we can track certain preferences or values such as the inbox activity pa
         <a href="#method_get_user_data_values" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.1229">packages/woocommerce-admin/src/Loader.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.1286">packages/woocommerce-admin/src/Loader.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1229</span>
+    <span class="phpdocumentor-element-found-in__line">1286</span>
 </aside>
 
         <p class="phpdocumentor-summary">For all the registered user data fields (  Loader::get_user_data_fields ), fetch the data
@@ -1637,9 +1735,9 @@ for returning via the REST API.</p>
         <a href="#method_inject_after_notices" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.915">packages/woocommerce-admin/src/Loader.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.970">packages/woocommerce-admin/src/Loader.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">915</span>
+    <span class="phpdocumentor-element-found-in__line">970</span>
 </aside>
 
         <p class="phpdocumentor-summary">Runs after admin notices and closes div.</p>
@@ -1667,9 +1765,9 @@ for returning via the REST API.</p>
         <a href="#method_inject_before_notices" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.895">packages/woocommerce-admin/src/Loader.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.950">packages/woocommerce-admin/src/Loader.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">895</span>
+    <span class="phpdocumentor-element-found-in__line">950</span>
 </aside>
 
         <p class="phpdocumentor-summary">Runs before admin notices action and hides them.</p>
@@ -1697,9 +1795,9 @@ for returning via the REST API.</p>
         <a href="#method_inject_wc_settings_dependencies" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.1312">packages/woocommerce-admin/src/Loader.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.1369">packages/woocommerce-admin/src/Loader.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1312</span>
+    <span class="phpdocumentor-element-found-in__line">1369</span>
 </aside>
 
         <p class="phpdocumentor-summary">Injects wp-shared-settings as a dependency if it&#039;s present.</p>
@@ -1727,9 +1825,9 @@ for returning via the REST API.</p>
         <a href="#method_is_admin_or_embed_page" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.745">packages/woocommerce-admin/src/Loader.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.809">packages/woocommerce-admin/src/Loader.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">745</span>
+    <span class="phpdocumentor-element-found-in__line">809</span>
 </aside>
 
         <p class="phpdocumentor-summary">Returns true if we are on a JS powered admin page or
@@ -1758,9 +1856,9 @@ a &quot;classic&quot; (non JS app) powered admin page (an embedded page).</p>
         <a href="#method_is_admin_page" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.752">packages/woocommerce-admin/src/Loader.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.816">packages/woocommerce-admin/src/Loader.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">752</span>
+    <span class="phpdocumentor-element-found-in__line">816</span>
 </aside>
 
         <p class="phpdocumentor-summary">Returns true if we are on a JS powered admin page.</p>
@@ -1783,44 +1881,14 @@ a &quot;classic&quot; (non JS app) powered admin page (an embedded page).</p>
             -public
                                     -static                    "
 >
-    <h4 class="phpdocumentor-element__name" id="method_is_dev">
-        is_dev()
-        <a href="#method_is_dev" class="headerlink"><i class="fas fa-link"></i></a>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.119">packages/woocommerce-admin/src/Loader.php</a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">119</span>
-</aside>
-
-        <p class="phpdocumentor-summary">Returns true if WooCommerce Admin is currently running in a development environment.</p>
-
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-            <span class="phpdocumentor-signature__static">static</span>    <span class="phpdocumentor-signature__name">is_dev</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
-
-    
-    
-    
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">mixed</span>
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                    -static                    "
->
     <h4 class="phpdocumentor-element__name" id="method_is_embed_page">
         is_embed_page()
         <a href="#method_is_embed_page" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.761">packages/woocommerce-admin/src/Loader.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.825">packages/woocommerce-admin/src/Loader.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">761</span>
+    <span class="phpdocumentor-element-found-in__line">825</span>
 </aside>
 
         <p class="phpdocumentor-summary">Returns true if we are on a &quot;classic&quot; (non JS app) powered admin page.</p>
@@ -1849,9 +1917,9 @@ a &quot;classic&quot; (non JS app) powered admin page (an embedded page).</p>
         <a href="#method_is_feature_enabled" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.167">packages/woocommerce-admin/src/Loader.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.160">packages/woocommerce-admin/src/Loader.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">167</span>
+    <span class="phpdocumentor-element-found-in__line">160</span>
 </aside>
 
         <p class="phpdocumentor-summary">Returns if a specific wc-admin feature is enabled.</p>
@@ -1891,9 +1959,9 @@ a &quot;classic&quot; (non JS app) powered admin page (an embedded page).</p>
         <a href="#method_load_features" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.233">packages/woocommerce-admin/src/Loader.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.226">packages/woocommerce-admin/src/Loader.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">233</span>
+    <span class="phpdocumentor-element-found-in__line">226</span>
 </aside>
 
         <p class="phpdocumentor-summary">Class loader for enabled WooCommerce Admin features/sections.</p>
@@ -1921,9 +1989,9 @@ a &quot;classic&quot; (non JS app) powered admin page (an embedded page).</p>
         <a href="#method_load_script_translation_file" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.598">packages/woocommerce-admin/src/Loader.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.662">packages/woocommerce-admin/src/Loader.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">598</span>
+    <span class="phpdocumentor-element-found-in__line">662</span>
 </aside>
 
         <p class="phpdocumentor-summary">Load translation strings from language packs for dynamic imports.</p>
@@ -1979,9 +2047,9 @@ a &quot;classic&quot; (non JS app) powered admin page (an embedded page).</p>
         <a href="#method_load_scripts" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.619">packages/woocommerce-admin/src/Loader.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.683">packages/woocommerce-admin/src/Loader.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">619</span>
+    <span class="phpdocumentor-element-found-in__line">683</span>
 </aside>
 
         <p class="phpdocumentor-summary">Loads the required scripts on the correct pages.</p>
@@ -2009,9 +2077,9 @@ a &quot;classic&quot; (non JS app) powered admin page (an embedded page).</p>
         <a href="#method_maybe_output_preload_link_tag" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.667">packages/woocommerce-admin/src/Loader.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.731">packages/woocommerce-admin/src/Loader.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">667</span>
+    <span class="phpdocumentor-element-found-in__line">731</span>
 </aside>
 
         <p class="phpdocumentor-summary">Render a preload link tag for a dependency, optionally
@@ -2068,9 +2136,9 @@ checked against a provided allowlist.</p>
         <a href="#method_output_header_preload_tags" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.720">packages/woocommerce-admin/src/Loader.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.784">packages/woocommerce-admin/src/Loader.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">720</span>
+    <span class="phpdocumentor-element-found-in__line">784</span>
 </aside>
 
         <p class="phpdocumentor-summary">Output preload link tags for all enqueued stylesheets and scripts.</p>
@@ -2099,9 +2167,9 @@ checked against a provided allowlist.</p>
         <a href="#method_output_header_preload_tags_for_type" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.686">packages/woocommerce-admin/src/Loader.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.750">packages/woocommerce-admin/src/Loader.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">686</span>
+    <span class="phpdocumentor-element-found-in__line">750</span>
 </aside>
 
         <p class="phpdocumentor-summary">Output a preload link tag for dependencies (and their sub dependencies)
@@ -2150,9 +2218,9 @@ with an optional allowlist.</p>
         <a href="#method_page_wrapper" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.956">packages/woocommerce-admin/src/Loader.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.1011">packages/woocommerce-admin/src/Loader.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">956</span>
+    <span class="phpdocumentor-element-found-in__line">1011</span>
 </aside>
 
         <p class="phpdocumentor-summary">Set up a div for the app to render into.</p>
@@ -2180,9 +2248,9 @@ with an optional allowlist.</p>
         <a href="#method_register_page_handler" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.250">packages/woocommerce-admin/src/Loader.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.294">packages/woocommerce-admin/src/Loader.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">250</span>
+    <span class="phpdocumentor-element-found-in__line">294</span>
 </aside>
 
         <p class="phpdocumentor-summary">Connects existing WooCommerce pages.</p>
@@ -2223,9 +2291,9 @@ with an optional allowlist.</p>
         <a href="#method_register_scripts" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.297">packages/woocommerce-admin/src/Loader.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.341">packages/woocommerce-admin/src/Loader.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">297</span>
+    <span class="phpdocumentor-element-found-in__line">341</span>
 </aside>
 
         <p class="phpdocumentor-summary">Registers all the neccessary scripts and styles to show the admin experience.</p>
@@ -2253,9 +2321,9 @@ with an optional allowlist.</p>
         <a href="#method_register_store_details_page" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.257">packages/woocommerce-admin/src/Loader.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.301">packages/woocommerce-admin/src/Loader.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">257</span>
+    <span class="phpdocumentor-element-found-in__line">301</span>
 </aside>
 
         <p class="phpdocumentor-summary">Registers the store details (profiler) page.</p>
@@ -2283,9 +2351,9 @@ with an optional allowlist.</p>
         <a href="#method_register_user_data" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.1211">packages/woocommerce-admin/src/Loader.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.1268">packages/woocommerce-admin/src/Loader.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1211</span>
+    <span class="phpdocumentor-element-found-in__line">1268</span>
 </aside>
 
         <p class="phpdocumentor-summary">Registers WooCommerce specific user data to the WordPress user API.</p>
@@ -2313,9 +2381,9 @@ with an optional allowlist.</p>
         <a href="#method_remove_app_entry_page_menu_item" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.271">packages/woocommerce-admin/src/Loader.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.315">packages/woocommerce-admin/src/Loader.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">271</span>
+    <span class="phpdocumentor-element-found-in__line">315</span>
 </aside>
 
         <p class="phpdocumentor-summary">Remove the menu item for the app entry point page.</p>
@@ -2343,9 +2411,9 @@ with an optional allowlist.</p>
         <a href="#method_remove_notices" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.881">packages/woocommerce-admin/src/Loader.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.936">packages/woocommerce-admin/src/Loader.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">881</span>
+    <span class="phpdocumentor-element-found-in__line">936</span>
 </aside>
 
         <p class="phpdocumentor-summary">Removes notices that should not be displayed on WC Admin pages.</p>
@@ -2373,9 +2441,9 @@ with an optional allowlist.</p>
         <a href="#method_should_use_minified_js_file" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.178">packages/woocommerce-admin/src/Loader.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.171">packages/woocommerce-admin/src/Loader.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">178</span>
+    <span class="phpdocumentor-element-found-in__line">171</span>
 </aside>
 
         <p class="phpdocumentor-summary">Determines if a minified JS file should be served.</p>
@@ -2415,9 +2483,9 @@ with an optional allowlist.</p>
         <a href="#method_smart_app_banner" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.869">packages/woocommerce-admin/src/Loader.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.924">packages/woocommerce-admin/src/Loader.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">869</span>
+    <span class="phpdocumentor-element-found-in__line">924</span>
 </aside>
 
         <p class="phpdocumentor-summary">Adds an iOS &quot;Smart App Banner&quot; for display on iOS Safari.</p>
@@ -2446,9 +2514,9 @@ with an optional allowlist.</p>
         <a href="#method_update_admin_title" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.931">packages/woocommerce-admin/src/Loader.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.986">packages/woocommerce-admin/src/Loader.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">931</span>
+    <span class="phpdocumentor-element-found-in__line">986</span>
 </aside>
 
         <p class="phpdocumentor-summary">Edits Admin title based on section of wc-admin.</p>
@@ -2500,9 +2568,9 @@ with an optional allowlist.</p>
         <a href="#method_update_user_data_field" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.1278">packages/woocommerce-admin/src/Loader.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.1335">packages/woocommerce-admin/src/Loader.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1278</span>
+    <span class="phpdocumentor-element-found-in__line">1335</span>
 </aside>
 
         <p class="phpdocumentor-summary">Helper to update user data fields.</p>
@@ -2557,9 +2625,9 @@ with an optional allowlist.</p>
         <a href="#method_update_user_data_values" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.1245">packages/woocommerce-admin/src/Loader.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.1302">packages/woocommerce-admin/src/Loader.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1245</span>
+    <span class="phpdocumentor-element-found-in__line">1302</span>
 </aside>
 
         <p class="phpdocumentor-summary">For all the registered user data fields ( Loader::get_user_data_fields ), update the data
@@ -2615,9 +2683,9 @@ for the REST API.</p>
         <a href="#method_user_can_analytics" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.157">packages/woocommerce-admin/src/Loader.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.150">packages/woocommerce-admin/src/Loader.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">157</span>
+    <span class="phpdocumentor-element-found-in__line">150</span>
 </aside>
 
         <p class="phpdocumentor-summary">Helper function indicating whether the current user has the required analytics capability.</p>
@@ -2645,9 +2713,9 @@ for the REST API.</p>
         <a href="#method_get_embed_breadcrumbs" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.768">packages/woocommerce-admin/src/Loader.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.832">packages/woocommerce-admin/src/Loader.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">768</span>
+    <span class="phpdocumentor-element-found-in__line">832</span>
 </aside>
 
         <p class="phpdocumentor-summary">Returns breadcrumbs for the current page.</p>
@@ -2675,9 +2743,9 @@ for the REST API.</p>
         <a href="#method_get_path" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.226">packages/woocommerce-admin/src/Loader.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.219">packages/woocommerce-admin/src/Loader.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">226</span>
+    <span class="phpdocumentor-element-found-in__line">219</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the path for the asset depending on file type.</p>
@@ -2712,21 +2780,21 @@ for the REST API.</p>
             -private
                                     -static                    "
 >
-    <h4 class="phpdocumentor-element__name" id="method_output_breadcrumbs">
-        output_breadcrumbs()
-        <a href="#method_output_breadcrumbs" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_output_heading">
+        output_heading()
+        <a href="#method_output_heading" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.777">packages/woocommerce-admin/src/Loader.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Loader.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-loader.html#source-view.841">packages/woocommerce-admin/src/Loader.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">777</span>
+    <span class="phpdocumentor-element-found-in__line">841</span>
 </aside>
 
         <p class="phpdocumentor-summary">Outputs breadcrumbs via PHP for the initial load of an embedded page.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
-            <span class="phpdocumentor-signature__static">static</span>    <span class="phpdocumentor-signature__name">output_breadcrumbs</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&nbsp;</span><span class="phpdocumentor-signature__argument__name">$section</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+            <span class="phpdocumentor-signature__static">static</span>    <span class="phpdocumentor-signature__name">output_heading</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&nbsp;</span><span class="phpdocumentor-signature__argument__name">$section</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
 
     
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
@@ -2758,7 +2826,7 @@ for the REST API.</p>
 
     <footer class="phpdocumentor phpdocumentor-footer">
     <div class="phpdocumentor-section">
-        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on November 30th, 2020 at 01:44 pm.</span>
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on December 10th, 2020 at 11:45 am.</span>
     </div>
 </footer>
 
@@ -2770,7 +2838,7 @@ for the REST API.</p>
             'searchIndex': '..\/js\/searchIndex.json'
         };
     </script>
-    <script src="../js/searchIndex.js?updated=1606754672"></script>
-    <script src="../js/search.js?updated=1606754672"></script>
+    <script src="../js/searchIndex.js?updated=1607611555"></script>
+    <script src="../js/search.js?updated=1607611555"></script>
 </body>
 </html>

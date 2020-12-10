@@ -9,9 +9,9 @@
     <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
     <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
     <link rel="stylesheet" href="../css/normalize.css">
-    <link rel="stylesheet" href="../css/base.css?updated=1606754662">
+    <link rel="stylesheet" href="../css/base.css?updated=1607611542">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/template.css?updated=1606754662">
+    <link rel="stylesheet" href="../css/template.css?updated=1607611542">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
             <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
@@ -102,6 +102,7 @@
                                     <li><a href="../packages/WooCommerce-Uninstaller.html"><abbr title="\WooCommerce\Uninstaller">Uninstaller</abbr></a></li>
                             </ul>
                                 <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceAdmin.html"><abbr title="\WoocommerceAdmin">WoocommerceAdmin</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceNavigation.html"><abbr title="\WoocommerceNavigation">WoocommerceNavigation</abbr></a></h3>
                                 <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdmin.html"><abbr title="\WooCommerceAdmin">WooCommerceAdmin</abbr></a></h3>
                         </section>
     
@@ -175,29 +176,31 @@ class Controller extends ReportsController implements ExportableInterface {
 	 * @return array
 	 */
 	protected function prepare_reports_query( $request ) {
-		$args                      = array();
-		$args[&#039;before&#039;]            = $request[&#039;before&#039;];
-		$args[&#039;after&#039;]             = $request[&#039;after&#039;];
-		$args[&#039;page&#039;]              = $request[&#039;page&#039;];
-		$args[&#039;per_page&#039;]          = $request[&#039;per_page&#039;];
-		$args[&#039;orderby&#039;]           = $request[&#039;orderby&#039;];
-		$args[&#039;order&#039;]             = $request[&#039;order&#039;];
-		$args[&#039;product_includes&#039;]  = (array) $request[&#039;product_includes&#039;];
-		$args[&#039;product_excludes&#039;]  = (array) $request[&#039;product_excludes&#039;];
-		$args[&#039;coupon_includes&#039;]   = (array) $request[&#039;coupon_includes&#039;];
-		$args[&#039;coupon_excludes&#039;]   = (array) $request[&#039;coupon_excludes&#039;];
-		$args[&#039;tax_rate_includes&#039;] = (array) $request[&#039;tax_rate_includes&#039;];
-		$args[&#039;tax_rate_excludes&#039;] = (array) $request[&#039;tax_rate_excludes&#039;];
-		$args[&#039;status_is&#039;]         = (array) $request[&#039;status_is&#039;];
-		$args[&#039;status_is_not&#039;]     = (array) $request[&#039;status_is_not&#039;];
-		$args[&#039;customer_type&#039;]     = $request[&#039;customer_type&#039;];
-		$args[&#039;extended_info&#039;]     = $request[&#039;extended_info&#039;];
-		$args[&#039;refunds&#039;]           = $request[&#039;refunds&#039;];
-		$args[&#039;match&#039;]             = $request[&#039;match&#039;];
-		$args[&#039;order_includes&#039;]    = $request[&#039;order_includes&#039;];
-		$args[&#039;order_excludes&#039;]    = $request[&#039;order_excludes&#039;];
-		$args[&#039;attribute_is&#039;]      = (array) $request[&#039;attribute_is&#039;];
-		$args[&#039;attribute_is_not&#039;]  = (array) $request[&#039;attribute_is_not&#039;];
+		$args                       = array();
+		$args[&#039;before&#039;]             = $request[&#039;before&#039;];
+		$args[&#039;after&#039;]              = $request[&#039;after&#039;];
+		$args[&#039;page&#039;]               = $request[&#039;page&#039;];
+		$args[&#039;per_page&#039;]           = $request[&#039;per_page&#039;];
+		$args[&#039;orderby&#039;]            = $request[&#039;orderby&#039;];
+		$args[&#039;order&#039;]              = $request[&#039;order&#039;];
+		$args[&#039;product_includes&#039;]   = (array) $request[&#039;product_includes&#039;];
+		$args[&#039;product_excludes&#039;]   = (array) $request[&#039;product_excludes&#039;];
+		$args[&#039;variation_includes&#039;] = (array) $request[&#039;variation_includes&#039;];
+		$args[&#039;variation_excludes&#039;] = (array) $request[&#039;variation_excludes&#039;];
+		$args[&#039;coupon_includes&#039;]    = (array) $request[&#039;coupon_includes&#039;];
+		$args[&#039;coupon_excludes&#039;]    = (array) $request[&#039;coupon_excludes&#039;];
+		$args[&#039;tax_rate_includes&#039;]  = (array) $request[&#039;tax_rate_includes&#039;];
+		$args[&#039;tax_rate_excludes&#039;]  = (array) $request[&#039;tax_rate_excludes&#039;];
+		$args[&#039;status_is&#039;]          = (array) $request[&#039;status_is&#039;];
+		$args[&#039;status_is_not&#039;]      = (array) $request[&#039;status_is_not&#039;];
+		$args[&#039;customer_type&#039;]      = $request[&#039;customer_type&#039;];
+		$args[&#039;extended_info&#039;]      = $request[&#039;extended_info&#039;];
+		$args[&#039;refunds&#039;]            = $request[&#039;refunds&#039;];
+		$args[&#039;match&#039;]              = $request[&#039;match&#039;];
+		$args[&#039;order_includes&#039;]     = $request[&#039;order_includes&#039;];
+		$args[&#039;order_excludes&#039;]     = $request[&#039;order_excludes&#039;];
+		$args[&#039;attribute_is&#039;]       = (array) $request[&#039;attribute_is&#039;];
+		$args[&#039;attribute_is_not&#039;]   = (array) $request[&#039;attribute_is_not&#039;];
 
 		return $args;
 	}
@@ -388,9 +391,9 @@ class Controller extends ReportsController implements ExportableInterface {
 	 * @return array
 	 */
 	public function get_collection_params() {
-		$params                      = array();
-		$params[&#039;context&#039;]           = $this-&gt;get_context_param( array( &#039;default&#039; =&gt; &#039;view&#039; ) );
-		$params[&#039;page&#039;]              = array(
+		$params                       = array();
+		$params[&#039;context&#039;]            = $this-&gt;get_context_param( array( &#039;default&#039; =&gt; &#039;view&#039; ) );
+		$params[&#039;page&#039;]               = array(
 			&#039;description&#039;       =&gt; __( &#039;Current page of the collection.&#039;, &#039;woocommerce&#039; ),
 			&#039;type&#039;              =&gt; &#039;integer&#039;,
 			&#039;default&#039;           =&gt; 1,
@@ -398,7 +401,7 @@ class Controller extends ReportsController implements ExportableInterface {
 			&#039;validate_callback&#039; =&gt; &#039;rest_validate_request_arg&#039;,
 			&#039;minimum&#039;           =&gt; 1,
 		);
-		$params[&#039;per_page&#039;]          = array(
+		$params[&#039;per_page&#039;]           = array(
 			&#039;description&#039;       =&gt; __( &#039;Maximum number of items to be returned in result set.&#039;, &#039;woocommerce&#039; ),
 			&#039;type&#039;              =&gt; &#039;integer&#039;,
 			&#039;default&#039;           =&gt; 10,
@@ -407,26 +410,26 @@ class Controller extends ReportsController implements ExportableInterface {
 			&#039;sanitize_callback&#039; =&gt; &#039;absint&#039;,
 			&#039;validate_callback&#039; =&gt; &#039;rest_validate_request_arg&#039;,
 		);
-		$params[&#039;after&#039;]             = array(
+		$params[&#039;after&#039;]              = array(
 			&#039;description&#039;       =&gt; __( &#039;Limit response to resources published after a given ISO8601 compliant date.&#039;, &#039;woocommerce&#039; ),
 			&#039;type&#039;              =&gt; &#039;string&#039;,
 			&#039;format&#039;            =&gt; &#039;date-time&#039;,
 			&#039;validate_callback&#039; =&gt; &#039;rest_validate_request_arg&#039;,
 		);
-		$params[&#039;before&#039;]            = array(
+		$params[&#039;before&#039;]             = array(
 			&#039;description&#039;       =&gt; __( &#039;Limit response to resources published before a given ISO8601 compliant date.&#039;, &#039;woocommerce&#039; ),
 			&#039;type&#039;              =&gt; &#039;string&#039;,
 			&#039;format&#039;            =&gt; &#039;date-time&#039;,
 			&#039;validate_callback&#039; =&gt; &#039;rest_validate_request_arg&#039;,
 		);
-		$params[&#039;order&#039;]             = array(
+		$params[&#039;order&#039;]              = array(
 			&#039;description&#039;       =&gt; __( &#039;Order sort attribute ascending or descending.&#039;, &#039;woocommerce&#039; ),
 			&#039;type&#039;              =&gt; &#039;string&#039;,
 			&#039;default&#039;           =&gt; &#039;desc&#039;,
 			&#039;enum&#039;              =&gt; array( &#039;asc&#039;, &#039;desc&#039; ),
 			&#039;validate_callback&#039; =&gt; &#039;rest_validate_request_arg&#039;,
 		);
-		$params[&#039;orderby&#039;]           = array(
+		$params[&#039;orderby&#039;]            = array(
 			&#039;description&#039;       =&gt; __( &#039;Sort collection by object attribute.&#039;, &#039;woocommerce&#039; ),
 			&#039;type&#039;              =&gt; &#039;string&#039;,
 			&#039;default&#039;           =&gt; &#039;date&#039;,
@@ -437,7 +440,7 @@ class Controller extends ReportsController implements ExportableInterface {
 			),
 			&#039;validate_callback&#039; =&gt; &#039;rest_validate_request_arg&#039;,
 		);
-		$params[&#039;product_includes&#039;]  = array(
+		$params[&#039;product_includes&#039;]   = array(
 			&#039;description&#039;       =&gt; __( &#039;Limit result set to items that have the specified product(s) assigned.&#039;, &#039;woocommerce&#039; ),
 			&#039;type&#039;              =&gt; &#039;array&#039;,
 			&#039;items&#039;             =&gt; array(
@@ -447,7 +450,7 @@ class Controller extends ReportsController implements ExportableInterface {
 			&#039;sanitize_callback&#039; =&gt; &#039;wp_parse_id_list&#039;,
 			&#039;validate_callback&#039; =&gt; &#039;rest_validate_request_arg&#039;,
 		);
-		$params[&#039;product_excludes&#039;]  = array(
+		$params[&#039;product_excludes&#039;]   = array(
 			&#039;description&#039;       =&gt; __( &#039;Limit result set to items that don\&#039;t have the specified product(s) assigned.&#039;, &#039;woocommerce&#039; ),
 			&#039;type&#039;              =&gt; &#039;array&#039;,
 			&#039;items&#039;             =&gt; array(
@@ -457,7 +460,27 @@ class Controller extends ReportsController implements ExportableInterface {
 			&#039;validate_callback&#039; =&gt; &#039;rest_validate_request_arg&#039;,
 			&#039;sanitize_callback&#039; =&gt; &#039;wp_parse_id_list&#039;,
 		);
-		$params[&#039;coupon_includes&#039;]   = array(
+		$params[&#039;variation_includes&#039;] = array(
+			&#039;description&#039;       =&gt; __( &#039;Limit result set to items that have the specified variation(s) assigned.&#039;, &#039;woocommerce&#039; ),
+			&#039;type&#039;              =&gt; &#039;array&#039;,
+			&#039;items&#039;             =&gt; array(
+				&#039;type&#039; =&gt; &#039;integer&#039;,
+			),
+			&#039;default&#039;           =&gt; array(),
+			&#039;sanitize_callback&#039; =&gt; &#039;wp_parse_id_list&#039;,
+			&#039;validate_callback&#039; =&gt; &#039;rest_validate_request_arg&#039;,
+		);
+		$params[&#039;variation_excludes&#039;] = array(
+			&#039;description&#039;       =&gt; __( &#039;Limit result set to items that don\&#039;t have the specified variation(s) assigned.&#039;, &#039;woocommerce&#039; ),
+			&#039;type&#039;              =&gt; &#039;array&#039;,
+			&#039;items&#039;             =&gt; array(
+				&#039;type&#039; =&gt; &#039;integer&#039;,
+			),
+			&#039;default&#039;           =&gt; array(),
+			&#039;validate_callback&#039; =&gt; &#039;rest_validate_request_arg&#039;,
+			&#039;sanitize_callback&#039; =&gt; &#039;wp_parse_id_list&#039;,
+		);
+		$params[&#039;coupon_includes&#039;]    = array(
 			&#039;description&#039;       =&gt; __( &#039;Limit result set to items that have the specified coupon(s) assigned.&#039;, &#039;woocommerce&#039; ),
 			&#039;type&#039;              =&gt; &#039;array&#039;,
 			&#039;items&#039;             =&gt; array(
@@ -467,7 +490,7 @@ class Controller extends ReportsController implements ExportableInterface {
 			&#039;sanitize_callback&#039; =&gt; &#039;wp_parse_id_list&#039;,
 			&#039;validate_callback&#039; =&gt; &#039;rest_validate_request_arg&#039;,
 		);
-		$params[&#039;coupon_excludes&#039;]   = array(
+		$params[&#039;coupon_excludes&#039;]    = array(
 			&#039;description&#039;       =&gt; __( &#039;Limit result set to items that don\&#039;t have the specified coupon(s) assigned.&#039;, &#039;woocommerce&#039; ),
 			&#039;type&#039;              =&gt; &#039;array&#039;,
 			&#039;items&#039;             =&gt; array(
@@ -477,7 +500,7 @@ class Controller extends ReportsController implements ExportableInterface {
 			&#039;validate_callback&#039; =&gt; &#039;rest_validate_request_arg&#039;,
 			&#039;sanitize_callback&#039; =&gt; &#039;wp_parse_id_list&#039;,
 		);
-		$params[&#039;tax_rate_includes&#039;] = array(
+		$params[&#039;tax_rate_includes&#039;]  = array(
 			&#039;description&#039;       =&gt; __( &#039;Limit result set to items that have the specified tax rate(s) assigned.&#039;, &#039;woocommerce&#039; ),
 			&#039;type&#039;              =&gt; &#039;array&#039;,
 			&#039;items&#039;             =&gt; array(
@@ -487,7 +510,7 @@ class Controller extends ReportsController implements ExportableInterface {
 			&#039;sanitize_callback&#039; =&gt; &#039;wp_parse_id_list&#039;,
 			&#039;validate_callback&#039; =&gt; &#039;rest_validate_request_arg&#039;,
 		);
-		$params[&#039;tax_rate_excludes&#039;] = array(
+		$params[&#039;tax_rate_excludes&#039;]  = array(
 			&#039;description&#039;       =&gt; __( &#039;Limit result set to items that don\&#039;t have the specified tax rate(s) assigned.&#039;, &#039;woocommerce&#039; ),
 			&#039;type&#039;              =&gt; &#039;array&#039;,
 			&#039;items&#039;             =&gt; array(
@@ -497,7 +520,7 @@ class Controller extends ReportsController implements ExportableInterface {
 			&#039;validate_callback&#039; =&gt; &#039;rest_validate_request_arg&#039;,
 			&#039;sanitize_callback&#039; =&gt; &#039;wp_parse_id_list&#039;,
 		);
-		$params[&#039;status_is&#039;]         = array(
+		$params[&#039;status_is&#039;]          = array(
 			&#039;description&#039;       =&gt; __( &#039;Limit result set to items that have the specified order status.&#039;, &#039;woocommerce&#039; ),
 			&#039;type&#039;              =&gt; &#039;array&#039;,
 			&#039;sanitize_callback&#039; =&gt; &#039;wp_parse_slug_list&#039;,
@@ -507,7 +530,7 @@ class Controller extends ReportsController implements ExportableInterface {
 				&#039;type&#039; =&gt; &#039;string&#039;,
 			),
 		);
-		$params[&#039;status_is_not&#039;]     = array(
+		$params[&#039;status_is_not&#039;]      = array(
 			&#039;description&#039;       =&gt; __( &#039;Limit result set to items that don\&#039;t have the specified order status.&#039;, &#039;woocommerce&#039; ),
 			&#039;type&#039;              =&gt; &#039;array&#039;,
 			&#039;sanitize_callback&#039; =&gt; &#039;wp_parse_slug_list&#039;,
@@ -517,7 +540,7 @@ class Controller extends ReportsController implements ExportableInterface {
 				&#039;type&#039; =&gt; &#039;string&#039;,
 			),
 		);
-		$params[&#039;customer_type&#039;]     = array(
+		$params[&#039;customer_type&#039;]      = array(
 			&#039;description&#039;       =&gt; __( &#039;Limit result set to returning or new customers.&#039;, &#039;woocommerce&#039; ),
 			&#039;type&#039;              =&gt; &#039;string&#039;,
 			&#039;default&#039;           =&gt; &#039;&#039;,
@@ -528,7 +551,7 @@ class Controller extends ReportsController implements ExportableInterface {
 			),
 			&#039;validate_callback&#039; =&gt; &#039;rest_validate_request_arg&#039;,
 		);
-		$params[&#039;refunds&#039;]           = array(
+		$params[&#039;refunds&#039;]            = array(
 			&#039;description&#039;       =&gt; __( &#039;Limit result set to specific types of refunds.&#039;, &#039;woocommerce&#039; ),
 			&#039;type&#039;              =&gt; &#039;string&#039;,
 			&#039;default&#039;           =&gt; &#039;&#039;,
@@ -541,14 +564,14 @@ class Controller extends ReportsController implements ExportableInterface {
 			),
 			&#039;validate_callback&#039; =&gt; &#039;rest_validate_request_arg&#039;,
 		);
-		$params[&#039;extended_info&#039;]     = array(
+		$params[&#039;extended_info&#039;]      = array(
 			&#039;description&#039;       =&gt; __( &#039;Add additional piece of info about each coupon to the report.&#039;, &#039;woocommerce&#039; ),
 			&#039;type&#039;              =&gt; &#039;boolean&#039;,
 			&#039;default&#039;           =&gt; false,
 			&#039;sanitize_callback&#039; =&gt; &#039;wc_string_to_bool&#039;,
 			&#039;validate_callback&#039; =&gt; &#039;rest_validate_request_arg&#039;,
 		);
-		$params[&#039;order_includes&#039;]    = array(
+		$params[&#039;order_includes&#039;]     = array(
 			&#039;description&#039;       =&gt; __( &#039;Limit result set to items that have the specified order ids.&#039;, &#039;woocommerce&#039; ),
 			&#039;type&#039;              =&gt; &#039;array&#039;,
 			&#039;sanitize_callback&#039; =&gt; &#039;wp_parse_id_list&#039;,
@@ -557,7 +580,7 @@ class Controller extends ReportsController implements ExportableInterface {
 				&#039;type&#039; =&gt; &#039;integer&#039;,
 			),
 		);
-		$params[&#039;order_excludes&#039;]    = array(
+		$params[&#039;order_excludes&#039;]     = array(
 			&#039;description&#039;       =&gt; __( &#039;Limit result set to items that don\&#039;t have the specified order ids.&#039;, &#039;woocommerce&#039; ),
 			&#039;type&#039;              =&gt; &#039;array&#039;,
 			&#039;sanitize_callback&#039; =&gt; &#039;wp_parse_id_list&#039;,
@@ -566,7 +589,7 @@ class Controller extends ReportsController implements ExportableInterface {
 				&#039;type&#039; =&gt; &#039;integer&#039;,
 			),
 		);
-		$params[&#039;attribute_is&#039;]      = array(
+		$params[&#039;attribute_is&#039;]       = array(
 			&#039;description&#039;       =&gt; __( &#039;Limit result set to orders that include products with the specified attributes.&#039;, &#039;woocommerce&#039; ),
 			&#039;type&#039;              =&gt; &#039;array&#039;,
 			&#039;items&#039;             =&gt; array(
@@ -575,7 +598,7 @@ class Controller extends ReportsController implements ExportableInterface {
 			&#039;default&#039;           =&gt; array(),
 			&#039;validate_callback&#039; =&gt; &#039;rest_validate_request_arg&#039;,
 		);
-		$params[&#039;attribute_is_not&#039;]  = array(
+		$params[&#039;attribute_is_not&#039;]   = array(
 			&#039;description&#039;       =&gt; __( &#039;Limit result set to orders that don\&#039;t include products with the specified attributes.&#039;, &#039;woocommerce&#039; ),
 			&#039;type&#039;              =&gt; &#039;array&#039;,
 			&#039;items&#039;             =&gt; array(
@@ -689,7 +712,7 @@ class Controller extends ReportsController implements ExportableInterface {
 
     <footer class="phpdocumentor phpdocumentor-footer">
     <div class="phpdocumentor-section">
-        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on November 30th, 2020 at 01:44 pm.</span>
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on December 10th, 2020 at 11:45 am.</span>
     </div>
 </footer>
 
@@ -701,7 +724,7 @@ class Controller extends ReportsController implements ExportableInterface {
             'searchIndex': '..\/js\/searchIndex.json'
         };
     </script>
-    <script src="../js/searchIndex.js?updated=1606754662"></script>
-    <script src="../js/search.js?updated=1606754662"></script>
+    <script src="../js/searchIndex.js?updated=1607611542"></script>
+    <script src="../js/search.js?updated=1607611542"></script>
 </body>
 </html>

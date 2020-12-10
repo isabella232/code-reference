@@ -9,9 +9,9 @@
     <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
     <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
     <link rel="stylesheet" href="../css/normalize.css">
-    <link rel="stylesheet" href="../css/base.css?updated=1606754662">
+    <link rel="stylesheet" href="../css/base.css?updated=1607611542">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/template.css?updated=1606754662">
+    <link rel="stylesheet" href="../css/template.css?updated=1607611542">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
             <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
@@ -102,6 +102,7 @@
                                     <li><a href="../packages/WooCommerce-Uninstaller.html"><abbr title="\WooCommerce\Uninstaller">Uninstaller</abbr></a></li>
                             </ul>
                                 <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceAdmin.html"><abbr title="\WoocommerceAdmin">WoocommerceAdmin</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceNavigation.html"><abbr title="\WoocommerceNavigation">WoocommerceNavigation</abbr></a></h3>
                                 <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerceAdmin.html"><abbr title="\WooCommerceAdmin">WooCommerceAdmin</abbr></a></h3>
                         </section>
     
@@ -144,8 +145,8 @@ namespace Automattic\WooCommerce\Admin\API;
 
 defined( &#039;ABSPATH&#039; ) || exit;
 
-use Automattic\WooCommerce\Admin\Notes\WC_Admin_Note;
-use Automattic\WooCommerce\Admin\Notes\WC_Admin_Notes;
+use Automattic\WooCommerce\Admin\Notes\Note;
+use Automattic\WooCommerce\Admin\Notes\Notes as NotesRepository;
 
 /**
  * REST API Admin Notes controller class.
@@ -257,7 +258,7 @@ class Notes extends \WC_REST_CRUD_Controller {
 	 * @return WP_REST_Response|WP_Error
 	 */
 	public function get_item( $request ) {
-		$note = WC_Admin_Notes::get_note( $request-&gt;get_param( &#039;id&#039; ) );
+		$note = NotesRepository::get_note( $request-&gt;get_param( &#039;id&#039; ) );
 
 		if ( ! $note ) {
 			return new \WP_Error(
@@ -285,7 +286,7 @@ class Notes extends \WC_REST_CRUD_Controller {
 	public function get_items( $request ) {
 		$query_args = $this-&gt;prepare_objects_query( $request );
 
-		$notes = WC_Admin_Notes::get_notes( &#039;edit&#039;, $query_args );
+		$notes = NotesRepository::get_notes( &#039;edit&#039;, $query_args );
 
 		$data = array();
 		foreach ( (array) $notes as $note_obj ) {
@@ -295,7 +296,7 @@ class Notes extends \WC_REST_CRUD_Controller {
 		}
 
 		$response = rest_ensure_response( $data );
-		$response-&gt;header( &#039;X-WP-Total&#039;, WC_Admin_Notes::get_notes_count( $query_args[&#039;type&#039;], $query_args[&#039;status&#039;] ) );
+		$response-&gt;header( &#039;X-WP-Total&#039;, NotesRepository::get_notes_count( $query_args[&#039;type&#039;], $query_args[&#039;status&#039;] ) );
 
 		return $response;
 	}
@@ -369,7 +370,7 @@ class Notes extends \WC_REST_CRUD_Controller {
 	 * @return WP_REST_Request|WP_Error
 	 */
 	public function update_item( $request ) {
-		$note = WC_Admin_Notes::get_note( $request-&gt;get_param( &#039;id&#039; ) );
+		$note = NotesRepository::get_note( $request-&gt;get_param( &#039;id&#039; ) );
 
 		if ( ! $note ) {
 			return new \WP_Error(
@@ -379,7 +380,7 @@ class Notes extends \WC_REST_CRUD_Controller {
 			);
 		}
 
-		WC_Admin_Notes::update_note( $note, $this-&gt;get_requested_updates( $request ) );
+		NotesRepository::update_note( $note, $this-&gt;get_requested_updates( $request ) );
 		return $this-&gt;get_item( $request );
 	}
 
@@ -390,7 +391,7 @@ class Notes extends \WC_REST_CRUD_Controller {
 	 * @return WP_REST_Request|WP_Error
 	 */
 	public function delete_item( $request ) {
-		$note = WC_Admin_Notes::get_note( $request-&gt;get_param( &#039;id&#039; ) );
+		$note = NotesRepository::get_note( $request-&gt;get_param( &#039;id&#039; ) );
 
 		if ( ! $note ) {
 			return new \WP_Error(
@@ -400,7 +401,7 @@ class Notes extends \WC_REST_CRUD_Controller {
 			);
 		}
 
-		WC_Admin_Notes::delete_note( $note );
+		NotesRepository::delete_note( $note );
 		$data = $this-&gt;prepare_note_data_for_response( $note, $request );
 		return rest_ensure_response( $data );
 	}
@@ -412,22 +413,23 @@ class Notes extends \WC_REST_CRUD_Controller {
 	 * @return WP_REST_Request|WP_Error
 	 */
 	public function delete_all_items( $request ) {
-		$notes = WC_Admin_Notes::delete_all_notes();
+		$notes = NotesRepository::delete_all_notes();
 		$data  = array();
 		foreach ( (array) $notes as $note_obj ) {
 			$data[] = $this-&gt;prepare_note_data_for_response( $note_obj, $request );
 		}
 
 		$response = rest_ensure_response( $data );
-		$response-&gt;header( &#039;X-WP-Total&#039;, WC_Admin_Notes::get_notes_count( array( &#039;info&#039;, &#039;warning&#039; ), array() ) );
+		$response-&gt;header( &#039;X-WP-Total&#039;, NotesRepository::get_notes_count( array( &#039;info&#039;, &#039;warning&#039; ), array() ) );
 		return $response;
 	}
 
 	/**
 	 * Prepare note data.
 	 *
-	 * @param WC_Admin_Note   $note     Note data.
+	 * @param Note            $note     Note data.
 	 * @param WP_REST_Request $request  Request object.
+	 *
 	 * @return WP_REST_Response $response Response data.
 	 */
 	public function prepare_note_data_for_response( $note, $request ) {
@@ -488,15 +490,15 @@ class Notes extends \WC_REST_CRUD_Controller {
 		}
 
 		foreach ( (array) $note_ids as $note_id ) {
-			$note = WC_Admin_Notes::get_note( (int) $note_id );
+			$note = NotesRepository::get_note( (int) $note_id );
 			if ( $note ) {
-				WC_Admin_Notes::update_note( $note, $this-&gt;get_requested_updates( $request ) );
+				NotesRepository::update_note( $note, $this-&gt;get_requested_updates( $request ) );
 				$data[] = $this-&gt;prepare_note_data_for_response( $note, $request );
 			}
 		}
 
 		$response = rest_ensure_response( $data );
-		$response-&gt;header( &#039;X-WP-Total&#039;, WC_Admin_Notes::get_notes_count( array( &#039;info&#039;, &#039;warning&#039; ), array() ) );
+		$response-&gt;header( &#039;X-WP-Total&#039;, NotesRepository::get_notes_count( array( &#039;info&#039;, &#039;warning&#039; ), array() ) );
 		return $response;
 	}
 
@@ -636,7 +638,7 @@ class Notes extends \WC_REST_CRUD_Controller {
 			&#039;sanitize_callback&#039; =&gt; &#039;wp_parse_slug_list&#039;,
 			&#039;validate_callback&#039; =&gt; &#039;rest_validate_request_arg&#039;,
 			&#039;items&#039;             =&gt; array(
-				&#039;enum&#039; =&gt; WC_Admin_Note::get_allowed_types(),
+				&#039;enum&#039; =&gt; Note::get_allowed_types(),
 				&#039;type&#039; =&gt; &#039;string&#039;,
 			),
 		);
@@ -646,7 +648,7 @@ class Notes extends \WC_REST_CRUD_Controller {
 			&#039;sanitize_callback&#039; =&gt; &#039;wp_parse_slug_list&#039;,
 			&#039;validate_callback&#039; =&gt; &#039;rest_validate_request_arg&#039;,
 			&#039;items&#039;             =&gt; array(
-				&#039;enum&#039; =&gt; WC_Admin_Note::get_allowed_statuses(),
+				&#039;enum&#039; =&gt; Note::get_allowed_statuses(),
 				&#039;type&#039; =&gt; &#039;string&#039;,
 			),
 		);
@@ -786,7 +788,7 @@ class Notes extends \WC_REST_CRUD_Controller {
 
     <footer class="phpdocumentor phpdocumentor-footer">
     <div class="phpdocumentor-section">
-        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on November 30th, 2020 at 01:44 pm.</span>
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on December 10th, 2020 at 11:45 am.</span>
     </div>
 </footer>
 
@@ -798,7 +800,7 @@ class Notes extends \WC_REST_CRUD_Controller {
             'searchIndex': '..\/js\/searchIndex.json'
         };
     </script>
-    <script src="../js/searchIndex.js?updated=1606754662"></script>
-    <script src="../js/search.js?updated=1606754662"></script>
+    <script src="../js/searchIndex.js?updated=1607611542"></script>
+    <script src="../js/search.js?updated=1607611542"></script>
 </body>
 </html>
