@@ -9,9 +9,9 @@
     <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
     <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
     <link rel="stylesheet" href="../css/normalize.css">
-    <link rel="stylesheet" href="../css/base.css?updated=1607611542">
+    <link rel="stylesheet" href="../css/base.css?updated=1611605754">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/template.css?updated=1607611542">
+    <link rel="stylesheet" href="../css/template.css?updated=1611605754">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
             <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
@@ -145,7 +145,6 @@ namespace Automattic\WooCommerce\Admin\Features;
 use \Automattic\WooCommerce\Admin\Loader;
 use \Automattic\WooCommerce\Admin\PluginsHelper;
 use \Automattic\WooCommerce\Admin\Features\OnboardingSetUpShipping;
-use \Automattic\WooCommerce\Admin\Features\OnboardingAutomateTaxes;
 
 /**
  * Contains backend logic for the onboarding profile and checklist feature.
@@ -204,7 +203,6 @@ class Onboarding {
 
 		// Hook up dependent classes.
 		new OnboardingSetUpShipping();
-		new OnboardingAutomateTaxes();
 	}
 
 	/**
@@ -493,7 +491,7 @@ class Onboarding {
 	 * @return bool
 	 */
 	public static function should_show_tasks() {
-		return &#039;no&#039; === get_option( &#039;woocommerce_task_list_hidden&#039;, &#039;no&#039; );
+		return &#039;no&#039; === get_option( &#039;woocommerce_task_list_hidden&#039;, &#039;no&#039; ) || &#039;no&#039; === get_option( &#039;woocommerce_extended_task_list_hidden&#039;, &#039;no&#039; );
 	}
 
 	/**
@@ -712,7 +710,11 @@ class Onboarding {
 		}
 
 		foreach ( $themes as $theme ) {
-			$directory = new \RecursiveDirectoryIterator( $theme-&gt;theme_root . &#039;/&#039; . $theme-&gt;stylesheet );
+			$stylesheet_file = $theme-&gt;theme_root . &#039;/&#039; . $theme-&gt;stylesheet;
+			if ( ! file_exists( $stylesheet_file ) ) {
+				continue;
+			}
+			$directory = new \RecursiveDirectoryIterator( $stylesheet_file );
 			$iterator  = new \RecursiveIteratorIterator( $directory );
 			$files     = new \RegexIterator( $iterator, &#039;/^.+\.php$/i&#039;, \RecursiveRegexIterator::GET_MATCH );
 
@@ -822,6 +824,8 @@ class Onboarding {
 		$options[] = &#039;woocommerce_task_list_complete&#039;;
 		$options[] = &#039;woocommerce_task_list_do_this_later&#039;;
 		$options[] = &#039;woocommerce_task_list_hidden&#039;;
+		$options[] = &#039;woocommerce_extended_task_list_complete&#039;;
+		$options[] = &#039;woocommerce_extended_task_list_hidden&#039;;
 
 		if ( ! self::should_show_tasks() &amp;&amp; ! self::should_show_profiler() ) {
 			return $options;
@@ -845,6 +849,7 @@ class Onboarding {
 		$options[] = &#039;woocommerce_bacs_accounts&#039;;
 		$options[] = &#039;woocommerce_woocommerce_payments_settings&#039;;
 		$options[] = &#039;woocommerce_eway_settings&#039;;
+		$options[] = &#039;woocommerce_razorpay_settings&#039;;
 
 		return $options;
 	}
@@ -888,6 +893,7 @@ class Onboarding {
 				&#039;woocommerce-payfast-gateway&#039;         =&gt; &#039;woocommerce-payfast-gateway/gateway-payfast.php&#039;,
 				&#039;woocommerce-payments&#039;                =&gt; &#039;woocommerce-payments/woocommerce-payments.php&#039;,
 				&#039;woocommerce-gateway-eway&#039;            =&gt; &#039;woocommerce-gateway-eway/woocommerce-gateway-eway.php&#039;,
+				&#039;woo-razorpay&#039;                        =&gt; &#039;woo-razorpay/woo-razorpay.php&#039;,
 			)
 		);
 		return array_merge( $plugins, $onboarding_plugins );
@@ -1055,7 +1061,7 @@ class Onboarding {
 			&#039;id&#039;    =&gt; &#039;woocommerce_onboard_tab&#039;,
 		);
 
-		$task_list_hidden = get_option( &#039;woocommerce_task_list_hidden&#039;, &#039;no&#039; );
+		$task_list_hidden = get_option( &#039;woocommerce_task_list_hidden&#039;, &#039;no&#039; ) || get_option( &#039;woocommerce_extended_task_list_hidden&#039;, &#039;no&#039; );
 
 		$help_tab[&#039;content&#039;] = &#039;&lt;h2&gt;&#039; . __( &#039;WooCommerce Onboarding&#039;, &#039;woocommerce&#039; ) . &#039;&lt;/h2&gt;&#039;;
 
@@ -1064,7 +1070,7 @@ class Onboarding {
 			&#039;&lt;p&gt;&lt;a href=&quot;&#039; . wc_admin_url( &#039;&amp;path=/setup-wizard&#039; ) . &#039;&quot; class=&quot;button button-primary&quot;&gt;&#039; . __( &#039;Setup wizard&#039;, &#039;woocommerce&#039; ) . &#039;&lt;/a&gt;&lt;/p&gt;&#039;;
 
 		$help_tab[&#039;content&#039;] .= &#039;&lt;h3&gt;&#039; . __( &#039;Task List&#039;, &#039;woocommerce&#039; ) . &#039;&lt;/h3&gt;&#039;;
-		$help_tab[&#039;content&#039;] .= &#039;&lt;p&gt;&#039; . __( &#039;If you need to enable or disable the task list, please click on the button below.&#039;, &#039;woocommerce&#039; ) . &#039;&lt;/p&gt;&#039; .
+		$help_tab[&#039;content&#039;] .= &#039;&lt;p&gt;&#039; . __( &#039;If you need to enable or disable the task lists, please click on the button below.&#039;, &#039;woocommerce&#039; ) . &#039;&lt;/p&gt;&#039; .
 		( &#039;yes&#039; === $task_list_hidden
 			? &#039;&lt;p&gt;&lt;a href=&quot;&#039; . wc_admin_url( &#039;&amp;reset_task_list=1&#039; ) . &#039;&quot; class=&quot;button button-primary&quot;&gt;&#039; . __( &#039;Enable&#039;, &#039;woocommerce&#039; ) . &#039;&lt;/a&gt;&lt;/p&gt;&#039;
 			: &#039;&lt;p&gt;&lt;a href=&quot;&#039; . wc_admin_url( &#039;&amp;reset_task_list=0&#039; ) . &#039;&quot; class=&quot;button button-primary&quot;&gt;&#039; . __( &#039;Disable&#039;, &#039;woocommerce&#039; ) . &#039;&lt;/a&gt;&lt;/p&gt;&#039;
@@ -1201,6 +1207,7 @@ class Onboarding {
 
 		$task_list_hidden = 1 === absint( $_GET[&#039;reset_task_list&#039;] ) ? &#039;no&#039; : &#039;yes&#039;; // phpcs:ignore CSRF ok.
 		update_option( &#039;woocommerce_task_list_hidden&#039;, $task_list_hidden );
+		update_option( &#039;woocommerce_extended_task_list_hidden&#039;, $task_list_hidden );
 
 		wc_admin_record_tracks_event(
 			&#039;tasklist_toggled&#039;,
@@ -1277,7 +1284,7 @@ class Onboarding {
 
     <footer class="phpdocumentor phpdocumentor-footer">
     <div class="phpdocumentor-section">
-        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on December 10th, 2020 at 11:45 am.</span>
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on January 25th, 2021 at 05:15 pm.</span>
     </div>
 </footer>
 
@@ -1289,7 +1296,7 @@ class Onboarding {
             'searchIndex': '..\/js\/searchIndex.json'
         };
     </script>
-    <script src="../js/searchIndex.js?updated=1607611542"></script>
-    <script src="../js/search.js?updated=1607611542"></script>
+    <script src="../js/searchIndex.js?updated=1611605754"></script>
+    <script src="../js/search.js?updated=1611605754"></script>
 </body>
 </html>

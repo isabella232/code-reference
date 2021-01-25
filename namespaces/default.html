@@ -9,9 +9,9 @@
     <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
     <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
     <link rel="stylesheet" href="../css/normalize.css">
-    <link rel="stylesheet" href="../css/base.css?updated=1607611543">
+    <link rel="stylesheet" href="../css/base.css?updated=1611605755">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/template.css?updated=1607611543">
+    <link rel="stylesheet" href="../css/template.css?updated=1611605755">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
             <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
@@ -2451,6 +2451,13 @@ or if stringified $value is the same as scalar stringified $options.</dd>
                         &nbsp;: bool    </span>
 </dt>
 <dd>Test whether the context of execution comes from async action scheduler.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -function -">
+    <a href="../namespaces/default.html#function_wc_cache_get_multiple">wc_cache_get_multiple()</a>
+    <span>
+                        &nbsp;: array|bool    </span>
+</dt>
+<dd>Polyfill for wp_cache_get_multiple for WP versions before 5.5.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -function -">
     <a href="../namespaces/default.html#function_wc_get_coupon_types">wc_get_coupon_types()</a>
@@ -7683,9 +7690,9 @@ Note this relies on composer.json version, not plugin version.</dd>
         <a href="#function_wc_save_order_items" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/admin/wc-admin-functions.php"><a href="../files/woocommerce-includes-admin-wc-admin-functions.html#source-view.257">includes/admin/wc-admin-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/admin/wc-admin-functions.php"><a href="../files/woocommerce-includes-admin-wc-admin-functions.html#source-view.265">includes/admin/wc-admin-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">257</span>
+    <span class="phpdocumentor-element-found-in__line">265</span>
 </aside>
 
         <p class="phpdocumentor-summary">Save order items. Uses the CRUD.</p>
@@ -7738,9 +7745,9 @@ Note this relies on composer.json version, not plugin version.</dd>
         <a href="#function_wc_render_action_buttons" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/admin/wc-admin-functions.php"><a href="../files/woocommerce-includes-admin-wc-admin-functions.html#source-view.417">includes/admin/wc-admin-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/admin/wc-admin-functions.php"><a href="../files/woocommerce-includes-admin-wc-admin-functions.html#source-view.428">includes/admin/wc-admin-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">417</span>
+    <span class="phpdocumentor-element-found-in__line">428</span>
 </aside>
 
         <p class="phpdocumentor-summary">Get HTML for some action buttons. Used in list tables.</p>
@@ -7785,9 +7792,9 @@ Note this relies on composer.json version, not plugin version.</dd>
         <a href="#function_wc_render_invalid_variation_notice" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/admin/wc-admin-functions.php"><a href="../files/woocommerce-includes-admin-wc-admin-functions.html#source-view.437">includes/admin/wc-admin-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/admin/wc-admin-functions.php"><a href="../files/woocommerce-includes-admin-wc-admin-functions.html#source-view.448">includes/admin/wc-admin-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">437</span>
+    <span class="phpdocumentor-element-found-in__line">448</span>
 </aside>
 
         <p class="phpdocumentor-summary">Shows a notice if variations are missing prices.</p>
@@ -15463,6 +15470,57 @@ or if stringified $value is the same as scalar stringified $options.</p>
     
 </article>
                     <article class="phpdocumentor-element -function - ">
+    <h4 class="phpdocumentor-element__name" id="function_wc_cache_get_multiple">
+        wc_cache_get_multiple()
+        <a href="#function_wc_cache_get_multiple" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-core-functions.php"><a href="../files/woocommerce-includes-wc-core-functions.html#source-view.2515">includes/wc-core-functions.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">2515</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Polyfill for wp_cache_get_multiple for WP versions before 5.5.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility"></span>
+                <span class="phpdocumentor-signature__name">wc_cache_get_multiple</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&nbsp;</span><span class="phpdocumentor-signature__argument__name">$keys</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$group</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">&#039;&#039;</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><span class="phpdocumentor-signature__argument__name">$force</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">false</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array|bool</span></code>
+
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$keys</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Array of keys to get from group.</p></section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$group</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">&#039;&#039;</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Optional. Where the cache contents are grouped. Default empty.</p></section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$force</span>
+                : <span class="phpdocumentor-signature__argument__return-type">bool</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">false</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Optional. Whether to force an update of the local cache from the persistent
+cache. Default false.</p></section>
+
+            </dd>
+            </dl>
+
+    
+
+    
+</article>
+                    <article class="phpdocumentor-element -function - ">
     <h4 class="phpdocumentor-element__name" id="function_wc_get_coupon_types">
         wc_get_coupon_types()
         <a href="#function_wc_get_coupon_types" class="headerlink"><i class="fas fa-link"></i></a>
@@ -22520,9 +22578,9 @@ Defaults to empty array.</p>
         <a href="#function_wc_time_format" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-formatting-functions.php"><a href="../files/woocommerce-includes-wc-formatting-functions.html#source-view.649">includes/wc-formatting-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-formatting-functions.php"><a href="../files/woocommerce-includes-wc-formatting-functions.html#source-view.654">includes/wc-formatting-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">649</span>
+    <span class="phpdocumentor-element-found-in__line">654</span>
 </aside>
 
         <p class="phpdocumentor-summary">WooCommerce Time Format - Allows to change time format for everything WooCommerce.</p>
@@ -22543,9 +22601,9 @@ Defaults to empty array.</p>
         <a href="#function_wc_string_to_timestamp" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-formatting-functions.php"><a href="../files/woocommerce-includes-wc-formatting-functions.html#source-view.663">includes/wc-formatting-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-formatting-functions.php"><a href="../files/woocommerce-includes-wc-formatting-functions.html#source-view.673">includes/wc-formatting-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">663</span>
+    <span class="phpdocumentor-element-found-in__line">673</span>
 </aside>
 
         <p class="phpdocumentor-summary">Convert mysql datetime to PHP timestamp, forcing UTC. Wrapper for strtotime.</p>
@@ -22599,9 +22657,9 @@ Defaults to empty array.</p>
         <a href="#function_wc_string_to_datetime" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-formatting-functions.php"><a href="../files/woocommerce-includes-wc-formatting-functions.html#source-view.688">includes/wc-formatting-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-formatting-functions.php"><a href="../files/woocommerce-includes-wc-formatting-functions.html#source-view.698">includes/wc-formatting-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">688</span>
+    <span class="phpdocumentor-element-found-in__line">698</span>
 </aside>
 
         <p class="phpdocumentor-summary">Convert a date string to a WC_DateTime.</p>
@@ -22646,9 +22704,9 @@ Defaults to empty array.</p>
         <a href="#function_wc_timezone_string" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-formatting-functions.php"><a href="../files/woocommerce-includes-wc-formatting-functions.html#source-view.717">includes/wc-formatting-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-formatting-functions.php"><a href="../files/woocommerce-includes-wc-formatting-functions.html#source-view.727">includes/wc-formatting-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">717</span>
+    <span class="phpdocumentor-element-found-in__line">727</span>
 </aside>
 
         <p class="phpdocumentor-summary">WooCommerce Timezone - helper to retrieve the timezone string for a site until.</p>
@@ -22684,9 +22742,9 @@ Defaults to empty array.</p>
         <a href="#function_wc_timezone_offset" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-formatting-functions.php"><a href="../files/woocommerce-includes-wc-formatting-functions.html#source-view.764">includes/wc-formatting-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-formatting-functions.php"><a href="../files/woocommerce-includes-wc-formatting-functions.html#source-view.774">includes/wc-formatting-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">764</span>
+    <span class="phpdocumentor-element-found-in__line">774</span>
 </aside>
 
         <p class="phpdocumentor-summary">Get timezone offset in seconds.</p>
@@ -22720,9 +22778,9 @@ Defaults to empty array.</p>
         <a href="#function_wc_flatten_meta_callback" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-formatting-functions.php"><a href="../files/woocommerce-includes-wc-formatting-functions.html#source-view.782">includes/wc-formatting-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-formatting-functions.php"><a href="../files/woocommerce-includes-wc-formatting-functions.html#source-view.792">includes/wc-formatting-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">782</span>
+    <span class="phpdocumentor-element-found-in__line">792</span>
 </aside>
 
         <p class="phpdocumentor-summary">Callback which can flatten post meta (gets the first value if it&#039;s an array).</p>
@@ -22767,9 +22825,9 @@ Defaults to empty array.</p>
         <a href="#function_wc_rgb_from_hex" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-formatting-functions.php"><a href="../files/woocommerce-includes-wc-formatting-functions.html#source-view.795">includes/wc-formatting-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-formatting-functions.php"><a href="../files/woocommerce-includes-wc-formatting-functions.html#source-view.805">includes/wc-formatting-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">795</span>
+    <span class="phpdocumentor-element-found-in__line">805</span>
 </aside>
 
         <p class="phpdocumentor-summary">Convert RGB to HEX.</p>
@@ -22801,9 +22859,9 @@ Defaults to empty array.</p>
         <a href="#function_wc_hex_darker" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-formatting-functions.php"><a href="../files/woocommerce-includes-wc-formatting-functions.html#source-view.819">includes/wc-formatting-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-formatting-functions.php"><a href="../files/woocommerce-includes-wc-formatting-functions.html#source-view.829">includes/wc-formatting-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">819</span>
+    <span class="phpdocumentor-element-found-in__line">829</span>
 </aside>
 
         <p class="phpdocumentor-summary">Make HEX color darker.</p>
@@ -22844,9 +22902,9 @@ Defaults to 30.</p></section>
         <a href="#function_wc_hex_lighter" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-formatting-functions.php"><a href="../files/woocommerce-includes-wc-formatting-functions.html#source-view.849">includes/wc-formatting-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-formatting-functions.php"><a href="../files/woocommerce-includes-wc-formatting-functions.html#source-view.859">includes/wc-formatting-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">849</span>
+    <span class="phpdocumentor-element-found-in__line">859</span>
 </aside>
 
         <p class="phpdocumentor-summary">Make HEX color lighter.</p>
@@ -22887,9 +22945,9 @@ Defaults to 30.</p></section>
         <a href="#function_wc_hex_is_light" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-formatting-functions.php"><a href="../files/woocommerce-includes-wc-formatting-functions.html#source-view.878">includes/wc-formatting-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-formatting-functions.php"><a href="../files/woocommerce-includes-wc-formatting-functions.html#source-view.888">includes/wc-formatting-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">878</span>
+    <span class="phpdocumentor-element-found-in__line">888</span>
 </aside>
 
         <p class="phpdocumentor-summary">Determine whether a hex color is light.</p>
@@ -22921,9 +22979,9 @@ Defaults to 30.</p></section>
         <a href="#function_wc_light_or_dark" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-formatting-functions.php"><a href="../files/woocommerce-includes-wc-formatting-functions.html#source-view.903">includes/wc-formatting-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-formatting-functions.php"><a href="../files/woocommerce-includes-wc-formatting-functions.html#source-view.913">includes/wc-formatting-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">903</span>
+    <span class="phpdocumentor-element-found-in__line">913</span>
 </aside>
 
         <p class="phpdocumentor-summary">Detect if we should use a light or dark color on a background color.</p>
@@ -22973,9 +23031,9 @@ Defaults to '#FFFFFF'.</p></section>
         <a href="#function_wc_format_hex" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-formatting-functions.php"><a href="../files/woocommerce-includes-wc-formatting-functions.html#source-view.916">includes/wc-formatting-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-formatting-functions.php"><a href="../files/woocommerce-includes-wc-formatting-functions.html#source-view.926">includes/wc-formatting-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">916</span>
+    <span class="phpdocumentor-element-found-in__line">926</span>
 </aside>
 
         <p class="phpdocumentor-summary">Format string as hex.</p>
@@ -23007,9 +23065,9 @@ Defaults to '#FFFFFF'.</p></section>
         <a href="#function_wc_format_postcode" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-formatting-functions.php"><a href="../files/woocommerce-includes-wc-formatting-functions.html#source-view.934">includes/wc-formatting-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-formatting-functions.php"><a href="../files/woocommerce-includes-wc-formatting-functions.html#source-view.944">includes/wc-formatting-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">934</span>
+    <span class="phpdocumentor-element-found-in__line">944</span>
 </aside>
 
         <p class="phpdocumentor-summary">Format the postcode according to the country and length of the postcode.</p>
@@ -23049,9 +23107,9 @@ Defaults to '#FFFFFF'.</p></section>
         <a href="#function_wc_normalize_postcode" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-formatting-functions.php"><a href="../files/woocommerce-includes-wc-formatting-functions.html#source-view.976">includes/wc-formatting-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-formatting-functions.php"><a href="../files/woocommerce-includes-wc-formatting-functions.html#source-view.986">includes/wc-formatting-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">976</span>
+    <span class="phpdocumentor-element-found-in__line">986</span>
 </aside>
 
         <p class="phpdocumentor-summary">Normalize postcodes.</p>
@@ -23097,9 +23155,9 @@ Defaults to '#FFFFFF'.</p></section>
         <a href="#function_wc_format_phone_number" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-formatting-functions.php"><a href="../files/woocommerce-includes-wc-formatting-functions.html#source-view.986">includes/wc-formatting-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-formatting-functions.php"><a href="../files/woocommerce-includes-wc-formatting-functions.html#source-view.996">includes/wc-formatting-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">986</span>
+    <span class="phpdocumentor-element-found-in__line">996</span>
 </aside>
 
         <p class="phpdocumentor-summary">Format phone numbers.</p>
@@ -23131,9 +23189,9 @@ Defaults to '#FFFFFF'.</p></section>
         <a href="#function_wc_sanitize_phone_number" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-formatting-functions.php"><a href="../files/woocommerce-includes-wc-formatting-functions.html#source-view.1001">includes/wc-formatting-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-formatting-functions.php"><a href="../files/woocommerce-includes-wc-formatting-functions.html#source-view.1011">includes/wc-formatting-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1001</span>
+    <span class="phpdocumentor-element-found-in__line">1011</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sanitize phone number.</p>
@@ -23179,9 +23237,9 @@ Defaults to '#FFFFFF'.</p></section>
         <a href="#function_wc_strtoupper" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-formatting-functions.php"><a href="../files/woocommerce-includes-wc-formatting-functions.html#source-view.1012">includes/wc-formatting-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-formatting-functions.php"><a href="../files/woocommerce-includes-wc-formatting-functions.html#source-view.1022">includes/wc-formatting-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1012</span>
+    <span class="phpdocumentor-element-found-in__line">1022</span>
 </aside>
 
         <p class="phpdocumentor-summary">Wrapper for mb_strtoupper which see&#039;s if supported first.</p>
@@ -23226,9 +23284,9 @@ Defaults to '#FFFFFF'.</p></section>
         <a href="#function_wc_strtolower" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-formatting-functions.php"><a href="../files/woocommerce-includes-wc-formatting-functions.html#source-view.1024">includes/wc-formatting-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-formatting-functions.php"><a href="../files/woocommerce-includes-wc-formatting-functions.html#source-view.1034">includes/wc-formatting-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1024</span>
+    <span class="phpdocumentor-element-found-in__line">1034</span>
 </aside>
 
         <p class="phpdocumentor-summary">Make a string lowercase.</p>
@@ -23274,9 +23332,9 @@ Defaults to '#FFFFFF'.</p></section>
         <a href="#function_wc_trim_string" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-formatting-functions.php"><a href="../files/woocommerce-includes-wc-formatting-functions.html#source-view.1038">includes/wc-formatting-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-formatting-functions.php"><a href="../files/woocommerce-includes-wc-formatting-functions.html#source-view.1048">includes/wc-formatting-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1038</span>
+    <span class="phpdocumentor-element-found-in__line">1048</span>
 </aside>
 
         <p class="phpdocumentor-summary">Trim a string and append a suffix.</p>
@@ -23326,9 +23384,9 @@ Defaults to '...'.</p></section>
         <a href="#function_wc_format_content" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-formatting-functions.php"><a href="../files/woocommerce-includes-wc-formatting-functions.html#source-view.1056">includes/wc-formatting-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-formatting-functions.php"><a href="../files/woocommerce-includes-wc-formatting-functions.html#source-view.1066">includes/wc-formatting-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1056</span>
+    <span class="phpdocumentor-element-found-in__line">1066</span>
 </aside>
 
         <p class="phpdocumentor-summary">Format content to display shortcodes.</p>
@@ -23373,9 +23431,9 @@ Defaults to '...'.</p></section>
         <a href="#function_wc_format_product_short_description" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-formatting-functions.php"><a href="../files/woocommerce-includes-wc-formatting-functions.html#source-view.1069">includes/wc-formatting-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-formatting-functions.php"><a href="../files/woocommerce-includes-wc-formatting-functions.html#source-view.1079">includes/wc-formatting-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1069</span>
+    <span class="phpdocumentor-element-found-in__line">1079</span>
 </aside>
 
         <p class="phpdocumentor-summary">Format product short description.</p>
@@ -23427,9 +23485,9 @@ Defaults to '...'.</p></section>
         <a href="#function_wc_format_option_price_separators" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-formatting-functions.php"><a href="../files/woocommerce-includes-wc-formatting-functions.html#source-view.1096">includes/wc-formatting-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-formatting-functions.php"><a href="../files/woocommerce-includes-wc-formatting-functions.html#source-view.1106">includes/wc-formatting-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1096</span>
+    <span class="phpdocumentor-element-found-in__line">1106</span>
 </aside>
 
         <p class="phpdocumentor-summary">Formats curency symbols when saved in settings.</p>
@@ -23489,9 +23547,9 @@ Defaults to '...'.</p></section>
         <a href="#function_wc_format_option_price_num_decimals" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-formatting-functions.php"><a href="../files/woocommerce-includes-wc-formatting-functions.html#source-view.1111">includes/wc-formatting-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-formatting-functions.php"><a href="../files/woocommerce-includes-wc-formatting-functions.html#source-view.1121">includes/wc-formatting-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1111</span>
+    <span class="phpdocumentor-element-found-in__line">1121</span>
 </aside>
 
         <p class="phpdocumentor-summary">Formats decimals when saved in settings.</p>
@@ -23551,9 +23609,9 @@ Defaults to '...'.</p></section>
         <a href="#function_wc_format_option_hold_stock_minutes" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-formatting-functions.php"><a href="../files/woocommerce-includes-wc-formatting-functions.html#source-view.1125">includes/wc-formatting-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-formatting-functions.php"><a href="../files/woocommerce-includes-wc-formatting-functions.html#source-view.1135">includes/wc-formatting-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1125</span>
+    <span class="phpdocumentor-element-found-in__line">1135</span>
 </aside>
 
         <p class="phpdocumentor-summary">Formats hold stock option and sets cron event up.</p>
@@ -23613,9 +23671,9 @@ Defaults to '...'.</p></section>
         <a href="#function_wc_sanitize_term_text_based" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-formatting-functions.php"><a href="../files/woocommerce-includes-wc-formatting-functions.html#source-view.1145">includes/wc-formatting-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-formatting-functions.php"><a href="../files/woocommerce-includes-wc-formatting-functions.html#source-view.1155">includes/wc-formatting-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1145</span>
+    <span class="phpdocumentor-element-found-in__line">1155</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sanitize terms from an attribute text based.</p>
@@ -23660,9 +23718,9 @@ Defaults to '...'.</p></section>
         <a href="#function_wc_make_numeric_postcode" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-formatting-functions.php"><a href="../files/woocommerce-includes-wc-formatting-functions.html#source-view.1160">includes/wc-formatting-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-formatting-functions.php"><a href="../files/woocommerce-includes-wc-formatting-functions.html#source-view.1170">includes/wc-formatting-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1160</span>
+    <span class="phpdocumentor-element-found-in__line">1170</span>
 </aside>
 
         <p class="phpdocumentor-summary">Make numeric postcode.</p>
@@ -23709,9 +23767,9 @@ E.g. PE30 becomes 16050300 (P = 16, E = 05, 3 = 03, 0 = 00)</p></section>
         <a href="#function_wc_format_stock_for_display" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-formatting-functions.php"><a href="../files/woocommerce-includes-wc-formatting-functions.html#source-view.1188">includes/wc-formatting-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-formatting-functions.php"><a href="../files/woocommerce-includes-wc-formatting-functions.html#source-view.1198">includes/wc-formatting-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1188</span>
+    <span class="phpdocumentor-element-found-in__line">1198</span>
 </aside>
 
         <p class="phpdocumentor-summary">Format the stock amount ready for display based on settings.</p>
@@ -23756,9 +23814,9 @@ E.g. PE30 becomes 16050300 (P = 16, E = 05, 3 = 03, 0 = 00)</p></section>
         <a href="#function_wc_format_stock_quantity_for_display" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-formatting-functions.php"><a href="../files/woocommerce-includes-wc-formatting-functions.html#source-view.1220">includes/wc-formatting-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-formatting-functions.php"><a href="../files/woocommerce-includes-wc-formatting-functions.html#source-view.1230">includes/wc-formatting-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1220</span>
+    <span class="phpdocumentor-element-found-in__line">1230</span>
 </aside>
 
         <p class="phpdocumentor-summary">Format the stock quantity ready for display.</p>
@@ -23811,9 +23869,9 @@ E.g. PE30 becomes 16050300 (P = 16, E = 05, 3 = 03, 0 = 00)</p></section>
         <a href="#function_wc_format_sale_price" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-formatting-functions.php"><a href="../files/woocommerce-includes-wc-formatting-functions.html#source-view.1232">includes/wc-formatting-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-formatting-functions.php"><a href="../files/woocommerce-includes-wc-formatting-functions.html#source-view.1242">includes/wc-formatting-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1232</span>
+    <span class="phpdocumentor-element-found-in__line">1242</span>
 </aside>
 
         <p class="phpdocumentor-summary">Format a sale price for display.</p>
@@ -23866,9 +23924,9 @@ E.g. PE30 becomes 16050300 (P = 16, E = 05, 3 = 03, 0 = 00)</p></section>
         <a href="#function_wc_format_price_range" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-formatting-functions.php"><a href="../files/woocommerce-includes-wc-formatting-functions.html#source-view.1244">includes/wc-formatting-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-formatting-functions.php"><a href="../files/woocommerce-includes-wc-formatting-functions.html#source-view.1254">includes/wc-formatting-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1244</span>
+    <span class="phpdocumentor-element-found-in__line">1254</span>
 </aside>
 
         <p class="phpdocumentor-summary">Format a price range for display.</p>
@@ -23908,9 +23966,9 @@ E.g. PE30 becomes 16050300 (P = 16, E = 05, 3 = 03, 0 = 00)</p></section>
         <a href="#function_wc_format_weight" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-formatting-functions.php"><a href="../files/woocommerce-includes-wc-formatting-functions.html#source-view.1257">includes/wc-formatting-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-formatting-functions.php"><a href="../files/woocommerce-includes-wc-formatting-functions.html#source-view.1267">includes/wc-formatting-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1257</span>
+    <span class="phpdocumentor-element-found-in__line">1267</span>
 </aside>
 
         <p class="phpdocumentor-summary">Format a weight for display.</p>
@@ -23955,9 +24013,9 @@ E.g. PE30 becomes 16050300 (P = 16, E = 05, 3 = 03, 0 = 00)</p></section>
         <a href="#function_wc_format_dimensions" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-formatting-functions.php"><a href="../files/woocommerce-includes-wc-formatting-functions.html#source-view.1276">includes/wc-formatting-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-formatting-functions.php"><a href="../files/woocommerce-includes-wc-formatting-functions.html#source-view.1286">includes/wc-formatting-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1276</span>
+    <span class="phpdocumentor-element-found-in__line">1286</span>
 </aside>
 
         <p class="phpdocumentor-summary">Format dimensions for display.</p>
@@ -24002,9 +24060,9 @@ E.g. PE30 becomes 16050300 (P = 16, E = 05, 3 = 03, 0 = 00)</p></section>
         <a href="#function_wc_format_datetime" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-formatting-functions.php"><a href="../files/woocommerce-includes-wc-formatting-functions.html#source-view.1297">includes/wc-formatting-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-formatting-functions.php"><a href="../files/woocommerce-includes-wc-formatting-functions.html#source-view.1307">includes/wc-formatting-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1297</span>
+    <span class="phpdocumentor-element-found-in__line">1307</span>
 </aside>
 
         <p class="phpdocumentor-summary">Format a date for output.</p>
@@ -24058,9 +24116,9 @@ Defaults to the wc_date_format function if not set.</p></section>
         <a href="#function_wc_do_oembeds" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-formatting-functions.php"><a href="../files/woocommerce-includes-wc-formatting-functions.html#source-view.1314">includes/wc-formatting-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-formatting-functions.php"><a href="../files/woocommerce-includes-wc-formatting-functions.html#source-view.1324">includes/wc-formatting-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1314</span>
+    <span class="phpdocumentor-element-found-in__line">1324</span>
 </aside>
 
         <p class="phpdocumentor-summary">Process oEmbeds.</p>
@@ -24105,9 +24163,9 @@ Defaults to the wc_date_format function if not set.</p></section>
         <a href="#function_wc_get_string_before_colon" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-formatting-functions.php"><a href="../files/woocommerce-includes-wc-formatting-functions.html#source-view.1332">includes/wc-formatting-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-formatting-functions.php"><a href="../files/woocommerce-includes-wc-formatting-functions.html#source-view.1342">includes/wc-formatting-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1332</span>
+    <span class="phpdocumentor-element-found-in__line">1342</span>
 </aside>
 
         <p class="phpdocumentor-summary">Get part of a string before :.</p>
@@ -24154,9 +24212,9 @@ method_id:instance_id</p></section>
         <a href="#function_wc_array_merge_recursive_numeric" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-formatting-functions.php"><a href="../files/woocommerce-includes-wc-formatting-functions.html#source-view.1344">includes/wc-formatting-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-formatting-functions.php"><a href="../files/woocommerce-includes-wc-formatting-functions.html#source-view.1354">includes/wc-formatting-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1344</span>
+    <span class="phpdocumentor-element-found-in__line">1354</span>
 </aside>
 
         <p class="phpdocumentor-summary">Array merge and sum function.</p>
@@ -24191,9 +24249,9 @@ method_id:instance_id</p></section>
         <a href="#function_wc_implode_html_attributes" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-formatting-functions.php"><a href="../files/woocommerce-includes-wc-formatting-functions.html#source-view.1402">includes/wc-formatting-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-formatting-functions.php"><a href="../files/woocommerce-includes-wc-formatting-functions.html#source-view.1412">includes/wc-formatting-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1402</span>
+    <span class="phpdocumentor-element-found-in__line">1412</span>
 </aside>
 
         <p class="phpdocumentor-summary">Implode and escape HTML attributes for output.</p>
@@ -24238,9 +24296,9 @@ method_id:instance_id</p></section>
         <a href="#function_wc_esc_json" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-formatting-functions.php"><a href="../files/woocommerce-includes-wc-formatting-functions.html#source-view.1418">includes/wc-formatting-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-formatting-functions.php"><a href="../files/woocommerce-includes-wc-formatting-functions.html#source-view.1428">includes/wc-formatting-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1418</span>
+    <span class="phpdocumentor-element-found-in__line">1428</span>
 </aside>
 
         <p class="phpdocumentor-summary">Escape JSON for use on HTML or attribute text nodes.</p>
@@ -24293,9 +24351,9 @@ method_id:instance_id</p></section>
         <a href="#function_wc_parse_relative_date_option" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-formatting-functions.php"><a href="../files/woocommerce-includes-wc-formatting-functions.html#source-view.1434">includes/wc-formatting-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-formatting-functions.php"><a href="../files/woocommerce-includes-wc-formatting-functions.html#source-view.1444">includes/wc-formatting-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1434</span>
+    <span class="phpdocumentor-element-found-in__line">1444</span>
 </aside>
 
         <p class="phpdocumentor-summary">Parse a relative date option from the settings API into a standard format.</p>
@@ -24340,9 +24398,9 @@ method_id:instance_id</p></section>
         <a href="#function_wc_sanitize_endpoint_slug" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-formatting-functions.php"><a href="../files/woocommerce-includes-wc-formatting-functions.html#source-view.1466">includes/wc-formatting-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-formatting-functions.php"><a href="../files/woocommerce-includes-wc-formatting-functions.html#source-view.1476">includes/wc-formatting-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1466</span>
+    <span class="phpdocumentor-element-found-in__line">1476</span>
 </aside>
 
         <p class="phpdocumentor-summary">Format the endpoint slug, strip out anything not allowed in a url.</p>
@@ -25666,9 +25724,9 @@ viewing orders e.g. on the my account page.</li>
         <a href="#function_wc_ship_to_billing_address_only" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-order-functions.php"><a href="../files/woocommerce-includes-wc-order-functions.html#source-view.482">includes/wc-order-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-order-functions.php"><a href="../files/woocommerce-includes-wc-order-functions.html#source-view.483">includes/wc-order-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">482</span>
+    <span class="phpdocumentor-element-found-in__line">483</span>
 </aside>
 
         <p class="phpdocumentor-summary">See if we only ship to billing addresses.</p>
@@ -25689,9 +25747,9 @@ viewing orders e.g. on the my account page.</li>
         <a href="#function_wc_create_refund" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-order-functions.php"><a href="../files/woocommerce-includes-wc-order-functions.html#source-view.496">includes/wc-order-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-order-functions.php"><a href="../files/woocommerce-includes-wc-order-functions.html#source-view.497">includes/wc-order-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">496</span>
+    <span class="phpdocumentor-element-found-in__line">497</span>
 </aside>
 
         <p class="phpdocumentor-summary">Create a new order refund programmatically.</p>
@@ -25745,9 +25803,9 @@ viewing orders e.g. on the my account page.</li>
         <a href="#function_wc_refund_payment" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-order-functions.php"><a href="../files/woocommerce-includes-wc-order-functions.html#source-view.647">includes/wc-order-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-order-functions.php"><a href="../files/woocommerce-includes-wc-order-functions.html#source-view.648">includes/wc-order-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">647</span>
+    <span class="phpdocumentor-element-found-in__line">648</span>
 </aside>
 
         <p class="phpdocumentor-summary">Try to refund the payment for an order via the gateway.</p>
@@ -25816,9 +25874,9 @@ viewing orders e.g. on the my account page.</li>
         <a href="#function_wc_restock_refunded_items" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-order-functions.php"><a href="../files/woocommerce-includes-wc-order-functions.html#source-view.690">includes/wc-order-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-order-functions.php"><a href="../files/woocommerce-includes-wc-order-functions.html#source-view.691">includes/wc-order-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">690</span>
+    <span class="phpdocumentor-element-found-in__line">691</span>
 </aside>
 
         <p class="phpdocumentor-summary">Restock items during refund.</p>
@@ -25871,9 +25929,9 @@ viewing orders e.g. on the my account page.</li>
         <a href="#function_wc_get_tax_class_by_tax_id" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-order-functions.php"><a href="../files/woocommerce-includes-wc-order-functions.html#source-view.737">includes/wc-order-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-order-functions.php"><a href="../files/woocommerce-includes-wc-order-functions.html#source-view.738">includes/wc-order-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">737</span>
+    <span class="phpdocumentor-element-found-in__line">738</span>
 </aside>
 
         <p class="phpdocumentor-summary">Get tax class by tax id.</p>
@@ -25918,9 +25976,9 @@ viewing orders e.g. on the my account page.</li>
         <a href="#function_wc_get_payment_gateway_by_order" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-order-functions.php"><a href="../files/woocommerce-includes-wc-order-functions.html#source-view.749">includes/wc-order-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-order-functions.php"><a href="../files/woocommerce-includes-wc-order-functions.html#source-view.750">includes/wc-order-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">749</span>
+    <span class="phpdocumentor-element-found-in__line">750</span>
 </aside>
 
         <p class="phpdocumentor-summary">Get payment gateway class by order data.</p>
@@ -25965,9 +26023,9 @@ viewing orders e.g. on the my account page.</li>
         <a href="#function_wc_order_fully_refunded" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-order-functions.php"><a href="../files/woocommerce-includes-wc-order-functions.html#source-view.772">includes/wc-order-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-order-functions.php"><a href="../files/woocommerce-includes-wc-order-functions.html#source-view.773">includes/wc-order-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">772</span>
+    <span class="phpdocumentor-element-found-in__line">773</span>
 </aside>
 
         <p class="phpdocumentor-summary">When refunding an order, create a refund line item if the partial refunds do not match order total.</p>
@@ -26013,9 +26071,9 @@ viewing orders e.g. on the my account page.</li>
         <a href="#function_wc_order_search" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-order-functions.php"><a href="../files/woocommerce-includes-wc-order-functions.html#source-view.803">includes/wc-order-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-order-functions.php"><a href="../files/woocommerce-includes-wc-order-functions.html#source-view.804">includes/wc-order-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">803</span>
+    <span class="phpdocumentor-element-found-in__line">804</span>
 </aside>
 
         <p class="phpdocumentor-summary">Search orders.</p>
@@ -26060,9 +26118,9 @@ viewing orders e.g. on the my account page.</li>
         <a href="#function_wc_update_total_sales_counts" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-order-functions.php"><a href="../files/woocommerce-includes-wc-order-functions.html#source-view.814">includes/wc-order-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-order-functions.php"><a href="../files/woocommerce-includes-wc-order-functions.html#source-view.815">includes/wc-order-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">814</span>
+    <span class="phpdocumentor-element-found-in__line">815</span>
 </aside>
 
         <p class="phpdocumentor-summary">Update total sales amount for each product within a paid order.</p>
@@ -26107,9 +26165,9 @@ viewing orders e.g. on the my account page.</li>
         <a href="#function_wc_update_coupon_usage_counts" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-order-functions.php"><a href="../files/woocommerce-includes-wc-order-functions.html#source-view.851">includes/wc-order-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-order-functions.php"><a href="../files/woocommerce-includes-wc-order-functions.html#source-view.852">includes/wc-order-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">851</span>
+    <span class="phpdocumentor-element-found-in__line">852</span>
 </aside>
 
         <p class="phpdocumentor-summary">Update used coupon amount for each coupon within an order.</p>
@@ -26154,9 +26212,9 @@ viewing orders e.g. on the my account page.</li>
         <a href="#function_wc_cancel_unpaid_orders" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-order-functions.php"><a href="../files/woocommerce-includes-wc-order-functions.html#source-view.907">includes/wc-order-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-order-functions.php"><a href="../files/woocommerce-includes-wc-order-functions.html#source-view.908">includes/wc-order-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">907</span>
+    <span class="phpdocumentor-element-found-in__line">908</span>
 </aside>
 
         <p class="phpdocumentor-summary">Cancel all unpaid orders after held duration to prevent stock lock for those products.</p>
@@ -26177,9 +26235,9 @@ viewing orders e.g. on the my account page.</li>
         <a href="#function_wc_sanitize_order_id" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-order-functions.php"><a href="../files/woocommerce-includes-wc-order-functions.html#source-view.940">includes/wc-order-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-order-functions.php"><a href="../files/woocommerce-includes-wc-order-functions.html#source-view.941">includes/wc-order-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">940</span>
+    <span class="phpdocumentor-element-found-in__line">941</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sanitize order id removing unwanted characters.</p>
@@ -26226,9 +26284,9 @@ This function will fix this.</p></section>
         <a href="#function_wc_get_order_note" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-order-functions.php"><a href="../files/woocommerce-includes-wc-order-functions.html#source-view.952">includes/wc-order-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-order-functions.php"><a href="../files/woocommerce-includes-wc-order-functions.html#source-view.953">includes/wc-order-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">952</span>
+    <span class="phpdocumentor-element-found-in__line">953</span>
 </aside>
 
         <p class="phpdocumentor-summary">Get an order note.</p>
@@ -26273,9 +26331,9 @@ This function will fix this.</p></section>
         <a href="#function_wc_get_order_notes" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-order-functions.php"><a href="../files/woocommerce-includes-wc-order-functions.html#source-view.1001">includes/wc-order-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-order-functions.php"><a href="../files/woocommerce-includes-wc-order-functions.html#source-view.1002">includes/wc-order-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1001</span>
+    <span class="phpdocumentor-element-found-in__line">1002</span>
 </aside>
 
         <p class="phpdocumentor-summary">Get order notes.</p>
@@ -26339,9 +26397,9 @@ Array of query parameters.</p>
         <a href="#function_wc_create_order_note" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-order-functions.php"><a href="../files/woocommerce-includes-wc-order-functions.html#source-view.1071">includes/wc-order-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-order-functions.php"><a href="../files/woocommerce-includes-wc-order-functions.html#source-view.1072">includes/wc-order-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1071</span>
+    <span class="phpdocumentor-element-found-in__line">1072</span>
 </aside>
 
         <p class="phpdocumentor-summary">Create an order note.</p>
@@ -26410,9 +26468,9 @@ Array of query parameters.</p>
         <a href="#function_wc_delete_order_note" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-order-functions.php"><a href="../files/woocommerce-includes-wc-order-functions.html#source-view.1088">includes/wc-order-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-order-functions.php"><a href="../files/woocommerce-includes-wc-order-functions.html#source-view.1089">includes/wc-order-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1088</span>
+    <span class="phpdocumentor-element-found-in__line">1089</span>
 </aside>
 
         <p class="phpdocumentor-summary">Delete an order note.</p>
@@ -30298,9 +30356,9 @@ See <a href="https://developer.wordpress.org/reference/functions/mysql_to_rfc333
         <a href="#function_wc_update_product_stock_status" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-stock-functions.php"><a href="../files/woocommerce-includes-wc-stock-functions.html#source-view.70">includes/wc-stock-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-stock-functions.php"><a href="../files/woocommerce-includes-wc-stock-functions.html#source-view.77">includes/wc-stock-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">70</span>
+    <span class="phpdocumentor-element-found-in__line">77</span>
 </aside>
 
         <p class="phpdocumentor-summary">Update a product&#039;s stock status.</p>
@@ -30340,9 +30398,9 @@ See <a href="https://developer.wordpress.org/reference/functions/mysql_to_rfc333
         <a href="#function_wc_maybe_reduce_stock_levels" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-stock-functions.php"><a href="../files/woocommerce-includes-wc-stock-functions.html#source-view.85">includes/wc-stock-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-stock-functions.php"><a href="../files/woocommerce-includes-wc-stock-functions.html#source-view.92">includes/wc-stock-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">85</span>
+    <span class="phpdocumentor-element-found-in__line">92</span>
 </aside>
 
         <p class="phpdocumentor-summary">When a payment is complete, we can reduce stock levels for items within an order.</p>
@@ -30387,9 +30445,9 @@ See <a href="https://developer.wordpress.org/reference/functions/mysql_to_rfc333
         <a href="#function_wc_maybe_increase_stock_levels" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-stock-functions.php"><a href="../files/woocommerce-includes-wc-stock-functions.html#source-view.116">includes/wc-stock-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-stock-functions.php"><a href="../files/woocommerce-includes-wc-stock-functions.html#source-view.123">includes/wc-stock-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">116</span>
+    <span class="phpdocumentor-element-found-in__line">123</span>
 </aside>
 
         <p class="phpdocumentor-summary">When a payment is cancelled, restore stock.</p>
@@ -30434,9 +30492,9 @@ See <a href="https://developer.wordpress.org/reference/functions/mysql_to_rfc333
         <a href="#function_wc_reduce_stock_levels" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-stock-functions.php"><a href="../files/woocommerce-includes-wc-stock-functions.html#source-view.145">includes/wc-stock-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-stock-functions.php"><a href="../files/woocommerce-includes-wc-stock-functions.html#source-view.152">includes/wc-stock-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">145</span>
+    <span class="phpdocumentor-element-found-in__line">152</span>
 </aside>
 
         <p class="phpdocumentor-summary">Reduce stock levels for items within an order, if stock has not already been reduced for the items.</p>
@@ -30481,9 +30539,9 @@ See <a href="https://developer.wordpress.org/reference/functions/mysql_to_rfc333
         <a href="#function_wc_trigger_stock_change_notifications" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-stock-functions.php"><a href="../files/woocommerce-includes-wc-stock-functions.html#source-view.212">includes/wc-stock-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-stock-functions.php"><a href="../files/woocommerce-includes-wc-stock-functions.html#source-view.219">includes/wc-stock-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">212</span>
+    <span class="phpdocumentor-element-found-in__line">219</span>
 </aside>
 
         <p class="phpdocumentor-summary">After stock change events, triggers emails and adds order notes.</p>
@@ -30536,9 +30594,9 @@ See <a href="https://developer.wordpress.org/reference/functions/mysql_to_rfc333
         <a href="#function_wc_increase_stock_levels" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-stock-functions.php"><a href="../files/woocommerce-includes-wc-stock-functions.html#source-view.250">includes/wc-stock-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-stock-functions.php"><a href="../files/woocommerce-includes-wc-stock-functions.html#source-view.257">includes/wc-stock-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">250</span>
+    <span class="phpdocumentor-element-found-in__line">257</span>
 </aside>
 
         <p class="phpdocumentor-summary">Increase stock levels for items within an order.</p>
@@ -30583,9 +30641,9 @@ See <a href="https://developer.wordpress.org/reference/functions/mysql_to_rfc333
         <a href="#function_wc_get_held_stock_quantity" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-stock-functions.php"><a href="../files/woocommerce-includes-wc-stock-functions.html#source-view.309">includes/wc-stock-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-stock-functions.php"><a href="../files/woocommerce-includes-wc-stock-functions.html#source-view.316">includes/wc-stock-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">309</span>
+    <span class="phpdocumentor-element-found-in__line">316</span>
 </aside>
 
         <p class="phpdocumentor-summary">See how much stock is being held in pending orders.</p>
@@ -30638,9 +30696,9 @@ See <a href="https://developer.wordpress.org/reference/functions/mysql_to_rfc333
         <a href="#function_wc_reserve_stock_for_order" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-stock-functions.php"><a href="../files/woocommerce-includes-wc-stock-functions.html#source-view.332">includes/wc-stock-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-stock-functions.php"><a href="../files/woocommerce-includes-wc-stock-functions.html#source-view.339">includes/wc-stock-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">332</span>
+    <span class="phpdocumentor-element-found-in__line">339</span>
 </aside>
 
         <p class="phpdocumentor-summary">Hold stock for an order.</p>
@@ -30693,9 +30751,9 @@ See <a href="https://developer.wordpress.org/reference/functions/mysql_to_rfc333
         <a href="#function_wc_release_stock_for_order" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-stock-functions.php"><a href="../files/woocommerce-includes-wc-stock-functions.html#source-view.358">includes/wc-stock-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-stock-functions.php"><a href="../files/woocommerce-includes-wc-stock-functions.html#source-view.365">includes/wc-stock-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">358</span>
+    <span class="phpdocumentor-element-found-in__line">365</span>
 </aside>
 
         <p class="phpdocumentor-summary">Release held stock for an order.</p>
@@ -30740,9 +30798,9 @@ See <a href="https://developer.wordpress.org/reference/functions/mysql_to_rfc333
         <a href="#function_wc_get_low_stock_amount" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-stock-functions.php"><a href="../files/woocommerce-includes-wc-stock-functions.html#source-view.390">includes/wc-stock-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-stock-functions.php"><a href="../files/woocommerce-includes-wc-stock-functions.html#source-view.397">includes/wc-stock-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">390</span>
+    <span class="phpdocumentor-element-found-in__line">397</span>
 </aside>
 
         <p class="phpdocumentor-summary">Return low stock amount to determine if notification needs to be sent</p>
@@ -37505,9 +37563,9 @@ We do this when the new version is &gt;= 34370, and the old version is &lt; 3437
         <a href="#function_wc_update_230_db_version" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.716">includes/wc-update-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.717">includes/wc-update-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">716</span>
+    <span class="phpdocumentor-element-found-in__line">717</span>
 </aside>
 
         <p class="phpdocumentor-summary">Update DB version for 2.3</p>
@@ -37528,9 +37586,9 @@ We do this when the new version is &gt;= 34370, and the old version is &lt; 3437
         <a href="#function_wc_update_240_options" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.725">includes/wc-update-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.726">includes/wc-update-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">725</span>
+    <span class="phpdocumentor-element-found-in__line">726</span>
 </aside>
 
         <p class="phpdocumentor-summary">Update calc discount options for 2.4</p>
@@ -37551,9 +37609,9 @@ We do this when the new version is &gt;= 34370, and the old version is &lt; 3437
         <a href="#function_wc_update_240_shipping_methods" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.738">includes/wc-update-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.739">includes/wc-update-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">738</span>
+    <span class="phpdocumentor-element-found-in__line">739</span>
 </aside>
 
         <p class="phpdocumentor-summary">Update shipping methods for 2.4</p>
@@ -37574,9 +37632,9 @@ We do this when the new version is &gt;= 34370, and the old version is &lt; 3437
         <a href="#function_wc_update_240_api_keys" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.814">includes/wc-update-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.815">includes/wc-update-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">814</span>
+    <span class="phpdocumentor-element-found-in__line">815</span>
 </aside>
 
         <p class="phpdocumentor-summary">Update API keys for 2.4</p>
@@ -37597,9 +37655,9 @@ We do this when the new version is &gt;= 34370, and the old version is &lt; 3437
         <a href="#function_wc_update_240_webhooks" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.865">includes/wc-update-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.866">includes/wc-update-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">865</span>
+    <span class="phpdocumentor-element-found-in__line">866</span>
 </aside>
 
         <p class="phpdocumentor-summary">Update webhooks for 2.4</p>
@@ -37620,9 +37678,9 @@ We do this when the new version is &gt;= 34370, and the old version is &lt; 3437
         <a href="#function_wc_update_240_refunds" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.893">includes/wc-update-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.894">includes/wc-update-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">893</span>
+    <span class="phpdocumentor-element-found-in__line">894</span>
 </aside>
 
         <p class="phpdocumentor-summary">Update refunds for 2.4</p>
@@ -37643,9 +37701,9 @@ We do this when the new version is &gt;= 34370, and the old version is &lt; 3437
         <a href="#function_wc_update_240_db_version" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.947">includes/wc-update-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.948">includes/wc-update-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">947</span>
+    <span class="phpdocumentor-element-found-in__line">948</span>
 </aside>
 
         <p class="phpdocumentor-summary">Update DB version for 2.4</p>
@@ -37666,9 +37724,9 @@ We do this when the new version is &gt;= 34370, and the old version is &lt; 3437
         <a href="#function_wc_update_241_variations" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.956">includes/wc-update-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.957">includes/wc-update-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">956</span>
+    <span class="phpdocumentor-element-found-in__line">957</span>
 </aside>
 
         <p class="phpdocumentor-summary">Update variations for 2.4.1</p>
@@ -37689,9 +37747,9 @@ We do this when the new version is &gt;= 34370, and the old version is &lt; 3437
         <a href="#function_wc_update_241_db_version" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.988">includes/wc-update-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.989">includes/wc-update-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">988</span>
+    <span class="phpdocumentor-element-found-in__line">989</span>
 </aside>
 
         <p class="phpdocumentor-summary">Update DB version for 2.4.1</p>
@@ -37712,9 +37770,9 @@ We do this when the new version is &gt;= 34370, and the old version is &lt; 3437
         <a href="#function_wc_update_250_currency" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.997">includes/wc-update-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.998">includes/wc-update-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">997</span>
+    <span class="phpdocumentor-element-found-in__line">998</span>
 </aside>
 
         <p class="phpdocumentor-summary">Update currency settings for 2.5</p>
@@ -37735,9 +37793,9 @@ We do this when the new version is &gt;= 34370, and the old version is &lt; 3437
         <a href="#function_wc_update_250_db_version" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.1028">includes/wc-update-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.1029">includes/wc-update-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1028</span>
+    <span class="phpdocumentor-element-found-in__line">1029</span>
 </aside>
 
         <p class="phpdocumentor-summary">Update DB version for 2.5</p>
@@ -37758,9 +37816,9 @@ We do this when the new version is &gt;= 34370, and the old version is &lt; 3437
         <a href="#function_wc_update_260_options" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.1037">includes/wc-update-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.1038">includes/wc-update-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1037</span>
+    <span class="phpdocumentor-element-found-in__line">1038</span>
 </aside>
 
         <p class="phpdocumentor-summary">Update ship to countries options for 2.6</p>
@@ -37781,9 +37839,9 @@ We do this when the new version is &gt;= 34370, and the old version is &lt; 3437
         <a href="#function_wc_update_260_termmeta" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.1051">includes/wc-update-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.1052">includes/wc-update-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1051</span>
+    <span class="phpdocumentor-element-found-in__line">1052</span>
 </aside>
 
         <p class="phpdocumentor-summary">Update term meta for 2.6</p>
@@ -37804,9 +37862,9 @@ We do this when the new version is &gt;= 34370, and the old version is &lt; 3437
         <a href="#function_wc_update_260_zones" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.1069">includes/wc-update-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.1070">includes/wc-update-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1069</span>
+    <span class="phpdocumentor-element-found-in__line">1070</span>
 </aside>
 
         <p class="phpdocumentor-summary">Update zones for 2.6</p>
@@ -37827,9 +37885,9 @@ We do this when the new version is &gt;= 34370, and the old version is &lt; 3437
         <a href="#function_wc_update_260_zone_methods" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.1086">includes/wc-update-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.1087">includes/wc-update-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1086</span>
+    <span class="phpdocumentor-element-found-in__line">1087</span>
 </aside>
 
         <p class="phpdocumentor-summary">Update zone methods for 2.6</p>
@@ -37850,9 +37908,9 @@ We do this when the new version is &gt;= 34370, and the old version is &lt; 3437
         <a href="#function_wc_update_260_refunds" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.1171">includes/wc-update-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.1172">includes/wc-update-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1171</span>
+    <span class="phpdocumentor-element-found-in__line">1172</span>
 </aside>
 
         <p class="phpdocumentor-summary">Update refunds for 2.6</p>
@@ -37873,9 +37931,9 @@ We do this when the new version is &gt;= 34370, and the old version is &lt; 3437
         <a href="#function_wc_update_260_db_version" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.1190">includes/wc-update-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.1191">includes/wc-update-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1190</span>
+    <span class="phpdocumentor-element-found-in__line">1191</span>
 </aside>
 
         <p class="phpdocumentor-summary">Update DB version for 2.6</p>
@@ -37896,9 +37954,9 @@ We do this when the new version is &gt;= 34370, and the old version is &lt; 3437
         <a href="#function_wc_update_300_webhooks" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.1199">includes/wc-update-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.1200">includes/wc-update-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1199</span>
+    <span class="phpdocumentor-element-found-in__line">1200</span>
 </aside>
 
         <p class="phpdocumentor-summary">Update webhooks for 3.0</p>
@@ -37919,9 +37977,9 @@ We do this when the new version is &gt;= 34370, and the old version is &lt; 3437
         <a href="#function_wc_update_300_comment_type_index" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.1226">includes/wc-update-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.1227">includes/wc-update-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1226</span>
+    <span class="phpdocumentor-element-found-in__line">1227</span>
 </aside>
 
         <p class="phpdocumentor-summary">Add an index to the field comment_type to improve the response time of the query
@@ -37943,9 +38001,9 @@ used by WC_Comments::wp_count_comments() to get the number of comments by type.<
         <a href="#function_wc_update_300_grouped_products" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.1243">includes/wc-update-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.1244">includes/wc-update-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1243</span>
+    <span class="phpdocumentor-element-found-in__line">1244</span>
 </aside>
 
         <p class="phpdocumentor-summary">Update grouped products for 3.0</p>
@@ -37966,9 +38024,9 @@ used by WC_Comments::wp_count_comments() to get the number of comments by type.<
         <a href="#function_wc_update_300_settings" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.1278">includes/wc-update-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.1279">includes/wc-update-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1278</span>
+    <span class="phpdocumentor-element-found-in__line">1279</span>
 </aside>
 
         <p class="phpdocumentor-summary">Update shipping tax classes for 3.0</p>
@@ -37989,9 +38047,9 @@ used by WC_Comments::wp_count_comments() to get the number of comments by type.<
         <a href="#function_wc_update_300_product_visibility" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.1290">includes/wc-update-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.1291">includes/wc-update-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1290</span>
+    <span class="phpdocumentor-element-found-in__line">1291</span>
 </aside>
 
         <p class="phpdocumentor-summary">Convert meta values into term for product visibility.</p>
@@ -38012,9 +38070,9 @@ used by WC_Comments::wp_count_comments() to get the number of comments by type.<
         <a href="#function_wc_update_300_db_version" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.1353">includes/wc-update-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.1354">includes/wc-update-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1353</span>
+    <span class="phpdocumentor-element-found-in__line">1354</span>
 </aside>
 
         <p class="phpdocumentor-summary">Update DB Version.</p>
@@ -38035,9 +38093,9 @@ used by WC_Comments::wp_count_comments() to get the number of comments by type.<
         <a href="#function_wc_update_310_downloadable_products" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.1360">includes/wc-update-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.1361">includes/wc-update-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1360</span>
+    <span class="phpdocumentor-element-found-in__line">1361</span>
 </aside>
 
         <p class="phpdocumentor-summary">Add an index to the downloadable product permissions table to improve performance of update_user_by_order_id.</p>
@@ -38058,9 +38116,9 @@ used by WC_Comments::wp_count_comments() to get the number of comments by type.<
         <a href="#function_wc_update_310_old_comments" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.1373">includes/wc-update-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.1374">includes/wc-update-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1373</span>
+    <span class="phpdocumentor-element-found-in__line">1374</span>
 </aside>
 
         <p class="phpdocumentor-summary">Find old order notes and ensure they have the correct type for exclusion.</p>
@@ -38081,9 +38139,9 @@ used by WC_Comments::wp_count_comments() to get the number of comments by type.<
         <a href="#function_wc_update_310_db_version" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.1382">includes/wc-update-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.1383">includes/wc-update-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1382</span>
+    <span class="phpdocumentor-element-found-in__line">1383</span>
 </aside>
 
         <p class="phpdocumentor-summary">Update DB Version.</p>
@@ -38104,9 +38162,9 @@ used by WC_Comments::wp_count_comments() to get the number of comments by type.<
         <a href="#function_wc_update_312_shop_manager_capabilities" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.1389">includes/wc-update-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.1390">includes/wc-update-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1389</span>
+    <span class="phpdocumentor-element-found-in__line">1390</span>
 </aside>
 
         <p class="phpdocumentor-summary">Update shop_manager capabilities.</p>
@@ -38127,9 +38185,9 @@ used by WC_Comments::wp_count_comments() to get the number of comments by type.<
         <a href="#function_wc_update_312_db_version" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.1397">includes/wc-update-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.1398">includes/wc-update-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1397</span>
+    <span class="phpdocumentor-element-found-in__line">1398</span>
 </aside>
 
         <p class="phpdocumentor-summary">Update DB Version.</p>
@@ -38150,9 +38208,9 @@ used by WC_Comments::wp_count_comments() to get the number of comments by type.<
         <a href="#function_wc_update_320_mexican_states" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.1404">includes/wc-update-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.1405">includes/wc-update-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1404</span>
+    <span class="phpdocumentor-element-found-in__line">1405</span>
 </aside>
 
         <p class="phpdocumentor-summary">Update state codes for Mexico.</p>
@@ -38173,9 +38231,9 @@ used by WC_Comments::wp_count_comments() to get the number of comments by type.<
         <a href="#function_wc_update_320_db_version" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.1477">includes/wc-update-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.1478">includes/wc-update-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1477</span>
+    <span class="phpdocumentor-element-found-in__line">1478</span>
 </aside>
 
         <p class="phpdocumentor-summary">Update DB Version.</p>
@@ -38196,9 +38254,9 @@ used by WC_Comments::wp_count_comments() to get the number of comments by type.<
         <a href="#function_wc_update_330_image_options" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.1484">includes/wc-update-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.1485">includes/wc-update-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1484</span>
+    <span class="phpdocumentor-element-found-in__line">1485</span>
 </aside>
 
         <p class="phpdocumentor-summary">Update image settings to use new aspect ratios and widths.</p>
@@ -38219,9 +38277,9 @@ used by WC_Comments::wp_count_comments() to get the number of comments by type.<
         <a href="#function_wc_update_330_webhooks" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.1529">includes/wc-update-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.1530">includes/wc-update-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1529</span>
+    <span class="phpdocumentor-element-found-in__line">1530</span>
 </aside>
 
         <p class="phpdocumentor-summary">Migrate webhooks from post type to CRUD.</p>
@@ -38242,9 +38300,9 @@ used by WC_Comments::wp_count_comments() to get the number of comments by type.<
         <a href="#function_wc_update_330_set_default_product_cat" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.1568">includes/wc-update-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.1569">includes/wc-update-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1568</span>
+    <span class="phpdocumentor-element-found-in__line">1569</span>
 </aside>
 
         <p class="phpdocumentor-summary">Assign default cat to all products with no cats.</p>
@@ -38265,9 +38323,9 @@ used by WC_Comments::wp_count_comments() to get the number of comments by type.<
         <a href="#function_wc_update_330_product_stock_status" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.1599">includes/wc-update-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.1600">includes/wc-update-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1599</span>
+    <span class="phpdocumentor-element-found-in__line">1600</span>
 </aside>
 
         <p class="phpdocumentor-summary">Update product stock status to use the new onbackorder status.</p>
@@ -38288,9 +38346,9 @@ used by WC_Comments::wp_count_comments() to get the number of comments by type.<
         <a href="#function_wc_update_330_clear_transients" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.1642">includes/wc-update-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.1643">includes/wc-update-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1642</span>
+    <span class="phpdocumentor-element-found-in__line">1643</span>
 </aside>
 
         <p class="phpdocumentor-summary">Clear addons page transients</p>
@@ -38311,9 +38369,9 @@ used by WC_Comments::wp_count_comments() to get the number of comments by type.<
         <a href="#function_wc_update_330_set_paypal_sandbox_credentials" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.1650">includes/wc-update-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.1651">includes/wc-update-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1650</span>
+    <span class="phpdocumentor-element-found-in__line">1651</span>
 </aside>
 
         <p class="phpdocumentor-summary">Set PayPal&#039;s sandbox credentials.</p>
@@ -38334,9 +38392,9 @@ used by WC_Comments::wp_count_comments() to get the number of comments by type.<
         <a href="#function_wc_update_330_db_version" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.1668">includes/wc-update-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.1669">includes/wc-update-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1668</span>
+    <span class="phpdocumentor-element-found-in__line">1669</span>
 </aside>
 
         <p class="phpdocumentor-summary">Update DB Version.</p>
@@ -38357,9 +38415,9 @@ used by WC_Comments::wp_count_comments() to get the number of comments by type.<
         <a href="#function_wc_update_340_states" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.1675">includes/wc-update-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.1676">includes/wc-update-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1675</span>
+    <span class="phpdocumentor-element-found-in__line">1676</span>
 </aside>
 
         <p class="phpdocumentor-summary">Update state codes for Ireland and BD.</p>
@@ -38380,9 +38438,9 @@ used by WC_Comments::wp_count_comments() to get the number of comments by type.<
         <a href="#function_wc_update_340_state" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.1758">includes/wc-update-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.1759">includes/wc-update-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1758</span>
+    <span class="phpdocumentor-element-found-in__line">1759</span>
 </aside>
 
         <p class="phpdocumentor-summary">Update next state in the queue.</p>
@@ -38403,9 +38461,9 @@ used by WC_Comments::wp_count_comments() to get the number of comments by type.<
         <a href="#function_wc_update_340_last_active" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.1818">includes/wc-update-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.1819">includes/wc-update-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1818</span>
+    <span class="phpdocumentor-element-found-in__line">1819</span>
 </aside>
 
         <p class="phpdocumentor-summary">Set last active prop for users.</p>
@@ -38426,9 +38484,9 @@ used by WC_Comments::wp_count_comments() to get the number of comments by type.<
         <a href="#function_wc_update_340_db_version" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.1838">includes/wc-update-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.1839">includes/wc-update-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1838</span>
+    <span class="phpdocumentor-element-found-in__line">1839</span>
 </aside>
 
         <p class="phpdocumentor-summary">Update DB Version.</p>
@@ -38449,9 +38507,9 @@ used by WC_Comments::wp_count_comments() to get the number of comments by type.<
         <a href="#function_wc_update_343_cleanup_foreign_keys" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.1847">includes/wc-update-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.1848">includes/wc-update-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1847</span>
+    <span class="phpdocumentor-element-found-in__line">1848</span>
 </aside>
 
         <p class="phpdocumentor-summary">Remove duplicate foreign keys</p>
@@ -38472,9 +38530,9 @@ used by WC_Comments::wp_count_comments() to get the number of comments by type.<
         <a href="#function_wc_update_343_db_version" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.1871">includes/wc-update-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.1872">includes/wc-update-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1871</span>
+    <span class="phpdocumentor-element-found-in__line">1872</span>
 </aside>
 
         <p class="phpdocumentor-summary">Update DB version.</p>
@@ -38495,9 +38553,9 @@ used by WC_Comments::wp_count_comments() to get the number of comments by type.<
         <a href="#function_wc_update_344_recreate_roles" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.1880">includes/wc-update-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.1881">includes/wc-update-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1880</span>
+    <span class="phpdocumentor-element-found-in__line">1881</span>
 </aside>
 
         <p class="phpdocumentor-summary">Recreate user roles so existing users will get the new capabilities.</p>
@@ -38518,9 +38576,9 @@ used by WC_Comments::wp_count_comments() to get the number of comments by type.<
         <a href="#function_wc_update_344_db_version" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.1890">includes/wc-update-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.1891">includes/wc-update-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1890</span>
+    <span class="phpdocumentor-element-found-in__line">1891</span>
 </aside>
 
         <p class="phpdocumentor-summary">Update DB version.</p>
@@ -38541,9 +38599,9 @@ used by WC_Comments::wp_count_comments() to get the number of comments by type.<
         <a href="#function_wc_update_350_reviews_comment_type" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.1897">includes/wc-update-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.1898">includes/wc-update-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1897</span>
+    <span class="phpdocumentor-element-found-in__line">1898</span>
 </aside>
 
         <p class="phpdocumentor-summary">Set the comment type to &#039;review&#039; for product reviews that don&#039;t have a comment type.</p>
@@ -38564,9 +38622,9 @@ used by WC_Comments::wp_count_comments() to get the number of comments by type.<
         <a href="#function_wc_update_350_db_version" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.1908">includes/wc-update-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.1909">includes/wc-update-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1908</span>
+    <span class="phpdocumentor-element-found-in__line">1909</span>
 </aside>
 
         <p class="phpdocumentor-summary">Update DB Version.</p>
@@ -38587,9 +38645,9 @@ used by WC_Comments::wp_count_comments() to get the number of comments by type.<
         <a href="#function_wc_update_352_drop_download_log_fk" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.1917">includes/wc-update-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.1918">includes/wc-update-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1917</span>
+    <span class="phpdocumentor-element-found-in__line">1918</span>
 </aside>
 
         <p class="phpdocumentor-summary">Drop the fk_wc_download_log_permission_id FK as we use a new one with the table and blog prefix for MS compatability.</p>
@@ -38610,9 +38668,9 @@ used by WC_Comments::wp_count_comments() to get the number of comments by type.<
         <a href="#function_wc_update_354_modify_shop_manager_caps" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.1938">includes/wc-update-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.1939">includes/wc-update-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1938</span>
+    <span class="phpdocumentor-element-found-in__line">1939</span>
 </aside>
 
         <p class="phpdocumentor-summary">Remove edit_user capabilities from shop managers and use &quot;translated&quot; capabilities instead.</p>
@@ -38634,9 +38692,9 @@ used by WC_Comments::wp_count_comments() to get the number of comments by type.<
         <a href="#function_wc_update_354_db_version" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.1955">includes/wc-update-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.1956">includes/wc-update-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1955</span>
+    <span class="phpdocumentor-element-found-in__line">1956</span>
 </aside>
 
         <p class="phpdocumentor-summary">Update DB Version.</p>
@@ -38657,9 +38715,9 @@ used by WC_Comments::wp_count_comments() to get the number of comments by type.<
         <a href="#function_wc_update_360_product_lookup_tables" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.1962">includes/wc-update-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.1963">includes/wc-update-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1962</span>
+    <span class="phpdocumentor-element-found-in__line">1963</span>
 </aside>
 
         <p class="phpdocumentor-summary">Update product lookup tables in bulk.</p>
@@ -38680,9 +38738,9 @@ used by WC_Comments::wp_count_comments() to get the number of comments by type.<
         <a href="#function_wc_update_360_term_meta" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.1969">includes/wc-update-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.1970">includes/wc-update-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1969</span>
+    <span class="phpdocumentor-element-found-in__line">1970</span>
 </aside>
 
         <p class="phpdocumentor-summary">Renames ordering meta to be consistent across taxonomies.</p>
@@ -38703,9 +38761,9 @@ used by WC_Comments::wp_count_comments() to get the number of comments by type.<
         <a href="#function_wc_update_360_downloadable_product_permissions_index" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.1980">includes/wc-update-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.1981">includes/wc-update-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1980</span>
+    <span class="phpdocumentor-element-found-in__line">1981</span>
 </aside>
 
         <p class="phpdocumentor-summary">Add new user_order_remaining_expires to speed up user download permission fetching.</p>
@@ -38726,9 +38784,9 @@ used by WC_Comments::wp_count_comments() to get the number of comments by type.<
         <a href="#function_wc_update_360_db_version" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.1993">includes/wc-update-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.1994">includes/wc-update-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1993</span>
+    <span class="phpdocumentor-element-found-in__line">1994</span>
 </aside>
 
         <p class="phpdocumentor-summary">Update DB Version.</p>
@@ -38749,9 +38807,9 @@ used by WC_Comments::wp_count_comments() to get the number of comments by type.<
         <a href="#function_wc_update_370_tax_rate_classes" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.2002">includes/wc-update-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.2003">includes/wc-update-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">2002</span>
+    <span class="phpdocumentor-element-found-in__line">2003</span>
 </aside>
 
         <p class="phpdocumentor-summary">Put tax classes into a DB table.</p>
@@ -38772,9 +38830,9 @@ used by WC_Comments::wp_count_comments() to get the number of comments by type.<
         <a href="#function_wc_update_370_mro_std_currency" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.2023">includes/wc-update-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.2024">includes/wc-update-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">2023</span>
+    <span class="phpdocumentor-element-found-in__line">2024</span>
 </aside>
 
         <p class="phpdocumentor-summary">Update currency settings for 3.7.0</p>
@@ -38795,9 +38853,9 @@ used by WC_Comments::wp_count_comments() to get the number of comments by type.<
         <a href="#function_wc_update_370_db_version" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.2065">includes/wc-update-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.2066">includes/wc-update-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">2065</span>
+    <span class="phpdocumentor-element-found-in__line">2066</span>
 </aside>
 
         <p class="phpdocumentor-summary">Update DB Version.</p>
@@ -38818,9 +38876,9 @@ used by WC_Comments::wp_count_comments() to get the number of comments by type.<
         <a href="#function_wc_update_390_move_maxmind_database" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.2073">includes/wc-update-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.2074">includes/wc-update-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">2073</span>
+    <span class="phpdocumentor-element-found-in__line">2074</span>
 </aside>
 
         <p class="phpdocumentor-summary">We&#039;ve moved the MaxMind database to a new location, as per the TOS&#039; requirement that the database not
@@ -38842,9 +38900,9 @@ be publicly accessible.</p>
         <a href="#function_wc_update_390_change_geolocation_database_update_cron" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.2094">includes/wc-update-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.2095">includes/wc-update-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">2094</span>
+    <span class="phpdocumentor-element-found-in__line">2095</span>
 </aside>
 
         <p class="phpdocumentor-summary">So that we can best meet MaxMind&#039;s TOS, the geolocation database update cron should run once per 15 days.</p>
@@ -38865,9 +38923,9 @@ be publicly accessible.</p>
         <a href="#function_wc_update_390_db_version" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.2102">includes/wc-update-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.2103">includes/wc-update-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">2102</span>
+    <span class="phpdocumentor-element-found-in__line">2103</span>
 </aside>
 
         <p class="phpdocumentor-summary">Update DB version.</p>
@@ -38888,9 +38946,9 @@ be publicly accessible.</p>
         <a href="#function_wc_update_400_increase_size_of_column" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.2109">includes/wc-update-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.2110">includes/wc-update-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">2109</span>
+    <span class="phpdocumentor-element-found-in__line">2110</span>
 </aside>
 
         <p class="phpdocumentor-summary">Increase column size</p>
@@ -38911,9 +38969,9 @@ be publicly accessible.</p>
         <a href="#function_wc_update_400_reset_action_scheduler_migration_status" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.2118">includes/wc-update-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.2119">includes/wc-update-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">2118</span>
+    <span class="phpdocumentor-element-found-in__line">2119</span>
 </aside>
 
         <p class="phpdocumentor-summary">Reset ActionScheduler migration status. Needs AS &gt;= 3.0 shipped with WC &gt;= 4.0.</p>
@@ -38934,9 +38992,9 @@ be publicly accessible.</p>
         <a href="#function_wc_update_400_db_version" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.2130">includes/wc-update-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.2131">includes/wc-update-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">2130</span>
+    <span class="phpdocumentor-element-found-in__line">2131</span>
 </aside>
 
         <p class="phpdocumentor-summary">Update DB version.</p>
@@ -38957,9 +39015,9 @@ be publicly accessible.</p>
         <a href="#function_wc_update_440_insert_attribute_terms_for_variable_products" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.2144">includes/wc-update-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.2145">includes/wc-update-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">2144</span>
+    <span class="phpdocumentor-element-found-in__line">2145</span>
 </aside>
 
         <p class="phpdocumentor-summary">Register attributes as terms for variable products, in increments of 100 products.</p>
@@ -38984,9 +39042,9 @@ due to numerous issues found. Thus the migration is no longer needed.</p></secti
         <a href="#function_wc_update_440_db_version" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.2151">includes/wc-update-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.2152">includes/wc-update-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">2151</span>
+    <span class="phpdocumentor-element-found-in__line">2152</span>
 </aside>
 
         <p class="phpdocumentor-summary">Update DB version.</p>
@@ -39007,9 +39065,9 @@ due to numerous issues found. Thus the migration is no longer needed.</p></secti
         <a href="#function_wc_update_450_db_version" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.2158">includes/wc-update-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.2159">includes/wc-update-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">2158</span>
+    <span class="phpdocumentor-element-found-in__line">2159</span>
 </aside>
 
         <p class="phpdocumentor-summary">Update DB version to 4.5.0.</p>
@@ -39030,9 +39088,9 @@ due to numerous issues found. Thus the migration is no longer needed.</p></secti
         <a href="#function_wc_update_450_sanitize_coupons_code" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.2167">includes/wc-update-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-update-functions.php"><a href="../files/woocommerce-includes-wc-update-functions.html#source-view.2168">includes/wc-update-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">2167</span>
+    <span class="phpdocumentor-element-found-in__line">2168</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sanitize all coupons code.</p>
@@ -39277,9 +39335,9 @@ due to numerous issues found. Thus the migration is no longer needed.</p></secti
         <a href="#function_wc_paying_customer" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-user-functions.php"><a href="../files/woocommerce-includes-wc-user-functions.html#source-view.285">includes/wc-user-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-user-functions.php"><a href="../files/woocommerce-includes-wc-user-functions.html#source-view.286">includes/wc-user-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">285</span>
+    <span class="phpdocumentor-element-found-in__line">286</span>
 </aside>
 
         <p class="phpdocumentor-summary">Order payment completed - This is a paying customer.</p>
@@ -39311,9 +39369,9 @@ due to numerous issues found. Thus the migration is no longer needed.</p></secti
         <a href="#function_wc_customer_bought_product" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-user-functions.php"><a href="../files/woocommerce-includes-wc-user-functions.html#source-view.309">includes/wc-user-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-user-functions.php"><a href="../files/woocommerce-includes-wc-user-functions.html#source-view.310">includes/wc-user-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">309</span>
+    <span class="phpdocumentor-element-found-in__line">310</span>
 </aside>
 
         <p class="phpdocumentor-summary">Checks if a user (by email or ID or both) has bought an item.</p>
@@ -39361,9 +39419,9 @@ due to numerous issues found. Thus the migration is no longer needed.</p></secti
         <a href="#function_wc_current_user_has_role" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-user-functions.php"><a href="../files/woocommerce-includes-wc-user-functions.html#source-view.377">includes/wc-user-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-user-functions.php"><a href="../files/woocommerce-includes-wc-user-functions.html#source-view.378">includes/wc-user-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">377</span>
+    <span class="phpdocumentor-element-found-in__line">378</span>
 </aside>
 
         <p class="phpdocumentor-summary">Checks if the current user has a role.</p>
@@ -39395,9 +39453,9 @@ due to numerous issues found. Thus the migration is no longer needed.</p></secti
         <a href="#function_wc_user_has_role" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-user-functions.php"><a href="../files/woocommerce-includes-wc-user-functions.html#source-view.388">includes/wc-user-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-user-functions.php"><a href="../files/woocommerce-includes-wc-user-functions.html#source-view.389">includes/wc-user-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">388</span>
+    <span class="phpdocumentor-element-found-in__line">389</span>
 </aside>
 
         <p class="phpdocumentor-summary">Checks if a user has a role.</p>
@@ -39437,9 +39495,9 @@ due to numerous issues found. Thus the migration is no longer needed.</p></secti
         <a href="#function_wc_customer_has_capability" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-user-functions.php"><a href="../files/woocommerce-includes-wc-user-functions.html#source-view.409">includes/wc-user-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-user-functions.php"><a href="../files/woocommerce-includes-wc-user-functions.html#source-view.410">includes/wc-user-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">409</span>
+    <span class="phpdocumentor-element-found-in__line">410</span>
 </aside>
 
         <p class="phpdocumentor-summary">Checks if a user has a certain capability.</p>
@@ -39487,9 +39545,9 @@ due to numerous issues found. Thus the migration is no longer needed.</p></secti
         <a href="#function_wc_shop_manager_has_capability" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-user-functions.php"><a href="../files/woocommerce-includes-wc-user-functions.html#source-view.479">includes/wc-user-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-user-functions.php"><a href="../files/woocommerce-includes-wc-user-functions.html#source-view.480">includes/wc-user-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">479</span>
+    <span class="phpdocumentor-element-found-in__line">480</span>
 </aside>
 
         <p class="phpdocumentor-summary">Safe way of allowing shop managers restricted capabilities that will remove
@@ -39560,9 +39618,9 @@ represent whether the user has that capability.</p></section>
         <a href="#function_wc_modify_editable_roles" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-user-functions.php"><a href="../files/woocommerce-includes-wc-user-functions.html#source-view.496">includes/wc-user-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-user-functions.php"><a href="../files/woocommerce-includes-wc-user-functions.html#source-view.497">includes/wc-user-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">496</span>
+    <span class="phpdocumentor-element-found-in__line">497</span>
 </aside>
 
         <p class="phpdocumentor-summary">Modify the list of editable roles to prevent non-admin adding admin users.</p>
@@ -39594,9 +39652,9 @@ represent whether the user has that capability.</p></section>
         <a href="#function_wc_modify_map_meta_cap" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-user-functions.php"><a href="../files/woocommerce-includes-wc-user-functions.html#source-view.524">includes/wc-user-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-user-functions.php"><a href="../files/woocommerce-includes-wc-user-functions.html#source-view.525">includes/wc-user-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">524</span>
+    <span class="phpdocumentor-element-found-in__line">525</span>
 </aside>
 
         <p class="phpdocumentor-summary">Modify capabilities to prevent non-admin users editing admin users.</p>
@@ -39653,9 +39711,9 @@ represent whether the user has that capability.</p></section>
         <a href="#function_wc_get_customer_download_permissions" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-user-functions.php"><a href="../files/woocommerce-includes-wc-user-functions.html#source-view.561">includes/wc-user-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-user-functions.php"><a href="../files/woocommerce-includes-wc-user-functions.html#source-view.562">includes/wc-user-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">561</span>
+    <span class="phpdocumentor-element-found-in__line">562</span>
 </aside>
 
         <p class="phpdocumentor-summary">Get customer download permissions from the database.</p>
@@ -39687,9 +39745,9 @@ represent whether the user has that capability.</p></section>
         <a href="#function_wc_get_customer_available_downloads" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-user-functions.php"><a href="../files/woocommerce-includes-wc-user-functions.html#source-view.572">includes/wc-user-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-user-functions.php"><a href="../files/woocommerce-includes-wc-user-functions.html#source-view.573">includes/wc-user-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">572</span>
+    <span class="phpdocumentor-element-found-in__line">573</span>
 </aside>
 
         <p class="phpdocumentor-summary">Get customer available downloads.</p>
@@ -39721,9 +39779,9 @@ represent whether the user has that capability.</p></section>
         <a href="#function_wc_get_customer_total_spent" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-user-functions.php"><a href="../files/woocommerce-includes-wc-user-functions.html#source-view.663">includes/wc-user-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-user-functions.php"><a href="../files/woocommerce-includes-wc-user-functions.html#source-view.664">includes/wc-user-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">663</span>
+    <span class="phpdocumentor-element-found-in__line">664</span>
 </aside>
 
         <p class="phpdocumentor-summary">Get total spent by customer.</p>
@@ -39755,9 +39813,9 @@ represent whether the user has that capability.</p></section>
         <a href="#function_wc_get_customer_order_count" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-user-functions.php"><a href="../files/woocommerce-includes-wc-user-functions.html#source-view.674">includes/wc-user-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-user-functions.php"><a href="../files/woocommerce-includes-wc-user-functions.html#source-view.675">includes/wc-user-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">674</span>
+    <span class="phpdocumentor-element-found-in__line">675</span>
 </aside>
 
         <p class="phpdocumentor-summary">Get total orders by customer.</p>
@@ -39789,9 +39847,9 @@ represent whether the user has that capability.</p></section>
         <a href="#function_wc_reset_order_customer_id_on_deleted_user" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-user-functions.php"><a href="../files/woocommerce-includes-wc-user-functions.html#source-view.684">includes/wc-user-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-user-functions.php"><a href="../files/woocommerce-includes-wc-user-functions.html#source-view.685">includes/wc-user-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">684</span>
+    <span class="phpdocumentor-element-found-in__line">685</span>
 </aside>
 
         <p class="phpdocumentor-summary">Reset _customer_user on orders when a user is deleted.</p>
@@ -39823,9 +39881,9 @@ represent whether the user has that capability.</p></section>
         <a href="#function_wc_review_is_from_verified_owner" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-user-functions.php"><a href="../files/woocommerce-includes-wc-user-functions.html#source-view.707">includes/wc-user-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-user-functions.php"><a href="../files/woocommerce-includes-wc-user-functions.html#source-view.708">includes/wc-user-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">707</span>
+    <span class="phpdocumentor-element-found-in__line">708</span>
 </aside>
 
         <p class="phpdocumentor-summary">Get review verification status.</p>
@@ -39857,9 +39915,9 @@ represent whether the user has that capability.</p></section>
         <a href="#function_wc_disable_author_archives_for_customers" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-user-functions.php"><a href="../files/woocommerce-includes-wc-user-functions.html#source-view.717">includes/wc-user-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-user-functions.php"><a href="../files/woocommerce-includes-wc-user-functions.html#source-view.718">includes/wc-user-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">717</span>
+    <span class="phpdocumentor-element-found-in__line">718</span>
 </aside>
 
         <p class="phpdocumentor-summary">Disable author archives for customers.</p>
@@ -39893,9 +39951,9 @@ represent whether the user has that capability.</p></section>
         <a href="#function_wc_update_profile_last_update_time" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-user-functions.php"><a href="../files/woocommerce-includes-wc-user-functions.html#source-view.739">includes/wc-user-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-user-functions.php"><a href="../files/woocommerce-includes-wc-user-functions.html#source-view.740">includes/wc-user-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">739</span>
+    <span class="phpdocumentor-element-found-in__line">740</span>
 </aside>
 
         <p class="phpdocumentor-summary">Hooks into the `profile_update` hook to set the user last updated timestamp.</p>
@@ -39948,9 +40006,9 @@ represent whether the user has that capability.</p></section>
         <a href="#function_wc_meta_update_last_update_time" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-user-functions.php"><a href="../files/woocommerce-includes-wc-user-functions.html#source-view.754">includes/wc-user-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-user-functions.php"><a href="../files/woocommerce-includes-wc-user-functions.html#source-view.755">includes/wc-user-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">754</span>
+    <span class="phpdocumentor-element-found-in__line">755</span>
 </aside>
 
         <p class="phpdocumentor-summary">Hooks into the update user meta function to set the user last updated timestamp.</p>
@@ -40019,9 +40077,9 @@ represent whether the user has that capability.</p></section>
         <a href="#function_wc_set_user_last_update_time" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-user-functions.php"><a href="../files/woocommerce-includes-wc-user-functions.html#source-view.774">includes/wc-user-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-user-functions.php"><a href="../files/woocommerce-includes-wc-user-functions.html#source-view.775">includes/wc-user-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">774</span>
+    <span class="phpdocumentor-element-found-in__line">775</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets a user&#039;s &quot;last update&quot; time to the current timestamp.</p>
@@ -40066,9 +40124,9 @@ represent whether the user has that capability.</p></section>
         <a href="#function_wc_get_customer_saved_methods_list" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-user-functions.php"><a href="../files/woocommerce-includes-wc-user-functions.html#source-view.785">includes/wc-user-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-user-functions.php"><a href="../files/woocommerce-includes-wc-user-functions.html#source-view.786">includes/wc-user-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">785</span>
+    <span class="phpdocumentor-element-found-in__line">786</span>
 </aside>
 
         <p class="phpdocumentor-summary">Get customer saved payment methods list.</p>
@@ -40113,9 +40171,9 @@ represent whether the user has that capability.</p></section>
         <a href="#function_wc_get_customer_last_order" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-user-functions.php"><a href="../files/woocommerce-includes-wc-user-functions.html#source-view.796">includes/wc-user-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-user-functions.php"><a href="../files/woocommerce-includes-wc-user-functions.html#source-view.797">includes/wc-user-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">796</span>
+    <span class="phpdocumentor-element-found-in__line">797</span>
 </aside>
 
         <p class="phpdocumentor-summary">Get info about customer&#039;s last order.</p>
@@ -40160,9 +40218,9 @@ represent whether the user has that capability.</p></section>
         <a href="#function_wc_user_search_columns" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-user-functions.php"><a href="../files/woocommerce-includes-wc-user-functions.html#source-view.809">includes/wc-user-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-user-functions.php"><a href="../files/woocommerce-includes-wc-user-functions.html#source-view.810">includes/wc-user-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">809</span>
+    <span class="phpdocumentor-element-found-in__line">810</span>
 </aside>
 
         <p class="phpdocumentor-summary">Add support for searching by display_name.</p>
@@ -40207,9 +40265,9 @@ represent whether the user has that capability.</p></section>
         <a href="#function_wc_delete_user_data" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-user-functions.php"><a href="../files/woocommerce-includes-wc-user-functions.html#source-view.820">includes/wc-user-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-user-functions.php"><a href="../files/woocommerce-includes-wc-user-functions.html#source-view.821">includes/wc-user-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">820</span>
+    <span class="phpdocumentor-element-found-in__line">821</span>
 </aside>
 
         <p class="phpdocumentor-summary">When a user is deleted in WordPress, delete corresponding WooCommerce data.</p>
@@ -40241,9 +40299,9 @@ represent whether the user has that capability.</p></section>
         <a href="#function_wc_maybe_store_user_agent" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-user-functions.php"><a href="../files/woocommerce-includes-wc-user-functions.html#source-view.855">includes/wc-user-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-user-functions.php"><a href="../files/woocommerce-includes-wc-user-functions.html#source-view.856">includes/wc-user-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">855</span>
+    <span class="phpdocumentor-element-found-in__line">856</span>
 </aside>
 
         <p class="phpdocumentor-summary">Store user agents. Used for tracker.</p>
@@ -40296,9 +40354,9 @@ represent whether the user has that capability.</p></section>
         <a href="#function_wc_user_logged_in" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-user-functions.php"><a href="../files/woocommerce-includes-wc-user-functions.html#source-view.871">includes/wc-user-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-user-functions.php"><a href="../files/woocommerce-includes-wc-user-functions.html#source-view.872">includes/wc-user-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">871</span>
+    <span class="phpdocumentor-element-found-in__line">872</span>
 </aside>
 
         <p class="phpdocumentor-summary">Update logic triggered on login.</p>
@@ -40351,9 +40409,9 @@ represent whether the user has that capability.</p></section>
         <a href="#function_wc_current_user_is_active" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-user-functions.php"><a href="../files/woocommerce-includes-wc-user-functions.html#source-view.882">includes/wc-user-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-user-functions.php"><a href="../files/woocommerce-includes-wc-user-functions.html#source-view.883">includes/wc-user-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">882</span>
+    <span class="phpdocumentor-element-found-in__line">883</span>
 </aside>
 
         <p class="phpdocumentor-summary">Update when the user was last active.</p>
@@ -40387,9 +40445,9 @@ represent whether the user has that capability.</p></section>
         <a href="#function_wc_update_user_last_active" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-user-functions.php"><a href="../files/woocommerce-includes-wc-user-functions.html#source-view.896">includes/wc-user-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-user-functions.php"><a href="../files/woocommerce-includes-wc-user-functions.html#source-view.897">includes/wc-user-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">896</span>
+    <span class="phpdocumentor-element-found-in__line">897</span>
 </aside>
 
         <p class="phpdocumentor-summary">Set the user last active timestamp to now.</p>
@@ -40434,9 +40492,9 @@ represent whether the user has that capability.</p></section>
         <a href="#function_wc_translate_user_roles" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-user-functions.php"><a href="../files/woocommerce-includes-wc-user-functions.html#source-view.913">includes/wc-user-functions.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-user-functions.php"><a href="../files/woocommerce-includes-wc-user-functions.html#source-view.914">includes/wc-user-functions.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">913</span>
+    <span class="phpdocumentor-element-found-in__line">914</span>
 </aside>
 
         <p class="phpdocumentor-summary">Translate WC roles using the woocommerce textdomain.</p>
@@ -41772,9 +41830,9 @@ composer json.</p></section>
         <a href="#function_wc_get_container" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/woocommerce.php"><a href="../files/woocommerce-woocommerce.html#source-view.56">woocommerce.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/woocommerce.php"><a href="../files/woocommerce-woocommerce.html#source-view.57">woocommerce.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">56</span>
+    <span class="phpdocumentor-element-found-in__line">57</span>
 </aside>
 
         <p class="phpdocumentor-summary">Returns the WooCommerce PSR11-compatible object container.</p>
@@ -41787,6 +41845,19 @@ composer json.</p></section>
 
     
     
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">since</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                            <span class="phpdocumentor-tag-link">4.4.0</span>
+                                                                                                    
+                </dd>
+                        </dl>
 
     
 </article>
@@ -41801,7 +41872,7 @@ composer json.</p></section>
 
     <footer class="phpdocumentor phpdocumentor-footer">
     <div class="phpdocumentor-section">
-        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on December 10th, 2020 at 11:45 am.</span>
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on January 25th, 2021 at 05:15 pm.</span>
     </div>
 </footer>
 
@@ -41813,7 +41884,7 @@ composer json.</p></section>
             'searchIndex': '..\/js\/searchIndex.json'
         };
     </script>
-    <script src="../js/searchIndex.js?updated=1607611544"></script>
-    <script src="../js/search.js?updated=1607611544"></script>
+    <script src="../js/searchIndex.js?updated=1611605756"></script>
+    <script src="../js/search.js?updated=1611605756"></script>
 </body>
 </html>

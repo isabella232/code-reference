@@ -9,9 +9,9 @@
     <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
     <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
     <link rel="stylesheet" href="../css/normalize.css">
-    <link rel="stylesheet" href="../css/base.css?updated=1607611542">
+    <link rel="stylesheet" href="../css/base.css?updated=1611605754">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/template.css?updated=1607611542">
+    <link rel="stylesheet" href="../css/template.css?updated=1611605754">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
             <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
@@ -125,7 +125,7 @@
     </ul>
 
     <article class="phpdocumentor-element -file">
-        <h2 class="phpdocumentor-content__title">OnboardingAutomateTaxes.php</h2>
+        <h2 class="phpdocumentor-content__title">InflectorAggregate.php</h2>
 
                 
 
@@ -134,85 +134,63 @@
                 Source code
                 <a href="#source-code" class="headerlink"><i class="fas fa-link"></i></a>
             </h3>
-            <pre id="source-view" tabindex="-1" class="language-php line-numbers linkable-line-numbers"><code>&lt;?php
-/**
- * Onboarding - set up automated tax calculation.
- *
- * @package Woocommerce Admin
- */
+            <pre id="source-view" tabindex="-1" class="language-php line-numbers linkable-line-numbers"><code>&lt;?php declare(strict_types=1);
 
-namespace Automattic\WooCommerce\Admin\Features;
+namespace Automattic\WooCommerce\Vendor\League\Container\Inflector;
 
-use Automattic\WooCommerce\Admin\Features\OnboardingTasks;
-use Automattic\WooCommerce\Admin\Notes\ConfirmTaxSettings;
+use Generator;
+use Automattic\WooCommerce\Vendor\League\Container\ContainerAwareTrait;
 
-/**
- * This contains logic for setting up shipping when the profiler completes.
- */
-class OnboardingAutomateTaxes {
-	/**
-	 * Constructor.
-	 */
-	public function __construct() {
-		add_action(
-			&#039;woocommerce_onboarding_profile_completed&#039;,
-			array(
-				__CLASS__,
-				&#039;on_onboarding_profile_completed&#039;,
-			)
-		);
+class InflectorAggregate implements InflectorAggregateInterface
+{
+    use ContainerAwareTrait;
 
-		add_action(
-			&#039;jetpack_authorize_ending_authorized&#039;,
-			array(
-				__CLASS__,
-				&#039;on_onboarding_profile_completed&#039;,
-			)
-		);
-	}
+    /**
+     * @var Inflector[]
+     */
+    protected $inflectors = [];
 
-	/**
-	 * Set up automated taxes.
-	 */
-	public static function on_onboarding_profile_completed() {
-		$jetpack_connected = null;
-		$wcs_version       = null;
-		$wcs_tos_accepted  = null;
+    /**
+     * {@inheritdoc}
+     */
+    public function add(string $type, callable $callback = null) : Inflector
+    {
+        $inflector          = new Inflector($type, $callback);
+        $this-&gt;inflectors[] = $inflector;
 
-		if ( class_exists( &#039;\Jetpack_Data&#039; ) ) {
-			$user_token        = \Jetpack_Data::get_access_token( JETPACK_MASTER_USER );
-			$jetpack_connected = isset( $user_token-&gt;external_user_id );
-		}
+        return $inflector;
+    }
 
-		if ( class_exists( &#039;\WC_Connect_Loader&#039; ) ) {
-			$wcs_version = \WC_Connect_Loader::get_wcs_version();
-		}
+    /**
+     * {@inheritdoc}
+     */
+    public function getIterator() : Generator
+    {
+        $count = count($this-&gt;inflectors);
 
-		if ( class_exists( &#039;\WC_Connect_Options&#039; ) ) {
-			$wcs_tos_accepted = \WC_Connect_Options::get_option( &#039;tos_accepted&#039; );
-		}
+        for ($i = 0; $i &lt; $count; $i++) {
+            yield $this-&gt;inflectors[$i];
+        }
+    }
 
-		if ( $jetpack_connected &amp;&amp; $wcs_version &amp;&amp; $wcs_tos_accepted &amp;&amp; self::automated_tax_is_supported() ) {
-			update_option( &#039;wc_connect_taxes_enabled&#039;, &#039;yes&#039; );
-			update_option( &#039;woocommerce_calc_taxes&#039;, &#039;yes&#039; );
-			self::track_tax_automation();
-			ConfirmTaxSettings::possibly_add_note();
-		}
-	}
+    /**
+     * {@inheritdoc}
+     */
+    public function inflect($object)
+    {
+        foreach ($this-&gt;getIterator() as $inflector) {
+            $type = $inflector-&gt;getType();
 
-	/**
-	 * Check if automated taxes are supported.
-	 */
-	private static function automated_tax_is_supported() {
-		return in_array( WC()-&gt;countries-&gt;get_base_country(), OnboardingTasks::get_automated_tax_supported_countries(), true );
-	}
+            if (! $object instanceof $type) {
+                continue;
+            }
 
-	/**
-	 * Track when a user has tax automation enabled.
-	 */
-	private static function track_tax_automation() {
-		wc_admin_record_tracks_event( &#039;tasklist_task_completed&#039;, array( &#039;task_name&#039; =&gt; &#039;tax_automated&#039; ) );
-	}
+            $inflector-&gt;setLeagueContainer($this-&gt;getLeagueContainer());
+            $inflector-&gt;inflect($object);
+        }
+
+        return $object;
+    }
 }
 </code></pre>
             </article>
@@ -224,7 +202,7 @@ class OnboardingAutomateTaxes {
 
     <footer class="phpdocumentor phpdocumentor-footer">
     <div class="phpdocumentor-section">
-        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on December 10th, 2020 at 11:45 am.</span>
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on January 25th, 2021 at 05:15 pm.</span>
     </div>
 </footer>
 
@@ -236,7 +214,7 @@ class OnboardingAutomateTaxes {
             'searchIndex': '..\/js\/searchIndex.json'
         };
     </script>
-    <script src="../js/searchIndex.js?updated=1607611542"></script>
-    <script src="../js/search.js?updated=1607611542"></script>
+    <script src="../js/searchIndex.js?updated=1611605754"></script>
+    <script src="../js/search.js?updated=1611605754"></script>
 </body>
 </html>

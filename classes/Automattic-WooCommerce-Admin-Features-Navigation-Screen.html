@@ -9,9 +9,9 @@
     <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
     <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
     <link rel="stylesheet" href="../css/normalize.css">
-    <link rel="stylesheet" href="../css/base.css?updated=1607611555">
+    <link rel="stylesheet" href="../css/base.css?updated=1611605767">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/template.css?updated=1607611555">
+    <link rel="stylesheet" href="../css/template.css?updated=1611605767">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
             <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
@@ -181,6 +181,13 @@
 </dt>
 <dd>Screen IDs of registered pages.</dd>
 
+            <dt class="phpdocumentor-table-of-contents__entry -property -protected">
+    <a href="../classes/Automattic-WooCommerce-Admin-Features-Navigation-Screen.html#property_taxonomies">$taxonomies</a>
+    <span>
+                &nbsp;: array            </span>
+</dt>
+<dd>Registered taxonomies.</dd>
+
                 <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="../classes/Automattic-WooCommerce-Admin-Features-Navigation-Screen.html#method_add_body_class">add_body_class()</a>
     <span>
@@ -217,6 +224,13 @@
 <dd>Returns an array of filtered screen ids.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="../classes/Automattic-WooCommerce-Admin-Features-Navigation-Screen.html#method_get_taxonomies">get_taxonomies()</a>
+    <span>
+                        &nbsp;: mixed    </span>
+</dt>
+<dd>Returns an array of registered post types.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="../classes/Automattic-WooCommerce-Admin-Features-Navigation-Screen.html#method_init">init()</a>
     <span>
                         &nbsp;: mixed    </span>
@@ -231,6 +245,13 @@
 <dd>Get class instance.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="../classes/Automattic-WooCommerce-Admin-Features-Navigation-Screen.html#method_is_woocommerce_core_taxonomy">is_woocommerce_core_taxonomy()</a>
+    <span>
+                        &nbsp;: bool    </span>
+</dt>
+<dd>Check if a given taxonomy is a WooCommerce core related taxonomy.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="../classes/Automattic-WooCommerce-Admin-Features-Navigation-Screen.html#method_is_woocommerce_page">is_woocommerce_page()</a>
     <span>
                         &nbsp;: bool    </span>
@@ -243,6 +264,13 @@
                         &nbsp;: mixed    </span>
 </dt>
 <dd>Register post type for use in WooCommerce Navigation screens.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="../classes/Automattic-WooCommerce-Admin-Features-Navigation-Screen.html#method_register_taxonomy">register_taxonomy()</a>
+    <span>
+                        &nbsp;: mixed    </span>
+</dt>
+<dd>Register taxonomy for use in WooCommerce Navigation screens.</dd>
 
         </dl>
 
@@ -349,6 +377,37 @@
     
 
 </article>
+                    <article
+        class="
+            phpdocumentor-element
+            -property
+            -protected
+            -static                                            "
+>
+    <h4 class="phpdocumentor-element__name" id="property_taxonomies">
+        $taxonomies
+        <a href="#property_taxonomies" class="headerlink"><i class="fas fa-link"></i></a>
+        <span class="phpdocumentor-element__modifiers">
+                                </span>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Features/Navigation/Screen.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-features-navigation-screen.html#source-view.42">packages/woocommerce-admin/src/Features/Navigation/Screen.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">42</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Registered taxonomies.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">protected</span>
+    <span class="phpdocumentor-signature__static">static</span>    <span class="phpdocumentor-signature__type">array</span>
+    <span class="phpdocumentor-signature__name">$taxonomies</span>
+     = <span class="phpdocumentor-signature__default-value">array()</span></code>
+
+    
+    
+
+</article>
             </section>
 
             <section class="phpdocumentor-methods">
@@ -367,9 +426,9 @@
         <a href="#method_add_body_class" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Features/Navigation/Screen.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-features-navigation-screen.html#source-view.108">packages/woocommerce-admin/src/Features/Navigation/Screen.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Features/Navigation/Screen.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-features-navigation-screen.html#source-view.151">packages/woocommerce-admin/src/Features/Navigation/Screen.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">108</span>
+    <span class="phpdocumentor-element-found-in__line">151</span>
 </aside>
 
         <p class="phpdocumentor-summary">Add navigation classes to body.</p>
@@ -408,9 +467,9 @@
         <a href="#method_add_screen" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Features/Navigation/Screen.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-features-navigation-screen.html#source-view.123">packages/woocommerce-admin/src/Features/Navigation/Screen.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Features/Navigation/Screen.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-features-navigation-screen.html#source-view.166">packages/woocommerce-admin/src/Features/Navigation/Screen.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">123</span>
+    <span class="phpdocumentor-element-found-in__line">166</span>
 </aside>
 
         <p class="phpdocumentor-summary">Adds a screen ID to the list of screens that use the navigtion.</p>
@@ -458,9 +517,9 @@
         <a href="#method_get_plugin_page" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Features/Navigation/Screen.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-features-navigation-screen.html#source-view.148">packages/woocommerce-admin/src/Features/Navigation/Screen.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Features/Navigation/Screen.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-features-navigation-screen.html#source-view.191">packages/woocommerce-admin/src/Features/Navigation/Screen.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">148</span>
+    <span class="phpdocumentor-element-found-in__line">191</span>
 </aside>
 
         <p class="phpdocumentor-summary">Get the plugin page slug.</p>
@@ -499,9 +558,9 @@
         <a href="#method_get_post_types" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Features/Navigation/Screen.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-features-navigation-screen.html#source-view.64">packages/woocommerce-admin/src/Features/Navigation/Screen.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Features/Navigation/Screen.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-features-navigation-screen.html#source-view.71">packages/woocommerce-admin/src/Features/Navigation/Screen.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">64</span>
+    <span class="phpdocumentor-element-found-in__line">71</span>
 </aside>
 
         <p class="phpdocumentor-summary">Returns an array of registered post types.</p>
@@ -529,9 +588,9 @@
         <a href="#method_get_screen_ids" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Features/Navigation/Screen.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-features-navigation-screen.html#source-view.57">packages/woocommerce-admin/src/Features/Navigation/Screen.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Features/Navigation/Screen.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-features-navigation-screen.html#source-view.64">packages/woocommerce-admin/src/Features/Navigation/Screen.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">57</span>
+    <span class="phpdocumentor-element-found-in__line">64</span>
 </aside>
 
         <p class="phpdocumentor-summary">Returns an array of filtered screen ids.</p>
@@ -552,6 +611,36 @@
         class="phpdocumentor-element
             -method
             -public
+                                    -static                    "
+>
+    <h4 class="phpdocumentor-element__name" id="method_get_taxonomies">
+        get_taxonomies()
+        <a href="#method_get_taxonomies" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Features/Navigation/Screen.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-features-navigation-screen.html#source-view.78">packages/woocommerce-admin/src/Features/Navigation/Screen.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">78</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Returns an array of registered post types.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+            <span class="phpdocumentor-signature__static">static</span>    <span class="phpdocumentor-signature__name">get_taxonomies</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+    
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">mixed</span>
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
                                                         "
 >
     <h4 class="phpdocumentor-element__name" id="method_init">
@@ -559,9 +648,9 @@
         <a href="#method_init" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Features/Navigation/Screen.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-features-navigation-screen.html#source-view.50">packages/woocommerce-admin/src/Features/Navigation/Screen.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Features/Navigation/Screen.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-features-navigation-screen.html#source-view.57">packages/woocommerce-admin/src/Features/Navigation/Screen.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">50</span>
+    <span class="phpdocumentor-element-found-in__line">57</span>
 </aside>
 
         <p class="phpdocumentor-summary">Init.</p>
@@ -589,9 +678,9 @@
         <a href="#method_instance" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Features/Navigation/Screen.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-features-navigation-screen.html#source-view.40">packages/woocommerce-admin/src/Features/Navigation/Screen.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Features/Navigation/Screen.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-features-navigation-screen.html#source-view.47">packages/woocommerce-admin/src/Features/Navigation/Screen.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">40</span>
+    <span class="phpdocumentor-element-found-in__line">47</span>
 </aside>
 
         <p class="phpdocumentor-summary">Get class instance.</p>
@@ -614,14 +703,55 @@
             -public
                                     -static                    "
 >
+    <h4 class="phpdocumentor-element__name" id="method_is_woocommerce_core_taxonomy">
+        is_woocommerce_core_taxonomy()
+        <a href="#method_is_woocommerce_core_taxonomy" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Features/Navigation/Screen.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-features-navigation-screen.html#source-view.133">packages/woocommerce-admin/src/Features/Navigation/Screen.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">133</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Check if a given taxonomy is a WooCommerce core related taxonomy.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+            <span class="phpdocumentor-signature__static">static</span>    <span class="phpdocumentor-signature__name">is_woocommerce_core_taxonomy</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$taxonomy</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool</span></code>
+
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$taxonomy</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Taxonomy.</p></section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">bool</span>
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                    -static                    "
+>
     <h4 class="phpdocumentor-element__name" id="method_is_woocommerce_page">
         is_woocommerce_page()
         <a href="#method_is_woocommerce_page" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Features/Navigation/Screen.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-features-navigation-screen.html#source-view.73">packages/woocommerce-admin/src/Features/Navigation/Screen.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Features/Navigation/Screen.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-features-navigation-screen.html#source-view.87">packages/woocommerce-admin/src/Features/Navigation/Screen.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">73</span>
+    <span class="phpdocumentor-element-found-in__line">87</span>
 </aside>
 
         <p class="phpdocumentor-summary">Check if we&#039;re on a WooCommerce page</p>
@@ -649,9 +779,9 @@
         <a href="#method_register_post_type" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Features/Navigation/Screen.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-features-navigation-screen.html#source-view.172">packages/woocommerce-admin/src/Features/Navigation/Screen.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Features/Navigation/Screen.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-features-navigation-screen.html#source-view.215">packages/woocommerce-admin/src/Features/Navigation/Screen.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">172</span>
+    <span class="phpdocumentor-element-found-in__line">215</span>
 </aside>
 
         <p class="phpdocumentor-summary">Register post type for use in WooCommerce Navigation screens.</p>
@@ -679,6 +809,47 @@
     <span class="phpdocumentor-signature__response_type">mixed</span>
     
 </article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                    -static                    "
+>
+    <h4 class="phpdocumentor-element__name" id="method_register_taxonomy">
+        register_taxonomy()
+        <a href="#method_register_taxonomy" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Features/Navigation/Screen.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-features-navigation-screen.html#source-view.224">packages/woocommerce-admin/src/Features/Navigation/Screen.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">224</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Register taxonomy for use in WooCommerce Navigation screens.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+            <span class="phpdocumentor-signature__static">static</span>    <span class="phpdocumentor-signature__name">register_taxonomy</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$taxonomy</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$taxonomy</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Taxonomy to add.</p></section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">mixed</span>
+    
+</article>
             </section>
 
     </article>
@@ -690,7 +861,7 @@
 
     <footer class="phpdocumentor phpdocumentor-footer">
     <div class="phpdocumentor-section">
-        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on December 10th, 2020 at 11:45 am.</span>
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on January 25th, 2021 at 05:16 pm.</span>
     </div>
 </footer>
 
@@ -702,7 +873,7 @@
             'searchIndex': '..\/js\/searchIndex.json'
         };
     </script>
-    <script src="../js/searchIndex.js?updated=1607611555"></script>
-    <script src="../js/search.js?updated=1607611555"></script>
+    <script src="../js/searchIndex.js?updated=1611605767"></script>
+    <script src="../js/search.js?updated=1611605767"></script>
 </body>
 </html>

@@ -9,9 +9,9 @@
     <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
     <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
     <link rel="stylesheet" href="../css/normalize.css">
-    <link rel="stylesheet" href="../css/base.css?updated=1607611542">
+    <link rel="stylesheet" href="../css/base.css?updated=1611605754">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/template.css?updated=1607611542">
+    <link rel="stylesheet" href="../css/template.css?updated=1611605754">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
             <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
@@ -190,10 +190,10 @@ class CoreMenu {
 			$order       += 10;
 			$menu_items[] = (
 				array(
-					&#039;parent&#039;     =&gt; &#039;settings&#039;,
+					&#039;parent&#039;     =&gt; &#039;woocommerce-settings&#039;,
 					&#039;title&#039;      =&gt; $setting,
 					&#039;capability&#039; =&gt; &#039;manage_woocommerce&#039;,
-					&#039;id&#039;         =&gt; $key,
+					&#039;id&#039;         =&gt; &#039;settings-&#039; . $key,
 					&#039;url&#039;        =&gt; &#039;admin.php?page=wc-settings&amp;tab=&#039; . $key,
 					&#039;order&#039;      =&gt; $order,
 				)
@@ -211,49 +211,43 @@ class CoreMenu {
 	public static function get_categories() {
 		return array(
 			array(
-				&#039;title&#039;        =&gt; __( &#039;Analytics&#039;, &#039;woocommerce&#039; ),
-				&#039;capability&#039;   =&gt; &#039;manage_woocommerce&#039;,
-				&#039;id&#039;           =&gt; &#039;analytics&#039;,
-				&#039;order&#039;        =&gt; 10,
-				&#039;is_top_level&#039; =&gt; true,
+				&#039;title&#039;      =&gt; __( &#039;Orders&#039;, &#039;woocommerce&#039; ),
+				&#039;capability&#039; =&gt; &#039;manage_woocommerce&#039;,
+				&#039;id&#039;         =&gt; &#039;woocommerce-orders&#039;,
+				&#039;order&#039;      =&gt; 10,
 			),
 			array(
-				&#039;title&#039;        =&gt; __( &#039;Orders&#039;, &#039;woocommerce&#039; ),
-				&#039;capability&#039;   =&gt; &#039;manage_woocommerce&#039;,
-				&#039;id&#039;           =&gt; &#039;orders&#039;,
-				&#039;order&#039;        =&gt; 20,
-				&#039;is_top_level&#039; =&gt; true,
+				&#039;title&#039;      =&gt; __( &#039;Products&#039;, &#039;woocommerce&#039; ),
+				&#039;capability&#039; =&gt; &#039;manage_woocommerce&#039;,
+				&#039;id&#039;         =&gt; &#039;woocommerce-products&#039;,
+				&#039;order&#039;      =&gt; 20,
 			),
 			array(
-				&#039;title&#039;        =&gt; __( &#039;Marketing&#039;, &#039;woocommerce&#039; ),
-				&#039;capability&#039;   =&gt; &#039;manage_woocommerce&#039;,
-				&#039;id&#039;           =&gt; &#039;marketing&#039;,
-				&#039;order&#039;        =&gt; 30,
-				&#039;is_top_level&#039; =&gt; true,
+				&#039;title&#039;      =&gt; __( &#039;Analytics&#039;, &#039;woocommerce&#039; ),
+				&#039;capability&#039; =&gt; &#039;manage_woocommerce&#039;,
+				&#039;id&#039;         =&gt; &#039;woocommerce-analytics&#039;,
+				&#039;order&#039;      =&gt; 30,
 			),
 			array(
-				&#039;title&#039;        =&gt; __( &#039;Products&#039;, &#039;woocommerce&#039; ),
-				&#039;capability&#039;   =&gt; &#039;manage_woocommerce&#039;,
-				&#039;id&#039;           =&gt; &#039;products&#039;,
-				&#039;order&#039;        =&gt; 40,
-				&#039;is_top_level&#039; =&gt; true,
+				&#039;title&#039;      =&gt; __( &#039;Marketing&#039;, &#039;woocommerce&#039; ),
+				&#039;capability&#039; =&gt; &#039;manage_woocommerce&#039;,
+				&#039;id&#039;         =&gt; &#039;woocommerce-marketing&#039;,
+				&#039;order&#039;      =&gt; 40,
 			),
 			array(
-				&#039;title&#039;        =&gt; __( &#039;Settings&#039;, &#039;woocommerce&#039; ),
-				&#039;capability&#039;   =&gt; &#039;manage_woocommerce&#039;,
-				&#039;id&#039;           =&gt; &#039;settings&#039;,
-				&#039;menuId&#039;       =&gt; &#039;secondary&#039;,
-				&#039;order&#039;        =&gt; 10,
-				&#039;url&#039;          =&gt; &#039;admin.php?page=wc-settings&#039;,
-				&#039;is_top_level&#039; =&gt; true,
+				&#039;title&#039;      =&gt; __( &#039;Settings&#039;, &#039;woocommerce&#039; ),
+				&#039;capability&#039; =&gt; &#039;manage_woocommerce&#039;,
+				&#039;id&#039;         =&gt; &#039;woocommerce-settings&#039;,
+				&#039;menuId&#039;     =&gt; &#039;secondary&#039;,
+				&#039;order&#039;      =&gt; 10,
+				&#039;url&#039;        =&gt; &#039;admin.php?page=wc-settings&#039;,
 			),
 			array(
-				&#039;title&#039;        =&gt; __( &#039;Tools&#039;, &#039;woocommerce&#039; ),
-				&#039;capability&#039;   =&gt; &#039;manage_woocommerce&#039;,
-				&#039;id&#039;           =&gt; &#039;tools&#039;,
-				&#039;menuId&#039;       =&gt; &#039;secondary&#039;,
-				&#039;order&#039;        =&gt; 30,
-				&#039;is_top_level&#039; =&gt; true,
+				&#039;title&#039;      =&gt; __( &#039;Tools&#039;, &#039;woocommerce&#039; ),
+				&#039;capability&#039; =&gt; &#039;manage_woocommerce&#039;,
+				&#039;id&#039;         =&gt; &#039;woocommerce-tools&#039;,
+				&#039;menuId&#039;     =&gt; &#039;secondary&#039;,
+				&#039;order&#039;      =&gt; 30,
 			),
 		);
 	}
@@ -264,80 +258,142 @@ class CoreMenu {
 	 * @return array
 	 */
 	public static function get_items() {
-		$order_items   = Menu::get_post_type_items( &#039;shop_order&#039;, array( &#039;parent&#039; =&gt; &#039;orders&#039; ) );
-		$product_items = Menu::get_post_type_items( &#039;product&#039;, array( &#039;parent&#039; =&gt; &#039;products&#039; ) );
-		$coupon_items  = Menu::get_post_type_items( &#039;shop_coupon&#039;, array( &#039;parent&#039; =&gt; &#039;marketing&#039; ) );
-		$setting_items = self::get_setting_items();
-		$wca_items     = array();
-		$wca_pages     = \Automattic\WooCommerce\Admin\PageController::get_instance()-&gt;get_pages();
+		$order_items       = Menu::get_post_type_items( &#039;shop_order&#039;, array( &#039;parent&#039; =&gt; &#039;woocommerce-orders&#039; ) );
+		$product_items     = Menu::get_post_type_items( &#039;product&#039;, array( &#039;parent&#039; =&gt; &#039;woocommerce-products&#039; ) );
+		$product_tag_items = Menu::get_taxonomy_items(
+			&#039;product_tag&#039;,
+			array(
+				&#039;parent&#039; =&gt; &#039;woocommerce-products&#039;,
+				&#039;order&#039;  =&gt; 30,
+			)
+		);
+		$product_cat_items = Menu::get_taxonomy_items(
+			&#039;product_cat&#039;,
+			array(
+				&#039;parent&#039; =&gt; &#039;woocommerce-products&#039;,
+				&#039;order&#039;  =&gt; 20,
+			)
+		);
+		$coupon_items      = Menu::get_post_type_items( &#039;shop_coupon&#039;, array( &#039;parent&#039; =&gt; &#039;woocommerce-marketing&#039; ) );
+		$setting_items     = self::get_setting_items();
+		$wca_items         = array();
+		$wca_pages         = \Automattic\WooCommerce\Admin\PageController::get_instance()-&gt;get_pages();
 
 		foreach ( $wca_pages as $page ) {
 			if ( ! isset( $page[&#039;nav_args&#039;] ) ) {
 				continue;
 			}
 
-			$wca_items[] = array_merge(
+			$path = isset( $page[&#039;path&#039;] ) ? $page[&#039;path&#039;] : null;
+			$item = array_merge(
 				array(
 					&#039;id&#039;         =&gt; $page[&#039;id&#039;],
-					&#039;url&#039;        =&gt; $page[&#039;path&#039;],
+					&#039;url&#039;        =&gt; $path,
 					&#039;title&#039;      =&gt; $page[&#039;title&#039;][0],
-					&#039;capability&#039; =&gt; $page[&#039;capability&#039;],
+					&#039;capability&#039; =&gt; isset( $page[&#039;capability&#039;] ) ? $page[&#039;capability&#039;] : &#039;manage_woocommerce&#039;,
 				),
 				$page[&#039;nav_args&#039;]
 			);
+
+			// Don&#039;t allow top-level items to be added to the primary menu.
+			if ( ! isset( $item[&#039;parent&#039;] ) || &#039;woocommerce&#039; === $item[&#039;parent&#039;] ) {
+				$item[&#039;menuId&#039;] = &#039;plugins&#039;;
+			}
+
+			$wca_items[] = $item;
 		}
 
 		$home_item = array();
 		if ( defined( &#039;\Automattic\WooCommerce\Admin\Features\AnalyticsDashboard::MENU_SLUG&#039; ) ) {
 			$home_item = array(
-				&#039;id&#039;           =&gt; &#039;home&#039;,
-				&#039;title&#039;        =&gt; __( &#039;Home&#039;, &#039;woocommerce&#039; ),
-				&#039;url&#039;          =&gt; \Automattic\WooCommerce\Admin\Features\AnalyticsDashboard::MENU_SLUG,
-				&#039;is_top_level&#039; =&gt; true,
-				&#039;order&#039;        =&gt; 0,
+				&#039;id&#039;              =&gt; &#039;woocommerce-home&#039;,
+				&#039;title&#039;           =&gt; __( &#039;Home&#039;, &#039;woocommerce&#039; ),
+				&#039;url&#039;             =&gt; \Automattic\WooCommerce\Admin\Features\AnalyticsDashboard::MENU_SLUG,
+				&#039;order&#039;           =&gt; 0,
+				&#039;matchExpression&#039; =&gt; &#039;page=wc-admin((?!path=).)*$&#039;,
+			);
+		}
+
+		$customers_item = array();
+		if ( class_exists( &#039;\Automattic\WooCommerce\Admin\Features\Analytics&#039; ) ) {
+			$customers_item = array(
+				&#039;id&#039;    =&gt; &#039;woocommerce-analytics-customers&#039;,
+				&#039;title&#039; =&gt; __( &#039;Customers&#039;, &#039;woocommerce&#039; ),
+				&#039;url&#039;   =&gt; &#039;wc-admin&amp;path=/customers&#039;,
+				&#039;order&#039; =&gt; 50,
 			);
 		}
 
 		return array_merge(
 			array(
 				$home_item,
+				$customers_item,
 				$order_items[&#039;all&#039;],
 				$order_items[&#039;new&#039;],
 				$product_items[&#039;all&#039;],
-				$product_items[&#039;new&#039;],
+				$product_cat_items[&#039;default&#039;],
+				$product_tag_items[&#039;default&#039;],
+				array(
+					&#039;id&#039;              =&gt; &#039;woocommerce-product-attributes&#039;,
+					&#039;title&#039;           =&gt; __( &#039;Attributes&#039;, &#039;woocommerce&#039; ),
+					&#039;url&#039;             =&gt; &#039;edit.php?post_type=product&amp;page=product_attributes&#039;,
+					&#039;capability&#039;      =&gt; &#039;manage_product_terms&#039;,
+					&#039;order&#039;           =&gt; 40,
+					&#039;parent&#039;          =&gt; &#039;woocommerce-products&#039;,
+					&#039;matchExpression&#039; =&gt; &#039;edit.php(?=.*[?|&amp;]page=product_attributes(&amp;|$|#))|edit-tags.php(?=.*[?|&amp;]taxonomy=pa_)(?=.*[?|&amp;]post_type=product(&amp;|$|#))&#039;,
+				),
+				array_merge( $product_items[&#039;new&#039;], array( &#039;order&#039; =&gt; 50 ) ),
 				$coupon_items[&#039;default&#039;],
 				// Marketplace category.
 				array(
-					&#039;title&#039;        =&gt; __( &#039;Marketplace&#039;, &#039;woocommerce&#039; ),
-					&#039;capability&#039;   =&gt; &#039;manage_woocommerce&#039;,
-					&#039;id&#039;           =&gt; &#039;marketplace&#039;,
-					&#039;url&#039;          =&gt; &#039;wc-addons&#039;,
-					&#039;menuId&#039;       =&gt; &#039;secondary&#039;,
-					&#039;order&#039;        =&gt; 20,
-					&#039;is_top_level&#039; =&gt; true,
+					&#039;title&#039;      =&gt; __( &#039;Marketplace&#039;, &#039;woocommerce&#039; ),
+					&#039;capability&#039; =&gt; &#039;manage_woocommerce&#039;,
+					&#039;id&#039;         =&gt; &#039;woocommerce-marketplace&#039;,
+					&#039;url&#039;        =&gt; &#039;wc-addons&#039;,
+					&#039;menuId&#039;     =&gt; &#039;secondary&#039;,
+					&#039;order&#039;      =&gt; 20,
 				),
 				// Tools category.
 				array(
-					&#039;parent&#039;     =&gt; &#039;tools&#039;,
+					&#039;parent&#039;     =&gt; &#039;woocommerce-tools&#039;,
 					&#039;title&#039;      =&gt; __( &#039;System status&#039;, &#039;woocommerce&#039; ),
 					&#039;capability&#039; =&gt; &#039;manage_woocommerce&#039;,
-					&#039;id&#039;         =&gt; &#039;system-status&#039;,
+					&#039;id&#039;         =&gt; &#039;tools-system-status&#039;,
 					&#039;url&#039;        =&gt; &#039;wc-status&#039;,
+					&#039;order&#039;      =&gt; 20,
 				),
 				array(
-					&#039;parent&#039;     =&gt; &#039;tools&#039;,
+					&#039;parent&#039;     =&gt; &#039;woocommerce-tools&#039;,
 					&#039;title&#039;      =&gt; __( &#039;Import / Export&#039;, &#039;woocommerce&#039; ),
 					&#039;capability&#039; =&gt; &#039;import&#039;,
-					&#039;id&#039;         =&gt; &#039;import-export&#039;,
+					&#039;id&#039;         =&gt; &#039;tools-import-export&#039;,
 					&#039;url&#039;        =&gt; &#039;import.php&#039;,
 					&#039;migrate&#039;    =&gt; false,
+					&#039;order&#039;      =&gt; 10,
 				),
 				array(
-					&#039;parent&#039;     =&gt; &#039;tools&#039;,
+					&#039;parent&#039;     =&gt; &#039;woocommerce-tools&#039;,
 					&#039;title&#039;      =&gt; __( &#039;Utilities&#039;, &#039;woocommerce&#039; ),
 					&#039;capability&#039; =&gt; &#039;manage_woocommerce&#039;,
-					&#039;id&#039;         =&gt; &#039;utilities&#039;,
+					&#039;id&#039;         =&gt; &#039;tools-utilities&#039;,
 					&#039;url&#039;        =&gt; &#039;admin.php?page=wc-status&amp;tab=tools&#039;,
+					&#039;order&#039;      =&gt; 30,
+				),
+				array(
+					&#039;parent&#039;     =&gt; &#039;woocommerce-tools&#039;,
+					&#039;title&#039;      =&gt; __( &#039;Logs&#039;, &#039;woocommerce&#039; ),
+					&#039;capability&#039; =&gt; &#039;manage_woocommerce&#039;,
+					&#039;id&#039;         =&gt; &#039;tools-logs&#039;,
+					&#039;url&#039;        =&gt; &#039;admin.php?page=wc-status&amp;tab=logs&#039;,
+					&#039;order&#039;      =&gt; 40,
+				),
+				array(
+					&#039;parent&#039;     =&gt; &#039;woocommerce-tools&#039;,
+					&#039;title&#039;      =&gt; __( &#039;Scheduled Actions&#039;, &#039;woocommerce&#039; ),
+					&#039;capability&#039; =&gt; &#039;manage_woocommerce&#039;,
+					&#039;id&#039;         =&gt; &#039;tools-scheduled_actions&#039;,
+					&#039;url&#039;        =&gt; &#039;admin.php?page=wc-status&amp;tab=action-scheduler&#039;,
+					&#039;order&#039;      =&gt; 50,
 				),
 			),
 			// WooCommerce Admin items.
@@ -365,6 +421,7 @@ class CoreMenu {
 		$excluded_items = array(
 			&#039;woocommerce&#039;,
 			&#039;wc-reports&#039;,
+			&#039;wc-settings&#039;,
 		);
 
 		return apply_filters( &#039;woocommerce_navigation_core_excluded_items&#039;, $excluded_items );
@@ -380,7 +437,7 @@ class CoreMenu {
 
     <footer class="phpdocumentor phpdocumentor-footer">
     <div class="phpdocumentor-section">
-        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on December 10th, 2020 at 11:45 am.</span>
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on January 25th, 2021 at 05:15 pm.</span>
     </div>
 </footer>
 
@@ -392,7 +449,7 @@ class CoreMenu {
             'searchIndex': '..\/js\/searchIndex.json'
         };
     </script>
-    <script src="../js/searchIndex.js?updated=1607611542"></script>
-    <script src="../js/search.js?updated=1607611542"></script>
+    <script src="../js/searchIndex.js?updated=1611605754"></script>
+    <script src="../js/search.js?updated=1611605754"></script>
 </body>
 </html>

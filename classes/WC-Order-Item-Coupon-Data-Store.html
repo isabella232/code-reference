@@ -9,9 +9,9 @@
     <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
     <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
     <link rel="stylesheet" href="../css/normalize.css">
-    <link rel="stylesheet" href="../css/base.css?updated=1607611548">
+    <link rel="stylesheet" href="../css/base.css?updated=1611605760">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/template.css?updated=1607611548">
+    <link rel="stylesheet" href="../css/template.css?updated=1611605760">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
             <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
@@ -258,6 +258,13 @@ the types available at https://developer.wordpress.org/reference/functions/add_m
                         &nbsp;: mixed    </span>
 </dt>
 <dd>Deletes meta based on meta ID.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="../classes/WC-Data-Store-WP.html#method_filter_raw_meta_data">filter_raw_meta_data()</a>
+    <span>
+                        &nbsp;: mixed|void    </span>
+</dt>
+<dd>Helper method to filter internal meta keys from all meta data rows for the object.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="../classes/WC-Data-Store-WP.html#method_get_internal_meta_keys">get_internal_meta_keys()</a>
@@ -585,9 +592,9 @@ For example, in payment_tokenmeta, this would be payment_token_id.</p></section>
         <a href="#method_add_meta" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/data-stores/class-wc-data-store-wp.php"><a href="../files/woocommerce-includes-data-stores-class-wc-data-store-wp.html#source-view.122">includes/data-stores/class-wc-data-store-wp.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/data-stores/class-wc-data-store-wp.php"><a href="../files/woocommerce-includes-data-stores-class-wc-data-store-wp.html#source-view.135">includes/data-stores/class-wc-data-store-wp.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">122</span>
+    <span class="phpdocumentor-element-found-in__line">135</span>
 </aside>
 
         <p class="phpdocumentor-summary">Add new piece of meta.</p>
@@ -806,9 +813,9 @@ For example, in payment_tokenmeta, this would be payment_token_id.</p></section>
         <a href="#method_delete_from_lookup_table" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/data-stores/class-wc-data-store-wp.php"><a href="../files/woocommerce-includes-data-stores-class-wc-data-store-wp.html#source-view.613">includes/data-stores/class-wc-data-store-wp.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/data-stores/class-wc-data-store-wp.php"><a href="../files/woocommerce-includes-data-stores-class-wc-data-store-wp.html#source-view.626">includes/data-stores/class-wc-data-store-wp.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">613</span>
+    <span class="phpdocumentor-element-found-in__line">626</span>
 </aside>
 
         <p class="phpdocumentor-summary">Delete lookup table data for an ID.</p>
@@ -868,9 +875,9 @@ For example, in payment_tokenmeta, this would be payment_token_id.</p></section>
         <a href="#method_delete_meta" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/data-stores/class-wc-data-store-wp.php"><a href="../files/woocommerce-includes-data-stores-class-wc-data-store-wp.html#source-view.110">includes/data-stores/class-wc-data-store-wp.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/data-stores/class-wc-data-store-wp.php"><a href="../files/woocommerce-includes-data-stores-class-wc-data-store-wp.html#source-view.123">includes/data-stores/class-wc-data-store-wp.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">110</span>
+    <span class="phpdocumentor-element-found-in__line">123</span>
 </aside>
 
         <p class="phpdocumentor-summary">Deletes meta based on meta ID.</p>
@@ -925,14 +932,76 @@ For example, in payment_tokenmeta, this would be payment_token_id.</p></section>
             -public
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_filter_raw_meta_data">
+        filter_raw_meta_data()
+        <a href="#method_filter_raw_meta_data" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/data-stores/class-wc-data-store-wp.php"><a href="../files/woocommerce-includes-data-stores-class-wc-data-store-wp.html#source-view.110">includes/data-stores/class-wc-data-store-wp.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">110</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Helper method to filter internal meta keys from all meta data rows for the object.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">filter_raw_meta_data</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="../classes/WC-Data.html"><abbr title="\WC_Data">WC_Data</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__reference-operator">&amp;</span><span class="phpdocumentor-signature__argument__name">$object</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&nbsp;</span><span class="phpdocumentor-signature__argument__name">$raw_meta_data</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed|void</span></code>
+
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$object</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href="../classes/WC-Data.html"><abbr title="\WC_Data">WC_Data</abbr></a></span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>WC_Data object.</p></section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$raw_meta_data</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Array of std object of meta data to be filtered.</p></section>
+
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">since</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                            <span class="phpdocumentor-tag-link">4.7.0</span>
+                                                                                                    
+                </dd>
+                        </dl>
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">mixed|void</span>
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_get_internal_meta_keys">
         get_internal_meta_keys()
         <a href="#method_get_internal_meta_keys" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/data-stores/class-wc-data-store-wp.php"><a href="../files/woocommerce-includes-data-stores-class-wc-data-store-wp.html#source-view.484">includes/data-stores/class-wc-data-store-wp.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/data-stores/class-wc-data-store-wp.php"><a href="../files/woocommerce-includes-data-stores-class-wc-data-store-wp.html#source-view.497">includes/data-stores/class-wc-data-store-wp.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">484</span>
+    <span class="phpdocumentor-element-found-in__line">497</span>
 </aside>
 
         <p class="phpdocumentor-summary">Return list of internal meta keys.</p>
@@ -973,9 +1042,9 @@ For example, in payment_tokenmeta, this would be payment_token_id.</p></section>
         <a href="#method_parse_date_for_wp_query" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/data-stores/class-wc-data-store-wp.php"><a href="../files/woocommerce-includes-data-stores-class-wc-data-store-wp.html#source-view.321">includes/data-stores/class-wc-data-store-wp.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/data-stores/class-wc-data-store-wp.php"><a href="../files/woocommerce-includes-data-stores-class-wc-data-store-wp.html#source-view.334">includes/data-stores/class-wc-data-store-wp.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">321</span>
+    <span class="phpdocumentor-element-found-in__line">334</span>
 </aside>
 
         <p class="phpdocumentor-summary">Map a valid date query var to WP_Query arguments.</p>
@@ -1263,9 +1332,9 @@ Also accepts a WC_DateTime object.</p></section>
         <a href="#method_update_meta" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/data-stores/class-wc-data-store-wp.php"><a href="../files/woocommerce-includes-data-stores-class-wc-data-store-wp.html#source-view.133">includes/data-stores/class-wc-data-store-wp.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/data-stores/class-wc-data-store-wp.php"><a href="../files/woocommerce-includes-data-stores-class-wc-data-store-wp.html#source-view.146">includes/data-stores/class-wc-data-store-wp.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">133</span>
+    <span class="phpdocumentor-element-found-in__line">146</span>
 </aside>
 
         <p class="phpdocumentor-summary">Update meta.</p>
@@ -1325,9 +1394,9 @@ Also accepts a WC_DateTime object.</p></section>
         <a href="#method_exclude_internal_meta_keys" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/data-stores/class-wc-data-store-wp.php"><a href="../files/woocommerce-includes-data-stores-class-wc-data-store-wp.html#source-view.193">includes/data-stores/class-wc-data-store-wp.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/data-stores/class-wc-data-store-wp.php"><a href="../files/woocommerce-includes-data-stores-class-wc-data-store-wp.html#source-view.206">includes/data-stores/class-wc-data-store-wp.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">193</span>
+    <span class="phpdocumentor-element-found-in__line">206</span>
 </aside>
 
         <p class="phpdocumentor-summary">Callback to remove unwanted meta data.</p>
@@ -1366,9 +1435,9 @@ Also accepts a WC_DateTime object.</p></section>
         <a href="#method_get_data_for_lookup_table" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/data-stores/class-wc-data-store-wp.php"><a href="../files/woocommerce-includes-data-stores-class-wc-data-store-wp.html#source-view.560">includes/data-stores/class-wc-data-store-wp.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/data-stores/class-wc-data-store-wp.php"><a href="../files/woocommerce-includes-data-stores-class-wc-data-store-wp.html#source-view.573">includes/data-stores/class-wc-data-store-wp.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">560</span>
+    <span class="phpdocumentor-element-found-in__line">573</span>
 </aside>
 
         <p class="phpdocumentor-summary">Get data to save to a lookup table.</p>
@@ -1428,9 +1497,9 @@ Also accepts a WC_DateTime object.</p></section>
         <a href="#method_get_db_info" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/data-stores/class-wc-data-store-wp.php"><a href="../files/woocommerce-includes-data-stores-class-wc-data-store-wp.html#source-view.143">includes/data-stores/class-wc-data-store-wp.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/data-stores/class-wc-data-store-wp.php"><a href="../files/woocommerce-includes-data-stores-class-wc-data-store-wp.html#source-view.156">includes/data-stores/class-wc-data-store-wp.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">143</span>
+    <span class="phpdocumentor-element-found-in__line">156</span>
 </aside>
 
         <p class="phpdocumentor-summary">Table structure is slightly different between meta types, this function will return what we need to know.</p>
@@ -1472,9 +1541,9 @@ Also accepts a WC_DateTime object.</p></section>
         <a href="#method_get_primary_key_for_lookup_table" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/data-stores/class-wc-data-store-wp.php"><a href="../files/woocommerce-includes-data-stores-class-wc-data-store-wp.html#source-view.571">includes/data-stores/class-wc-data-store-wp.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/data-stores/class-wc-data-store-wp.php"><a href="../files/woocommerce-includes-data-stores-class-wc-data-store-wp.html#source-view.584">includes/data-stores/class-wc-data-store-wp.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">571</span>
+    <span class="phpdocumentor-element-found-in__line">584</span>
 </aside>
 
         <p class="phpdocumentor-summary">Get primary key name for lookup table.</p>
@@ -1526,9 +1595,9 @@ Also accepts a WC_DateTime object.</p></section>
         <a href="#method_get_props_to_update" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/data-stores/class-wc-data-store-wp.php"><a href="../files/woocommerce-includes-data-stores-class-wc-data-store-wp.html#source-view.206">includes/data-stores/class-wc-data-store-wp.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/data-stores/class-wc-data-store-wp.php"><a href="../files/woocommerce-includes-data-stores-class-wc-data-store-wp.html#source-view.219">includes/data-stores/class-wc-data-store-wp.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">206</span>
+    <span class="phpdocumentor-element-found-in__line">219</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets a list of props and meta keys that need updated based on change state
@@ -1585,9 +1654,9 @@ or if they are present in the database or not.</p>
         <a href="#method_get_search_stopwords" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/data-stores/class-wc-data-store-wp.php"><a href="../files/woocommerce-includes-data-stores-class-wc-data-store-wp.html#source-view.532">includes/data-stores/class-wc-data-store-wp.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/data-stores/class-wc-data-store-wp.php"><a href="../files/woocommerce-includes-data-stores-class-wc-data-store-wp.html#source-view.545">includes/data-stores/class-wc-data-store-wp.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">532</span>
+    <span class="phpdocumentor-element-found-in__line">545</span>
 </aside>
 
         <p class="phpdocumentor-summary">Retrieve stopwords used when parsing search terms.</p>
@@ -1692,9 +1761,9 @@ or if they are present in the database or not.</p>
         <a href="#method_get_valid_search_terms" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/data-stores/class-wc-data-store-wp.php"><a href="../files/woocommerce-includes-data-stores-class-wc-data-store-wp.html#source-view.499">includes/data-stores/class-wc-data-store-wp.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/data-stores/class-wc-data-store-wp.php"><a href="../files/woocommerce-includes-data-stores-class-wc-data-store-wp.html#source-view.512">includes/data-stores/class-wc-data-store-wp.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">499</span>
+    <span class="phpdocumentor-element-found-in__line">512</span>
 </aside>
 
         <p class="phpdocumentor-summary">Check if the terms are suitable for searching.</p>
@@ -1750,9 +1819,9 @@ the approximate search engines list, and is translatable.</p></section>
         <a href="#method_get_wp_query_args" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/data-stores/class-wc-data-store-wp.php"><a href="../files/woocommerce-includes-data-stores-class-wc-data-store-wp.html#source-view.254">includes/data-stores/class-wc-data-store-wp.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/data-stores/class-wc-data-store-wp.php"><a href="../files/woocommerce-includes-data-stores-class-wc-data-store-wp.html#source-view.267">includes/data-stores/class-wc-data-store-wp.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">254</span>
+    <span class="phpdocumentor-element-found-in__line">267</span>
 </aside>
 
         <p class="phpdocumentor-summary">Get valid WP_Query args from a WC_Object_Query&#039;s query variables.</p>
@@ -1804,9 +1873,9 @@ the approximate search engines list, and is translatable.</p></section>
         <a href="#method_prefix_key" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/data-stores/class-wc-data-store-wp.php"><a href="../files/woocommerce-includes-data-stores-class-wc-data-store-wp.html#source-view.183">includes/data-stores/class-wc-data-store-wp.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/data-stores/class-wc-data-store-wp.php"><a href="../files/woocommerce-includes-data-stores-class-wc-data-store-wp.html#source-view.196">includes/data-stores/class-wc-data-store-wp.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">183</span>
+    <span class="phpdocumentor-element-found-in__line">196</span>
 </aside>
 
         <p class="phpdocumentor-summary">Internal meta keys we don&#039;t want exposed as part of meta_data. This is in
@@ -1859,9 +1928,9 @@ addition to all data props with _ prefix.</p>
         <a href="#method_string_to_timestamp" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/data-stores/class-wc-data-store-wp.php"><a href="../files/woocommerce-includes-data-stores-class-wc-data-store-wp.html#source-view.642">includes/data-stores/class-wc-data-store-wp.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/data-stores/class-wc-data-store-wp.php"><a href="../files/woocommerce-includes-data-stores-class-wc-data-store-wp.html#source-view.655">includes/data-stores/class-wc-data-store-wp.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">642</span>
+    <span class="phpdocumentor-element-found-in__line">655</span>
 </aside>
 
         <p class="phpdocumentor-summary">Converts a WP post date string into a timestamp.</p>
@@ -1914,9 +1983,9 @@ addition to all data props with _ prefix.</p>
         <a href="#method_update_lookup_table" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/data-stores/class-wc-data-store-wp.php"><a href="../files/woocommerce-includes-data-stores-class-wc-data-store-wp.html#source-view.584">includes/data-stores/class-wc-data-store-wp.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/data-stores/class-wc-data-store-wp.php"><a href="../files/woocommerce-includes-data-stores-class-wc-data-store-wp.html#source-view.597">includes/data-stores/class-wc-data-store-wp.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">584</span>
+    <span class="phpdocumentor-element-found-in__line">597</span>
 </aside>
 
         <p class="phpdocumentor-summary">Update a lookup table for an object.</p>
@@ -1976,9 +2045,9 @@ addition to all data props with _ prefix.</p>
         <a href="#method_update_or_delete_post_meta" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/data-stores/class-wc-data-store-wp.php"><a href="../files/woocommerce-includes-data-stores-class-wc-data-store-wp.html#source-view.237">includes/data-stores/class-wc-data-store-wp.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/data-stores/class-wc-data-store-wp.php"><a href="../files/woocommerce-includes-data-stores-class-wc-data-store-wp.html#source-view.250">includes/data-stores/class-wc-data-store-wp.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">237</span>
+    <span class="phpdocumentor-element-found-in__line">250</span>
 </aside>
 
         <p class="phpdocumentor-summary">Update meta data in, or delete it from, the database.</p>
@@ -2052,7 +2121,7 @@ Data-stores can force meta to exist using <code class="prettyprint">must_exist_m
 
     <footer class="phpdocumentor phpdocumentor-footer">
     <div class="phpdocumentor-section">
-        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on December 10th, 2020 at 11:45 am.</span>
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on January 25th, 2021 at 05:16 pm.</span>
     </div>
 </footer>
 
@@ -2064,7 +2133,7 @@ Data-stores can force meta to exist using <code class="prettyprint">must_exist_m
             'searchIndex': '..\/js\/searchIndex.json'
         };
     </script>
-    <script src="../js/searchIndex.js?updated=1607611548"></script>
-    <script src="../js/search.js?updated=1607611548"></script>
+    <script src="../js/searchIndex.js?updated=1611605760"></script>
+    <script src="../js/search.js?updated=1611605760"></script>
 </body>
 </html>

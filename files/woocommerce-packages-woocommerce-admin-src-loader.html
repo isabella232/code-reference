@@ -9,9 +9,9 @@
     <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
     <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
     <link rel="stylesheet" href="../css/normalize.css">
-    <link rel="stylesheet" href="../css/base.css?updated=1607611542">
+    <link rel="stylesheet" href="../css/base.css?updated=1611605754">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/template.css?updated=1607611542">
+    <link rel="stylesheet" href="../css/template.css?updated=1611605754">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
             <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
@@ -197,8 +197,6 @@ class Loader {
 		add_action( &#039;init&#039;, array( __CLASS__, &#039;define_tables&#039; ) );
 		// Load feature before WooCommerce update hooks.
 		add_action( &#039;init&#039;, array( __CLASS__, &#039;load_features&#039; ), 4 );
-		add_filter( &#039;woocommerce_get_sections_advanced&#039;, array( __CLASS__, &#039;add_features_section&#039; ) );
-		add_filter( &#039;woocommerce_get_settings_advanced&#039;, array( __CLASS__, &#039;add_features_settings&#039; ), 10, 2 );
 		add_action( &#039;admin_enqueue_scripts&#039;, array( __CLASS__, &#039;register_scripts&#039; ) );
 		add_action( &#039;admin_enqueue_scripts&#039;, array( __CLASS__, &#039;inject_wc_settings_dependencies&#039; ), 14 );
 		add_action( &#039;admin_enqueue_scripts&#039;, array( __CLASS__, &#039;load_scripts&#039; ), 15 );
@@ -377,52 +375,6 @@ class Loader {
 	}
 
 	/**
-	 * Adds the Features section to the advanced tab of WooCommerce Settings
-	 *
-	 * @param array $sections Sections.
-	 * @return array
-	 */
-	public static function add_features_section( $sections ) {
-		$sections[&#039;features&#039;] = __( &#039;Features&#039;, &#039;woocommerce&#039; );
-		return $sections;
-	}
-
-	/**
-	 * Adds the Features settings.
-	 *
-	 * @param array  $settings Settings.
-	 * @param string $current_section Current section slug.
-	 * @return array
-	 */
-	public static function add_features_settings( $settings, $current_section ) {
-		if ( &#039;features&#039; !== $current_section ) {
-			return $settings;
-		}
-
-		return apply_filters(
-			&#039;woocommerce_settings_features&#039;,
-			array(
-				array(
-					&#039;title&#039; =&gt; __( &#039;Features&#039;, &#039;woocommerce&#039; ),
-					&#039;type&#039;  =&gt; &#039;title&#039;,
-					&#039;desc&#039;  =&gt; __( &#039;Start using new features that are being progressively rolled out to improve the store management experience.&#039;, &#039;woocommerce&#039; ),
-					&#039;id&#039;    =&gt; &#039;features_options&#039;,
-				),
-				array(
-					&#039;title&#039; =&gt; __( &#039;Navigation&#039;, &#039;woocommerce&#039; ),
-					&#039;desc&#039;  =&gt; __( &#039;Adds the new WooCommerce navigation experience to the dashboard&#039;, &#039;woocommerce&#039; ),
-					&#039;id&#039;    =&gt; &#039;woocommerce_navigation_enabled&#039;,
-					&#039;type&#039;  =&gt; &#039;checkbox&#039;,
-				),
-				array(
-					&#039;type&#039; =&gt; &#039;sectionend&#039;,
-					&#039;id&#039;   =&gt; &#039;features_options&#039;,
-				),
-			)
-		);
-	}
-
-	/**
 	 * Connects existing WooCommerce pages.
 	 *
 	 * @todo The entry point for the embed needs moved to this class as well.
@@ -503,7 +455,14 @@ class Loader {
 		wp_register_script(
 			&#039;wc-customer-effort-score&#039;,
 			self::get_url( &#039;customer-effort-score/index&#039;, &#039;js&#039; ),
-			array(),
+			array(
+				&#039;wp-components&#039;,
+				&#039;wp-compose&#039;,
+				&#039;wp-data&#039;,
+				&#039;wp-element&#039;,
+				&#039;wp-i18n&#039;,
+				&#039;wp-notices&#039;,
+			),
 			$js_file_version,
 			true
 		);
@@ -511,10 +470,20 @@ class Loader {
 		wp_register_script(
 			&#039;wc-navigation&#039;,
 			self::get_url( &#039;navigation/index&#039;, &#039;js&#039; ),
-			array( &#039;wp-url&#039;, &#039;wp-hooks&#039; ),
+			array( &#039;wp-url&#039;, &#039;wp-hooks&#039;, &#039;wp-element&#039;, &#039;wp-data&#039;, &#039;moment&#039; ),
 			$js_file_version,
 			true
 		);
+
+			// NOTE: This should be removed when Gutenberg is updated and
+			// the notices package is removed from WooCommerce Admin.
+			wp_register_script(
+				&#039;wc-notices&#039;,
+				self::get_url( &#039;notices/index&#039;, &#039;js&#039; ),
+				array(),
+				$js_file_version,
+				true
+			);
 
 		wp_register_script(
 			&#039;wc-number&#039;,
@@ -543,7 +512,7 @@ class Loader {
 		wp_register_script(
 			&#039;wc-store-data&#039;,
 			self::get_url( &#039;data/index&#039;, &#039;js&#039; ),
-			array(),
+			array( &#039;wp-data&#039; ),
 			$js_file_version,
 			true
 		);
@@ -568,6 +537,9 @@ class Loader {
 				&#039;wc-customer-effort-score&#039;,
 				&#039;wc-date&#039;,
 				&#039;wc-navigation&#039;,
+				// NOTE: This should be removed when Gutenberg is updated and
+				// the notices package is removed from WooCommerce Admin.
+				&#039;wc-notices&#039;,
 				&#039;wc-number&#039;,
 				&#039;wc-store-data&#039;,
 			),
@@ -1509,6 +1481,9 @@ class Loader {
 				&#039;wc-currency&#039;,
 				&#039;wc-customer-effort-score&#039;,
 				&#039;wc-navigation&#039;,
+				// NOTE: This should be removed when Gutenberg is updated and
+				// the notices package is removed from WooCommerce Admin.
+				&#039;wc-notices&#039;,
 				&#039;wc-number&#039;,
 				&#039;wc-date&#039;,
 				&#039;wc-components&#039;,
@@ -1548,7 +1523,7 @@ class Loader {
 
     <footer class="phpdocumentor phpdocumentor-footer">
     <div class="phpdocumentor-section">
-        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on December 10th, 2020 at 11:45 am.</span>
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on January 25th, 2021 at 05:15 pm.</span>
     </div>
 </footer>
 
@@ -1560,7 +1535,7 @@ class Loader {
             'searchIndex': '..\/js\/searchIndex.json'
         };
     </script>
-    <script src="../js/searchIndex.js?updated=1607611542"></script>
-    <script src="../js/search.js?updated=1607611542"></script>
+    <script src="../js/searchIndex.js?updated=1611605754"></script>
+    <script src="../js/search.js?updated=1611605754"></script>
 </body>
 </html>

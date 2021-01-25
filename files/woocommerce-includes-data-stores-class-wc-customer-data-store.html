@@ -9,9 +9,9 @@
     <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
     <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
     <link rel="stylesheet" href="../css/normalize.css">
-    <link rel="stylesheet" href="../css/base.css?updated=1607611541">
+    <link rel="stylesheet" href="../css/base.css?updated=1611605753">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/template.css?updated=1607611541">
+    <link rel="stylesheet" href="../css/template.css?updated=1611605753">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
             <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
@@ -200,6 +200,7 @@ class WC_Customer_Data_Store extends WC_Data_Store_WP implements WC_Customer_Dat
 		&#039;syntax_highlighting&#039;,
 		&#039;_order_count&#039;,
 		&#039;_money_spent&#039;,
+		&#039;_last_order&#039;,
 		&#039;_woocommerce_tracks_anon_id&#039;,
 	);
 
@@ -288,10 +289,11 @@ class WC_Customer_Data_Store extends WC_Data_Store_WP implements WC_Customer_Dat
 
 		$customer_id = $customer-&gt;get_id();
 
-		// Load meta but exclude deprecated props.
+		// Load meta but exclude deprecated props and parent keys.
 		$user_meta = array_diff_key(
 			array_change_key_case( array_map( &#039;wc_flatten_meta_callback&#039;, get_user_meta( $customer_id ) ) ),
-			array_flip( array( &#039;country&#039;, &#039;state&#039;, &#039;postcode&#039;, &#039;city&#039;, &#039;address&#039;, &#039;address_2&#039;, &#039;default&#039;, &#039;location&#039; ) )
+			array_flip( array( &#039;country&#039;, &#039;state&#039;, &#039;postcode&#039;, &#039;city&#039;, &#039;address&#039;, &#039;address_2&#039;, &#039;default&#039;, &#039;location&#039; ) ),
+			array_change_key_case( (array) $user_object-&gt;data )
 		);
 
 		$customer-&gt;set_props( $user_meta );
@@ -460,20 +462,29 @@ class WC_Customer_Data_Store extends WC_Data_Store_WP implements WC_Customer_Dat
 	 * @return WC_Order|false
 	 */
 	public function get_last_order( &amp;$customer ) {
-		global $wpdb;
-
-		$last_order = $wpdb-&gt;get_var(
-			// phpcs:disable WordPress.DB.PreparedSQL.NotPrepared
-			&quot;SELECT posts.ID
-			FROM $wpdb-&gt;posts AS posts
-			LEFT JOIN {$wpdb-&gt;postmeta} AS meta on posts.ID = meta.post_id
-			WHERE meta.meta_key = &#039;_customer_user&#039;
-			AND   meta.meta_value = &#039;&quot; . esc_sql( $customer-&gt;get_id() ) . &quot;&#039;
-			AND   posts.post_type = &#039;shop_order&#039;
-			AND   posts.post_status IN ( &#039;&quot; . implode( &quot;&#039;,&#039;&quot;, array_map( &#039;esc_sql&#039;, array_keys( wc_get_order_statuses() ) ) ) . &quot;&#039; )
-			ORDER BY posts.ID DESC&quot;
-			// phpcs:enable
+		$last_order = apply_filters(
+			&#039;woocommerce_customer_get_last_order&#039;,
+			get_user_meta( $customer-&gt;get_id(), &#039;_last_order&#039;, true ),
+			$customer
 		);
+
+		if ( &#039;&#039; === $last_order ) {
+			global $wpdb;
+
+			$last_order = $wpdb-&gt;get_var(
+				// phpcs:disable WordPress.DB.PreparedSQL.NotPrepared
+				&quot;SELECT posts.ID
+				FROM $wpdb-&gt;posts AS posts
+				LEFT JOIN {$wpdb-&gt;postmeta} AS meta on posts.ID = meta.post_id
+				WHERE meta.meta_key = &#039;_customer_user&#039;
+				AND   meta.meta_value = &#039;&quot; . esc_sql( $customer-&gt;get_id() ) . &quot;&#039;
+				AND   posts.post_type = &#039;shop_order&#039;
+				AND   posts.post_status IN ( &#039;&quot; . implode( &quot;&#039;,&#039;&quot;, array_map( &#039;esc_sql&#039;, array_keys( wc_get_order_statuses() ) ) ) . &quot;&#039; )
+				ORDER BY posts.ID DESC&quot;
+				// phpcs:enable
+			);
+			update_user_meta( $customer-&gt;get_id(), &#039;_last_order&#039;, $last_order );
+		}
 
 		if ( ! $last_order ) {
 			return false;
@@ -490,7 +501,11 @@ class WC_Customer_Data_Store extends WC_Data_Store_WP implements WC_Customer_Dat
 	 * @return integer
 	 */
 	public function get_order_count( &amp;$customer ) {
-		$count = get_user_meta( $customer-&gt;get_id(), &#039;_order_count&#039;, true );
+		$count = apply_filters(
+			&#039;woocommerce_customer_get_order_count&#039;,
+			get_user_meta( $customer-&gt;get_id(), &#039;_order_count&#039;, true ),
+			$customer
+		);
 
 		if ( &#039;&#039; === $count ) {
 			global $wpdb;
@@ -656,7 +671,7 @@ class WC_Customer_Data_Store extends WC_Data_Store_WP implements WC_Customer_Dat
 
     <footer class="phpdocumentor phpdocumentor-footer">
     <div class="phpdocumentor-section">
-        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on December 10th, 2020 at 11:45 am.</span>
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on January 25th, 2021 at 05:15 pm.</span>
     </div>
 </footer>
 
@@ -668,7 +683,7 @@ class WC_Customer_Data_Store extends WC_Data_Store_WP implements WC_Customer_Dat
             'searchIndex': '..\/js\/searchIndex.json'
         };
     </script>
-    <script src="../js/searchIndex.js?updated=1607611541"></script>
-    <script src="../js/search.js?updated=1607611541"></script>
+    <script src="../js/searchIndex.js?updated=1611605753"></script>
+    <script src="../js/search.js?updated=1611605753"></script>
 </body>
 </html>

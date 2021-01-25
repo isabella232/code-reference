@@ -9,9 +9,9 @@
     <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
     <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
     <link rel="stylesheet" href="../css/normalize.css">
-    <link rel="stylesheet" href="../css/base.css?updated=1607611542">
+    <link rel="stylesheet" href="../css/base.css?updated=1611605754">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/template.css?updated=1607611542">
+    <link rel="stylesheet" href="../css/template.css?updated=1611605754">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
             <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
@@ -160,6 +160,13 @@ class Products extends \WC_REST_Products_Controller {
 	protected $namespace = &#039;wc-analytics&#039;;
 
 	/**
+	 * Local cache of last order dates by ID.
+	 *
+	 * @var array
+	 */
+	protected $last_order_dates = array();
+
+	/**
 	 * Adds properties that can be embed via ?_embed=1.
 	 *
 	 * @return array
@@ -180,6 +187,13 @@ class Products extends \WC_REST_Products_Controller {
 		foreach ( $properties_to_embed as $property ) {
 			$schema[&#039;properties&#039;][ $property ][&#039;context&#039;][] = &#039;embed&#039;;
 		}
+
+		$schema[&#039;properties&#039;][&#039;last_order_date&#039;] = array(
+			&#039;description&#039; =&gt; __( &quot;The date the last order for this product was placed, in the site&#039;s timezone.&quot;, &#039;woocommerce&#039; ),
+			&#039;type&#039;        =&gt; &#039;date-time&#039;,
+			&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+			&#039;readonly&#039;    =&gt; true,
+		);
 
 		return $schema;
 	}
@@ -247,6 +261,19 @@ class Products extends \WC_REST_Products_Controller {
 	}
 
 	/**
+	 * Hang onto last order date since it will get removed by wc_get_product().
+	 *
+	 * @param stdClass $object_data Single row from query results.
+	 * @return WC_Data
+	 */
+	public function get_object( $object_data ) {
+		if ( isset( $object_data-&gt;last_order_date ) ) {
+			$this-&gt;last_order_dates[ $object_data-&gt;ID ] = $object_data-&gt;last_order_date;
+		}
+		return parent::get_object( $object_data );
+	}
+
+	/**
 	 * Add `low_stock_amount` property to product data
 	 *
 	 * @param WC_Data         $object  Object data.
@@ -256,9 +283,15 @@ class Products extends \WC_REST_Products_Controller {
 	public function prepare_object_for_response( $object, $request ) {
 		$data        = parent::prepare_object_for_response( $object, $request );
 		$object_data = $object-&gt;get_data();
+		$product_id  = $object_data[&#039;id&#039;];
 
-		if ( $request-&gt;get_param( &#039;low_in_stock&#039; ) &amp;&amp; is_numeric( $object_data[&#039;low_stock_amount&#039;] ) ) {
-			$data-&gt;data[&#039;low_stock_amount&#039;] = $object_data[&#039;low_stock_amount&#039;];
+		if ( $request-&gt;get_param( &#039;low_in_stock&#039; ) ) {
+			if ( is_numeric( $object_data[&#039;low_stock_amount&#039;] ) ) {
+				$data-&gt;data[&#039;low_stock_amount&#039;] = $object_data[&#039;low_stock_amount&#039;];
+			}
+			if ( isset( $this-&gt;last_order_dates[ $product_id ] ) ) {
+				$data-&gt;data[&#039;last_order_date&#039;] = wc_rest_prepare_date_response( $this-&gt;last_order_dates[ $product_id ] );
+			}
 		}
 		$data-&gt;data[&#039;name&#039;] = wp_strip_all_tags( $data-&gt;data[&#039;name&#039;] );
 
@@ -274,7 +307,11 @@ class Products extends \WC_REST_Products_Controller {
 	 */
 	public static function add_wp_query_fields( $select, $wp_query ) {
 		if ( $wp_query-&gt;get( &#039;low_in_stock&#039; ) ) {
-			$select .= &#039;, low_stock_amount_meta.meta_value AS low_stock_amount&#039;;
+			$fields  = array(
+				&#039;low_stock_amount_meta.meta_value AS low_stock_amount&#039;,
+				&#039;MAX( product_lookup.date_created ) AS last_order_date&#039;,
+			);
+			$select .= &#039;, &#039; . implode( &#039;, &#039;, $fields );
 		}
 
 		return $select;
@@ -335,8 +372,14 @@ class Products extends \WC_REST_Products_Controller {
 		}
 
 		if ( $wp_query-&gt;get( &#039;low_in_stock&#039; ) ) {
+			$product_lookup_table = $wpdb-&gt;prefix . &#039;wc_order_product_lookup&#039;;
+
 			$join  = self::append_product_sorting_table_join( $join );
 			$join .= &quot; LEFT JOIN {$wpdb-&gt;postmeta} AS low_stock_amount_meta ON {$wpdb-&gt;posts}.ID = low_stock_amount_meta.post_id AND low_stock_amount_meta.meta_key = &#039;_low_stock_amount&#039; &quot;;
+			$join .= &quot; LEFT JOIN {$product_lookup_table} product_lookup ON {$wpdb-&gt;posts}.ID = CASE
+				WHEN {$wpdb-&gt;posts}.post_type = &#039;product&#039; THEN product_lookup.product_id
+				WHEN {$wpdb-&gt;posts}.post_type = &#039;product_variation&#039; THEN product_lookup.variation_id
+			END&quot;;
 		}
 
 		return $join;
@@ -385,7 +428,7 @@ class Products extends \WC_REST_Products_Controller {
 
     <footer class="phpdocumentor phpdocumentor-footer">
     <div class="phpdocumentor-section">
-        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on December 10th, 2020 at 11:45 am.</span>
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on January 25th, 2021 at 05:15 pm.</span>
     </div>
 </footer>
 
@@ -397,7 +440,7 @@ class Products extends \WC_REST_Products_Controller {
             'searchIndex': '..\/js\/searchIndex.json'
         };
     </script>
-    <script src="../js/searchIndex.js?updated=1607611542"></script>
-    <script src="../js/search.js?updated=1607611542"></script>
+    <script src="../js/searchIndex.js?updated=1611605754"></script>
+    <script src="../js/search.js?updated=1611605754"></script>
 </body>
 </html>

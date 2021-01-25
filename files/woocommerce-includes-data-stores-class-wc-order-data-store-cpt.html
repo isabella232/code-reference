@@ -9,9 +9,9 @@
     <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
     <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
     <link rel="stylesheet" href="../css/normalize.css">
-    <link rel="stylesheet" href="../css/base.css?updated=1607611541">
+    <link rel="stylesheet" href="../css/base.css?updated=1611605753">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/template.css?updated=1607611541">
+    <link rel="stylesheet" href="../css/template.css?updated=1611605753">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
             <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
@@ -870,11 +870,12 @@ class WC_Order_Data_Store_CPT extends Abstract_WC_Order_Data_Store_CPT implement
 	 * Get the order type based on Order ID.
 	 *
 	 * @since 3.0.0
-	 * @param int $order_id Order ID.
+	 * @param int|WP_Post $order Order | Order id.
+	 *
 	 * @return string
 	 */
-	public function get_order_type( $order_id ) {
-		return get_post_type( $order_id );
+	public function get_order_type( $order ) {
+		return get_post_type( $order );
 	}
 
 	/**
@@ -1001,7 +1002,13 @@ class WC_Order_Data_Store_CPT extends Abstract_WC_Order_Data_Store_CPT implement
 			$query = new WP_Query( $args );
 		}
 
-		$orders = ( isset( $query_vars[&#039;return&#039;] ) &amp;&amp; &#039;ids&#039; === $query_vars[&#039;return&#039;] ) ? $query-&gt;posts : array_filter( array_map( &#039;wc_get_order&#039;, $query-&gt;posts ) );
+		if ( isset( $query_vars[&#039;return&#039;] ) &amp;&amp; &#039;ids&#039; === $query_vars[&#039;return&#039;] ) {
+			$orders = $query-&gt;posts;
+		} else {
+			update_post_caches( $query-&gt;posts ); // We already fetching posts, might as well hydrate some caches.
+			$order_ids = wp_list_pluck( $query-&gt;posts, &#039;ID&#039; );
+			$orders = $this-&gt;compile_orders( $order_ids, $query_vars, $query );
+		}
 
 		if ( isset( $query_vars[&#039;paginate&#039;] ) &amp;&amp; $query_vars[&#039;paginate&#039;] ) {
 			return (object) array(
@@ -1012,6 +1019,213 @@ class WC_Order_Data_Store_CPT extends Abstract_WC_Order_Data_Store_CPT implement
 		}
 
 		return $orders;
+	}
+
+	/**
+	 * Compile order response and set caches as needed for order ids.
+	 *
+	 * @param array    $order_ids  List of order IDS to compile.
+	 * @param array    $query_vars Original query arguments.
+	 * @param WP_Query $query      Query object.
+	 *
+	 * @return array Orders.
+	 */
+	private function compile_orders( $order_ids, $query_vars, $query ) {
+		if ( empty( $order_ids ) ) {
+			return array();
+		}
+		$orders = array();
+
+		// Lets do some cache hydrations so that we don&#039;t have to fetch data from DB for every order.
+		$this-&gt;prime_raw_meta_cache_for_orders( $order_ids, $query_vars );
+		$this-&gt;prime_refund_caches_for_order( $order_ids, $query_vars );
+		$this-&gt;prime_order_item_caches_for_orders( $order_ids, $query_vars );
+
+		foreach ( $query-&gt;posts as $post ) {
+			$orders[] = wc_get_order( $post );
+		}
+
+		return $orders;
+	}
+
+	/**
+	 * Prime refund cache for orders.
+	 *
+	 * @param array $order_ids  Order Ids to prime cache for.
+	 * @param array $query_vars Query vars for the query.
+	 */
+	private function prime_refund_caches_for_order( $order_ids, $query_vars ) {
+		if ( ! isset( $query_vars[&#039;type&#039;] ) || ! ( &#039;shop_order&#039; === $query_vars[&#039;type&#039;] ) ) {
+			return;
+		}
+		if ( isset( $query_vars[&#039;fields&#039;] ) &amp;&amp; &#039;all&#039; !== $query_vars[&#039;fields&#039;] ) {
+			if ( is_array( $query_vars[&#039;fields&#039;] ) &amp;&amp; ! in_array( &#039;refunds&#039;, $query_vars[&#039;fields&#039;] ) ) {
+				return;
+			}
+		}
+		$cache_keys_mapping = array();
+		foreach ( $order_ids as $order_id ) {
+			$cache_keys_mapping[ $order_id ] = WC_Cache_Helper::get_cache_prefix( &#039;orders&#039; ) . &#039;refunds&#039; . $order_id;
+		}
+		$non_cached_ids = array();
+		$cache_values = wc_cache_get_multiple( array_values( $cache_keys_mapping ), &#039;orders&#039; );
+		foreach ( $order_ids as $order_id ) {
+			if ( false === $cache_values[ $cache_keys_mapping[ $order_id ] ] ) {
+				$non_cached_ids[] = $order_id;
+			}
+		}
+		if ( empty( $non_cached_ids ) ) {
+			return;
+		}
+
+		$refunds = wc_get_orders(
+			array(
+				&#039;type&#039;   =&gt; &#039;shop_order_refund&#039;,
+				&#039;post_parent__in&#039; =&gt; $non_cached_ids,
+				&#039;limit&#039;  =&gt; - 1,
+			)
+		);
+		$order_refunds = array_reduce(
+			$refunds,
+			function ( $order_refunds_array, WC_Order_Refund $refund ) {
+				if ( ! isset( $order_refunds_array[ $refund-&gt;get_parent_id() ] ) ) {
+					$order_refunds_array[ $refund-&gt;get_parent_id() ] = array();
+				}
+				$order_refunds_array[ $refund-&gt;get_parent_id() ][] = $refund;
+				return $order_refunds_array;
+			},
+			array()
+		);
+		foreach ( $non_cached_ids as $order_id ) {
+			$refunds = array();
+			if ( isset( $order_refunds[ $order_id ] ) ) {
+				$refunds = $order_refunds[ $order_id ];
+			}
+			wp_cache_set( $cache_keys_mapping[ $order_id ], $refunds, &#039;orders&#039; );
+		}
+	}
+
+	/**
+	 * Prime following caches:
+	 *  1. item-$order_item_id   For individual items.
+	 *  2. order-items-$order-id For fetching items associated with an order.
+	 *  3. order-item meta.
+	 *
+	 * @param array $order_ids  Order Ids to prime cache for.
+	 * @param array $query_vars Query vars for the query.
+	 */
+	private function prime_order_item_caches_for_orders( $order_ids, $query_vars ) {
+		global $wpdb;
+		if ( isset( $query_vars[&#039;fields&#039;] ) &amp;&amp; &#039;all&#039; !== $query_vars[&#039;fields&#039;] ) {
+			$line_items = array(
+				&#039;line_items&#039;,
+				&#039;shipping_lines&#039;,
+				&#039;fee_lines&#039;,
+				&#039;coupon_lines&#039;,
+			);
+
+			if ( is_array( $query_vars[&#039;fields&#039;] ) &amp;&amp; 0 === count( array_intersect( $line_items, $query_vars[&#039;fields&#039;] ) ) ) {
+				return;
+			}
+		}
+		$cache_keys = array_map(
+			function ( $order_id ) {
+				return &#039;order-items-&#039; . $order_id;
+			},
+			$order_ids
+		);
+		$cache_values = wc_cache_get_multiple( $cache_keys, &#039;orders&#039; );
+		$non_cached_ids = array();
+		foreach ( $order_ids as $order_id ) {
+			if ( false === $cache_values[ &#039;order-items-&#039; . $order_id ] ) {
+				$non_cached_ids[] = $order_id;
+			}
+		}
+		if ( empty( $non_cached_ids ) ) {
+			return;
+		}
+
+		$non_cached_ids       = esc_sql( $non_cached_ids );
+		$non_cached_ids_string = implode( &#039;,&#039;, $non_cached_ids );
+		$order_items = $wpdb-&gt;get_results(
+			// phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+			&quot;SELECT order_item_type, order_item_id, order_id, order_item_name FROM {$wpdb-&gt;prefix}woocommerce_order_items WHERE order_id in ( $non_cached_ids_string ) ORDER BY order_item_id;&quot;
+		);
+		if ( empty( $order_items ) ) {
+			return;
+		}
+
+		$order_items_for_all_orders = array_reduce(
+			$order_items,
+			function ( $order_items_collection, $order_item ) {
+				if ( ! isset( $order_items_collection[ $order_item-&gt;order_id ] ) ) {
+					$order_items_collection[ $order_item-&gt;order_id ] = array();
+				}
+				$order_items_collection[ $order_item-&gt;order_id ][] = $order_item;
+				return $order_items_collection;
+			}
+		);
+		foreach ( $order_items_for_all_orders as $order_id =&gt; $items ) {
+			wp_cache_set( &#039;order-items-&#039; . $order_id, $items, &#039;orders&#039; );
+		}
+		foreach ( $order_items as $item ) {
+			wp_cache_set( &#039;item-&#039; . $item-&gt;order_item_id, $item, &#039;order-items&#039; );
+		}
+		$order_item_ids = wp_list_pluck( $order_items, &#039;order_item_id&#039; );
+		update_meta_cache( &#039;order_item&#039;, $order_item_ids );
+	}
+
+	/**
+	 * Prime cache for raw meta data for orders in bulk. Difference between this and WP built-in metadata is that this method also fetches `meta_id` field which we use and cache it.
+	 *
+	 * @param array $order_ids  Order Ids to prime cache for.
+	 * @param array $query_vars Query vars for the query.
+	 */
+	private function prime_raw_meta_cache_for_orders( $order_ids, $query_vars ) {
+		global $wpdb;
+
+		if ( isset( $query_vars[&#039;fields&#039;] ) &amp;&amp; &#039;all&#039; !== $query_vars[&#039;fields&#039;] ) {
+			if ( is_array( $query_vars[&#039;fields&#039;] ) &amp;&amp; ! in_array( &#039;meta_data&#039;, $query_vars[&#039;fields&#039;] ) ) {
+				return;
+			}
+		}
+
+		$cache_keys_mapping = array();
+		foreach ( $order_ids as $order_id ) {
+			$cache_keys_mapping[ $order_id ] = WC_Order::generate_meta_cache_key( $order_id, &#039;orders&#039; );
+		}
+		$cache_values = wc_cache_get_multiple( array_values( $cache_keys_mapping ), &#039;orders&#039; );
+		$non_cached_ids = array();
+		foreach ( $order_ids as $order_id ) {
+			if ( false === $cache_values[ $cache_keys_mapping[ $order_id ] ] ) {
+				$non_cached_ids[] = $order_id;
+			}
+		}
+		if ( empty( $non_cached_ids ) ) {
+			return;
+		}
+		$order_ids     = esc_sql( $non_cached_ids );
+		$order_ids_in  = &quot;&#039;&quot; . implode( &quot;&#039;, &#039;&quot;, $order_ids ) . &quot;&#039;&quot;;
+		$raw_meta_data_array = $wpdb-&gt;get_results(
+		// phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+			&quot;SELECT post_id as object_id, meta_id, meta_key, meta_value
+				FROM {$wpdb-&gt;postmeta}
+				WHERE post_id IN ( $order_ids_in )
+				ORDER BY post_id&quot;
+		// phpcs:enable WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+		);
+		$raw_meta_data_collection = array_reduce(
+			$raw_meta_data_array,
+			function ( $collection, $raw_meta_data ) {
+				if ( ! isset( $collection[ $raw_meta_data-&gt;object_id ] ) ) {
+					$collection[ $raw_meta_data-&gt;object_id ] = array();
+				}
+				$collection[ $raw_meta_data-&gt;object_id ][] = $raw_meta_data;
+				return $collection;
+			},
+			array()
+		);
+		WC_Order::prime_raw_meta_data_cache( $raw_meta_data_collection, &#039;orders&#039; );
 	}
 
 	/**
@@ -1037,7 +1251,7 @@ class WC_Order_Data_Store_CPT extends Abstract_WC_Order_Data_Store_CPT implement
 
     <footer class="phpdocumentor phpdocumentor-footer">
     <div class="phpdocumentor-section">
-        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on December 10th, 2020 at 11:45 am.</span>
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on January 25th, 2021 at 05:15 pm.</span>
     </div>
 </footer>
 
@@ -1049,7 +1263,7 @@ class WC_Order_Data_Store_CPT extends Abstract_WC_Order_Data_Store_CPT implement
             'searchIndex': '..\/js\/searchIndex.json'
         };
     </script>
-    <script src="../js/searchIndex.js?updated=1607611541"></script>
-    <script src="../js/search.js?updated=1607611541"></script>
+    <script src="../js/searchIndex.js?updated=1611605753"></script>
+    <script src="../js/search.js?updated=1611605753"></script>
 </body>
 </html>

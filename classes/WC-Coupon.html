@@ -9,9 +9,9 @@
     <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
     <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
     <link rel="stylesheet" href="../css/normalize.css">
-    <link rel="stylesheet" href="../css/base.css?updated=1607611546">
+    <link rel="stylesheet" href="../css/base.css?updated=1611605758">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/template.css?updated=1607611546">
+    <link rel="stylesheet" href="../css/template.css?updated=1611605758">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
             <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
@@ -260,6 +260,20 @@ This class will be removed in future versions.</p></section>
 <dd></dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a href="../classes/WC-Coupon.html#constant_E_WC_COUPON_USAGE_LIMIT_COUPON_STUCK">E_WC_COUPON_USAGE_LIMIT_COUPON_STUCK</a>
+    <span>
+        &nbsp;= 115                    </span>
+</dt>
+<dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a href="../classes/WC-Coupon.html#constant_E_WC_COUPON_USAGE_LIMIT_COUPON_STUCK_GUEST">E_WC_COUPON_USAGE_LIMIT_COUPON_STUCK_GUEST</a>
+    <span>
+        &nbsp;= 116                    </span>
+</dt>
+<dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
     <a href="../classes/WC-Coupon.html#constant_E_WC_COUPON_USAGE_LIMIT_REACHED">E_WC_COUPON_USAGE_LIMIT_REACHED</a>
     <span>
         &nbsp;= 106                    </span>
@@ -484,6 +498,13 @@ This class will be removed in future versions.</p></section>
 <dd>Format loaded data as array.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="../classes/WC-Data.html#method_generate_meta_cache_key">generate_meta_cache_key()</a>
+    <span>
+                        &nbsp;: string    </span>
+</dt>
+<dd>Generate cache key from id and group.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="../classes/WC-Coupon.html#method_get_amount">get_amount()</a>
     <span>
                         &nbsp;: float    </span>
@@ -673,6 +694,13 @@ This class will be removed in future versions.</p></section>
 <dd>Get Meta Data by Key.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="../classes/WC-Data.html#method_get_meta_cache_key">get_meta_cache_key()</a>
+    <span>
+                        &nbsp;: string    </span>
+</dt>
+<dd>Helper method to compute meta cache key. Different from WP Meta cache key in that meta data cached using this key also contains meta_id column.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="../classes/WC-Data.html#method_get_meta_data">get_meta_data()</a>
     <span>
                         &nbsp;: array    </span>
@@ -790,6 +818,13 @@ This class will be removed in future versions.</p></section>
                         &nbsp;: bool    </span>
 </dt>
 <dd>See if meta data exists, since get_meta always returns a &#039;&#039; or array().</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="../classes/WC-Data.html#method_prime_raw_meta_data_cache">prime_raw_meta_data_cache()</a>
+    <span>
+                        &nbsp;: mixed    </span>
+</dt>
+<dd>Prime caches for raw meta data. This includes meta_id column as well, which is not included by default in WP meta data.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="../classes/WC-Coupon.html#method_read_manual_coupon">read_manual_coupon()</a>
@@ -1446,6 +1481,56 @@ This class will be removed in future versions.</p></section>
 
 </article>
                     <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_E_WC_COUPON_USAGE_LIMIT_COUPON_STUCK">
+        E_WC_COUPON_USAGE_LIMIT_COUPON_STUCK
+        <a href="#constant_E_WC_COUPON_USAGE_LIMIT_COUPON_STUCK" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.70">includes/class-wc-coupon.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">70</span>
+</aside>
+
+    
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+    <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">E_WC_COUPON_USAGE_LIMIT_COUPON_STUCK</span>
+    = <span class="phpdocumentor-signature__default-value">115</span>
+</code>
+
+
+    
+    
+
+</article>
+                    <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_E_WC_COUPON_USAGE_LIMIT_COUPON_STUCK_GUEST">
+        E_WC_COUPON_USAGE_LIMIT_COUPON_STUCK_GUEST
+        <a href="#constant_E_WC_COUPON_USAGE_LIMIT_COUPON_STUCK_GUEST" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.71">includes/class-wc-coupon.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">71</span>
+</aside>
+
+    
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+    <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">E_WC_COUPON_USAGE_LIMIT_COUPON_STUCK_GUEST</span>
+    = <span class="phpdocumentor-signature__default-value">116</span>
+</code>
+
+
+    
+    
+
+</article>
+                    <article class="phpdocumentor-element -constant -public ">
     <h4 class="phpdocumentor-element__name" id="constant_E_WC_COUPON_USAGE_LIMIT_REACHED">
         E_WC_COUPON_USAGE_LIMIT_REACHED
         <a href="#constant_E_WC_COUPON_USAGE_LIMIT_REACHED" class="headerlink"><i class="fas fa-link"></i></a>
@@ -1477,9 +1562,9 @@ This class will be removed in future versions.</p></section>
     </h4>
 
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.71">includes/class-wc-coupon.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.73">includes/class-wc-coupon.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">71</span>
+    <span class="phpdocumentor-element-found-in__line">73</span>
 </aside>
 
     
@@ -1502,9 +1587,9 @@ This class will be removed in future versions.</p></section>
     </h4>
 
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.70">includes/class-wc-coupon.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.72">includes/class-wc-coupon.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">70</span>
+    <span class="phpdocumentor-element-found-in__line">72</span>
 </aside>
 
     
@@ -1542,9 +1627,9 @@ This class will be removed in future versions.</p></section>
                                 </span>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.78">includes/class-wc-coupon.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.80">includes/class-wc-coupon.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">78</span>
+    <span class="phpdocumentor-element-found-in__line">80</span>
 </aside>
 
         <p class="phpdocumentor-summary">Cache group.</p>
@@ -2023,9 +2108,9 @@ ull</span></code>
         <a href="#method___construct" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.85">includes/class-wc-coupon.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.87">includes/class-wc-coupon.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">85</span>
+    <span class="phpdocumentor-element-found-in__line">87</span>
 </aside>
 
         <p class="phpdocumentor-summary">Coupon constructor. Loads coupon data.</p>
@@ -2249,9 +2334,9 @@ ull</span></code>
         <a href="#method_add_coupon_message" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.915">includes/class-wc-coupon.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.917">includes/class-wc-coupon.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">915</span>
+    <span class="phpdocumentor-element-found-in__line">917</span>
 </aside>
 
         <p class="phpdocumentor-summary">Converts one of the WC_Coupon message/error codes to a message string and.</p>
@@ -2391,9 +2476,9 @@ ull</span></code>
         <a href="#method_apply_changes" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/abstracts/abstract-wc-data.php"><a href="../files/woocommerce-includes-abstracts-abstract-wc-data.html#source-view.718">includes/abstracts/abstract-wc-data.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/abstracts/abstract-wc-data.php"><a href="../files/woocommerce-includes-abstracts-abstract-wc-data.html#source-view.764">includes/abstracts/abstract-wc-data.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">718</span>
+    <span class="phpdocumentor-element-found-in__line">764</span>
 </aside>
 
         <p class="phpdocumentor-summary">Merge changes with data and clear.</p>
@@ -2475,9 +2560,9 @@ ull</span></code>
         <a href="#method_decrease_usage_count" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.806">includes/class-wc-coupon.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.808">includes/class-wc-coupon.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">806</span>
+    <span class="phpdocumentor-element-found-in__line">808</span>
 </aside>
 
         <p class="phpdocumentor-summary">Decrease usage count for current coupon.</p>
@@ -2772,6 +2857,69 @@ ull</span></code>
         class="phpdocumentor-element
             -method
             -public
+                                    -static                    "
+>
+    <h4 class="phpdocumentor-element__name" id="method_generate_meta_cache_key">
+        generate_meta_cache_key()
+        <a href="#method_generate_meta_cache_key" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/abstracts/abstract-wc-data.php"><a href="../files/woocommerce-includes-abstracts-abstract-wc-data.html#source-view.547">includes/abstracts/abstract-wc-data.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">547</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Generate cache key from id and group.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+            <span class="phpdocumentor-signature__static">static</span>    <span class="phpdocumentor-signature__name">generate_meta_cache_key</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int|string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$id</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$cache_group</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
+
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$id</span>
+                : <span class="phpdocumentor-signature__argument__return-type">int|string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Object ID.</p></section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$cache_group</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Group name use to store cache. Whole group cache can be invalidated in one go.</p></section>
+
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">since</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                            <span class="phpdocumentor-tag-link">4.7.0</span>
+                                                                                                    
+                </dd>
+                        </dl>
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">string</span>
+            &mdash; <span class="phpdocumentor-return-value__description">Meta cache key.</span>
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
                                                         "
 >
     <h4 class="phpdocumentor-element__name" id="method_get_amount">
@@ -2779,9 +2927,9 @@ ull</span></code>
         <a href="#method_get_amount" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.203">includes/class-wc-coupon.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.205">includes/class-wc-coupon.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">203</span>
+    <span class="phpdocumentor-element-found-in__line">205</span>
 </aside>
 
         <p class="phpdocumentor-summary">Get coupon amount.</p>
@@ -2833,9 +2981,9 @@ ull</span></code>
         <a href="#method_get_changes" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/abstracts/abstract-wc-data.php"><a href="../files/woocommerce-includes-abstracts-abstract-wc-data.html#source-view.709">includes/abstracts/abstract-wc-data.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/abstracts/abstract-wc-data.php"><a href="../files/woocommerce-includes-abstracts-abstract-wc-data.html#source-view.755">includes/abstracts/abstract-wc-data.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">709</span>
+    <span class="phpdocumentor-element-found-in__line">755</span>
 </aside>
 
         <p class="phpdocumentor-summary">Return data changes only.</p>
@@ -2876,9 +3024,9 @@ ull</span></code>
         <a href="#method_get_code" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.170">includes/class-wc-coupon.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.172">includes/class-wc-coupon.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">170</span>
+    <span class="phpdocumentor-element-found-in__line">172</span>
 </aside>
 
         <p class="phpdocumentor-summary">Get coupon code.</p>
@@ -2930,9 +3078,9 @@ ull</span></code>
         <a href="#method_get_coupon_error" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.956">includes/class-wc-coupon.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.958">includes/class-wc-coupon.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">956</span>
+    <span class="phpdocumentor-element-found-in__line">958</span>
 </aside>
 
         <p class="phpdocumentor-summary">Map one of the WC_Coupon error codes to a message string.</p>
@@ -2972,9 +3120,9 @@ ull</span></code>
         <a href="#method_get_coupon_message" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.935">includes/class-wc-coupon.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.937">includes/class-wc-coupon.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">935</span>
+    <span class="phpdocumentor-element-found-in__line">937</span>
 </aside>
 
         <p class="phpdocumentor-summary">Map one of the WC_Coupon message codes to a message string.</p>
@@ -3143,9 +3291,9 @@ ull</span></code>
         <a href="#method_get_date_created" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.225">includes/class-wc-coupon.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.227">includes/class-wc-coupon.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">225</span>
+    <span class="phpdocumentor-element-found-in__line">227</span>
 </aside>
 
         <p class="phpdocumentor-summary">Get date_created</p>
@@ -3198,9 +3346,9 @@ ull</span></code>
         <a href="#method_get_date_expires" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.214">includes/class-wc-coupon.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.216">includes/class-wc-coupon.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">214</span>
+    <span class="phpdocumentor-element-found-in__line">216</span>
 </aside>
 
         <p class="phpdocumentor-summary">Get coupon expiration date.</p>
@@ -3253,9 +3401,9 @@ ull</span></code>
         <a href="#method_get_date_modified" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.236">includes/class-wc-coupon.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.238">includes/class-wc-coupon.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">236</span>
+    <span class="phpdocumentor-element-found-in__line">238</span>
 </aside>
 
         <p class="phpdocumentor-summary">Get date_modified</p>
@@ -3308,9 +3456,9 @@ ull</span></code>
         <a href="#method_get_description" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.181">includes/class-wc-coupon.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.183">includes/class-wc-coupon.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">181</span>
+    <span class="phpdocumentor-element-found-in__line">183</span>
 </aside>
 
         <p class="phpdocumentor-summary">Get coupon description.</p>
@@ -3362,9 +3510,9 @@ ull</span></code>
         <a href="#method_get_discount_amount" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.423">includes/class-wc-coupon.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.425">includes/class-wc-coupon.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">423</span>
+    <span class="phpdocumentor-element-found-in__line">425</span>
 </aside>
 
         <p class="phpdocumentor-summary">Get discount amount for a cart item.</p>
@@ -3420,9 +3568,9 @@ ull</span></code>
         <a href="#method_get_discount_type" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.192">includes/class-wc-coupon.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.194">includes/class-wc-coupon.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">192</span>
+    <span class="phpdocumentor-element-found-in__line">194</span>
 </aside>
 
         <p class="phpdocumentor-summary">Get discount type.</p>
@@ -3474,9 +3622,9 @@ ull</span></code>
         <a href="#method_get_email_restrictions" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.389">includes/class-wc-coupon.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.391">includes/class-wc-coupon.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">389</span>
+    <span class="phpdocumentor-element-found-in__line">391</span>
 </aside>
 
         <p class="phpdocumentor-summary">Get emails to check customer usage restrictions.</p>
@@ -3528,9 +3676,9 @@ ull</span></code>
         <a href="#method_get_error_message" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.829">includes/class-wc-coupon.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.831">includes/class-wc-coupon.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">829</span>
+    <span class="phpdocumentor-element-found-in__line">831</span>
 </aside>
 
         <p class="phpdocumentor-summary">Returns the error_message string.</p>
@@ -3558,9 +3706,9 @@ ull</span></code>
         <a href="#method_get_exclude_sale_items" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.357">includes/class-wc-coupon.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.359">includes/class-wc-coupon.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">357</span>
+    <span class="phpdocumentor-element-found-in__line">359</span>
 </aside>
 
         <p class="phpdocumentor-summary">If this coupon should exclude items on sale.</p>
@@ -3612,9 +3760,9 @@ ull</span></code>
         <a href="#method_get_excluded_product_categories" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.346">includes/class-wc-coupon.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.348">includes/class-wc-coupon.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">346</span>
+    <span class="phpdocumentor-element-found-in__line">348</span>
 </aside>
 
         <p class="phpdocumentor-summary">Get product categories this coupon cannot not apply to.</p>
@@ -3666,9 +3814,9 @@ ull</span></code>
         <a href="#method_get_excluded_product_ids" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.280">includes/class-wc-coupon.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.282">includes/class-wc-coupon.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">280</span>
+    <span class="phpdocumentor-element-found-in__line">282</span>
 </aside>
 
         <p class="phpdocumentor-summary">Get product IDs that this coupon should not apply to.</p>
@@ -3763,9 +3911,9 @@ ull</span></code>
         <a href="#method_get_free_shipping" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.324">includes/class-wc-coupon.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.326">includes/class-wc-coupon.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">324</span>
+    <span class="phpdocumentor-element-found-in__line">326</span>
 </aside>
 
         <p class="phpdocumentor-summary">If this coupon grants free shipping or not.</p>
@@ -3817,9 +3965,9 @@ ull</span></code>
         <a href="#method_get_generic_coupon_error" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.1049">includes/class-wc-coupon.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.1062">includes/class-wc-coupon.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1049</span>
+    <span class="phpdocumentor-element-found-in__line">1062</span>
 </aside>
 
         <p class="phpdocumentor-summary">Map one of the WC_Coupon error codes to an error string.</p>
@@ -3904,9 +4052,9 @@ so this static method exists.</p></section>
         <a href="#method_get_individual_use" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.258">includes/class-wc-coupon.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.260">includes/class-wc-coupon.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">258</span>
+    <span class="phpdocumentor-element-found-in__line">260</span>
 </aside>
 
         <p class="phpdocumentor-summary">Get the &quot;indvidual use&quot; checkbox status.</p>
@@ -3958,9 +4106,9 @@ so this static method exists.</p></section>
         <a href="#method_get_limit_usage_to_x_items" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.313">includes/class-wc-coupon.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.315">includes/class-wc-coupon.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">313</span>
+    <span class="phpdocumentor-element-found-in__line">315</span>
 </aside>
 
         <p class="phpdocumentor-summary">Usage limited to certain amount of items</p>
@@ -4012,9 +4160,9 @@ so this static method exists.</p></section>
         <a href="#method_get_maximum_amount" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.378">includes/class-wc-coupon.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.380">includes/class-wc-coupon.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">378</span>
+    <span class="phpdocumentor-element-found-in__line">380</span>
 </aside>
 
         <p class="phpdocumentor-summary">Get maximum spend amount.</p>
@@ -4131,6 +4279,49 @@ so this static method exists.</p></section>
             -public
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_get_meta_cache_key">
+        get_meta_cache_key()
+        <a href="#method_get_meta_cache_key" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/abstracts/abstract-wc-data.php"><a href="../files/woocommerce-includes-abstracts-abstract-wc-data.html#source-view.529">includes/abstracts/abstract-wc-data.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">529</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Helper method to compute meta cache key. Different from WP Meta cache key in that meta data cached using this key also contains meta_id column.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">get_meta_cache_key</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
+
+    
+    
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">since</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                            <span class="phpdocumentor-tag-link">4.7.0</span>
+                                                                                                    
+                </dd>
+                        </dl>
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">string</span>
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_get_meta_data">
         get_meta_data()
         <a href="#method_get_meta_data" class="headerlink"><i class="fas fa-link"></i></a>
@@ -4180,9 +4371,9 @@ so this static method exists.</p></section>
         <a href="#method_get_minimum_amount" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.368">includes/class-wc-coupon.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.370">includes/class-wc-coupon.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">368</span>
+    <span class="phpdocumentor-element-found-in__line">370</span>
 </aside>
 
         <p class="phpdocumentor-summary">Get minimum spend amount.</p>
@@ -4234,9 +4425,9 @@ so this static method exists.</p></section>
         <a href="#method_get_object_read" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/abstracts/abstract-wc-data.php"><a href="../files/woocommerce-includes-abstracts-abstract-wc-data.html#source-view.639">includes/abstracts/abstract-wc-data.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/abstracts/abstract-wc-data.php"><a href="../files/woocommerce-includes-abstracts-abstract-wc-data.html#source-view.685">includes/abstracts/abstract-wc-data.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">639</span>
+    <span class="phpdocumentor-element-found-in__line">685</span>
 </aside>
 
         <p class="phpdocumentor-summary">Get object read property.</p>
@@ -4277,9 +4468,9 @@ so this static method exists.</p></section>
         <a href="#method_get_product_categories" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.335">includes/class-wc-coupon.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.337">includes/class-wc-coupon.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">335</span>
+    <span class="phpdocumentor-element-found-in__line">337</span>
 </aside>
 
         <p class="phpdocumentor-summary">Get product categories this coupon can apply to.</p>
@@ -4331,9 +4522,9 @@ so this static method exists.</p></section>
         <a href="#method_get_product_ids" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.269">includes/class-wc-coupon.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.271">includes/class-wc-coupon.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">269</span>
+    <span class="phpdocumentor-element-found-in__line">271</span>
 </aside>
 
         <p class="phpdocumentor-summary">Get product IDs this coupon can apply to.</p>
@@ -4385,9 +4576,9 @@ so this static method exists.</p></section>
         <a href="#method_get_usage_count" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.247">includes/class-wc-coupon.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.249">includes/class-wc-coupon.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">247</span>
+    <span class="phpdocumentor-element-found-in__line">249</span>
 </aside>
 
         <p class="phpdocumentor-summary">Get coupon usage count.</p>
@@ -4439,9 +4630,9 @@ so this static method exists.</p></section>
         <a href="#method_get_usage_limit" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.291">includes/class-wc-coupon.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.293">includes/class-wc-coupon.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">291</span>
+    <span class="phpdocumentor-element-found-in__line">293</span>
 </aside>
 
         <p class="phpdocumentor-summary">Get coupon usage limit.</p>
@@ -4493,9 +4684,9 @@ so this static method exists.</p></section>
         <a href="#method_get_usage_limit_per_user" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.302">includes/class-wc-coupon.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.304">includes/class-wc-coupon.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">302</span>
+    <span class="phpdocumentor-element-found-in__line">304</span>
 </aside>
 
         <p class="phpdocumentor-summary">Get coupon usage limit per customer (for a single customer)</p>
@@ -4547,9 +4738,9 @@ so this static method exists.</p></section>
         <a href="#method_get_used_by" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.400">includes/class-wc-coupon.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.402">includes/class-wc-coupon.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">400</span>
+    <span class="phpdocumentor-element-found-in__line">402</span>
 </aside>
 
         <p class="phpdocumentor-summary">Get records of all users who have used the current coupon.</p>
@@ -4601,9 +4792,9 @@ so this static method exists.</p></section>
         <a href="#method_get_virtual" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.411">includes/class-wc-coupon.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.413">includes/class-wc-coupon.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">411</span>
+    <span class="phpdocumentor-element-found-in__line">413</span>
 </aside>
 
         <p class="phpdocumentor-summary">If the filter is added through the woocommerce_get_shop_coupon_data filter, it&#039;s virtual and not in the DB.</p>
@@ -4696,9 +4887,9 @@ so this static method exists.</p></section>
         <a href="#method_increase_usage_count" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.789">includes/class-wc-coupon.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.791">includes/class-wc-coupon.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">789</span>
+    <span class="phpdocumentor-element-found-in__line">791</span>
 </aside>
 
         <p class="phpdocumentor-summary">Increase usage count for current coupon.</p>
@@ -4745,9 +4936,9 @@ so this static method exists.</p></section>
         <a href="#method_is_type" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.140">includes/class-wc-coupon.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.142">includes/class-wc-coupon.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">140</span>
+    <span class="phpdocumentor-element-found-in__line">142</span>
 </aside>
 
         <p class="phpdocumentor-summary">Checks the coupon type.</p>
@@ -4786,9 +4977,9 @@ so this static method exists.</p></section>
         <a href="#method_is_valid" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.839">includes/class-wc-coupon.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.841">includes/class-wc-coupon.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">839</span>
+    <span class="phpdocumentor-element-found-in__line">841</span>
 </aside>
 
         <p class="phpdocumentor-summary">Check if a coupon is valid for the cart.</p>
@@ -4830,9 +5021,9 @@ so this static method exists.</p></section>
         <a href="#method_is_valid_for_cart" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.856">includes/class-wc-coupon.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.858">includes/class-wc-coupon.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">856</span>
+    <span class="phpdocumentor-element-found-in__line">858</span>
 </aside>
 
         <p class="phpdocumentor-summary">Check if a coupon is valid.</p>
@@ -4860,9 +5051,9 @@ so this static method exists.</p></section>
         <a href="#method_is_valid_for_product" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.867">includes/class-wc-coupon.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.869">includes/class-wc-coupon.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">867</span>
+    <span class="phpdocumentor-element-found-in__line">869</span>
 </aside>
 
         <p class="phpdocumentor-summary">Check if a coupon is valid for a product.</p>
@@ -4956,6 +5147,68 @@ so this static method exists.</p></section>
         class="phpdocumentor-element
             -method
             -public
+                                    -static                    "
+>
+    <h4 class="phpdocumentor-element__name" id="method_prime_raw_meta_data_cache">
+        prime_raw_meta_data_cache()
+        <a href="#method_prime_raw_meta_data_cache" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/abstracts/abstract-wc-data.php"><a href="../files/woocommerce-includes-abstracts-abstract-wc-data.html#source-view.559">includes/abstracts/abstract-wc-data.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">559</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Prime caches for raw meta data. This includes meta_id column as well, which is not included by default in WP meta data.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+            <span class="phpdocumentor-signature__static">static</span>    <span class="phpdocumentor-signature__name">prime_raw_meta_data_cache</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&nbsp;</span><span class="phpdocumentor-signature__argument__name">$raw_meta_data_collection</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$cache_group</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$raw_meta_data_collection</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Array of objects of { object_id =&gt; array( meta_row_1, meta_row_2, ... }.</p></section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$cache_group</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Name of cache group.</p></section>
+
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">since</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                            <span class="phpdocumentor-tag-link">4.7.0</span>
+                                                                                                    
+                </dd>
+                        </dl>
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">mixed</span>
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
                                                         "
 >
     <h4 class="phpdocumentor-element__name" id="method_read_manual_coupon">
@@ -4963,9 +5216,9 @@ so this static method exists.</p></section>
         <a href="#method_read_manual_coupon" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.741">includes/class-wc-coupon.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.743">includes/class-wc-coupon.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">741</span>
+    <span class="phpdocumentor-element-found-in__line">743</span>
 </aside>
 
         <p class="phpdocumentor-summary">Developers can programmatically return coupons. This function will read those values into our WC_Coupon class.</p>
@@ -5025,9 +5278,9 @@ so this static method exists.</p></section>
         <a href="#method_read_meta_data" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/abstracts/abstract-wc-data.php"><a href="../files/woocommerce-includes-abstracts-abstract-wc-data.html#source-view.529">includes/abstracts/abstract-wc-data.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/abstracts/abstract-wc-data.php"><a href="../files/woocommerce-includes-abstracts-abstract-wc-data.html#source-view.573">includes/abstracts/abstract-wc-data.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">529</span>
+    <span class="phpdocumentor-element-found-in__line">573</span>
 </aside>
 
         <p class="phpdocumentor-summary">Read Meta Data from the database. Ignore any internal properties.</p>
@@ -5123,9 +5376,9 @@ so this static method exists.</p></section>
         <a href="#method_save_meta_data" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/abstracts/abstract-wc-data.php"><a href="../files/woocommerce-includes-abstracts-abstract-wc-data.html#source-view.576">includes/abstracts/abstract-wc-data.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/abstracts/abstract-wc-data.php"><a href="../files/woocommerce-includes-abstracts-abstract-wc-data.html#source-view.622">includes/abstracts/abstract-wc-data.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">576</span>
+    <span class="phpdocumentor-element-found-in__line">622</span>
 </aside>
 
         <p class="phpdocumentor-summary">Update Meta Data in the database.</p>
@@ -5166,9 +5419,9 @@ so this static method exists.</p></section>
         <a href="#method_set_amount" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.514">includes/class-wc-coupon.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.516">includes/class-wc-coupon.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">514</span>
+    <span class="phpdocumentor-element-found-in__line">516</span>
 </aside>
 
         <p class="phpdocumentor-summary">Set amount.</p>
@@ -5220,9 +5473,9 @@ so this static method exists.</p></section>
         <a href="#method_set_code" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.478">includes/class-wc-coupon.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.480">includes/class-wc-coupon.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">478</span>
+    <span class="phpdocumentor-element-found-in__line">480</span>
 </aside>
 
         <p class="phpdocumentor-summary">Set coupon code.</p>
@@ -5274,9 +5527,9 @@ so this static method exists.</p></section>
         <a href="#method_set_date_created" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.548">includes/class-wc-coupon.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.550">includes/class-wc-coupon.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">548</span>
+    <span class="phpdocumentor-element-found-in__line">550</span>
 </aside>
 
         <p class="phpdocumentor-summary">Set date_created</p>
@@ -5328,9 +5581,9 @@ so this static method exists.</p></section>
         <a href="#method_set_date_expires" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.538">includes/class-wc-coupon.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.540">includes/class-wc-coupon.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">538</span>
+    <span class="phpdocumentor-element-found-in__line">540</span>
 </aside>
 
         <p class="phpdocumentor-summary">Set expiration date.</p>
@@ -5382,9 +5635,9 @@ so this static method exists.</p></section>
         <a href="#method_set_date_modified" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.558">includes/class-wc-coupon.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.560">includes/class-wc-coupon.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">558</span>
+    <span class="phpdocumentor-element-found-in__line">560</span>
 </aside>
 
         <p class="phpdocumentor-summary">Set date_modified</p>
@@ -5436,9 +5689,9 @@ so this static method exists.</p></section>
         <a href="#method_set_defaults" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/abstracts/abstract-wc-data.php"><a href="../files/woocommerce-includes-abstracts-abstract-wc-data.html#source-view.617">includes/abstracts/abstract-wc-data.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/abstracts/abstract-wc-data.php"><a href="../files/woocommerce-includes-abstracts-abstract-wc-data.html#source-view.663">includes/abstracts/abstract-wc-data.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">617</span>
+    <span class="phpdocumentor-element-found-in__line">663</span>
 </aside>
 
         <p class="phpdocumentor-summary">Set all props to default values.</p>
@@ -5479,9 +5732,9 @@ so this static method exists.</p></section>
         <a href="#method_set_description" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.488">includes/class-wc-coupon.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.490">includes/class-wc-coupon.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">488</span>
+    <span class="phpdocumentor-element-found-in__line">490</span>
 </aside>
 
         <p class="phpdocumentor-summary">Set coupon description.</p>
@@ -5533,9 +5786,9 @@ so this static method exists.</p></section>
         <a href="#method_set_discount_type" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.498">includes/class-wc-coupon.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.500">includes/class-wc-coupon.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">498</span>
+    <span class="phpdocumentor-element-found-in__line">500</span>
 </aside>
 
         <p class="phpdocumentor-summary">Set discount type.</p>
@@ -5587,9 +5840,9 @@ so this static method exists.</p></section>
         <a href="#method_set_email_restrictions" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.698">includes/class-wc-coupon.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.700">includes/class-wc-coupon.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">698</span>
+    <span class="phpdocumentor-element-found-in__line">700</span>
 </aside>
 
         <p class="phpdocumentor-summary">Set email restrictions.</p>
@@ -5641,9 +5894,9 @@ so this static method exists.</p></section>
         <a href="#method_set_exclude_sale_items" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.668">includes/class-wc-coupon.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.670">includes/class-wc-coupon.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">668</span>
+    <span class="phpdocumentor-element-found-in__line">670</span>
 </aside>
 
         <p class="phpdocumentor-summary">Set if this coupon should excluded sale items or not.</p>
@@ -5695,9 +5948,9 @@ so this static method exists.</p></section>
         <a href="#method_set_excluded_product_categories" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.658">includes/class-wc-coupon.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.660">includes/class-wc-coupon.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">658</span>
+    <span class="phpdocumentor-element-found-in__line">660</span>
 </aside>
 
         <p class="phpdocumentor-summary">Set the product category IDs this coupon cannot be used with.</p>
@@ -5749,9 +6002,9 @@ so this static method exists.</p></section>
         <a href="#method_set_excluded_product_ids" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.598">includes/class-wc-coupon.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.600">includes/class-wc-coupon.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">598</span>
+    <span class="phpdocumentor-element-found-in__line">600</span>
 </aside>
 
         <p class="phpdocumentor-summary">Set the product IDs this coupon cannot be used with.</p>
@@ -5803,9 +6056,9 @@ so this static method exists.</p></section>
         <a href="#method_set_free_shipping" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.638">includes/class-wc-coupon.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.640">includes/class-wc-coupon.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">638</span>
+    <span class="phpdocumentor-element-found-in__line">640</span>
 </aside>
 
         <p class="phpdocumentor-summary">Set if this coupon enables free shipping or not.</p>
@@ -5857,9 +6110,9 @@ so this static method exists.</p></section>
         <a href="#method_set_id" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/abstracts/abstract-wc-data.php"><a href="../files/woocommerce-includes-abstracts-abstract-wc-data.html#source-view.608">includes/abstracts/abstract-wc-data.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/abstracts/abstract-wc-data.php"><a href="../files/woocommerce-includes-abstracts-abstract-wc-data.html#source-view.654">includes/abstracts/abstract-wc-data.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">608</span>
+    <span class="phpdocumentor-element-found-in__line">654</span>
 </aside>
 
         <p class="phpdocumentor-summary">Set ID.</p>
@@ -5911,9 +6164,9 @@ so this static method exists.</p></section>
         <a href="#method_set_individual_use" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.578">includes/class-wc-coupon.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.580">includes/class-wc-coupon.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">578</span>
+    <span class="phpdocumentor-element-found-in__line">580</span>
 </aside>
 
         <p class="phpdocumentor-summary">Set if this coupon can only be used once.</p>
@@ -5965,9 +6218,9 @@ so this static method exists.</p></section>
         <a href="#method_set_limit_usage_to_x_items" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.628">includes/class-wc-coupon.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.630">includes/class-wc-coupon.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">628</span>
+    <span class="phpdocumentor-element-found-in__line">630</span>
 </aside>
 
         <p class="phpdocumentor-summary">Set usage limit to x number of items.</p>
@@ -6019,9 +6272,9 @@ so this static method exists.</p></section>
         <a href="#method_set_maximum_amount" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.688">includes/class-wc-coupon.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.690">includes/class-wc-coupon.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">688</span>
+    <span class="phpdocumentor-element-found-in__line">690</span>
 </aside>
 
         <p class="phpdocumentor-summary">Set the maximum spend amount.</p>
@@ -6127,9 +6380,9 @@ so this static method exists.</p></section>
         <a href="#method_set_minimum_amount" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.678">includes/class-wc-coupon.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.680">includes/class-wc-coupon.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">678</span>
+    <span class="phpdocumentor-element-found-in__line">680</span>
 </aside>
 
         <p class="phpdocumentor-summary">Set the minimum spend amount.</p>
@@ -6181,9 +6434,9 @@ so this static method exists.</p></section>
         <a href="#method_set_object_read" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/abstracts/abstract-wc-data.php"><a href="../files/woocommerce-includes-abstracts-abstract-wc-data.html#source-view.629">includes/abstracts/abstract-wc-data.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/abstracts/abstract-wc-data.php"><a href="../files/woocommerce-includes-abstracts-abstract-wc-data.html#source-view.675">includes/abstracts/abstract-wc-data.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">629</span>
+    <span class="phpdocumentor-element-found-in__line">675</span>
 </aside>
 
         <p class="phpdocumentor-summary">Set object read property.</p>
@@ -6235,9 +6488,9 @@ so this static method exists.</p></section>
         <a href="#method_set_product_categories" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.648">includes/class-wc-coupon.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.650">includes/class-wc-coupon.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">648</span>
+    <span class="phpdocumentor-element-found-in__line">650</span>
 </aside>
 
         <p class="phpdocumentor-summary">Set the product category IDs this coupon can be used with.</p>
@@ -6289,9 +6542,9 @@ so this static method exists.</p></section>
         <a href="#method_set_product_ids" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.588">includes/class-wc-coupon.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.590">includes/class-wc-coupon.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">588</span>
+    <span class="phpdocumentor-element-found-in__line">590</span>
 </aside>
 
         <p class="phpdocumentor-summary">Set the product IDs this coupon can be used with.</p>
@@ -6343,9 +6596,9 @@ so this static method exists.</p></section>
         <a href="#method_set_props" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/abstracts/abstract-wc-data.php"><a href="../files/woocommerce-includes-abstracts-abstract-wc-data.html#source-view.654">includes/abstracts/abstract-wc-data.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/abstracts/abstract-wc-data.php"><a href="../files/woocommerce-includes-abstracts-abstract-wc-data.html#source-view.700">includes/abstracts/abstract-wc-data.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">654</span>
+    <span class="phpdocumentor-element-found-in__line">700</span>
 </aside>
 
         <p class="phpdocumentor-summary">Set a collection of props in one go, collect any errors, and return the result.</p>
@@ -6406,9 +6659,9 @@ so this static method exists.</p></section>
         <a href="#method_set_usage_count" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.568">includes/class-wc-coupon.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.570">includes/class-wc-coupon.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">568</span>
+    <span class="phpdocumentor-element-found-in__line">570</span>
 </aside>
 
         <p class="phpdocumentor-summary">Set how many times this coupon has been used.</p>
@@ -6460,9 +6713,9 @@ so this static method exists.</p></section>
         <a href="#method_set_usage_limit" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.608">includes/class-wc-coupon.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.610">includes/class-wc-coupon.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">608</span>
+    <span class="phpdocumentor-element-found-in__line">610</span>
 </aside>
 
         <p class="phpdocumentor-summary">Set the amount of times this coupon can be used.</p>
@@ -6514,9 +6767,9 @@ so this static method exists.</p></section>
         <a href="#method_set_usage_limit_per_user" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.618">includes/class-wc-coupon.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.620">includes/class-wc-coupon.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">618</span>
+    <span class="phpdocumentor-element-found-in__line">620</span>
 </aside>
 
         <p class="phpdocumentor-summary">Set the amount of times this coupon can be used per user.</p>
@@ -6568,9 +6821,9 @@ so this static method exists.</p></section>
         <a href="#method_set_used_by" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.714">includes/class-wc-coupon.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.716">includes/class-wc-coupon.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">714</span>
+    <span class="phpdocumentor-element-found-in__line">716</span>
 </aside>
 
         <p class="phpdocumentor-summary">Set which users have used this coupon.</p>
@@ -6622,9 +6875,9 @@ so this static method exists.</p></section>
         <a href="#method_set_virtual" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.724">includes/class-wc-coupon.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.726">includes/class-wc-coupon.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">724</span>
+    <span class="phpdocumentor-element-found-in__line">726</span>
 </aside>
 
         <p class="phpdocumentor-summary">Set coupon virtual state.</p>
@@ -6746,9 +6999,9 @@ so this static method exists.</p></section>
         <a href="#method_error" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/abstracts/abstract-wc-data.php"><a href="../files/woocommerce-includes-abstracts-abstract-wc-data.html#source-view.809">includes/abstracts/abstract-wc-data.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/abstracts/abstract-wc-data.php"><a href="../files/woocommerce-includes-abstracts-abstract-wc-data.html#source-view.855">includes/abstracts/abstract-wc-data.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">809</span>
+    <span class="phpdocumentor-element-found-in__line">855</span>
 </aside>
 
         <p class="phpdocumentor-summary">When invalid data is found, throw an exception unless reading from the DB.</p>
@@ -6886,9 +7139,9 @@ so this static method exists.</p></section>
         <a href="#method_get_hook_prefix" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.150">includes/class-wc-coupon.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.152">includes/class-wc-coupon.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">150</span>
+    <span class="phpdocumentor-element-found-in__line">152</span>
 </aside>
 
         <p class="phpdocumentor-summary">Prefix for action and filter hooks on data.</p>
@@ -6929,9 +7182,9 @@ so this static method exists.</p></section>
         <a href="#method_get_prop" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/abstracts/abstract-wc-data.php"><a href="../files/woocommerce-includes-abstracts-abstract-wc-data.html#source-view.744">includes/abstracts/abstract-wc-data.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/abstracts/abstract-wc-data.php"><a href="../files/woocommerce-includes-abstracts-abstract-wc-data.html#source-view.790">includes/abstracts/abstract-wc-data.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">744</span>
+    <span class="phpdocumentor-element-found-in__line">790</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets a prop for a getter method.</p>
@@ -7091,9 +7344,9 @@ Context controls what happens to the value before it's returned.</p></section>
         <a href="#method_read_object_from_database" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.127">includes/class-wc-coupon.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/class-wc-coupon.php"><a href="../files/woocommerce-includes-class-wc-coupon.html#source-view.129">includes/class-wc-coupon.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">127</span>
+    <span class="phpdocumentor-element-found-in__line">129</span>
 </aside>
 
         <p class="phpdocumentor-summary">If the object has an ID, read using the data store.</p>
@@ -7134,9 +7387,9 @@ Context controls what happens to the value before it's returned.</p></section>
         <a href="#method_set_date_prop" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/abstracts/abstract-wc-data.php"><a href="../files/woocommerce-includes-abstracts-abstract-wc-data.html#source-view.765">includes/abstracts/abstract-wc-data.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/abstracts/abstract-wc-data.php"><a href="../files/woocommerce-includes-abstracts-abstract-wc-data.html#source-view.811">includes/abstracts/abstract-wc-data.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">765</span>
+    <span class="phpdocumentor-element-found-in__line">811</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets a date prop whilst handling formatting and datetime objects.</p>
@@ -7196,9 +7449,9 @@ Context controls what happens to the value before it's returned.</p></section>
         <a href="#method_set_prop" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/abstracts/abstract-wc-data.php"><a href="../files/woocommerce-includes-abstracts-abstract-wc-data.html#source-view.691">includes/abstracts/abstract-wc-data.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/abstracts/abstract-wc-data.php"><a href="../files/woocommerce-includes-abstracts-abstract-wc-data.html#source-view.737">includes/abstracts/abstract-wc-data.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">691</span>
+    <span class="phpdocumentor-element-found-in__line">737</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets a prop for a setter method.</p>
@@ -7260,7 +7513,7 @@ the the DB later.</p></section>
 
     <footer class="phpdocumentor phpdocumentor-footer">
     <div class="phpdocumentor-section">
-        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on December 10th, 2020 at 11:45 am.</span>
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on January 25th, 2021 at 05:15 pm.</span>
     </div>
 </footer>
 
@@ -7272,7 +7525,7 @@ the the DB later.</p></section>
             'searchIndex': '..\/js\/searchIndex.json'
         };
     </script>
-    <script src="../js/searchIndex.js?updated=1607611546"></script>
-    <script src="../js/search.js?updated=1607611546"></script>
+    <script src="../js/searchIndex.js?updated=1611605758"></script>
+    <script src="../js/search.js?updated=1611605758"></script>
 </body>
 </html>

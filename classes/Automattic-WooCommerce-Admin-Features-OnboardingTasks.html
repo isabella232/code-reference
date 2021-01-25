@@ -9,9 +9,9 @@
     <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
     <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
     <link rel="stylesheet" href="../css/normalize.css">
-    <link rel="stylesheet" href="../css/base.css?updated=1607611555">
+    <link rel="stylesheet" href="../css/base.css?updated=1611605767">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/template.css?updated=1607611555">
+    <link rel="stylesheet" href="../css/template.css?updated=1611605767">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
             <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
@@ -181,6 +181,13 @@
 <dd>Constructor</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="../classes/Automattic-WooCommerce-Admin-Features-OnboardingTasks.html#method_add_extended_task_list_item">add_extended_task_list_item()</a>
+    <span>
+                        &nbsp;: mixed    </span>
+</dt>
+<dd>Adds item to the extended task list.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="../classes/Automattic-WooCommerce-Admin-Features-OnboardingTasks.html#method_add_media_scripts">add_media_scripts()</a>
     <span>
                         &nbsp;: mixed    </span>
@@ -277,6 +284,13 @@
                         &nbsp;: mixed    </span>
 </dt>
 <dd>Records an event when all tasks are completed in the task list.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="../classes/Automattic-WooCommerce-Admin-Features-OnboardingTasks.html#method_track_extended_completion">track_extended_completion()</a>
+    <span>
+                        &nbsp;: mixed    </span>
+</dt>
+<dd>Records an event when all tasks are completed in the extended task list.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="../classes/Automattic-WooCommerce-Admin-Features-OnboardingTasks.html#method_track_task_completion">track_task_completion()</a>
@@ -408,6 +422,47 @@
         class="phpdocumentor-element
             -method
             -public
+                                    -static                    "
+>
+    <h4 class="phpdocumentor-element__name" id="method_add_extended_task_list_item">
+        add_extended_task_list_item()
+        <a href="#method_add_extended_task_list_item" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Features/OnboardingTasks.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-features-onboardingtasks.html#source-view.386">packages/woocommerce-admin/src/Features/OnboardingTasks.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">386</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Adds item to the extended task list.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+            <span class="phpdocumentor-signature__static">static</span>    <span class="phpdocumentor-signature__name">add_extended_task_list_item</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$new_task_name</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$new_task_name</span>
+                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>New task name.</p></section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">mixed</span>
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
                                                         "
 >
     <h4 class="phpdocumentor-element__name" id="method_add_media_scripts">
@@ -415,9 +470,9 @@
         <a href="#method_add_media_scripts" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Features/OnboardingTasks.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-features-onboardingtasks.html#source-view.70">packages/woocommerce-admin/src/Features/OnboardingTasks.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Features/OnboardingTasks.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-features-onboardingtasks.html#source-view.72">packages/woocommerce-admin/src/Features/OnboardingTasks.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">70</span>
+    <span class="phpdocumentor-element-found-in__line">72</span>
 </aside>
 
         <p class="phpdocumentor-summary">Enqueue scripts and styles.</p>
@@ -445,9 +500,9 @@
         <a href="#method_add_onboarding_homepage_notice_admin_script" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Features/OnboardingTasks.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-features-onboardingtasks.html#source-view.252">packages/woocommerce-admin/src/Features/OnboardingTasks.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Features/OnboardingTasks.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-features-onboardingtasks.html#source-view.254">packages/woocommerce-admin/src/Features/OnboardingTasks.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">252</span>
+    <span class="phpdocumentor-element-found-in__line">254</span>
 </aside>
 
         <p class="phpdocumentor-summary">Hooks into the post page to display a different success notice and sets the active page as the site&#039;s home page if visted from onboarding.</p>
@@ -486,9 +541,9 @@
         <a href="#method_add_onboarding_product_import_notice_admin_script" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Features/OnboardingTasks.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-features-onboardingtasks.html#source-view.281">packages/woocommerce-admin/src/Features/OnboardingTasks.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Features/OnboardingTasks.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-features-onboardingtasks.html#source-view.283">packages/woocommerce-admin/src/Features/OnboardingTasks.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">281</span>
+    <span class="phpdocumentor-element-found-in__line">283</span>
 </aside>
 
         <p class="phpdocumentor-summary">Adds a notice to return to the task list when the product importeris done running.</p>
@@ -527,9 +582,9 @@
         <a href="#method_add_onboarding_product_notice_admin_script" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Features/OnboardingTasks.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-features-onboardingtasks.html#source-view.233">packages/woocommerce-admin/src/Features/OnboardingTasks.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Features/OnboardingTasks.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-features-onboardingtasks.html#source-view.235">packages/woocommerce-admin/src/Features/OnboardingTasks.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">233</span>
+    <span class="phpdocumentor-element-found-in__line">235</span>
 </aside>
 
         <p class="phpdocumentor-summary">Hooks into the product page to add a notice to return to the task list if a product was added.</p>
@@ -568,9 +623,9 @@
         <a href="#method_add_onboarding_tax_notice_admin_script" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Features/OnboardingTasks.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-features-onboardingtasks.html#source-view.262">packages/woocommerce-admin/src/Features/OnboardingTasks.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Features/OnboardingTasks.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-features-onboardingtasks.html#source-view.264">packages/woocommerce-admin/src/Features/OnboardingTasks.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">262</span>
+    <span class="phpdocumentor-element-found-in__line">264</span>
 </aside>
 
         <p class="phpdocumentor-summary">Adds a notice to return to the task list when the save button is clicked on tax settings pages.</p>
@@ -598,9 +653,9 @@
         <a href="#method_check_task_completion" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Features/OnboardingTasks.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-features-onboardingtasks.html#source-view.207">packages/woocommerce-admin/src/Features/OnboardingTasks.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Features/OnboardingTasks.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-features-onboardingtasks.html#source-view.209">packages/woocommerce-admin/src/Features/OnboardingTasks.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">207</span>
+    <span class="phpdocumentor-element-found-in__line">209</span>
 </aside>
 
         <p class="phpdocumentor-summary">Check for task completion of a given task.</p>
@@ -639,9 +694,9 @@
         <a href="#method_component_settings" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Features/OnboardingTasks.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-features-onboardingtasks.html#source-view.129">packages/woocommerce-admin/src/Features/OnboardingTasks.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Features/OnboardingTasks.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-features-onboardingtasks.html#source-view.131">packages/woocommerce-admin/src/Features/OnboardingTasks.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">129</span>
+    <span class="phpdocumentor-element-found-in__line">131</span>
 </aside>
 
         <p class="phpdocumentor-summary">Add task items to component settings.</p>
@@ -680,9 +735,9 @@
         <a href="#method_get_active_task" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Features/OnboardingTasks.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-features-onboardingtasks.html#source-view.177">packages/woocommerce-admin/src/Features/OnboardingTasks.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Features/OnboardingTasks.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-features-onboardingtasks.html#source-view.179">packages/woocommerce-admin/src/Features/OnboardingTasks.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">177</span>
+    <span class="phpdocumentor-element-found-in__line">179</span>
 </aside>
 
         <p class="phpdocumentor-summary">Get the name of the active task.</p>
@@ -710,9 +765,9 @@
         <a href="#method_get_automated_tax_supported_countries" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Features/OnboardingTasks.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-features-onboardingtasks.html#source-view.294">packages/woocommerce-admin/src/Features/OnboardingTasks.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Features/OnboardingTasks.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-features-onboardingtasks.html#source-view.296">packages/woocommerce-admin/src/Features/OnboardingTasks.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">294</span>
+    <span class="phpdocumentor-element-found-in__line">296</span>
 </aside>
 
         <p class="phpdocumentor-summary">Get an array of countries that support automated tax.</p>
@@ -770,9 +825,9 @@
         <a href="#method_get_settings" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Features/OnboardingTasks.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-features-onboardingtasks.html#source-view.79">packages/woocommerce-admin/src/Features/OnboardingTasks.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Features/OnboardingTasks.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-features-onboardingtasks.html#source-view.81">packages/woocommerce-admin/src/Features/OnboardingTasks.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">79</span>
+    <span class="phpdocumentor-element-found-in__line">81</span>
 </aside>
 
         <p class="phpdocumentor-summary">Get task item data for settings filter.</p>
@@ -800,9 +855,9 @@
         <a href="#method_is_active_task_complete" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Features/OnboardingTasks.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-features-onboardingtasks.html#source-view.186">packages/woocommerce-admin/src/Features/OnboardingTasks.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Features/OnboardingTasks.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-features-onboardingtasks.html#source-view.188">packages/woocommerce-admin/src/Features/OnboardingTasks.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">186</span>
+    <span class="phpdocumentor-element-found-in__line">188</span>
 </aside>
 
         <p class="phpdocumentor-summary">Check for active task completion, and clears the transient.</p>
@@ -830,9 +885,9 @@
         <a href="#method_set_active_task" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Features/OnboardingTasks.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-features-onboardingtasks.html#source-view.156">packages/woocommerce-admin/src/Features/OnboardingTasks.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Features/OnboardingTasks.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-features-onboardingtasks.html#source-view.158">packages/woocommerce-admin/src/Features/OnboardingTasks.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">156</span>
+    <span class="phpdocumentor-element-found-in__line">158</span>
 </aside>
 
         <p class="phpdocumentor-summary">Temporarily store the active task to persist across page loads when neccessary (such as publishing a product). Most tasks do not need to do this.</p>
@@ -860,9 +915,9 @@
         <a href="#method_track_completion" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Features/OnboardingTasks.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-features-onboardingtasks.html#source-view.361">packages/woocommerce-admin/src/Features/OnboardingTasks.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Features/OnboardingTasks.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-features-onboardingtasks.html#source-view.363">packages/woocommerce-admin/src/Features/OnboardingTasks.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">361</span>
+    <span class="phpdocumentor-element-found-in__line">363</span>
 </aside>
 
         <p class="phpdocumentor-summary">Records an event when all tasks are completed in the task list.</p>
@@ -904,14 +959,63 @@
             -public
                                     -static                    "
 >
+    <h4 class="phpdocumentor-element__name" id="method_track_extended_completion">
+        track_extended_completion()
+        <a href="#method_track_extended_completion" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Features/OnboardingTasks.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-features-onboardingtasks.html#source-view.375">packages/woocommerce-admin/src/Features/OnboardingTasks.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">375</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Records an event when all tasks are completed in the extended task list.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+            <span class="phpdocumentor-signature__static">static</span>    <span class="phpdocumentor-signature__name">track_extended_completion</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$old_value</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$new_value</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$old_value</span>
+                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Old value.</p></section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$new_value</span>
+                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>New value.</p></section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">mixed</span>
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                    -static                    "
+>
     <h4 class="phpdocumentor-element__name" id="method_track_task_completion">
         track_task_completion()
         <a href="#method_track_task_completion" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Features/OnboardingTasks.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-features-onboardingtasks.html#source-view.373">packages/woocommerce-admin/src/Features/OnboardingTasks.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Features/OnboardingTasks.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-features-onboardingtasks.html#source-view.403">packages/woocommerce-admin/src/Features/OnboardingTasks.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">373</span>
+    <span class="phpdocumentor-element-found-in__line">403</span>
 </aside>
 
         <p class="phpdocumentor-summary">Records an event for individual task completion.</p>
@@ -958,9 +1062,9 @@
         <a href="#method_get_stripe_supported_countries" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Features/OnboardingTasks.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-features-onboardingtasks.html#source-view.309">packages/woocommerce-admin/src/Features/OnboardingTasks.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/packages/woocommerce-admin/src/Features/OnboardingTasks.php"><a href="../files/woocommerce-packages-woocommerce-admin-src-features-onboardingtasks.html#source-view.311">packages/woocommerce-admin/src/Features/OnboardingTasks.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">309</span>
+    <span class="phpdocumentor-element-found-in__line">311</span>
 </aside>
 
         <p class="phpdocumentor-summary">Returns a list of Stripe supported countries. This method can be removed once merged to core.</p>
@@ -988,7 +1092,7 @@
 
     <footer class="phpdocumentor phpdocumentor-footer">
     <div class="phpdocumentor-section">
-        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on December 10th, 2020 at 11:45 am.</span>
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on January 25th, 2021 at 05:16 pm.</span>
     </div>
 </footer>
 
@@ -1000,7 +1104,7 @@
             'searchIndex': '..\/js\/searchIndex.json'
         };
     </script>
-    <script src="../js/searchIndex.js?updated=1607611555"></script>
-    <script src="../js/search.js?updated=1607611555"></script>
+    <script src="../js/searchIndex.js?updated=1611605767"></script>
+    <script src="../js/search.js?updated=1611605767"></script>
 </body>
 </html>

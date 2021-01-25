@@ -9,9 +9,9 @@
     <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
     <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
     <link rel="stylesheet" href="../css/normalize.css">
-    <link rel="stylesheet" href="../css/base.css?updated=1607611542">
+    <link rel="stylesheet" href="../css/base.css?updated=1611605754">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/template.css?updated=1607611542">
+    <link rel="stylesheet" href="../css/template.css?updated=1611605754">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
             <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
@@ -276,27 +276,31 @@ class DataStore extends ReportsDataStore implements DataStoreInterface {
 		$included_products = $this-&gt;get_included_products( $query_args );
 		$excluded_products = $this-&gt;get_excluded_products( $query_args );
 		if ( $included_products || $excluded_products ) {
-			$have_joined_products_table = true;
-			$this-&gt;subquery-&gt;add_sql_clause( &#039;join&#039;, &quot;JOIN {$order_product_lookup_table} ON {$order_stats_lookup_table}.order_id = {$order_product_lookup_table}.order_id&quot; );
+			$this-&gt;subquery-&gt;add_sql_clause( &#039;join&#039;, &quot;LEFT JOIN {$order_product_lookup_table} product_lookup&quot; );
+			$this-&gt;subquery-&gt;add_sql_clause( &#039;join&#039;, &quot;ON {$order_stats_lookup_table}.order_id = product_lookup.order_id&quot; );
 		}
 		if ( $included_products ) {
-			$where_subquery[] = &quot;{$order_product_lookup_table}.product_id IN ({$included_products})&quot;;
+			$this-&gt;subquery-&gt;add_sql_clause( &#039;join&#039;, &quot;AND product_lookup.product_id IN ({$included_products})&quot; );
+			$where_subquery[] = &#039;product_lookup.order_id IS NOT NULL&#039;;
 		}
 		if ( $excluded_products ) {
-			$where_subquery[] = &quot;{$order_product_lookup_table}.product_id NOT IN ({$excluded_products})&quot;;
+			$this-&gt;subquery-&gt;add_sql_clause( &#039;join&#039;, &quot;AND product_lookup.product_id IN ({$excluded_products})&quot; );
+			$where_subquery[] = &#039;product_lookup.order_id IS NULL&#039;;
 		}
 
 		$included_variations = $this-&gt;get_included_variations( $query_args );
 		$excluded_variations = $this-&gt;get_excluded_variations( $query_args );
-		if ( ! $have_joined_products_table &amp;&amp; ( $included_variations || $excluded_variations ) ) {
-			$have_joined_products_table = true;
-			$this-&gt;subquery-&gt;add_sql_clause( &#039;join&#039;, &quot;JOIN {$order_product_lookup_table} ON {$order_stats_lookup_table}.order_id = {$order_product_lookup_table}.order_id&quot; );
+		if ( $included_variations || $excluded_variations ) {
+			$this-&gt;subquery-&gt;add_sql_clause( &#039;join&#039;, &quot;LEFT JOIN {$order_product_lookup_table} variation_lookup&quot; );
+			$this-&gt;subquery-&gt;add_sql_clause( &#039;join&#039;, &quot;ON {$order_stats_lookup_table}.order_id = variation_lookup.order_id&quot; );
 		}
 		if ( $included_variations ) {
-			$where_subquery[] = &quot;{$order_product_lookup_table}.variation_id IN ({$included_variations})&quot;;
+			$this-&gt;subquery-&gt;add_sql_clause( &#039;join&#039;, &quot;AND variation_lookup.variation_id IN ({$included_variations})&quot; );
+			$where_subquery[] = &#039;variation_lookup.order_id IS NOT NULL&#039;;
 		}
 		if ( $excluded_variations ) {
-			$where_subquery[] = &quot;{$order_product_lookup_table}.variation_id NOT IN ({$excluded_variations})&quot;;
+			$this-&gt;subquery-&gt;add_sql_clause( &#039;join&#039;, &quot;AND variation_lookup.variation_id IN ({$excluded_variations})&quot; );
+			$where_subquery[] = &#039;variation_lookup.order_id IS NULL&#039;;
 		}
 
 		$included_tax_rates = ! empty( $query_args[&#039;tax_rate_includes&#039;] ) ? implode( &#039;,&#039;, $query_args[&#039;tax_rate_includes&#039;] ) : false;
@@ -313,11 +317,8 @@ class DataStore extends ReportsDataStore implements DataStoreInterface {
 
 		$attribute_subqueries = $this-&gt;get_attribute_subqueries( $query_args );
 		if ( $attribute_subqueries[&#039;join&#039;] &amp;&amp; $attribute_subqueries[&#039;where&#039;] ) {
-			// JOIN on product lookup if we haven&#039;t already.
-			if ( ! $have_joined_products_table ) {
-				$have_joined_products_table = true;
-				$this-&gt;subquery-&gt;add_sql_clause( &#039;join&#039;, &quot;JOIN {$order_product_lookup_table} ON {$order_stats_lookup_table}.order_id = {$order_product_lookup_table}.order_id&quot; );
-			}
+			$this-&gt;subquery-&gt;add_sql_clause( &#039;join&#039;, &quot;JOIN {$order_product_lookup_table} ON {$order_stats_lookup_table}.order_id = {$order_product_lookup_table}.order_id&quot; );
+
 			// Add JOINs for matching attributes.
 			foreach ( $attribute_subqueries[&#039;join&#039;] as $attribute_join ) {
 				$this-&gt;subquery-&gt;add_sql_clause( &#039;join&#039;, $attribute_join );
@@ -664,7 +665,7 @@ class DataStore extends ReportsDataStore implements DataStoreInterface {
 
     <footer class="phpdocumentor phpdocumentor-footer">
     <div class="phpdocumentor-section">
-        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on December 10th, 2020 at 11:45 am.</span>
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on January 25th, 2021 at 05:15 pm.</span>
     </div>
 </footer>
 
@@ -676,7 +677,7 @@ class DataStore extends ReportsDataStore implements DataStoreInterface {
             'searchIndex': '..\/js\/searchIndex.json'
         };
     </script>
-    <script src="../js/searchIndex.js?updated=1607611542"></script>
-    <script src="../js/search.js?updated=1607611542"></script>
+    <script src="../js/searchIndex.js?updated=1611605754"></script>
+    <script src="../js/search.js?updated=1611605754"></script>
 </body>
 </html>

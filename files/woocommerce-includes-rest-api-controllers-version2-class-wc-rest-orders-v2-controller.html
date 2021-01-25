@@ -9,9 +9,9 @@
     <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
     <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
     <link rel="stylesheet" href="../css/normalize.css">
-    <link rel="stylesheet" href="../css/base.css?updated=1607611541">
+    <link rel="stylesheet" href="../css/base.css?updated=1611605753">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/template.css?updated=1607611541">
+    <link rel="stylesheet" href="../css/template.css?updated=1611605753">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
             <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
@@ -387,15 +387,74 @@ class WC_REST_Orders_V2_Controller extends WC_REST_CRUD_Controller {
 	/**
 	 * Get formatted item data.
 	 *
-	 * @since  3.0.0
-	 * @param  WC_Data $object WC_Data instance.
+	 * @since 3.0.0
+	 * @param WC_Order $order WC_Data instance.
+	 *
 	 * @return array
 	 */
-	protected function get_formatted_item_data( $object ) {
-		$data              = $object-&gt;get_data();
+	protected function get_formatted_item_data( $order ) {
+		$extra_fields      = array( &#039;meta_data&#039;, &#039;line_items&#039;, &#039;tax_lines&#039;, &#039;shipping_lines&#039;, &#039;fee_lines&#039;, &#039;coupon_lines&#039;, &#039;refunds&#039; );
 		$format_decimal    = array( &#039;discount_total&#039;, &#039;discount_tax&#039;, &#039;shipping_total&#039;, &#039;shipping_tax&#039;, &#039;shipping_total&#039;, &#039;shipping_tax&#039;, &#039;cart_tax&#039;, &#039;total&#039;, &#039;total_tax&#039; );
 		$format_date       = array( &#039;date_created&#039;, &#039;date_modified&#039;, &#039;date_completed&#039;, &#039;date_paid&#039; );
+		// These fields are dependent on other fields.
+		$dependent_fields = array(
+			&#039;date_created_gmt&#039;   =&gt; &#039;date_created&#039;,
+			&#039;date_modified_gmt&#039;  =&gt; &#039;date_modified&#039;,
+			&#039;date_completed_gmt&#039; =&gt; &#039;date_completed&#039;,
+			&#039;date_paid_gmt&#039;      =&gt; &#039;date_paid&#039;,
+		);
+
 		$format_line_items = array( &#039;line_items&#039;, &#039;tax_lines&#039;, &#039;shipping_lines&#039;, &#039;fee_lines&#039;, &#039;coupon_lines&#039; );
+
+		// Only fetch fields that we need.
+		$fields = $this-&gt;get_fields_for_response( $this-&gt;request );
+		foreach ( $dependent_fields as $field_key =&gt; $dependency ) {
+			if ( in_array( $field_key, $fields ) &amp;&amp; ! in_array( $dependency, $fields ) ) {
+				$fields[] = $dependency;
+			}
+		}
+
+		$extra_fields      = array_intersect( $extra_fields, $fields );
+		$format_decimal    = array_intersect( $format_decimal, $fields );
+		$format_date       = array_intersect( $format_date, $fields );
+
+		$format_line_items = array_intersect( $format_line_items, $fields );
+
+		$data = $order-&gt;get_base_data();
+
+		// Add extra data as necessary.
+		foreach ( $extra_fields as $field ) {
+			switch ( $field ) {
+				case &#039;meta_data&#039;:
+					$data[&#039;meta_data&#039;] = $order-&gt;get_meta_data();
+					break;
+				case &#039;line_items&#039;:
+					$data[&#039;line_items&#039;] = $order-&gt;get_items( &#039;line_item&#039; );
+					break;
+				case &#039;tax_lines&#039;:
+					$data[&#039;tax_lines&#039;] = $order-&gt;get_items( &#039;tax&#039; );
+					break;
+				case &#039;shipping_lines&#039;:
+					$data[&#039;shipping_lines&#039;] = $order-&gt;get_items( &#039;shipping&#039; );
+					break;
+				case &#039;fee_lines&#039;:
+					$data[&#039;fee_lines&#039;] = $order-&gt;get_items( &#039;fee&#039; );
+					break;
+				case &#039;coupon_lines&#039;:
+					$data[&#039;coupon_lines&#039;] = $order-&gt;get_items( &#039;coupon&#039; );
+					break;
+				case &#039;refunds&#039;:
+					$data[&#039;refunds&#039;] = array();
+					foreach ( $order-&gt;get_refunds() as $refund ) {
+						$data[&#039;refunds&#039;][] = array(
+							&#039;id&#039;     =&gt; $refund-&gt;get_id(),
+							&#039;reason&#039; =&gt; $refund-&gt;get_reason() ? $refund-&gt;get_reason() : &#039;&#039;,
+							&#039;total&#039;  =&gt; &#039;-&#039; . wc_format_decimal( $refund-&gt;get_amount(), $this-&gt;request[&#039;dp&#039;] ),
+						);
+					}
+					break;
+			}
+		}
 
 		// Format decimal values.
 		foreach ( $format_decimal as $key ) {
@@ -417,59 +476,53 @@ class WC_REST_Orders_V2_Controller extends WC_REST_CRUD_Controller {
 			$data[ $key ] = array_values( array_map( array( $this, &#039;get_order_item_data&#039; ), $data[ $key ] ) );
 		}
 
-		// Refunds.
-		$data[&#039;refunds&#039;] = array();
-		foreach ( $object-&gt;get_refunds() as $refund ) {
-			$data[&#039;refunds&#039;][] = array(
-				&#039;id&#039;     =&gt; $refund-&gt;get_id(),
-				&#039;reason&#039; =&gt; $refund-&gt;get_reason() ? $refund-&gt;get_reason() : &#039;&#039;,
-				&#039;total&#039;  =&gt; &#039;-&#039; . wc_format_decimal( $refund-&gt;get_amount(), $this-&gt;request[&#039;dp&#039;] ),
-			);
-		}
-
-		return array(
-			&#039;id&#039;                   =&gt; $object-&gt;get_id(),
-			&#039;parent_id&#039;            =&gt; $data[&#039;parent_id&#039;],
-			&#039;number&#039;               =&gt; $data[&#039;number&#039;],
-			&#039;order_key&#039;            =&gt; $data[&#039;order_key&#039;],
-			&#039;created_via&#039;          =&gt; $data[&#039;created_via&#039;],
-			&#039;version&#039;              =&gt; $data[&#039;version&#039;],
-			&#039;status&#039;               =&gt; $data[&#039;status&#039;],
-			&#039;currency&#039;             =&gt; $data[&#039;currency&#039;],
-			&#039;date_created&#039;         =&gt; $data[&#039;date_created&#039;],
-			&#039;date_created_gmt&#039;     =&gt; $data[&#039;date_created_gmt&#039;],
-			&#039;date_modified&#039;        =&gt; $data[&#039;date_modified&#039;],
-			&#039;date_modified_gmt&#039;    =&gt; $data[&#039;date_modified_gmt&#039;],
-			&#039;discount_total&#039;       =&gt; $data[&#039;discount_total&#039;],
-			&#039;discount_tax&#039;         =&gt; $data[&#039;discount_tax&#039;],
-			&#039;shipping_total&#039;       =&gt; $data[&#039;shipping_total&#039;],
-			&#039;shipping_tax&#039;         =&gt; $data[&#039;shipping_tax&#039;],
-			&#039;cart_tax&#039;             =&gt; $data[&#039;cart_tax&#039;],
-			&#039;total&#039;                =&gt; $data[&#039;total&#039;],
-			&#039;total_tax&#039;            =&gt; $data[&#039;total_tax&#039;],
-			&#039;prices_include_tax&#039;   =&gt; $data[&#039;prices_include_tax&#039;],
-			&#039;customer_id&#039;          =&gt; $data[&#039;customer_id&#039;],
-			&#039;customer_ip_address&#039;  =&gt; $data[&#039;customer_ip_address&#039;],
-			&#039;customer_user_agent&#039;  =&gt; $data[&#039;customer_user_agent&#039;],
-			&#039;customer_note&#039;        =&gt; $data[&#039;customer_note&#039;],
-			&#039;billing&#039;              =&gt; $data[&#039;billing&#039;],
-			&#039;shipping&#039;             =&gt; $data[&#039;shipping&#039;],
-			&#039;payment_method&#039;       =&gt; $data[&#039;payment_method&#039;],
-			&#039;payment_method_title&#039; =&gt; $data[&#039;payment_method_title&#039;],
-			&#039;transaction_id&#039;       =&gt; $data[&#039;transaction_id&#039;],
-			&#039;date_paid&#039;            =&gt; $data[&#039;date_paid&#039;],
-			&#039;date_paid_gmt&#039;        =&gt; $data[&#039;date_paid_gmt&#039;],
-			&#039;date_completed&#039;       =&gt; $data[&#039;date_completed&#039;],
-			&#039;date_completed_gmt&#039;   =&gt; $data[&#039;date_completed_gmt&#039;],
-			&#039;cart_hash&#039;            =&gt; $data[&#039;cart_hash&#039;],
-			&#039;meta_data&#039;            =&gt; $data[&#039;meta_data&#039;],
-			&#039;line_items&#039;           =&gt; $data[&#039;line_items&#039;],
-			&#039;tax_lines&#039;            =&gt; $data[&#039;tax_lines&#039;],
-			&#039;shipping_lines&#039;       =&gt; $data[&#039;shipping_lines&#039;],
-			&#039;fee_lines&#039;            =&gt; $data[&#039;fee_lines&#039;],
-			&#039;coupon_lines&#039;         =&gt; $data[&#039;coupon_lines&#039;],
-			&#039;refunds&#039;              =&gt; $data[&#039;refunds&#039;],
+		$allowed_fields = array(
+			&#039;id&#039;,
+			&#039;parent_id&#039;,
+			&#039;number&#039;,
+			&#039;order_key&#039;,
+			&#039;created_via&#039;,
+			&#039;version&#039;,
+			&#039;status&#039;,
+			&#039;currency&#039;,
+			&#039;date_created&#039;,
+			&#039;date_created_gmt&#039;,
+			&#039;date_modified&#039;,
+			&#039;date_modified_gmt&#039;,
+			&#039;discount_total&#039;,
+			&#039;discount_tax&#039;,
+			&#039;shipping_total&#039;,
+			&#039;shipping_tax&#039;,
+			&#039;cart_tax&#039;,
+			&#039;total&#039;,
+			&#039;total_tax&#039;,
+			&#039;prices_include_tax&#039;,
+			&#039;customer_id&#039;,
+			&#039;customer_ip_address&#039;,
+			&#039;customer_user_agent&#039;,
+			&#039;customer_note&#039;,
+			&#039;billing&#039;,
+			&#039;shipping&#039;,
+			&#039;payment_method&#039;,
+			&#039;payment_method_title&#039;,
+			&#039;transaction_id&#039;,
+			&#039;date_paid&#039;,
+			&#039;date_paid_gmt&#039;,
+			&#039;date_completed&#039;,
+			&#039;date_completed_gmt&#039;,
+			&#039;cart_hash&#039;,
+			&#039;meta_data&#039;,
+			&#039;line_items&#039;,
+			&#039;tax_lines&#039;,
+			&#039;shipping_lines&#039;,
+			&#039;fee_lines&#039;,
+			&#039;coupon_lines&#039;,
+			&#039;refunds&#039;,
 		);
+
+		$data = array_intersect_key( $data, array_flip( $allowed_fields ) );
+
+		return $data;
 	}
 
 	/**
@@ -483,10 +536,10 @@ class WC_REST_Orders_V2_Controller extends WC_REST_CRUD_Controller {
 	public function prepare_object_for_response( $object, $request ) {
 		$this-&gt;request       = $request;
 		$this-&gt;request[&#039;dp&#039;] = is_null( $this-&gt;request[&#039;dp&#039;] ) ? wc_get_price_decimals() : absint( $this-&gt;request[&#039;dp&#039;] );
+		$request[&#039;context&#039;]  = ! empty( $request[&#039;context&#039;] ) ? $request[&#039;context&#039;] : &#039;view&#039;;
 		$data                = $this-&gt;get_formatted_item_data( $object );
-		$context             = ! empty( $request[&#039;context&#039;] ) ? $request[&#039;context&#039;] : &#039;view&#039;;
 		$data                = $this-&gt;add_additional_fields_to_object( $data, $request );
-		$data                = $this-&gt;filter_response_by_context( $data, $context );
+		$data                = $this-&gt;filter_response_by_context( $data, $request[&#039;context&#039;] );
 		$response            = rest_ensure_response( $data );
 		$response-&gt;add_links( $this-&gt;prepare_links( $object, $request ) );
 
@@ -1918,7 +1971,7 @@ class WC_REST_Orders_V2_Controller extends WC_REST_CRUD_Controller {
 
     <footer class="phpdocumentor phpdocumentor-footer">
     <div class="phpdocumentor-section">
-        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on December 10th, 2020 at 11:45 am.</span>
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on January 25th, 2021 at 05:15 pm.</span>
     </div>
 </footer>
 
@@ -1930,7 +1983,7 @@ class WC_REST_Orders_V2_Controller extends WC_REST_CRUD_Controller {
             'searchIndex': '..\/js\/searchIndex.json'
         };
     </script>
-    <script src="../js/searchIndex.js?updated=1607611541"></script>
-    <script src="../js/search.js?updated=1607611541"></script>
+    <script src="../js/searchIndex.js?updated=1611605753"></script>
+    <script src="../js/search.js?updated=1611605753"></script>
 </body>
 </html>

@@ -9,9 +9,9 @@
     <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
     <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
     <link rel="stylesheet" href="../css/normalize.css">
-    <link rel="stylesheet" href="../css/base.css?updated=1607611541">
+    <link rel="stylesheet" href="../css/base.css?updated=1611605753">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/template.css?updated=1607611541">
+    <link rel="stylesheet" href="../css/template.css?updated=1611605753">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
             <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
@@ -294,8 +294,9 @@ class WC_REST_Products_V2_Controller extends WC_REST_CRUD_Controller {
 	 * @return WP_REST_Response
 	 */
 	public function prepare_object_for_response( $object, $request ) {
-		$context = ! empty( $request[&#039;context&#039;] ) ? $request[&#039;context&#039;] : &#039;view&#039;;
-		$data    = $this-&gt;get_product_data( $object, $context );
+		$context       = ! empty( $request[&#039;context&#039;] ) ? $request[&#039;context&#039;] : &#039;view&#039;;
+		$this-&gt;request = $request;
+		$data          = $this-&gt;get_product_data( $object, $context, $request );
 
 		// Add variations to variable products.
 		if ( $object-&gt;is_type( &#039;variable&#039; ) &amp;&amp; $object-&gt;has_child() ) {
@@ -726,85 +727,257 @@ class WC_REST_Products_V2_Controller extends WC_REST_CRUD_Controller {
 	}
 
 	/**
+	 * Fetch price HTML.
+	 *
+	 * @param WC_Product $product Product object.
+	 * @param string     $context Context of request, can be `view` or `edit`.
+	 *
+	 * @return string
+	 */
+	protected function api_get_price_html( $product, $context ) {
+		return $product-&gt;get_price_html();
+	}
+
+	/**
+	 * Fetch related IDs.
+	 *
+	 * @param WC_Product $product Product object.
+	 * @param string     $context Context of request, can be `view` or `edit`.
+	 *
+	 * @return array
+	 */
+	protected function api_get_related_ids( $product, $context ) {
+		return array_map( &#039;absint&#039;, array_values( wc_get_related_products( $product-&gt;get_id() ) ) );
+	}
+
+	/**
+	 * Fetch meta data.
+	 *
+	 * @param WC_Product $product Product object.
+	 * @param string     $context Context of request, can be `view` or `edit`.
+	 *
+	 * @return array
+	 */
+	protected function api_get_meta_data( $product, $context ) {
+		return $product-&gt;get_meta_data();
+	}
+
+	/**
 	 * Get product data.
 	 *
 	 * @param WC_Product $product Product instance.
-	 * @param string     $context Request context.
-	 *                            Options: &#039;view&#039; and &#039;edit&#039;.
+	 * @param string     $context Request context. Options: &#039;view&#039; and &#039;edit&#039;.
 	 *
 	 * @return array
 	 */
 	protected function get_product_data( $product, $context = &#039;view&#039; ) {
-		$data = array(
-			&#039;id&#039;                    =&gt; $product-&gt;get_id(),
-			&#039;name&#039;                  =&gt; $product-&gt;get_name( $context ),
-			&#039;slug&#039;                  =&gt; $product-&gt;get_slug( $context ),
-			&#039;permalink&#039;             =&gt; $product-&gt;get_permalink(),
-			&#039;date_created&#039;          =&gt; wc_rest_prepare_date_response( $product-&gt;get_date_created( $context ), false ),
-			&#039;date_created_gmt&#039;      =&gt; wc_rest_prepare_date_response( $product-&gt;get_date_created( $context ) ),
-			&#039;date_modified&#039;         =&gt; wc_rest_prepare_date_response( $product-&gt;get_date_modified( $context ), false ),
-			&#039;date_modified_gmt&#039;     =&gt; wc_rest_prepare_date_response( $product-&gt;get_date_modified( $context ) ),
-			&#039;type&#039;                  =&gt; $product-&gt;get_type(),
-			&#039;status&#039;                =&gt; $product-&gt;get_status( $context ),
-			&#039;featured&#039;              =&gt; $product-&gt;is_featured(),
-			&#039;catalog_visibility&#039;    =&gt; $product-&gt;get_catalog_visibility( $context ),
-			&#039;description&#039;           =&gt; &#039;view&#039; === $context ? wpautop( do_shortcode( $product-&gt;get_description() ) ) : $product-&gt;get_description( $context ),
-			&#039;short_description&#039;     =&gt; &#039;view&#039; === $context ? apply_filters( &#039;woocommerce_short_description&#039;, $product-&gt;get_short_description() ) : $product-&gt;get_short_description( $context ),
-			&#039;sku&#039;                   =&gt; $product-&gt;get_sku( $context ),
-			&#039;price&#039;                 =&gt; $product-&gt;get_price( $context ),
-			&#039;regular_price&#039;         =&gt; $product-&gt;get_regular_price( $context ),
-			&#039;sale_price&#039;            =&gt; $product-&gt;get_sale_price( $context ) ? $product-&gt;get_sale_price( $context ) : &#039;&#039;,
-			&#039;date_on_sale_from&#039;     =&gt; wc_rest_prepare_date_response( $product-&gt;get_date_on_sale_from( $context ), false ),
-			&#039;date_on_sale_from_gmt&#039; =&gt; wc_rest_prepare_date_response( $product-&gt;get_date_on_sale_from( $context ) ),
-			&#039;date_on_sale_to&#039;       =&gt; wc_rest_prepare_date_response( $product-&gt;get_date_on_sale_to( $context ), false ),
-			&#039;date_on_sale_to_gmt&#039;   =&gt; wc_rest_prepare_date_response( $product-&gt;get_date_on_sale_to( $context ) ),
-			&#039;price_html&#039;            =&gt; $product-&gt;get_price_html(),
-			&#039;on_sale&#039;               =&gt; $product-&gt;is_on_sale( $context ),
-			&#039;purchasable&#039;           =&gt; $product-&gt;is_purchasable(),
-			&#039;total_sales&#039;           =&gt; $product-&gt;get_total_sales( $context ),
-			&#039;virtual&#039;               =&gt; $product-&gt;is_virtual(),
-			&#039;downloadable&#039;          =&gt; $product-&gt;is_downloadable(),
-			&#039;downloads&#039;             =&gt; $this-&gt;get_downloads( $product ),
-			&#039;download_limit&#039;        =&gt; $product-&gt;get_download_limit( $context ),
-			&#039;download_expiry&#039;       =&gt; $product-&gt;get_download_expiry( $context ),
-			&#039;external_url&#039;          =&gt; $product-&gt;is_type( &#039;external&#039; ) ? $product-&gt;get_product_url( $context ) : &#039;&#039;,
-			&#039;button_text&#039;           =&gt; $product-&gt;is_type( &#039;external&#039; ) ? $product-&gt;get_button_text( $context ) : &#039;&#039;,
-			&#039;tax_status&#039;            =&gt; $product-&gt;get_tax_status( $context ),
-			&#039;tax_class&#039;             =&gt; $product-&gt;get_tax_class( $context ),
-			&#039;manage_stock&#039;          =&gt; $product-&gt;managing_stock(),
-			&#039;stock_quantity&#039;        =&gt; $product-&gt;get_stock_quantity( $context ),
-			&#039;in_stock&#039;              =&gt; $product-&gt;is_in_stock(),
-			&#039;backorders&#039;            =&gt; $product-&gt;get_backorders( $context ),
-			&#039;backorders_allowed&#039;    =&gt; $product-&gt;backorders_allowed(),
-			&#039;backordered&#039;           =&gt; $product-&gt;is_on_backorder(),
-			&#039;sold_individually&#039;     =&gt; $product-&gt;is_sold_individually(),
-			&#039;weight&#039;                =&gt; $product-&gt;get_weight( $context ),
-			&#039;dimensions&#039;            =&gt; array(
-				&#039;length&#039; =&gt; $product-&gt;get_length( $context ),
-				&#039;width&#039;  =&gt; $product-&gt;get_width( $context ),
-				&#039;height&#039; =&gt; $product-&gt;get_height( $context ),
-			),
-			&#039;shipping_required&#039;     =&gt; $product-&gt;needs_shipping(),
-			&#039;shipping_taxable&#039;      =&gt; $product-&gt;is_shipping_taxable(),
-			&#039;shipping_class&#039;        =&gt; $product-&gt;get_shipping_class(),
-			&#039;shipping_class_id&#039;     =&gt; $product-&gt;get_shipping_class_id( $context ),
-			&#039;reviews_allowed&#039;       =&gt; $product-&gt;get_reviews_allowed( $context ),
-			&#039;average_rating&#039;        =&gt; &#039;view&#039; === $context ? wc_format_decimal( $product-&gt;get_average_rating(), 2 ) : $product-&gt;get_average_rating( $context ),
-			&#039;rating_count&#039;          =&gt; $product-&gt;get_rating_count(),
-			&#039;related_ids&#039;           =&gt; array_map( &#039;absint&#039;, array_values( wc_get_related_products( $product-&gt;get_id() ) ) ),
-			&#039;upsell_ids&#039;            =&gt; array_map( &#039;absint&#039;, $product-&gt;get_upsell_ids( $context ) ),
-			&#039;cross_sell_ids&#039;        =&gt; array_map( &#039;absint&#039;, $product-&gt;get_cross_sell_ids( $context ) ),
-			&#039;parent_id&#039;             =&gt; $product-&gt;get_parent_id( $context ),
-			&#039;purchase_note&#039;         =&gt; &#039;view&#039; === $context ? wpautop( do_shortcode( wp_kses_post( $product-&gt;get_purchase_note() ) ) ) : $product-&gt;get_purchase_note( $context ),
-			&#039;categories&#039;            =&gt; $this-&gt;get_taxonomy_terms( $product ),
-			&#039;tags&#039;                  =&gt; $this-&gt;get_taxonomy_terms( $product, &#039;tag&#039; ),
-			&#039;images&#039;                =&gt; $this-&gt;get_images( $product ),
-			&#039;attributes&#039;            =&gt; $this-&gt;get_attributes( $product ),
-			&#039;default_attributes&#039;    =&gt; $this-&gt;get_default_attributes( $product ),
-			&#039;variations&#039;            =&gt; array(),
-			&#039;grouped_products&#039;      =&gt; array(),
-			&#039;menu_order&#039;            =&gt; $product-&gt;get_menu_order( $context ),
-			&#039;meta_data&#039;             =&gt; $product-&gt;get_meta_data(),
+		/*
+		 * @param WP_REST_Request $request Current request object. For backward compatibility, we pass this argument silently.
+		 *
+		 *  TODO: Refactor to fix this behavior when DI gets included to make it obvious and clean.
+		*/
+		$request = func_num_args() &gt;= 2 ? func_get_arg( 2 ) : new WP_REST_Request( &#039;&#039;, &#039;&#039;, array( &#039;context&#039; =&gt; $context ) );
+		$fields  = $this-&gt;get_fields_for_response( $request );
+
+		$base_data = array();
+		foreach ( $fields as $field ) {
+			switch ( $field ) {
+				case &#039;id&#039;:
+					$base_data[&#039;id&#039;] = $product-&gt;get_id();
+					break;
+				case &#039;name&#039;:
+					$base_data[&#039;name&#039;] = $product-&gt;get_name( $context );
+					break;
+				case &#039;slug&#039;:
+					$base_data[&#039;slug&#039;] = $product-&gt;get_slug( $context );
+					break;
+				case &#039;permalink&#039;:
+					$base_data[&#039;permalink&#039;] = $product-&gt;get_permalink();
+					break;
+				case &#039;date_created&#039;:
+					$base_data[&#039;date_created&#039;] = wc_rest_prepare_date_response( $product-&gt;get_date_created( $context ), false );
+					break;
+				case &#039;date_created_gmt&#039;:
+					$base_data[&#039;date_created_gmt&#039;] = wc_rest_prepare_date_response( $product-&gt;get_date_created( $context ) );
+					break;
+				case &#039;date_modified&#039;:
+					$base_data[&#039;date_modified&#039;] = wc_rest_prepare_date_response( $product-&gt;get_date_modified( $context ), false );
+					break;
+				case &#039;date_modified_gmt&#039;:
+					$base_data[&#039;date_modified_gmt&#039;] = wc_rest_prepare_date_response( $product-&gt;get_date_modified( $context ) );
+					break;
+				case &#039;type&#039;:
+					$base_data[&#039;type&#039;] = $product-&gt;get_type();
+					break;
+				case &#039;status&#039;:
+					$base_data[&#039;status&#039;] = $product-&gt;get_status( $context );
+					break;
+				case &#039;featured&#039;:
+					$base_data[&#039;featured&#039;] = $product-&gt;is_featured();
+					break;
+				case &#039;catalog_visibility&#039;:
+					$base_data[&#039;catalog_visibility&#039;] = $product-&gt;get_catalog_visibility( $context );
+					break;
+				case &#039;description&#039;:
+					$base_data[&#039;description&#039;] = &#039;view&#039; === $context ? wpautop( do_shortcode( $product-&gt;get_description() ) ) : $product-&gt;get_description( $context );
+					break;
+				case &#039;short_description&#039;:
+					$base_data[&#039;short_description&#039;] = &#039;view&#039; === $context ? apply_filters( &#039;woocommerce_short_description&#039;, $product-&gt;get_short_description() ) : $product-&gt;get_short_description( $context );
+					break;
+				case &#039;sku&#039;:
+					$base_data[&#039;sku&#039;] = $product-&gt;get_sku( $context );
+					break;
+				case &#039;price&#039;:
+					$base_data[&#039;price&#039;] = $product-&gt;get_price( $context );
+					break;
+				case &#039;regular_price&#039;:
+					$base_data[&#039;regular_price&#039;] = $product-&gt;get_regular_price( $context );
+					break;
+				case &#039;sale_price&#039;:
+					$base_data[&#039;sale_price&#039;] = $product-&gt;get_sale_price( $context ) ? $product-&gt;get_sale_price( $context ) : &#039;&#039;;
+					break;
+				case &#039;date_on_sale_from&#039;:
+					$base_data[&#039;date_on_sale_from&#039;] = wc_rest_prepare_date_response( $product-&gt;get_date_on_sale_from( $context ), false );
+					break;
+				case &#039;date_on_sale_from_gmt&#039;:
+					$base_data[&#039;date_on_sale_from_gmt&#039;] = wc_rest_prepare_date_response( $product-&gt;get_date_on_sale_from( $context ) );
+					break;
+				case &#039;date_on_sale_to&#039;:
+					$base_data[&#039;date_on_sale_to&#039;] = wc_rest_prepare_date_response( $product-&gt;get_date_on_sale_to( $context ), false );
+					break;
+				case &#039;date_on_sale_to_gmt&#039;:
+					$base_data[&#039;date_on_sale_to_gmt&#039;] = wc_rest_prepare_date_response( $product-&gt;get_date_on_sale_to( $context ) );
+					break;
+				case &#039;on_sale&#039;:
+					$base_data[&#039;on_sale&#039;] = $product-&gt;is_on_sale( $context );
+					break;
+				case &#039;purchasable&#039;:
+					$base_data[&#039;purchasable&#039;] = $product-&gt;is_purchasable();
+					break;
+				case &#039;total_sales&#039;:
+					$base_data[&#039;total_sales&#039;] = $product-&gt;get_total_sales( $context );
+					break;
+				case &#039;virtual&#039;:
+					$base_data[&#039;virtual&#039;] = $product-&gt;is_virtual();
+					break;
+				case &#039;downloadable&#039;:
+					$base_data[&#039;downloadable&#039;] = $product-&gt;is_downloadable();
+					break;
+				case &#039;downloads&#039;:
+					$base_data[&#039;downloads&#039;] = $this-&gt;get_downloads( $product );
+					break;
+				case &#039;download_limit&#039;:
+					$base_data[&#039;download_limit&#039;] = $product-&gt;get_download_limit( $context );
+					break;
+				case &#039;download_expiry&#039;:
+					$base_data[&#039;download_expiry&#039;] = $product-&gt;get_download_expiry( $context );
+					break;
+				case &#039;external_url&#039;:
+					$base_data[&#039;external_url&#039;] = $product-&gt;is_type( &#039;external&#039; ) ? $product-&gt;get_product_url( $context ) : &#039;&#039;;
+					break;
+				case &#039;button_text&#039;:
+					$base_data[&#039;button_text&#039;] = $product-&gt;is_type( &#039;external&#039; ) ? $product-&gt;get_button_text( $context ) : &#039;&#039;;
+					break;
+				case &#039;tax_status&#039;:
+					$base_data[&#039;tax_status&#039;] = $product-&gt;get_tax_status( $context );
+					break;
+				case &#039;tax_class&#039;:
+					$base_data[&#039;tax_class&#039;] = $product-&gt;get_tax_class( $context );
+					break;
+				case &#039;manage_stock&#039;:
+					$base_data[&#039;manage_stock&#039;] = $product-&gt;managing_stock();
+					break;
+				case &#039;stock_quantity&#039;:
+					$base_data[&#039;stock_quantity&#039;] = $product-&gt;get_stock_quantity( $context );
+					break;
+				case &#039;in_stock&#039;:
+					$base_data[&#039;in_stock&#039;] = $product-&gt;is_in_stock();
+					break;
+				case &#039;backorders&#039;:
+					$base_data[&#039;backorders&#039;] = $product-&gt;get_backorders( $context );
+					break;
+				case &#039;backorders_allowed&#039;:
+					$base_data[&#039;backorders_allowed&#039;] = $product-&gt;backorders_allowed();
+					break;
+				case &#039;backordered&#039;:
+					$base_data[&#039;backordered&#039;] = $product-&gt;is_on_backorder();
+					break;
+				case &#039;sold_individually&#039;:
+					$base_data[&#039;sold_individually&#039;] = $product-&gt;is_sold_individually();
+					break;
+				case &#039;weight&#039;:
+					$base_data[&#039;weight&#039;] = $product-&gt;get_weight( $context );
+					break;
+				case &#039;dimensions&#039;:
+					$base_data[&#039;dimensions&#039;] = array(
+						&#039;length&#039; =&gt; $product-&gt;get_length( $context ),
+						&#039;width&#039;  =&gt; $product-&gt;get_width( $context ),
+						&#039;height&#039; =&gt; $product-&gt;get_height( $context ),
+					);
+					break;
+				case &#039;shipping_required&#039;:
+					$base_data[&#039;shipping_required&#039;] = $product-&gt;needs_shipping();
+					break;
+				case &#039;shipping_taxable&#039;:
+					$base_data[&#039;shipping_taxable&#039;] = $product-&gt;is_shipping_taxable();
+					break;
+				case &#039;shipping_class&#039;:
+					$base_data[&#039;shipping_class&#039;] = $product-&gt;get_shipping_class();
+					break;
+				case &#039;shipping_class_id&#039;:
+					$base_data[&#039;shipping_class_id&#039;] = $product-&gt;get_shipping_class_id( $context );
+					break;
+				case &#039;reviews_allowed&#039;:
+					$base_data[&#039;reviews_allowed&#039;] = $product-&gt;get_reviews_allowed( $context );
+					break;
+				case &#039;average_rating&#039;:
+					$base_data[&#039;average_rating&#039;] = &#039;view&#039; === $context ? wc_format_decimal( $product-&gt;get_average_rating(), 2 ) : $product-&gt;get_average_rating( $context );
+					break;
+				case &#039;rating_count&#039;:
+					$base_data[&#039;rating_count&#039;] = $product-&gt;get_rating_count();
+					break;
+				case &#039;upsell_ids&#039;:
+					$base_data[&#039;upsell_ids&#039;] = array_map( &#039;absint&#039;, $product-&gt;get_upsell_ids( $context ) );
+					break;
+				case &#039;cross_sell_ids&#039;:
+					$base_data[&#039;cross_sell_ids&#039;] = array_map( &#039;absint&#039;, $product-&gt;get_cross_sell_ids( $context ) );
+					break;
+				case &#039;parent_id&#039;:
+					$base_data[&#039;parent_id&#039;] = $product-&gt;get_parent_id( $context );
+					break;
+				case &#039;purchase_note&#039;:
+					$base_data[&#039;purchase_note&#039;] = &#039;view&#039; === $context ? wpautop( do_shortcode( wp_kses_post( $product-&gt;get_purchase_note() ) ) ) : $product-&gt;get_purchase_note( $context );
+					break;
+				case &#039;categories&#039;:
+					$base_data[&#039;categories&#039;] = $this-&gt;get_taxonomy_terms( $product );
+					break;
+				case &#039;tags&#039;:
+					$base_data[&#039;tags&#039;] = $this-&gt;get_taxonomy_terms( $product, &#039;tag&#039; );
+					break;
+				case &#039;images&#039;:
+					$base_data[&#039;images&#039;] = $this-&gt;get_images( $product );
+					break;
+				case &#039;attributes&#039;:
+					$base_data[&#039;attributes&#039;] = $this-&gt;get_attributes( $product );
+					break;
+				case &#039;default_attributes&#039;:
+					$base_data[&#039;default_attributes&#039;] = $this-&gt;get_default_attributes( $product );
+					break;
+				case &#039;variations&#039;:
+					$base_data[&#039;variations&#039;] = array();
+					break;
+				case &#039;grouped_products&#039;:
+					$base_data[&#039;grouped_products&#039;] = array();
+					break;
+				case &#039;menu_order&#039;:
+					$base_data[&#039;menu_order&#039;] = $product-&gt;get_menu_order( $context );
+					break;
+			}
+		}
+
+		$data = array_merge(
+			$base_data,
+			$this-&gt;fetch_fields_using_getters( $product, $context, $fields )
 		);
 
 		return $data;
@@ -816,7 +989,7 @@ class WC_REST_Products_V2_Controller extends WC_REST_CRUD_Controller {
 	 * @param WC_Data         $object  Object data.
 	 * @param WP_REST_Request $request Request object.
 	 *
-	 * @return array                   Links for the given post.
+	 * @return array Links for the given post.
 	 */
 	protected function prepare_links( $object, $request ) {
 		$links = array(
@@ -2353,7 +2526,7 @@ class WC_REST_Products_V2_Controller extends WC_REST_CRUD_Controller {
 
     <footer class="phpdocumentor phpdocumentor-footer">
     <div class="phpdocumentor-section">
-        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on December 10th, 2020 at 11:45 am.</span>
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on January 25th, 2021 at 05:15 pm.</span>
     </div>
 </footer>
 
@@ -2365,7 +2538,7 @@ class WC_REST_Products_V2_Controller extends WC_REST_CRUD_Controller {
             'searchIndex': '..\/js\/searchIndex.json'
         };
     </script>
-    <script src="../js/searchIndex.js?updated=1607611541"></script>
-    <script src="../js/search.js?updated=1607611541"></script>
+    <script src="../js/searchIndex.js?updated=1611605753"></script>
+    <script src="../js/search.js?updated=1611605753"></script>
 </body>
 </html>
